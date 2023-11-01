@@ -3,283 +3,321 @@
 <html lang="en">
 
 <!-- Mirrored from www.jbktutorials.com/corejava/access-modifiers-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Nov 2023 14:11:26 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>JBK Tutorials | Access Modifiers in Java</title>
-<meta name="description" content="Java Access Specifiers (also known as Visibility Specifiers) regulate access to classes, fields and methods in Java. They can also be called Access Modifiers.">
-<meta name="keywords" content="java tutorials, core java, advance java, java by kiran, java interview questions, blog, articles, learn java programming, codes, examples, selenium, python, spring">
-<meta name="author" content="Java By Kiran">
-<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>JBK Tutorials | Access Modifiers in Java</title>
+	<meta name="description"
+		content="Java Access Specifiers (also known as Visibility Specifiers) regulate access to classes, fields and methods in Java. They can also be called Access Modifiers.">
+	<meta name="keywords"
+		content="java tutorials, core java, advance java, java by kiran, java interview questions, blog, articles, learn java programming, codes, examples, selenium, python, spring">
+	<meta name="author" content="Java By Kiran">
+	<meta name="robots" content="index, follow">
 
-<meta property="og:title" content="Access Modifiers in Java" />
-<meta property="og:url" content="access-modifiers-in-java.html" />
-<meta property="fb:app_id" content="881390338999747" />
-<meta property="og:description" content="Java Access Specifiers (also known as Visibility Specifiers) regulate access to classes, fields and methods in Java. They can also be called Access Modifiers.">
-<meta property="og:image" content="../images/jbktutorialslogo3square.png">
-<meta property="og:image:secure_url" content="../images/jbktutorialslogo3square.png" />
-<meta property="og:type" content="article" />
-
-
-<meta name="twitter:title" content="Access Modifiers in Java">
-<meta name="twitter:description" content="Java Access Specifiers (also known as Visibility Specifiers) regulate access to classes, fields and methods in Java. They can also be called Access Modifiers.">
-<meta name="twitter:image" content="../images/jbktutorialslogo3square.png">
-<meta name="twitter:card" content="summary_large_image">
-
-<link rel="canonical" href="access-modifiers-in-java.html" />
-<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/android-chrome-192x192.png" />
-<link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
-
-<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css" as="style">
-<link rel="preload" href="../css/customcss.css" as="style">
-<link rel="preload" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" as="style">
-<link rel="preload" href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
-<link rel="preload" href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
-<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js" as="script">
-<link rel="preload" href="../js/jquery.min.js" as="script">
-<link rel="preload" href="../vendor/clipboard/clipboard.min.js" as="script">
-<link rel="preload" href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
-<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
-<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" as="script">
-<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
-<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-156439212-1');
-  </script>
+	<meta property="og:title" content="Access Modifiers in Java" />
+	<meta property="og:url" content="access-modifiers-in-java.html" />
+	<meta property="fb:app_id" content="881390338999747" />
+	<meta property="og:description"
+		content="Java Access Specifiers (also known as Visibility Specifiers) regulate access to classes, fields and methods in Java. They can also be called Access Modifiers.">
+	<meta property="og:image" content="../images/jbktutorialslogo3square.png">
+	<meta property="og:image:secure_url" content="../images/jbktutorialslogo3square.png" />
+	<meta property="og:type" content="article" />
 
 
-<script data-ad-client="ca-pub-5964671306985297" async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+	<meta name="twitter:title" content="Access Modifiers in Java">
+	<meta name="twitter:description"
+		content="Java Access Specifiers (also known as Visibility Specifiers) regulate access to classes, fields and methods in Java. They can also be called Access Modifiers.">
+	<meta name="twitter:image" content="../images/jbktutorialslogo3square.png">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<link rel="canonical" href="access-modifiers-in-java.html" />
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
+
+	<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css" as="style">
+	<link rel="preload" href="../css/customcss.css" as="style">
+	<link rel="preload" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"
+		as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js" as="script">
+	<link rel="preload" href="../js/jquery.min.js" as="script">
+	<link rel="preload" href="../vendor/clipboard/clipboard.min.js" as="script">
+	<link rel="preload" href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-156439212-1');
+	</script>
 
 
-
-
-<link rel="stylesheet" type="text/css" href="../css/customcss.css">
-<link rel="stylesheet" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
-
-
-<link rel="stylesheet" href="../vendor/syntaxhighlighter/styles/a11y-light.css">
-<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
-<script defer>hljs.initHighlightingOnLoad();</script>
-
-
-<script src="../js/jquery.min.js"></script>
-<script src="../vendor/clipboard/clipboard.min.js"></script>
+	<script data-ad-client="ca-pub-5964671306985297" async
+		src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
 
 
 
-<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 
-<link rel="stylesheet" href="../vendor/jquery-viewer-master/docs/css/viewer.css">
-<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
-<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" defer></script>
-<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="../css/customcss.css">
+	<link rel="stylesheet" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+
+
+	<link rel="stylesheet" href="../vendor/syntaxhighlighter/styles/a11y-light.css">
+	<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
+	<script defer>hljs.initHighlightingOnLoad();</script>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../vendor/clipboard/clipboard.min.js"></script>
+
+
+
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+	<link rel="stylesheet" href="../vendor/jquery-viewer-master/docs/css/viewer.css">
+	<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
 
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
-<div class="container p-0">
-<a class="navbar-brand pull-left" href="https://www.jbktutorials.com/"><img src="../images/jbktutorialslogo3.png" style="height: 65px; max-width: 100%;" alt="java by kiran tutorials" title="JBK Tutorials"></a>
-<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar fa fa-bars"></span>
-</button>
-<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
-<script async src="../../cse.google.com/fd667.txt?cx=001580368639334093203:va4ehh0xpyd"></script>
-<div class="gcse-search"></div>
-<ul class="navbar-nav ml-auto text-center">
-<li class="nav-item">
-<a class="nav-link" href="https://www.jbktutorials.com/"><i class="fa fa-home"></i></a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="introduction-to-java.html">Java</a>
-</li>
+	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+		<div class="container p-0">
+			<a class="navbar-brand pull-left" href="https://www.jbktutorials.com/"><img
+					src="../images/jbktutorialslogo3.png" style="height: 65px; max-width: 100%;"
+					alt="java by kiran tutorials" title="JBK Tutorials"></a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar fa fa-bars"></span>
+			</button>
+			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+				<script async src="../../cse.google.com/fd667.txt?cx=001580368639334093203:va4ehh0xpyd"></script>
+				<div class="gcse-search"></div>
+				<ul class="navbar-nav ml-auto text-center">
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.jbktutorials.com/"><i class="fa fa-home"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="introduction-to-java.html">Java</a>
+					</li>
 
-<li class="nav-item">
-<a class="nav-link" href="https://www.jbktutorials.com/selenium/eclipse-configuration.php">Selenium</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://www.jbktutorials.com/spring-tutorials.php">Spring</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://www.jbktutorials.com/spring-boot-framework-tutorials.php">Spring Boot</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://www.jbktutorials.com/technical-tutorials.php">Technical Tutorial</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="https://www.jbktutorials.com/interview-questions.php">Interview Questions</a>
-</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.jbktutorials.com/spring-tutorials.php">Spring</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link"
+							href="https://www.jbktutorials.com/spring-boot-framework-tutorials.php">Spring Boot</a>
+					</li>
+					
+					<li class="nav-item">
+						<a class="nav-link" href="https://www.jbktutorials.com/interview-questions.php">Interview
+							Questions</a>
+					</li>
 
-</ul>
-</div>
-</div>
-</nav><br>
+				</ul>
+			</div>
+		</div>
+	</nav><br>
 
-<script async src="../../platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
- 
+	<div class="container-fluid">
 
-<div class="container-fluid">
+		<br />
+		<ol itemscope itemtype="http://schema.org/BreadcrumbList"
+			class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="https://www.jbktutorials.com/index.php">
+					<span itemprop="name">Home</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="introduction-to-java.html">
+					<span itemprop="name">Java</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="access-modifiers-in-java.html">
+					<span itemprop="name">What are Access Modifiers?</span>
+				</a>
+				<meta itemprop="position" content="3" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<span itemprop="name">Access Modifiers</span>
+				<meta itemprop="position" content="4" />
+			</li>
+		</ol>
 
-<br/>
-<ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb no-padding  mt-5 bg-light nohighlight">
-<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
-<a class="text-dark" itemprop="item" href="https://www.jbktutorials.com/index.php">
-<span itemprop="name">Home</span>
-</a>
-<meta itemprop="position" content="1" />
-</li>
-<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
-<a class="text-dark" itemprop="item" href="introduction-to-java.html">
-<span itemprop="name">Java</span>
-</a>
-<meta itemprop="position" content="2" />
-</li>
-<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
-<a class="text-dark" itemprop="item" href="access-modifiers-in-java.html">
-<span itemprop="name">What are Access Modifiers?</span>
-</a>
-<meta itemprop="position" content="3" />
-</li>
-<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
-<span itemprop="name">Access Modifiers</span>
-<meta itemprop="position" content="4" />
-</li>
-</ol>
+		<div class="row">
 
-<div class="row">
+			<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
+			<style>
+				@media only screen and (max-width: 425px) {
+					.hidesidebar {
+						display: none;
+					}
+				}
+			</style>
+			<script>
+				//Script to Open and Close Sidebar
+				function sidebar_open() {
+					document.getElementById("mySidebar").style.display = "block";
+				}
 
-<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
-<style>
-    @media only screen and (max-width: 425px){
-    .hidesidebar{display: none;}}
-</style>
-<script>
-    //Script to Open and Close Sidebar
-function sidebar_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
+				function sidebar_close() {
+					document.getElementById("mySidebar").style.display = "none";
+				}
 
-function sidebar_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-    // toggle up & down icon
-function myFunction(x) {
-  x.classList.toggle("fa-book-open");
-}
-</script>
-
-
-<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
-<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist" aria-multiselectable="true">
-<div class="card">
-<h2 class="card-header text-white" style="background: rgb(1, 71, 128);">Java</h2><br>
-<div class="list-group">
-<button class="w3-teal bg-transparent w3-large w3-hide-large" onclick="sidebar_close()">Close Menu &times;</button>
-<ul class="leftBarList">
-<li><a href="introduction-to-java.html">Java Introduction</a></li>
-<li><a href="java-language.html">Java Language</a></li>
-<li><a href="communication-between-two-classes-in-java.html">Communication Between Two Classes</a></li>
-<li><a href="package-in-java.html">Package</a></li>
-<li><a href="methods-variable-and-block-in-java.html">Methods, Variable and Block</a></li>
-<li><a href="encapsulation-in-java.html">Encapsulation</a></li>
-<li><a href="access-modifiers-in-java.html">Access Modifiers</a></li>
-<li><a href="statickeyword-in-java.html">Static Keyword</a></li>
-<li><a href="final-keyword-in-java.html">Final Keyword </a></li>
-<li><a href="constructor-in-java.html">Constructor </a></li>
-<li><a href="inheritance-in-java.html">Inheritance </a></li>
-<li><a href="super-and-this-keyword-in-java.html">Super This</a></li>
-<li><a href="polymorphism-in-java.html">Polymorphism</a></li>
-<li><a href="abstraction-in-java.html">Abstraction</a></li>
-<li><a href="garbage-collection-in-java.html">Garbage Collection</a></li>
-<li><a href="input-and-output-streams-in-java.html">Input Output Stream</a></li>
-<li><a href="collection-framework-in-java.html">Collection Framework</a></li>
-<li><a href="collection-revisited-in-java.html">Collection Revisited</a></li>
-<li><a href="serialization-in-java.html">Serialization</a></li>
-<li><a href="exception-in-java.html">Exception</a></li>
+				// toggle up & down icon
+				function myFunction(x) {
+					x.classList.toggle("fa-book-open");
+				}
+			</script>
 
 
-<li><a href="arrays-in-java.html">Arrays</a></li>
-<li><a href="strings-in-java.html">Strings</a></li>
-<li><a href="features-of-jdk-1.5-in-java.html">Features and Enhancements in jdk 1.5</a></li>
-<li><a href="features-of-jdk-1.6-in-java.html">Features and Enhancements in jdk 1.6</a></li>
-<li><a href="features-of-jdk-1.7-in-java.html">Features and Enhancements in jdk 1.7</a></li>
-<li><a href="features-of-jdk-1.8-in-java.html">Features and Enhancements in jdk 1.8</a></li>
-<li><a href="multithreading-in-java.html">Thread</a></li>
-<li><a href="java-virtual-machine-memory-management.html">JVM Memory Management</a></li>
-<li><a href="jdbc-in-java.html">JDBC</a></li>
-<li><a href="database-in-java.html">Database</a></li>
-</ul>
-</div>
-</div><br>
-<div>
-<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+			<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
+			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+				aria-multiselectable="true">
+				<div class="card">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Java</h2><br>
+					<div class="list-group">
+						<button class="w3-teal bg-transparent w3-large w3-hide-large" onclick="sidebar_close()">Close
+							Menu &times;</button>
+						<ul class="leftBarList">
+							<li><a href="introduction-to-java.html">Java Introduction</a></li>
+							<li><a href="java-language.html">Java Language</a></li>
+							<li><a href="communication-between-two-classes-in-java.html">Communication Between Two
+									Classes</a></li>
+							<li><a href="package-in-java.html">Package</a></li>
+							<li><a href="methods-variable-and-block-in-java.html">Methods, Variable and Block</a></li>
+							<li><a href="encapsulation-in-java.html">Encapsulation</a></li>
+							<li><a href="access-modifiers-in-java.html">Access Modifiers</a></li>
+							<li><a href="statickeyword-in-java.html">Static Keyword</a></li>
+							<li><a href="final-keyword-in-java.html">Final Keyword </a></li>
+							<li><a href="constructor-in-java.html">Constructor </a></li>
+							<li><a href="inheritance-in-java.html">Inheritance </a></li>
+							<li><a href="super-and-this-keyword-in-java.html">Super This</a></li>
+							<li><a href="polymorphism-in-java.html">Polymorphism</a></li>
+							<li><a href="abstraction-in-java.html">Abstraction</a></li>
+							<li><a href="garbage-collection-in-java.html">Garbage Collection</a></li>
+							<li><a href="input-and-output-streams-in-java.html">Input Output Stream</a></li>
+							<li><a href="collection-framework-in-java.html">Collection Framework</a></li>
+							<li><a href="collection-revisited-in-java.html">Collection Revisited</a></li>
+							<li><a href="serialization-in-java.html">Serialization</a></li>
+							<li><a href="exception-in-java.html">Exception</a></li>
 
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297" data-ad-slot="1171818896" data-ad-format="auto" data-full-width-responsive="true"></ins>
-<script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-</div>
-</div>
+
+							<li><a href="arrays-in-java.html">Arrays</a></li>
+							<li><a href="strings-in-java.html">Strings</a></li>
+							<li><a href="features-of-jdk-1.5-in-java.html">Features and Enhancements in jdk 1.5</a></li>
+							<li><a href="features-of-jdk-1.6-in-java.html">Features and Enhancements in jdk 1.6</a></li>
+							<li><a href="features-of-jdk-1.7-in-java.html">Features and Enhancements in jdk 1.7</a></li>
+							<li><a href="features-of-jdk-1.8-in-java.html">Features and Enhancements in jdk 1.8</a></li>
+							<li><a href="multithreading-in-java.html">Thread</a></li>
+							<li><a href="java-virtual-machine-memory-management.html">JVM Memory Management</a></li>
+							<li><a href="jdbc-in-java.html">JDBC</a></li>
+							<li><a href="database-in-java.html">Database</a></li>
+						</ul>
+					</div>
+				</div><br>
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="1171818896" data-ad-format="auto" data-full-width-responsive="true"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
 
 
-<div class="col-lg-7 mb-4">
-<div class="card h-100">
-<h1 class="card-header text-white" style="background: rgb(1, 71, 128);">Access Modifiers in Java</h1>
-<div class="card-body">
-<div id="Div1">
-<p class="card-text"><b>Java Access Specifiers</b> (also known as Visibility Specifiers) regulate access to classes, fields and methods in Java. They can also be called <b>Access Modifiers</b>. They are usually keywords that determine the accessibility of class, fields and methods in a program. Here the class has control over what data or information is accessed by other classes.</p>
-<p class="card-text">These Specifiers determine whether a field or method in a class can be used or invoked by another method in another class or sub-class. Access Specifiers can also be used to restrict access. Access Specifiers are an integral part of object-oriented programming. In basic terms, they curb access.</p>
-<p>There are four Access Specifiers in Java:</p>
-<ul>
-<li>Public</li>
-<li>Private</li>
-<li>Default</li>
-<li>Protected</li>
-</ul>
-<hr>
-<div class="tab" role="tabpanel">
+			<div class="col-lg-7 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Access Modifiers in Java
+					</h1>
+					<div class="card-body">
+						<div id="Div1">
+							<p class="card-text"><b>Java Access Specifiers</b> (also known as Visibility Specifiers)
+								regulate access to classes, fields and methods in Java. They can also be called
+								<b>Access Modifiers</b>. They are usually keywords that determine the accessibility of
+								class, fields and methods in a program. Here the class has control over what data or
+								information is accessed by other classes.</p>
+							<p class="card-text">These Specifiers determine whether a field or method in a class can be
+								used or invoked by another method in another class or sub-class. Access Specifiers can
+								also be used to restrict access. Access Specifiers are an integral part of
+								object-oriented programming. In basic terms, they curb access.</p>
+							<p>There are four Access Specifiers in Java:</p>
+							<ul>
+								<li>Public</li>
+								<li>Private</li>
+								<li>Default</li>
+								<li>Protected</li>
+							</ul>
+							<hr>
+							<div class="tab" role="tabpanel">
 
-<div class="text-center">
-<ul class="nav nav-tabs nav-top" role="tablist">
-<li role="presentation" class="active"><a href="#Public" role="tab" data-toggle="tab">Public</a></li>
-<li role="presentation"><a href="#Private" role="tab" data-toggle="tab">Private</a></li>
-<li role="presentation"><a href="#Default" role="tab" data-toggle="tab">Default</a></li>
-<li role="presentation"><a href="#Protected" role="tab" data-toggle="tab">Protected</a></li>
-</ul>
-</div>
-<div class="tab-content tabs">
-<div role="tabpanel" class="tab-pane fade in active" id="Public">
-<div class="card-text"><h2 class="breadcrumb">Public</h2>
-<ul>
-<li>It can be applied to constructor, global variables, static variables, methods, inner classes or outer classes</li>
-<li>Public members are accessible everywhere, in same class, outside the class, or any package</li>
-<li>Local variables cannot be public as they already have a scope within the method</li>
-</div>
-</div>
-<div role="tabpanel" class="tab-pane fade" id="Private">
-<div class="card-text"><h2 class="breadcrumb">Private </h2>
-<ul>
-<li>A class cannot be private</li>
-<li>Private access specifier can be applied to global variable, method, constructor and inner class only</li>
-<li>Local variables cannot be private but global variables can be private</li>
-<li>Private members can be accessed only within the enclosed brackets
-<ul>
-<li>The program below will give the error</li>
-<li>Here, we see that the variable is private and not accessible in other classes</li>
-</ul>
-</li>
-</ul>
-<div>
-<button class="copycodebuttonstyle" data-clipboard-target="#code1" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
-<pre id="code1" class="breadcrumb pretagcodebox">
+								<div class="text-center">
+									<ul class="nav nav-tabs nav-top" role="tablist">
+										<li role="presentation" class="active"><a href="#Public" role="tab"
+												data-toggle="tab">Public</a></li>
+										<li role="presentation"><a href="#Private" role="tab"
+												data-toggle="tab">Private</a></li>
+										<li role="presentation"><a href="#Default" role="tab"
+												data-toggle="tab">Default</a></li>
+										<li role="presentation"><a href="#Protected" role="tab"
+												data-toggle="tab">Protected</a></li>
+									</ul>
+								</div>
+								<div class="tab-content tabs">
+									<div role="tabpanel" class="tab-pane fade in active" id="Public">
+										<div class="card-text">
+											<h2 class="breadcrumb">Public</h2>
+											<ul>
+												<li>It can be applied to constructor, global variables, static
+													variables, methods, inner classes or outer classes</li>
+												<li>Public members are accessible everywhere, in same class, outside the
+													class, or any package</li>
+												<li>Local variables cannot be public as they already have a scope within
+													the method</li>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Private">
+										<div class="card-text">
+											<h2 class="breadcrumb">Private </h2>
+											<ul>
+												<li>A class cannot be private</li>
+												<li>Private access specifier can be applied to global variable, method,
+													constructor and inner class only</li>
+												<li>Local variables cannot be private but global variables can be
+													private</li>
+												<li>Private members can be accessed only within the enclosed brackets
+													<ul>
+														<li>The program below will give the error</li>
+														<li>Here, we see that the variable is private and not accessible
+															in other classes</li>
+													</ul>
+												</li>
+											</ul>
+											<div>
+												<button class="copycodebuttonstyle" data-clipboard-target="#code1"
+													onclick="copySuccessMessage()"><i
+														class="fa fa-clipboard"></i></button>
+												<pre id="code1" class="breadcrumb pretagcodebox">
 <code>package com.javabykiram.encapsulation.accessSpecifier;
 class A1 {
     private int var = 90;
@@ -288,8 +326,10 @@ class A1 {
             System.out.println(a.var); //No Error
        }
 }</code></pre>
-<button class="copycodebuttonstyle" data-clipboard-target="#code2" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
-<pre id="code2" class="breadcrumb pretagcodebox">
+												<button class="copycodebuttonstyle" data-clipboard-target="#code2"
+													onclick="copySuccessMessage()"><i
+														class="fa fa-clipboard"></i></button>
+												<pre id="code2" class="breadcrumb pretagcodebox">
 <code>class B {
      void testVar() {
             A1 a = new A1 ();
@@ -298,25 +338,44 @@ class A1 {
 
       }
 }</code></pre>
-</p></div><hr>
-<ul>
-<li><p>If we make constructor private, we cannot create an object of that class from other classes</p></li>
-<li><p>Question that may be asked - How you will stop others from creating object of your class? The answer would be: By making constructor private.[this will be more clear in constructor chapter]</p></li>
-<li><p>In the below given example we may have confusion that</p></li>
-<li><p>Local variable is not equivalent to instance variable</p></li>
-<li><p>Local variables cannot be static</p>
-<ul>
-<li><code>private A a1=new A();</code></li>
-<li>This statement means a1 address is not visible outside, hence, we are not able to access it from outside</li>
-<li>Remember, there will be no impact to class A</li>
-<li>We can't say that class A is private. By this line it's just a variable ‘a1’ is private</li>
-</ul>
-</li>
-</ul>
-<div>
-<p><b>Example</b></p>
-<button class="copycodebuttonstyle" data-clipboard-target="#code3" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
-<pre id="code3" class="breadcrumb pretagcodebox">
+												</p>
+											</div>
+											<hr>
+											<ul>
+												<li>
+													<p>If we make constructor private, we cannot create an object of
+														that class from other classes</p>
+												</li>
+												<li>
+													<p>Question that may be asked - How you will stop others from
+														creating object of your class? The answer would be: By making
+														constructor private.[this will be more clear in constructor
+														chapter]</p>
+												</li>
+												<li>
+													<p>In the below given example we may have confusion that</p>
+												</li>
+												<li>
+													<p>Local variable is not equivalent to instance variable</p>
+												</li>
+												<li>
+													<p>Local variables cannot be static</p>
+													<ul>
+														<li><code>private A a1=new A();</code></li>
+														<li>This statement means a1 address is not visible outside,
+															hence, we are not able to access it from outside</li>
+														<li>Remember, there will be no impact to class A</li>
+														<li>We can't say that class A is private. By this line it's just
+															a variable ‘a1’ is private</li>
+													</ul>
+												</li>
+											</ul>
+											<div>
+												<p><b>Example</b></p>
+												<button class="copycodebuttonstyle" data-clipboard-target="#code3"
+													onclick="copySuccessMessage()"><i
+														class="fa fa-clipboard"></i></button>
+												<pre id="code3" class="breadcrumb pretagcodebox">
 <code>package com.javabykiran.Encapsulation.accessSpecifier;
 class A {
    int jbk = 90;
@@ -333,21 +392,28 @@ class TestVarEx {
        // wrong, a1 is private
      }
 }</code></pre>
-</div><hr>
-<div>
-<p><i><b>Question:</b> Why should you know private variable? Where have you used in your project? </i><br>
-<b>Answer:</b> :Let’s say we have the following requirement:In a college we want to insert student details and one student insertion means that is:
-<ul>
-<li>Qualification should be inserted</li>
-<li>Personal details should be inserted</li>
-<li>Skills should be inserted</li>
-<li>Fee details should be inserted</li>
-</ul>
-</div><hr>
-<p>Now we will start writing a simple class where the above specified requirements will be fulfilled</p>
-<p><b>First approach:</b></p>
-<button class="copycodebuttonstyle" data-clipboard-target="#code4" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
-<pre id="code4" class="breadcrumb pretagcodebox">
+											</div>
+											<hr>
+											<div>
+												<p><i><b>Question:</b> Why should you know private variable? Where have
+														you used in your project? </i><br>
+													<b>Answer:</b> :Let’s say we have the following requirement:In a
+													college we want to insert student details and one student insertion
+													means that is:
+												<ul>
+													<li>Qualification should be inserted</li>
+													<li>Personal details should be inserted</li>
+													<li>Skills should be inserted</li>
+													<li>Fee details should be inserted</li>
+												</ul>
+											</div>
+											<hr>
+											<p>Now we will start writing a simple class where the above specified
+												requirements will be fulfilled</p>
+											<p><b>First approach:</b></p>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code4"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code4" class="breadcrumb pretagcodebox">
 <code>package com.javabykiran.Encapsulation.accessSpecifier;
     public class Student {
        public void insertStudent() {
@@ -361,11 +427,16 @@ class TestVarEx {
              // logic for Fees insertion
       }
    }</code></pre>
-<p>This approach will not be accepted as all code written is at one place. If, in the future, we want to make fees optional, it won’t be possible and we will need to change whole code which increases unit testing. The above written code will work properly at the first instance, but if we think for the future, then it will be difficult to manage it.</p>
-<p>So, we need to change this code as shown below again:</p>
-<p><b>Second approach:</b></p>
-<button class="copycodebuttonstyle" data-clipboard-target="#code5" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
-<pre id="code5" class="breadcrumb pretagcodebox">
+											<p>This approach will not be accepted as all code written is at one place.
+												If, in the future, we want to make fees optional, it won’t be possible
+												and we will need to change whole code which increases unit testing. The
+												above written code will work properly at the first instance, but if we
+												think for the future, then it will be difficult to manage it.</p>
+											<p>So, we need to change this code as shown below again:</p>
+											<p><b>Second approach:</b></p>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code5"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code5" class="breadcrumb pretagcodebox">
 <code>package com.javabykiran.Encapsulation.aceessspecifier;
 public class Student {
 	public void insertStudent() {
@@ -400,20 +471,29 @@ public class Student {
     }
 }
 </code></pre>
-<p>In this approach, we just tried to bring more readability and modularity in our code. That means we will have less maintenance. This is just code writing in a different way. It is just copy and pasting code at different places. Now, consider that after some years we want to remove skill insertion. We will then need to comment only one line.</p>
-<p><code>public void insertStudent() {<br>
+											<p>In this approach, we just tried to bring more readability and modularity
+												in our code. That means we will have less maintenance. This is just code
+												writing in a different way. It is just copy and pasting code at
+												different places. Now, consider that after some years we want to remove
+												skill insertion. We will then need to comment only one line.</p>
+											<p><code>public void insertStudent() {<br>
 insertQual();<br>
 insertPD();<br>
 <b>// insertSkill();</b> <br>
 insertFees();<br>
 }
 </code></p>
-<p>Still, our code gets rejected as requirement is not completely fulfilled. HOW??</p>
-<p>The client can call any methods directly from outside and can insert anything like fees, etc.
-But requirement says that all methods should get called so that student will get inserted with all details not just a single or partial detail.</p>
-<p><b>Third approach:</b></p>
-<button class="copycodebuttonstyle" data-clipboard-target="#code6" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
-<pre id="code6" class="breadcrumb pretagcodebox">
+											<p>Still, our code gets rejected as requirement is not completely fulfilled.
+												HOW??</p>
+											<p>The client can call any methods directly from outside and can insert
+												anything like fees, etc.
+												But requirement says that all methods should get called so that student
+												will get inserted with all details not just a single or partial detail.
+											</p>
+											<p><b>Third approach:</b></p>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code6"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code6" class="breadcrumb pretagcodebox">
 <code>package com.javabykiran.Encapsulation.aceessspecifier;
 public class Student {
 	public void insertStudent()
@@ -449,137 +529,163 @@ public class Student {
           //------
 	}
 }</code></pre>
-<p>This is the most correct approach as all other methods are private and only one method is public which can be accessed from outside.</p>
-<p>So, nobody can call any method directly without going through insertStudent method. That's what the requirement says.</p>
-<p>Here, it must be noticed how access specifiers play an important role.</p>
-<p>If we use them properly, our code will be more managed in the long run.</p>
-</div>
-</div>
-<div role="tabpanel" class="tab-pane fade" id="Default">
-<div class="card-text"><h2 class="breadcrumb">Default</h2>
-<ul>
-<li>When an access specifier is not specified to members of a class, then it is called default</li>
-<li>Default members can be accessible only within same package or folder</li>
-<li>Default can be applied to constructor, global variable, local variable, methods, inner classes, outer classes etc.</li>
-<li>Default is a keyword in java. We may mistakenly think that it is an access specifier, but it actually is for a switch statement</li>
-</ul>
-</div>
-</div>
-<div role="tabpanel" class="tab-pane fade" id="Protected">
-<div class="card-text"><h2 class="breadcrumb">Protected</h2>
-<ul>
-<li>It can be applied to constructor, global variable, methods</li>
-<li>It cannot apply to outer classes, but can be applied to inner classes</li>
-<li>It cannot apply to the local variable</li>
-<li>Protected members are accessible within same package and another package of its subclass only. Inheritance must be there, the caller of protected members is the subclass of protected member’s class.</li>
-</ul>
-<p>If any method is overridden from super class to sub class, then the access specifier of the overridden method must be protected or public.</p>
-<p>To know this completely, we must know inheritance in detail,please go through inheritance chapter</p>
-<div id="Div4" class="tablediv">
-<table class="table-responsive-xl table-bordered table" style="width:100%;">
-<colgroup>
-<col style="width: 40%" />
-<col style="width: 15%" />
-<col style="width: 15%" />
-<col style="width: 15%" />
-<col style="width: 15%" />
-</colgroup>
-<tr>
-<th class="center"></th>
-<th class="center">Private</th>
-<th class="center">No Modifier</th>
-<th class="center">Protected</th>
-<th class="center">Public</th>
-</tr>
-<tr>
-<td>Same class</td>
-<td class="center">Yes</td>
-<td class="center">Yes</td>
-<td class="center">Yes</td>
-<td class="center">Yes</td>
-</tr>
-<tr>
-<td>Same package sub-class</td>
-<td class="center">No</td>
-<td class="center">Yes</td>
-<td class="center">Yes</td>
-<td class="center">Yes</td>
-</tr>
-<tr>
-<td>Same package non-subclass</td>
-<td class="center">No</td>
-<td class="center">Yes</td>
-<td class="center">Yes</td>
-<td class="center">Yes</td>
-</tr>
-<tr>
-<td>Different package subclasses</td>
-<td class="center">No</td>
-<td class="center">No</td>
-<td class="center">Yes</td>
-<td class="center">Yes</td>
-</tr>
-<tr>
-<td>Different package non-subclass</td>
-<td class="center">No</td>
-<td class="center">No</td>
-<td class="center">No</td>
-<td class="center">Yes</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</div><hr>
-<ul class="nav nav-tabs nav-bottom mt-3" role="tablist">
-<li role="presentation" class="active"><a href="#Public" role="tab" data-toggle="tab">Public</a></li>
-<li role="presentation"><a href="#Private" role="tab" data-toggle="tab">Private</a></li>
-<li role="presentation"><a href="#Default" role="tab" data-toggle="tab">Default</a></li>
-<li role="presentation"><a href="#Protected" role="tab" data-toggle="tab">Protected</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="card-footer">
-<ul class="pagination justify-content-center mb-4">
-<li class="page-item">
-<a class="page-link btn-outline-primary" href="encapsulation-in-java.html">&lArr; Previous Chapter</a>
-</li>
-<li class="page-item">
-<a class="page-link" href="statickeyword-in-java.html">Next Chapter &rArr;</a>
-</li>
-</ul>
-</div>
-</div>
-</div>
+											<p>This is the most correct approach as all other methods are private and
+												only one method is public which can be accessed from outside.</p>
+											<p>So, nobody can call any method directly without going through
+												insertStudent method. That's what the requirement says.</p>
+											<p>Here, it must be noticed how access specifiers play an important role.
+											</p>
+											<p>If we use them properly, our code will be more managed in the long run.
+											</p>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Default">
+										<div class="card-text">
+											<h2 class="breadcrumb">Default</h2>
+											<ul>
+												<li>When an access specifier is not specified to members of a class,
+													then it is called default</li>
+												<li>Default members can be accessible only within same package or folder
+												</li>
+												<li>Default can be applied to constructor, global variable, local
+													variable, methods, inner classes, outer classes etc.</li>
+												<li>Default is a keyword in java. We may mistakenly think that it is an
+													access specifier, but it actually is for a switch statement</li>
+											</ul>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Protected">
+										<div class="card-text">
+											<h2 class="breadcrumb">Protected</h2>
+											<ul>
+												<li>It can be applied to constructor, global variable, methods</li>
+												<li>It cannot apply to outer classes, but can be applied to inner
+													classes</li>
+												<li>It cannot apply to the local variable</li>
+												<li>Protected members are accessible within same package and another
+													package of its subclass only. Inheritance must be there, the caller
+													of protected members is the subclass of protected member’s class.
+												</li>
+											</ul>
+											<p>If any method is overridden from super class to sub class, then the
+												access specifier of the overridden method must be protected or public.
+											</p>
+											<p>To know this completely, we must know inheritance in detail,please go
+												through inheritance chapter</p>
+											<div id="Div4" class="tablediv">
+												<table class="table-responsive-xl table-bordered table"
+													style="width:100%;">
+													<colgroup>
+														<col style="width: 40%" />
+														<col style="width: 15%" />
+														<col style="width: 15%" />
+														<col style="width: 15%" />
+														<col style="width: 15%" />
+													</colgroup>
+													<tr>
+														<th class="center"></th>
+														<th class="center">Private</th>
+														<th class="center">No Modifier</th>
+														<th class="center">Protected</th>
+														<th class="center">Public</th>
+													</tr>
+													<tr>
+														<td>Same class</td>
+														<td class="center">Yes</td>
+														<td class="center">Yes</td>
+														<td class="center">Yes</td>
+														<td class="center">Yes</td>
+													</tr>
+													<tr>
+														<td>Same package sub-class</td>
+														<td class="center">No</td>
+														<td class="center">Yes</td>
+														<td class="center">Yes</td>
+														<td class="center">Yes</td>
+													</tr>
+													<tr>
+														<td>Same package non-subclass</td>
+														<td class="center">No</td>
+														<td class="center">Yes</td>
+														<td class="center">Yes</td>
+														<td class="center">Yes</td>
+													</tr>
+													<tr>
+														<td>Different package subclasses</td>
+														<td class="center">No</td>
+														<td class="center">No</td>
+														<td class="center">Yes</td>
+														<td class="center">Yes</td>
+													</tr>
+													<tr>
+														<td>Different package non-subclass</td>
+														<td class="center">No</td>
+														<td class="center">No</td>
+														<td class="center">No</td>
+														<td class="center">Yes</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<hr>
+								<ul class="nav nav-tabs nav-bottom mt-3" role="tablist">
+									<li role="presentation" class="active"><a href="#Public" role="tab"
+											data-toggle="tab">Public</a></li>
+									<li role="presentation"><a href="#Private" role="tab" data-toggle="tab">Private</a>
+									</li>
+									<li role="presentation"><a href="#Default" role="tab" data-toggle="tab">Default</a>
+									</li>
+									<li role="presentation"><a href="#Protected" role="tab"
+											data-toggle="tab">Protected</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer">
+						<ul class="pagination justify-content-center mb-4">
+							<li class="page-item">
+								<a class="page-link btn-outline-primary" href="encapsulation-in-java.html">&lArr;
+									Previous Chapter</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="statickeyword-in-java.html">Next Chapter &rArr;</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 
-<div class="col-lg-2 mb-4">
-<div>
-<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+			<div class="col-lg-2 mb-4">
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
 
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297" data-ad-slot="6605368152" data-ad-format="auto" data-full-width-responsive="true">
-</ins>
-<script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-</div>
-<br>
-<div>
-<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="6605368152" data-ad-format="auto" data-full-width-responsive="true">
+					</ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				<br>
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
 
-<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297" data-ad-slot="7335995893" data-ad-format="auto" data-full-width-responsive="true">
-</ins>
-<script>
-               (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-</div>
-</div>
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="7335995893" data-ad-format="auto" data-full-width-responsive="true">
+					</ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
 
-</div>
+		</div>
 
-</div>
+	</div>
 
-<script type="application/ld+json">
+	<script type="application/ld+json">
 { "@context": "https://schema.org", 
  "@type": "Article",
  "headline": "Access Modifiers - Java",
@@ -612,73 +718,33 @@ public class Student {
  }
 </script>
 
-<style>
-   .footerfont{font-size: 16px}
-</style>
-<div class="footer footerfont" style="background: #55585a;">
+		<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
 
-<div class="container text-center text-md-left"><br>
+		<div class="container text-center text-md-left">
+			
+		</div>
 
-<div class="row">
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
 
-<div class="col-md-3 mt-md-0 mt-3">
-
-<p><b class="text-white">About Us</b></p>
-<p class="text-white">Java by Kiran has been actively helping students to enhance their skills in IT Industry (specially in Java, Selenium & Python). Our aim is to provide quality education to all.</p>
-</div>
-
-<hr class="clearfix w-100 d-md-none">
-
-<div class="col-md-2 mb-md-0 mb-3">
-
-<p><b class="text-white">Tutorials</b></p>
-<ul class="list-unstyled">
-<li>
-<a href="introduction-to-java.html" class="footerlinks">Java</a>
-</li>
-<li>
-<a href="https://www.jbktutorials.com/selenium/eclipse-configuration.php" class="footerlinks">Selenium</a>
-</li>
-<li>
-<a href="https://www.jbktutorials.com/spring-tutorials.php" class="footerlinks">Spring</a>
-</li>
-<li>
-<a href="https://www.jbktutorials.com/spring-boot-framework-tutorials.php" class="footerlinks">Spring Boot</a>
-</li>
-</ul>
-</div>
-
-</div>
-
-</div>
-
-<div class="footer-copyright border-top ">
-<div class="container">
-<div class="row">
-
-<div class=" col-sm-6 pull-left py-3 text-white">Copyright © 2020
-<a href="http://javabykiran.com/" class="footerlinks" target="_blank">javabyKiran</a>
-</div>
-
-<div class="col-sm-6 pull-right">
-<ul class="list-unstyled p-0 mt-4 text-right mb-1">
-<a href="https://www.facebook.com/javabykiran" class="icon" target="_blank"><i class="fab fa-facebook"></i></a>
-<a href="https://www.twitter.com/javabykiran" class="icon" target="_blank"><i class="fab fa-twitter"></i></a>
-<a href="https://www.instagram.com/javabykiran/" class="icon" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://ca.linkedin.com/company/javabykiran" class="icon" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
+					<div class=" col-sm-6 pull-left py-3 text-white">
+						Copyright © 2023 <a href="http://javabykiran.com/" class="footerlinks"
+							target="_blank">JavaRavish</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
 
-
-
-<script type="application/ld+json">
+	<script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
@@ -702,7 +768,7 @@ public class Student {
   ]
 }
 </script>
-<script type="application/ld+json">
+	<script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "PostalAddress",
@@ -717,48 +783,49 @@ public class Student {
 
 </script>
 
-<script>
+	<script>
 
-$(document).ready(function (){
-	$('.tab-pane').addClass('show');
-});
+		$(document).ready(function () {
+			$('.tab-pane').addClass('show');
+		});
 
-$('ul.nav-bottom').find('a').click(function(){
-	$('.tab-pane').addClass('show');
-	var $href = $(this).attr('href');
-	$('html, body').animate({
-		scrollTop: ($($href).first().offset().top)-90
-	},500);
-	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-		var target = $(e.target).attr("href");
-		$('.nav-bottom li').removeClass('active');
-		$('.nav-top li').removeClass('active');
-		$('[href*="'+target+'"]').parent('li').addClass('active');
-	})
-});
+		$('ul.nav-bottom').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-bottom li').removeClass('active');
+				$('.nav-top li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
 
-$('ul.nav-top').find('a').click(function(){
-	$('.tab-pane').addClass('show');
-	var $href = $(this).attr('href');
-	$('html, body').animate({
-		scrollTop: ($($href).first().offset().top)-90
-	},500);
-	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-		var target = $(e.target).attr("href");
-		$('.nav-top li').removeClass('active');
-		$('.nav-bottom li').removeClass('active');
-		$('[href*="'+target+'"]').parent('li').addClass('active');
-	})
-});
+		$('ul.nav-top').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-top li').removeClass('active');
+				$('.nav-bottom li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
 
- //Script for Copy to Clipboard
-var clipboard = new Clipboard('button');
-  function copySuccessMessage() {
-  alert("Copied to Clipboard!");
-}
- </script>
+		//Script for Copy to Clipboard
+		var clipboard = new Clipboard('button');
+		function copySuccessMessage() {
+			alert("Copied to Clipboard!");
+		}
+	</script>
 </body>
 
 
 <!-- Mirrored from www.jbktutorials.com/corejava/access-modifiers-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Nov 2023 14:11:26 GMT -->
+
 </html>
