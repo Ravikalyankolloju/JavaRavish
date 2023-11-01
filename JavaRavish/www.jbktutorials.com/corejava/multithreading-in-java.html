@@ -1,0 +1,977 @@
+<!--Header-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.jbktutorials.com/corejava/multithreading-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Nov 2023 14:11:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>JBK Tutorials | Multithreading in Java</title>
+<meta name="description" content="Multithreading in java is a process of executing two or more threads simultaneously to maximum utilization of CPU.">
+<meta name="keywords" content="java tutorials, core java, advance java, java by kiran, java interview questions, blog, articles, learn java programming, codes, examples, selenium, python, spring">
+<meta name="author" content="Java By Kiran">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Multithreading in Java" />
+<meta property="og:url" content="multithreading-in-java.html" />
+<meta property="fb:app_id" content="881390338999747" />
+<meta property="og:description" content="Multithreading in java is a process of executing two or more threads simultaneously to maximum utilization of CPU.">
+<meta property="og:image" content="../images/jbktutorialslogo3square.png">
+<meta property="og:image:secure_url" content="../images/jbktutorialslogo3square.png" />
+<meta property="og:type" content="article" />
+
+
+<meta name="twitter:title" content="Multithreading in Java">
+<meta name="twitter:description" content="Multithreading in java is a process of executing two or more threads simultaneously to maximum utilization of CPU.">
+<meta name="twitter:image" content="../images/jbktutorialslogo3square.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="multithreading-in-java.html" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/android-chrome-192x192.png" />
+<link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
+
+<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css" as="style">
+<link rel="preload" href="../css/customcss.css" as="style">
+<link rel="preload" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" as="style">
+<link rel="preload" href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
+<link rel="preload" href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
+<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js" as="script">
+<link rel="preload" href="../js/jquery.min.js" as="script">
+<link rel="preload" href="../vendor/clipboard/clipboard.min.js" as="script">
+<link rel="preload" href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
+<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" as="script">
+<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-156439212-1');
+  </script>
+
+
+<script data-ad-client="ca-pub-5964671306985297" async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="../css/customcss.css">
+<link rel="stylesheet" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+
+
+<link rel="stylesheet" href="../vendor/syntaxhighlighter/styles/a11y-light.css">
+<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
+<script defer>hljs.initHighlightingOnLoad();</script>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../vendor/clipboard/clipboard.min.js"></script>
+
+
+
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+<link rel="stylesheet" href="../vendor/jquery-viewer-master/docs/css/viewer.css">
+<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
+<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" defer></script>
+<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+<div class="container p-0">
+<a class="navbar-brand pull-left" href="https://www.jbktutorials.com/"><img src="../images/jbktutorialslogo3.png" style="height: 65px; max-width: 100%;" alt="java by kiran tutorials" title="JBK Tutorials"></a>
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar fa fa-bars"></span>
+</button>
+<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+<script async src="../../cse.google.com/fd667.txt?cx=001580368639334093203:va4ehh0xpyd"></script>
+<div class="gcse-search"></div>
+<ul class="navbar-nav ml-auto text-center">
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/"><i class="fa fa-home"></i></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="introduction-to-java.html">Java</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/selenium/eclipse-configuration.php">Selenium</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/spring-tutorials.php">Spring</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/spring-boot-framework-tutorials.php">Spring Boot</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/technical-tutorials.php">Technical Tutorial</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/interview-questions.php">Interview Questions</a>
+</li>
+
+</ul>
+</div>
+</div>
+</nav><br>
+
+<script async src="../../platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
+ <style>
+    .centerimage {
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;}
+</style>
+
+
+<div class="container-fluid">
+<br/>
+<ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+<a class="text-dark" itemprop="item" href="https://www.jbktutorials.com/index.php">
+<span itemprop="name">Home</span>
+</a>
+<meta itemprop="position" content="1" />
+</li>
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+<a class="text-dark" itemprop="item" href="introduction-to-java.html">
+<span itemprop="name">Java</span>
+</a>
+<meta itemprop="position" content="2" />
+</li>
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+<a class="text-dark" itemprop="item" href="multithreading-in-java.html">
+<span itemprop="name">What is Multithreading?</span>
+</a>
+<meta itemprop="position" content="3" />
+</li>
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+<span itemprop="name">Multithreading</span>
+<meta itemprop="position" content="4" />
+</li>
+</ol>
+
+<div class="row">
+
+<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
+<style>
+    @media only screen and (max-width: 425px){
+    .hidesidebar{display: none;}}
+</style>
+<script>
+    //Script to Open and Close Sidebar
+function sidebar_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function sidebar_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+    // toggle up & down icon
+function myFunction(x) {
+  x.classList.toggle("fa-book-open");
+}
+</script>
+
+
+<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
+<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist" aria-multiselectable="true">
+<div class="card">
+<h2 class="card-header text-white" style="background: rgb(1, 71, 128);">Java</h2><br>
+<div class="list-group">
+<button class="w3-teal bg-transparent w3-large w3-hide-large" onclick="sidebar_close()">Close Menu &times;</button>
+<ul class="leftBarList">
+<li><a href="introduction-to-java.html">Java Introduction</a></li>
+<li><a href="java-language.html">Java Language</a></li>
+<li><a href="communication-between-two-classes-in-java.html">Communication Between Two Classes</a></li>
+<li><a href="package-in-java.html">Package</a></li>
+<li><a href="methods-variable-and-block-in-java.html">Methods, Variable and Block</a></li>
+<li><a href="encapsulation-in-java.html">Encapsulation</a></li>
+<li><a href="access-modifiers-in-java.html">Access Modifiers</a></li>
+<li><a href="statickeyword-in-java.html">Static Keyword</a></li>
+<li><a href="final-keyword-in-java.html">Final Keyword </a></li>
+<li><a href="constructor-in-java.html">Constructor </a></li>
+<li><a href="inheritance-in-java.html">Inheritance </a></li>
+<li><a href="super-and-this-keyword-in-java.html">Super This</a></li>
+<li><a href="polymorphism-in-java.html">Polymorphism</a></li>
+<li><a href="abstraction-in-java.html">Abstraction</a></li>
+<li><a href="garbage-collection-in-java.html">Garbage Collection</a></li>
+<li><a href="input-and-output-streams-in-java.html">Input Output Stream</a></li>
+<li><a href="collection-framework-in-java.html">Collection Framework</a></li>
+<li><a href="collection-revisited-in-java.html">Collection Revisited</a></li>
+<li><a href="serialization-in-java.html">Serialization</a></li>
+<li><a href="exception-in-java.html">Exception</a></li>
+
+
+<li><a href="arrays-in-java.html">Arrays</a></li>
+<li><a href="strings-in-java.html">Strings</a></li>
+<li><a href="features-of-jdk-1.5-in-java.html">Features and Enhancements in jdk 1.5</a></li>
+<li><a href="features-of-jdk-1.6-in-java.html">Features and Enhancements in jdk 1.6</a></li>
+<li><a href="features-of-jdk-1.7-in-java.html">Features and Enhancements in jdk 1.7</a></li>
+<li><a href="features-of-jdk-1.8-in-java.html">Features and Enhancements in jdk 1.8</a></li>
+<li><a href="multithreading-in-java.html">Thread</a></li>
+<li><a href="java-virtual-machine-memory-management.html">JVM Memory Management</a></li>
+<li><a href="jdbc-in-java.html">JDBC</a></li>
+<li><a href="database-in-java.html">Database</a></li>
+</ul>
+</div>
+</div><br>
+<div>
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297" data-ad-slot="1171818896" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>
+</div>
+
+
+
+<div class="col-lg-7 mb-4">
+<div class="card h-100">
+<h1 class="card-header text-white" style="background: rgb(1, 71, 128);">Multithreading in Java</h1>
+<div class="card-body">
+<div class="tab" role="tabpanel">
+<p><b>Multitasking</b> is a process of executing one or more tasks concurrently or at a time. Similarly, multithreading is the process of executing one or more threads at the same time or concurrently.</p>
+<hr><div>
+
+<ul class="nav nav-tabs nav-top" role="tablist">
+<li role="presentation" class="active"><a href="#Multitasking" role="tab" data-toggle="tab">Multitasking</a></li>
+<li role="presentation"><a href="#MultiprocessingvsMultithreading" role="tab" data-toggle="tab">Multiprocessing vs Multithreading</a></li>
+<li role="presentation"><a href="#Stepstorunanyclass" role="tab" data-toggle="tab">Steps to run any class</a></li>
+<li role="presentation"><a href="#ExtendingjavalangThreadclass" role="tab" data-toggle="tab">Extending java.lang.Thread class</a></li>
+<li role="presentation"><a href="#ImplementingjavalangRunnableinterface" role="tab" data-toggle="tab">Implementing java.lang.Runnable interface</a></li>
+<li role="presentation"><a href="#ExtendingThreadvsImplementingRunnable" role="tab" data-toggle="tab">Extending Thread vs Implementing Runnable</a></li>
+<li role="presentation"><a href="#Threadwaitstate" role="tab" data-toggle="tab">Thread wait state</a></li>
+<li role="presentation"><a href="#CPUSchedulingAlgorithm" role="tab" data-toggle="tab">CPU Scheduling Algorithm</a></li>
+<li role="presentation"><a href="#ThreadLifeCycle" role="tab" data-toggle="tab">Thread Life Cycle</a></li>
+</ul>
+</div><hr>
+<div class="tab-content tabs">
+<div role="tabpanel" class="tab-pane fade in active" id="Multitasking">
+<h2 class="breadcrumb">Multitasking</h2>
+<p>Multitasking can be implanting in two ways:</p>
+<ul>
+<li><p>Multiprocessing</p></li>
+<li><p>Multithreading</p></li>
+</ul><br>
+<div class="docs-galley"><img class="docs-pictures clearfix centerimage" src="https://www.jbktutorials.com/images/java/multithreading_img1.webp" alt="multithreading in java" title="Multithreading"></div><br>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="MultiprocessingvsMultithreading">
+<div id="Div4" class="tablediv">
+<h2 class="breadcrumb">Multiprocessing vs Multithreading</h2>
+<table class="table-responsive-xl table-bordered table" style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tr>
+<th class="center">Multiprocessing</th>
+<th class="center">Multithreading</th>
+</tr>
+<tr>
+<td><ul><li>Executing multiple programs or processes concurrently is called multiprocessing. These programs may be belong to the same programming language or a different one.</li></ul></td>
+<td><ul><li>Executing multiple threads belonging to a single program or different programs which are implemented in same programming language is called multithreading.</li></ul></td>
+</tr>
+<tr>
+<td><ul><li>Multiple programs running concurrently may occupy different memory spaces.</li></ul></td>
+<td><ul><li>Different threads running concurrently may occupy a single memory space.</li></ul></td>
+</tr>
+<tr>
+<td><ul><li>Context switching between processes is expensive.</li></ul></td>
+<td><ul><li>Context switching between threads is easy and not expensive.</li></ul></td>
+</tr>
+<tr>
+<td><ul><li>Data sharing between programs is expensive.</li></ul></td>
+<td><ul><li>Data sharing threads is easy and cheap.</li></ul></td>
+</tr>
+</table>
+</div>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code1" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code1" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Thread;
+/**
+* @author Java By Kiran
+*/
+public class Lab1 {
+   public static void main(String[] args) { 
+        System.out.println("main begin"); 
+        Thread t = Thread.currentThread(); 
+        System.out.println(t);
+        System.out.println(t.getName());
+        System.out.println(t.getPriority()); 
+        t.setName("JAVABYKIRAN");
+        t.setPriority(9); 
+        System.out.println(t); 
+        System.out.println(t.getName()); 
+        System.out.println(t.getPriority()); 
+        System.out.println("main end");
+   }
+}
+</code></pre>
+<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+      main begin 
+      Thread[main,5,main]
+      main
+      5
+      Thread[JAVABYKIRAN,9,main] 
+      JAVABYKIRAN
+      9
+      main end
+  </code></pre>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="Stepstorunanyclass">
+<h2 class="breadcrumb">Steps to run any class</h2>
+<p>When we try to run any class</p>
+<p>We need keep in mind the following: whenever main method get call automatically</p>
+<code>public static void main (String [] args) {}</code><br><br>
+<ol type="1">
+<li><p>Take the class name</p></li>
+<li><p>Take the command line value</p></li>
+<li><p>Creates the String array object</p></li>
+<li><p>If command line value is there then it stores command line value in String array</p></li>
+<li><p>Create the Thread group with name main</p></li>
+<li><p>Creates the Thread with :</p>
+<ol type="a">
+<li>Name-main</li>
+<li>Priority-5</li>
+<li>Group-main</li>
+</ol>
+</li><br>
+<li><p>Starts the main thread</p></li>
+</ol><hr>
+<p>Listed below are a few points that must be noted:</p>
+<ul>
+<li><p>By default, JVM is created the main thread and is started, which is responsible for invoking the main method.</p></li>
+<li><p>You can write your own threads which are called by user defined threads and are called as child threads.</p></li>
+<li><p>You can also implement code for required tasks in the child threads.</p></li>
+<li><p>The JVM always starts the main method and all child threads will also start from the main thread</p>
+You can develop user defined threads in two way:
+<ul><li>By extending java.lang.Thread class</li>
+<li>By implementing java.lang.Runnable interface</li>
+</ul></li>
+</ul>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="ExtendingjavalangThreadclass">
+<h2 class="breadcrumb">Develop Threads by extending java.lang.Thread class</h2>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code2" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code2" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.thread;
+public class ThreadOne extends Thread {
+    public void run() {
+	for (int i = 1; i <= 5; i++) {
+	    // Displaying the numbers from this thread
+	    System.out.println("Running First Thread : " + i);
+		try {
+			Thread.sleep(1000);
+		} catch (Exception e) {
+
+			}
+		}
+	}
+}
+</code></pre>
+</div>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code3" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code3" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.thread;
+public class ThreadTwo extends Thread {
+     public void run() {
+	for (int i = 1; i <= 5; i++) {
+	    System.out.println("Running Second Thread : " + i);
+		try {
+			Thread.sleep(500);
+		} catch (Exception e) {
+
+	    }
+	}
+    }
+}
+</code></pre>
+</div>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code4" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code4" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.thread;
+public class ThreadTest {
+    public static void main(String[] args) {
+	System.out.println(Thread.currentThread().getName() + " Thread Begin...");
+	    ThreadOne firstThread = new ThreadOne();
+	    ThreadTwo secondThread = new ThreadTwo();
+	    firstThread.start();
+	    secondThread.start();
+    }
+}
+</code></pre>
+<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+     main Thread Begin...
+     Running First Thread  : 1
+     Running Second Thread : 1
+     Running Second Thread : 2
+     Running First Thread  : 2
+     Running Second Thread : 3
+     Running Second Thread : 4
+     Running First Thread  : 3
+     Running Second Thread : 5
+     Running First Thread  : 4
+     Running First Thread  : 5
+</code></pre>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="ImplementingjavalangRunnableinterface">
+<h2 class="breadcrumb">Develop Threads by implementing java.lang.Runnable interface</h2>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code5" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code5" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Thread;
+/**
+* @author Java By Kiran
+*/
+public class Stack {
+  int x;
+  void push(int a) {
+   x = a;
+  }
+  int pop() {
+   return x;
+  }
+}
+</code></pre>
+</div>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code6" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code6" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Thread;
+/**
+* @author Java By Kiran
+*/
+public class ThreadsA implements Runnable { 
+ Stack st = null;
+  public ThreadsA(Stack st, String tname) { 
+  Thread t = new Thread(this, tname);
+    this.st = st; 
+    t.start();
+  }
+  public void run() {
+    for (int i = 1; i <= 5; i++) {
+    st.push(i);
+    System.out.println(i + " is pushed by A"); 
+    try {
+        Thread.sleep(500);
+    } catch(Exception e) {
+   }
+  }
+ }
+}
+</code></pre>
+</div>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code7" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code7" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Thread;
+/**
+* @author Java By Kiran
+*/
+public class ThreadsB extends Thread { 
+  Stack st = null;
+public ThreadsB(Stack st, String tname) { 
+  super(tname);
+  this.st = st; 
+  start();
+}
+public void run() {
+  for (int i = 1; i <= 5; i++) { 
+   int x = st.pop();
+      System.out.println(x + " is poped by B"); 
+  Try {
+          Thread.sleep(500);
+  } catch (Exception e) {
+  
+       }
+     }
+   }
+ }
+</code></pre>
+</div>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code8" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code8" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Thread;
+/**
+* @author Java By Kiran
+*/
+public class Lab3 {
+  public static void main(String[] args) { 
+  Stack st = new Stack();
+    ThreadsA a = new ThreadsA(st, "A"); 
+    ThreadsB a1 = new ThreadsB(st, "B");
+    for (int i = 1; i <= 5; i++) {
+  System.out.println(i+"by"+Thread.currentThread().getName()); 
+       try {
+          Thread.sleep(500);
+       } catch (Exception e) {
+    }
+  }
+ }
+}
+</code></pre>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="ExtendingThreadvsImplementingRunnable">
+<h2 class="breadcrumb">Extending Thread vs Implementing Runnable</h2>
+<div class="tablediv">
+<table class="table-responsive-xl table-bordered table" style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tr>
+<th class="center">Extending thread</th>
+<th class="center">Implementing Runnable</th>
+</tr>
+<tr>
+<td>Your user defined thread class has to extend java.lang.Thread</td>
+<td>Your user defined thread class has to implement java.lang.Runnable</td>
+</tr>
+<tr>
+<td>From your thread class, you can invoke the following threads class constructors: Thread (string) and Thread (Thread Group, string).</td>
+<td>When your thread class is implementing Runnable interface, you have to explicitly create the thread with one of the following constructors:
+<ul>
+<li>Thread(Runnable) Thread(Runnable, string)</li>
+<li>Thread (Thread Group, Runnable, string)</li>
+<li>Thread (Thread Group, Runnable)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><b>Example:</b>
+<pre>
+<code>public class Demo extends Thread {
+    public void run()  {   
+}
+public static void main(String args[]){
+    Demo d1 = new Demo();
+    d1.start();
+  }
+}</code></pre>
+</td>
+<td><b>Example:</b>
+<pre>
+<code>public class Demo implements Runnable
+{
+  public void run()  {  }
+  public static void main(String args[]) {
+    Demo d1 = new Demo();
+    Thread t1 = new Thread(d1) // composition
+    t1.start();
+  }
+}</code></pre>
+</td>
+</tr>
+</table>
+</div>
+<ul>
+<li><p>When you create and start the thread, it will be placed in a ready to run state, and the thread will just wait for the CPU &rarr; start()</p></li>
+<li><p>When the CPU scheduler allocates the CPU for them, t thread will be placed in running and be utilised by the CPU &rarr; run()</p></li>
+<li><p>Depending on the CPU scheduling algorithm, the thread will be moved to ready to run from running state</p></li>
+<li><p>When you call the sleep() method on the running thread, the thread will go into a sleep state and stay in that sleep state for a specified amount of time. Once the time is up, the thread will be moved into a ready to run state automatically</p></li>
+<li><p>sleep() method will overload with the following version: void sleep(long)</p>
+<ul><li><p>The thread sleeps for specified amount of milliseconds and nano seconds void sleep(long , int)</p></li></ul>
+</li>
+<li><p>When you call the wait() method during the running state, the thread will go into the wait state</p></li>
+<li><p>To move the thread to wait, you can call one of the following methods of object class</p>
+<ul>
+<li>void wait()</li> <li>void wait(long)</li> <li>void wait(long,int)</li>
+</ul>
+</li>
+</ul>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="Threadwaitstate">
+<h2 class="breadcrumb">Thread wait state</h2>
+<p>Thread waiting is in wait state there until either notify() or notifyAll() is called.</p>
+<ul>
+<li><p>If notify() or notifyAll() is called before the specified amount of time, the thread will be moved to ready to run state</p></li>
+<li><p>If specified amount of time is over without notifying, the thread will be moved to ready to run state automatically</p></li>
+<li><p>When you call the notify() method, the thread which has been waiting for a long time in the wait state will be moved into the ready to run state</p></li>
+<li><p>When you call the notifyAll() method, all the threads which are waiting will be moved to ready to run state</p></li>
+<li><p>When a thread is waiting for an unavailable resource, the thread will be blocked and placed in blocked state. Later, when the requested resource is available, it will be moved to ready to run state</p></li>
+<li><p>A blocked state is very dangerous since it may leads to deadlocks</p></li>
+</ul>
+<p>Consider the following scenario: there are threads running concurrently. Call t1 and t2 and hold the resources called r1 and r2 respectively.
+<pre class="nohighlight"><code>What would you do?  &rarr;    class A  t1<br>
+                    &rarr;    class B  t2</code></pre>
+</p>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code9" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code9" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Thread; 
+public class A extends Thread {
+   @Override
+   public void run(){ 
+     synchronized (String.class) {
+        // here T1 comes wait for
+        // somebody to release Integer lock
+        // but here T1 is already acquired this lock
+        // so not possible 
+     synchronized (Integer.class) {
+           System.out.println("I am in A");
+        }
+     }
+  }
+}
+</code></pre>
+</div>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code10" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code10" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Thread;   
+public class B extends Thread {
+   @Override
+   public void run() { 
+      synchronized (Integer.class) {
+         // here T2 comes wait for
+         // somebody to release String lock
+         // but here T2 is already acquired this lock
+         // so not possible 
+      synchronized (String.class) { 
+            System.out.println("I am in B");
+         }
+      }
+    } 
+ }
+</code></pre>
+</div>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code11" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code11" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Thread; 
+public class DeadLockTest {
+   public static void main(String[] args) { 
+        A a = new A();
+        a.setName("A"); 
+        a.start();
+        B b=new B(); 
+        b.setName("B"); 
+        b.start();
+    }
+}
+</code></pre>
+</div><br>
+The thread will be dead in two ways:
+<ol type="i">
+<li>It will be destroyed automatically whenever its task is completed (run () method execution is completed)</li>
+<li>You can destroy the thread before finishing its task by calling the destroy () method. Once it is dead, you cannot get it back to utilise the CPU time.
+</li>
+</ol>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="CPUSchedulingAlgorithm">
+<h2 class="breadcrumb">CPU Scheduling Algorithm</h2>
+<p>CPU schedulers are responsible for allocating CPU time for various processes or threads running in system. There FCFS or First Come First Served one is the simplest.</p>
+<h4>List of scheduling algorithms:</h4>
+<ul>
+<li>Shortest job first algorithm</li>
+<li>First come first served schedulers</li>
+<li>Time slice or round robin</li>
+<li>Primitive scheduler algorithm</li>
+<li>Non primitive scheduler algorithm</li>
+</ul><hr>
+<h4>Thread Priority</h4>
+<p>Priority is a number assigned to the thread which will be used by the CPU scheduler to give more preference to the threads.</p><hr>
+<h4>Can I overload run() method?</h4>
+<p>Yes, you can overload. But JVM calls the run() method whose signature is available in runnable interface i.e. public void run() and other overloaded methods should not be called by the JVM.</p>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="ThreadLifeCycle">
+<h2 class="breadcrumb">Thread Life Cycle</h2>
+<div class="docs-galley"><img class="docs-pictures clearfix centerimage" src="https://www.jbktutorials.com/images/java/multithreading_threadlifecycle_img2.webp" alt="thread life cycle in java" title="Thread life cycle"></div><br>
+<div class="tablediv">
+<table class="table-responsive-xl table-bordered table" style="width:100%;">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<tr>
+<th class="center">Method </th>
+<th class="center">Meaning</th>
+</tr>
+<tr>
+<td>getName</td>
+<td>Obtain a thread's name</td>
+</tr>
+<tr>
+<td>getPriority</td>
+<td>Obtain a thread's priority</td>
+</tr>
+<tr>
+<td>isAlive</td>
+<td>Determine if a thread is still running</td>
+</tr>
+<tr>
+<td>join</td>
+<td>Pause the current thread execution until the specified thread is dead</td>
+</tr>
+<tr>
+<td>run</td>
+<td>Entry point for the thread </td>
+</tr>
+<tr>
+<td>sleep</td>
+<td>Suspend a thread for a period of time</td>
+</tr>
+<tr>
+<td>start</td>
+<td>Start a thread by calling its run method</td>
+</tr>
+</table>
+</div>
+</div>
+</div><hr>
+<ul class="nav nav-tabs nav-bottom mt-3" role="tablist">
+<li role="presentation" class="active"><a href="#Multitasking" role="tab" data-toggle="tab">Multitasking</a></li>
+<li role="presentation"><a href="#MultiprocessingvsMultithreading" role="tab" data-toggle="tab">Multiprocessing vs Multithreading</a></li>
+<li role="presentation"><a href="#Stepstorunanyclass" role="tab" data-toggle="tab">Steps to run any class</a></li>
+<li role="presentation"><a href="#ExtendingjavalangThreadclass" role="tab" data-toggle="tab">Extending java.lang.Thread class</a></li>
+<li role="presentation"><a href="#ImplementingjavalangRunnableinterface" role="tab" data-toggle="tab">Implementing java.lang.Runnable interface</a></li>
+<li role="presentation"><a href="#ExtendingThreadvsImplementingRunnable" role="tab" data-toggle="tab">Extending Thread vs Implementing Runnable</a></li>
+<li role="presentation"><a href="#Threadwaitstate" role="tab" data-toggle="tab">Thread wait state</a></li>
+<li role="presentation"><a href="#CPUSchedulingAlgorithm" role="tab" data-toggle="tab">CPU Scheduling Algorithm</a></li>
+<li role="presentation"><a href="#ThreadLifeCycle" role="tab" data-toggle="tab">Thread Life Cycle</a></li>
+</ul>
+</div>
+</div>
+<div class="card-footer">
+<ul class="pagination justify-content-center mb-4">
+<li class="page-item">
+<a class="page-link btn-outline-primary" href="features-of-jdk-1.8-in-java.html">&lArr; Previous Chapter</a>
+</li>
+<li class="page-item">
+<a class="page-link" href="java-virtual-machine-memory-management.html">Next Chapter &rArr;</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-lg-2 mb-4">
+<div>
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297" data-ad-slot="6605368152" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+</div>
+<br>
+<div>
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297" data-ad-slot="7335995893" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script type="application/ld+json">
+{"@context": "https://schema.org", 
+ "@type": "Article",
+ "headline": "Multithreading - Java",
+ "alternativeHeadline": "What is multithreading in java?",
+ "image": "https://www.jbktutorials.com/images/java/multithreading_img1.webp",
+ "author": {
+    "@type": "Person",
+    "name": "Kiran Digrase"
+  }, 
+ "genre": "java multithreading", 
+ "keywords": "java multithreading, multithreading, multithreading in java, multitasking, thread wait state, cpu scheduling algorithm, thread life cycle, steps to run any class", 
+ "publisher": {
+    "@type": "Organization",
+    "name": "Java By Kiran",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.javabykiran.com/images/logojbk.png"
+    }
+  },
+ "url": "https://www.jbktutorials.com/corejava/multithreading-in-java.php",
+    "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.javabykiran.com/"
+  },
+ "datePublished": "2019-11-22",
+ "dateCreated": "2019-11-22",
+ "dateModified": "2019-11-22",
+ "description": "Multithreading in java is a process of executing two or more threads simultaneously to maximum utilization of CPU.",
+ "articleBody": "Executing multiple threads belonging to a single program or different programs which are implemented in same programming language is called multithreading. Different threads running concurrently may occupy a single memory space."
+ }
+</script>
+
+<style>
+   .footerfont{font-size: 16px}
+</style>
+<div class="footer footerfont" style="background: #55585a;">
+
+<div class="container text-center text-md-left"><br>
+
+<div class="row">
+
+<div class="col-md-3 mt-md-0 mt-3">
+
+<p><b class="text-white">About Us</b></p>
+<p class="text-white">Java by Kiran has been actively helping students to enhance their skills in IT Industry (specially in Java, Selenium & Python). Our aim is to provide quality education to all.</p>
+</div>
+
+<hr class="clearfix w-100 d-md-none">
+
+<div class="col-md-2 mb-md-0 mb-3">
+
+<p><b class="text-white">Tutorials</b></p>
+<ul class="list-unstyled">
+<li>
+<a href="introduction-to-java.html" class="footerlinks">Java</a>
+</li>
+<li>
+<a href="https://www.jbktutorials.com/selenium/eclipse-configuration.php" class="footerlinks">Selenium</a>
+</li>
+<li>
+<a href="https://www.jbktutorials.com/spring-tutorials.php" class="footerlinks">Spring</a>
+</li>
+<li>
+<a href="https://www.jbktutorials.com/spring-boot-framework-tutorials.php" class="footerlinks">Spring Boot</a>
+</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-copyright border-top ">
+<div class="container">
+<div class="row">
+
+<div class=" col-sm-6 pull-left py-3 text-white">Copyright © 2020
+<a href="http://javabykiran.com/" class="footerlinks" target="_blank">javabyKiran</a>
+</div>
+
+<div class="col-sm-6 pull-right">
+<ul class="list-unstyled p-0 mt-4 text-right mb-1">
+<a href="https://www.facebook.com/javabykiran" class="icon" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://www.twitter.com/javabykiran" class="icon" target="_blank"><i class="fab fa-twitter"></i></a>
+<a href="https://www.instagram.com/javabykiran/" class="icon" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://ca.linkedin.com/company/javabykiran" class="icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "logo": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-888-880-9416",
+    "contactType": "customer service"
+  },
+  
+  "sameAs": [
+    "https://www.facebook.com/javabykiran",
+    "https://twitter.com/javabykiran",
+    "https://plus.google.com/+JavabyKiran",
+    "https://www.instagram.com/javabykiran/",
+    "https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA",
+    "https://ca.linkedin.com/company/javabykiran"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "PostalAddress",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "addressLocality": "Pune",
+   "addressRegion": "Maharashtra",
+   "postalCode": "411052",
+   "streetAddress": "403, 4th Floor, Park Plaza, Above Birla super Market, State Bank Nagar, Karve Nagar,Pune "
+  }
+
+</script>
+
+<script>
+
+$(document).ready(function (){
+	$('.tab-pane').addClass('show');
+});
+
+$('ul.nav-bottom').find('a').click(function(){
+	$('.tab-pane').addClass('show');
+	var $href = $(this).attr('href');
+	$('html, body').animate({
+		scrollTop: ($($href).first().offset().top)-90
+	},500);
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		var target = $(e.target).attr("href");
+		$('.nav-bottom li').removeClass('active');
+		$('.nav-top li').removeClass('active');
+		$('[href*="'+target+'"]').parent('li').addClass('active');
+	})
+});
+
+$('ul.nav-top').find('a').click(function(){
+	$('.tab-pane').addClass('show');
+	var $href = $(this).attr('href');
+	$('html, body').animate({
+		scrollTop: ($($href).first().offset().top)-90
+	},500);
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		var target = $(e.target).attr("href");
+		$('.nav-top li').removeClass('active');
+		$('.nav-bottom li').removeClass('active');
+		$('[href*="'+target+'"]').parent('li').addClass('active');
+	})
+});
+
+ //Script for Copy to Clipboard
+var clipboard = new Clipboard('button');
+  function copySuccessMessage() {
+  alert("Copied to Clipboard!");
+}
+ </script>
+</body>
+
+
+<!-- Mirrored from www.jbktutorials.com/corejava/multithreading-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Nov 2023 14:11:29 GMT -->
+</html>

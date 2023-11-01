@@ -1,0 +1,1022 @@
+<!--Header-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.jbktutorials.com/corejava/control-statements-in-java-language.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Nov 2023 14:11:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>JBK Tutorials | Control Statements in Java</title>
+<meta name="description" content="A Control statement in Java works as a determiner for deciding the next task of the other statements whether to execute or not.">
+<meta name="keywords" content="java tutorials, core java, advance java, java by kiran, java interview questions, blog, articles, learn java programming, codes, examples, selenium, python, spring">
+<meta name="author" content="Java By Kiran">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Control Statements in Java" />
+<meta property="og:url" content="control-statements-in-java-language.html" />
+<meta property="fb:app_id" content="881390338999747" />
+<meta property="og:description" content="A Control statement in Java works as a determiner for deciding the next task of the other statements whether to execute or not.">
+<meta property="og:image" content="../images/jbktutorialslogo3square.png">
+<meta property="og:image:secure_url" content="../images/jbktutorialslogo3square.png" />
+<meta property="og:type" content="article" />
+
+
+<meta name="twitter:title" content="Control Statements in Java">
+<meta name="twitter:description" content="A Control statement in Java works as a determiner for deciding the next task of the other statements whether to execute or not.">
+<meta name="twitter:image" content="../images/jbktutorialslogo3square.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="control-statements-in-java-language.html" />
+<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/android-chrome-192x192.png" />
+<link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
+
+<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css" as="style">
+<link rel="preload" href="../css/customcss.css" as="style">
+<link rel="preload" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css" as="style">
+<link rel="preload" href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
+<link rel="preload" href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
+<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js" as="script">
+<link rel="preload" href="../js/jquery.min.js" as="script">
+<link rel="preload" href="../vendor/clipboard/clipboard.min.js" as="script">
+<link rel="preload" href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
+<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" as="script">
+<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-156439212-1');
+  </script>
+
+
+<script data-ad-client="ca-pub-5964671306985297" async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="../css/customcss.css">
+<link rel="stylesheet" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+
+
+<link rel="stylesheet" href="../vendor/syntaxhighlighter/styles/a11y-light.css">
+<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
+<script defer>hljs.initHighlightingOnLoad();</script>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../vendor/clipboard/clipboard.min.js"></script>
+
+
+
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+<link rel="stylesheet" href="../vendor/jquery-viewer-master/docs/css/viewer.css">
+<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
+<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" defer></script>
+<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+<div class="container p-0">
+<a class="navbar-brand pull-left" href="https://www.jbktutorials.com/"><img src="../images/jbktutorialslogo3.png" style="height: 65px; max-width: 100%;" alt="java by kiran tutorials" title="JBK Tutorials"></a>
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar fa fa-bars"></span>
+</button>
+<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+<script async src="../../cse.google.com/fd667.txt?cx=001580368639334093203:va4ehh0xpyd"></script>
+<div class="gcse-search"></div>
+<ul class="navbar-nav ml-auto text-center">
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/"><i class="fa fa-home"></i></a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="introduction-to-java.html">Java</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/selenium/eclipse-configuration.php">Selenium</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/spring-tutorials.php">Spring</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/spring-boot-framework-tutorials.php">Spring Boot</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/technical-tutorials.php">Technical Tutorial</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="https://www.jbktutorials.com/interview-questions.php">Interview Questions</a>
+</li>
+
+</ul>
+</div>
+</div>
+</nav><br>
+
+<script async src="../../platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
+ <style>
+    .centerimage {
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;}
+</style>
+
+
+<div class="container-fluid">
+<br/>
+<ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+<a class="text-dark" itemprop="item" href="https://www.jbktutorials.com/index.php">
+<span itemprop="name">Home</span>
+</a>
+<meta itemprop="position" content="1" />
+</li>
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+<a class="text-dark" itemprop="item" href="introduction-to-java.html">
+<span itemprop="name">Java</span>
+</a>
+<meta itemprop="position" content="2" />
+</li>
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+<a class="text-dark" itemprop="item" href="introduction-to-java.html">
+<span itemprop="name">Core Java</span>
+</a>
+<meta itemprop="position" content="3" />
+</li>
+<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+<span itemprop="name">Java Language- Control Statements</span>
+<meta itemprop="position" content="4" />
+</li>
+</ol>
+
+<div class="row">
+
+<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
+<style>
+    @media only screen and (max-width: 425px){
+    .hidesidebar{display: none;}}
+</style>
+<script>
+    //Script to Open and Close Sidebar
+function sidebar_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function sidebar_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+    // toggle up & down icon
+function myFunction(x) {
+  x.classList.toggle("fa-book-open");
+}
+</script>
+
+
+<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
+<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist" aria-multiselectable="true">
+<div class="card">
+<h2 class="card-header text-white" style="background: rgb(1, 71, 128);">Java</h2><br>
+<div class="list-group">
+<button class="w3-teal bg-transparent w3-large w3-hide-large" onclick="sidebar_close()">Close Menu &times;</button>
+<ul class="leftBarList">
+<li><a href="introduction-to-java.html">Java Introduction</a></li>
+<li><a href="java-language.html">Java Language</a></li>
+<li><a href="communication-between-two-classes-in-java.html">Communication Between Two Classes</a></li>
+<li><a href="package-in-java.html">Package</a></li>
+<li><a href="methods-variable-and-block-in-java.html">Methods, Variable and Block</a></li>
+<li><a href="encapsulation-in-java.html">Encapsulation</a></li>
+<li><a href="access-modifiers-in-java.html">Access Modifiers</a></li>
+<li><a href="statickeyword-in-java.html">Static Keyword</a></li>
+<li><a href="final-keyword-in-java.html">Final Keyword </a></li>
+<li><a href="constructor-in-java.html">Constructor </a></li>
+<li><a href="inheritance-in-java.html">Inheritance </a></li>
+<li><a href="super-and-this-keyword-in-java.html">Super This</a></li>
+<li><a href="polymorphism-in-java.html">Polymorphism</a></li>
+<li><a href="abstraction-in-java.html">Abstraction</a></li>
+<li><a href="garbage-collection-in-java.html">Garbage Collection</a></li>
+<li><a href="input-and-output-streams-in-java.html">Input Output Stream</a></li>
+<li><a href="collection-framework-in-java.html">Collection Framework</a></li>
+<li><a href="collection-revisited-in-java.html">Collection Revisited</a></li>
+<li><a href="serialization-in-java.html">Serialization</a></li>
+<li><a href="exception-in-java.html">Exception</a></li>
+
+
+<li><a href="arrays-in-java.html">Arrays</a></li>
+<li><a href="strings-in-java.html">Strings</a></li>
+<li><a href="features-of-jdk-1.5-in-java.html">Features and Enhancements in jdk 1.5</a></li>
+<li><a href="features-of-jdk-1.6-in-java.html">Features and Enhancements in jdk 1.6</a></li>
+<li><a href="features-of-jdk-1.7-in-java.html">Features and Enhancements in jdk 1.7</a></li>
+<li><a href="features-of-jdk-1.8-in-java.html">Features and Enhancements in jdk 1.8</a></li>
+<li><a href="multithreading-in-java.html">Thread</a></li>
+<li><a href="java-virtual-machine-memory-management.html">JVM Memory Management</a></li>
+<li><a href="jdbc-in-java.html">JDBC</a></li>
+<li><a href="database-in-java.html">Database</a></li>
+</ul>
+</div>
+</div><br>
+<div>
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297" data-ad-slot="1171818896" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+</div>
+</div>
+
+
+
+<div class="col-lg-7 mb-4">
+<div class="card h-100">
+<h1 class="card-header text-white" style="background: rgb(1, 71, 128);">Control Statements in Java</h1>
+<div class="card-body">
+<div>
+<div class="tab" role="tabpanel">
+<a href="java-language.html" class="btn btn-outline-danger">&larr; Back to Java Language Chapter</a>
+<hr>
+<div>
+
+<ul class="nav nav-tabs nav-top" role="tablist">
+<li role="presentation" class="active"><a href="#Conditionalcontrolstatement" role="tab" data-toggle="tab">Conditional Control Statement</a></li>
+<li role="presentation"><a href="#IfStatement" role="tab" data-toggle="tab">If Statement</a></li>
+<li role="presentation"><a href="#SwitchStatement" role="tab" data-toggle="tab">Switch Statement</a></li>
+<li role="presentation"><a href="#LoopingControlStatement" role="tab" data-toggle="tab">Looping Control Statement</a></li>
+<li role="presentation"><a href="#ForStatement" role="tab" data-toggle="tab">For Statement</a></li>
+<li role="presentation"><a href="#WhileStatement" role="tab" data-toggle="tab">While Statement</a></li>
+<li role="presentation"><a href="#DowhileStatement" role="tab" data-toggle="tab">Do while Statement</a></li>
+<li role="presentation"><a href="#UnconditionalControlStatement" role="tab" data-toggle="tab">Unconditional Control Statement</a></li>
+</ul>
+</div><hr>
+<div class="tab-content tabs">
+<div role="tabpanel" class="tab-pane fade in active" id="Conditionalcontrolstatement">
+<h2 class="breadcrumb">Conditional Control Statement</h2>
+<p>The conditional control statement controls the order in which a java program is executed.</p>
+<p>Types of Conditional control statement:</p>
+<ul>
+<li><p>If statement</p></li>
+<li><p>Switch statement</p></li>
+</ul>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="IfStatement">
+<h2 class="breadcrumb">If Statement</h2>
+<p><b>Syntax :</b></p>
+<ul>
+<pre><code>i) if(condition){ 
+     s1; 
+    }  
+
+ii) if(condition){
+       s1; 
+    }
+    else{ 
+       s2; 
+    }
+
+iii) if (condition) {
+       s1;
+     } else 
+     if (condition) {
+       s2; 
+     } else { 
+       s3;
+     }</code></pre>
+</ul><hr>
+<h4><b>Question :</b> Write a program to pass three numbers from command lines and find:<br>
+i) minimum <br>ii) maximum
+</h4>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code1" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code1" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.basics; 
+public class Lab12 {
+   public static void main(String[] args) { 
+     int a = 5;
+     int b = 2; 
+     int c = 1;
+     if ((a > b) && (a > c)) { 
+       System.out.println("Min" +a);
+     } else if (b > c) { 
+       System.out.println("Min" +b);
+     } else {
+       System.out.println("Min" + c);
+       }
+       if (a < b) {
+         if (a < c) { 
+           System.out.println("Min:" +a);
+         } else {
+           System.out.println("Min" + c);
+           }
+         } else {
+            if (b < c) { 
+            System.out.println("Min" +b);
+         } else {
+            System.out.println("Min" + c);
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="SwitchStatement">
+<h2 class="breadcrumb">Switch Statement</h2>
+<p><b>Syntax :</b></p>
+<ul>
+<pre><code>switch(expr) { 
+    case No1: s1;
+        break; 
+    case Non: sn;
+        break; 
+  default: s;
+}</code></pre>
+</ul>
+<hr>
+<div>
+<p><b>Example:</b></p>
+<button class="copycodebuttonstyle" data-clipboard-target="#code2" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code2" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.basics; 
+public class Lab16 {
+  public static void main(String[] args){
+    int a = Integer.parseInt(args[0]); 
+    switch (a) {
+    case 1:
+        System.out.println("FRI"); 
+        break;
+    case 2:
+        System.out.println("MON"); 
+        break;
+    case 3:
+        System.out.println("TUE"); 
+        break;
+    default:
+        System.out.println("Invalid No"); 
+        break;
+    }
+  }
+}</code></pre>
+</div><br>
+<p><b>NOTE:</b> The default statement can be written anywhere in the switch statement. But they have a break. In the last statement, it does not have break, but it is also possible.</p>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="LoopingControlStatement">
+<h2 class="breadcrumb">Looping Control Statement</h2>
+<p>Looping statements execute statements over and over again, in a loop. It continues until the condition result is true.</p>
+<p>Types of Looping control statement:</p>
+<ul>
+<li><p>For statement</p></li>
+<li><p>While statement</p></li>
+<li><p>Do while statement</p></li>
+</ul>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="ForStatement">
+<h2 class="breadcrumb">For Statement</h2>
+<p>The for statement lets a code execute in a loop continuously.</p>
+<p><b>Syntax :</b></p>
+<ul>
+<pre><code>for (initialization; condition; increment/decrement) {
+        s1; s2;
+      }
+for(	;	;	) {   // possible empty 
+        s1; s2;
+      }
+</code></pre>
+</ul>
+<hr>
+<div>
+<h4><b>Question.</b> Write a programme to read a number from the command line and display the numbers which divisible by five, from one to t h e given number in both order.</h4>
+<button class="copycodebuttonstyle" data-clipboard-target="#code4" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code4" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.basics; 
+public class Lab17 {
+  public static void main(String[] args) { 
+  int n = 67; 
+  System.out.println("Forward order"); 
+  for (int i = 1; i <= n; i++){
+     if (i % 5 == 0) {
+        System.out.println(i);
+     }
+  }
+  System.out.println("Reverse order"); 
+  for (int i = n; i >= 1; i--){
+     if (i % 5 == 0) {
+        System.out.println(i);
+     }
+  }
+ }
+}
+</code></pre>
+<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+      Forward order 
+      5
+      10
+      15
+      20
+      25
+      30
+      35
+      40
+      45
+      50
+      55
+      60
+      65
+      Reverse order 
+      65
+      60
+      55
+      50
+      45
+      40
+      35
+      30
+      25
+      20
+      15
+      10
+      5
+
+</code></pre>
+</div><hr>
+<div>
+<h4><b>Question.</b> Write a programme to generate prime numbers from 1 to 100.</h4>
+<button class="copycodebuttonstyle" data-clipboard-target="#code5" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code5" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.basics;
+/*
+Prime Numbers Java Example:
+This example shows how to generate prime numbers
+between 1 and the given number, using a for
+loop.
+*/
+public class GeneratePrimeNumbersExample { 
+   public static void main(String[] args){
+     // define limit 
+   int limit = 100;
+   System.out.println("Prime numbers between 1 and " +limit);
+     // loop through the numbers one by one
+   for (int i = 1; i < 100; i++) { 
+        boolean isPrime = true;
+     // check to see if the number is prime
+   for (int j = 2; j < i; j++) { 
+        if (i % j == 0) {
+          isPrime = false; 
+          break;
+        }
+    }
+    // print the number 
+    if (isPrime)
+        System.out.print(i + " ");
+    }
+  }
+}
+/*
+* Output of Prime Numbers example would be Prime numbers between 1 and 100 12
+*3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
+*/
+</code></pre>
+</div><hr>
+<div>
+<h4><b>Question.</b> Write a programme to read a two numbers from command lines and print all the prime numbers between given range.</h4>
+<button class="copycodebuttonstyle" data-clipboard-target="#code6" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code6" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.basics; 
+public class Lab19 {
+  static Boolean isPrime(int n) { 
+  int count = 0;
+  for (int i = 2; i <= n / 2; i++) { 
+     if (n % i == 0) {
+       count++;
+       break;
+    }
+  }
+  if (count == 0) { 
+     return true;
+  } else {
+     return false;
+  }
+}
+public static void main(String[] args) { 
+  int m = 3;
+  int n = 30;
+  for (int i = m; i <= n; i++) { 
+    boolean b = isPrime(i); 
+    if(b){
+      System.out.println(i);
+    }
+  }
+ }
+}
+</code></pre>
+<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+      3
+      5
+      7
+      11
+      13
+      17
+      19
+      23
+      29
+
+</code></pre>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="WhileStatement">
+<h2 class="breadcrumb">While Statement</h2>
+<p>The while statement executes a single line continuously until the condition is met.</p>
+<p><b>Syntax :</b></p>
+<ul>
+<pre><code>initialization;
+while(condition) { 
+  s1;
+  s2;
+Increment/decrement
+}</code></pre>
+</ul>
+<div>
+<p><b>Example :</b></p>
+<button class="copycodebuttonstyle" data-clipboard-target="#code7" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code7" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.basics; 
+public class Lab22 {
+public static void main(String[] as) { 
+    int n = Integer.parseInt(as[0]);
+    //int n = 10; 
+    System.out.println("Forward order");
+    int i = 1;
+    while (i <= n) {
+        if (i % 5 == 0) {
+          System.out.println(i);
+        } 
+        i++;
+    }
+    System.out.println("Reverse order"); 
+        i = n;
+        while (i >= 1) {
+          if (i % 5 == 0) {
+           System.out.println(i);
+        }
+        i--;
+      }
+   }
+}
+</code></pre>
+<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+      Forward order 
+      5
+      10
+      Reverse order 
+      10
+      5
+
+</code></pre>
+</div><hr>
+<div>
+<h4><b>Question :</b> Write a programme to read the number from the command line and display the sum of individual digits of the given number.</h4>
+<button class="copycodebuttonstyle" data-clipboard-target="#code8" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code8" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.basics;
+public class Lab33 {
+public static void main(String[] args){
+    int n = 123;
+    // int n=Integer.parseInt(args [0]); 
+    int sum = 0;
+    while (n != 0) { 
+      int r = n % 10; 
+      sum += r;
+      n = n / 10;
+    }
+    System.out.println("Sum = " + sum);
+   }
+}
+</code></pre>
+<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+      Sum = 6
+
+</code></pre>
+</div>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="DowhileStatement">
+<h2 class="breadcrumb">Do while Statement</h2>
+<p>The do while statement executes a particular chunk of the code until a Boolean expression is true.</p>
+<p><b>Syntax :</b></p>
+<ul>
+<pre><code>Initialization; 
+do {
+  //processing s2;
+  Increment/decrement
+} while ( condition );</code></pre>
+</ul>
+<div>
+<p><b>Example:</b></p>
+<button class="copycodebuttonstyle" data-clipboard-target="#code9" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code9" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.basics; 
+public class Lab20 {
+   public static void main(String[] args) { 
+   int n = 30; 
+   System.out.println("while");
+     int i = 1; 
+     while (i <= n)
+       System.out.println("ok" + i);
+     if (i% 5 == 0) {
+       System.out.println(i);
+    } 
+     i++;
+     System.out.println("do_While"); 
+     i = 1;
+     do {
+       if ((i % 5) == 0) { 
+          System.out.println(i);
+       } 
+     i++;
+     System.out.println("ok" +i);
+   } while (i <= n);
+  }
+}
+</code></pre>
+</div><hr>
+<div class="tablediv">
+<h4>Enumerate the difference between While and Do While statement.</h4>
+<table class="table-bordered table-responsive-xl" style="width:100%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tr>
+<th class="center">While</th>
+<th class="center">Do While</th>
+</tr>
+<tr>
+<td>In the case of While, the first condition will be verified and then the statement will be executed, Inside the while block.</td>
+<td>In the case of Do-While first statement, inside do block is executed and the condition is be verified.</td>
+</tr>
+<tr>
+<td>If the condition is false the first time, then the block of statement will be executed zero times.</td>
+<td>If the condition is false the first Time, then the block of statement will be executed once.</td>
+</tr>
+</table>
+</div><br>
+</div>
+<div role="tabpanel" class="tab-pane fade" id="UnconditionalControlStatement">
+<h2 class="breadcrumb">Unconditional Control Statement</h2>
+<p>Types of Unconditional control statements:</p>
+<ul>
+<li><p>Break</p></li>
+<li><p>Continue</p></li>
+<li><p>Goto</p></li>
+</ul><hr>
+<h4>Break</h4>
+<p>Break statement transfers the control unconditionally to the end of the block.</p><hr>
+<h4>Continue</h4>
+<p>The Continue statement transfers the control unconditionally to the beginning of the block.</p><hr>
+<div>
+<p><b>Example:</b></p>
+<button class="copycodebuttonstyle" data-clipboard-target="#code10" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code10" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.basics; 
+public class Lab23 {
+   public static void main(String[] args) { 
+     int n=12;
+     for(int i=1; i < n; i++) { 
+        if(i %2==0){
+          System.out.println(i+" Next is continue"); 
+        continue;
+    }
+     else if(i==9) { 
+        System.out.println("i is 9"); 
+        break;
+    }
+    System.out.println("Ok "+i); 
+    } 
+    System.out.println("Done");
+  }
+}
+</code></pre>
+<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+      Ok 1
+      2 Next is continue 
+      Ok 3
+      4 Next is continue 
+      Ok 5
+      6 Next is continue
+      Ok 7
+      8 Next is continue 
+      i is 9
+      Done
+
+</code></pre>
+</div><hr>
+<div>
+<p><b>Example:</b></p>
+<button class="copycodebuttonstyle" data-clipboard-target="#code11" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code11" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.basics; 
+public class Lab24 {
+
+public static void main(String[] args){
+    /*
+    * if(1) { } while(1) { -- }
+
+    */
+    int i = 1;
+    /*
+    *for(i<=3)
+        sop(i);
+           i++;	}   /* while(true) sop("ok");}
+    */
+    // System.out.println("Done");
+   }
+}
+</code></pre>
+</div>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code11" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code11" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.basics; 
+public class Lab25 {
+   public static void main(String[] args) { 
+      for (int i = 1; i <= 2; i++){
+        JBK: for (int j = 1; j <= 2; j++) { 
+        for (int k = 1; k <= 2; k++){
+          if (k <= 3) 
+            System.out.println(k + "\t");
+          else
+            break JBK;
+        } // end of k for 
+        System.out.println("JBK");
+      } // end of j for 
+      System.out.println("*");
+    } // end of i for 
+    System.out.println("Done");
+   }
+}
+</code></pre>
+<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+      1
+      2
+      JBK 1
+      2
+      JBK
+      * 1
+      2
+      JBK 1
+      2
+      JBK
+      * Done
+
+</code></pre>
+</div>
+</div>
+</div><hr>
+<ul class="nav nav-tabs nav-bottom mt-3" role="tablist">
+<li role="presentation" class="active"><a href="#Conditionalcontrolstatement" role="tab" data-toggle="tab">Conditional Control Statement</a></li>
+<li role="presentation"><a href="#IfStatement" role="tab" data-toggle="tab">If Statement</a></li>
+<li role="presentation"><a href="#SwitchStatement" role="tab" data-toggle="tab">Switch Statement</a></li>
+<li role="presentation"><a href="#LoopingControlStatement" role="tab" data-toggle="tab">Looping Control Statement</a></li>
+<li role="presentation"><a href="#ForStatement" role="tab" data-toggle="tab">For Statement</a></li>
+<li role="presentation"><a href="#WhileStatement" role="tab" data-toggle="tab">While Statement</a></li>
+<li role="presentation"><a href="#DowhileStatement" role="tab" data-toggle="tab">Do while Statement</a></li>
+<li role="presentation"><a href="#UnconditionalControlStatement" role="tab" data-toggle="tab">Unconditional Control Statement</a></li>
+</ul>
+</div><hr>
+<a href="java-language.html" class="btn btn-outline-danger">&larr; Back to Java Language Chapter</a>
+</div>
+</div>
+<div class="card-footer">
+<ul class="pagination justify-content-center mb-4">
+<li class="page-item disabled">
+<a class="page-link btn-outline-primary" href="#">&lArr; Previous Chapter</a>
+</li>
+<li class="page-item disabled">
+<a class="page-link" href="#">Next Chapter &rArr;</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-lg-2 mb-4">
+<div>
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297" data-ad-slot="6605368152" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+</div>
+<br>
+<div>
+<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297" data-ad-slot="7335995893" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+               (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script type="application/ld+json">
+{ "@context": "https://schema.org", 
+ "@type": "Article",
+ "headline": "Control Statements - Java",
+ "alternativeHeadline": "What are control statements in java?",
+ "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+ "author": {
+    "@type": "Person",
+    "name": "Kiran Digrase"
+  },
+ "genre": "java control statements", 
+ "keywords": "java control statements, control statements, constructor business use, default constructors, paramaterized constuctors", 
+ "publisher": {
+    "@type": "Organization",
+    "name": "Java By Kiran",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.javabykiran.com/images/logojbk.png"
+    }
+  },
+ "url": "https://www.jbktutorials.com/corejava/control-statements-in-java-language.php",
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.javabykiran.com/"
+  },
+ "datePublished": "2019-11-21",
+ "dateCreated": "2019-11-21",
+ "dateModified": "2019-11-21",
+ "description": "Constructor controls the flow of a program.",
+ "articleBody": "The conditional control statement controls the order in which a java program is executed."
+ }
+</script>
+
+<style>
+   .footerfont{font-size: 16px}
+</style>
+<div class="footer footerfont" style="background: #55585a;">
+
+<div class="container text-center text-md-left"><br>
+
+<div class="row">
+
+<div class="col-md-3 mt-md-0 mt-3">
+
+<p><b class="text-white">About Us</b></p>
+<p class="text-white">Java by Kiran has been actively helping students to enhance their skills in IT Industry (specially in Java, Selenium & Python). Our aim is to provide quality education to all.</p>
+</div>
+
+<hr class="clearfix w-100 d-md-none">
+
+<div class="col-md-2 mb-md-0 mb-3">
+
+<p><b class="text-white">Tutorials</b></p>
+<ul class="list-unstyled">
+<li>
+<a href="introduction-to-java.html" class="footerlinks">Java</a>
+</li>
+<li>
+<a href="https://www.jbktutorials.com/selenium/eclipse-configuration.php" class="footerlinks">Selenium</a>
+</li>
+<li>
+<a href="https://www.jbktutorials.com/spring-tutorials.php" class="footerlinks">Spring</a>
+</li>
+<li>
+<a href="https://www.jbktutorials.com/spring-boot-framework-tutorials.php" class="footerlinks">Spring Boot</a>
+</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-copyright border-top ">
+<div class="container">
+<div class="row">
+
+<div class=" col-sm-6 pull-left py-3 text-white">Copyright © 2020
+<a href="http://javabykiran.com/" class="footerlinks" target="_blank">javabyKiran</a>
+</div>
+
+<div class="col-sm-6 pull-right">
+<ul class="list-unstyled p-0 mt-4 text-right mb-1">
+<a href="https://www.facebook.com/javabykiran" class="icon" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://www.twitter.com/javabykiran" class="icon" target="_blank"><i class="fab fa-twitter"></i></a>
+<a href="https://www.instagram.com/javabykiran/" class="icon" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://ca.linkedin.com/company/javabykiran" class="icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA" class="icon" target="_blank"><i class="fab fa-youtube"></i></a>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "logo": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-888-880-9416",
+    "contactType": "customer service"
+  },
+  
+  "sameAs": [
+    "https://www.facebook.com/javabykiran",
+    "https://twitter.com/javabykiran",
+    "https://plus.google.com/+JavabyKiran",
+    "https://www.instagram.com/javabykiran/",
+    "https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA",
+    "https://ca.linkedin.com/company/javabykiran"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "PostalAddress",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "addressLocality": "Pune",
+   "addressRegion": "Maharashtra",
+   "postalCode": "411052",
+   "streetAddress": "403, 4th Floor, Park Plaza, Above Birla super Market, State Bank Nagar, Karve Nagar,Pune "
+  }
+
+</script>
+
+<script>
+
+$(document).ready(function (){
+	$('.tab-pane').addClass('show');
+});
+
+$('ul.nav-bottom').find('a').click(function(){
+	$('.tab-pane').addClass('show');
+	var $href = $(this).attr('href');
+	$('html, body').animate({
+		scrollTop: ($($href).first().offset().top)-90
+	},500);
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		var target = $(e.target).attr("href");
+		$('.nav-bottom li').removeClass('active');
+		$('.nav-top li').removeClass('active');
+		$('[href*="'+target+'"]').parent('li').addClass('active');
+	})
+});
+
+$('ul.nav-top').find('a').click(function(){
+	$('.tab-pane').addClass('show');
+	var $href = $(this).attr('href');
+	$('html, body').animate({
+		scrollTop: ($($href).first().offset().top)-90
+	},500);
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+		var target = $(e.target).attr("href");
+		$('.nav-top li').removeClass('active');
+		$('.nav-bottom li').removeClass('active');
+		$('[href*="'+target+'"]').parent('li').addClass('active');
+	})
+});
+
+ //Script for Copy to Clipboard
+var clipboard = new Clipboard('button');
+  function copySuccessMessage() {
+  alert("Copied to Clipboard!");
+}
+ </script>
+</body>
+
+
+<!-- Mirrored from www.jbktutorials.com/corejava/control-statements-in-java-language.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Nov 2023 14:11:35 GMT -->
+</html>
