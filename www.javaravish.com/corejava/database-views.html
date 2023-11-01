@@ -1,0 +1,713 @@
+<!--Header-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.javaravish.com/corejava/database-views.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2023 09:39:05 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>JBK Tutorials | Database Views</title>
+<meta name="description"
+	content="A view is a searchable object in database that is defined by a query. A view can combine data from two or more table, using joins, and contain a subset of information.">
+<meta name="keywords"
+	content="java tutorials, core java, advance java, java by kiran, java interview questions, blog, articles, learn java programming, codes, examples, selenium, python, spring">
+<meta name="author" content="Java By Kiran">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Database Views" />
+<meta property="og:url" content="database-views.html" />
+<meta property="fb:app_id" content="881390338999747" />
+<meta property="og:description"
+	content="A view is a searchable object in database that is defined by a query. A view can combine data from two or more table, using joins, and contain a subset of information.">
+<meta property="og:image"
+	content="../images/jbktutorialslogo3square.png">
+<meta property="og:image:secure_url"
+	content="../images/jbktutorialslogo3square.png" />
+<meta property="og:type" content="article" />
+
+
+<meta name="twitter:title" content="Database Views">
+<meta name="twitter:description"
+	content="A view is a searchable object in database that is defined by a query. A view can combine data from two or more table, using joins, and contain a subset of information.">
+<meta name="twitter:image"
+	content="../images/jbktutorialslogo3square.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="database-views.html" />
+<link rel="shortcut icon" type="image/x-icon"
+	href="../images/favicon/android-chrome-192x192.png" />
+<link rel="apple-touch-icon"
+	href="../images/favicon/apple-touch-icon.png">
+
+<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css"
+	as="style">
+<link rel="preload" href="../css/customcss.css" as="style">
+<link rel="preload"
+	href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"
+	as="style">
+<link rel="preload"
+	href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
+<link rel="preload"
+	href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
+<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js"
+	as="script">
+<link rel="preload" href="../js/jquery.min.js" as="script">
+<link rel="preload" href="../vendor/clipboard/clipboard.min.js"
+	as="script">
+<link rel="preload"
+	href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+<link rel="preload"
+	href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
+<link rel="preload"
+	href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js"
+	as="script">
+<link rel="preload"
+	href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<script async
+	src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-156439212-1');
+</script>
+
+
+<script data-ad-client="ca-pub-5964671306985297" async
+	src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="../css/customcss.css">
+<link rel="stylesheet"
+	href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+
+
+<link rel="stylesheet"
+	href="../vendor/syntaxhighlighter/styles/a11y-light.css">
+<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
+<script defer>
+	hljs.initHighlightingOnLoad();
+</script>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../vendor/clipboard/clipboard.min.js"></script>
+
+
+
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+<link rel="stylesheet"
+	href="../vendor/jquery-viewer-master/docs/css/viewer.css">
+<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
+<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js"
+	defer></script>
+<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
+
+</head>
+<body>
+
+	<div>
+		<nav
+			class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+			<div class="container p-0"
+				style="background-color: rgb(0, 0, 0); height: 55px; max-width: 100%;">
+				<a class="navbar-brand pull-left"
+					href="https://www.javaravish.com/"><img
+					src="../images/JavaRavish.png"
+					style="height: 55px; max-width: 100%; margin-left: 10%;"
+					alt="Java by Kalyan tutorials" title="Java Ravish"></a>
+				<div id="smoothmenu1" class="ddsmoothmenu">
+					<ul>
+						<li><a href="introduction-to-java.html">Java</a></li>
+						<li><a href="introduction-to-java.html">Spring</a></li>
+						<li><a href="introduction-to-java.html">Spring Boot</a></li>
+						<li><a href="introduction-to-java.html">Interview
+								Questions</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<br>
+
+	<script async
+		src="../../platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
+	<style>
+.centerimage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+</style>
+
+
+	<div class="container-fluid">
+		<br />
+		<ol itemscope itemtype="http://schema.org/BreadcrumbList"
+			class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" itemscope
+				itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item"
+				href="https://www.javaravish.com/index.php"> <span
+					itemprop="name">Home</span>
+			</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope
+				itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item"
+				href="introduction-to-java.html"> <span itemprop="name">Java</span>
+			</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" itemscope
+				itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item"
+				href="introduction-to-java.html"> <span itemprop="name">Core
+						Java</span>
+			</a>
+				<meta itemprop="position" content="3" />
+			</li>
+			<li itemprop="itemListElement" itemscope
+				itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<span itemprop="name">Database Views</span>
+				<meta itemprop="position" content="4" />
+			</li>
+		</ol>
+
+		<div class="row">
+
+			<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
+			<style>
+@media only screen and (max-width: 425px) {
+	.hidesidebar {
+		display: none;
+	}
+}
+</style>
+			<script>
+				//Script to Open and Close Sidebar
+				function sidebar_open() {
+					document.getElementById("mySidebar").style.display = "block";
+				}
+
+				function sidebar_close() {
+					document.getElementById("mySidebar").style.display = "none";
+				}
+
+				// toggle up & down icon
+				function myFunction(x) {
+					x.classList.toggle("fa-book-open");
+				}
+			</script>
+
+
+			<button class="w3-button w3-teal w3-hide-large"
+				onclick="sidebar_open()">&#9776;</button>
+			<div
+				class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont"
+				id="mySidebar" role="tablist" aria-multiselectable="true">
+				<div class="card">
+					<h2 class="card-header text-white"
+						style="background: rgb(1, 71, 128);">Java</h2>
+					<br>
+					<div class="list-group">
+						<button class="w3-teal bg-transparent w3-large w3-hide-large"
+							onclick="sidebar_close()">Close Menu &times;</button>
+						<ul class="leftBarList">
+							<li><a href="introduction-to-java.html">Java
+									Introduction</a></li>
+							<li><a href="java-language.html">Java Language</a></li>
+							<li><a href="communication-between-two-classes-in-java.html">Communication
+									Between Two Classes</a></li>
+							<li><a href="package-in-java.html">Package</a></li>
+							<li><a href="methods-variable-and-block-in-java.html">Methods,
+									Variable and Block</a></li>
+							<li><a href="encapsulation-in-java.html">Encapsulation</a></li>
+							<li><a href="access-modifiers-in-java.html">Access
+									Modifiers</a></li>
+							<li><a href="statickeyword-in-java.html">Static Keyword</a></li>
+							<li><a href="final-keyword-in-java.html">Final Keyword </a></li>
+							<li><a href="constructor-in-java.html">Constructor </a></li>
+							<li><a href="inheritance-in-java.html">Inheritance </a></li>
+							<li><a href="super-and-this-keyword-in-java.html">Super
+									This</a></li>
+							<li><a href="polymorphism-in-java.html">Polymorphism</a></li>
+							<li><a href="abstraction-in-java.html">Abstraction</a></li>
+							<li><a href="garbage-collection-in-java.html">Garbage
+									Collection</a></li>
+							<li><a href="input-and-output-streams-in-java.html">Input
+									Output Stream</a></li>
+							<li><a href="collection-framework-in-java.html">Collection
+									Framework</a></li>
+							<li><a href="collection-revisited-in-java.html">Collection
+									Revisited</a></li>
+							<li><a href="serialization-in-java.html">Serialization</a></li>
+							<li><a href="exception-in-java.html">Exception</a></li>
+
+
+							<li><a href="arrays-in-java.html">Arrays</a></li>
+							<li><a href="strings-in-java.html">Strings</a></li>
+							<li><a href="features-of-jdk-1.5-in-java.html">Features
+									and Enhancements in jdk 1.5</a></li>
+							<li><a href="features-of-jdk-1.6-in-java.html">Features
+									and Enhancements in jdk 1.6</a></li>
+							<li><a href="features-of-jdk-1.7-in-java.html">Features
+									and Enhancements in jdk 1.7</a></li>
+							<li><a href="features-of-jdk-1.8-in-java.html">Features
+									and Enhancements in jdk 1.8</a></li>
+							<li><a href="multithreading-in-java.html">Thread</a></li>
+							<li><a href="java-virtual-machine-memory-management.html">JVM
+									Memory Management</a></li>
+							<li><a href="jdbc-in-java.html">JDBC</a></li>
+							<li><a href="database-in-java.html">Database</a></li>
+						</ul>
+					</div>
+				</div>
+				<br>
+				<div>
+					<script async
+						src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display: block"
+						data-ad-client="ca-pub-5964671306985297" data-ad-slot="1171818896"
+						data-ad-format="auto" data-full-width-responsive="true"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+
+
+			<div class="col-lg-7 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white"
+						style="background: rgb(1, 71, 128);">Database Views
+						Introduction</h1>
+					<div class="card-body">
+						<div>
+							<div class="tab" role="tabpanel">
+								<p>
+									<a href="database-in-java.html" class="btn btn-outline-danger">&larr;
+										Go back to Database Chapter</a>
+								</p>
+								<hr>
+								<div>
+									<ul class="nav nav-tabs nav-top" role="tablist">
+										<li role="presentation" class="active"><a href="#Views"
+											role="tab" data-toggle="tab">Views</a></li>
+										<li role="presentation"><a href="#ViewTypes" role="tab"
+											data-toggle="tab">Views Types</a></li>
+										<li role="presentation"><a href="#Example" role="tab"
+											data-toggle="tab">Example</a></li>
+									</ul>
+								</div>
+								<hr>
+								<div class="tab-content tabs">
+									<div role="tabpanel" class="tab-pane fade in active" id="Views">
+										<div>
+											<h2 class="breadcrumb">Views</h2>
+											<p>Views are a logical entity which act as a mask on the
+												table.</p>
+											<p>Views will be created based on the table by fetching
+												the data from the table, but the view does not contain the
+												data physically. When view needs the data, it will get it
+												from the table.</p>
+											<p>
+												<b>Syntax:</b><br>
+												<code>Create view view_name Select statement;</code>
+											</p>
+											<p>
+												<b>Query:</b><br>
+												<code>
+													create table students(<br> studentid int primary key
+													auto_increment not null, studentname varchar(32) not null,<br>
+													email varchar(32) not null, phone int not null,<br>
+													feepaid int, feebalance int, jobstatus varchar(32));
+												</code>
+											</p>
+											<div class="docs-galley">
+												Student<img class="docs-pictures clearfix centerimage"
+													src="https://www.javaravish.com/images/java/database_img23.webp"
+													alt="views in sql" title="students table">
+											</div>
+											<br>
+											<p>
+												<b>Role:</b><br>
+											<ul>
+												admin mg - email, phone
+												<br> Account mgr - Student ID, Fee Paid, Fee Balance
+												<br> HR mgr - Student ID, Student name, email, phone,
+												job status
+											</ul>
+											</p>
+											<p>
+												<b>Admin_view:</b><br>
+											<ul>
+												<code>
+													create view admin as <br> select email
+												</code>
+											</ul>
+											</p>
+											<div class="docs-galley">
+												<img class="docs-pictures clearfix centerimage"
+													src="https://www.javaravish.com/images/java/database_img24.webp"
+													alt="views in sql" title="Admin View of students table">
+											</div>
+											<br>
+											<p>
+												<b>Account_view:</b><br>
+											<ul>
+												<code>
+													create view accountmanager as <br> select studentid,
+													feepaid, feebalance from students;
+												</code>
+											</ul>
+											</p>
+											<div class="docs-galley">
+												<img class="docs-pictures clearfix centerimage"
+													src="https://www.javaravish.com/images/java/database_img25.webp"
+													alt="views in sql" title="Account View of students table">
+											</div>
+											<br>
+											<p>
+												<b>HR_View:</b><br>
+											<ul>
+												<code> select studentid, studentname, email, phone,
+													jobstatus from students;</code>
+											</ul>
+											</p>
+											<div class="docs-galley">
+												<img class="docs-pictures clearfix centerimage"
+													src="https://www.javaravish.com/images/java/database_img26.webp"
+													alt="views in sql" title="HR View of students table">
+											</div>
+											<br>
+											<p>Advantages:</p>
+											<ol>
+												<li><p>Increase the security levels</p></li>
+												<li><p>Decreases redundancy</p></li>
+											</ol>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="ViewTypes">
+										<div>
+											<h2 class="breadcrumb">Views Types</h2>
+											<p>Types:</p>
+											<ol>
+												<li><p>Static views</p></li>
+												<li><p>Dynamic views</p></li>
+											</ol>
+											<h3>Static Views:</h3>
+											<ul>
+												<li><p>Static views also called as read only views</p></li>
+												<li><p>We cannot perform insert, update and delete
+														operations on static views</p></li>
+											</ul>
+											<h3>Dynamic Views:</h3>
+											<ul>
+												<li><p>Dynamic views are also called updatable
+														views</p></li>
+												<li><p>You can perform select, insert, update and
+														delete operations on the updatable views or in the dynamic
+														views</p></li>
+											</ul>
+											<div class="table-responsive">
+												<table class="table table-bordered">
+													<code>Create index i2 on accounts (branch code,
+														account type, account no.);</code>
+													<tr>
+														<th>Sr. No</th>
+														<th>Select state of view</th>
+														<th>Static View</th>
+														<th>Dynamic View</th>
+													</tr>
+													<tr>
+														<td>1.</td>
+														<td>Contains primary key</td>
+														<td>-</td>
+														<td>.</td>
+													</tr>
+													<tr>
+														<td>2.</td>
+														<td>Does not contain a primary key</td>
+														<td>.</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<td>3.</td>
+														<td>Contains aggregate functions</td>
+														<td>.</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<td>4.</td>
+														<td>Does not contain agg format</td>
+														<td>-</td>
+														<td>.</td>
+													</tr>
+													<tr>
+														<td>5.</td>
+														<td>Contains group by</td>
+														<td>.</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<td>6.</td>
+														<td>Does not contain group by</td>
+														<td>-</td>
+														<td>.</td>
+													</tr>
+													<tr>
+														<td>7.</td>
+														<td>Contain joins</td>
+														<td>.</td>
+														<td>-</td>
+													</tr>
+													<tr>
+														<td>8.</td>
+														<td>Does not contain join</td>
+														<td>-</td>
+														<td>.</td>
+													</tr>
+												</table>
+											</div>
+											<br>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Example">
+										<div>
+											<h2 class="breadcrumb">Example</h2>
+											<p>
+												<b>Example:</b>
+											</p>
+											<ul>
+												<code>create table hello(id int primary key
+													auto_increment not null,a int, b int, c int);</code>
+											</ul>
+											<br>
+											<div class="docs-galley">
+												Table hello<img class="docs-pictures clearfix centerimage"
+													src="https://www.javaravish.com/images/java/database_img27.webp"
+													alt="views in sql" title="hello table">
+											</div>
+											<br>
+											<code>
+												create view v1 as<br> select sum(a) from hello;
+											</code>
+											<br>
+											<div class="docs-galley">
+												<img class="docs-pictures clearfix centerimage"
+													src="https://www.javaravish.com/images/java/database_img28.webp"
+													alt="views in sql" title="View v1 of hello table">
+											</div>
+											<br>
+										</div>
+									</div>
+								</div>
+								<hr>
+								<ul class="nav nav-tabs nav-bottom mt-3" role="tablist">
+									<li role="presentation" class="active"><a href="#Views"
+										role="tab" data-toggle="tab">Views</a></li>
+									<li role="presentation"><a href="#ViewTypes" role="tab"
+										data-toggle="tab">Views Types</a></li>
+									<li role="presentation"><a href="#Example" role="tab"
+										data-toggle="tab">Example</a></li>
+								</ul>
+							</div>
+							<hr>
+						</div>
+					</div>
+					<div class="card-footer">
+						<ul class="pagination justify-content-center mb-4">
+							<li class="page-item disabled"><a
+								class="page-link btn-outline-primary" href="jdbc-in-java.html">&lArr;
+									Previous Chapter</a></li>
+							<li class="page-item disabled"><a class="page-link" href="#">Next
+									Chapter &rArr;</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-2 mb-4">
+				<div>
+					<script async
+						src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display: block"
+						data-ad-client="ca-pub-5964671306985297" data-ad-slot="6605368152"
+						data-ad-format="auto" data-full-width-responsive="true"> </ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				<br>
+				<div>
+					<script async
+						src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display: block"
+						data-ad-client="ca-pub-5964671306985297" data-ad-slot="7335995893"
+						data-ad-format="auto" data-full-width-responsive="true"> </ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="application/ld+json">
+{"@context": "https://schema.org", 
+ "@type": "Article",
+ "headline": "Database Views - Java",
+ "alternativeHeadline": "What are views in database?",
+ "image": "https://www.javaravish.com/images/jbktutorialslogo3.png",
+ "author": {
+    "@type": "Person",
+    "name": "Kiran Digrase"
+  },
+ "genre": "java database views", 
+ "keywords": "java database views, database views, views, static views, dynamic views", 
+ "publisher": {
+    "@type": "Organization",
+    "name": "Java By Kiran",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.javabykiran.com/images/logojbk.png"
+    }
+  },
+ "url": "https://www.javaravish.com/corejava/database-in-java.php",
+    "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.javabykiran.com/"
+  },
+ "datePublished": "2019-12-12",
+ "dateCreated": "2019-12-12",
+ "dateModified": "2019-12-12",
+ "description": "A database view is a searchable object in a database that is defined by a query.",
+ "articleBody": "Views will be created based on the table by fetching the data from the table, but the view does not contain the data physically. When view needs the data, it will get it from the table."
+ }
+</script>
+<div>
+		<style>
+.footerfont {
+	font-size: 16px
+}
+</style>
+
+		<div class="footer footerfont" style="background: #55585a;">
+			<div">
+				<div>
+					<div class="row">
+						<div class=" col-sm-6 pull-left py-3 text-white"
+							style="text-align: center;">
+							Copyright © 2023 - Java Ravish, The content is copyrighted to
+							Ravi Kalyan kolloju.</br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "JBK Tutorials",
+  "url": "https://www.javaravish.com/",
+  "logo": "https://www.javaravish.com/images/jbktutorialslogo3.png",
+  "image": "https://www.javaravish.com/images/jbktutorialslogo3.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-888-880-9416",
+    "contactType": "customer service"
+  },
+  
+  "sameAs": [
+    "https://www.facebook.com/javabykiran",
+    "https://twitter.com/javabykiran",
+    "https://plus.google.com/+JavabyKiran",
+    "https://www.instagram.com/javabykiran/",
+    "https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA",
+    "https://ca.linkedin.com/company/javabykiran"
+  ]
+}
+</script>
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "PostalAddress",
+  "name": "JBK Tutorials",
+  "url": "https://www.javaravish.com/",
+  "image": "https://www.javaravish.com/images/jbktutorialslogo3.png",
+  "addressLocality": "Pune",
+   "addressRegion": "Maharashtra",
+   "postalCode": "411052",
+   "streetAddress": "403, 4th Floor, Park Plaza, Above Birla super Market, State Bank Nagar, Karve Nagar,Pune "
+  }
+
+</script>
+
+	<script>
+		$(document).ready(function() {
+			$('.tab-pane').addClass('show');
+		});
+
+		$('ul.nav-bottom').find('a').click(function() {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop : ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+				var target = $(e.target).attr("href");
+				$('.nav-bottom li').removeClass('active');
+				$('.nav-top li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		$('ul.nav-top').find('a').click(function() {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop : ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+				var target = $(e.target).attr("href");
+				$('.nav-top li').removeClass('active');
+				$('.nav-bottom li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		//Script for Copy to Clipboard
+		var clipboard = new Clipboard('button');
+		function copySuccessMessage() {
+			alert("Copied to Clipboard!");
+		}
+	</script>
+</body>
+
+
+<!-- Mirrored from www.javaravish.com/corejava/database-views.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2023 09:39:05 GMT -->
+</html>

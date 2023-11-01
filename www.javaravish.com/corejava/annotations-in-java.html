@@ -1,0 +1,774 @@
+<!--Header-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.javaravish.com/corejava/annotations-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2023 09:39:04 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>JBK Tutorials | Java Annotations</title>
+<meta name="description"
+	content="Java annotations are essentially tags used to provide Meta data for your Java code. These are extra details that can be utilised by the java compiler or JVM.">
+<meta name="keywords"
+	content="java tutorials, core java, advance java, java by kiran, java interview questions, blog, articles, learn java programming, codes, examples, selenium, python, spring">
+<meta name="author" content="Java By Kiran">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Java Annotations" />
+<meta property="og:url" content="annotations-in-java.html" />
+<meta property="fb:app_id" content="881390338999747" />
+<meta property="og:description"
+	content="Java annotations are essentially tags used to provide Meta data for your Java code. These are extra details that can be utilised by the java compiler or JVM.">
+<meta property="og:image"
+	content="../images/jbktutorialslogo3square.png">
+<meta property="og:image:secure_url"
+	content="../images/jbktutorialslogo3square.png" />
+<meta property="og:type" content="article" />
+
+
+<meta name="twitter:title" content="Java Annotations">
+<meta name="twitter:description"
+	content="Java annotations are essentially tags used to provide Meta data for your Java code. These are extra details that can be utilised by the java compiler or JVM.">
+<meta name="twitter:image"
+	content="../images/jbktutorialslogo3square.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="annotations-in-java.html" />
+<link rel="shortcut icon" type="image/x-icon"
+	href="../images/favicon/android-chrome-192x192.png" />
+<link rel="apple-touch-icon"
+	href="../images/favicon/apple-touch-icon.png">
+
+<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css"
+	as="style">
+<link rel="preload" href="../css/customcss.css" as="style">
+<link rel="preload"
+	href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"
+	as="style">
+<link rel="preload"
+	href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
+<link rel="preload"
+	href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
+<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js"
+	as="script">
+<link rel="preload" href="../js/jquery.min.js" as="script">
+<link rel="preload" href="../vendor/clipboard/clipboard.min.js"
+	as="script">
+<link rel="preload"
+	href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+<link rel="preload"
+	href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
+<link rel="preload"
+	href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js"
+	as="script">
+<link rel="preload"
+	href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
+<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<script async
+	src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-156439212-1');
+</script>
+
+
+<script data-ad-client="ca-pub-5964671306985297" async
+	src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="../css/customcss.css">
+<link rel="stylesheet"
+	href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+
+
+<link rel="stylesheet"
+	href="../vendor/syntaxhighlighter/styles/a11y-light.css">
+<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
+<script defer>
+	hljs.initHighlightingOnLoad();
+</script>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../vendor/clipboard/clipboard.min.js"></script>
+
+
+
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+<link rel="stylesheet"
+	href="../vendor/jquery-viewer-master/docs/css/viewer.css">
+<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
+<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js"
+	defer></script>
+<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
+
+</head>
+<body>
+
+	<div>
+		<nav
+			class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+			<div class="container p-0"
+				style="background-color: rgb(0, 0, 0); height: 55px; max-width: 100%;">
+				<a class="navbar-brand pull-left"
+					href="https://www.javaravish.com/"><img
+					src="../images/JavaRavish.png"
+					style="height: 55px; max-width: 100%; margin-left: 10%;"
+					alt="Java by Kalyan tutorials" title="Java Ravish"></a>
+				<div id="smoothmenu1" class="ddsmoothmenu">
+					<ul>
+						<li><a href="introduction-to-java.html">Java</a></li>
+						<li><a href="introduction-to-java.html">Spring</a></li>
+						<li><a href="introduction-to-java.html">Spring Boot</a></li>
+						<li><a href="introduction-to-java.html">Interview
+								Questions</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<br>
+
+	<script async
+		src="../../platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
+	<style>
+.centerimage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+</style>
+
+
+	<div class="container-fluid">
+		<br />
+		<ol itemscope itemtype="http://schema.org/BreadcrumbList"
+			class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" itemscope
+				itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item"
+				href="https://www.javaravish.com/index.php"> <span
+					itemprop="name">Home</span>
+			</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope
+				itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item"
+				href="introduction-to-java.html"> <span itemprop="name">Java</span>
+			</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" itemscope
+				itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="annotations-in-java.html">
+					<span itemprop="name">What are Annotations?</span>
+			</a>
+				<meta itemprop="position" content="3" />
+			</li>
+			<li itemprop="itemListElement" itemscope
+				itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<span itemprop="name">Annotations</span>
+				<meta itemprop="position" content="4" />
+			</li>
+		</ol>
+
+		<div class="row">
+
+			<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
+			<style>
+@media only screen and (max-width: 425px) {
+	.hidesidebar {
+		display: none;
+	}
+}
+</style>
+			<script>
+				//Script to Open and Close Sidebar
+				function sidebar_open() {
+					document.getElementById("mySidebar").style.display = "block";
+				}
+
+				function sidebar_close() {
+					document.getElementById("mySidebar").style.display = "none";
+				}
+
+				// toggle up & down icon
+				function myFunction(x) {
+					x.classList.toggle("fa-book-open");
+				}
+			</script>
+
+
+			<button class="w3-button w3-teal w3-hide-large"
+				onclick="sidebar_open()">&#9776;</button>
+			<div
+				class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont"
+				id="mySidebar" role="tablist" aria-multiselectable="true">
+				<div class="card">
+					<h2 class="card-header text-white"
+						style="background: rgb(1, 71, 128);">Java</h2>
+					<br>
+					<div class="list-group">
+						<button class="w3-teal bg-transparent w3-large w3-hide-large"
+							onclick="sidebar_close()">Close Menu &times;</button>
+						<ul class="leftBarList">
+							<li><a href="introduction-to-java.html">Java
+									Introduction</a></li>
+							<li><a href="java-language.html">Java Language</a></li>
+							<li><a href="communication-between-two-classes-in-java.html">Communication
+									Between Two Classes</a></li>
+							<li><a href="package-in-java.html">Package</a></li>
+							<li><a href="methods-variable-and-block-in-java.html">Methods,
+									Variable and Block</a></li>
+							<li><a href="encapsulation-in-java.html">Encapsulation</a></li>
+							<li><a href="access-modifiers-in-java.html">Access
+									Modifiers</a></li>
+							<li><a href="statickeyword-in-java.html">Static Keyword</a></li>
+							<li><a href="final-keyword-in-java.html">Final Keyword </a></li>
+							<li><a href="constructor-in-java.html">Constructor </a></li>
+							<li><a href="inheritance-in-java.html">Inheritance </a></li>
+							<li><a href="super-and-this-keyword-in-java.html">Super
+									This</a></li>
+							<li><a href="polymorphism-in-java.html">Polymorphism</a></li>
+							<li><a href="abstraction-in-java.html">Abstraction</a></li>
+							<li><a href="garbage-collection-in-java.html">Garbage
+									Collection</a></li>
+							<li><a href="input-and-output-streams-in-java.html">Input
+									Output Stream</a></li>
+							<li><a href="collection-framework-in-java.html">Collection
+									Framework</a></li>
+							<li><a href="collection-revisited-in-java.html">Collection
+									Revisited</a></li>
+							<li><a href="serialization-in-java.html">Serialization</a></li>
+							<li><a href="exception-in-java.html">Exception</a></li>
+
+
+							<li><a href="arrays-in-java.html">Arrays</a></li>
+							<li><a href="strings-in-java.html">Strings</a></li>
+							<li><a href="features-of-jdk-1.5-in-java.html">Features
+									and Enhancements in jdk 1.5</a></li>
+							<li><a href="features-of-jdk-1.6-in-java.html">Features
+									and Enhancements in jdk 1.6</a></li>
+							<li><a href="features-of-jdk-1.7-in-java.html">Features
+									and Enhancements in jdk 1.7</a></li>
+							<li><a href="features-of-jdk-1.8-in-java.html">Features
+									and Enhancements in jdk 1.8</a></li>
+							<li><a href="multithreading-in-java.html">Thread</a></li>
+							<li><a href="java-virtual-machine-memory-management.html">JVM
+									Memory Management</a></li>
+							<li><a href="jdbc-in-java.html">JDBC</a></li>
+							<li><a href="database-in-java.html">Database</a></li>
+						</ul>
+					</div>
+				</div>
+				<br>
+				<div>
+					<script async
+						src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display: block"
+						data-ad-client="ca-pub-5964671306985297" data-ad-slot="1171818896"
+						data-ad-format="auto" data-full-width-responsive="true"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+
+
+			<div class="col-lg-7 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white"
+						style="background: rgb(1, 71, 128);">Annotations in Java</h1>
+					<div class="card-body">
+						<div class="tab" role="tabpanel">
+							<p>
+								<b>Java annotations</b> are essentially tags used to provide
+								Meta data for your Java code. These are extra details that can
+								be utilised by the java compiler or JVM. Being Meta data, the
+								annotations do not directly affect the execution of your code,
+								although some types of annotations can actually be used for that
+								purpose. Java annotations were added to Java from Java 5.
+							</p>
+							<hr>
+							<div>
+
+								<ul class="nav nav-tabs nav-top" role="tablist">
+									<li role="presentation" class="active"><a href="#Section1"
+										role="tab" data-toggle="tab">Annotation Purposes</a></li>
+									<li role="presentation"><a href="#Section2" role="tab"
+										data-toggle="tab">Annotation Basics</a></li>
+									<li role="presentation"><a href="#Section3" role="tab"
+										data-toggle="tab">Annotation Examples</a></li>
+									<li role="presentation"><a href="#Section4" role="tab"
+										data-toggle="tab">Built-in Annotations</a></li>
+								</ul>
+							</div>
+							<div class="tab-content tabs">
+								<div role="tabpanel" class="tab-pane fade in active"
+									id="Section1">
+									<div id="Div1">
+										<h2 class="breadcrumb">Java Annotation Purposes:</h2>
+										<p>Java annotations are typically used for the following
+											purposes:</p>
+										<ul>
+											<li>Compiler instructions</li>
+											<li>Build-time instructions</li>
+											<li>Runtime instructions</li>
+										</ul>
+										<p>Java has three built-in annotations that you can use to
+											give instructions to the Java compiler. These annotations are
+											explained in more detail later in this chapter.</p>
+										<p>Java annotations can be used at build-time, when you
+											build your software project. The building process includes
+											generating source code, compiling the source, generating XML
+											files (e.g. deployment descriptors), packaging the compiled
+											code and files into a JAR file, etc.</p>
+										<p>Building the software is typically done by an automatic
+											build tool like Apache Ant or Apache Maven. Build tools may
+											scan your Java code for specific annotations and generate
+											source code or other files based on these annotations.</p>
+										<p>Normally, Java annotations are not present in your Java
+											code after compilation. It is possible, however, to define
+											your own annotations that are available at runtime.</p>
+										<p>These annotations can then be accessed via Java
+											Reflection, and used to give instructions to your program, or
+											some third party API.</p>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="Section2">
+									<div id="Div2">
+										<h2 class="breadcrumb">Annotation Basics:</h2>
+										<p>
+											An annotation in its shortest form looks like this:<br>
+											@SetValueJbk
+										</p>
+										<p>The @ character signals to the compiler that this is an
+											annotation. The name that follows the @character is the name
+											of the annotation.
+										<pre>
+											<code> @SetValueJbk(value = "Kiran JBK")  String name;</code>
+										</pre>
+										<p>The annotation in this example contains a single
+											element named name, with the value set to Kiran JBK. Here,
+											the elements are enclosed inside the parentheses after the
+											annotation name. Annotations without elements do not need
+											parentheses.</p>
+										<h4>Annotation Placement:</h4>
+										<p>You can put Java annotations above classes, interfaces,
+											methods, method parameters, fields and local variables.</p>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="Section3">
+									<div id="Div3">
+										<h2 class="breadcrumb">Example of Annotations:</h2>
+										<div>
+											<p>
+												<b>1) SetValueJbk.java</b>
+											</p>
+											<button class="copycodebuttonstyle"
+												data-clipboard-target="#code1"
+												onclick="copySuccessMessage()">
+												<i class="fa fa-clipboard"></i>
+											</button>
+											<pre id="code1" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Annotations;
+import java.lang.annotation.ElementType; 
+import java.lang.annotation.Retention; 
+import java.lang.annotation.RetentionPolicy; 
+import java.lang.annotation.Target;
+/**
+* @authorKiran
+* This annotation is used for
+* setting values to variables in a class
+*/
+@Retentation(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+public@interface SetValueJbk { 
+   public String value ();
+}
+</code>
+											</pre>
+										</div>
+										<br>
+										<div>
+											<p>
+												<b>2) Student.java</b>
+											</p>
+											<button class="copycodebuttonstyle"
+												data-clipboard-target="#code2"
+												onclick="copySuccessMessage()">
+												<i class="fa fa-clipboard"></i>
+											</button>
+											<pre id="code2" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Annotations; 
+ public class Student{
+    @SetValueJbk(value = “30”)
+    int age;
+    @SetValueJbk(value = "Pune")
+    String location;
+    @SetValueJbk(value = "Kiran JBK")
+    String name;
+    @SetValueJbk(value = "Java By Kiran")
+    String Owner_of;
+    }
+</code>
+											</pre>
+										</div>
+										<br>
+										<div>
+											<p>
+												<b>3) AnnotTest.java</b>
+											</p>
+											<button class="copycodebuttonstyle"
+												data-clipboard-target="#code3"
+												onclick="copySuccessMessage()">
+												<i class="fa fa-clipboard"></i>
+											</button>
+											<pre id="code3" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Annotations;
+  import java.lang.annotation.Annotation; 
+  import java.lang.reflect.Field;
+  public classAnnotTest{
+public static void main(String[] args){
+    /*
+    *	we will get parameters for student class like values for age and location. Then we can use this class anywhere
+    *	for example,to insert into DB
+    */
+    Class aclass = Student.class; 
+    Field field[] = aclass.getDeclaredFields(); 
+    for (Field field : fields) {
+        system.out.println(“field name >>”+ field.getname());
+    Annotation annotation[] = field.getDeclaredAnnotations(); 
+    for(Annotation annotation: annotations){
+        SetValueJbk annotRef = (SetValueJbk)annotation;
+        system.out.println(“name :” +annotRef.value());
+       }
+     }
+   }
+ }
+</code>
+											</pre>
+										</div>
+										<br>
+										<p>If there is NO annotation, then we need to set and get
+											values and dynamic usage is not possible. The same thing is
+											internally implemented in Hibernate, which we do by using
+											annotations.</p>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="Section4">
+									<div id="Div4">
+										<h2 class="breadcrumb">Java's Built-in Annotations</h2>
+										<p>
+											Java comes with three annotations which are used to give the
+											Java compiler instructions.<br> These annotations are:
+										</p>
+										<ul>
+											<li>@Deprecated</li>
+											<li>@Override</li>
+											<li>@SuppressWarnings</li>
+										</ul>
+										<br>
+										<p>Each of these annotations is explained in the following
+											sections:</p>
+										<div>
+											<h4>Deprecated:</h4>
+											<p>
+												The @Deprecated annotation is used to mark a class, method
+												or field as deprecated, meaning it should no longer be used.
+												If your code uses deprecated classes, methods or fields, the
+												compiler will give you a warning.<br> Here is an
+												example:
+											<pre>
+												<code>     @Deprecated
+     public class MyComponent {
+     }
+</code>
+											</pre>
+											</p>
+											<p>The use of the @Deprecated annotation above the class
+												declaration marks the class as deprecated.</p>
+											<p>You can also use the @Deprecated annotation like the
+												above method and field declarations to mark the method or
+												field as deprecated. When you use the @Deprecated
+												annotation, it is a good idea to also use the corresponding
+												@deprecated JavaDoc symbol, and explain why the class,
+												method or field is deprecated, and what the programmer
+												should use instead.</p>
+										</div>
+										<hr>
+										<div>
+											<h4>Override:</h4>
+											<p>The @Override annotation is used above methods that
+												override methods in a superclass. If the method does not
+												match a method in the superclass, the compiler will give you
+												an error. It is one of the reasons why it is considered to
+												be a good practice while coding in java.</p>
+											<p>The @Override annotation is not necessary in order to
+												override a method in a superclass. It is a good idea to
+												still use it though. In case someone changed the name of the
+												overridden method in the superclass, your subclass method
+												would no longer override it.</p>
+											<p>Without the @Override annotation you would not find
+												out what happened.</p>
+											<p>With the @Override annotation, the compiler will tell
+												you that the method in the subclass is not overriding any
+												method in the superclass.</p>
+											<div>
+												<p>Here is an example use of the @Override annotation:</p>
+												<button class="copycodebuttonstyle"
+													data-clipboard-target="#code4"
+													onclick="copySuccessMessage()">
+													<i class="fa fa-clipboard"></i>
+												</button>
+												<pre id="code4" class="breadcrumb pretagcodebox">
+<code>public class A{
+    public void m1() { 
+    System.out.println("A-m1");
+    }
+  }
+public class B extends A{
+    @Override
+    public void m1() { 
+    System.out.println("B-m1");
+    }
+}
+</code>
+												</pre>
+												<p>In case the method m1() in A changes signature so
+													that the same method in the subclass no longer overrides
+													it, the compiler will generate an error.</p>
+											</div>
+										</div>
+										<hr>
+										<div>
+											<h4>Suppress Warnings:</h4>
+											<p>The @Suppress Warnings annotation makes the compiler
+												suppress warnings for a given method or the annotated
+												element. For instance, if a method calls a deprecated
+												method, or makes an sinsecure type cast, the compiler may
+												generate a warning.</p>
+											<p>You can suppress these warnings by annotating the
+												method containing the code with the @SuppressWarnings
+												annotation. For example:</p>
+											<pre>
+												<code>     @SuppressWarnings
+     public void methodWithWarning() {
+     }
+</code>
+											</pre>
+										</div>
+									</div>
+								</div>
+							</div>
+							<hr>
+							<ul class="nav nav-tabs nav-bottom mt-3" role="tablist">
+								<li role="presentation" class="active"><a href="#Section1"
+									role="tab" data-toggle="tab">Annotation Purposes</a></li>
+								<li role="presentation"><a href="#Section2" role="tab"
+									data-toggle="tab">Annotation Basics</a></li>
+								<li role="presentation"><a href="#Section3" role="tab"
+									data-toggle="tab">Annotation Examples</a></li>
+								<li role="presentation"><a href="#Section4" role="tab"
+									data-toggle="tab">Built-in Annotations</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="card-footer">
+						<ul class="pagination justify-content-center mb-4">
+							<li class="page-item"><a
+								class="page-link btn-outline-primary"
+								href="exception-in-java.html">&lArr; Previous Chapter</a></li>
+							<li class="page-item"><a class="page-link"
+								href="reflection-in-java.html">Next Chapter &rArr;</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-2 mb-4">
+				<div>
+					<script async
+						src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display: block"
+						data-ad-client="ca-pub-5964671306985297" data-ad-slot="6605368152"
+						data-ad-format="auto" data-full-width-responsive="true"> </ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				<br>
+				<div>
+					<script async
+						src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display: block"
+						data-ad-client="ca-pub-5964671306985297" data-ad-slot="7335995893"
+						data-ad-format="auto" data-full-width-responsive="true"> </ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="application/ld+json">
+{"@context": "https://schema.org", 
+ "@type": "Article",
+ "headline": "Annotations - Java",
+ "alternativeHeadline": "What are annotations in java?",
+ "image": "https://www.javaravish.com/images/jbktutorialslogo3.png",
+"author": {
+    "@type": "Person",
+    "name": "Kiran Digrase"
+  },
+ "genre": "java annotations", 
+ "keywords": "java annotations, annotations, annotations in java, java annotation purposes, annotation basics, annotation examples, @deprecated, @override, @suppresswarnings", 
+ "publisher": {
+    "@type": "Organization",
+    "name": "Java By Kiran",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.javabykiran.com/images/logojbk.png"
+    }
+  },
+ "url": "https://www.javaravish.com/corejava/annotations-in-java",
+    "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.javabykiran.com/"
+  },
+ "datePublished": "2019-11-22",
+ "dateCreated": "2019-11-22",
+ "dateModified": "2019-11-22",
+ "description": "Java annotations are essentially tags used to provide Meta data for your Java code.",
+ "articleBody": "Java annotations can be used at build-time, when you build your software project. The building process includes generating source code, compiling the source, generating XML files (e.g. deployment descriptors), packaging the compiled code and files into a JAR file, etc."
+ }
+</script>
+	<div>
+		<style>
+.footerfont {
+	font-size: 16px
+}
+</style>
+
+		<div class="footer footerfont" style="background: #55585a;">
+			<div">
+				<div>
+					<div class="row">
+						<div class=" col-sm-6 pull-left py-3 text-white"
+							style="text-align: center;">
+							Copyright © 2023 - Java Ravish, The content is copyrighted to
+							Ravi Kalyan kolloju.</br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "JBK Tutorials",
+  "url": "https://www.javaravish.com/",
+  "logo": "https://www.javaravish.com/images/jbktutorialslogo3.png",
+  "image": "https://www.javaravish.com/images/jbktutorialslogo3.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-888-880-9416",
+    "contactType": "customer service"
+  },
+  
+  "sameAs": [
+    "https://www.facebook.com/javabykiran",
+    "https://twitter.com/javabykiran",
+    "https://plus.google.com/+JavabyKiran",
+    "https://www.instagram.com/javabykiran/",
+    "https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA",
+    "https://ca.linkedin.com/company/javabykiran"
+  ]
+}
+</script>
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "PostalAddress",
+  "name": "JBK Tutorials",
+  "url": "https://www.javaravish.com/",
+  "image": "https://www.javaravish.com/images/jbktutorialslogo3.png",
+  "addressLocality": "Pune",
+   "addressRegion": "Maharashtra",
+   "postalCode": "411052",
+   "streetAddress": "403, 4th Floor, Park Plaza, Above Birla super Market, State Bank Nagar, Karve Nagar,Pune "
+  }
+
+</script>
+
+	<script>
+		$(document).ready(function() {
+			$('.tab-pane').addClass('show');
+		});
+
+		$('ul.nav-bottom').find('a').click(function() {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop : ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+				var target = $(e.target).attr("href");
+				$('.nav-bottom li').removeClass('active');
+				$('.nav-top li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		$('ul.nav-top').find('a').click(function() {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop : ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+				var target = $(e.target).attr("href");
+				$('.nav-top li').removeClass('active');
+				$('.nav-bottom li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		//Script for Copy to Clipboard
+		var clipboard = new Clipboard('button');
+		function copySuccessMessage() {
+			alert("Copied to Clipboard!");
+		}
+	</script>
+</body>
+
+
+<!-- Mirrored from www.javaravish.com/corejava/annotations-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 31 Oct 2023 09:39:04 GMT -->
+</html>
