@@ -1,0 +1,975 @@
+<!--Header-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.jbktutorials.com/corejava/java-language.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 01:47:11 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>JBK Tutorials | Java Language</title>
+	<meta name="description"
+		content="Java programming language was developed by the Sun Microsystems and was launched in 1995. The language has had many versions, the latest is Java SE 8.">
+	<meta name="keywords"
+		content="java tutorials, core java, advance java, java by kiran, java interview questions, blog, articles, learn java programming, codes, examples, selenium, python, spring">
+	<meta name="author" content="Java By Kiran">
+	<meta name="robots" content="index, follow">
+
+	<meta property="og:title" content="Java Language" />
+	<meta property="og:url" content="java-language.html" />
+	<meta property="fb:app_id" content="881390338999747" />
+	<meta property="og:description"
+		content="Java programming language was developed by the Sun Microsystems and was launched in 1995. The language has had many versions, the latest is Java SE 8.">
+	<meta property="og:image" content="../images/jbktutorialslogo3square.png">
+	<meta property="og:image:secure_url" content="../images/jbktutorialslogo3square.png" />
+	<meta property="og:type" content="article" />
+
+
+	<meta name="twitter:title" content="Java Language">
+	<meta name="twitter:description"
+		content="Java programming language was developed by the Sun Microsystems and was launched in 1995. The language has had many versions, the latest is Java SE 8.">
+	<meta name="twitter:image" content="../images/jbktutorialslogo3square.png">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<link rel="canonical" href="java-language.html" />
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
+
+	<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css" as="style">
+	<link rel="preload" href="../css/customcss.css" as="style">
+	<link rel="preload" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"
+		as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js" as="script">
+	<link rel="preload" href="../js/jquery.min.js" as="script">
+	<link rel="preload" href="../vendor/clipboard/clipboard.min.js" as="script">
+	<link rel="preload" href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-156439212-1');
+	</script>
+
+
+	<script data-ad-client="ca-pub-5964671306985297" async
+		src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="../css/customcss.css">
+	<link rel="stylesheet" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+
+
+	<link rel="stylesheet" href="../vendor/syntaxhighlighter/styles/a11y-light.css">
+	<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
+	<script defer>hljs.initHighlightingOnLoad();</script>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../vendor/clipboard/clipboard.min.js"></script>
+
+
+
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+	<link rel="stylesheet" href="../vendor/jquery-viewer-master/docs/css/viewer.css">
+	<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+		<div class="container p-0">
+			<a class="navbar-brand pull-left" href="java-index.html"><img
+					src="../images/jrlogo.png" style="height: 65px; max-width: 100%;"
+					alt="java by Kalyan" title="Java Ravish Tutorials"></a>
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+				<script async src="../../cse.google.com/fd667.txt?cx=001580368639334093203:va4ehh0xpyd"></script>
+				<div class="gcse-search"></div>
+				<ul class="navbar-nav ml-auto text-center">
+					<li class="nav-item"><a class="nav-link" href="java-index.html"><img src="../images/small/home.jpg"></i></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="introduction-to-java.html">Java</a></li>
+
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Spring</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Spring
+							Boot</a></li>
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Interview
+							Questions</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav><br>
+
+	<script async
+		src="../../platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
+
+
+	<div class="container-fluid">
+
+		<br />
+		<ol itemscope itemtype="http://schema.org/BreadcrumbList"
+			class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="java-index.html">
+					<span itemprop="name">Home</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="introduction-to-java.html">
+					<span itemprop="name">Java</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="java-language.html">
+					<span itemprop="name">What is Java Language?</span>
+				</a>
+				<meta itemprop="position" content="3" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<span itemprop="name">Java Language</span>
+				<meta itemprop="position" content="4" />
+			</li>
+		</ol>
+
+		<div class="row">
+
+			<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
+			<style>
+				@media only screen and (max-width: 425px) {
+					.hidesidebar {
+						display: none;
+					}
+				}
+			</style>
+			<script>
+				//Script to Open and Close Sidebar
+				function sidebar_open() {
+					document.getElementById("mySidebar").style.display = "block";
+				}
+
+				function sidebar_close() {
+					document.getElementById("mySidebar").style.display = "none";
+				}
+
+				// toggle up & down icon
+				function myFunction(x) {
+					x.classList.toggle("fa-book-open");
+				}
+			</script>
+
+
+			<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
+			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+				aria-multiselectable="true">
+				<div class="card">
+					<h2 class="card-header text-white" style="background: rgb(1, 71, 128);">Java</h2><br>
+					<div class="list-group">
+						<button class="w3-teal bg-transparent w3-large w3-hide-large" onclick="sidebar_close()">Close
+							Menu &times;</button>
+						<ul class="leftBarList">
+							<li><a href="introduction-to-java.html">Java Introduction</a></li>
+							<li><a href="java-language.html">Java Language</a></li>
+							<li><a href="communication-between-two-classes-in-java.html">Communication Between Two
+									Classes</a></li>
+							<li><a href="package-in-java.html">Package</a></li>
+							<li><a href="methods-variable-and-block-in-java.html">Methods, Variable and Block</a></li>
+							<li><a href="encapsulation-in-java.html">Encapsulation</a></li>
+							<li><a href="access-modifiers-in-java.html">Access Modifiers</a></li>
+							<li><a href="statickeyword-in-java.html">Static Keyword</a></li>
+							<li><a href="final-keyword-in-java.html">Final Keyword </a></li>
+							<li><a href="constructor-in-java.html">Constructor </a></li>
+							<li><a href="inheritance-in-java.html">Inheritance </a></li>
+							<li><a href="super-and-this-keyword-in-java.html">Super This</a></li>
+							<li><a href="polymorphism-in-java.html">Polymorphism</a></li>
+							<li><a href="abstraction-in-java.html">Abstraction</a></li>
+							<li><a href="garbage-collection-in-java.html">Garbage Collection</a></li>
+							<li><a href="input-and-output-streams-in-java.html">Input Output Stream</a></li>
+							<li><a href="collection-framework-in-java.html">Collection Framework</a></li>
+							<li><a href="collection-revisited-in-java.html">Collection Revisited</a></li>
+							<li><a href="serialization-in-java.html">Serialization</a></li>
+							<li><a href="exception-in-java.html">Exception</a></li>
+
+
+							<li><a href="arrays-in-java.html">Arrays</a></li>
+							<li><a href="strings-in-java.html">Strings</a></li>
+							<li><a href="features-of-jdk-1.5-in-java.html">Features and Enhancements in jdk 1.5</a></li>
+							<li><a href="features-of-jdk-1.6-in-java.html">Features and Enhancements in jdk 1.6</a></li>
+							<li><a href="features-of-jdk-1.7-in-java.html">Features and Enhancements in jdk 1.7</a></li>
+							<li><a href="features-of-jdk-1.8-in-java.html">Features and Enhancements in jdk 1.8</a></li>
+							<li><a href="multithreading-in-java.html">Thread</a></li>
+							<li><a href="java-virtual-machine-memory-management.html">JVM Memory Management</a></li>
+							<li><a href="jdbc-in-java.html">JDBC</a></li>
+							<li><a href="database-in-java.html">Database</a></li>
+						</ul>
+					</div>
+				</div><br>
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="1171818896" data-ad-format="auto" data-full-width-responsive="true"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+
+			<div class="col-lg-7 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white" style="background: rgb(1, 71, 128);">Java Programming Language
+					</h1>
+					<div class="card-body">
+						<div id="Div1">
+							<div class="tab" role="tabpanel">
+								<p>Java programming language was developed by the Sun Microsystems and was launched in
+									1995. The language has had many versions, the latest is Java SE 8.</p>
+
+								<div class="text-center">
+									<hr>
+									<ul class="nav nav-tabs nav-top" role="tablist">
+										<li role="presentation" class="active"><a href="#Keywords" role="tab"
+												data-toggle="tab">Keywords</a></li>
+										<li role="presentation"><a href="#Characterset" role="tab"
+												data-toggle="tab">Character set</a></li>
+										<li role="presentation"><a href="#Userdefinedwords" role="tab"
+												data-toggle="tab">User defined words</a></li>
+										<li role="presentation"><a href="#Datatypes" role="tab" data-toggle="tab">Data
+												types</a></li>
+										<li role="presentation"><a href="#Variable" role="tab"
+												data-toggle="tab">Variable</a></li>
+										<li role="presentation"><a href="#Constants" role="tab"
+												data-toggle="tab">Constants</a></li>
+										<li role="presentation"><a href="#Literals" role="tab"
+												data-toggle="tab">Literals</a></li>
+										<li role="presentation"><a href="#Operators" role="tab"
+												data-toggle="tab">Operators</a></li>
+										<li role="presentation"><a href="#Controlstatements" role="tab"
+												data-toggle="tab">Control statements</a></li>
+										<li role="presentation"><a href="#Arrays" role="tab"
+												data-toggle="tab">Arrays</a></li>
+									</ul>
+								</div>
+								<div class="tab-content tabs">
+									<div role="tabpanel" class="tab-pane fade in active" id="Keywords">
+										<h2 class="breadcrumb">Keywords</h2>
+										<p><b>Keywords</b> are predefined code which has a specific meaning and that
+											meaning cannot be changed. They are total 53 in number and cannot be used
+											elsewhere.</p>
+										<p>For example, these keywords may not be used as variables, methods, classes,
+											etc.</p><br>
+										<h3>List of Keywords:</h3>
+										<div class="tablediv">
+											<table class="table-bordered table-fixed center" style="width:100%;">
+												<colgroup>
+													<col style="width: 34%" />
+													<col style="width: 33%" />
+													<col style="width: 33%" />
+												</colgroup>
+												<tr>
+													<th>Data Type</th>
+													<th>Access Modifiers</th>
+													<th>Control Statement</th>
+												</tr>
+												<tr>
+													<td>byte <br>
+														short <br>
+														int <br>
+														long <br>
+														float <br>
+														double <br>
+														char <br>
+														Boolean
+													</td>
+													<td>
+														private <br>
+														protected <br>
+														public <br>
+														default <br>
+													</td>
+													<td>
+														Else <br>
+														switch <br>
+														case <br>
+														default <br>
+														for <br>
+														while <br>
+														Do <br>
+														Continue <br>
+														Break <br>
+														goto [reserved] <br>
+													</td>
+												</tr>
+											</table>
+										</div><br>
+										<div class="tablediv">
+											<table class="table-bordered table-fixed center" style="width:100%;">
+												<colgroup>
+													<col style="width: 34%" />
+													<col style="width: 33%" />
+													<col style="width: 33%" />
+												</colgroup>
+												<tr>
+													<th>Object & Classes</th>
+													<th>Modifiers</th>
+													<th>Exceptions</th>
+												</tr>
+												<tr>
+													<td>class <br>
+														interface <br>
+														extends <br>
+														implements <br>
+														this <br>
+														super <br>
+														new
+													</td>
+													<td>
+														static <br>
+														abstract <br>
+														synchronized <br>
+														volatile <br>
+														native <br>
+														transient <br>
+														strictfp <br>
+														final
+													</td>
+													<td>
+														try <br>
+														catch <br>
+														finally <br>
+														throw <br>
+														throws
+													</td>
+												</tr>
+											</table>
+										</div><br>
+										<div class="tablediv">
+											<table class="table-bordered table-fixed center" style="width:100%;">
+												<colgroup>
+													<col style="width: 34%" />
+													<col style="width: 33%" />
+													<col style="width: 33%" />
+												</colgroup>
+												<tr>
+													<th>Miscellaneous</th>
+													<th>Packages</th>
+													<th></th>
+												</tr>
+												<tr>
+													<td>return <br>
+														const(*) <br>
+														instance of <br>
+														void <br>
+														assert
+													</td>
+													<td>
+														package <br>
+														import
+													</td>
+													<td>
+														JAVA 2 -> 49 -> 52 <br>
+														Keywords <br>
+														JAVA 2 -> 50 -> 53
+													</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Characterset">
+										<h2 class="breadcrumb">Character set</h2>
+										<ul>
+											<li>
+												<p>Digits (0-9)</p>
+											</li>
+											<li>
+												<p>Alphabets (A-Z, a-z)</p>
+											</li>
+										</ul>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Userdefinedwords">
+										<h2 class="breadcrumb">User defined words</h2>
+										<p>They will be used as names to variables, methods, classes, etc. When you are
+											defining user defined words, you need to remember the following
+											points/rules:</p>
+										<ul>
+											<li>
+												<p>User defined words can contain all the digits, all the alphabets and
+													only two special symbols, which are, ‘_’(underscore) and '$'(dollar)
+												</p>
+											</li>
+											<li>
+												<p>The first character must be an alphabet, underscore or dollar</p>
+											</li>
+											<li>
+												<p>Keywords can be used as user defined words</p>
+											</li>
+										</ul><br>
+										<h3>Which of the following are valid identifiers or user defined words?</h3>
+										<div class="tablediv">
+											<table class style="width:100%;">
+												<colgroup>
+													<col style="width: 20%" />
+													<col style="width: 10%" />
+													<col style="width: 30%" />
+													<col style="width: 40%" />
+												</colgroup>
+												<tr>
+													<td>1) abc 123 </td>
+													<td>&#10230;</td>
+													<td>Invalid</td>
+													<td>(because of the space between characters)</td>
+												</tr>
+												<tr>
+													<td>2) 123abc </td>
+													<td>&#10230; </td>
+													<td>Invalid</td>
+													<td>(because it starts with a number)</td>
+												</tr>
+												<tr>
+													<td>3) -123$98 </td>
+													<td>&#10230;</td>
+													<td>Invalid</td>
+													<td>(because it starts with a dash ‘-‘)</td>
+												</tr>
+												<tr>
+													<td>4) Int </td>
+													<td>&#10230;</td>
+													<td>Valid</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>5) hello </td>
+													<td>&#10230;</td>
+													<td>Valid</td>
+													<td></td>
+												</tr>
+												<tr>
+													<td>6) a </td>
+													<td>&#10230;</td>
+													<td>Valid</td>
+													<td></td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Datatypes">
+										<h2 class="breadcrumb">Data types</h2>
+										<p>There are two categories of data types:</p>
+										<ul>
+											<li>Primitive data type</li>
+											<li>User defined data type</li>
+										</ul>
+										<hr>
+										<h3>Primitive data type:</h3>
+										<p><b>Primitive datatype</b> is a predefined type of data, and is supported by
+											java.<br>
+											They are eight in number and are listed below:</p>
+										<div class="tablediv">
+											<table class="table table-bordered table-fixed" style="width:100%;">
+												<colgroup>
+													<col style="width: 10%" />
+													<col style="width: 10%" />
+													<col style="width: 10%" />
+													<col style="width: 70%" />
+												</colgroup>
+												<tr>
+													<th class="center">Data Type</th>
+													<th class="center">Size (byte)</th>
+													<th class="center">Default Value</th>
+													<th class="center">Range</th>
+												</tr>
+												<tr>
+													<td>byte</td>
+													<td>1</td>
+													<td>0</td>
+													<td>Minimum value is-128(2^7) <br> Maximum value is 127
+														(inclusive)(2^7-1)</td>
+												</tr>
+												<tr>
+													<td>short</td>
+													<td>2</td>
+													<td>0</td>
+													<td>Minimum value is -32,768(-2^15) <br> Maximum value is 32,767
+														(inclusive)(2^15-1)</td>
+												</tr>
+												<tr>
+													<td>int</td>
+													<td>4</td>
+													<td>0</td>
+													<td>Minimum value is -2,147,483,648(-2^31) <br> Maximum value is
+														2,147,483,647(2^31-1)</td>
+												</tr>
+												<tr>
+													<td>long</td>
+													<td>8</td>
+													<td>0L</td>
+													<td>Minimum value is - 9,223,372,036,854,775,808(-2^63) <br> Maximum
+														value is 9,223,372,036,854,775,807(2^63-1)</td>
+												</tr>
+												<tr>
+													<td>float</td>
+													<td>4</td>
+													<td>0.0f</td>
+													<td>Example : float f1 = 234.5f</td>
+												</tr>
+												<tr>
+													<td>double</td>
+													<td>8</td>
+													<td>0.0d</td>
+													<td>Example : double d1 = 123.4</td>
+												</tr>
+												<tr>
+													<td>char</td>
+													<td>2</td>
+													<td>Blank</td>
+													<td>Minimum value is 'u0000'(or 0) <br> Maximum value is 'uffff'(or
+														65,535 inclusive)</td>
+												</tr>
+												<tr>
+													<td>boolean</td>
+													<td>1</td>
+													<td>false</td>
+													<td>Example : boolean one = true <br> Example : boolean one = false
+													</td>
+												</tr>
+											</table>
+										</div>
+										<hr>
+										<h3>User defined data type</h3>
+										<p><b>User defined datatype</b> is a data type which is obtained from an already
+											present data type.<br>
+											Listed below are the types of user defined types :</p>
+										<ul>
+											<li>Class type.</li>
+											<li>Interface type.</li>
+											<li>Two more types called enum and annotation.</li>
+											<li>Class objects, and various type of array variables come under reference
+												variables.</li>
+											<li>Default value of any reference variable is null.</li>
+											<li>A reference variable can be used to refer to any object of the declared
+												or compatible type.<br>
+												Example: <code>Animal animal = new Animal("giraffe");</code></li>
+										</ul>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Variable">
+										<h2 class="breadcrumb">Variable</h2>
+										<p>A <b>variable</b> in java is a section of memory that contains or may contain
+											a data value. Therefore, it can be said that is a name allotted to the
+											location of memory.</p>
+										<ul>
+											Syntax :
+											<ul>
+												Data type var_name = value; <br>
+												e.g.
+												<ul><code>int a; <br> int b = 20;</code></ul>
+											</ul>
+										</ul>
+										<ul>
+											<li>
+												<p>These two variables a and b are called as primitive variables because
+													they are declared with primitive data type. Here, we can say that b
+													is type of int whose value is 20.</p>
+												<ul><code>Hello h =new Hello();</code></ul>
+											</li><br>
+											<li>
+												<p>The above given variable, h called reference variables because they
+													are declared with user defined data type. Here we can say h is the
+													type of Hello with Hello(); as the new value.</p>
+											</li>
+										</ul>
+										<hr>
+										<h3>Difference between Primitive and Reference variables:</h3>
+										<div class="tablediv">
+											<table class="table table-bordered table-fixed" style="width:100%;">
+												<colgroup>
+													<col style="width: 50%" />
+													<col style="width: 50%" />
+												</colgroup>
+												<tr>
+													<th class="center">Primitive Variable</th>
+													<th class="center">Reference Variable</th>
+												</tr>
+												<tr>
+													<td>Primitive data type is called primitive variable.</td>
+													<td>Variable declared with user defined datatype is called reference
+														variable.</td>
+												</tr>
+												<tr>
+													<td>Memory allocation for Primitive variables will depend on the
+														primitive Data type used.</td>
+													<td>Always allocate eight bytes of memory for reference variable.
+													</td>
+												</tr>
+												<tr>
+													<td>The default value for the primitive variables will depend on the
+														primitive data type used.</td>
+													<td>Null will always be assigned.</td>
+												</tr>
+												<tr>
+													<td>Primitive variables contain value as address or literal.</td>
+													<td>Reference variable contains the addresses of an object.</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Constants">
+										<h2 class="breadcrumb">Constants</h2>
+										<p><b>Constants</b> may be defined as variables whose values cannot be changed.
+										</p>
+										<ul>
+											<li>
+												<p>Constants are also called final variables</p>
+											</li>
+											<li>
+												<p>Value assigned for the final variable can not be modified</p>
+											</li>
+											<ul>
+												Syntax:
+												<ul>
+													final Data type var_name = value; <br>
+													For ex.
+													<ul><code>final int a = 0; <br>//a = a + 1;</code> //Showing error,
+														it is not possible to do any operation on a final variable like
+														this.</ul>
+												</ul>
+											</ul>
+										</ul>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Literals">
+										<div>
+											<h2 class="breadcrumb">Literals</h2>
+											<p>Literals are a value which you can assign to the variable or a
+												constant.<br>
+												There are five types of literals:
+											</p>
+											<ul>
+												<li>
+													<p>Integer Literal</p>
+												</li>
+												<li>
+													<p>Floating Point Literal</p>
+												</li>
+												<li>
+													<p>Character Literal</p>
+												</li>
+												<li>
+													<p>Boolean Literal</p>
+												</li>
+												<li>
+													<p>String Literal</p>
+												</li>
+											</ul>
+											<a href="literals-in-java-language.html"
+												class="btn btn-outline-danger">Learn in Detail</a>
+										</div><br>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Operators">
+										<div>
+											<h2 class="breadcrumb">Operators</h2>
+											<p><b>Operators</b> are special symbols that perform operations. <br>
+												Listed below are the types of operators:</p>
+											<ul>
+												<li>
+													<p>Arithmetic Operator (+, -, *, /,%)</p>
+												</li>
+												<li>
+													<p>Relational Operator (>, >=, <, <=)</p>
+												</li>
+												<li>
+													<p>Logical Operator (&&, ||, \)</p>
+												</li>
+												<li>
+													<p>Assign Operator (=, +=, -=, *=, /=, &=)</p>
+												</li>
+												<li>
+													<p>Increment / Decrement Operator (++, --)</p>
+												</li>
+												<li>
+													<p>Ternary Operator (?:)</p>
+												</li>
+												<li>
+													<p>Bitwise Operator (&, \, ^)</p>
+												</li>
+												<li>
+													<p>Equality Operator (==, !=)</p>
+												</li>
+												<li>
+													<p>Unary Operator (\, ++, --, ~)</p>
+												</li>
+												<li>
+													<p>Shift Operator (>>, <<)< /p>
+												</li>
+												<li>
+													<p>Instance of Operator (instanceof)</p>
+												</li>
+												<li>
+													<p>New Operator (new)</p>
+												</li>
+											</ul>
+											<a href="operators-in-java-language.html"
+												class="btn btn-outline-danger">Learn in Detail</a>
+										</div><br>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Controlstatements">
+										<div>
+											<h2 class="breadcrumb">Control Statements</h2>
+											<p>A Control statement in Java works as a determiner for deciding the next
+												task of the other statements whether to execute or not.</p>
+											<p>Types of control statements:</p>
+											<ul>
+												<li>
+													<p>Conditional control statement</p>
+												</li>
+												<li>
+													<p>Looping control statement</p>
+												</li>
+												<li>
+													<p>Unconditional control statement</p>
+												</li>
+											</ul>
+											<a href="control-statements-in-java-language.html"
+												class="btn btn-outline-danger">Learn in Detail</a>
+										</div><br>
+									</div>
+									<div role="tabpanel" class="tab-pane fade" id="Arrays">
+										<h2 class="breadcrumb">Arrays</h2>
+										<p>Please refer <a class="text-primary" href="arrays-in-java.html">Arrays</a>
+											Chapter.</p>
+									</div>
+								</div>
+								<hr>
+								<ul class="nav nav-tabs nav-bottom mt-3" role="tablist">
+									<li role="presentation" class="active"><a href="#Keywords" role="tab"
+											data-toggle="tab">Keywords</a></li>
+									<li role="presentation"><a href="#Characterset" role="tab"
+											data-toggle="tab">Character set</a></li>
+									<li role="presentation"><a href="#Userdefinedwords" role="tab"
+											data-toggle="tab">User defined words</a></li>
+									<li role="presentation"><a href="#Datatypes" role="tab" data-toggle="tab">Data
+											types</a></li>
+									<li role="presentation"><a href="#Variable" role="tab"
+											data-toggle="tab">Variable</a></li>
+									<li role="presentation"><a href="#Constants" role="tab"
+											data-toggle="tab">Constants</a></li>
+									<li role="presentation"><a href="#Literals" role="tab"
+											data-toggle="tab">Literals</a></li>
+									<li role="presentation"><a href="#Operators" role="tab"
+											data-toggle="tab">Operators</a></li>
+									<li role="presentation"><a href="#Controlstatements" role="tab"
+											data-toggle="tab">Control statements</a></li>
+									<li role="presentation"><a href="#Arrays" role="tab" data-toggle="tab">Arrays</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="card-footer">
+						<ul class="pagination justify-content-center mb-4">
+							<li class="page-item">
+								<a class="page-link btn-outline-primary" href="introduction-to-java.html">&lArr;
+									Previous</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="communication-between-two-classes-in-java.html">Next
+									&rArr;</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-2 mb-4">
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="6605368152" data-ad-format="auto" data-full-width-responsive="true">
+					</ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				<br>
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="7335995893" data-ad-format="auto" data-full-width-responsive="true">
+					</ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="application/ld+json">
+{ "@context": "https://schema.org", 
+ "@type": "Article",
+ "headline": "Java Language",
+ "alternativeHeadline": "What is Java language?",
+ "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+ "author": {
+    "@type": "Person",
+    "name": "Kiran Digrase"
+  },
+ "genre": "java basics", 
+ "keywords": "java basics, java language, java programming, java keywords, java introduction, datatypes, literals, arrays, variables, constants", 
+ "publisher": {
+    "@type": "Organization",
+    "name": "Java By Kiran",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.javabykiran.com/images/logojbk.png"
+    }
+  },
+ "url": "https://www.jbktutorials.com/corejava/java-language.php",
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.javabykiran.com/"
+  },
+ "datePublished": "2019-11-21",
+ "dateCreated": "2019-11-21",
+ "dateModified": "2019-11-21",
+ "description": "Java programming language was developed by the Sun Microsystems and was launched in 1995.",
+ "articleBody": "The Java language includes keywords, character set, datatypes, variable, constants, literals, operators, control statements and arrays."
+ }
+</script>
+
+	<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
+
+		<div class="container text-center text-md-left">
+
+		</div>
+
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
+
+					<div class=" col-sm-6 pull-left py-3 text-white">
+						Copyright © 2023, JavaRavish by Ravi Kolloju
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "logo": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-888-880-9416",
+    "contactType": "customer service"
+  },
+  
+  "sameAs": [
+    "https://www.facebook.com/javabykiran",
+    "https://twitter.com/javabykiran",
+    "https://plus.google.com/+JavabyKiran",
+    "https://www.instagram.com/javabykiran/",
+    "https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA",
+    "https://ca.linkedin.com/company/javabykiran"
+  ]
+}
+</script>
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "PostalAddress",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "addressLocality": "Pune",
+   "addressRegion": "Maharashtra",
+   "postalCode": "411052",
+   "streetAddress": "403, 4th Floor, Park Plaza, Above Birla super Market, State Bank Nagar, Karve Nagar,Pune "
+  }
+
+</script>
+
+	<script>
+
+		$(document).ready(function () {
+			$('.tab-pane').addClass('show');
+		});
+
+		$('ul.nav-bottom').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-bottom li').removeClass('active');
+				$('.nav-top li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		$('ul.nav-top').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-top li').removeClass('active');
+				$('.nav-bottom li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		//Script for Copy to Clipboard
+		var clipboard = new Clipboard('button');
+		function copySuccessMessage() {
+			alert("Copied to Clipboard!");
+		}
+	</script>
+</body>
+
+
+<!-- Mirrored from www.jbktutorials.com/corejava/java-language.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 01:47:11 GMT -->
+
+</html>

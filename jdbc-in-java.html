@@ -1,0 +1,1352 @@
+<!--Header-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.jbktutorials.com/corejava/jdbc-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 01:47:17 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>JBK Tutorials | JDBC (Java Database Connectivity)</title>
+	<meta name="description"
+		content="JDBC is a Java API that can access any kind of tabular data, especially data stored in a Relational Database. JDBC works with Java on a variety of platforms.">
+	<meta name="keywords"
+		content="java tutorials, core java, advance java, java by kiran, java interview questions, blog, articles, learn java programming, codes, examples, selenium, python, spring">
+	<meta name="author" content="Java By Kiran">
+	<meta name="robots" content="index, follow">
+
+	<meta property="og:title" content="JDBC (Java Database Connectivity)" />
+	<meta property="og:url" content="jdbc-in-java.html" />
+	<meta property="fb:app_id" content="881390338999747" />
+	<meta property="og:description"
+		content="JDBC is a Java API that can access any kind of tabular data, especially data stored in a Relational Database. JDBC works with Java on a variety of platforms.">
+	<meta property="og:image" content="../images/jbktutorialslogo3square.png">
+	<meta property="og:image:secure_url" content="../images/jbktutorialslogo3square.png" />
+	<meta property="og:type" content="article" />
+
+
+	<meta name="twitter:title" content="JDBC (Java Database Connectivity)">
+	<meta name="twitter:description"
+		content="JDBC is a Java API that can access any kind of tabular data, especially data stored in a Relational Database. JDBC works with Java on a variety of platforms.">
+	<meta name="twitter:image" content="../images/jbktutorialslogo3square.png">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<link rel="canonical" href="jdbc-in-java.html" />
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
+
+	<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css" as="style">
+	<link rel="preload" href="../css/customcss.css" as="style">
+	<link rel="preload" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"
+		as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js" as="script">
+	<link rel="preload" href="../js/jquery.min.js" as="script">
+	<link rel="preload" href="../vendor/clipboard/clipboard.min.js" as="script">
+	<link rel="preload" href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-156439212-1');
+	</script>
+
+
+	<script data-ad-client="ca-pub-5964671306985297" async
+		src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="../css/customcss.css">
+	<link rel="stylesheet" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+
+
+	<link rel="stylesheet" href="../vendor/syntaxhighlighter/styles/a11y-light.css">
+	<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
+	<script defer>hljs.initHighlightingOnLoad();</script>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../vendor/clipboard/clipboard.min.js"></script>
+
+
+
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+	<link rel="stylesheet" href="../vendor/jquery-viewer-master/docs/css/viewer.css">
+	<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+		<div class="container p-0">
+			<a class="navbar-brand pull-left" href="java-index.html"><img
+					src="../images/jrlogo.png" style="height: 65px; max-width: 100%;"
+					alt="java by Kalyan" title="Java Ravish Tutorials"></a>
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+				<script async src="../../cse.google.com/fd667.txt?cx=001580368639334093203:va4ehh0xpyd"></script>
+				<div class="gcse-search"></div>
+				<ul class="navbar-nav ml-auto text-center">
+					<li class="nav-item"><a class="nav-link" href="java-index.html"><img src="../images/small/home.jpg"></i></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="introduction-to-java.html">Java</a></li>
+
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Spring</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Spring
+							Boot</a></li>
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Interview
+							Questions</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav><br>
+
+	<script async
+		src="../../platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
+	<style>
+		.centerimage {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+
+
+	<div class="container-fluid">
+		<br />
+		<ol itemscope itemtype="http://schema.org/BreadcrumbList"
+			class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="java-index.html">
+					<span itemprop="name">Home</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="introduction-to-java.html">
+					<span itemprop="name">Java</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="jdbc-in-java.html">
+					<span itemprop="name">What is JDBC?</span>
+				</a>
+				<meta itemprop="position" content="3" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<span itemprop="name">JDBC</span>
+				<meta itemprop="position" content="4" />
+			</li>
+		</ol>
+
+		<div class="row">
+
+			<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
+			<style>
+				@media only screen and (max-width: 425px) {
+					.hidesidebar {
+						display: none;
+					}
+				}
+			</style>
+			<script>
+				//Script to Open and Close Sidebar
+				function sidebar_open() {
+					document.getElementById("mySidebar").style.display = "block";
+				}
+
+				function sidebar_close() {
+					document.getElementById("mySidebar").style.display = "none";
+				}
+
+				// toggle up & down icon
+				function myFunction(x) {
+					x.classList.toggle("fa-book-open");
+				}
+			</script>
+
+
+			<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
+			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+				aria-multiselectable="true">
+				<div class="card">
+					<h2 class="card-header text-white" style="background: rgb(1, 71, 128);">Java</h2><br>
+					<div class="list-group">
+						<button class="w3-teal bg-transparent w3-large w3-hide-large" onclick="sidebar_close()">Close
+							Menu &times;</button>
+						<ul class="leftBarList">
+							<li><a href="introduction-to-java.html">Java Introduction</a></li>
+							<li><a href="java-language.html">Java Language</a></li>
+							<li><a href="communication-between-two-classes-in-java.html">Communication Between Two
+									Classes</a></li>
+							<li><a href="package-in-java.html">Package</a></li>
+							<li><a href="methods-variable-and-block-in-java.html">Methods, Variable and Block</a></li>
+							<li><a href="encapsulation-in-java.html">Encapsulation</a></li>
+							<li><a href="access-modifiers-in-java.html">Access Modifiers</a></li>
+							<li><a href="statickeyword-in-java.html">Static Keyword</a></li>
+							<li><a href="final-keyword-in-java.html">Final Keyword </a></li>
+							<li><a href="constructor-in-java.html">Constructor </a></li>
+							<li><a href="inheritance-in-java.html">Inheritance </a></li>
+							<li><a href="super-and-this-keyword-in-java.html">Super This</a></li>
+							<li><a href="polymorphism-in-java.html">Polymorphism</a></li>
+							<li><a href="abstraction-in-java.html">Abstraction</a></li>
+							<li><a href="garbage-collection-in-java.html">Garbage Collection</a></li>
+							<li><a href="input-and-output-streams-in-java.html">Input Output Stream</a></li>
+							<li><a href="collection-framework-in-java.html">Collection Framework</a></li>
+							<li><a href="collection-revisited-in-java.html">Collection Revisited</a></li>
+							<li><a href="serialization-in-java.html">Serialization</a></li>
+							<li><a href="exception-in-java.html">Exception</a></li>
+
+
+							<li><a href="arrays-in-java.html">Arrays</a></li>
+							<li><a href="strings-in-java.html">Strings</a></li>
+							<li><a href="features-of-jdk-1.5-in-java.html">Features and Enhancements in jdk 1.5</a></li>
+							<li><a href="features-of-jdk-1.6-in-java.html">Features and Enhancements in jdk 1.6</a></li>
+							<li><a href="features-of-jdk-1.7-in-java.html">Features and Enhancements in jdk 1.7</a></li>
+							<li><a href="features-of-jdk-1.8-in-java.html">Features and Enhancements in jdk 1.8</a></li>
+							<li><a href="multithreading-in-java.html">Thread</a></li>
+							<li><a href="java-virtual-machine-memory-management.html">JVM Memory Management</a></li>
+							<li><a href="jdbc-in-java.html">JDBC</a></li>
+							<li><a href="database-in-java.html">Database</a></li>
+						</ul>
+					</div>
+				</div><br>
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="1171818896" data-ad-format="auto" data-full-width-responsive="true"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+
+
+			<div class="col-lg-7 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white" style="background: rgb(1, 71, 128);">JDBC (Java Database
+						Connectivity) in Java</h1>
+					<div class="card-body">
+						<div class="tab" role="tabpanel">
+							<p><b>JDBC</b> stands for Java Database Connectivity. It is an API for the Java programming
+								language. It allows the client to access the database and also establishes how the
+								client may do so. It can work on a number of operating systems or platforms, like
+								Windows, Mac, etc. It is basically a connection between the database and the
+								application.</p>
+							<hr>
+							<div>
+
+								<ul class="nav nav-tabs nav-top" role="tablist">
+									<li role="presentation" class="active"><a href="#JDBCutilityclass" role="tab"
+											data-toggle="tab">JDBC utility class</a></li>
+									<li role="presentation"><a href="#Statement" role="tab"
+											data-toggle="tab">Statement</a></li>
+									<li role="presentation"><a href="#PreparedStatement" role="tab"
+											data-toggle="tab">Prepared Statement</a></li>
+									<li role="presentation"><a href="#CallableStatement" role="tab"
+											data-toggle="tab">Callable Statement</a></li>
+									<li role="presentation"><a href="#DatabaseMetadata" role="tab"
+											data-toggle="tab">Database Metadata</a></li>
+									<li role="presentation"><a href="#ResultsetMetadata" role="tab"
+											data-toggle="tab">Resultset Metadata</a></li>
+									<li role="presentation"><a href="#ResultSet" role="tab"
+											data-toggle="tab">ResultSet</a></li>
+									<li role="presentation"><a href="#ForwardonlyResultsets" role="tab"
+											data-toggle="tab">Forward only Resultsets</a></li>
+									<li role="presentation"><a href="#ScrollableResulsets" role="tab"
+											data-toggle="tab">Scrollable Resulsets</a></li>
+									<li role="presentation"><a href="#Batchupdateset" role="tab" data-toggle="tab">Batch
+											update set</a></li>
+								</ul>
+								</ul>
+							</div>
+							<hr>
+							<p>If you want to interact with database using c & c++, you need to use database specific
+								libraries in your application directly. Later, if you want to migrate the database, you
+								need to rewrite the entire application using real database specific libraries. This
+								increases the maintenance of the application.</p>
+							<p>To avoid this, Microsoft has introduced ODBC Driver ODC (open database connectivity).
+								Given below are some points related to the ODBC Driver.</p>
+							<ul>
+								<li>
+									<p>With the ODBC Driver, you don’t need to use the application directly, because
+										ODBC itself contain various database vendor specific libraries.</p>
+								</li>
+								<li>
+									<p>Your application now contacts the ODBC Driver instead of using database specific
+										libraries directly. This reduces maintenance issues.</p>
+								</li>
+								<li>
+									<p>But ODBC has a limitation, i.e., the ODBC setup is available only on the Windows
+										OS and neither has it shown good performance.</p>
+								</li>
+							</ul>
+							<p>To avoid these limitations and to provide a uniform method to interact with any database,
+								Sun has provided us with the JDBC API and JDBC Drivers.</p>
+							<div class="docs-galley"><img class="docs-pictures clearfix centerimage"
+									src="https://www.jbktutorials.com/images/java/jdbc_img1.webp"
+									alt="jdbc api components diagram" title="JDBC API Components"></div><br>
+							<p>Here are the steps to write a JDBC program:</p>
+							<ul><b>Step 1:</b> Load the Driver class</ul>
+							<ul><b>Step 2:</b> Establish the connection</ul>
+							<ul><b>Step 3:</b> Create the required statement</ul>
+							<ul><b>Step 4:</b> Prepare the Required SQL statement </ul>
+							<ul><b>Step 5:</b> Submit the SQL statement to Database </ul>
+							<ul><b>Step 6:</b> Process the Results</ul>
+							<ul><b>Step 7:</b> Release the Resources</ul>
+							<div class="tab-content tabs">
+								<div role="tabpanel" class="tab-pane fade in active" id="JDBCutilityclass">
+									<h2 class="breadcrumb">JDBC utility class [we have called this class in all examples
+										of this chapter]</h2>
+									<div>
+										<button class="copycodebuttonstyle" data-clipboard-target="#code1"
+											onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+										<pre id="code1" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.JDBC; 
+import java.sql.*;
+public class DBUtil {
+  public static Connection getOracleConnection() { 
+    Connection con = null; 
+  try {
+    // 1.Load the Driver class 
+    Class.forName ("oracle.jdbc.driver.oracle.Driver");
+    // 2.Establish the connection 
+    con = DriverManager.getConnection(
+          "jdbc:oracle:thin:@localhost:1521.XE","system", "jbk");
+  } catch (Exception e) { e.printStackTrace();
+ }
+  return con;
+}
+public static Connection getMySQLConnection() {
+    Connection con = null; 
+  try {
+    // 1. Load the Driver class
+    Class.forName("com.mysql.jdbc.Driver");
+    // 2. Establish the connection
+    con = DriverManager.getConnection(
+          "jdbc:mySQL://localhost:3306/jbkdb", "root", "root");
+  } catch (Exception e) { e.printStackTrace();
+ }
+  return con;
+}
+public static void cleanup(Connection con, Statement st, ResultSet rs) {
+  try {
+    // 7.Release the Resources 
+    if (rs != null)
+        rs.close();
+    if (st != null)
+        st.close(); 
+    if (con != null)
+        con.close();
+   } catch (Exception e) { 
+        e.printStackTrace();
+   }
+ }
+public static void cleanup(Connection con, Statement st) { 
+  try {
+    // 7.Release the Resources 
+    if (st != null)
+        st.close(); 
+    if (con != null)
+        con.close();
+  } catch (Exception e) { 
+        e.printStackTrace();
+  }
+ }
+}
+</code></pre>
+									</div>
+									<div>
+										<button class="copycodebuttonstyle" data-clipboard-target="#code2"
+											onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+										<pre id="code2" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.JDBC; 
+import java.sql.*;
+class JDBCLab2 {
+public static void main(String as[]) { 
+   int sid = Integer.parseInt(as[0]); 
+   String sn = as[1];
+   String em = as[2];
+   long ph = Long.parseLong(as[3]); 
+   String ci = as[4];
+   double fee = Double.parseDouble(as[5]); 
+   Connection con = null;
+   Statement st = null; 
+   ResultSet rs = null; 
+   try {
+        con= DBUtil.getOracleConnection();
+        // 3.create the Required JDBC statement 
+        st = con.createStatement();
+        // 4.prepare the Required SQL statement 
+        String sql = null; 
+        System.out.println(sql);
+        // 5.submit the sql statement to DB 
+        int x = st.executeUpdate(sql);
+        // 6.process the Results 
+        if (x == 1) {
+            System.out.println("Record is inserted");
+        } else {
+            System.out.println("sorry,Record is not inserted");
+        }
+
+        // 4.prepare the Required SQL statement 
+        String sql="select * from b27 students";
+        // 5 submit the SQL statement to DB. 
+        rs = st.executeQuery(sql);
+        // 6.process the Results. 
+        while (rs.next()) {
+            sid = rs.getInt(1); 
+            sn = rs.getString(2); 
+            em = rs.getString(3);
+            ph = rs.getLong(4); 
+            ci = rs.getString(5);
+            fee = rs.getDouble(6); 
+            System.out.println("");
+        }
+    } catch (Exception e) { 
+        e.printStackTrace();
+    } finally {
+        DBUtil.cleanup(con, st, rs);
+    }
+  }	
+}
+</code></pre>
+									</div>
+									<hr>
+									<h4>Types of JDBC statement:</h4>
+									<p>There are three types of JDBC statements. They are:</p>
+									<ul>
+										<li>Statement</li>
+										<li>PreparedStatement</li>
+										<li>CallableStatement</li>
+									</ul>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="Statement">
+									<h2 class="breadcrumb">Statement</h2>
+									<ul>
+										<li>Statement is an interface available in java.sql package</li><br>
+										<li>The statement object can be created using one of the following methods of
+											connection interface:
+											<ul>
+												<li>Statement createStatement();</li>
+												<li>Statement createStatement(int,int);</li>
+												<li>Statement createStatement(int,int,int);</li>
+											</ul>
+										</li><br>
+										<li>Once the statement object is created, you can call one of the following
+											methods of statement interface:
+											<ul>
+												<li>ResultSet executeQuery(String)</li>
+												<li>int executeUpdate(String)</li>
+												<li>boolean execute(String)</li>
+											</ul>
+										</li>
+									</ul>
+									<ol type="a">
+										<li>
+											<p>The executeQuery()method can be used to submit the selected SQL statement
+												to the SQL Engine.<br>
+												This method returns the Resultset object which contains the number of
+												records returned by the given selected SQL statement.
+											</p>
+										</li>
+										<li>
+											<p>The executeUpdate() method can be used to submit insert, update, and
+												delete SQL statement to SQL Engine.<br>
+												This method returns the integer number which represents the number of
+												record affected by the given SQL statement.
+											</p>
+										</li>
+										<li>The execute() method can be used to submit insert, update, delete SQL
+											statement to SQL Engine.<br>
+											This method returns the Boolean value which represents whether the given
+											operation is insert/update/delete (false) OR Fetch (true).
+											<ul>
+												<li>Using one statement object, you can submit one or more SQL
+													statements</li>
+												<li>When you submit the SQL statement to SQL Engine using statement
+													object, the SQL statement will be compiled and executed every time.
+												</li>
+											</ul>
+										</li>
+									</ol>
+									<hr>
+									<h4>Java ## DB:</h4>
+									<ul>
+										<li>5 seconds to reach to DB</li>
+										<li>5 seconds to compile the sql query</li>
+										<li>5 seconds to execute the sql query</li>
+										<li>5 seconds to load data from DB</li>
+									</ul>
+									Total time taken for executing a single query for all four steps is:
+									<ul>
+										<p> =5ms+5ms+5ms+5ms<br>
+											=20ms<br>
+											1000 Queries =1000*20<br>
+											=20,000<br>
+										</p>
+									</ul>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="PreparedStatement">
+									<h2 class="breadcrumb">PreparedStatement</h2>
+									<ul>
+										<li>
+											<p>PreparedStatement is an interface available in java.sql package and it
+												extends the Statement interface.</p>
+										</li>
+										<li>
+											<p>The PreparedStatement object can be created using one of the following
+												methods of connection interface:</p>
+											<ul>
+												<li>PreparedStatement (String);</li>
+												<li>PreparedStatement (String, int, int);</li>
+												<li>PreparedStatement(String,int,int,int);</li>
+											</ul>
+										</li><br>
+										<li>
+											<p>Once the preparedStatement object is created, you can call one of the
+												following methods of preparedStatement interface:</p>
+											<ul>
+												<li>ResultSet executeQuery()</li>
+												<li>int executeUpdate()</li>
+												<li>boolean execute()</li>
+											</ul>
+										</li><br>
+										<li>
+											<p>Using one preparedStatement object, you can submit only one type of SQL
+												statement.</p>
+										</li>
+										<li>
+											<p>When you submit the SQL statement to SQL Engine using preparedStatement
+												object, the SQL statement will be compiled only once the first time, and
+												will be executed every time without compilation.<br>
+												For first query, time taken for executing prepared statement query will
+												be: </p>
+											<ul>
+												<p> 1Query = 1+2+3+4<br>
+													=5ms+5ms+5ms+5ms<br>
+													=20ms
+												</p>
+											</ul>
+											<p>For the second query onwards, time taken for executing prepared statement
+												query will be:</p>
+											<ul>
+												<p> 1Query = 1+3+4<br>
+													5+5+5 = 15ms<br>
+													1000-15000 = 5000ms (saving time)
+												</p>
+											</ul>
+										</li>
+									</ul>
+									<div>
+										<button class="copycodebuttonstyle" data-clipboard-target="#code4"
+											onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+										<pre id="code4" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.JDBC; 
+import java.sql.*;
+class JDBCLab {
+  public static void main(String[] as) { 
+   int sid = Integer.parseInt(as[0]); 
+   String sn = as[1];
+   String em = as[2];
+   long ph = Long.parseLong(as[3]); 
+   String ci = as[4];
+   double fee = Double.parseDouble(as[5]); 
+   Connection con = null; 
+   PreparedStatement ps1 = null; 
+   PreparedStatement ps2 =  null; 
+   ResultSet rs = null;
+   try {
+      con = DBUtil.getMySQLConnection();
+      ps1 = con.prepareStatement("insert into b27students 
+            values(?,?,?,?,?,?)");
+      ps1.setInt(1, sid); 
+      ps1.setString(2, sn); 
+      ps1.setString(3, em); 
+      ps1.setLong(4, ph); 
+      ps1.setString(5, ci); 
+      ps1.setDouble(6, fee);
+      int x = ps1.executeUpdate(); 
+      if (x == 1) {
+         System.out.println("Record is inserted");
+    } else {
+         System.out.println("sorry, Record is not inserted");
+    }
+    ps2 =con.prepareStatement("select * from jbkStudentns"); 
+    rs = ps2.executeQuery();
+      while (rs.next()) {
+         sid = rs.getInt(1); 
+         sn = rs.getString(2); 
+         em = rs.getString(3); 
+         ph = rs.getLong(4); 
+         ci = rs.getString(5);
+         fee = rs.getDouble(6);
+         System.out.println(" " + sid + "!t" + sn + "!t" + em 
+         + "!t" + ph + "!t" + ci + "!t" + fee);
+        }
+  } catch (Exception e) { 
+       e.printStackTrace();
+  } finally {
+       DBUtil.cleanup(con, ps1, rs); 
+       DBUtil.cleanup(con, ps2, rs);
+    }
+  }
+}
+</code></pre>
+									</div><br>
+									<ul>
+										<li>PreparedStatement is also a sub interface of Statement. So, we pass
+											(con,ps1,rs) in the cleanup method of DBUtil class.Where
+											<ul>
+												<li>con is Connection object</li>
+												<li>rs is a ResultSet</li>
+												<li>ps1 is a Statement</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="CallableStatement">
+									<h2 class="breadcrumb">CallableStatement</h2>
+									<ul>
+										<li>
+											<p>The CallableStatement is an interface available in java.sql package and
+												is an extension of the preparedStatement interface.</p>
+										</li>
+										<li>
+											<p>The CallableStatement object can be created using one of the following
+												methods of connection interface:</p>
+											<ul>
+												<li>CallableStatement preparecall(String);</li>
+												<li>CallableStatement preparecall(String,int,int,);</li>
+												<li>CallableStatement preparecall(String,int,int,int,);</li>
+											</ul>
+										</li><br>
+										<li>
+											<p>Once callableStatement object is created, you can call one of the
+												following methods of callableStatement interface:</p>
+											<ul>
+												<li>ResultSet executeQuery()</li>
+												<li>int executeUpdate()</li>
+												<li>boolean execute()</li>
+											</ul>
+										</li><br>
+										<li>
+											<p>CallableStatement is mainly used to execute stored procedures running in
+												the database.<br>
+												Using one CallableStatement object. You can submit only one call one
+												stored procedure.
+											</p>
+										</li>
+										<li>
+											<p>Stored procedure is a set of pre-compiled procedures i.e, when you create
+												the procedure, it will be compiled and stored in the database memory.
+												When you call the procedure it will be executed directly.</p>
+										</li>
+									</ul>
+									<hr>
+									<div>
+										<p><b>Example that invokes stored procedure with IN parameters:</b></p>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code5"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code5" class="breadcrumb pretagcodebox">
+<code>/*
+Create table hello ( 
+  a number(4),
+  b number(4), 
+  tot number(8)
+);
+Create or replace procedure p1 (a in number, b in number)
+as
+  tot number(8); 
+  begin
+    tot = a+b:
+    insert into hello values (a,b,tot); 
+  end;
+*/
+</code></pre>
+										</div>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code6"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code6" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.JDBC; 
+import java.sql.CallableStatement; 
+import java.sql.Connection;
+public class JDBCLab5 {
+  public static void main(String as[]) { 
+    int a = Integer.parseInt(as[0]);
+    int b = Integer.parseInt(as[1]);
+    Connection con = null; 
+    CallableStatement cs = null;
+    try {
+       con = DBUtil.getOracleConnection(); 
+       cs = con.prepareCall("{callp1(?,?)}"); 
+       cs.setInt(1, a);
+       cs.setInt(2, b);
+       cs.executeUpdate();
+  } catch (Exception e) { 
+       e.printStackTrace();
+  } finally { 
+       DBUtil.cleanup(con, cs);
+    }
+  }
+}
+</code></pre>
+										</div>
+									</div>
+									<hr>
+									<div>
+										<p><b>Example that invokes stored procedure with IN and OUT parameters:</b></p>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code7"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code7" class="breadcrumb pretagcodebox">
+<code>*/
+create or replace procedure p2(a IN number, b IN number, 
+tot OUT number, dif OUT number, mul OUT number, div OUT number) 
+as
+begin 
+  tot:=a=b; 
+  dif:=a-b;
+  mul:=a*b;
+  div:=a/b; 
+end;
+*/
+</code></pre>
+										</div>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code8"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code8" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.JDBC; 
+import java.sql.CallableStatement; 
+import java.sql.Connection;
+import java.sql.Types; 
+
+public class JDBCLab6 {
+  public static void main(String[] args) { 
+  int a = Integer.parseInt(args[0]);  
+  int b = Integer.parseInt(args[1]); 
+  Connection con = null; 
+  CallableStatement cs = null;
+
+  try {
+      con = DBUtil.getOracleConnection();
+      cs = con.prepareCall("{call p2(?,?,?,?,?,?(}");
+      cs.setInt(1, a);
+      cs.setInt(2, b);
+      cs.registerOutParameter(3, Types.INTEGER);
+      cs.registerOutParameter(4, 4);
+      cs.registerOutParameter(5, Types.INTEGER);
+      cs.registerOutParameter(6, 4); 
+      cs.executeUpdate();
+
+      int c = cs.getInt(3); 
+      int d = cs.getInt(4);
+      int e = cs.getInt(5); 
+      int f = cs.getInt(6);
+
+      System.out.println(c); 
+      System.out.println(d);
+      System.out.println(e); 
+      System.out.println(f);
+      
+} catch (Exception e) { 
+      e.printStackTrace();
+      
+} finally { 
+      DBUtil.cleanup(con, cs);
+  }
+ }
+}
+</code></pre>
+										</div>
+									</div>
+									<hr>
+									<div class="docs-galley"><img class="docs-pictures clearfix centerimage"
+											src="https://www.jbktutorials.com/images/java/jdbc_img2.webp"
+											alt="operations of statement, prepared statement and callable statements in java"
+											title="Operations of Statement, Prepared Statement and Callable Statements">
+									</div><br>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="DatabaseMetadata">
+									<h2 class="breadcrumb">Database Metadata</h2>
+									<ul>
+										<li>
+											<p>It is an interface available in java.sql package, which provides various
+												useful methods to get information about your database, which you are
+												linked to.</p>
+										</li>
+										<li>
+											<p>You can create database metadata object as follows:</p>
+											<ul>
+												<li>
+													<p><code>DatabaseMetaData dbmd=con.getMetaData();</code></p>
+												</li>
+												<li>
+													<p>By using MetaData we can get any information about Database.</p>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="ResultsetMetadata">
+									<h2 class="breadcrumb">Resultset Metadata</h2>
+									<ul>
+										<li>
+											<p>ResultsetMetaData is an interface available in java.sql package, which
+												gives the information about Resultset object, like number of columns
+												available in Resultset, names of the columns name of the table from
+												where column is fetched etc.</p>
+										</li>
+										<li>
+											<p>You can create the ResultsetMetaData object as follows:-</p>
+											<ul>
+												<li><code>ResultsetMetaData rsmd=rs.getMetaData();</code></li>
+												<li>DatabaseMetaData and ResultsetMetaData are interfaces in
+													java.sql.package</li>
+											</ul>
+										</li><br>
+										<li>
+											<p>Oracle has provided subclasses for these interface in oracle.jdbc.driver
+												package called oracleDatabaseMetaData and oracleResultsetMetaData.</p>
+										</li>
+										<li>
+											<p>MySQL has provided sub classes for these interfaces in com.mysql.jdbc
+												package called DatabaseMetaData and ResultsetMetaData.</p>
+										</li>
+									</ul>
+									<hr>
+									<div>
+										<p><b>Question.</b></p>
+										<h4>In java.sql package, there is a majority of interface only. How will
+											instances be created in these interfaces?</h4>
+										<p><b>Answer.</b></p>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code9"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code9" class="breadcrumb pretagcodebox">
+<code>class DriverManager {
+  static Connection getconnection(url,un,pw)
+    {
+    }
+}
+</code></pre>
+										</div><br>
+										<ul>
+											<li>
+												<p>It takes the url and checks whether driver class is loaded for this
+													url.</p>
+											</li>
+											<li>
+												<p>If not loaded then it gives this error:NosuitableDriver error</p>
+											</li>
+											<li>
+												<p>If loaded then</p>
+											</li>
+											<li>
+												<p>It creates the object of subclass of connection interfaces related
+													vendor oracleConnection/MySQLconnection class.<br>
+													Given below are vendor implementations:
+												</p>
+											</li>
+										</ul>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code10"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code10" class="breadcrumb pretagcodebox">
+<code>Class OracleConnection implements java.sql.Connection { 
+    Statement createStatement ()
+    {
+        return new oracleStatement ();
+    }
+}
+</code></pre>
+										</div>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code11"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code11" class="breadcrumb pretagcodebox">
+<code>Class MySQLConnection implements java.sql.connection {
+    Statement createStatement ()
+    {
+        return new MySQLstatement();
+    }
+}
+</code></pre>
+										</div>
+									</div>
+									<hr>
+									<div>
+										<p><b>Question.</b></p>
+										<h4>I have loaded oracle Driver and MySQL, which Database connection will be
+											established when trying to get the connection?</h4>
+										<p><b>Answer.</b> Depending on the url you are passing as the parameters to
+											getConnection() method, the corresponding database connection will be
+											established.<br><br>
+											<i>Sample code:</i>
+										</p>
+										<pre>
+<code>    class.forName("oracle.jdbc.driver.OracleDriver"); 
+    class.forName("com.MySQL.jdbc.Driver"); 
+    connection con=DM.getConnection(URL);</code>
+      </pre>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="ResultSet">
+									<h2 class="breadcrumb">ResultSet</h2>
+									<ul>
+										<li>
+											<p>Resultset is a package which is in package java.sql package.</p>
+										</li>
+										<li>
+											<p>The Resultset object can be used to store multiple records returned by
+												select statement.</p>
+										</li>
+										<li>
+											<p>When Resultset record is created initially result set cursor points to
+												before to the first record.</p>
+										</li>
+									</ul>
+									<hr>
+									<h4>Types of ResultSet:</h4>
+									<p>Depending on the ResultSet cursor movement, you can divide the ResultSet into 2
+										types:</p>
+									<ul>
+										<li>Forward only Resultsets</li>
+										<li>Scrollable Resultsets</li>
+									</ul>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="ForwardonlyResultsets">
+									<h2 class="breadcrumb">Forward only ResultSets</h2>
+									<ul>
+										<li>
+											<p>When Resultset is forward, only then you can move the Resultset cursor,
+												that too only in the forward direction.</p>
+										</li>
+										<li>
+											<p>You can invoke the following methods on forward only Resultsets:</p>
+										</li>
+										<ul>
+											<li>next();</li>
+											<li>getXX(); [XX can be String or Int or according to data type ]</li>
+											<li>close();</li>
+										</ul>
+									</ul>
+									<hr>
+									<h4>next() :</h4>
+									<p>Checks whether next Record is available or not.</p>
+									<ol type="a">If it is available then it :
+										<li>moves the pointer to next Record</li>
+										<li>returns true</li>
+									</ol>
+									<ol type="a">If it is not available then :
+										<li>moves the pointer to next Record</li>
+										<li>returns false</li>
+									</ol>
+									<p>By default, ResultSets are forward only, you can specify the Resultsets as
+										forward only explicitly as follows:</p><br>
+									<div>
+										<button class="copycodebuttonstyle" data-clipboard-target="#code12"
+											onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+										<pre id="code12" class="breadcrumb pretagcodebox">
+<code>Statement stmt = con.createStatement(); 
+Statement stmt = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, 
+                 ResultSet.CONCUR_READ_ONLY);
+ResultSet rs = stmt.executeQuery(sql);
+</code></pre>
+									</div>
+									<p>Now, ResultSet is forward only and read only.</p>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="ScrollableResulsets">
+									<h2 class="breadcrumb">Scrollable ResultSet</h2>
+									<ul>
+										<li>
+											<p>When Resultset is scrollable, you can move the Resultset cursor both in
+												the forward direction and in the reverse direction a number of many
+												times.</p>
+										</li>
+										<li>
+											<p>You can invoke the following methods on scrollable ResultSets.</p>
+										</li>
+									</ul>
+									<div id="Div4" class="tablediv">
+										<table class="table-responsive-xl table-bordered" style="width:100%;">
+											<colgroup>
+												<col style="width: 25%" />
+												<col style="width: 25%" />
+												<col style="width: 25%" />
+												<col style="width: 25%" />
+												<col style="width: 25%" />
+											</colgroup>
+											<tr>
+												<td>next()</td>
+												<td>isAfterLast()</td>
+												<td>isBeforeFirst()</td>
+												<td>isLast()</td>
+												<td>isFirst()</td>
+											</tr>
+											<tr>
+												<td>previous()</td>
+												<td>absolute()</td>
+												<td>relative()</td>
+												<td>afterLast()</td>
+												<td>beforeFirst()</td>
+											</tr>
+											<tr>
+												<td>getxx()</td>
+												<td>close()</td>
+												<td>first()</td>
+												<td>last()</td>
+												<td></td>
+											</tr>
+										</table>
+									</div><br>
+									<div>
+										<p>You can specify the ResultSets as scrollable explicitly as follows:</p>
+										<button class="copycodebuttonstyle" data-clipboard-target="#code13"
+											onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+										<pre id="code13" class="breadcrumb pretagcodebox">
+<code>Statement stmt = con.createStatement();
+Statement stmt = con.createStatement (ResultSet.TYPE_SCROLL_SENSITIVE,
+                 ResultSet.CONCUR_READ_ONLY);
+ResultSet rs = stmt.executeQuery(sql);
+</code></pre>
+									</div>
+									<p>Now ResultSet is scrollable and read only.</p>
+									<hr>
+									<div>
+										<h4>absolute() :</h4>
+										<ul>
+											<li>It will directly it will go to the that record rs.absolute(4), (which is
+												specified)</li>
+										</ul>
+									</div>
+									<hr>
+									<div>
+										<h4>relative() :</h4>
+										<ul>
+											<li>It means it will go to that record which is specified depending on the
+												absolute value.<br>
+												<ul>Example: <br>
+													rs.absolute(4); rs.relative(-3) rs.relative(?) <br>
+													getxx() :- To get me column value</ul>
+											</li>
+										</ul>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code14"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code14" class="breadcrumb pretagcodebox">
+<code>Statement stmt = con.createStatement(); 
+Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
+                 ResultSet.CONCUR_UPDATABLE);
+ResultSet rs = stmt.executeQuery(sql);
+</code></pre>
+										</div>
+										<p>Now, ResultSet is scrollable and updatable.</p>
+									</div>
+									<hr>
+									<div>
+										<h4>movetoInsertRow() :</h4>
+										<ul>
+											<li>First set will contain empty row in the Resultset object.</li>
+										</ul>
+									</div>
+									<hr>
+									<div>
+										<h4>Update() :</h4>
+										<ul>
+											<li>The only corresponding row of the ResultSet will be updated.</li>
+											<li>Make sure that the table contains a primary key, otherwise the updatable
+												record will not be applicable.</li>
+										</ul>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="Batchupdateset">
+									<h2 class="breadcrumb">Batch update set</h2>
+									<p>Below given is a process to execute statements in JDBC:</p>
+									<ul>
+										<li>
+											<p>load SQL</p>
+										</li>
+										<li>
+											<p>compile SQL</p>
+										</li>
+										<li>
+											<p>process SQL</p>
+										</li>
+										<li>
+											<p>load Data<br>
+											<ul>With Statement
+												<ul>
+													<li>1SQL= 5+5+5+5=20ms</li>
+												</ul><br>
+												With Prepared Statements
+												<ul>
+													<li>1SQL=5+0+5+5=15ms</li>
+												</ul><br>
+												With Batch update
+												<ul>
+													<li>1SQL=0+0+5+5=15ms</li>
+												</ul>
+											</ul>
+										</li><br>
+										<li>
+											<p>If you want to submit multiple queries to the database one by one, a lot
+												of time will get wasted on the requesting response.</p>
+										</li>
+										<li>
+											<p>Instead of submitting SQL statements one by one, we can submit multiple
+												statements all at once to the database as a batch using Batch update
+												concepts.</p>
+										</li>
+										<li>To implement the batch update, you can use the following methods of
+											statement interface:
+											<ul>
+												<li>void addbatch(sql)</li>
+												<li>int[] executebatch()</li>
+											</ul>
+										</li><br>
+										<li>
+											<p>Using Batch updates, we can submit multiple insert, update and delete
+												statements.</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<hr>
+							<ul class="nav nav-tabs nav-bottom mt-3" role="tablist">
+								<li role="presentation" class="active"><a href="#JDBCutilityclass" role="tab"
+										data-toggle="tab">JDBC utility class</a></li>
+								<li role="presentation"><a href="#Statement" role="tab" data-toggle="tab">Statement</a>
+								</li>
+								<li role="presentation"><a href="#PreparedStatement" role="tab"
+										data-toggle="tab">Prepared Statement</a></li>
+								<li role="presentation"><a href="#CallableStatement" role="tab"
+										data-toggle="tab">Callable Statement</a></li>
+								<li role="presentation"><a href="#DatabaseMetadata" role="tab"
+										data-toggle="tab">Database Metadata</a></li>
+								<li role="presentation"><a href="#ResultsetMetadata" role="tab"
+										data-toggle="tab">Resultset Metadata</a></li>
+								<li role="presentation"><a href="#ResultSet" role="tab" data-toggle="tab">ResultSet</a>
+								</li>
+								<li role="presentation"><a href="#ForwardonlyResultsets" role="tab"
+										data-toggle="tab">Forward only Resultsets</a></li>
+								<li role="presentation"><a href="#ScrollableResulsets" role="tab"
+										data-toggle="tab">Scrollable Resulsets</a></li>
+								<li role="presentation"><a href="#Batchupdateset" role="tab" data-toggle="tab">Batch
+										update set</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="card-footer">
+						<ul class="pagination justify-content-center mb-4">
+							<li class="page-item">
+								<a class="page-link btn-outline-primary"
+									href="java-virtual-machine-memory-management.html">&lArr; Previous</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="database-in-java.html">Next &rArr;</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-2 mb-4">
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="6605368152" data-ad-format="auto" data-full-width-responsive="true">
+					</ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				<br>
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="7335995893" data-ad-format="auto" data-full-width-responsive="true">
+					</ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="application/ld+json">
+{"@context": "https://schema.org", 
+ "@type": "Article",
+ "headline": "JDBC - Java",
+ "alternativeHeadline": "What is jdbc in java?",
+ "image": "https://www.jbktutorials.com/images/java/jdbc_img1.webp",
+ "author": {
+    "@type": "Person",
+    "name": "Kiran Digrase"
+  },
+ "genre": "java jdbc", 
+ "keywords": "java jdbc, jdbc, jdbc in java, jdbc utility class, statement, prepared statement, callable statement, database metadata, resultset metadata, resultset", 
+ "publisher": {
+    "@type": "Organization",
+    "name": "Java By Kiran",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.javabykiran.com/images/logojbk.png"
+    }
+  },
+ "url": "https://www.jbktutorials.com/corejava/jdbc-in-java.php",
+    "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.javabykiran.com/"
+  },
+ "datePublished": "2019-11-22",
+ "dateCreated": "2019-11-22",
+ "dateModified": "2019-11-22",
+ "description": "JDBC (Java Database Connectivity) is an API for the Java programming language.",
+ "articleBody": "JDBC allows the client to access the database and also establishes how the client may do so. It can work on a number of operating systems or platforms, like Windows, Mac, etc. It is basically a connection between the database and the application."
+ }
+</script>
+
+	<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
+
+		<div class="container text-center text-md-left">
+
+		</div>
+
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
+
+					<div class=" col-sm-6 pull-left py-3 text-white">
+						Copyright © 2023, JavaRavish by Ravi Kolloju
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "logo": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-888-880-9416",
+    "contactType": "customer service"
+  },
+  
+  "sameAs": [
+    "https://www.facebook.com/javabykiran",
+    "https://twitter.com/javabykiran",
+    "https://plus.google.com/+JavabyKiran",
+    "https://www.instagram.com/javabykiran/",
+    "https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA",
+    "https://ca.linkedin.com/company/javabykiran"
+  ]
+}
+</script>
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "PostalAddress",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "addressLocality": "Pune",
+   "addressRegion": "Maharashtra",
+   "postalCode": "411052",
+   "streetAddress": "403, 4th Floor, Park Plaza, Above Birla super Market, State Bank Nagar, Karve Nagar,Pune "
+  }
+
+</script>
+
+	<script>
+
+		$(document).ready(function () {
+			$('.tab-pane').addClass('show');
+		});
+
+		$('ul.nav-bottom').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-bottom li').removeClass('active');
+				$('.nav-top li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		$('ul.nav-top').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-top li').removeClass('active');
+				$('.nav-bottom li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		//Script for Copy to Clipboard
+		var clipboard = new Clipboard('button');
+		function copySuccessMessage() {
+			alert("Copied to Clipboard!");
+		}
+	</script>
+</body>
+
+
+<!-- Mirrored from www.jbktutorials.com/corejava/jdbc-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 01:47:17 GMT -->
+
+</html>

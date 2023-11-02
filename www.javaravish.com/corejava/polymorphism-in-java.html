@@ -1,0 +1,1222 @@
+<!--Header-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.jbktutorials.com/corejava/polymorphism-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 01:47:13 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>JBK Tutorials | Polymorphism in Java</title>
+	<meta name="description"
+		content="Java - Polymorphism - Polymorphism is the ability of an object to take on many forms. Polymorphism is useful in carrying out inheritance processes in java.">
+	<meta name="keywords"
+		content="java tutorials, core java, advance java, java by kiran, java interview questions, blog, articles, learn java programming, codes, examples, selenium, python, spring">
+	<meta name="author" content="Java By Kiran">
+	<meta name="robots" content="index, follow">
+
+	<meta property="og:title" content="Polymorphism in Java" />
+	<meta property="og:url" content="polymorphism-in-java.html" />
+	<meta property="fb:app_id" content="881390338999747" />
+	<meta property="og:description"
+		content="Java - Polymorphism - Polymorphism is the ability of an object to take on many forms. Polymorphism is useful in carrying out inheritance processes in java.">
+	<meta property="og:image" content="../images/jbktutorialslogo3square.png">
+	<meta property="og:image:secure_url" content="../images/jbktutorialslogo3square.png" />
+	<meta property="og:type" content="article" />
+
+
+	<meta name="twitter:title" content="Polymorphism in Java">
+	<meta name="twitter:description"
+		content="Java - Polymorphism - Polymorphism is the ability of an object to take on many forms. Polymorphism is useful in carrying out inheritance processes in java.">
+	<meta name="twitter:image" content="../images/jbktutorialslogo3square.png">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<link rel="canonical" href="polymorphism-in-java.html" />
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
+
+	<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css" as="style">
+	<link rel="preload" href="../css/customcss.css" as="style">
+	<link rel="preload" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"
+		as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js" as="script">
+	<link rel="preload" href="../js/jquery.min.js" as="script">
+	<link rel="preload" href="../vendor/clipboard/clipboard.min.js" as="script">
+	<link rel="preload" href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-156439212-1');
+	</script>
+
+
+	<script data-ad-client="ca-pub-5964671306985297" async
+		src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="../css/customcss.css">
+	<link rel="stylesheet" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+
+
+	<link rel="stylesheet" href="../vendor/syntaxhighlighter/styles/a11y-light.css">
+	<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
+	<script defer>hljs.initHighlightingOnLoad();</script>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../vendor/clipboard/clipboard.min.js"></script>
+
+
+
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+	<link rel="stylesheet" href="../vendor/jquery-viewer-master/docs/css/viewer.css">
+	<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+		<div class="container p-0">
+			<a class="navbar-brand pull-left" href="java-index.html"><img
+					src="../images/jrlogo.png" style="height: 65px; max-width: 100%;"
+					alt="java by Kalyan" title="Java Ravish Tutorials"></a>
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+				<script async src="../../cse.google.com/fd667.txt?cx=001580368639334093203:va4ehh0xpyd"></script>
+				<div class="gcse-search"></div>
+				<ul class="navbar-nav ml-auto text-center">
+					<li class="nav-item"><a class="nav-link" href="java-index.html"><img src="../images/small/home.jpg"></i></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="introduction-to-java.html">Java</a></li>
+
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Spring</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Spring
+							Boot</a></li>
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Interview
+							Questions</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav><br>
+
+	<script async
+		src="../../platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
+	<style>
+		.centerimage {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+
+
+	<div class="container-fluid">
+		<br />
+		<ol itemscope itemtype="http://schema.org/BreadcrumbList"
+			class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="java-index.html">
+					<span itemprop="name">Home</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="introduction-to-java.html">
+					<span itemprop="name">Java</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="polymorphism-in-java.html">
+					<span itemprop="name">What is Polymorphism?</span>
+				</a>
+				<meta itemprop="position" content="3" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<span itemprop="name">Polymorphism</span>
+				<meta itemprop="position" content="4" />
+			</li>
+		</ol>
+
+		<div class="row">
+
+			<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
+			<style>
+				@media only screen and (max-width: 425px) {
+					.hidesidebar {
+						display: none;
+					}
+				}
+			</style>
+			<script>
+				//Script to Open and Close Sidebar
+				function sidebar_open() {
+					document.getElementById("mySidebar").style.display = "block";
+				}
+
+				function sidebar_close() {
+					document.getElementById("mySidebar").style.display = "none";
+				}
+
+				// toggle up & down icon
+				function myFunction(x) {
+					x.classList.toggle("fa-book-open");
+				}
+			</script>
+
+
+			<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
+			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+				aria-multiselectable="true">
+				<div class="card">
+					<h2 class="card-header text-white" style="background: rgb(1, 71, 128);">Java</h2><br>
+					<div class="list-group">
+						<button class="w3-teal bg-transparent w3-large w3-hide-large" onclick="sidebar_close()">Close
+							Menu &times;</button>
+						<ul class="leftBarList">
+							<li><a href="introduction-to-java.html">Java Introduction</a></li>
+							<li><a href="java-language.html">Java Language</a></li>
+							<li><a href="communication-between-two-classes-in-java.html">Communication Between Two
+									Classes</a></li>
+							<li><a href="package-in-java.html">Package</a></li>
+							<li><a href="methods-variable-and-block-in-java.html">Methods, Variable and Block</a></li>
+							<li><a href="encapsulation-in-java.html">Encapsulation</a></li>
+							<li><a href="access-modifiers-in-java.html">Access Modifiers</a></li>
+							<li><a href="statickeyword-in-java.html">Static Keyword</a></li>
+							<li><a href="final-keyword-in-java.html">Final Keyword </a></li>
+							<li><a href="constructor-in-java.html">Constructor </a></li>
+							<li><a href="inheritance-in-java.html">Inheritance </a></li>
+							<li><a href="super-and-this-keyword-in-java.html">Super This</a></li>
+							<li><a href="polymorphism-in-java.html">Polymorphism</a></li>
+							<li><a href="abstraction-in-java.html">Abstraction</a></li>
+							<li><a href="garbage-collection-in-java.html">Garbage Collection</a></li>
+							<li><a href="input-and-output-streams-in-java.html">Input Output Stream</a></li>
+							<li><a href="collection-framework-in-java.html">Collection Framework</a></li>
+							<li><a href="collection-revisited-in-java.html">Collection Revisited</a></li>
+							<li><a href="serialization-in-java.html">Serialization</a></li>
+							<li><a href="exception-in-java.html">Exception</a></li>
+
+
+							<li><a href="arrays-in-java.html">Arrays</a></li>
+							<li><a href="strings-in-java.html">Strings</a></li>
+							<li><a href="features-of-jdk-1.5-in-java.html">Features and Enhancements in jdk 1.5</a></li>
+							<li><a href="features-of-jdk-1.6-in-java.html">Features and Enhancements in jdk 1.6</a></li>
+							<li><a href="features-of-jdk-1.7-in-java.html">Features and Enhancements in jdk 1.7</a></li>
+							<li><a href="features-of-jdk-1.8-in-java.html">Features and Enhancements in jdk 1.8</a></li>
+							<li><a href="multithreading-in-java.html">Thread</a></li>
+							<li><a href="java-virtual-machine-memory-management.html">JVM Memory Management</a></li>
+							<li><a href="jdbc-in-java.html">JDBC</a></li>
+							<li><a href="database-in-java.html">Database</a></li>
+						</ul>
+					</div>
+				</div><br>
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="1171818896" data-ad-format="auto" data-full-width-responsive="true"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+
+
+
+			<div class="col-lg-7 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white" style="background: rgb(1, 71, 128);">Polymorphism in Java</h1>
+					<div class="card-body">
+						<div class="tab" role="tabpanel">
+							<ul>
+								<li>
+									<p>Polymorphism in java, is an object’s ability to take on various forms. It enables
+										us to complete one action in many different ways. Polymorphism is useful in
+										carrying out inheritance processes in java.</p>
+								</li>
+								<li>
+									<p>An entity which behaves differently in different cases is called as
+										polymorphism<br>
+										Example: You are using one button to switch the computer ON and OFF. This is the
+										polymorphic behavior.</p>
+								</li>
+								<li>
+									<p>We can see polymorphism in java at compile time and runtime</p>
+								</li>
+								<li>
+									<p>Compile time polymorphism is also called method overloading and runtime
+										polymorphism is called method overriding.</p>
+								</li>
+							</ul>
+							<hr>
+							<div>
+
+								<ul class="nav nav-tabs nav-top" role="tablist">
+									<li role="presentation" class="active"><a href="#MethodOverloading" role="tab"
+											data-toggle="tab">Method Overloading</a></li>
+									<li role="presentation"><a href="#MethodOverriding" role="tab"
+											data-toggle="tab">Method Overriding</a></li>
+									<li role="presentation"><a href="#AtOverrideannotation" role="tab"
+											data-toggle="tab">@Override annotation</a></li>
+								</ul>
+							</div>
+							<div class="tab-content tabs">
+								<div role="tabpanel" class="tab-pane fade in active" id="MethodOverloading">
+									<div id="Div1">
+										<h2 class="breadcrumb"><a name="MethodOverloading"></a>Method Overloading</h2>
+										<p><b>Method overloading</b> is a feature that lets a class have multiple
+											methods with the same name. Here, the method remains the same but the
+											parameters are different.</p>
+										<ul>
+											<li>Method Overloading exists in the same class. There is no need of a
+												superclass and subclass relationship</li>
+											<li>Method name must be the same</li>
+											<li>Parameters must be different, the count of parameters does not matter
+											</li>
+											<li>Parameters must be changed in one of the following three ways:
+												<ul>
+													<li>Types of parameters</li>
+													<li>Number of parameters</li>
+													<li>Order of parameters</li>
+												</ul>
+											</li>
+										</ul>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code1"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code1" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Poly; 
+public class Arithmatic {
+    void sum(int a) { 
+         System.out.println(a + a);
+    }
+    void sum(double a) { 
+        System.out.println(a + a);
+    }
+    void sum(double a, double b) { 
+        System.out.println(a + b);
+    }
+    int sum(int a, int b) { 
+        return a + b;
+    }
+    void sum(int a, double b) { 
+        System.out.println(a + b);
+    }
+    void sum(double a, int b) { 
+        System.out.println(a + b);
+    }
+ }
+</code></pre>
+										</div>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code2"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code2" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Poly; 
+public class Lab1 {
+    public static void main(String[] args) {
+      Arithmatic ar = new Arithmatic(); 
+      ar.sum(10);               // 20
+      ar.sum(10.5);            // 21.0
+      ar.sum(10.5, 20.5);     // 31.0
+      ar.sum(10, 20.9);      // 30.9
+      ar.sum(10.5, 20);	    // 30.5
+      ar.sum(10,10);	     // 20
+    }
+}
+</code></pre>
+										</div>
+										<ol>
+											<li>Access specifiers can be anything.</li>
+											<li>Return type can be anything.</li>
+											<li>Exceptions thrown can be anything.</li>
+											<li>Implementation does not matter in this case as the method can have any
+												kind of logic.</li>
+											<li>Method overloading is not for changing any business logic but just for
+												increasing the maintainability and readability of a code.</li>
+										</ol>
+									</div>
+									<hr>
+									<div id="Div2">
+										<p class="card-text">
+										<h4 class="breadcrumb">When should we use Overloading ? Imagine this class we
+											have created in 2005</h4>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code3"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code3" class="breadcrumb pretagcodebox">
+<code>class A{
+public void insertStudent (int age,String loc,int phoneNo){
+ }
+}
+
+//Clients are calling this class as below:
+Client 1:
+A a =new A(); 
+a.insertStudent(20,"pune",8888809416); 
+
+
+Client 2:
+A a1 =new A();
+a1.insertStudent(20,"nagpur",8888809416);
+Now in 2010, we have a requirement of capturing the aadhar card of a student. 
+We have two options:
+
+Option 1
+class A {
+// increasing paramenters in same method
+public void insertStudent(int age, String loc,int phoneNo, int aadharCardNo){
+ }
+}
+
+Option 2
+class A {
+// write another method with a different name
+public void AadharCard (int age, String loc, int phone No, int aadharCardNo){
+}
+public void insertStudent(int age, String loc,int phoneNo){
+ }    //old existing method
+}
+</code></pre>
+										</div>
+										<p>
+											Here, our requirement is completed in both cases, and we will now consider
+											clients.<br>
+											In the first option, we will let client know changes in their existing
+											method. <br>
+											Then the client will say:
+										</p>
+										<ul>
+											<li>
+												<p>We don't required aadhar card, then why should we change our code?
+												</p>
+											</li>
+											<li>
+												<p>Tomorrow, if any parameters are added, will you be asking us to
+													change our code again?</p>
+											</li>
+											<li>
+												<p>We need to do a lot of testing for changes, our client may say -
+													“Please do not change methods repeatedly but write other methods so
+													that if we need, we will call separately.”</p>
+											</li>
+											<li>
+												<p>In the second option we will let the client know about the changes
+													made in new method. They will then say:</p>
+											</li>
+											<li>
+												<p>Ok we will accommodate you but what changes you have made in your
+													method?</p>
+											</li>
+											<li>
+												<p>Could you explain to us how it will be impacting our code?</p>
+											</li>
+											<li>
+												<p>If everything is same and only parameter is increased, why you not
+													gave the same name of method so that we don’t get confused;<br>
+													so, we will face a lot of issues and queries from clients.
+												</p>
+											</li>
+											<li>
+												<p>Tomorrow, if a new developer joins the company, he will not have any
+													idea that both the methods are same except only parameters because
+													the names are very different</p>
+											</li>
+										</ul>
+										<p>Now, we will use third option by using overloading</p>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code4"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code4" class="breadcrumb pretagcodebox">
+<code>public class A {
+ }
+
+public class B extends A {
+ }
+
+public class C extends B {
+ }
+
+public class OverLoadingScenarios { 
+    void m1(A a) {
+        System.out.println("I am in m1 A");
+    }
+  
+    void m1(B b) {  
+        System.out.println("I am in m1 B");  
+    }
+    void m1(C c) {
+        System.out.println("I am in m1 C");
+    }
+</code></pre>
+										</div>
+										<hr>
+										<p>Testing by client – if we run the below given program, what will be the
+											output?</p>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code5"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code5" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Poly; 
+public class OverLoadingTest {
+
+  public static void main(String[] args) { 
+  OverLoadingScenarios loadingScenarios = new OverLoadingScenarios();
+
+// Scenario I
+    A a=new A(); 
+    loadingScenarios.m1(a);
+
+// Scenario II 
+    B b=new B();
+    loadingScenarios.m1(b);
+
+// Scenario III 
+    C c=new C();
+    loadingScenarios.m1(c);
+
+// Scenario IV
+    B bc=new C();
+    loadingScenarios.m1(bc);
+
+// Scenario V
+    A ab=new B(); 
+    loadingScenarios.m1(ab);
+ 
+// Scenario VI 
+   loadingScenarios.m1(null);
+   }
+ }
+</code></pre>
+											<pre class="codeblock3 breadcrumb">
+<code class="nohighlight">
+    <b>Output:</b>
+     I am in m1 A 
+     I am in m1 B 
+     I am in m1 C 
+     I am in m1 B 
+     I am in m1 A 
+     I am in m1 C
+     
+</code></pre>
+										</div>
+										<ul>
+											<li>In <b>Scenario VI</b>, null can be accommodated in all m1 method but at
+												the end, only one m1 method will get executed.
+												That is, the more specific m1 will get called among A, B, C and in this
+												case, C is more specific, and has more
+												information out of all three classes.<br> So output is -- I am in m1 C
+											</li>
+										</ul>
+										<p>Changes in Scenario</p>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code6"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code6" class="breadcrumb pretagcodebox">
+<code>public class OverLoadingScenarios { 
+    void m1(A a) {
+        System.out.println("I am in m1 A");
+    }
+    void m1(B b) {
+         System.out.println("I am in m1 B");
+    }
+    void m1(C c) {
+        System.out.println("I am in m1 C");
+    }
+    void m1(D d) { //D is not related to A,B and C Hierarchy    
+        System.out.println("I am in m1 D");
+    }
+}
+public static void main(String[] args) {
+    OverLoadingScenarios ls =new OverLoadingScenarios();
+     
+    // Scenario VII 
+      ls.m1(null);
+   }
+}
+</code></pre>
+										</div>
+										<ul>
+											<li>
+												In this <b>Scenario VII</b> null can be accommodated in all m1, but at
+												the end, only the m1 which is more specific will get called.
+												Among A, B and C, C is more specific and has more information than the
+												other two classes, so m1( ) of C gets called.<br><br>
+												Now D is nowhere related to all these classes. So we can't say which is
+												more specific and therefore, the compiler gets confused and it will show
+												a compile time error.
+												So, there will be no output but compile time error that is shown is
+												:<br>
+												"The method m1(null) is ambiguous for the type OverLoadingScenarios"
+											</li>
+										</ul>
+										<p>Consider the program shown below :</p>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code7"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code7" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Poly; 
+public class X {
+    void m1(Object object) {
+        System.out.println("m1 with object as a param");
+    }
+    void m1(String string) {
+        System.out.println("m1 with string as a param");
+    }
+    public static void main(String[] args){ 
+        X x = new X();
+        x.m1(null); 
+        x.m1(new Object());
+        x.m1("Kiran Sir");
+        x.m1(new X());
+        x.m1(new string());
+    }
+}
+</code></pre>
+										</div>
+										<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+     m1 with string as a param 
+     m1 with object as a param 
+     m1 with string as a param 
+     m1 with object as a param 
+     m1 with string as a param
+  </code></pre>
+										<ul>
+											<li>
+												<p>Why is method overloading called compile time polymorphism? As it has
+													been identified at compile time, which method to call. Also, if we
+													consider m1 as an entity, then it behaves differently at different
+													times, and called compile time polymorphism.</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="MethodOverriding">
+									<div id="Div3">
+										<h2 class="breadcrumb">Method Overriding</h2>
+										<p>The process of implementing superclass method in subclass is called <b>method
+												overriding</b>.
+											As per java principles, classes are closed for modification, so if we want
+											to modify a
+											method in any class, changing the existing method is not a good idea.
+											Instead of that,
+											we should extend that class and override method in child class.
+										</p>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code11"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code11" class="breadcrumb pretagcodebox">
+<code>public class A {   
+    public void m1() {
+        System.out.println("A-m1");
+    }
+}
+public class B extends A { 
+    public void m1() {
+        System.out.println("B-m1");
+    }
+    public void m3() {    
+        System.out.println("B-m3");
+    }
+}
+public class Lab2S {
+   public static void main(String args[]){ 
+        B obj =new B ();
+        obj.m1 ();
+        obj m3 ();
+   }
+}
+</code></pre>
+										</div><br>
+										<ul>
+											<li>
+												<p>In the above program, B is implementing the method m1() with the same
+													signature as super class A i.e m1 () of class B is overriding m1()
+													of class A</p>
+											</li>
+											<li>
+												<p>As per object oriented concept, the best practice is that class
+													should not open for modification</p>
+											</li>
+											<li>
+												<p>If you want to add new functionality to existing class or if you want
+													to modify the existing functionality of class, then you should not
+													disturb the existing class [in this case class A m1(). You should
+													always write the subclass of the existing class.]</p>
+											</li>
+											<li>
+												<p>The Subclass can be written for three reasons:</p>
+												<ul>
+													<li>
+														<p>To add new features/properties [if student had properties age
+															and location and in future we get requirement to add address
+															for student, we should go for extending a class and adding a
+															property in subclass as address]</p>
+													</li>
+													<li>
+														<p>To override/change the existing functionality</p>
+													</li>
+													<li>
+														<p>To inherit the existing functionality</p>
+													</li>
+												</ul>
+											</li>
+											<li>
+												<p>When you are overriding superclass methods in subclass you need to
+													follow certain rules</p>
+												<ul>
+													<li>
+														<p>The subclass method name must be the same as superclass
+															method name</p>
+													</li>
+													<li>
+														<p>Subclass method parameters must be the same as superclass
+															method parameters [not even subclass as a parameter is
+															allowed]</p>
+													</li>
+													<li>
+														<p>Subclass method's return type must be the same as superclass
+															method return type [sub type is allowed]</p>
+													</li>
+													<li>
+														<p>Subclass method's access modifier must be the same or higher
+															than the superclass method access modifier</p>
+													</li>
+												</ul>
+											</li>
+											<br>
+											<div class="tablediv">
+												<table class="table-bordered table" style="width:100%;">
+													<tr>
+														<td>superclass</td>
+														<td>In subclass, we can have access specifier</td>
+													</tr>
+													<tr>
+														<td>public</td>
+														<td>Public</td>
+													</tr>
+													<tr>
+														<td>protected</td>
+														<td>Protected, Public</td>
+													</tr>
+													<tr>
+														<td>default</td>
+														<td>Default, Protected, Public</td>
+													</tr>
+													<tr>
+														<td>private</td>
+														<td>Not possible possible to Override</td>
+													</tr>
+												</table>
+											</div>
+										</ul>
+										<p><b>Dynamic Dispatch :</b><br>
+											Dynamic dispatch is the process of assigning subclass object to superclass
+											reference variable.
+											<code style="margin-left: 30px">A a=new B();</code><br>
+											B is subclass and A is a superclass.
+										</p>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="AtOverrideannotation">
+									<div id="Div4">
+										<h2 class="breadcrumb">@Override annotation</h2>
+										<ul>
+											<li>
+												<p><b>@Override</b> is the annotation which is used to make compiler
+													check all the rules of overriding<br>
+													If this annotation is not written, then the compiler will apply all
+													overriding rules only if
+												<ol>
+													<li>the superclass and subclass relation exist</li>
+													<li>method name same</li>
+													<li>the parameters of both methods are same.</li>
+												</ol>
+											</li>
+											But, if we write @Override on subclass method, then the compiler must apply
+											all rules, irrespective of the above three points.
+											<hr>
+											<div>
+												<b>Examples:</b> <br>
+												<u>Without annotation</u><br>
+												<ul>
+													<li>In superclass</li>
+													<pre class><code>private void m1 () {
+    System.out.println("XX-m1");
+    }</code></pre>
+													<li>In subclass</li>
+													<pre class><code>private void m1 () {        
+    System.out.println("XX-m1");
+    }
+      // Compile time Ok
+      // Runtime Ok </code></pre>
+												</ul>
+												<br>
+												<u>With annotation</u><br>
+												<ul>
+													<li>In superclass</li>
+													<pre class><code>private void m1 () {
+    System.out.println("XX-m1");
+    }</code></pre>
+													<li>In subclass</li>
+													<pre class><code> @Override
+    private void m1 () {       
+        System.out.println("XX-m1");
+    }
+      // Compile time 
+      //Error - private method cannot be overridden 
+      </code></pre>
+												</ul>
+											</div>
+											<div>
+												<b>Examples:</b> <br>
+												<u>Without annotation</u><br>
+												<ul>
+													<li>In superclass</li>
+													<pre class><code>public static void m1 () { 
+    System.out.println("XX-m1");
+    }</code></pre>
+													<li>In subclass</li>
+													<pre class><code>public static void m1 () {      
+    System.out.println("YY-m1");
+    }
+      // Compile time
+      //OK – it is not overriding as static method won't override 
+      //Runtime OK </code></pre>
+												</ul>
+												<br>
+												<u>With annotation</u><br>
+												<ul>
+													<li>In superclass</li>
+													<pre class><code>public static void m1 () { 
+    System.out.println ("XX-m1");
+    }</code></pre>
+													<li>In subclass</li>
+													<pre class><code> @Override
+    public static void m1 () {      
+        System.out.println ("YY-m1");
+    }
+      // Compile time 
+      // Error - static method cannot be overridden 
+      // Runtime Error 
+      </code></pre>
+												</ul>
+											</div>
+											<hr>
+											<li>When superclass method throws an exception then the subclass can do one
+												of the following :</li>
+											<ol>
+												<li>Subclass methods can ignore the method level exception</li>
+												<li>Subclass method can throw the same exception which is thrown by
+													superclass method</li>
+												<li>Subclass method can throw the exception which is the subclass of
+													superclass method's exception</li>
+												<li>Subclass method cannot throw the exception which is the superclass
+													of superclass method's exception</li>
+												<li>Subclass method cannot throw the exception which is non subclass to
+													superclass method exception</li>
+											</ol><br>
+											<p><b>Example:</b> If the superclass has <br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;void m1 () and throws B<br>
+												Then in this subclass we can have assume that A , B, C and D are
+												exception classes as A ' B ' C ' D, A is top class and D is the last
+												child in hierarchy.
+											<ul>
+												<li>void m1 ()</li>
+												<li>void m1 () throws B</li>
+												<li>void m1 () throws D</li>
+												<li>void m1 () throws A</li>
+												<li>void m1 () throws C</li>
+											</ul>
+										</ul>
+										<hr>
+										<p><b>Without Annotation Example :</b><br>
+											The assumption is that X is superclass and Y is subclass
+										<ul>
+											<li>In superclass </li>
+											<pre class><code>  public void m1 () {
+    System.out.println("XX-m1");
+    }</code></pre>
+											<li>In subclass</li>
+											<pre class><code>  public void m1 () { 
+    System.out.println("XX-m1");
+    }
+     // Compile time Ok
+     // Runtime	Ok </code></pre>
+											<li>In superclass </li>
+											<pre class><code>  public void m1 () {
+    System.out.println("XX-m1");
+    }</code></pre>
+											<li>In subclass</li>
+											<pre class><code>  void m1 () { 
+    System.out.println("XX-m1");
+    }
+     // Compile time NOT OK - access specifiers must be bigger or same 
+     // Runtime	NOT OK </code></pre>
+											<li>In subclass</li>
+											<pre class><code>  void m1 () { 
+    System.out.println("XX-m1");
+    }
+     // Compile time NOT OK - access specifiers must be bigger or same 
+     // Runtime	NOT OK </code></pre>
+											<li>In superclass </li>
+											<pre class><code>  public XX m1 (){
+    System.out.println("XX-m1");
+    }</code></pre>
+											<li>In subclass </li>
+											<pre class><code>  public YY m1 () { 
+    System.out.println("YY-m1"); 
+    }
+     // Compile time OK - If  XX  is a superclass and YY is a subclass 
+     // Runtime OK</code></pre>
+											<li>In superclass</li>
+											<pre class><code>  public void m1 (XX xx) { 
+    System.out.println("XX-m1"); 
+    }</code></pre>
+											<li>In subclass</li>
+											<pre class><code>  public void m1 (YY yy) {
+    System.out.println("YY-m1");
+    }
+     // Compile time parameters must be same
+     Runtime OK</code></pre>
+											<li>In superclass </li>
+											<pre class><code>  private void m1 () {
+    System.out.println("XX-m1");
+    }</code></pre>
+											<li>In subclass</li>
+											<pre class><code>  private void m1 () { 
+    System.out.println("YY-m1");
+    }
+    // Compile time OK - it's not overriding, it's just an independent method 
+    // Runtime OK - It will run independently
+</code></pre>
+											<li>In superclass </li>
+											<pre class><code>  static void m1 () {
+    System.out.println("XX-m1");
+    }</code></pre>
+											<li>In subclass</li>
+											<pre class><code>  static void m1 () { 
+    System.out.println("YY-m1");
+    }
+    // Compile time OK
+    // It's not overriding, it's just an independent method as
+    // static method can never be overridden
+    // Runtime OK 
+</code></pre>
+											<li>In the industry, people use Overriding to change the behaviour of
+												methods like below:</li>
+											<pre class><code>Class A{
+        void m1() {
+            //MD5 encryption algorithm
+        }
+      }</code></pre>
+											<p>In this class, we have the method m1 which has md5 encryption
+												implemented. Now, when our requirement changes, we need to use the RSA
+												algorithm</p>
+											<li><b>Option 1</b></li>
+											<pre class><code>class A{
+        void m1(){
+            //RSA encryption algorithm
+        }
+      }</code></pre>
+											<li><b>Option 2</b></li>
+											<pre class><code>class B extends A { 
+        void m1(){
+            //RSA encryption algorithm
+        }
+      }</code></pre>
+											<p>If you observe option 2 above, it is more feasible when we use
+												overriding.
+												Because if the requirement arises again which says to go for MD5
+												algorithm, we can just comment</p>
+											<li><b>Option 2</b></li>
+											<pre class><code>class B extends A {
+        /*
+          void m1(){
+            //RSA encryption algorithm
+        }
+        */
+       }
+    </code></pre>
+											<p>Client will be unaffected as they can call</p>
+											<pre class><code>    B a=new B();
+    a.m1(); </code></pre>
+										</ul>
+										<p>So, if you have method in B it will be called, or if there is not there then
+											superclass method will be called. So we will have more flexibility, which we
+											should always ensure for future maintenance issues.</p>
+										<p>[In the real sense it is advisable not to disturb clients repeatedly. Do
+											coding in such a way that even after changes are made, our code is easily
+											extensible. Like here, we just need to comment and uncomment for MD5 and RSA
+											according to requirement]</p>
+										<p>@Override is just for readability. I mean, if the developer has left the
+											company and a new developer joins, then he/she will easily understand that
+											this method is overridden so that he can further modify easily in future. At
+											least he/she will understand that there is some relationship between the two
+											methods.</p>
+										<ul>
+											<li>
+												<p><i><b>Q.</b> Can I override private method?</i><br>
+													<b>A:</b> No, you cannot override private methods because when
+													superclass method is private it will not be visible to subclass.
+													Whatever the methods you write in subclass will be treated as new
+													method and not an overridden method.
+												</p>
+											</li>
+											<li>
+												<p><i><b>Q.</b> Can I override a static method?</i><br>
+													<b>A:</b> No.
+												</p>
+											</li>
+											<li>
+												<p><i><b>Q.</b> Can I stop method overriding?</i><br>
+													<b>A:</b> Yes, by declaring method as final.
+												</p>
+											</li>
+											<li>
+												<p><i><b>Q.</b> Can I stop inheritance?</i><br>
+													<b>A:</b> Yes, by declaring super class as final.
+												</p>
+											</li>
+											<li><i><b>Q.</b> Why is method overriding called runtime polymorphism?</i>
+												<ol type="a">
+													<li>We have class A with m1- "A m1" prints</li>
+													<li>We have subclass B with m1 - "B m1" prints</li>
+													<li>Client wrote main method and in main,
+														<ol type="i">
+															<li>A a=new B;</li>
+															<li>a.m1();</li>
+															<li>The above written line is compiled as class A has m1();
+															</li>
+															<li>At runtime, we will get output of m1 which, is there at
+																B</li>
+															<li>Since at compile time we think m1 of A will get called
+																but m1 of B got executed instead. This is called at
+																runtime polymorphism</li>
+														</ol>
+													</li>
+												</ol>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<hr>
+							<ul class="nav nav-tabs nav-bottom mt-3" role="tablist">
+								<li role="presentation" class="active"><a href="#MethodOverloading" role="tab"
+										data-toggle="tab">Method Overloading</a></li>
+								<li role="presentation"><a href="#MethodOverriding" role="tab" data-toggle="tab">Method
+										Overriding</a></li>
+								<li role="presentation"><a href="#AtOverrideannotation" role="tab"
+										data-toggle="tab">@Override annotation</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="card-footer">
+						<ul class="pagination justify-content-center mb-4">
+							<li class="page-item">
+								<a class="page-link btn-outline-primary"
+									href="super-and-this-keyword-in-java.html">&lArr; Previous</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="abstraction-in-java.html">Next &rArr;</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-2 mb-4">
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="6605368152" data-ad-format="auto" data-full-width-responsive="true">
+					</ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				<br>
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="7335995893" data-ad-format="auto" data-full-width-responsive="true">
+					</ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="application/ld+json">
+{ "@context": "https://schema.org", 
+ "@type": "Article",
+ "headline": "Polymorphism - Java",
+ "alternativeHeadline": "What is polymorphism in java?",
+ "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "author": {
+    "@type": "Person",
+    "name": "Kiran Digrase"
+  },
+ "genre": "java polymorphism", 
+ "keywords": "java polymorphism, polymorphism in java, polymorphism, method overloading, method overriding, @override annotation", 
+ "publisher": {
+    "@type": "Organization",
+    "name": "Java By Kiran",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.javabykiran.com/images/logojbk.png"
+    }
+  },
+ "url": "https://www.jbktutorials.com/corejava/polymorphism-in-java.php",
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.javabykiran.com/"
+  },
+ "datePublished": "2019-11-21",
+ "dateCreated": "2019-11-21",
+ "dateModified": "2019-11-21",
+ "description": "Polymorphism is the ability of an object to take on many forms.",
+ "articleBody": "An entity which behaves differently in different cases is called as polymorphism. We can see polymorphism in java at compile time and runtime. Compile time polymorphism is also called method overloading and runtime polymorphism is called method overriding."
+ }
+</script>
+<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
+
+		<div class="container text-center text-md-left">
+
+		</div>
+
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
+
+					<div class=" col-sm-6 pull-left py-3 text-white">
+						Copyright © 2023, JavaRavish by Ravi Kolloju
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "logo": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-888-880-9416",
+    "contactType": "customer service"
+  },
+  
+  "sameAs": [
+    "https://www.facebook.com/javabykiran",
+    "https://twitter.com/javabykiran",
+    "https://plus.google.com/+JavabyKiran",
+    "https://www.instagram.com/javabykiran/",
+    "https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA",
+    "https://ca.linkedin.com/company/javabykiran"
+  ]
+}
+</script>
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "PostalAddress",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "addressLocality": "Pune",
+   "addressRegion": "Maharashtra",
+   "postalCode": "411052",
+   "streetAddress": "403, 4th Floor, Park Plaza, Above Birla super Market, State Bank Nagar, Karve Nagar,Pune "
+  }
+
+</script>
+
+	<script>
+
+		$(document).ready(function () {
+			$('.tab-pane').addClass('show');
+		});
+
+		$('ul.nav-bottom').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-bottom li').removeClass('active');
+				$('.nav-top li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		$('ul.nav-top').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-top li').removeClass('active');
+				$('.nav-bottom li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		//Script for Copy to Clipboard
+		var clipboard = new Clipboard('button');
+		function copySuccessMessage() {
+			alert("Copied to Clipboard!");
+		}
+	</script>
+</body>
+
+
+<!-- Mirrored from www.jbktutorials.com/corejava/polymorphism-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 01:47:13 GMT -->
+
+</html>

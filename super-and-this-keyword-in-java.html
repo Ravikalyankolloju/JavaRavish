@@ -1,0 +1,943 @@
+<!--Header-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.jbktutorials.com/corejava/super-and-this-keyword-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 01:47:13 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>JBK Tutorials | Super This keyword in Java</title>
+	<meta name="description"
+		content="Super Keyword is used to access methods of the parent class while this is used to access methods of the current class.">
+	<meta name="keywords"
+		content="java tutorials, core java, advance java, java by kiran, java interview questions, blog, articles, learn java programming, codes, examples, selenium, python, spring">
+	<meta name="author" content="Java By Kiran">
+	<meta name="robots" content="index, follow">
+
+	<meta property="og:title" content="Super This keyword in Java" />
+	<meta property="og:url" content="super-and-this-keyword-in-java.html" />
+	<meta property="fb:app_id" content="881390338999747" />
+	<meta property="og:description"
+		content="Super Keyword is used to access methods of the parent class while this is used to access methods of the current class.">
+	<meta property="og:image" content="../images/jbktutorialslogo3square.png">
+	<meta property="og:image:secure_url" content="../images/jbktutorialslogo3square.png" />
+	<meta property="og:type" content="article" />
+
+
+	<meta name="twitter:title" content="Super This keyword in Java">
+	<meta name="twitter:description"
+		content="Super Keyword is used to access methods of the parent class while this is used to access methods of the current class.">
+	<meta name="twitter:image" content="../images/jbktutorialslogo3square.png">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<link rel="canonical" href="super-and-this-keyword-in-java.html" />
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
+
+	<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css" as="style">
+	<link rel="preload" href="../css/customcss.css" as="style">
+	<link rel="preload" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"
+		as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js" as="script">
+	<link rel="preload" href="../js/jquery.min.js" as="script">
+	<link rel="preload" href="../vendor/clipboard/clipboard.min.js" as="script">
+	<link rel="preload" href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-156439212-1');
+	</script>
+
+
+	<script data-ad-client="ca-pub-5964671306985297" async
+		src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="../css/customcss.css">
+	<link rel="stylesheet" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+
+
+	<link rel="stylesheet" href="../vendor/syntaxhighlighter/styles/a11y-light.css">
+	<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
+	<script defer>hljs.initHighlightingOnLoad();</script>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../vendor/clipboard/clipboard.min.js"></script>
+
+
+
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+	<link rel="stylesheet" href="../vendor/jquery-viewer-master/docs/css/viewer.css">
+	<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+		<div class="container p-0">
+			<a class="navbar-brand pull-left" href="java-index.html"><img
+					src="../images/jrlogo.png" style="height: 65px; max-width: 100%;"
+					alt="java by Kalyan" title="Java Ravish Tutorials"></a>
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+				<script async src="../../cse.google.com/fd667.txt?cx=001580368639334093203:va4ehh0xpyd"></script>
+				<div class="gcse-search"></div>
+				<ul class="navbar-nav ml-auto text-center">
+					<li class="nav-item"><a class="nav-link" href="java-index.html"><img src="../images/small/home.jpg"></i></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="introduction-to-java.html">Java</a></li>
+
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Spring</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Spring
+							Boot</a></li>
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Interview
+							Questions</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav><br>
+
+	<script async
+		src="../../platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
+	<style>
+		.centerimage {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+
+
+	<div class="container-fluid">
+		<br />
+		<ol itemscope itemtype="http://schema.org/BreadcrumbList"
+			class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="java-index.html">
+					<span itemprop="name">Home</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="introduction-to-java.html">
+					<span itemprop="name">Java</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="super-and-this-keyword-in-java.html">
+					<span itemprop="name">What is Super & This keyword?</span>
+				</a>
+				<meta itemprop="position" content="3" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<span itemprop="name">Super This Keyword</span>
+				<meta itemprop="position" content="4" />
+			</li>
+		</ol>
+
+		<div class="row">
+
+			<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
+			<style>
+				@media only screen and (max-width: 425px) {
+					.hidesidebar {
+						display: none;
+					}
+				}
+			</style>
+			<script>
+				//Script to Open and Close Sidebar
+				function sidebar_open() {
+					document.getElementById("mySidebar").style.display = "block";
+				}
+
+				function sidebar_close() {
+					document.getElementById("mySidebar").style.display = "none";
+				}
+
+				// toggle up & down icon
+				function myFunction(x) {
+					x.classList.toggle("fa-book-open");
+				}
+			</script>
+
+
+			<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
+			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+				aria-multiselectable="true">
+				<div class="card">
+					<h2 class="card-header text-white" style="background: rgb(1, 71, 128);">Java</h2><br>
+					<div class="list-group">
+						<button class="w3-teal bg-transparent w3-large w3-hide-large" onclick="sidebar_close()">Close
+							Menu &times;</button>
+						<ul class="leftBarList">
+							<li><a href="introduction-to-java.html">Java Introduction</a></li>
+							<li><a href="java-language.html">Java Language</a></li>
+							<li><a href="communication-between-two-classes-in-java.html">Communication Between Two
+									Classes</a></li>
+							<li><a href="package-in-java.html">Package</a></li>
+							<li><a href="methods-variable-and-block-in-java.html">Methods, Variable and Block</a></li>
+							<li><a href="encapsulation-in-java.html">Encapsulation</a></li>
+							<li><a href="access-modifiers-in-java.html">Access Modifiers</a></li>
+							<li><a href="statickeyword-in-java.html">Static Keyword</a></li>
+							<li><a href="final-keyword-in-java.html">Final Keyword </a></li>
+							<li><a href="constructor-in-java.html">Constructor </a></li>
+							<li><a href="inheritance-in-java.html">Inheritance </a></li>
+							<li><a href="super-and-this-keyword-in-java.html">Super This</a></li>
+							<li><a href="polymorphism-in-java.html">Polymorphism</a></li>
+							<li><a href="abstraction-in-java.html">Abstraction</a></li>
+							<li><a href="garbage-collection-in-java.html">Garbage Collection</a></li>
+							<li><a href="input-and-output-streams-in-java.html">Input Output Stream</a></li>
+							<li><a href="collection-framework-in-java.html">Collection Framework</a></li>
+							<li><a href="collection-revisited-in-java.html">Collection Revisited</a></li>
+							<li><a href="serialization-in-java.html">Serialization</a></li>
+							<li><a href="exception-in-java.html">Exception</a></li>
+
+
+							<li><a href="arrays-in-java.html">Arrays</a></li>
+							<li><a href="strings-in-java.html">Strings</a></li>
+							<li><a href="features-of-jdk-1.5-in-java.html">Features and Enhancements in jdk 1.5</a></li>
+							<li><a href="features-of-jdk-1.6-in-java.html">Features and Enhancements in jdk 1.6</a></li>
+							<li><a href="features-of-jdk-1.7-in-java.html">Features and Enhancements in jdk 1.7</a></li>
+							<li><a href="features-of-jdk-1.8-in-java.html">Features and Enhancements in jdk 1.8</a></li>
+							<li><a href="multithreading-in-java.html">Thread</a></li>
+							<li><a href="java-virtual-machine-memory-management.html">JVM Memory Management</a></li>
+							<li><a href="jdbc-in-java.html">JDBC</a></li>
+							<li><a href="database-in-java.html">Database</a></li>
+						</ul>
+					</div>
+				</div><br>
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="1171818896" data-ad-format="auto" data-full-width-responsive="true"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+
+
+			<div class="col-lg-7 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white" style="background: rgb(1, 71, 128);">Super This Keyword in Java
+					</h1>
+					<div class="card-body">
+						<div class="tab" role="tabpanel">
+							<p class="card-text">
+								Super in java is a keyword which is a reference variable.
+								It is used to refer to the immediate superclass object or instance variable.
+								The word super came into usage because of the concept of inheritance. The keyword
+								super is placed inside a subclass to call a method from a superclass.
+							</p>
+							<hr>
+							<div>
+
+								<ul class="nav nav-tabs nav-top" role="tablist">
+									<li role="presentation" class="active"><a href="#WhySuperAndThis" role="tab"
+											data-toggle="tab">Why Super & This?</a></li>
+									<li role="presentation"><a href="#SuperKeyword" role="tab" data-toggle="tab">Super
+											Keyword</a></li>
+									<li role="presentation"><a href="#ThisKeyword" role="tab" data-toggle="tab">This
+											Keyword</a></li>
+									<li role="presentation"><a href="#DiffbetweenSuperandThis" role="tab"
+											data-toggle="tab">Difference between Super & This</a></li>
+								</ul>
+							</div>
+							<div class="tab-content tabs">
+								<div role="tabpanel" class="tab-pane fade in active" id="SuperKeywordIntroduction">
+									<div id="Div1">
+										<h2 class="breadcrumb">Why do we use the super and this keyword?</h2>
+										<p>Let's say we have a super class as Person and Employee as a sub class as
+											shown below:</p>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code1"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code1" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Super_This; 
+    public class Person {
+     int age = 45;
+    }
+</code></pre>
+										</div>
+										<div>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code2"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code2" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Super_This; 
+public class Employee extends Person{
+    int age = 29;
+        void printStudent() { 
+          int age = 25;
+          //Here are two ways we have to call global age variable   
+         //of Person class
+         // 1
+        Person person = new Person(); 
+        System.out.println(person.age); //45
+        // 2
+        System.out.println(super.age); // 45
+        //Local variable 
+        System.out.println(age); //25
+        //Global variable of same class System.out.println(this.age); //29
+    }
+}
+</code></pre>
+										</div>
+										<p>Now, if we see Employee class's printStudent() method, there are two ways to
+											call age variable of Person class.</p>
+										<p>First way is by creating object of Person class. But this is not an
+											affordable option as just for sake of one variable age here we are loading
+											complete class Person, which wastes memory unnecessarily. </p>
+										<p>Second way is to just call age by using super keyword which will not waste
+											memory and we can achieve our objectives as well </p>
+										<p>Other two options are to print local variable age or print global variable of
+											same class.</p>
+										<p><b>Note :</b> We use the super keyword to bypass class variables and method’s
+											local variable with same name while calling and we need not to create
+											objects.
+											It's all about memory management.</p>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="SuperKeyword">
+									<div id="Div2">
+										<h2 class="breadcrumb">Super Keyword</h2>
+										<p><b>Remember the points given below:</b>
+										<ul>
+											<li>We must have super class subclass relationship in our program.</li>
+											<li>Super can be applied to variable, constructors, and method.</li>
+											<li>Super keyword always represents super class object.</li>
+											<li>It's generally used to bypass global variable with the same name.</li>
+										</ul>
+										<hr>
+										<p>
+											<b>Syntax:</b><br>
+											<code> super.a; //for Variable <br>
+super.m1(); //for Method <br>
+super(); // for Constructor <br>
+</code>
+										</p>
+										<ul>
+											<li>To call super class variable or method we have two options</li>
+										</ul>
+										<div class="docs-galley"><img class="docs-pictures clearfix centerimage"
+												src="https://www.jbktutorials.com/images/java/superthisimage.webp"
+												alt="super keyword in java with example" title="Super keyword Example">
+											<hr>
+											<p><b>Example:</b><br>
+												<code> A a=new A(); //1st way <br>
+a.m2(); <br>
+<br>
+super.m2(); //2nd way
+</code>
+											</p>
+											<ul>
+												<li>
+													<p><b>1st way :</b> In this case we bring all members of capital A
+														in to RAM, out of that we are just calling m2(), so unnecessary
+														memory will get allocated for another members.</p>
+												</li>
+												<li>
+													<p><b>2nd way :</b> The other option super.m2()</p>
+													<ul>
+														<li>
+															<p>There is no super.super in java</p>
+														</li>
+														<li>
+															<p>In any of our class's constructors if we don't write any
+																call to constructor of parent class by using super like
+																super(), then JVM puts super call to constructor in the
+																first line of every constructor wherever you did not add
+																your own call to constructor.</p>
+														</li>
+													</ul>
+												</li>
+											</ul>
+											<hr>
+											<div>
+												<p><b>Example 1</b></p>
+												<button class="copycodebuttonstyle" data-clipboard-target="#code3"
+													onclick="copySuccessMessage()"><i
+														class="fa fa-clipboard"></i></button>
+												<pre id="code3" class="breadcrumb pretagcodebox">
+<code>package com.constructor; 
+  public class A {
+    public A(){
+      super(10); //Error -Super class has constructor       
+                 //without parameter, in this case it’s a Object class
+    }
+}
+</code></pre>
+											</div>
+											<div>
+												<p><b>Example 2</b></p>
+												<button class="copycodebuttonstyle" data-clipboard-target="#code4"
+													onclick="copySuccessMessage()"><i
+														class="fa fa-clipboard"></i></button>
+												<pre id="code4" class="breadcrumb pretagcodebox">
+<code>public class A {
+   public A(){   // Default Constructor put by JVM at Run       
+                 //Time..
+     super();          //invisible present here
+    }
+}
+</code></pre>
+											</div>
+											<hr>
+											<ul>
+												<li>
+													<p>Super call to constructor must be at first line of all
+														constructors.</p>
+												</li>
+												<li>
+													<p>We strictly cannot call super () in methods in any line; this
+														rule applies only to super() not to super.a or super.m1().</p>
+												</li>
+											</ul>
+											<div>
+												<button class="copycodebuttonstyle" data-clipboard-target="#code5"
+													onclick="copySuccessMessage()"><i
+														class="fa fa-clipboard"></i></button>
+												<pre id="code5" class="breadcrumb pretagcodebox">
+<code>package com.constructor; 
+public class A {
+    public A(){
+      System.out.println("Java by kiran");
+      super(); // Error - super () must be at first line 
+	       // of constructor only
+    }
+    void m1(){
+      super();  // Error in method super()not allowed
+    }
+    A (int x){
+      super();	 // Correct- Allowed in constructor
+      super(10); // Error as super() is call at second line
+    }
+}
+</code></pre>
+											</div>
+											<ul>
+												<li>Recursion by using super call to constructor will result in compile
+													time error in java.</li>
+											</ul>
+											<p>The compile time error is shown below :</p>
+											<div>
+												<button class="copycodebuttonstyle" data-clipboard-target="#code6"
+													onclick="copySuccessMessage()"><i
+														class="fa fa-clipboard"></i></button>
+												<pre id="code6" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran.Super_This; 
+public class A extends A{  //class can not extends itself
+  //super();	 //	go on	calling	the same -- recursion
+}
+</code></pre>
+											</div>
+											<p><b>Note: </b> In this example, recursion between super call to
+												constructor will be there because we are extending same class itself.
+												Consider invisible super() inside constructor.</p>
+											<hr>
+											<p>Observe the example below to see how super keyword navigates the flow of
+												our program.</p>
+											<div>
+												<button class="copycodebuttonstyle" data-clipboard-target="#code7"
+													onclick="copySuccessMessage()"><i
+														class="fa fa-clipboard"></i></button>
+												<pre id="code7" class="breadcrumb pretagcodebox">
+<code>package com.constructor; 
+public class A {
+     A(){
+         //super(); //By default super is here 
+         System.out.println("A");
+    }
+     A(int x) { 
+         //super(); //By default super is here 
+         System.out.println(x);
+    }
+   public void m6() {  
+      System.out.println("I am in A m6()");
+   }
+} //end of class A
+</code></pre>
+											</div>
+											<div>
+												<button class="copycodebuttonstyle" data-clipboard-target="#code8"
+													onclick="copySuccessMessage()"><i
+														class="fa fa-clipboard"></i></button>
+												<pre id="code8" class="breadcrumb pretagcodebox">
+<code>package com.constructor; 
+ public class B extends A{
+   B() {
+    //super(); //JVM put super() by default at runtime 
+   } 
+   public void m6(){
+    System.out.println("I am in B m6()");
+   }
+} //end of class B
+</code></pre>
+											</div>
+											<div>
+												<button class="copycodebuttonstyle" data-clipboard-target="#code9"
+													onclick="copySuccessMessage()"><i
+														class="fa fa-clipboard"></i></button>
+												<pre id="code9" class="breadcrumb pretagcodebox">
+<code>package com.constructor;
+ public class C extends A { 
+    C(){
+        //super(); // JVM put super() by default at runtime
+        System.out.println("C"); 
+     }
+  } // end of class C
+</code></pre>
+											</div>
+											<div>
+												<button class="copycodebuttonstyle" data-clipboard-target="#code10"
+													onclick="copySuccessMessage()"><i
+														class="fa fa-clipboard"></i></button>
+												<pre id="code10" class="breadcrumb pretagcodebox">
+<code>package com.constructor; 
+public class Client	{
+  public static void main(String[] args) {
+     C c= new C();	
+     c.m6();
+    }
+}   
+</code></pre>
+											</div>
+											<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+     A
+     C
+     I am in A m6()
+ </code></pre>
+											</p>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="ThisKeyword">
+									<div id="Div3">
+										<h2 class="breadcrumb">This Keyword</h2>
+										<p><b>This</b> keyword in java is used inside a method or constructor of a
+											class. It is used to refer to a member of a current object within the
+											instance of a method or constructor.
+										<ul>
+											<li>This represents current class object</li>
+											<li>Can be applied to variable, constructor and method</li>
+										</ul>
+										<p>
+											<b>Syntax:</b><br>
+											<code> this.a; // variable case <br>
+this.m1(); // method case <br>
+this(10); // To call parameterize constructor of current class object <br>
+</code>
+										</p>
+										<ul>
+											<li>
+												<p>In case of variable, same class’s global variable will get called</p>
+											</li>
+											<li>
+												<p>Call to constructor by using this ‘this()’ must be a first line of
+													constructor only.
+													This means that we cannot add ‘this()’ anywhere other than the first
+													line of constructor</p>
+											</li>
+											<li>
+												<p>inside method ‘this()’ is not allowed, that is call to constructor
+													not allowed by using this.</p>
+											</li>
+											<li>
+												<p>JVM never puts automatically this() keyword like super()</p>
+											</li>
+											<li>
+												<p>If we wrote call to constructor explicitly by using ‘this()’ the
+													‘super()’ call to constructor will not be put by JVM</p>
+											</li>
+											<li>
+												<p>Recursion will be there as we call the same class constructor using
+													this() in same constructor, which is not allowed in java</p>
+											</li>
+										</ul>
+										<hr>
+										<div>
+											<p><b>Example 1</b></p>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code11"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code11" class="breadcrumb pretagcodebox">
+<code>package com.This; 
+ public class A {
+     int a=10;
+ }
+
+package com.This;
+ public class B extends A {   
+     int a=20;
+ }
+
+package  com.This;
+ public class C extends A{
+     int a=30;
+ }
+
+package com.This;
+ public class D extends C { 
+    int a=40;
+   void m1(){ 
+	 int a=50;
+	System.out.println("This is javabykiran class"); 
+	System.out.println(a);      //prints 50 
+	System.out.println(this.a); //class variable value 40 
+	System.out.println(super.a); //JVM print 30 Immediate   //superclass
+	B b =new B();
+	 System.out.println(b.a); //no other way as super.super is not allowed
+	A a1=new A();
+	 System.out.println(a1.a);  //only way to run A class variable
+   }
+ public static void main(String[] args) { 
+    D b=new D(); 
+    b.m1();
+  }
+} //end D
+</code></pre>
+											<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+     This is java by kiran class 
+     50
+     40
+     30
+     20
+     10
+  </code></pre>
+										</div>
+										<p><b>Note :</b> To understand this example in more detail
+										<ul>
+											<li>Go on commenting every variable start from m1 of Class D then run the
+												program</li>
+											<li>Comment global variable of class D then run D.java</li>
+											<li>Comment C class's global variable then again run D..java and observe
+												output</li>
+										</ul>
+										<br>
+										<div>
+											<p><b>Example 2</b></p>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code12"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code12" class="breadcrumb pretagcodebox">
+<code>package com.This; 
+ class X {
+    public X()	{ 
+	this(20); //recursion
+     }
+    public X(int i){ 
+	this();//recursion invocation error
+     } 
+}   
+</code></pre>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="DiffbetweenSuperandThis">
+									<div id="Div4" class="tablediv">
+										<h2 class="breadcrumb">Difference between Super and This</h2>
+										<table class="table-responsive-xl table-bordered table" style="width:100%;">
+											<colgroup>
+												<col style="width: 50%" />
+												<col style="width: 50%" />
+											</colgroup>
+											<tr>
+												<th class="center">Super</th>
+												<th class="center">This</th>
+											</tr>
+											<tr>
+												<td>
+													<ul>
+														<li>super is reference variable which contains immediate super
+															class objects</li>
+														<li>super also can be used in two ways:</li>
+														<li>a) To invoke immediate super class variable and methods.
+															<ul>
+																<li>super.n;</li>
+																<li>super.m1();</li>
+															</ul>
+														</li>
+														<li>b) to invoke immediate super class constructor</li>
+														<li>Ex : <br>
+															<code>super();<br>
+super(10);</code>
+														</li>
+													</ul>
+												</td>
+												<td>
+													<ul>
+														<li>‘this’ is a reference variable which contains current class
+															objects</li>
+														<li>'this' can be used in two ways:</li>
+														<li>a) To invoke current class variable and methods
+															<ul>
+																<li>this.a;</li>
+																<li>this.m1();</li>
+															</ul>
+														</li>
+														<li>b)To invoke current class constructors </li>
+														<li>Ex: <br>
+															<code>this();<br>
+this (10,20);</code>
+														</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<ul>
+														<li>super reference variable is instance reference variable
+															and cannot be accessed from static context
+														</li>
+													</ul>
+												</td>
+												<td>
+													<ul>
+														<li>This reference variable is instance reference variable
+															and cannot be accessed from static context </li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<ul>
+														<li>Call to super() must be at the first line of constructor
+															only </li>
+													</ul>
+												</td>
+												<td>
+													<ul>
+														<li>Call to this() must be at the first line of constructor only
+														</li>
+													</ul>
+												</td>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+							<hr>
+							<ul class="nav nav-tabs nav-bottom mt-3" role="tablist">
+								<li role="presentation" class="active"><a href="#WhySuperAndThis" role="tab"
+										data-toggle="tab">Why Super & This?</a></li>
+								<li role="presentation"><a href="#SuperKeyword" role="tab" data-toggle="tab">Super
+										Keyword</a></li>
+								<li role="presentation"><a href="#ThisKeyword" role="tab" data-toggle="tab">This
+										Keyword</a></li>
+								<li role="presentation"><a href="#DiffbetweenSuperandThis" role="tab"
+										data-toggle="tab">Difference between Super & This</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="card-footer">
+						<ul class="pagination justify-content-center mb-4">
+							<li class="page-item">
+								<a class="page-link btn-outline-primary" href="inheritance-in-java.html">&lArr;
+									Previous</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="polymorphism-in-java.html">Next &rArr;</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-2 mb-4">
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="6605368152" data-ad-format="auto" data-full-width-responsive="true">
+					</ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+				<br>
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="7335995893" data-ad-format="auto" data-full-width-responsive="true">
+					</ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="application/ld+json">
+{ "@context": "https://schema.org", 
+ "@type": "Article",
+ "headline": "Super This Keyword - Java",
+ "alternativeHeadline": "What is super and this keyword in java?",
+ "image": "https://www.jbktutorials.com/images/java/superthisimage.webp",
+ "author": {
+    "@type": "Person",
+    "name": "Kiran Digrase"
+  },
+ "genre": "java super this keyword", 
+ "keywords": "java super this keyword, super this keyword, super keyword in java, this keyword in java, super and this keyword, super keyword, this keyword", 
+ "publisher": {
+    "@type": "Organization",
+    "name": "Java By Kiran",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.javabykiran.com/images/logojbk.png"
+    }
+  },
+ "url": "https://www.jbktutorials.com/corejava/super-and-this-keyword-in-java.php",
+   "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.javabykiran.com/"
+  },
+ "datePublished": "2019-11-21",
+ "dateCreated": "2019-11-21",
+ "dateModified": "2019-11-21",
+ "description": "Super in java is a keyword which is a reference variable and This represents current class object.",
+ "articleBody": "Super Keyword is used to access methods of the parent class while this keyword is used to access methods of the current class. This keyword is used to refer current-class’s instance as well as static members."
+ }
+</script>
+
+	<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
+
+		<div class="container text-center text-md-left">
+
+		</div>
+
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
+
+					<div class=" col-sm-6 pull-left py-3 text-white">
+						Copyright © 2023, JavaRavish by Ravi Kolloju
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "logo": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-888-880-9416",
+    "contactType": "customer service"
+  },
+  
+  "sameAs": [
+    "https://www.facebook.com/javabykiran",
+    "https://twitter.com/javabykiran",
+    "https://plus.google.com/+JavabyKiran",
+    "https://www.instagram.com/javabykiran/",
+    "https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA",
+    "https://ca.linkedin.com/company/javabykiran"
+  ]
+}
+</script>
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "PostalAddress",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "addressLocality": "Pune",
+   "addressRegion": "Maharashtra",
+   "postalCode": "411052",
+   "streetAddress": "403, 4th Floor, Park Plaza, Above Birla super Market, State Bank Nagar, Karve Nagar,Pune "
+  }
+
+</script>
+
+	<script>
+
+		$(document).ready(function () {
+			$('.tab-pane').addClass('show');
+		});
+
+		$('ul.nav-bottom').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-bottom li').removeClass('active');
+				$('.nav-top li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		$('ul.nav-top').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-top li').removeClass('active');
+				$('.nav-bottom li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		//Script for Copy to Clipboard
+		var clipboard = new Clipboard('button');
+		function copySuccessMessage() {
+			alert("Copied to Clipboard!");
+		}
+	</script>
+</body>
+
+
+<!-- Mirrored from www.jbktutorials.com/corejava/super-and-this-keyword-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 01:47:13 GMT -->
+
+</html>

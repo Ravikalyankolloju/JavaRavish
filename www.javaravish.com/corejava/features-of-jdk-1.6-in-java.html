@@ -1,0 +1,1060 @@
+<!--Header-->
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.jbktutorials.com/corejava/features-of-jdk-1.6-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 01:47:16 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>JBK Tutorials | Java Development Kit - jdk1.6</title>
+	<meta name="description"
+		content="jdk 1.6 - The JDK includes tools useful for developing and testing programs written in the Java programming language and running on the JavaTM platform.">
+	<meta name="keywords"
+		content="java tutorials, core java, advance java, java by kiran, java interview questions, blog, articles, learn java programming, codes, examples, selenium, python, spring">
+	<meta name="author" content="Java By Kiran">
+	<meta name="robots" content="index, follow">
+
+	<meta property="og:title" content="Java Development Kit - jdk1.6" />
+	<meta property="og:url" content="features-of-jdk-1.6-in-java.html" />
+	<meta property="fb:app_id" content="881390338999747" />
+	<meta property="og:description"
+		content="jdk 1.6 - The JDK includes tools useful for developing and testing programs written in the Java programming language and running on the JavaTM platform.">
+	<meta property="og:image" content="../images/jbktutorialslogo3square.png">
+	<meta property="og:image:secure_url" content="../images/jbktutorialslogo3square.png" />
+	<meta property="og:type" content="article" />
+
+
+	<meta name="twitter:title" content="Java Development Kit - jdk1.6">
+	<meta name="twitter:description"
+		content="jdk 1.6 - The JDK includes tools useful for developing and testing programs written in the Java programming language and running on the JavaTM platform.">
+	<meta name="twitter:image" content="../images/jbktutorialslogo3square.png">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<link rel="canonical" href="features-of-jdk-1.6-in-java.html" />
+	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
+
+	<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css" as="style">
+	<link rel="preload" href="../css/customcss.css" as="style">
+	<link rel="preload" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"
+		as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
+	<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js" as="script">
+	<link rel="preload" href="../js/jquery.min.js" as="script">
+	<link rel="preload" href="../vendor/clipboard/clipboard.min.js" as="script">
+	<link rel="preload" href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" as="script">
+	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-156439212-1');
+	</script>
+
+
+	<script data-ad-client="ca-pub-5964671306985297" async
+		src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+
+
+
+	<link rel="stylesheet" type="text/css" href="../css/customcss.css">
+	<link rel="stylesheet" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+
+
+	<link rel="stylesheet" href="../vendor/syntaxhighlighter/styles/a11y-light.css">
+	<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
+	<script defer>hljs.initHighlightingOnLoad();</script>
+
+
+	<script src="../js/jquery.min.js"></script>
+	<script src="../vendor/clipboard/clipboard.min.js"></script>
+
+
+
+	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+
+	<link rel="stylesheet" href="../vendor/jquery-viewer-master/docs/css/viewer.css">
+	<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" defer></script>
+	<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
+
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+		<div class="container p-0">
+			<a class="navbar-brand pull-left" href="java-index.html"><img
+					src="../images/jrlogo.png" style="height: 65px; max-width: 100%;"
+					alt="java by Kalyan" title="Java Ravish Tutorials"></a>
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+				<script async src="../../cse.google.com/fd667.txt?cx=001580368639334093203:va4ehh0xpyd"></script>
+				<div class="gcse-search"></div>
+				<ul class="navbar-nav ml-auto text-center">
+					<li class="nav-item"><a class="nav-link" href="java-index.html"><img src="../images/small/home.jpg"></i></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="introduction-to-java.html">Java</a></li>
+
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Spring</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Spring
+							Boot</a></li>
+					<li class="nav-item"><a class="nav-link" href="java-index.html">Interview
+							Questions</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav><br>
+
+	<script async
+		src="../../platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
+	<style>
+		.centerimage {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	</style>
+
+
+	<div class="container-fluid">
+		<br />
+		<ol itemscope itemtype="http://schema.org/BreadcrumbList"
+			class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="java-index.html">
+					<span itemprop="name">Home</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="introduction-to-java.html">
+					<span itemprop="name">Java</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="features-of-jdk-1.6-in-java.html">
+					<span itemprop="name">What are features of jdk1.6?</span>
+				</a>
+				<meta itemprop="position" content="3" />
+			</li>
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="breadcrumb-item">
+				<span itemprop="name">Features and Enhancement in jdk1.6</span>
+				<meta itemprop="position" content="4" />
+			</li>
+		</ol>
+
+		<div class="row">
+
+			<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
+			<style>
+				@media only screen and (max-width: 425px) {
+					.hidesidebar {
+						display: none;
+					}
+				}
+			</style>
+			<script>
+				//Script to Open and Close Sidebar
+				function sidebar_open() {
+					document.getElementById("mySidebar").style.display = "block";
+				}
+
+				function sidebar_close() {
+					document.getElementById("mySidebar").style.display = "none";
+				}
+
+				// toggle up & down icon
+				function myFunction(x) {
+					x.classList.toggle("fa-book-open");
+				}
+			</script>
+
+
+			<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
+			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+				aria-multiselectable="true">
+				<div class="card">
+					<h2 class="card-header text-white" style="background: rgb(1, 71, 128);">Java</h2><br>
+					<div class="list-group">
+						<button class="w3-teal bg-transparent w3-large w3-hide-large" onclick="sidebar_close()">Close
+							Menu &times;</button>
+						<ul class="leftBarList">
+							<li><a href="introduction-to-java.html">Java Introduction</a></li>
+							<li><a href="java-language.html">Java Language</a></li>
+							<li><a href="communication-between-two-classes-in-java.html">Communication Between Two
+									Classes</a></li>
+							<li><a href="package-in-java.html">Package</a></li>
+							<li><a href="methods-variable-and-block-in-java.html">Methods, Variable and Block</a></li>
+							<li><a href="encapsulation-in-java.html">Encapsulation</a></li>
+							<li><a href="access-modifiers-in-java.html">Access Modifiers</a></li>
+							<li><a href="statickeyword-in-java.html">Static Keyword</a></li>
+							<li><a href="final-keyword-in-java.html">Final Keyword </a></li>
+							<li><a href="constructor-in-java.html">Constructor </a></li>
+							<li><a href="inheritance-in-java.html">Inheritance </a></li>
+							<li><a href="super-and-this-keyword-in-java.html">Super This</a></li>
+							<li><a href="polymorphism-in-java.html">Polymorphism</a></li>
+							<li><a href="abstraction-in-java.html">Abstraction</a></li>
+							<li><a href="garbage-collection-in-java.html">Garbage Collection</a></li>
+							<li><a href="input-and-output-streams-in-java.html">Input Output Stream</a></li>
+							<li><a href="collection-framework-in-java.html">Collection Framework</a></li>
+							<li><a href="collection-revisited-in-java.html">Collection Revisited</a></li>
+							<li><a href="serialization-in-java.html">Serialization</a></li>
+							<li><a href="exception-in-java.html">Exception</a></li>
+
+
+							<li><a href="arrays-in-java.html">Arrays</a></li>
+							<li><a href="strings-in-java.html">Strings</a></li>
+							<li><a href="features-of-jdk-1.5-in-java.html">Features and Enhancements in jdk 1.5</a></li>
+							<li><a href="features-of-jdk-1.6-in-java.html">Features and Enhancements in jdk 1.6</a></li>
+							<li><a href="features-of-jdk-1.7-in-java.html">Features and Enhancements in jdk 1.7</a></li>
+							<li><a href="features-of-jdk-1.8-in-java.html">Features and Enhancements in jdk 1.8</a></li>
+							<li><a href="multithreading-in-java.html">Thread</a></li>
+							<li><a href="java-virtual-machine-memory-management.html">JVM Memory Management</a></li>
+							<li><a href="jdbc-in-java.html">JDBC</a></li>
+							<li><a href="database-in-java.html">Database</a></li>
+						</ul>
+					</div>
+				</div><br>
+				<div>
+					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+						data-ad-slot="1171818896" data-ad-format="auto" data-full-width-responsive="true"></ins>
+					<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</div>
+
+
+
+			<div class="col-lg-7 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white" style="background: rgb(1, 71, 128);">Features and Enhancement in
+						jdk1.6</h1>
+					<div class="card-body">
+						<div class="tab" role="tabpanel">
+							<div>
+								<p>Here are some of the features and enhancements in jdk1.6. And we will explore them
+									further in this chapter:</p>
+								<p>Only important features we need for interview all other features you will understand
+									as you get experience in industry.</p>
+								<ul>
+									<li>Collections Framework</li>
+									<li>Deployment (Java Web Start and Java Plug-in)</li>
+									<li>Drag and Drop</li>
+									<li>Instrumentation</li>
+									<li>Internationalization Support</li>
+									<li>I/O Support</li>
+									<li>JAR (Java Archive Files) - An annotated list of changes between the 5.0 and 6.0
+										releases to APIs, the jar command, and the jar/zip implementation.</li>
+									<li>Java Web Start</li>
+									<li>Java DB 10.2 JDBC4 Early Access</li>
+									<li>JMX (Java Management Extensions) - A list of JMX API changes between the J2SE
+										5.0 and Java SE 6 releases</li>
+									<li>JPDA (Java Platform Debugger Architecture)</li>
+									<li>JVM TI (Java Virtual Machine Tool Interface)</li>
+									<li>lang and util Packages</li>
+									<li>Monitoring and Management for the Java Platform</li>
+									<li>JConsole is Officially Supported in Java SE 6</li>
+									<li>Networking Features</li>
+									<li>Performance</li>
+									<li>Reflection</li>
+									<li>RMI (Remote Method Invocation)</li>
+									<li>Scripting</li>
+									<li>Security</li>
+									<li>Serialisation of Objects</li>
+									<li>Swing</li>
+									<li>VM (Java Virtual Machine)</li>
+								</ul>
+							</div>
+							<hr>
+							<div>
+
+								<ul class="nav nav-tabs nav-top" role="tablist">
+									<li role="presentation" class="active"><a href="#Section1" role="tab"
+											data-toggle="tab">Collection Framework Enhancements</a></li>
+									<li role="presentation"><a href="#Section2" role="tab"
+											data-toggle="tab">GenericsDeque</a></li>
+									<li role="presentation"><a href="#Section3" role="tab"
+											data-toggle="tab">BlockingDeque</a></li>
+									<li role="presentation"><a href="#Section4" role="tab"
+											data-toggle="tab">NavigableSet</a></li>
+									<li role="presentation"><a href="#Section5" role="tab"
+											data-toggle="tab">NavigableMap</a></li>
+									<li role="presentation"><a href="#Section6" role="tab"
+											data-toggle="tab">ConcurrentNavigableMap</a></li>
+									<li role="presentation"><a href="#Section7" role="tab" data-toggle="tab">Deque and
+											ArrayDeque</a></li>
+									<li role="presentation"><a href="#Section8" role="tab" data-toggle="tab">Blocking
+											Deque and Linked Blocking Deque</a></li>
+									<li role="presentation"><a href="#Section9" role="tab"
+											data-toggle="tab">NavigableSet and ConcurrentSkipListSet</a></li>
+								</ul>
+							</div>
+							<div class="tab-content tabs">
+								<div role="tabpanel" class="tab-pane fade in active" id="Section1">
+									<div id="Div1">
+										<h2 class="breadcrumb">Collection Framework Enhancements</h2>
+										<p>“The collections framework is a unified architecture for representing and
+											manipulating collections, allowing them to be manipulated independently of
+											the details of
+											their representation. It reduces programming effort while increasing
+											performance.</p>
+										<p>It allows for interoperability among unrelated APIs, reduces effort in
+											designing and learning new APIs, and fosters software reuse.”</p>
+										<p>These new collection interfaces provided:
+										<ul>
+											<li>Deque - a double ended queue, supporting element insertion and removal
+												at both ends. It extends the Queue interface.</li>
+											<li>java.util.Deque interfaces is a subtype of the java.util.Queue
+												interface.</li>
+											<li>It is also called as deque.</li>
+										</ul>
+										<p>Here is a list of topics that will be covered in this chapter:
+										<ul>
+											<li>Deque Implementations.</li>
+											<li>Adding and accessing elements.</li>
+											<li>Removing elements.</li>
+											<li>Generic Deques.</li>
+										</ul>
+										<hr>
+										<div>
+											<h4>Deque Implementations can be implemented by a doubly linked list or
+												circular array</h4>
+											<ul>
+												<li>Being a Queue subtype, all methods of Queue and Collection
+													interfaces are also available in the Deque interface.</li>
+												<li>There are two ways to use it:
+													<ul>
+														<li><code>java.util.ArrayDeque</code></li>
+														<li><code>java.util.LinkedList</code></li>
+													</ul>
+												</li>
+												<li>Array Deque stores its elements in an array, and as soon as it
+													reaches its length it assigns it to a new array.</li>
+											</ul>
+											<br>
+											<p>To create a Deque instance, following the steps given below:</p>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code1"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code1" class="breadcrumb pretagcodebox">
+<code>Deque dequeA = new LinkedList (); 
+Deque dequeB = new ArrayDeque ();    
+</code>
+</pre>
+										</div>
+										<hr>
+										<div>
+											<h4>Adding and Accessing Elements</h4>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code2"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code2" class="breadcrumb pretagcodebox">
+<code>Deque dequeA = new LinkedList(); 
+dequeA.add("element 1");	 //add element at tail 
+dequeA.addFirst("element 2");   //addelement at head 
+dequeA.addLast ("element 3");  //addelement at tail
+Object firstElement = dequeA.element();   //retrieves but does not remove first element 
+Object firstElement = dequeA.getFirst(); //retrieves the first element of the queue 
+Object lastElement = dequeA.getLast();	//retrieves the lastelement of the queue
+Object firstElement = dequeA.remove(); //to remove an element for a deque 
+Object firstElement = dequeA.removeFirst(); //remove the first element
+Object lastElement = dequeA.removeLast();  //removes the lastelement    
+</code>
+</pre>
+										</div>
+										<hr>
+										<div>
+											<h4>Removing Elements</h4>
+											<button class="copycodebuttonstyle" data-clipboard-target="#code3"
+												onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+											<pre id="code3" class="breadcrumb pretagcodebox">
+<code>Object firstElement = dequeA.remove(); 
+Object firstElement = dequeA.removeFirst(); 
+Object lastElement = dequeA.removeLast();    
+</code>
+</pre>
+										</div>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="Section2">
+									<div id="Div2">
+										<h2 class="breadcrumb">GenericsDeque</h2>
+										<p>The generic deque is used to make sure which type of objects get inserted
+											into deque.</p>
+										<button class="copycodebuttonstyle" data-clipboard-target="#code4"
+											onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+										<pre id="code4" class="breadcrumb pretagcodebox">
+<xmp>Deque<MyObject> deque = new LinkedList<MyObject>();    
+</xmp>
+</pre>
+										<p>This Deque can now only have MyObject instances inserted into it. You can
+											then access and iterate its elements without casting them.</p>
+										<p>Here is how it looks:</p>
+										<button class="copycodebuttonstyle" data-clipboard-target="#code5"
+											onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+										<pre id="code5" class="breadcrumb pretagcodebox">
+<code>My Object my Object = deque.remove(); 
+   for(MyObject anObject : deque){
+      //do someting to anObject...
+   }  
+</code>
+</pre>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="Section3">
+									<div id="Div3">
+										<h2 class="breadcrumb">BlockingDeque</h2>
+										<p>A blocking deque supports blocking operations.</p>
+										<ul>
+											<li>
+												<p>It is a Deque with operations that wait for the deque to become non-
+													empty when retrieving an element.</p>
+											</li>
+											<li>
+												<p>Additionally, it waits for space to become available in the deque
+													when storing an element.</p>
+											</li>
+											<li>
+												<p>It extends both the Deque and BlockingQueue interfaces (This
+													interface is part of java.util.concurrent).</p>
+											</li>
+											<li>
+												<p>It is also thread Safe.</p>
+											</li>
+											<li>
+												<p>It does not allow null elements in.</p>
+											</li>
+											<li>
+												<p>It may or may not be capacity-constrained.</p>
+											</li>
+											<li>
+												<p>A BlockingDeque implementation may be used directly as a FIFO
+													BlockingQueue.</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div role="tabpanel" class="tab-pane fade" id="Section4">
+									<div id="Div4">
+										<h2 class="breadcrumb">NavigableSet</h2>
+										<p>It refers to a navigable set within the collections framework.</p>
+										<ul>
+											<li>
+												<p>It is a SortedSet extended with navigation methods reporting closest
+													matches for given search targets.</p>
+											</li>
+											<li>
+												<p>A NavigableSet may be accessed and traversed in either ascending or
+													descending order depending on the requirement.</p>
+											</li>
+											<li>
+												<p>This interface is intended to supersede the SortedSet interface.</p>
+											</li>
+											<li>It knows all Superinterfaces :
+												<pre><xmp>Collection<E>, Iterable <E>, Set<E>, Sorted Set<E></xmp><pre></li>
+<li><p>It knows all Implementing Classes : ConcurrentSkipListSet, TreeSet.</p></li>
+</ul>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="Section5">
+<div id="Div5">
+<h2 class="breadcrumb">NavigableMap</h2>
+<p>It is a subtype of the SortedMap interface and makes navigation methods more convenient. It also has an added feature to make a submap from an existing map.</p>
+<ul>
+<li><p>A Navigable map is a SortedMap extended with navigation methods which returns the closest matches for given search targets.</p></li>
+<li><p>A NavigableMap may be accessed and traversed in either ascending or descending key order.</p></li>
+<li><p>This interface is intended to supersede the SortedMap interface.</p></li>
+<li><p>Interface NavigableMap< K,V >: K is the type of key maintained by this map and V is the type of mapped values</p></li>
+<li><p>It knows all Superinterfaces : Map< K,V > , SortedMap< K,V >.</p></li>
+<li><p>It knows all SubInterfaces : ConcurrentNavigableMap< K,V ></p></li>
+<li><p>It knows all known Implementing Classes: ConcurrentSkipListMap, TreeMap</p></li>
+</ul>
+</div></div>
+<div role="tabpanel" class="tab-pane fade" id="Section6">
+<div id="Div6">
+<h2 class="breadcrumb">ConcurrentNavigableMap</h2>
+<p>The ConcurrentNavigableMap provides support for concurrent access for the submaps. (This interface is a part of java.util.concurrent).</p>
+<ul>
+<li><p>The ConcurrentMap is also a NavigableMap.</p></li>
+<li><p>It knows all Superinterfaces:<br>
+ConcurrentMap< K,V >,Map< K,V >, NavigableMap< K,V >, SortedMap< K,V ></p></li>
+<li><p>The following concrete implementation classes have been added:<br>
+ArrayDeque, also known as Array Double Ended Queue or Array Deck, is an efficient resizable-array implementation of the Deque interface.</p></li>
+<li><p>Concurrent Skip List Set - concurrent scalable skip list implementation of the Navigable Set interface.</p></li>
+<li><p>Concurrent Skip List Map - concurrent scalable skip list implementation of the ConcurrentNavigableMap interface.</p></li>
+<li><p>Linked Blocking Deque - concurrent scalable optionally bounded FIFO blocking deque backed by linked nodes.</p></li>
+<li><p>Abstract Map. Simple Entry - simple mutable implementation of Map.Entry.</p></li>
+<li><p>Abstract Map.SimpleImmutable Entry - simple immutable implementation of Map.Entry.</p></li>
+<li><p>These existing classes have been updated to implement new interfaces:
+<ul>
+<li>LinkedList</li>
+<li>TreeSet</li>
+<li>TreeMap</li>
+<li>Collections</li>
+</ul></p></li>
+</ul>
+<p>Two new methods were added to the Collections utility class:</p>
+<ul><li>new Set From Map (Map) – This creates a general purpose Set implementation from a general purpose Map implementation</li></ul>
+<p>There is no IdentityHashSet class, instead, you may use <br>
+<code>Set< Object > identityHashSet= Collections.newSetFromMap(new IdentityHashMap< Object, Boolean>());</code>
+</p>
+<ul><li>asLifoQueue(Deque) - returns a view of a Deque as a Last-in- first-out (LIFO) Queue</li>
+The Arrays utility class now has methods copyOf and copyOfRange that can efficiently resize, truncate, or copy subarrays for arrays of all types.</ul>
+<div>
+<button class="copycodebuttonstyle" data-clipboard-target="#code6" onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+<pre id="code6" class="breadcrumb pretagcodebox">
+<code>// before:
+int[] newArray = new int[newLength];
+System.arraycopy(oldArray,0, newArray,0,oldArray.length);
+
+// After:
+int[] newArray = Arrays.copyOf(a, newLength);
+</code>
+</pre>
+									</div>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="Section7">
+								<div id="Div7">
+									<h2 class="breadcrumb">Deque and ArrayDeque</h2>
+									<ul>
+										<li>
+											<p>Deque is the abbreviation of "Double Ended Queue". It is a collection
+												that allows us to add (or) remove elements at both ends. Deque supports
+												the total size of collection for both fixed and unspecified size limits.
+											</p>
+										</li>
+										<li>
+											<p>Deque implementation can be used as Stack (Last In First Out) or Queue
+												(First In First Out). For each insertion, retrieval and removal of
+												elements from deque, there are two different methods. One will throw
+												exception if it fails in an operation and the other returns the status
+												or special value for each operation.</p>
+										</li>
+										<div class="tablediv">
+											<table class="table-bordered table-responsive-xl" style="width:100%;">
+												<colgroup>
+													<col style="width: 33%" />
+													<col style="width: 33%" />
+													<col style="width: 34%" />
+												</colgroup>
+												<tr>
+													<th class="center">Operation</th>
+													<th class="center">Special value method</th>
+													<th class="center">Exception throwing method</th>
+												</tr>
+												<tr>
+													<td>
+														<ul>Insertion at head</ul>
+														<ul>Removal at head</ul>
+														<ul>Retrieval at Head</ul>
+														<ul>Insertion at Tail</ul>
+														<ul>Removal at Tail</ul>
+														<ul>Retrieval at Tail</ul>
+													</td>
+													<td>
+														<ul>offerFirst(e)</ul>
+														<ul>pollFirst()</ul>
+														<ul>peekFirst()</ul>
+														<ul>offerLast(e)</ul>
+														<ul>pollLast()</ul>
+														<ul>peekLast()</ul>
+													</td>
+													<td>
+														<ul>addFirst(e)</ul>
+														<ul>removeFirst()</ul>
+														<ul>getFirst()</ul>
+														<ul>addLast(e)</ul>
+														<ul>removeLast()</ul>
+														<ul>getLast()</ul>
+													</td>
+												</tr>
+											</table>
+										</div><br>
+										<li>
+											<p>Implementation of Deque doesn't require preventing the insertion of null,
+												but when we are using special value method, null is returned to indicate
+												that the collection is empty. So, it is recommendable to not allow
+												insertion of null.</p>
+										</li>
+										<li>
+											<p>ArrayDeque is a class that implements Deque. It has no capacity
+												restrictions. It will perform faster than stack when used as stackand
+												faster than linked list when used as queue. ArrayDeque is not thread
+												safe.</p>
+										</li>
+									</ul>
+									<div>
+										<p>The following example explains how to write program using ArrayDeque:</p>
+										<button class="copycodebuttonstyle" data-clipboard-target="#code7"
+											onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+										<pre id="code7" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran; 
+import java.util.ArrayDeque; 
+import java.util.Iterator; 
+public class ArrayDequeLab1 {
+  public static void main(String[] args){
+    ArrayDeque< String> ad = new ArrayDeque< String>();
+    //Insertion by using various methods 
+    ad.add("by");
+    ad.addFirst("java");
+    ad.addLast("kiran");
+    System.out.println(ad);
+
+//Retrievals
+
+System.out.println("Retrieving First Element:"+ad.peekFirst());
+System.out.println("Retrieving Last Element :"+ad.peekLast());
+//Reverse traversal 
+System.out.println("Reverse traversal");
+    Iterator< String> itr = ad.descendingIterator();
+     while(itr.hasNext())
+     {
+        System.out.println(itr.next());
+     }
+     //Removals 
+System.out.println("Removing First Element:"+ ad.pollFirst());
+System.out.println("Removing Last Element :"+ ad.pollLast());
+  }
+}
+</code></pre>
+										<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+     [java, by, kiran]
+     Retrieving First Element :java 
+     Retrieving Last Element :kiran 
+     Reverse traversal
+     Kiran
+     By 
+     Java
+     Removing First Element :java 
+     Removing Last Element :kiran
+  </code></pre>
+									</div>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="Section8">
+								<div id="Div8">
+									<h2 class="breadcrumb">Blocking Deque and Linked Blocking Deque</h2>
+									<ul>
+										<li>
+											<p>A blocking deque is basically a deque that waits for a deque to be
+												non-empty while it retrieves an element. It will also wait for an empty
+												space in the deque before storing an element.</p>
+										</li>
+										<li>
+											<p>A BlockingDeque is similar to Deque and provides additional
+												functionality. When we try to insert an element in a BlockingDeque which
+												is already full, it can wait till the space becomes available to insert
+												an element. We can also specify the time limit for waiting.</p>
+										</li>
+										<li>There are four BlockingDeque methods:
+											<ul>
+												<li>Methods throws exception</li>
+												<li>Methods returns special value</li>
+												<li>Methods that blocks (Waits indefinitely for space to available)</li>
+												<li>Methods that times out (Waits for a given time for space to
+													available)</li>
+											</ul>
+										</li>
+									</ul><br>
+									<div class="tablediv">
+										<table class="table-bordered table-responsive-xl" style="width:100%;">
+											<colgroup>
+												<col style="width: 20%" />
+												<col style="width: 20%" />
+												<col style="width: 20%" />
+												<col style="width: 20%" />
+												<col style="width: 20%" />
+											</colgroup>
+											<tr>
+												<th class="center">Operation</th>
+												<th class="center">Special Value</th>
+												<th class="center">Throws Exception</th>
+												<th class="center">Block</th>
+												<th class="center">Times Out</th>
+											</tr>
+											<tr>
+												<td>Insertion Head</td>
+												<td>Add First(e)</td>
+												<td>Offer First(e)</td>
+												<td>Put First(e)</td>
+												<td>Offer First(e, time, unit)</td>
+											</tr>
+											<tr>
+												<td>Removal from head</td>
+												<td>Remove first()</td>
+												<td>Poll First()</td>
+												<td>Take First()</td>
+												<td>Take First(Time, Unit)</td>
+											</tr>
+											<tr>
+												<td>Retrieval from head</td>
+												<td>Get First()</td>
+												<td>Peak First()</td>
+												<td>NA</td>
+												<td>NA</td>
+											</tr>
+											<tr>
+												<td>Insertion at tail</td>
+												<td>Add Last(e)</td>
+												<td>Offer Last(e)</td>
+												<td>Put Last(e)</td>
+												<td>Offer Last(e, Time, Unit)</td>
+											</tr>
+											<tr>
+												<td>Removal from tail</td>
+												<td>RemoveLast()</td>
+												<td>Poll Last()</td>
+												<td>Take Last()</td>
+												<td>Take First (Time, Unit)</td>
+											</tr>
+											<tr>
+												<td>Retrieval from tail</td>
+												<td>Get Last()</td>
+												<td>Peak Last()</td>
+												<td>NA</td>
+												<td>NA</td>
+											</tr>
+										</table>
+									</div><br>
+									<p>A LinkedBlockingDeque is a Collection class, which implements BlockingDeque
+										interface in which we can specify maximum capacity if we want. If we did not
+										specify the capacitythen the maximum capacity will be Integer.MAX_VALUE by
+										default.</p>
+									<div>
+										<p><b>Example:</b></p>
+										<button class="copycodebuttonstyle" data-clipboard-target="#code8"
+											onclick="copySuccessMessage()"><i class="fa fa-clipboard"></i></button>
+										<pre id="code8" class="breadcrumb pretagcodebox">
+<code>package com.javabykiran; 
+import java.util.concurrent.*;
+class LinkedBlockingDequeLab implements Runnable {
+   LinkedBlockingDeque lbd= new LinkedBlockingDeque(1);     
+   volatile boolean b = true;
+   public void run() {
+   try {
+   /*First thread once enters into the block it modifies 
+     instance variable b to false and prevents second thread 
+     to enter into the block 
+   */ 
+  if(b){
+     b = false;
+     Thread.sleep(5000); //Makes the Thread to sleep for 5	
+                         // seconds 
+     System.out.println("Removing "+lbd.peek());      
+     lbd.poll();//Removing an element from collection
+  }
+  else {
+     System.out.println("Waiting ");
+   /*This method makes to wait till the first thread removes // an elements*/
+     lbd.put('B');
+     System.out.println("Inserted "+lbd.peek());
+   }
+} catch (Exception e){
+     e.printStackTrace();
+   }	
+ }
+public static void main(String[] args) throws Exception {
+LinkedBlockingDequeLab bdeObj = new LinkedBlockingDequeLab(); 
+     bdeObj.lbd.offer('A');
+     System.out.println("Inserted"+bdeObj.lbd.peek());
+     Thread tMainObj = new Thread(bdeObj); 
+     tMainObj.start();
+     Thread tSubObj = new Thread(bdeObj); 
+     tSubObj.start();
+  }
+}
+</code></pre>
+										<pre class="codeblock3 breadcrumb"><code class="nohighlight">
+    <b>Output:</b>
+    Inserted A
+    Waiting 
+    Removing A
+    Inserted B
+  </code></pre>
+									</div>
+								</div>
+							</div>
+							<div role="tabpanel" class="tab-pane fade" id="Section9">
+								<div id="Div9">
+									<h2 class="breadcrumb">NavigableSet and ConcurrentSkipListSet</h2>
+									<p>“A navigable set is a sorted set that lets you work with its subsets in a variety
+										of ways.” Suppose we have a requirement to:</p>
+									<ul>
+										<li>
+											<p>Retrieve the element which is immediately greater than or lower than 15
+												from the given set: [5,10,15,20]</p>
+										</li>
+										<li>
+											<p>Retrieve all elements greater than or lower than 10. <br>
+												With the help of existing methods we need to take few risks to achieve
+												them. But with NavigableSet methods it becomes just a method call.<br>
+												The NavigableSet method is used to return the closest matches of
+												elements for the given elements in the collection.<br>
+												The ConcurrentSkipListSet is one of the classes that implements
+												NavigableSet.
+											</p>
+										</li>
+										<li>
+											<p>Navigable set has the following interfaces: Collection< E>, Iterable< E>,
+														Set< E>, SortedSet< E>, All Known implementing classes
+																ConcurrentSkipListSet, TreeSet</p>
+										</li>
+									</ul><br>
+									<div>
+										<p><b>What are the salient features of NavigableMap and ConcurrentSkipListMap
+												and how do they differ?</b></p>
+										<ul>
+											<li>
+												<p>NaviagableMap is similar to NaviagableSet</p>
+											</li>
+											<li>
+												<p>ConcurrentNavigableMap< K,V>
+												</p>
+											</li>
+											<li>
+												<p>In NavigableSet, methods are used to return values, but in
+													NaviagableMap, methods used to return the key, value pair.</p>
+											</li>
+											<li>
+												<p>ConcurrentSkipListMap is the one of the classes which implements
+													NaviagableMap.</p>
+											</li>
+											<li>
+												<p>It knows all Superinterfaces Map< K,V>, SortedMap< K,V>
+												</p>
+											</li>
+											<li>
+												<p>It knows all known implementing Classes ConcurrentSkipListMap,
+													TreeMap.</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<ul class="nav nav-tabs nav-bottom mt-3" role="tablist">
+							<li role="presentation" class="active"><a href="#Section1" role="tab"
+									data-toggle="tab">Collection Framework Enhancements</a></li>
+							<li role="presentation"><a href="#Section2" role="tab" data-toggle="tab">GenericsDeque</a>
+							</li>
+							<li role="presentation"><a href="#Section3" role="tab" data-toggle="tab">BlockingDeque</a>
+							</li>
+							<li role="presentation"><a href="#Section4" role="tab" data-toggle="tab">NavigableSet</a>
+							</li>
+							<li role="presentation"><a href="#Section5" role="tab" data-toggle="tab">NavigableMap</a>
+							</li>
+							<li role="presentation"><a href="#Section6" role="tab"
+									data-toggle="tab">ConcurrentNavigableMap</a></li>
+							<li role="presentation"><a href="#Section7" role="tab" data-toggle="tab">Deque and
+									ArrayDeque</a></li>
+							<li role="presentation"><a href="#Section8" role="tab" data-toggle="tab">Blocking Deque and
+									Linked Blocking Deque</a></li>
+							<li role="presentation"><a href="#Section9" role="tab" data-toggle="tab">NavigableSet and
+									ConcurrentSkipListSet</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="card-footer">
+					<ul class="pagination justify-content-center mb-4">
+						<li class="page-item">
+							<a class="page-link btn-outline-primary" href="features-of-jdk-1.5-in-java.html">&lArr;
+								Previous</a>
+						</li>
+						<li class="page-item">
+							<a class="page-link" href="features-of-jdk-1.7-in-java.html">Next &rArr;</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-2 mb-4">
+			<div>
+				<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+					data-ad-slot="6605368152" data-ad-format="auto" data-full-width-responsive="true">
+				</ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			<br>
+			<div>
+				<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+
+				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
+					data-ad-slot="7335995893" data-ad-format="auto" data-full-width-responsive="true">
+				</ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		</div>
+
+	</div>
+
+	</div>
+
+	<script type="application/ld+json">
+{"@context": "https://schema.org", 
+ "@type": "Article",
+ "headline": "jdk 1.6 - Java",
+ "alternativeHeadline": "What are the features and enhancements in jdk 1.6 in java?",
+ "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+ "author": {
+    "@type": "Person",
+    "name": "Kiran Digrase"
+  },
+ "genre": "java jdk 1.6", 
+ "keywords": "java jdk 1.6, jdk 1.6, jdk 1.6 in java, genericsdequeue, blocking dequeue, navigable set, navigable map, dequeue and array dequeue, blocking dequeue, linked blocking dequeue", 
+ "publisher": {
+    "@type": "Organization",
+    "name": "Java By Kiran",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.javabykiran.com/images/logojbk.png"
+    }
+  },
+ "url": "https://www.jbktutorials.com/corejava/features-of-jdk-1.6-in-java.php",
+    "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.javabykiran.com/"
+  },
+ "datePublished": "2019-11-22",
+ "dateCreated": "2019-11-22",
+ "dateModified": "2019-11-22",
+ "description": "The JDK includes tools useful for developing and testing programs written in the Java programming language and running on the JavaTM platform.",
+ "articleBody": "There are a few features and enhancements that are added in jdk1.6. These are Collections Framework, Drag and Drop, Instrumentation, Java Web Start, Networking Features, Performance, Reflection, Scripting, Security, VM (Java Virtual Machine) and much more."
+ }
+</script>
+<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
+
+		<div class="container text-center text-md-left">
+
+		</div>
+
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
+
+					<div class=" col-sm-6 pull-left py-3 text-white">
+						Copyright © 2023, JavaRavish by Ravi Kolloju
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "logo": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+91-888-880-9416",
+    "contactType": "customer service"
+  },
+  
+  "sameAs": [
+    "https://www.facebook.com/javabykiran",
+    "https://twitter.com/javabykiran",
+    "https://plus.google.com/+JavabyKiran",
+    "https://www.instagram.com/javabykiran/",
+    "https://www.youtube.com/channel/UCZoq1kylnMYP_c5WG9FV9XA",
+    "https://ca.linkedin.com/company/javabykiran"
+  ]
+}
+</script>
+	<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "PostalAddress",
+  "name": "JBK Tutorials",
+  "url": "https://www.jbktutorials.com/",
+  "image": "https://www.jbktutorials.com/images/jbktutorialslogo3.png",
+  "addressLocality": "Pune",
+   "addressRegion": "Maharashtra",
+   "postalCode": "411052",
+   "streetAddress": "403, 4th Floor, Park Plaza, Above Birla super Market, State Bank Nagar, Karve Nagar,Pune "
+  }
+
+</script>
+
+	<script>
+
+		$(document).ready(function () {
+			$('.tab-pane').addClass('show');
+		});
+
+		$('ul.nav-bottom').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-bottom li').removeClass('active');
+				$('.nav-top li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		$('ul.nav-top').find('a').click(function () {
+			$('.tab-pane').addClass('show');
+			var $href = $(this).attr('href');
+			$('html, body').animate({
+				scrollTop: ($($href).first().offset().top) - 90
+			}, 500);
+			$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				var target = $(e.target).attr("href");
+				$('.nav-top li').removeClass('active');
+				$('.nav-bottom li').removeClass('active');
+				$('[href*="' + target + '"]').parent('li').addClass('active');
+			})
+		});
+
+		//Script for Copy to Clipboard
+		var clipboard = new Clipboard('button');
+		function copySuccessMessage() {
+			alert("Copied to Clipboard!");
+		}
+	</script>
+</body>
+
+
+<!-- Mirrored from www.jbktutorials.com/corejava/features-of-jdk-1.6-in-java.php by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Nov 2023 01:47:16 GMT -->
+
+</html>
