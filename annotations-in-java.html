@@ -22,35 +22,35 @@
 	<meta property="fb:app_id" content="881390338999747" />
 	<meta property="og:description"
 		content="Java annotations are essentially tags used to provide Meta data for your Java code. These are extra details that can be utilised by the java compiler or JVM.">
-	<meta property="og:image" content="../images/jbktutorialslogo3square.png">
-	<meta property="og:image:secure_url" content="../images/jbktutorialslogo3square.png" />
+	<meta property="og:image" content="images/jbktutorialslogo3square.png">
+	<meta property="og:image:secure_url" content="images/jbktutorialslogo3square.png" />
 	<meta property="og:type" content="article" />
 
 
 	<meta name="twitter:title" content="Java Annotations">
 	<meta name="twitter:description"
 		content="Java annotations are essentially tags used to provide Meta data for your Java code. These are extra details that can be utilised by the java compiler or JVM.">
-	<meta name="twitter:image" content="../images/jbktutorialslogo3square.png">
+	<meta name="twitter:image" content="images/jbktutorialslogo3square.png">
 	<meta name="twitter:card" content="summary_large_image">
 
 	<link rel="canonical" href="annotations-in-java.html" />
-	<link rel="shortcut icon" type="image/x-icon" href="../images/favicon/android-chrome-192x192.png" />
-	<link rel="apple-touch-icon" href="../images/favicon/apple-touch-icon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
 
-	<link rel="preload" href="../vendor/bootstrap/css/bootstrap.min.css" as="style">
-	<link rel="preload" href="../css/customcss.css" as="style">
-	<link rel="preload" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"
+	<link rel="preload" href="vendor/bootstrap/css/bootstrap.min.css" as="style">
+	<link rel="preload" href="css/customcss.css" as="style">
+	<link rel="preload" href="vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css"
 		as="style">
-	<link rel="preload" href="../vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
-	<link rel="preload" href="../vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
-	<link rel="preload" href="../vendor/syntaxhighlighter/highlight.pack.js" as="script">
-	<link rel="preload" href="../js/jquery.min.js" as="script">
-	<link rel="preload" href="../vendor/clipboard/clipboard.min.js" as="script">
-	<link rel="preload" href="../vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
-	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
-	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" as="script">
-	<link rel="preload" href="../vendor/jquery-viewer-master/docs/js/main.js" as="script">
-	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="preload" href="vendor/syntaxhighlighter/styles/a11y-light.css" as="style">
+	<link rel="preload" href="vendor/jquery-viewer-master/docs/css/viewer.css" as="style">
+	<link rel="preload" href="vendor/syntaxhighlighter/highlight.pack.js" as="script">
+	<link rel="preload" href="js/jquery.min.js" as="script">
+	<link rel="preload" href="vendor/clipboard/clipboard.min.js" as="script">
+	<link rel="preload" href="vendor/bootstrap/js/bootstrap.bundle.min.js" as="script">
+	<link rel="preload" href="vendor/jquery-viewer-master/docs/js/viewer.js" as="script">
+	<link rel="preload" href="vendor/jquery-viewer-master/docs/js/jquery-viewer.js" as="script">
+	<link rel="preload" href="vendor/jquery-viewer-master/docs/js/main.js" as="script">
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156439212-1"></script>
 	<script>
@@ -63,31 +63,31 @@
 
 
 	<script data-ad-client="ca-pub-5964671306985297" async
-		src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+		src="pagead2.googlesyndication.com/pagead/js/f.txt"></script>
 
 
 
 
-	<link rel="stylesheet" type="text/css" href="../css/customcss.css">
-	<link rel="stylesheet" href="../vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/customcss.css">
+	<link rel="stylesheet" href="vendor/fontawesome-free-5.0.13/web-fonts-with-css/css/fontawesome-all.min.css">
 
 
-	<link rel="stylesheet" href="../vendor/syntaxhighlighter/styles/a11y-light.css">
-	<script src="../vendor/syntaxhighlighter/highlight.pack.js"></script>
+	<link rel="stylesheet" href="vendor/syntaxhighlighter/styles/a11y-light.css">
+	<script src="vendor/syntaxhighlighter/highlight.pack.js"></script>
 	<script defer>hljs.initHighlightingOnLoad();</script>
 
 
-	<script src="../js/jquery.min.js"></script>
-	<script src="../vendor/clipboard/clipboard.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="vendor/clipboard/clipboard.min.js"></script>
 
 
 
-	<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
 
-	<link rel="stylesheet" href="../vendor/jquery-viewer-master/docs/css/viewer.css">
-	<script src="../vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
-	<script src="../vendor/jquery-viewer-master/docs/js/jquery-viewer.js" defer></script>
-	<script src="../vendor/jquery-viewer-master/docs/js/main.js" defer></script>
+	<link rel="stylesheet" href="vendor/jquery-viewer-master/docs/css/viewer.css">
+	<script src="vendor/jquery-viewer-master/docs/js/viewer.js" defer></script>
+	<script src="vendor/jquery-viewer-master/docs/js/jquery-viewer.js" defer></script>
+	<script src="vendor/jquery-viewer-master/docs/js/main.js" defer></script>
 
 </head>
 
@@ -95,7 +95,7 @@
 <nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
 		<div class="container p-0">
 			<a class="navbar-brand pull-left" href="java-index.html"><img
-					src="../images/jrlogo.png" style="height: 65px; max-width: 100%;"
+					src="images/jrlogo.PNG" style="height: 65px; max-width: 100%;"
 					alt="java by Kalyan" title="Java Ravish Tutorials"></a>
 			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -103,10 +103,10 @@
 				&#9776;
 			</button>
 			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
-				<script async src="../../cse.google.com/fd667.txt?cx=001580368639334093203:va4ehh0xpyd"></script>
+				<script async src="cse.google.com/fd667.txt?cx=001580368639334093203:va4ehh0xpyd"></script>
 				<div class="gcse-search"></div>
 				<ul class="navbar-nav ml-auto text-center">
-					<li class="nav-item"><a class="nav-link" href="java-index.html"><img src="../images/small/home.jpg"></i></a>
+					<li class="nav-item"><a class="nav-link" href="java-index.html"><img src="images/small/home.jpg"></i></a>
 					</li>
 					<li class="nav-item"><a class="nav-link" href="introduction-to-java.html">Java</a></li>
 
@@ -124,7 +124,7 @@
 <br>
 
 	<script async
-		src="../../platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
+		src="platform-api.sharethis.com/js/sharethis.js#property=5e25b77a7fe3e8001237b15f&product=sticky-share-buttons"></script>
 	<style>
 		.centerimage {
 			display: block;
@@ -164,7 +164,7 @@
 
 		<div class="row">
 
-			<link rel="stylesheet" href="../css/sidebarcollapsecss.css">
+			<link rel="stylesheet" href="css/sidebarcollapsecss.css">
 			<style>
 				@media only screen and (max-width: 425px) {
 					.hidesidebar {
@@ -193,7 +193,7 @@
 			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
 				aria-multiselectable="true">
 				<div class="card">
-					<h2 class="card-header text-white" style="background: rgb(1, 71, 128);">Java</h2><br>
+					<h2 class="card-header text-white" style="background: rgb(0, 0, 0);">Java</h2><br>
 					<div class="list-group">
 						<button class="w3-teal bg-transparent w3-large w3-hide-large" onclick="sidebar_close()">Close
 							Menu &times;</button>
@@ -235,7 +235,7 @@
 					</div>
 				</div><br>
 				<div>
-					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+					<script async src="pagead2.googlesyndication.com/pagead/js/f.txt"></script>
 
 					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
 						data-ad-slot="1171818896" data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -249,7 +249,7 @@
 
 			<div class="col-lg-7 mb-4">
 				<div class="card h-100">
-					<h1 class="card-header text-white" style="background: rgb(1, 71, 128);">Annotations in Java</h1>
+					<h1 class="card-header text-white" style="background: rgb(0, 0, 0);">Annotations in Java</h1>
 					<div class="card-body">
 						<div class="tab" role="tabpanel">
 							<p><b>Java annotations</b> are essentially tags used to provide Meta data for your Java
@@ -509,7 +509,7 @@ public class B extends A{
 
 			<div class="col-lg-2 mb-4">
 				<div>
-					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+					<script async src="pagead2.googlesyndication.com/pagead/js/f.txt"></script>
 
 					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
 						data-ad-slot="6605368152" data-ad-format="auto" data-full-width-responsive="true">
@@ -520,7 +520,7 @@ public class B extends A{
 				</div>
 				<br>
 				<div>
-					<script async src="../../pagead2.googlesyndication.com/pagead/js/f.txt"></script>
+					<script async src="pagead2.googlesyndication.com/pagead/js/f.txt"></script>
 
 					<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5964671306985297"
 						data-ad-slot="7335995893" data-ad-format="auto" data-full-width-responsive="true">
