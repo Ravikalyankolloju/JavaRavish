@@ -53,12 +53,16 @@
 				<a class="text-dark" itemprop="item" href="../main/home.html"> <span itemprop="name">Home</span></a>
 				<meta itemprop="position" content="1" />
 			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="../spring/spring-interview-questions.html"> <span itemprop="name">Spring Interview Questions</span></a>
+				<meta itemprop="position" content="1" />
+			</li>
 		</ol>
 
 		<div class="row">
 			<link rel="stylesheet" href="../scripts/css/sidebarcollapsecss.css">
 			<style>
-				@media only screen and (max-width: 425px) {
+				@media only screen and (max-width: 800px) {
 					.hidesidebar {
 						display: none;
 					}
@@ -79,8 +83,6 @@
 					x.classList.toggle("fa-book-open");
 				}
 			</script>
-
-
 			<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
 			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
 				aria-multiselectable="true">
@@ -104,10 +106,10 @@
 				<div class="card h-100">
 					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Interview Questions</h1>
 					<div class="card-body">
-						<div class="tutorial-toc">
-							<div class="clearer"></div>
 							<details>
-								<summary><c>1.What is Spring?</c></summary>
+								<summary>
+									1.What is Spring?
+								</summary>
 								<p>Spring is an open source development framework for enterprise Java. The core
 									features of the Spring Framework can be used in developing any Java application,
 									but there are extensions for building web applications on top of the Java EE
@@ -116,7 +118,9 @@
 								</p>
 							</details>
 							<details>
-								<summary><c>2.What are benefits of using spring?</c></summary>
+								<summary>
+									2.What are benefits of using spring?
+								</summary>
 								<div class="toggle-content">
 									<p>Following is the list of few of the great benefits of using Spring Framework:</p>
 									<ul class="list">
@@ -158,7 +162,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>3.What are the different modules in Spring framework?</c></summary>
+								<summary>
+									3.What are the different modules in Spring framework?
+								</summary>
 								<div class="toggle-content">
 									<p>Following are the modules of the Spring framework:</p>
 									<ul class="list">
@@ -179,7 +185,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>4.What is Spring configuration file?</c></summary>
+								<summary>
+									4.What is Spring configuration file?
+								</summary>
 								<div class="toggle-content">
 									<p>Spring configuration file is an XML file. This file contains the classes
 										information and describes how these classes are configured and introduced to
@@ -187,7 +195,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>5.What is Dependency Injection?</c></summary>
+								<summary>
+									5.What is Dependency Injection?
+								</summary>
 								<div class="toggle-content">
 									<p>Inversion of Control (IoC) is a general concept, and it can be expressed in many
 										different ways and Dependency Injection is merely one concrete example of
@@ -200,7 +210,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>6.What are the different types of IoC (dependency injection)?</c></summary>
+								<summary>
+									6.What are the different types of IoC (dependency injection)?
+								</summary>
 								<div class="toggle-content">
 									<p>Types of IoC are −</p>
 									<ul class="list">
@@ -219,7 +231,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>Which DI would you suggest Constructor-based or setter-based DI?</c></summary>
+								<summary>
+									Which DI would you suggest Constructor-based or setter-based DI?
+								</summary>
 								<div class="toggle-content">
 									<p>Since you can mix both, Constructor- and Setter-based DI, it is a good rule of
 										thumb to use constructor arguments for mandatory dependencies and setters for
@@ -228,7 +242,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What are the benefits of IOC?</c></summary>
+								<summary>
+									What are the benefits of IOC?
+								</summary>
 								<div class="toggle-content">
 									<p>The main benefits of IOC or dependency injection are −</p>
 									<ul class="list">
@@ -251,7 +267,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is AOP?</c></summary>
+								<summary>
+									What is AOP?
+								</summary>
 								<div class="toggle-content">
 									<p>Aspect-oriented programming, or AOP, is a programming technique that allows
 										programmers to modularize crosscutting concerns, or behavior that cuts across
@@ -261,7 +279,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Spring IoC container?</c></summary>
+								<summary>
+									What is Spring IoC container?
+								</summary>
 								<div class="toggle-content">
 									<p>The Spring IoC creates the objects, wire them together, configure them, and
 										manage their complete lifecycle from creation till destruction. The Spring
@@ -270,7 +290,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What are types of IoC containers? Explain them.</c></summary>
+								<summary>
+									What are types of IoC containers? Explain them.
+								</summary>
 								<div class="toggle-content">
 									<p>There are two types of IoC containers −</p>
 									<ul class="list">
@@ -290,7 +312,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>Give an example of BeanFactory implementation.</c></summary>
+								<summary>
+									Give an example of BeanFactory implementation.
+								</summary>
 								<div class="toggle-content">
 									<p>The most commonly used BeanFactory implementation is the <b>XmlBeanFactory</b>
 										class. This container reads the configuration metadata from an XML file and uses
@@ -298,7 +322,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What are the common implementations of the ApplicationContext?</c></summary>
+								<summary>
+									What are the common implementations of the ApplicationContext?
+								</summary>
 								<div class="toggle-content">
 									<p>The three commonly used implementation of 'Application Context' are −</p>
 									<ul class="list">
@@ -322,7 +348,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is the difference between Bean Factory and ApplicationContext?</c></summary>
+								<summary>
+									What is the difference between Bean Factory and ApplicationContext?
+								</summary>
 								<div class="toggle-content">
 									<p>Following are some of the differences −</p>
 									<ul class="list">
@@ -352,7 +380,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What are Spring beans?</c></summary>
+								<summary>
+									What are Spring beans?
+								</summary>
 								<div class="toggle-content">
 									<p>The objects that form the backbone of your application and that are managed by
 										the Spring IoC container are called beans. A bean is an object that is
@@ -362,7 +392,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What does a bean definition contain?</c></summary>
+								<summary>
+									What does a bean definition contain?
+								</summary>
 								<div class="toggle-content">
 									<p>The bean definition contains the information called configuration metadata which
 										is needed for the container to know the followings −</p>
@@ -374,7 +406,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>How do you provide configuration metadata to the Spring Container?</c></summary>
+								<summary>
+									How do you provide configuration metadata to the Spring Container?
+								</summary>
 								<div class="toggle-content">
 									<p>There are following three important methods to provide configuration metadata to
 										the Spring Container −</p>
@@ -386,7 +420,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>How do add a bean in spring application?</c></summary>
+								<summary>
+									How do add a bean in spring application?
+								</summary>
 								<div class="toggle-content">
 									<p>Check the following example −</p>
 									<pre class="prettyprint notraslate prettyprinted" style=""><span class="pun">&lt;?</span><span class="pln">xml version </span><span class="pun">=</span><span class="pln"> </span><span class="str">"1.0"</span><span class="pln"> encoding </span><span class="pun">=</span><span class="pln"> </span><span class="str">"UTF-8"</span><span class="pun">?&gt;</span><span class="pln">
@@ -404,7 +440,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>How do you define a bean scope?</c></summary>
+								<summary>
+									How do you define a bean scope?
+								</summary>
 								<div class="toggle-content">
 									<p>When defining a &lt;bean&gt; in Spring, you have the option of declaring a scope
 										for that bean. For example, to force Spring to produce a new bean instance each
@@ -416,7 +454,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What bean scopes does Spring support? Explain them.</c></summary>
+								<summary>
+									What bean scopes does Spring support? Explain them.
+								</summary>
 								<div class="toggle-content">
 									<p>The Spring Framework supports following five scopes, three of which are available
 										only if you use a web-aware ApplicationContext.</p>
@@ -446,19 +486,25 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is default scope of bean in Spring framework?</c></summary>
+								<summary>
+									What is default scope of bean in Spring framework?
+								</summary>
 								<div class="toggle-content">
 									<p>The default scope of bean is Singleton for Spring framework.</p>
 								</div>
 							</details>
 							<details>
-								<summary><c>Are Singleton beans thread safe in Spring Framework?</c></summary>
+								<summary>
+									Are Singleton beans thread safe in Spring Framework?
+								</summary>
 								<div class="toggle-content">
 									<p>No, singleton beans are not thread-safe in Spring framework.</p>
 								</div>
 							</details>
 							<details>
-								<summary><c>Explain Bean lifecycle in Spring framework?</c></summary>
+								<summary>
+									Explain Bean lifecycle in Spring framework?
+								</summary>
 								<div class="toggle-content">
 									<p>Following is sequence of a bean lifecycle in Spring −</p>
 									<ul class="list">
@@ -505,7 +551,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What are inner beans in Spring?</c></summary>
+								<summary>
+									What are inner beans in Spring?
+								</summary>
 								<div class="toggle-content">
 									<p>A &lt;bean/&gt; element inside the &lt;property/&gt; or &lt;constructor-arg/&gt;
 										elements defines a so-called inner bean. An inner bean definition does not
@@ -515,7 +563,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>How can you inject Java Collection in Spring?</c></summary>
+								<summary>
+									How can you inject Java Collection in Spring?
+								</summary>
 								<div class="toggle-content">
 									<p>Spring offers four types of collection configuration elements which are as
 										follows −</p>
@@ -540,7 +590,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is bean auto wiring?</c></summary>
+								<summary>
+									What is bean auto wiring?
+								</summary>
 								<div class="toggle-content">
 									<p>The Spring container is able to autowire relationships between collaborating
 										beans. This means that it is possible to automatically let Spring resolve
@@ -550,7 +602,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What are different Modes of auto wiring?</c></summary>
+								<summary>
+									What are different Modes of auto wiring?
+								</summary>
 								<div class="toggle-content">
 									<p>The autowiring functionality has five modes which can be used to instruct Spring
 										container to use autowiring for dependency injection −</p>
@@ -590,7 +644,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What are the limitations with autowiring?</c></summary>
+								<summary>
+									What are the limitations with autowiring?
+								</summary>
 								<div class="toggle-content">
 									<p>Limitations of autowiring are −</p>
 									<ul class="list">
@@ -611,13 +667,17 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>Can you inject null and empty string values in Spring?</c></summary>
+								<summary>
+									Can you inject null and empty string values in Spring?
+								</summary>
 								<div class="toggle-content">
 									<p>Yes.</p>
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Annotation-based container configuration?</c></summary>
+								<summary>
+									What is Annotation-based container configuration?
+								</summary>
 								<div class="toggle-content">
 									<p>An alternative to XML setups is provided by annotation-based configuration which
 										relies on the bytecode metadata for wiring up components instead of
@@ -627,7 +687,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>How do you turn on annotation wiring?</c></summary>
+								<summary>
+									How do you turn on annotation wiring?
+								</summary>
 								<div class="toggle-content">
 									<p>Annotation wiring is not turned on in the Spring container by default. So, before
 										we can use annotation-based wiring, we will need to enable it in our Spring
@@ -635,7 +697,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What does @Required annotation mean?</c></summary>
+								<summary>
+									What does @Required annotation mean?
+								</summary>
 								<div class="toggle-content">
 									<p>This annotation simply indicates that the affected bean property must be
 										populated at configuration time, through an explicit property value in a bean
@@ -645,7 +709,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What does @Autowired annotation mean?</c></summary>
+								<summary>
+									What does @Autowired annotation mean?
+								</summary>
 								<div class="toggle-content">
 									<p>This annotation provides more fine-grained control over where and how autowiring
 										should be accomplished. The @Autowired annotation can be used to autowire bean
@@ -654,7 +720,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What does @Qualifier annotation mean?</c></summary>
+								<summary>
+									What does @Qualifier annotation mean?
+								</summary>
 								<div class="toggle-content">
 									<p>There may be a situation when you create more than one bean of the same type and
 										want to wire only one of them with a property, in such case you can use
@@ -663,7 +731,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What are the JSR-250 Annotations? Explain them.</c></summary>
+								<summary>
+									What are the JSR-250 Annotations? Explain them.
+								</summary>
 								<div class="toggle-content">
 									<p>Spring has JSR-250 based annotations which include @PostConstruct, @PreDestroy
 										and @Resource annotations.</p>
@@ -686,7 +756,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Spring Java Based Configuration? Give some annotation example.</c></summary>
+								<summary>
+									What is Spring Java Based Configuration? Give some annotation example.
+								</summary>
 								<div class="toggle-content">
 									<p>Java based configuration option enables you to write most of your Spring
 										configuration without XML but with the help of few Java-based annotations.</p>
@@ -699,7 +771,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>How is event handling done in Spring?</c></summary>
+								<summary>
+									How is event handling done in Spring?
+								</summary>
 								<div class="toggle-content">
 									<p>Event handling in the <i>ApplicationContext</i> is provided through the
 										<i>ApplicationEvent</i> class and <i>ApplicationListener</i> interface. So if a
@@ -710,7 +784,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>Describe some of the standard Spring events.</c></summary>
+								<summary>
+									Describe some of the standard Spring events.
+								</summary>
 								<div class="toggle-content">
 									<p>Spring provides the following standard events −</p>
 									<ul class="list">
@@ -746,7 +822,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Aspect?</c></summary>
+								<summary>
+									What is Aspect?
+								</summary>
 								<div class="toggle-content">
 									<p>A module which has a set of APIs providing cross-cutting requirements. For
 										example, a logging module would be called AOP aspect for logging. An application
@@ -756,8 +834,10 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is the difference between concern and cross-cutting concern in Spring
-									AOP?</c></summary>
+								<summary>
+									What is the difference between concern and cross-cutting concern in Spring
+										AOP?
+								</summary>
 								<div class="toggle-content">
 									<p><b>Concern</b> − Concern is behavior which we want to have in a module of an
 										application. Concern may be defined as a functionality we want to implement.
@@ -769,7 +849,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Join point?</c></summary>
+								<summary>
+									What is Join point?
+								</summary>
 								<div class="toggle-content">
 									<p>This represents a point in your application where you can plug-in AOP aspect. You
 										can also say, it is the actual place in the application where an action will be
@@ -777,7 +859,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Advice?</c></summary>
+								<summary>
+									What is Advice?
+								</summary>
 								<div class="toggle-content">
 									<p>This is the actual action to be taken either before or after the method
 										execution. This is actual piece of code that is invoked during program execution
@@ -785,7 +869,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Pointcut?</c></summary>
+								<summary>
+									What is Pointcut?
+								</summary>
 								<div class="toggle-content">
 									<p>This is a set of one or more joinpoints where an advice should be executed. You
 										can specify pointcuts using expressions or patterns as we will see in our AOP
@@ -793,34 +879,44 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Introduction?</c></summary>
+								<summary>
+									What is Introduction?
+								</summary>
 								<div class="toggle-content">
 									<p>An introduction allows you to add new methods or attributes to existing classes.
 									</p>
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Target object?</c></summary>
+								<summary>
+									What is Target object?
+								</summary>
 								<div class="toggle-content">
 									<p>The object being advised by one or more aspects, this object will always be a
 										proxy object. Also referred to as the advised object.</p>
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Weaving?</c></summary>
+								<summary>
+									What is Weaving?
+								</summary>
 								<div class="toggle-content">
 									<p>Weaving is the process of linking aspects with other application types or objects
 										to create an advised object.</p>
 								</div>
 							</details>
 							<details>
-								<summary><c>What are the different points where weaving can be applied?</c></summary>
+								<summary>
+									What are the different points where weaving can be applied?
+								</summary>
 								<div class="toggle-content">
 									<p>Weaving can be done at compile time, load time, or at runtime.</p>
 								</div>
 							</details>
 							<details>
-								<summary><c>What are the types of advice?</c></summary>
+								<summary>
+									What are the types of advice?
+								</summary>
 								<div class="toggle-content">
 									<p>Spring aspects can work with five kinds of advice mentioned below −</p>
 									<ul class="list">
@@ -847,28 +943,36 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is XML Schema based aspect implementation?</c></summary>
+								<summary>
+									What is XML Schema based aspect implementation?
+								</summary>
 								<div class="toggle-content">
 									<p>Aspects are implemented using regular classes along with XML based configuration.
 									</p>
 								</div>
 							</details>
 							<details>
-								<summary><c>What is @AspectJ? based aspect implementation?</c></summary>
+								<summary>
+									What is @AspectJ? based aspect implementation?
+								</summary>
 								<div class="toggle-content">
 									<p>@AspectJ refers to a style of declaring aspects as regular Java classes annotated
 										with Java 5 annotations.</p>
 								</div>
 							</details>
 							<details>
-								<summary><c>How JDBC can be used more efficiently in spring framework?</c></summary>
+								<summary>
+									How JDBC can be used more efficiently in spring framework?
+								</summary>
 								<div class="toggle-content">
 									<p>JDBC can be used more efficiently with the help of a template class provided by
 										spring framework called as JdbcTemplate.</p>
 								</div>
 							</details>
 							<details>
-								<summary><c>How JdbcTemplate can be used?</c></summary>
+								<summary>
+									How JdbcTemplate can be used?
+								</summary>
 								<div class="toggle-content">
 									<p>With use of Spring JDBC framework the burden of resource management and error
 										handling is reduced a lot. So it leaves developers to write the statements and
@@ -879,7 +983,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What are the types of the transaction management Spring supports?</c></summary>
+								<summary>
+									What are the types of the transaction management Spring supports?
+								</summary>
 								<div class="toggle-content">
 									<p>Spring supports two types of transaction management −</p>
 									<ul class="list">
@@ -897,7 +1003,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>Which of the above transaction management type is preferable?</c></summary>
+								<summary>
+									Which of the above transaction management type is preferable?
+								</summary>
 								<div class="toggle-content">
 									<p>Declarative transaction management is preferable over programmatic transaction
 										management though it is less flexible than programmatic transaction management,
@@ -905,7 +1013,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Spring MVC framework?</c></summary>
+								<summary>
+									What is Spring MVC framework?
+								</summary>
 								<div class="toggle-content">
 									<p>The Spring web MVC framework provides model-view-controller architecture and
 										ready components that can be used to develop flexible and loosely coupled web
@@ -915,14 +1025,18 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is a DispatcherServlet?</c></summary>
+								<summary>
+									What is a DispatcherServlet?
+								</summary>
 								<div class="toggle-content">
 									<p>The Spring Web MVC framework is designed around a DispatcherServlet that handles
 										all the HTTP requests and responses. </p>
 								</div>
 							</details>
 							<details>
-								<summary><c>What is WebApplicationContext ?</c></summary>
+								<summary>
+									What is WebApplicationContext ?
+								</summary>
 								<div class="toggle-content">
 									<p>The <i>WebApplicationContext</i> is an extension of the plain
 										<i>ApplicationContext</i> that has some extra features necessary for web
@@ -933,7 +1047,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What are the advantages of Spring MVC over Struts MVC ?</c></summary>
+								<summary>
+									What are the advantages of Spring MVC over Struts MVC ?
+								</summary>
 								<div class="toggle-content">
 									<p>Following are some of the advantages of Spring MVC over Struts MVC −</p>
 									<ul class="list">
@@ -980,7 +1096,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What is Controller in Spring MVC framework?</c></summary>
+								<summary>
+									What is Controller in Spring MVC framework?
+								</summary>
 								<div class="toggle-content">
 									<p>Controllers provide access to the application behavior that you typically define
 										through a service interface. Controllers interpret user input and transform it
@@ -990,7 +1108,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>Explain the <i>@Controller</i> annotation.</c></summary>
+								<summary>
+									Explain the <i>@Controller</i> annotation.
+								</summary>
 								<div class="toggle-content">
 									<p>The <i>@Controller</i> annotation indicates that a particular class serves the
 										role of a controller. Spring does not require you to extend any controller base
@@ -998,14 +1118,18 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>Explain <i>@RequestMapping</i> annotation.</c></summary>
+								<summary>
+									Explain <i>@RequestMapping</i> annotation.
+								</summary>
 								<div class="toggle-content">
 									<p><i>@RequestMapping</i> annotation is used to map a URL to either an entire class
 										or a particular handler method.</p>
 								</div>
 							</details>
 							<details>
-								<summary><c>What are the ways to access Hibernate by using Spring?</c></summary>
+								<summary>
+									What are the ways to access Hibernate by using Spring?
+								</summary>
 								<div class="toggle-content">
 									<p>There are two ways to access hibernate using spring −</p>
 									<ul class="list">
@@ -1019,7 +1143,9 @@
 								</div>
 							</details>
 							<details>
-								<summary><c>What are ORM's Spring supports ?</c></summary>
+								<summary>
+									What are ORM's Spring supports ?
+								</summary>
 								<div class="toggle-content">
 									<p>Spring supports the following ORM's −</p>
 									<ul class="list">
@@ -1032,7 +1158,6 @@
 									</ul>
 								</div>
 							</details>
-						</div>
 					</div>
 				</div>
 			</div>
