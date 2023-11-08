@@ -84,6 +84,22 @@
 					x.classList.toggle("fa-book-open");
 				}
 			</script>
+			<script>
+const summaries = document.querySelectorAll('summary');
+
+summaries.forEach((summary) => {
+  summary.addEventListener('click', closeOpenedDetails);
+});
+
+function closeOpenedDetails() {
+  summaries.forEach((summary) => {
+    let detail = summary.parentNode;
+      if (detail != this.parentNode) {
+        detail.removeAttribute('open');
+      }
+    });
+}
+<script>
 			<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
 			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
 				aria-multiselectable="true">
