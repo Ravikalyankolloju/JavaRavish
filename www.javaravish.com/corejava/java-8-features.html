@@ -65,42 +65,18 @@
 				</a>
 			</li>
 		</ol>
-
 		<div class="row">
 			<link rel="stylesheet" href="../scripts/css/sidebarcollapsecss.css">
-			<style>
-				@media only screen and (max-width: 600px) {
-					.hidesidebar {
-						display: none;
-					}
-				}
-			</style>
-			<script>
-				//Script to Open and Close Sidebar
-				function sidebar_open() {
-					document.getElementById("mySidebar").style.display = "block";
-				}
-
-				function sidebar_close() {
-					document.getElementById("mySidebar").style.display = "none";
-				}
-
-				// toggle up & down icon
-				function myFunction(x) {
-					x.classList.toggle("fa-book-open");
-				}
-			</script>
-
-
-			<button class="w3-button w3-teal w3-hide-large" onclick="sidebar_open()">&#9776;</button>
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#sideBarResponsive" aria-controls="sideBarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
 			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
 				aria-multiselectable="true">
-				<div class="card">
+				<div class="collapse card" id="sideBarResponsive">
 					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Java</h2>
-					<br>
 					<div class="list-group">
-						<button class="w3-teal bg-transparent w3-large w3-hide-large" onclick="sidebar_close()">Close
-							Menu &times;</button>
 						<ul class="leftBarList">
 							<li><a href="java-introduction.html">Java Introduction</a></li>
 							<li><a href="java-vm-memory-management.html">JVM Memory Management</a></li>
