@@ -172,6 +172,21 @@ a:hover {
 	text-decoration: underline;
 }
 
+.sidebarfont a:hover {
+	color: #000;
+	text-decoration: underline;
+	background-color: rgb(192, 192, 192);
+	border-radius: 100vmax;
+	transition: .3s ease;
+    display: inline-block;
+    width: 90%;
+    border-radius: 100vmax;
+    padding: 0.3rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 a:not([href]):not([tabindex]) {
 	color: inherit;
 	text-decoration: none;
