@@ -16,6 +16,19 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+	<style>
+		.div-to-hide {
+			display: block;
+			/* Display the div by default */
+		}
+
+		@media screen and (max-width: 767px) {
+			.div-to-hide {
+				display: none;
+				/* Hide the div on screens smaller than 768px (mobile) */
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -39,7 +52,6 @@
 					</li>
 					<li class="nav-item"><a class="nav-link" href="../main/interview-questions.html">Interview
 							Questions</a></li>
-
 				</ul>
 			</div>
 		</div>
@@ -69,6 +81,17 @@
 			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
 				aria-multiselectable="true">
 				<div class="collapse card" id="sideBarResponsive">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Spring</h2>
+					<div class="list-group">
+						<ul class="leftBarList">
+							<li><a href="../corejava/java-interview-questions.html">Java Interview Questions</a></li>
+							<li><a href="../spring/spring-interview-questions.html">Spring Interview Questions</a></li>
+							<li><a href="../springboot/sb-interview-questions.html">Spring Boot Interview Questions</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="div-to-hide card" id="sideBarResponsive">
 					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Spring</h2>
 					<div class="list-group">
 						<ul class="leftBarList">
