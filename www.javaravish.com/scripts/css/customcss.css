@@ -301,3 +301,9 @@ details>p {
 	margin: 0;
 	box-shadow: 3px 3px 4px black;
 }
+figure{
+	display: inline;
+}
+figcaption {
+	text-align: center;
+}
