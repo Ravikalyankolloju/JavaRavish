@@ -107,7 +107,675 @@
 			<div class="col-lg-9 mb-4">
 				<div class="card h-100">
 					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Interview Questions</h1>
-					<div class="card-body">
+					<s="card-body">
+						<br>
+						<h1><b>1. Java Inheritance Interview Questions</b></h1>
+						<br>
+						<details>
+							<summary>1. What is inheritance in Java?</summary>
+							<div class="toggle-content">
+								<p>Acquiring the features from existing entities is known as “inheritance”.<br> The
+									existing entity is called a super or parent class and the new entity that is
+									acquiring the
+									features of an existing entity is called sub-class or child class. <br>The process
+									of
+									inheriting the properties and behaviors from one object to another object is known
+									as java. <br>Creating a new class from an existing class using an IS-A relationship
+									is
+									known as “inheritance”.</p>
+							</div>
+						</details>
+						<details>
+							<summary>2. What is the purpose of inheritance?</summary>
+							<div class="toggle-content">
+								<p>Inheritance offers code reusability and thereby Rapid Application Development (RAD)
+									is possible.</p>
+							</div>
+						</details>
+						<details>
+							<summary>3. What are the types of inheritance?</summary>
+							<div class="toggle-content">
+								<p>The following are the types of inheritances:<br>
+									a. Single inheritance<br>
+									b. Multi-level inheritance<br>
+									c. Hierarchical inheritance<br>
+									d. Multiple inheritance<br>
+									e. Hybrid inheritance</p>
+
+								<u>Single inheritance:</u> If a class is having only one parent class that is known as
+								“single inheritance”.<br>
+								<u>Multi-level inheritance:</u><br>
+								<u>Hierarchical inheritance:</u>In this inheritance, one class is being extended to more
+								than one class.<br>
+								<u>Multiple Inheritance:</u> In multilevel inheritance, one class is extended by one
+								class. That extended class or the subclass is being extended by another class and forms
+								a chain of relationships between the classes multilevel inheritance.<br>
+								<u>Hybrid inheritance:</u>A hybrid inheritance in java is a combination of single and
+								multiple inheritance. It can be achieved through interfaces.<br></p>
+							</div>
+						</details>
+						<details>
+							<summary>4. What is the purpose of the ‘super’ keyword in Java?</summary>
+							<div class="toggle-content">
+								<p> The following are the major uses of super keyword they are:
+								<ul>
+									<li>If your method overrides one of its super class’s methods, you can invoke the
+										overridden method through the use of the keyword super.</li>
+
+									<li>Using a super keyword we can explicitly call the immediate superclass
+										constructor
+										from the subclass constructor.</li>
+
+									<li>From sub-class, to access instance variables of superclass where a subclass is
+										also
+										having a variable with the same name.</li>
+								</ul>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>5. What are the differences between ‘this’ and ‘super’ keyword?</summary>
+							<div class="toggle-content">
+								<p>Using ‘this’ from within one class constructor, a call can be made to another
+									constructor of the same class.<br> Whereas, using ‘super’ keyword superclass
+									constructor
+									is called from sub-class constructor.</p>
+							</div>
+						</details>
+						<details>
+							<summary>6. I don’t want my class to be inherited by any other class. What should I do?
+							</summary>
+							<div class="toggle-content">
+								<p>You should declare your class as final. But you can’t define your class as final if
+									it is an abstract class. A class declared as final can’t be extended by any other
+									class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>7. What is Is-A relationship in Java?</summary>
+							<div class="toggle-content">
+								<p>Is-A relationship represents Inheritance. It is implemented using the “extends”
+									keyword. It is used for code reusability.</p>
+							</div>
+						</details>
+						<details>
+							<summary>8. Can we assign superclass to subclass?</summary>
+							<div class="toggle-content">
+								<p>No</p>
+							</div>
+						</details>
+						<details>
+							<summary>9. Can a class extend more than one class?</summary>
+							<div class="toggle-content">
+								<p>No, one class can extend only a single class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>10. Are constructor and instance initialization block inherited to subclass?
+							</summary>
+							<div class="toggle-content">
+								<p>No, constructor and instance initialization block of the superclass cannot be
+									inherited to its subclass but they are executed while creating an object of the
+									subclass.</p>
+							</div>
+						</details>
+						<details>
+							<summary>11. Are static members inherited to subclass in Java?</summary>
+							<div class="toggle-content">
+								<p>Static block cannot be inherited to its subclass.
+
+									A static method of superclass is inherited to the subclass as a static member and
+									non-static method is inherited as a non-static member only.</p>
+							</div>
+						</details>
+						<details>
+							<summary>12. Can we extend (inherit) final class?</summary>
+							<div class="toggle-content">
+								<p>No, a class declared with final keyword cannot be inherited.</p>
+							</div>
+						</details>
+						<details>
+							<summary>13. Can a final method and private members overridden?</summary>
+							<div class="toggle-content">
+								<p>No</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>14. What is order of calling constructors in case of inheritance?</summary>
+							<div class="toggle-content">
+								<p>In case of inheritance, constructors are called from the top to down hierarchy.</p>
+							</div>
+						</details>
+						<details>
+							<summary>15. What are the advantages of inheritance in Java?</summary>
+							<div class="toggle-content">
+								<p>The advantages of inheritance in java are as follows:
+								<ul>
+									<li>We can minimize the length of duplicate code in an application by putting the
+										common code in the superclass and sharing it amongst several subclasses.</li>
+									<li>Due to reducing the length of code, the redundancy of the application is also
+										reduced.</li>
+									<li>Inheritance can also make application code more flexible to change.</li>
+								</ul>
+
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>16. Why multiple inheritance is not supported in java through class?</summary>
+							<div class="toggle-content">
+								<p>Multiple inheritance means that one class extends two superclasses or base classes
+									but in Java, one class cannot extend more than one class simultaneously. At most,
+									one class can extend only one class.
+									<br>
+									Therefore, to reduce ambiguity, complexity, and confusion, Java does not support
+									multiple inheritance through classes.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>17. How will you restrict a member of a class from inheriting its subclass?
+							</summary>
+							<div class="toggle-content">
+								<p>We can restrict members of a class by declaring them private because the private
+									members of superclass are not available to the subclass directly. They are only
+									available in their own class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>18. Can we access subclass members if we create an object of superclass?</summary>
+							<div class="toggle-content">
+								<p>No, we can access only superclass members but not the subclass members.</p>
+							</div>
+						</details>
+						<details>
+							<summary>19. Can we access both superclass and subclass members if we create an object of
+								subclass?</summary>
+							<div class="toggle-content">
+								<p>Yes, we can access both superclass and subclass members.</p>
+							</div>
+						</details>
+						<details>
+							<summary>20. What happens if both superclass and subclass have a field with the same name?
+							</summary>
+							<div class="toggle-content">
+								<p>Only subclass members are accessible if an object of subclass is instantiated.</p>
+							</div>
+						</details>
+						<details>
+							<summary>21. What is the diamond problem in inheritance? How can it be resolved in Java?
+							</summary>
+							<div class="toggle-content">
+								<p>The diamond problem is a situation that arises in multiple inheritance when a
+									subclass inherits from two classes that have a common parent class. This creates a
+									diamond-shaped inheritance hierarchy, and if the common parent class has a method
+									that is overridden in both subclasses, it becomes ambiguous which implementation
+									should be used. In Java, this problem is resolved by using the "default" method
+									feature introduced in Java 8. A default method is a method declared in an interface
+									with a default implementation that can be overridden in the implementing class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>23. What is the difference between composition and inheritance?</summary>
+							<div class="toggle-content">
+								<p> Java supports both composition and inheritance, but both are different in many ways.
+									Composition objects have a reference to the composition classes by having a loosely
+									bounded relationship, and it has a – has a relationship between classes. Using this,
+									we can use single classes that can be composed within multiple classes and used in
+									dependency injection and composition is a relationship between objects, whereas
+									Inheritance is a relationship between the classes and it has is a relationship
+									between the classes and using inheritance derived class object carries the base
+									class definition hence it is a tightly bounded relationship. It is mostly used in
+									run time polymorphism, and in this, a single class can only inherit only one class.
+								</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>24. What is the difference between "is-a" and "has-a" relationship?</summary>
+							<div class="toggle-content">
+								<p>"Is-a" relationship is a type of inheritance relationship where a subclass is a
+									specialized version of its superclass. For example, a "Cat" class can inherit from
+									an "Animal" class as it is a specialized type of animal. On the other hand, "has-a"
+									relationship is a type of composition relationship where a class has an instance of
+									another class as one of its members. For example, a "Car" class may have an instance
+									of a "Wheel" class.</p>
+							</div>
+						</details>
+						<br>
+						<h1><b>2. Method Overloading and Overriding Interview Questions</b></h1>
+						<br>
+
+						<details>
+							<summary>1. What is method overloading in Java?</summary>
+							<div class="toggle-content">
+								<p>If two or more methods have same name, but different argument then it is called
+									method overloading.<br>
+									Method overloading is a feature in Java that allows a class to have more than one
+									method with the same name, as long as the methods have different parameter lists.
+									This can be a useful way of providing different behavior for a method depending on
+									the context in which it is called.</p>
+							</div>
+						</details>
+						<details>
+							<summary>2. What are rules of method overloading?</summary>
+							<div class="toggle-content">
+								<p>
+								<table>
+									<tbody>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Number of Arguments</b>
+											</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Overloaded method can have
+												different number of arguments</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Date type</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Overload method can have
+												different data type for argument</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Return type</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Return type can be changed
+												but either number of argument or data type of argument should also be
+												changed.</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Order of arguments</b>
+											</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">If you change sequence of
+												arguments then it is also valid method overloading provided you have
+												different data types arguments.</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Constructor</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can be overloaded</td>
+										</tr>
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>3. Can we change only return type while method overloading?</summary>
+							<div class="toggle-content">
+								<p>You can not.If we change only return type, it will become ambiguous for compiler to
+									figure out which method to call.That is why you can not change only return type.</p>
+							</div>
+						</details>
+						<details>
+							<summary>4. Can we overload static and main method in java?</summary>
+							<div class="toggle-content">
+								<p>Yes, we can overload static methods in java but we can not override them.<br>
+									you can overload main method in java but only method with signature public static
+									void main(String[] args) will be used when your class is invoked by JVM.</p>
+							</div>
+						</details>
+						<details>
+							<summary>5. Can overloaded method be overrided?</summary>
+							<div class="toggle-content">
+								<p>Yes, we can override a method which is overloaded in super class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>6. Can we declare one overloaded method as static and another one as non-static?
+							</summary>
+							<div class="toggle-content">
+								<p>Yes. Overloaded methods can be either static or non static.</p>
+							</div>
+						</details>
+						<details>
+							<summary>7. How do compiler differentiate overloaded methods from duplicate methods?
+							</summary>
+							<div class="toggle-content">
+								<p>Compiler uses method signature to check whether the method is overloaded or
+									duplicated. Duplicate methods will have same method signatures i.e same name, same
+									number of arguments and same types of arguments. Overloaded methods will also have
+									same name but differ in number of arguments or else types of arguments.</p>
+							</div>
+						</details>
+						<details>
+							<summary>8. What is method overriding in Java?</summary>
+							<div class="toggle-content">
+								<p>Method overriding is another way to define a method with same name but different code
+									but it must be in subclass. Overriding is based upon run-time Polymorphism as method
+									calls are resolved at run-time depending upon actual object.
+									<br>
+									For example if a variable of type Parent holds an object of Child class then method
+									invoked will be from child class and not parent class, provides its overridden.
+									<br>
+									In order to override a method, you must follow rules of method overriding which
+									means declaring method with same signature in sub class. See here to learn more
+									about method overriding in Java.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>9. Can we override static method in Java?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot override static method in Java because they are resolved and bonded
+									during compile time. Since overriding is a run-time activity and if a method call is
+									already resolved at compile time then it will not take place and that's why it's not
+									possible to override static method in Java.
+									<br>
+									But, you can define another static method of same signature in sub class, this is
+									known as method hiding. Actual method called will depends upon the type of class and
+									not on type of object as its the case with overriding. See here to learn more about
+									why you cannot override static method in Java.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>10. Can we override a private method in Java?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot override private method in Java. Since private methods are not visible
+									outside the class, they are not available in sub-class hence they cannot be
+									overridden.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>11. What is covariant method overriding?</summary>
+							<div class="toggle-content">
+								<p>One of the rule of method overriding is that return type of overriding method must be
+									same as overridden method but this restriction is relaxed little bit from Java 1.5
+									and now overridden method can return sub class of return type of original method.
+									<br>
+									This relaxation is known as co-variant method overriding and it allows you to remove
+									casting at client end.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>12. What are rules of method overriding?</summary>
+							<div class="toggle-content">
+								<p>
+								<table style="margin-left: 0px; margin-right: 0px; text-align: left;">
+									<tbody>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Arguments</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Must not change</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Return type</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can’t change except for
+												covariant (subtype) returns</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Access Modifier</b>
+											</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Must not be more
+												restrictive. Can be less restrictive.</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Exceptions </b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can reduce or eliminate
+												but must not throw new/broader checked exceptions</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Contructor</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can not be overridden</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Static method</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can not be overridden</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>final method</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can not be&nbsp;overridden
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>13. Can we change argument list of overridden method?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot change the argument list of overridden method in Java. An overriding
+									method must have same signature as original method. Only return type can be changed
+									that to only to sub type of return type of original method.</p>
+							</div>
+						</details>
+						<details>
+							<summary>14. Can we change return type of method in subclass while overriding?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot change the return type of method during overriding. It would be
+									violation of rules of overriding. Though from Java 5 onward you can replace the
+									return type with sub type e.g. if original method has return type as
+									java.lang.Object then you can change return type of overridden method as any type
+									e.g. clone() method.</p>
+							</div>
+						</details>
+						<details>
+							<summary>15. Can we override a method which throws run-time exception without throws clause?
+							</summary>
+							<div class="toggle-content">
+								<p>Yes, you can. There is no restriction on throwing RuntimeException from overriding
+									method. So if your original method throws NullPointerException than its not
+									necessary to throw NPE from overriding method as well.</p>
+							</div>
+						</details>
+						<details>
+							<summary>16. How do you call super class version of an overriding method in sub class?
+							</summary>
+							<div class="toggle-content">
+								<p>You can call it using super keyword. For example if you have a method calculate() in
+									both parent and child class then from child class you can invoke parent class method
+									calculate() as super.calculate().</p>
+							</div>
+						</details>
+						<details>
+							<summary>17. Can we override a non-static method as static in Java?</summary>
+							<div class="toggle-content">
+								<p>No, its not possible to define a non-static method of same name as static method in
+									parent class, its compile time error in Java. See here to learn more about the
+									overriding static method in Java.</p>
+							</div>
+						</details>
+						<details>
+							<summary>18. Can we override the constructor in Java?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot override constructors in Java because they are not inherited.
+									Remember, we are talking about overriding here not overloading, you can overload
+									construct but you cannot override them.<br>
+									Overriding always happens in child class and since constructors are not inherited
+									and their name is always the same as the class name it's not possible to override
+									them in Java.</p>
+							</div>
+						</details>
+						<details>
+							<summary>19. Can we override a final method in Java?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot override a final method in Java. Trying to override a final method in
+									a subclass will result in a compile-time error. Actually making a method final is
+									signal to all developer that this method is not for inheritance and it should be
+									used in its present form. You generally make a method final due to security reasons.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>20. Difference Between Method Overloading and Method Overriding in Java</summary>
+							<div class="toggle-content">
+								<p>
+								<table border="1">
+									<tbody>
+										<tr>
+											<td style="width: 50%;"><strong>Method Overloading</strong></td>
+											<td style="width: 50%;"><strong>Method Overriding</strong></td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>It is used to increase the readability of the program</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Provides a specific implementation of the method already in the
+														parent class</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>It is performed within the same class</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>It involves multiple classes</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Parameters must be different in case of overloading</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Parameters must be same in case of overriding</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Is an example of compile-time polymorphism</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>It is an example of runtime polymorphism</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>In java, method overloading can't be performed by changing
+														return type of the method only. Return type can be same or
+														different in method overloading. But you must have to change the
+														parameter.</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Return type must be same or covariant in method overriding.</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Static methods can be overloaded</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Overriding does not involve static methods.</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Method overloading is performed within class.</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Method overriding occurs in two classes that have IS-A
+														(inheritance) relationship.</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Poor Performance due to compile time polymorphism.</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>It gives better performance. The reason behind this is that the
+														binding of overridden methods is being done at runtime.</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Private and final methods can be overloaded.</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Private and final methods can’t be overridden.</li>
+												</ul>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<br>
+						<h1><b>3. Basic Java Interview Questions</b></h1>
+						<br>
+						<details>
+							<summary> List any five features of Java?</summary>
+							<div class="toggle-content">
+								<p>Some features include Object Oriented, Platform Independent, Robust, Interpreted,
+									Multi-threaded</p>
+							</div>
+						</details>
+						<details>
+							<summary> List any five features of Java?</summary>
+							<div class="toggle-content">
+								<p>Some features include Object Oriented, Platform Independent, Robust, Interpreted,
+									Multi-threaded</p>
+							</div>
+						</details>
+						<details>
+							<summary> List any five features of Java?</summary>
+							<div class="toggle-content">
+								<p>Some features include Object Oriented, Platform Independent, Robust, Interpreted,
+									Multi-threaded</p>
+							</div>
+						</details>
+						<details>
+							<summary> List any five features of Java?</summary>
+							<div class="toggle-content">
+								<p>Some features include Object Oriented, Platform Independent, Robust, Interpreted,
+									Multi-threaded</p>
+							</div>
+						</details>
+						<details>
+							<summary> List any five features of Java?</summary>
+							<div class="toggle-content">
+								<p>Some features include Object Oriented, Platform Independent, Robust, Interpreted,
+									Multi-threaded</p>
+							</div>
+						</details>
+						<details>
+							<summary> List any five features of Java?</summary>
+							<div class="toggle-content">
+								<p>Some features include Object Oriented, Platform Independent, Robust, Interpreted,
+									Multi-threaded</p>
+							</div>
+						</details>
+
+
+
+
+
+
 						<details>
 							<summary> What do you know about Java?</summary>
 							<div class="toggle-content">
@@ -1653,10 +2321,89 @@
 								</p>
 							</div>
 						</details>
-					</div>
+						<br>
+						<b>1. Multithreading, Concurrency and Thread basics Questions</b>
+						</br><br>
+
+						<details>
+							<summary>1) Can we make array volatile in Java?</summary>
+							<div class="toggle-content">
+								<p>Yes, you can make an array volatile in Java but only the
+									reference which is pointing to an array, not the whole array. What I mean, if one
+									thread changes the reference variable to points to another array, that will provide
+									a volatile guarantee, but if multiple threads are changing individual array elements
+									they won't be having happens before guarantee provided by the volatile modifier.
+								</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>2) Can volatile make a non-atomic operation to atomic?</summary>
+							<div class="toggle-content">
+								<p>This another good question I love to ask on volatile, mostly as a follow-up of the
+									previous question. This question is also not easy to answer because volatile is not
+									about atomicity, but there are cases where you can use a volatile variable to make
+									the operation atomic.
+									<br>
+									One example I have seen is having a long field in your class. If you know that a
+									long field is accessed by more than one thread e.g. a counter, a price field or
+									anything, you better make it volatile. Why? because reading to a long variable is
+									not atomic in Java and done in two steps, If one thread is writing or updating long
+									value, it's possible for another thread to see half value (fist 32-bit). While
+									reading/writing a volatile long or double (64 bit) is atomic.<br>
+								</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>3) What are practical uses of volatile modifier?</summary>
+							<div class="toggle-content">
+								<p>One of the practical use of the volatile variable is to make reading double and long
+									atomic. Both double and long are 64-bit wide and they are read in two parts, first
+									32-bit first time and next 32-bit second time, which is non-atomic but volatile
+									double and long read is atomic in Java. Another use of the volatile variable is to
+									provide a memory barrier, just like it is used in <span
+										style="font-family: inherit;">Disrupter </span>framework. Basically, Java Memory
+									model inserts a write barrier after you write to a volatile variable and a read
+									barrier before you read it. Which means, if you write to volatile field then it's
+									guaranteed that any thread accessing that variable will see the value you wrote and
+									anything you did before doing that right into the thread is guaranteed to have
+									happened and any updated data values will also be visible to all threads, because
+									the memory barrier flushed all other writes to the cache.<br>
+								</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>4) What guarantee volatile variable provides?</summary>
+							<div class="toggle-content">
+								<p>volatile variables provide the guarantee about ordering and visibility e.g. volatile
+									assignment cannot be re-ordered with other statements but in the absence of any
+									synchronization instruction compiler, JVM or JIT are free to reorder statements for
+									better performance. volatile also provides the happens-before guarantee which
+									ensures changes made in one thread is visible to others. In some cases volatile also
+									provide atomicity e.g. reading 64-bit data types like long and double are not atomic
+									but read of volatile double or long is atomic.
+								</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>5) Which one would be easy to write? synchronization code for 10 threads or 2
+								threads?</summary>
+							<div class="toggle-content">
+								<p>In terms of writing code, both will be of same complexity because synchronization
+									code is independent of a number of threads. Choice of synchronization though depends
+									upon a number of threads because the number of thread present more contention, so
+									you go for advanced synchronization technique e.g. lock stripping, which requires
+									more complex code and expertise
+								</p>
+							</div>
+						</details>
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 	<style>
 		.footerfont {
