@@ -1,647 +1,2091 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="Java By Ravi Kalyan">
-
-	<title>Java Ravish | Multithreading</title>
-
-	<link rel="shortcut icon" type="image/x-icon" href="../scripts/images/favicon/android-chrome-192x192.png" />
-	<link rel="apple-touch-icon" href="../scripts/images/favicon/apple-touch-icon.jpeg">
-	<link href="../scripts/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../scripts/css/customcss.css">
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
-	<style>
-		.div-to-hide {
-			display: block;
-			/* Display the div by default */
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="author" content="Java By Ravi Kalyan">
+      <title>Java Ravish | Multithreading</title>
+      <link rel="shortcut icon" type="image/x-icon" href="../scripts/images/favicon/android-chrome-192x192.png" />
+      <link rel="apple-touch-icon" href="../scripts/images/favicon/apple-touch-icon.jpeg">
+      <link href="../scripts/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="../scripts/css/customcss.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+      <style>
+         .div-to-hide {
+         display: block;
+         /* Display the div by default */
+         }
+         @media screen and (max-width: 767px) {
+         .div-to-hide {
+         display: none;
+         /* Hide the div on screens smaller than 768px (mobile) */
+         }
+         }
+      </style>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+         <div class="container p-0">
+            <a class="navbar-brand pull-left" href="../main/home.html"><img src="../scripts/images/jrlogo.PNG"
+               style="height: 50px; max-width: 100%;" alt="java by Kalyan" title="Java Ravish Tutorials"></a>
+            <button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+               data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+               aria-label="Toggle navigation">
+            &#9776;
+            </button>
+            <div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+               <ul class="navbar-nav ml-auto text-center">
+                  <li class="nav-item"><a class="nav-link" href="../main/home.html"><img
+                     src="../scripts/images/small/home.jpg"></i></a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="../corejava/java-introduction.html">Java</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../spring/spring-introduction.html">Spring</a></li>
+                  <li class="nav-item"><a class="nav-link" href="../springboot/sb-introduction.html">SpringBoot</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="../main/interview-questions.html">Interview
+                     Questions</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <br>
+      <div class="container-fluid">
+      <br />
+      <ol class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+         <li itemprop="itemListElement" class="breadcrumb-item">
+            <a class="text-dark" itemprop="item" href="../main/home.html"> <span itemprop="name">Home</span>
+            </a>
+            <meta itemprop="position" content="1" />
+         </li>
+         <li itemprop="itemListElement" class="breadcrumb-item">
+            <a class="text-dark" itemprop="item" href="java-introduction.html"> <span itemprop="name">Java</span>
+            </a>
+            <meta itemprop="position" content="2" />
+         </li>
+         <li itemprop="itemListElement" class="breadcrumb-item">
+            <a class="text-dark" itemprop="item" href="#">
+            <span itemprop="name">Multithreading</span>
+            </a>
+         </li>
+      </ol>
+      <div class="row">
+      <link rel="stylesheet" href="../scripts/css/sidebarcollapsecss.css">
+      <button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+         data-target="#sideBarResponsive" aria-controls="sideBarResponsive" aria-expanded="false"
+         aria-label="Toggle navigation">
+      &#9776;
+      </button>
+      <div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+         aria-multiselectable="true">
+         <div class="collapse card" id="sideBarResponsive">
+            <h2 class="card-header text-white" style="background: rgb(0,0,0);">Java</h2>
+            <div class="list-group">
+               <ul class="leftBarList">
+                  <li><a href="java-introduction.html">Java Introduction</a></li>
+                  <li><a href="java-vm-memory-management.html">JVM Memory Management</a></li>
+                  <li><a href="java-garbage-collection.html">Garbage Collection</a></li>
+                  <li><a href="java-final-keyword.html">Final Keyword </a></li>
+                  <li><a href="java-strings.html">Strings</a></li>
+                  <li><a href="java-abstraction.html">Abstraction</a></li>
+                  <li><a href="java-encapsulation.html">Encapsulation</a></li>
+                  <li><a href="java-polymorphism.html">Polymorphism</a></li>
+                  <li><a href="java-inheritance.html">Inheritance </a></li>
+                  <li><a href="java-exception.html">Exception</a></li>
+                  <li><a href="java-multithreading.html">Multithreading</a></li>
+                  <li><a href="java-serialization.html">Serialization</a></li>
+                  <li><a href="java-collection-framework.html">Collection Framework</a></li>
+                  <li><a href="java-8-features.html">Java 8 Features</a></li>
+                  <li><a href="java-interview-questions.html">Java Interview Questions</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="div-to-hide card" id="sideBarResponsive">
+            <h2 class="card-header text-white" style="background: rgb(0,0,0);">Java</h2>
+            <div class="list-group">
+               <ul class="leftBarList">
+                  <li><a href="java-introduction.html">Java Introduction</a></li>
+                  <li><a href="java-vm-memory-management.html">JVM Memory Management</a></li>
+                  <li><a href="java-garbage-collection.html">Garbage Collection</a></li>
+                  <li><a href="java-final-keyword.html">Final Keyword </a></li>
+                  <li><a href="java-strings.html">Strings</a></li>
+                  <li><a href="java-abstraction.html">Abstraction</a></li>
+                  <li><a href="java-encapsulation.html">Encapsulation</a></li>
+                  <li><a href="java-polymorphism.html">Polymorphism</a></li>
+                  <li><a href="java-inheritance.html">Inheritance </a></li>
+                  <li><a href="java-exception.html">Exception</a></li>
+                  <li><a href="java-multithreading.html">Multithreading</a></li>
+                  <li><a href="java-serialization.html">Serialization</a></li>
+                  <li><a href="java-collection-framework.html">Collection Framework</a></li>
+                  <li><a href="java-8-features.html">Java 8 Features</a></li>
+                  <li><a href="java-interview-questions.html">Java Interview Questions</a></li>
+               </ul>
+            </div>
+         </div>
+         <br>
+      </div>
+      <div class="col-lg-9 mb-4">
+         <div class="card h-100">
+            <h1 class="card-header text-white" style="background: rgb(0,0,0);">Multithreading in Java
+            </h1>
+            <div class="card-body">
+               <div class="tab" role="tabpanel">
+                  <p>
+                     <span style="font-weight: 400;">
+                  <p><strong>Multithreading in Java</strong> is a process
+                  of executing multiple threads simultaneously.</p>
+                  </span></p>
+                  <p>A thread is a lightweight sub-process, the smallest unit of processing. Multiprocessing
+                     and multithreading, both are used to achieve multitasking.
+                     <br>
+                     However, we use multithreading than multiprocessing because threads use a shared
+                     memory
+                     area. They don't allocate separate memory area so saves memory, and
+                     context-switching
+                     between the threads takes less time than process.
+                     <br>
+                     Java Multithreading is mostly used in games, animation, etc.
+                  </p>
+                  <hr>
+                  <div class="tab-content tabs">
+                     <div role="tabpanel" class="tab-pane fade in active" id="Interface">
+                        <div id="Div1">
+                           <h2 class="breadcrumb">Table of contents</h2>
+                           <div id="articleLongDescription" class="tutorialContent">
+                              <article id="post-16851" class="content"
+                                 itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+                              <div class="entry-content">
+                                 <div class="toc-dropdown">
+                                    <div class="toc-panel">
+                                       <ul class="toc">
+                                          <ul class="toc-links">
+                                             <ul>
+                                                <li><a href="#intro"> Introduction.</a></li>
+                                                <li>
+                                                   <a href="#define">The ways to define,
+                                                   instantiate and start a new Thread.</a>
+                                                   <ul>
+                                                      <li><a href="#extend">By extending
+                                                         Thread class</a>
+                                                      </li>
+                                                      <li><a href="#implement">By implementing
+                                                         Runnable interface</a>
+                                                      </li>
+                                                   </ul>
+                                                </li>
+                                                <li><a href="#constructor">Thread class
+                                                   constructors</a>
+                                                </li>
+                                                <li><a href="#priority">Thread priority</a></li>
+                                                <li><a href="#nameThread">Getting and setting
+                                                   name of a Thread.</a>
+                                                </li>
+                                                <li>
+                                                   <a href="#execution">The methods to
+                                                   prevent(stop) Thread execution.</a>
+                                                   <ul>
+                                                      <li><a href="#yield">yield()</a></li>
+                                                      <li><a href="#join">join()</a></li>
+                                                      <li><a href="#sleep">sleep()</a></li>
+                                                   </ul>
+                                                </li>
+                                                <li><a
+                                                   href="#syncronization">Synchronization.</a>
+                                                </li>
+                                                <li><a href="#threadCommunication">Inter Thread
+                                                   communication.</a>
+                                                </li>
+                                                <li><a href="#deadLock">Deadlock</a></li>
+                                                <li><a href="#daemon">Daemon Threads.</a></li>
+                                                <li>
+                                                   Various Conclusion
+                                                   <ul>
+                                                      <li><a href="#stop"> To stop a
+                                                         Thread</a>
+                                                      </li>
+                                                      <li><a href="#suspend">Suspend &amp;
+                                                         resume of a thread</a> 
+                                                      </li>
+                                                      <li><a href="#group">Thread group </a>
+                                                      </li>
+                                                      <a href="#group">
+                                                      </a>
+                                                      <li><a href="#group"></a><a
+                                                         href="#green">Green Thread</a>
+                                                      </li>
+                                                      <li><a href="#local">Thread Local</a>
+                                                      </li>
+                                                   </ul>
+                                                </li>
+                                                <li><a href="#life">Life cycle of a Thread</a>
+                                                </li>
+                                             </ul>
+                                          </ul>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <h2 class="wp-block-heading"
+                                    id="what-is-exception-handling-in-java">
+                                    <br><br><br>
+                                    <h2 class="breadcrumb">Introduction</h2>
+                                 </h2>
+                                 <p><strong>Multitasking:</strong>
+                                    Executing several tasks simultaneously is the concept of
+                                    multitasking. There are two types of multitasking's.
+                                 <ol>
+                                    <li><strong>Process based multitasking.</strong>
+                                    </li>
+                                    <li>
+                                       <strong>Thread based multitasking.</strong>
+                                    </li>
+                                 </ol>
+                                 </p>
+                                 <h5>1. Process based multitasking:</h5>
+                                 Executing several tasks simultaneously where each task is a separate
+                                 independent process such type of multitasking is called process
+                                 based multitasking.
+                                 <br>
+                                 Example:
+                                 <ul>
+                                    <li>While typing a java program in the editor we can able to
+                                       listen mp3 audio songs at the same time we can download a
+                                       file from the net all these tasks are independent of each
+                                       other and executing simultaneously and hence it is Process
+                                       based multitasking.
+                                    </li>
+                                    <li>This type of multitasking is best suitable at "os level".
+                                    </li>
+                                 </ul>
+                                 <h5>2. Thread based multitasking:</h5>
+                                 Executing several tasks simultaneously where each task is a separate
+                                 independent part of the same program, is called Thread based
+                                 multitasking.<br> And each independent part is called a "Thread".
+                                 <ol>
+                                    <li>This type of multitasking is best suitable for "programatic
+                                       level".
+                                    </li>
+                                    <li>When compared with "C++", developing multithreading examples
+                                       is very easy in java because java provides in built support
+                                       for multithreading through a rich API (Thread, Runnable,
+                                       ThreadGroup, ThreadLocal...etc).
+                                    </li>
+                                    <li>In multithreading on 10% of the work the programmer is
+                                       required to do and 90% of the work will be down by java API.
+                                    </li>
+                                    <li>
+                                       <em><strong>The main important application areas of
+                                       multithreading are: </strong></em>
+                                       <ol>
+                                          <li>To implement multimedia graphics.</li>
+                                          <li>To develop animations.</li>
+                                          <li>To develop video games etc.</li>
+                                          <li>To develop web and application servers</li>
+                                       </ol>
+                                    </li>
+                                    <li>Whether it is process based or Thread based the main
+                                       objective of multitasking is to improve performance of the
+                                       system by reducing response time.
+                                    </li>
+                                 </ol>
+                                 <h2>The ways to define instantiate and start a
+                                    new Thread:</font>
+                                 </h2>
+                                 What is singleton? Give example? <br>
+                                 We can define a Thread in the following 2 ways.
+                                 <ol>
+                                    <li>By extending Thread class.</li>
+                                    <li>By implementing Runnable interface.</li>
+                                 </ol>
+                                 <h2 id="extend"><u>Defining a Thread by extending "Thread
+                                    class":</u>
+                                 </h2>
+                                 Example:
+                                 <pre>
+class ThreadDemo
+{
+	public static void main(String[] args)
+	{
+		MyThread t=new MyThread();//Instantiation of a Thread
+		t.start();//starting of a Thread
+		
+		for(int i=0;i&lt;5;i++)
+		{
+			System.out.println("main thread");
 		}
+	}
+}
+</pre>
+                                 <h5>Case 1: Thread Scheduler:</h5>
+                                 <ul>
+                                    <li>If multiple Threads are waiting to execute then which Thread
+                                       will execute 1st is decided by "Thread Scheduler" which is
+                                       part of JVM.
+                                    </li>
+                                    <li>Which algorithm or behavior followed by Thread Scheduler we
+                                       can't expect exactly it is the JVM vendor dependent hence in
+                                       multithreading examples we can't expect exact execution
+                                       order and exact output.
+                                    </li>
+                                 </ul>
+                                 <h5>Case 2: Difference between t.start() and t.run() methods.</h5>
+                                 <ul>
+                                    <li> In the case of t.start() a new Thread will be created which
+                                       is responsible for the execution of run() method.
+                                    </li>
+                                    <li> But in the case of t.run() no new Thread will be created
+                                       and run() method will be executed just like a normal method
+                                       by the main Thread.
+                                    </li>
+                                    <li> In the above program if we are replacing t.start() with
+                                       t.run() the following is the output.
+                                    </li>
+                                 </ul>
+                                 <pre>Output:
+child thread
+child thread
+child thread
+child thread
+child thread
+child thread
+child thread
+child thread
+child thread
+child thread
+main thread
+main thread
+main thread
+main thread
+main thread
+</pre>
+                                 Entire output produced by only main Thread.
+                                 <br><br>
+                                 <h5>Case 3: importance of Thread class start() method.</h5>
+                                 For every Thread the required mandatory activities like registering
+                                 the Thread with Thread Scheduler will takes care by Thread class
+                                 start() method and programmer is responsible just to define the job
+                                 of the Thread inside run() method. <br>
+                                 That is start() method acts as best assistant to the programmer.
+                                 <pre>Example:
+start()
+{
+	1. Register Thread with Thread Scheduler
+	2. All other mandatory low level activities.
+	3. Invoke or calling run() method.
+}
+</pre>
+                                 We can conclude that without executing Thread class start() method
+                                 there is no chance of starting a new Thread in java. Due to this
+                                 start() is considered as<strong> heart of multithreading</strong>.
+                                 <br><br>
+                                 <h5>Case 4: If we are not overriding run() method:</h5>
+                                 If we are not overriding run() method then Thread class run() method
+                                 will be executed which has empty implementation and hence we won't
+                                 get any output.
+                                 <pre>Example:
+class MyThread extends Thread 
+{}
+class ThreadDemo
+{
+	public static void main(String[] args)
+	{
+		MyThread t=new MyThread();
+		t.start();
+	}
+}
+</pre>
+                                 It is highly recommended to override run() method. Otherwise don't
+                                 go for multithreading concept.
+                                 <br><br>
+                                 <h5>Case 5: Overloding of run() method.</h5>
+                                 We can overload run() method but Thread class start() method always
+                                 invokes no argument run() method the other overload run() methods we
+                                 have to call explicitly then only it will be executed just like
+                                 normal method.
+                                 <pre>Example:
+class MyThread extends Thread
+{
+	public void run()
+	{
+		System.out.println("no arg method");
+	}
+	public void run(int i)
+	{
+		System.out.println("int arg method");
+	}
+}
+class ThreadDemo
+{
+	public static void main(String[] args)
+	{
+		MyThread t=new MyThread();
+		t.start();
+	}
+}
+Output:
+No arg method
+</pre>
+                                 <br><br>
+                                 <h5>Case 6: overriding of start() method:</h5>
+                                 If we override start() method then our start() method will be
+                                 executed just like a normal method call and no new Thread will be
+                                 started.
+                                 <pre>Example:
+class MyThread extends Thread
+{
+	public void start()
+	{
+		System.out.println("start method");
+	}
+	public void run()
+	{
+		System.out.println("run method");
+	}
+}
+class ThreadDemo
+{
+	public static void main(String[] args)
+	{
+		MyThread t=new MyThread();
+		t.start();
+		System.out.println("main method");
+	}
+}
+Output:
+start method
+main method
+</pre>
+                                 Entire output produced by only main Thread.
+                                 <br>
+                                 Note : It is never recommended to override start() method.
+                                 <br><br>
+                                 <h5>Case 7: life cycle of the Thread:</h5>
+                                 <ul>
+                                    <li>Once we created a Thread object then the Thread is said to
+                                       be in new state or born state.
+                                    </li>
+                                    <li>Once we call start() method then the Thread will be entered
+                                       into Ready or Runnable state.
+                                    </li>
+                                    <li>If Thread Scheduler allocates CPU then the Thread will be
+                                       entered into running state.
+                                    </li>
+                                    <li>Once run() method completes then the Thread will entered
+                                       into dead state.
+                                    </li>
+                                 </ul>
+                                 <h5>Case 8:</h5>
+                                 After starting a Thread we are not allowed to restart the same
+                                 Thread once again otherwise we will get runtime exception saying
+                                 "IllegalThreadStateException".
+                                 <pre>Example:
+MyThread t=new MyThread();
+t.start();//valid
+;;;;;;;;
+t.start();//we will get R.E saying: IllegalThreadStateException
+</pre>
+                                 <h2 id="implement"><u>Defining a Thread by implementing Runnable
+                                    interface:</u>
+                                 </h2>
+                                 We can define a Thread even by implementing Runnable interface
+                                 also.<br>
+                                 Runnable interface present in java.lang.pkg and contains only one
+                                 method run().
+                                 <br><br>
+                                 <u><em>Example:</em></u>
+                                 <pre>class ThreadDemo
+{
+	public static void main(String[] args)
+	{
+		MyRunnable r=new MyRunnable();
+		Thread t=new Thread(r);//here r is a Target Runnable
+		t.start();
+	
+		for(int i=0;i&lt;10;i++)
+		{
+			System.out.println("main thread");
+		}
+	}
+}
+Output:
+main thread
+main thread
+main thread
+main thread
+main thread
+main thread
+main thread
+main thread
+main thread
+main thread
+child Thread
+child Thread
+child Thread
+child Thread
+child Thread
+child Thread
+child Thread
+child Thread
+child Thread
+child Thread
+</pre>
+                                 We can't expect exact output but there are several possible outputs.
+                                 <br><br>
+                                 <h5>Case study:</h5>
+                                 <pre>MyRunnable r=new MyRunnable();
+Thread t1=new Thread();
+Thread t2=new Thread(r);
+</pre>
+                                 <h3>
+                                    <font color="#8080ff"><u><em>Case 1: t1.start():</em></u></font>
+                                 </h3>
+                                 A new Thread will be created which is responsible for the execution
+                                 of Thread class run()method.
+                                 <pre>Output:
+main thread
+main thread
+main thread
+main thread
+main thread
+</pre>
+                                 <h3>
+                                    <font color="#8080c0"><u><em>Case 2: t1.run():</em></u></font>
+                                 </h3>
+                                 No new Thread will be created but Thread class run() method will be
+                                 executed just like a normal method call.
+                                 <pre>Output:
+main thread
+main thread
+main thread
+main thread
+main thread
+</pre>
+                                 <h3>
+                                    <font color="#0080c0"><u><em>Case 3: t2.start():</em></u></font>
+                                 </h3>
+                                 New Thread will be created which is responsible for the execution of
+                                 MyRunnable run() method.
+                                 <pre>Output:
+main thread
+main thread
+main thread
+main thread
+main thread
+child Thread
+child Thread
+child Thread
+child Thread
+child Thread
+</pre>
+                                 <h3>
+                                    <font color="#008080"><u><em>Case 4: t2.run():</em></u></font>
+                                 </h3>
+                                 No new Thread will be created and MyRunnable run() method will be
+                                 executed just like a normal method call.
+                                 <pre>Output:
+child Thread
+child Thread
+child Thread
+child Thread
+child Thread
+main thread
+main thread
+main thread
+main thread
+main thread
+</pre>
+                                 <h3>
+                                    <font color="#8080ff"><u><em>Case 5: r.start():</em></u></font>
+                                 </h3>
+                                 We will get compile time error saying start()method is not available
+                                 in MyRunnable class.
+                                 <pre>Output:
+Compile time error
+E:\SCJP&gt;javac ThreadDemo.java
+ThreadDemo.java:18: cannot find symbol
+Symbol: method start()
+Location: class MyRunnable
+</pre>
+                                 <h3>
+                                    <font color="#8000ff"><u><em>Case 6: r.run():</em></u></font>
+                                 </h3>
+                                 No new Thread will be created and MyRunnable class run() method will
+                                 be executed just like a normal method call.
+                                 <pre>Output:
+child Thread
+child Thread
+child Thread
+child Thread
+child Thread
+main thread
+main thread
+main thread
+main thread
+main thread
+</pre>
+                                 <br>
+                                 <p>
+                                    In which of the above cases a new Thread will be created which
+                                    is responsible for the execution of MyRunnable run() method ?
+                                    <br><strong>t2.start();</strong>
+                                 </p>
+                                 <p>
+                                    In which of the above cases a new Thread will be created ?
+                                    <br><strong>t1.start(); <br> t2.start();</strong>
+                                 </p>
+                                 <p>
+                                    In which of the above cases MyRunnable class run() will be
+                                    executed ?
+                                    <br><strong>t2.start(); <br> t2.run(); <br>r.run(); </strong>
+                                 </p>
+                                 <h4><em><u>Best approach to define a Thread:</u></em></h4>
+                                 <ul>
+                                    <li>Among the 2 ways of defining a Thread, implements Runnable
+                                       approach is always recommended.
+                                    </li>
+                                    <li>In the 1st approach our class should always extends Thread
+                                       class there is no chance of extending any other class hence
+                                       we are missing the benefits of inheritance.
+                                    </li>
+                                    <li> But in the 2nd approach while implementing Runnable
+                                       interface we can extend some other class also. Hence
+                                       implements Runnable mechanism is recommended to define a
+                                       Thread.
+                                    </li>
+                                 </ul>
+                                 <h2>Thread class constructors:</h2>
+                                 <ol>
+                                    <li>Thread t=new Thread();</li>
+                                    <li>Thread t=new Thread(Runnable r);</li>
+                                    <li>Thread t=new Thread(String name);</li>
+                                    <li>Thread t=new Thread(Runnable r,String name);</li>
+                                    <li>Thread t=new Thread(ThreadGroup g,String name);</li>
+                                    <li>Thread t=new Thread(ThreadGroup g,Runnable r);</li>
+                                    <li>Thread t=new Thread(ThreadGroup g,Runnable r,String name);
+                                    </li>
+                                    <li>Thread t=new Thread(ThreadGroup g,Runnable r,String
+                                       name,long stackSize);
+                                    </li>
+                                 </ol>
+                                 <h2 id="nameThread" style="background-color: rgb(0, 128, 128);">
+                                    <font color="#ffff00">Getting and setting name of a Thread:
+                                    </font>
+                                 </h2>
+                                 <ul>
+                                    <li>Every Thread in java has some name it may be provided
+                                       explicitly by the programmer or automatically generated by
+                                       JVM.
+                                    </li>
+                                    <li> Thread class defines the following methods to get and set
+                                       name of a Thread.
+                                    </li>
+                                 </ul>
+                                 <u><em>Methods:
+                                 </em></u>
+                                 <ol>
+                                    <li>public final String getName()</li>
+                                    <li>public final void setName(String name)</li>
+                                 </ol>
+                                 <pre>Example:
+class MyThread extends Thread
+{}
+class ThreadDemo
+{
+	public static void main(String[] args)
+	{
+		System.out.println(Thread.currentThread().getName());//main
+		MyThread t=new MyThread();
+		System.out.println(t.getName());//Thread-0
+		Thread.currentThread().setName("Bhaskar Thread");
+		System.out.println(Thread.currentThread().getName());//Bhaskar Thread
+	}
+}
+</pre>
+                                 Note: We can get current executing Thread object reference by using
+                                 Thread.currentThread() method.
+                                 <h2 id="priority" style="background-color: rgb(0, 128, 192);">
+                                    <font color="#ffff00">Thread Priorities</font>
+                                 </h2>
+                                 <ul>
+                                    <li>Every Thread in java has some priority it may be default
+                                       priority generated by JVM (or) explicitly provided by the
+                                       programmer.
+                                    </li>
+                                    <li>The valid range of Thread priorities is 1 to 10[but not 0 to
+                                       10] where 1 is the least priority and 10 is highest
+                                       priority.
+                                    </li>
+                                    <li>
+                                       Thread class defines the following constants to represent
+                                       some standard priorities.
+                                       <ol>
+                                          <li>Thread. MIN_PRIORITY----------1</li>
+                                          <li>Thread. MAX_PRIORITY----------10</li>
+                                          <li>Thread. NORM_PRIORITY--------5</li>
+                                       </ol>
+                                    </li>
+                                    <li>There are no constants like Thread.LOW_PRIORITY,
+                                       Thread.HIGH_PRIORITY
+                                    </li>
+                                    <li>Thread scheduler uses these priorities while allocating CPU.
+                                    </li>
+                                    <li>The Thread which is having highest priority will get chance
+                                       for 1st execution.
+                                    </li>
+                                    <li>If 2 Threads having the same priority then we can't expect
+                                       exact execution order it depends on Thread scheduler whose
+                                       behavior is vendor dependent.
+                                    </li>
+                                    <li>
+                                       We can get and set the priority of a Thread by using the
+                                       following methods.
+                                       <ol>
+                                          <li>public final int getPriority()</li>
+                                          <li>public final void setPriority(int newPriority);//the
+                                             allowed values are 1 to 10
+                                          </li>
+                                       </ol>
+                                    </li>
+                                    <li>The allowed values are 1 to 10 otherwise we will get runtime
+                                       exception saying "IllegalArgumentException".
+                                    </li>
+                                 </ul>
+                                 <h2>
+                                    <font color="#800080"><u><em>Default priority:</em></u></font>
+                                 </h2>
+                                 The default priority only for the main Thread is 5. But for all the
+                                 remaining Threads the default priority will be inheriting from
+                                 parent to child. That is whatever the priority parent has by default
+                                 the same priority will be for the child also.
+                                 <pre>Example 1:
+class MyThread extends Thread
+{}
+class ThreadPriorityDemo
+{
+	public static void main(String[] args)
+	{
+		System.out.println(Thread.currentThread().getPriority());//5
+		Thread.currentThread().setPriority(9);
+		MyThread t=new MyThread();
+		System.out.println(t.getPriority());//9
+	}
+}
+</pre>
+                                 <pre>Example 2:
+class MyThread extends Thread
+{
+	public void run()
+	{
+		for(int i=0;i&lt;10;i++)
+		{
+			System.out.println("child thread");
+		}
+	}
+}
+class ThreadPriorityDemo
+{
+	public static void main(String[] args)
+	{
+		MyThread t=new MyThread();
+		//t.setPriority(10);	    //----&gt; 1
+		t.start();
+		for(int i=0;i&lt;10;i++)
+		{
+			System.out.println("main thread");
+		}
+	}
+}
+</pre>
+                                 <ul>
+                                    <li>If we are commenting line 1 then both main and child Threads
+                                       will have the same priority and hence we can't expect exact
+                                       execution order.
+                                    </li>
+                                    <li>If we are not commenting line 1 then child Thread has the
+                                       priority 10 and main Thread has the priority 5 hence child
+                                       Thread will get chance for execution and after completing
+                                       child Thread main Thread will get the chance in this the
+                                       output is:
+                                    </li>
+                                 </ul>
+                                 <pre>Output:
+child thread
+child thread
+child thread
+child thread
+child thread
+child thread
+child thread
+child thread
+child thread
+child thread
+main thread
+main thread
+main thread
+main thread
+main thread
+main thread
+main thread
+main thread
+main thread
+main thread
+</pre>
+                                 Some operating systems(like windowsXP) may not provide proper
+                                 support for Thread priorities. We have to install separate bats
+                                 provided by vendor to provide support for priorities.
+                                 <h2 id="execution" style="background-color: rgb(0, 128, 0);">
+                                    <font color="#ffff00">The Methods to Prevent a Thread from
+                                    Execution:</font>
+                                 </h2>
+                                 We can prevent(stop) a Thread execution by using the following
+                                 methods.
+                                 <ol>
+                                    <li>yield();</li>
+                                    <li>join();</li>
+                                    <li>sleep();</li>
+                                 </ol>
+                                 <h3 id="yield"><u><em>
+                                    <font color="#808040">yield():</font>
+                                    </em></u>
+                                 </h3>
+                                 <ol>
+                                    <li>yield() method causes "to pause current executing Thread for
+                                       giving the chance of remaining waiting Threads of same
+                                       priority".
+                                    </li>
+                                    <li>If all waiting Threads have the low priority or if there is
+                                       no waiting Threads then the same Thread will be continued
+                                       its execution.
+                                    </li>
+                                    <li>If several waiting Threads with same priority available then
+                                       we can't expect exact which Thread will get chance for
+                                       execution.
+                                    </li>
+                                    <li>The Thread which is yielded when it get chance once again
+                                       for execution is depends on mercy of the Thread scheduler.
+                                    </li>
+                                    <li>public static native void yield();</li>
+                                 </ol>
+                                 <br><br>
+                                 <pre>Example:
+class MyThread extends Thread
+{
+	public void run()
+	{
+		for(int i=0;i&lt;5;i++)
+		{
+			Thread.yield();
+			System.out.println("child thread");
+		}
+	}
+}
+class ThreadYieldDemo
+{
+	public static void main(String[] args)
+	{
+		MyThread t=new MyThread();
+		t.start();
+		for(int i=0;i&lt;5;i++)
+		{
+			System.out.println("main thread");
+		}
+	}
+}
+Output:
+main thread
+main thread
+main thread
+main thread
+main thread
+child thread
+child thread
+child thread
+child thread
+child thread
+</pre>
+                                 In the above program child Thread always calling yield() method and
+                                 hence main Thread will get the chance more number of times for
+                                 execution.<br> Hence the chance of completing the main Thread first
+                                 is high.
+                                 <br><br>
+                                 Note : Some operating systems may not provide proper support for
+                                 yield() method.
+                                 <br>
+                                 <h3 id="join"><u><em>
+                                    <font color="#804040">Join():</font>
+                                    </em></u>
+                                 </h3>
+                                 If a Thread wants to wait until completing some other Thread then we
+                                 should go for join() method.
+                                 <br>
+                                 <strong>Example:</strong>
+                                 If a Thread t1 executes t2.join() then t1 should go for waiting
+                                 state until completing t2.
+                                 <br>
+                                 <br>
+                                 Diagram:<br><br><img alt="" src="multiThread/image028.png"
+                                    width="894" height="345"><br><br>
+                                 <ol>
+                                    <li>public final void join()throws InterruptedException</li>
+                                    <li>public final void join(long ms) throws InterruptedException
+                                    </li>
+                                    <li>public final void join(long ms,int ns) throws
+                                       InterruptedException
+                                    </li>
+                                 </ol>
+                                 <br><br>
+                                 Every join() method throws InterruptedException, which is checked
+                                 exception hence compulsory we should handle either by<b> try
+                                 catch</b> or by<b> throws</b> keyword.<br> Otherwise we will get
+                                 compiletime error.
+                                 <pre>Example:
+class MyThread extends Thread
+{
+	public void run()
+	{
+		for(int i=0;i&lt;5;i++)
+		{
+			System.out.println("Sita Thread");
+			try
+			{
+				Thread.sleep(2000);
+			}
+			catch (InterruptedException e){}
+		}
+	}
+}
+class ThreadJoinDemo
+{
+	public static void main(String[] args)throws InterruptedException
+	{
+		MyThread t=new MyThread();
+		t.start();
+		//t.join();	//---&gt;1
+		for(int i=0;i&lt;5;i++)
+		{
+			System.out.println("Rama Thread");
+		}
+	}
+}
+</pre>
+                                 <ul>
+                                    <li>If we are commenting line 1 then both Threads will be
+                                       executed simultaneously and we can't expect exact execution
+                                       order.
+                                    </li>
+                                    <li>If we are not commenting line 1 then main Thread will wait
+                                       until completing child Thread in this the output is sita
+                                       Thread 5 times followed by Rama Thread 5 times.
+                                    </li>
+                                 </ul>
+                                 <h2>Waiting of child Thread untill completing main Thread :</h2>
+                                 <pre>Example:
+class MyThread extends Thread
+{
+ static Thread mt;
+	public void run()
+	{
+        	try
+        	{
+			mt.join(); 
+		}
+		catch (InterruptedException e){}
+	
 
-		@media screen and (max-width: 767px) {
-			.div-to-hide {
-				display: none;
-				/* Hide the div on screens smaller than 768px (mobile) */
+		for(int i=0;i&lt;5;i++)
+		{
+			System.out.println("Child Thread");
+		}
+	}
+}
+class ThreadJoinDemo
+{
+	public static void main(String[] args)throws InterruptedException
+	{
+		MyThread mt=Thread.currentThread();
+		MyThread t=new MyThread();
+		t.start();
+
+		for(int i=0;i&lt;5;i++)
+		{
+			Thread.sleep(2000);
+			System.out.println("Main Thread");
+		}
+	}
+}
+
+Output :
+
+Main Thread
+Main Thread
+Main Thread
+Main Thread
+Main Thread
+Child Thread
+Child Thread
+Child Thread
+Child Thread
+Child Thread
+
+</pre>
+                                 Note :<br> If main thread calls join() on child thread object and
+                                 child thread called join() on main thread object then both threads
+                                 will wait for each other forever and the program will be hanged(like
+                                 deadlock if a Thread class join() method on the same thread itself
+                                 then the program will be hanged ).
+                                 <pre>Example :
+
+class ThreadDemo {
+public static void main() throws InterruptedException {
+Thread.currentThread().join();
+      ---------------   --------
+        main              main
+}
+
+}
+
+</pre>
+                                 <h2 id="sleep">
+                                    <font color="#8080ff"><u><em>Sleep() method:</em></u></font>
+                                 </h2>
+                                 If a Thread don't want to perform any operation for a particular
+                                 amount of time then we should go for sleep() method.
+                                 <ol>
+                                    <li><strong>public static native void sleep(long ms) throws
+                                       InterruptedException</strong>
+                                    </li>
+                                    <li><strong>public static void sleep(long ms,int ns)throws
+                                       InterruptedException</strong>
+                                    </li>
+                                 </ol>
+                                 <br><br>
+                                 <pre>
+Example:
+class ThreadJoinDemo
+{
+	public static void main(String[] args)throws InterruptedException
+	{
+		System.out.println("M");
+		Thread.sleep(3000);
+		System.out.println("E");
+		Thread.sleep(3000);
+		System.out.println("G");
+		Thread.sleep(3000);
+		System.out.println("A");
+	}
+}
+Output:
+M
+E
+G
+A
+</pre>
+                                 <h2>
+                                    <font color="#800080"><u><em>Interrupting a Thread:</em></u>
+                                    </font>
+                                 </h2>
+                                 <br><b>How a Thread can interrupt another thread ?</b>
+                                 <br>
+                                 If a Thread can interrupt a sleeping or waiting Thread by using
+                                 interrupt()(break off) method of Thread class.
+                                 <br><b>public void interrupt();</b>
+                                 <pre>Example:
+class MyThread extends Thread
+{
+	public void run()
+	{
+		try
+		{
+			for(int i=0;i&lt;5;i++)
+			{
+				System.out.println("i am lazy Thread :"+i);
+				Thread.sleep(2000);
 			}
 		}
-	</style>
-</head>
-
-<body>
-	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
-		<div class="container p-0">
-			<a class="navbar-brand pull-left" href="../main/home.html"><img src="../scripts/images/jrlogo.PNG"
-					style="height: 50px; max-width: 100%;" alt="java by Kalyan" title="Java Ravish Tutorials"></a>
-			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
-				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-				aria-label="Toggle navigation">
-				&#9776;
-			</button>
-			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto text-center">
-					<li class="nav-item"><a class="nav-link" href="../main/home.html"><img
-								src="../scripts/images/small/home.jpg"></i></a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="../corejava/java-introduction.html">Java</a></li>
-					<li class="nav-item"><a class="nav-link" href="../spring/spring-introduction.html">Spring</a></li>
-					<li class="nav-item"><a class="nav-link" href="../springboot/sb-introduction.html">SpringBoot</a>
-					</li>
-					<li class="nav-item"><a class="nav-link" href="../main/interview-questions.html">Interview
-							Questions</a></li>
-
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<br>
-	<div class="container-fluid">
-		<br />
-		<ol class="breadcrumb no-padding  mt-5 bg-light nohighlight">
-			<li itemprop="itemListElement" class="breadcrumb-item">
-				<a class="text-dark" itemprop="item" href="../main/home.html"> <span itemprop="name">Home</span>
-				</a>
-				<meta itemprop="position" content="1" />
-			</li>
-			<li itemprop="itemListElement" class="breadcrumb-item">
-				<a class="text-dark" itemprop="item" href="java-introduction.html"> <span itemprop="name">Java</span>
-				</a>
-				<meta itemprop="position" content="2" />
-			</li>
-			<li itemprop="itemListElement" class="breadcrumb-item">
-				<a class="text-dark" itemprop="item" href="#">
-					<span itemprop="name">Multithreading</span>
-				</a>
-			</li>
-		</ol>
-
-		<div class="row">
-			<link rel="stylesheet" href="../scripts/css/sidebarcollapsecss.css">
-			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
-				data-target="#sideBarResponsive" aria-controls="sideBarResponsive" aria-expanded="false"
-				aria-label="Toggle navigation">
-				&#9776;
-			</button>
-			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
-				aria-multiselectable="true">
-				<div class="collapse card" id="sideBarResponsive">
-					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Java</h2>
-					<div class="list-group">
-						<ul class="leftBarList">
-							<li><a href="java-introduction.html">Java Introduction</a></li>
-							<li><a href="java-vm-memory-management.html">JVM Memory Management</a></li>
-							<li><a href="java-garbage-collection.html">Garbage Collection</a></li>
-							<li><a href="java-final-keyword.html">Final Keyword </a></li>
-							<li><a href="java-strings.html">Strings</a></li>
-							<li><a href="java-abstraction.html">Abstraction</a></li>
-							<li><a href="java-encapsulation.html">Encapsulation</a></li>
-							<li><a href="java-polymorphism.html">Polymorphism</a></li>
-							<li><a href="java-inheritance.html">Inheritance </a></li>
-							<li><a href="java-exception.html">Exception</a></li>
-							<li><a href="java-multithreading.html">Multithreading</a></li>
-							<li><a href="java-serialization.html">Serialization</a></li>
-							<li><a href="java-collection-framework.html">Collection Framework</a></li>
-							<li><a href="java-8-features.html">Java 8 Features</a></li>
-							<li><a href="java-interview-questions.html">Java Interview Questions</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="div-to-hide card" id="sideBarResponsive">
-					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Java</h2>
-					<div class="list-group">
-						<ul class="leftBarList">
-							<li><a href="java-introduction.html">Java Introduction</a></li>
-							<li><a href="java-vm-memory-management.html">JVM Memory Management</a></li>
-							<li><a href="java-garbage-collection.html">Garbage Collection</a></li>
-							<li><a href="java-final-keyword.html">Final Keyword </a></li>
-							<li><a href="java-strings.html">Strings</a></li>
-							<li><a href="java-abstraction.html">Abstraction</a></li>
-							<li><a href="java-encapsulation.html">Encapsulation</a></li>
-							<li><a href="java-polymorphism.html">Polymorphism</a></li>
-							<li><a href="java-inheritance.html">Inheritance </a></li>
-							<li><a href="java-exception.html">Exception</a></li>
-							<li><a href="java-multithreading.html">Multithreading</a></li>
-							<li><a href="java-serialization.html">Serialization</a></li>
-							<li><a href="java-collection-framework.html">Collection Framework</a></li>
-							<li><a href="java-8-features.html">Java 8 Features</a></li>
-							<li><a href="java-interview-questions.html">Java Interview Questions</a></li>
-						</ul>
-					</div>
-				</div>
-				<br>
-			</div>
-
-
-
-			<div class="col-lg-9 mb-4">
-				<div class="card h-100">
-					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Abstraction in Java</h1>
-					<div class="card-body">
-						<div class="tab" role="tabpanel">
-							<p>
-								<b>Abstraction</b> is a process of hiding details about
-								implementation from the user while letting them utilise the
-								services or functions. Therefore, the user will know what an
-								object does, but not how it does it. It is done to simplify the
-								user interface while hiding the complex processes.
-							</p>
-							<ul>
-								<li>Exposing only required or important things is called
-									abstraction</li>
-								<li>Abstraction can be done in two ways :
-									<ul>
-										<li>Abstract class</li>
-										<li>Interface</li>
-									</ul>
-								</li>
-								<li>It is used for maintaining the standards of coding in
-									project</li>
-							</ul>
-							<hr>
-							<div class="tab-content tabs">
-								<div role="tabpanel" class="tab-pane fade in active" id="Interface">
-									<div id="Div1">
-										<h2 class="breadcrumb">Interface</h2>
-										<ul>
-											<li>
-												<p>One of the java principles says that we must
-													follow the I to C design. This means that every class
-													should be implemented from Interface</p>
-											</li>
-											<li>
-												<p>In the industry, architect level people
-													create interfaces and then it is given to the developers
-													for writing classes by implementing interfaces provided</p>
-											</li>
-											<li>
-												<p>This is best way to expose our project’s API
-													to some other projects. For example, ICICI bank can expose
-													methods or interfaces to various shopping carts</p>
-											</li>
-											<li>
-												<p>The interface is the same as ordinary class
-													but remember below points</p>
-											</li>
-											<li>
-												<p>We cannot instantiate Interface but we can
-													create reference variables</p>
-											</li>
-											<li>
-												<p>The interface doesn't have a constructor</p>
-											</li>
-											<li>
-												<p>It can be compiled but cannot run</p>
-											</li>
-											<li>
-												<p>Interface can extends interface</p>
-											</li>
-											<li>
-												<p>The interface can extend multiple interfaces</p>
-												<ul>
-													Example:
-													<pre class>
-														<code>void m1();   //No body Method</code>
-													</pre>
-													<li>In case of classes, we must define the body of
-														method
-														<pre class>
-															<code>package com.abstraction; 
-    public class X   { 
-         void m1();   // compile time error method should have body
-}               
-</code>
-														</pre>
-													</li>
-													<li>In case of classes, if we want the above written
-														lines to compile when we have method without body, then we
-														must explicitly define that method as abstract in case of
-														classes, but not in case of interface
-														<pre class>
-															<code>package com.abstraction;
-    public class X { 
-        abstract void m1();  // compile time error  
-}     
-</code>
-														</pre>
-													</li>
-													<li>In case of classes, if method is abstract then
-														class must be declared as abstract as well.
-														<pre class>
-															<code>package com.abstraction;
-     public abstract class X { 
-        abstract void m1();  // No error  
-}     
-</code>
-														</pre>
-													</li>
-													<li>In case of interface we don't need to do explicit
-														declaration for methods like class but they are, by
-														default, abstract
-														<pre class>
-															<code>package com.InterFace; 
-    interface Xi {
-        void m1(); // abstract keyword invisibly present 
-}     
-</code>
-														</pre>
-													</li>
-													<li>All methods are public in interface. If you want
-														to mention access specifiers, mention them as public, or
-														do not mention any access specifier and JVM will
-														automatically consider it as public, every time</li>
-												</ul>
-											</li>
-										</ul>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code1"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code1" class="breadcrumb pretagcodebox">
-<code>package com.InterFace;    
-    interface xyz {
-        void m1(); // public and abstract invisibly put by JVM 
-    }
-package com.InterFace;    
-public interface x {
-    public abstract void m1();	//OK 
-        public void m3();	//OK  
-        abstract void m6();//OK
-        void m7();//OK
-}
-</code>
-											</pre>
-										</div>
-										<ul>
-											<li>Variables are public final static in interface and
-												act like constants</li>
-											<li>If we want to use methods of interface, we have to
-												implement that interface in any class, and methods of
-												interface must be implemented in a class by using the
-												implements keyword</li>
-										</ul>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code2"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code2" class="breadcrumb pretagcodebox">
-<code>package com.InterFace; 
-  interface Xi {
-        void m1();
-    }
-package com.InterFace;
-  public class	XImpl implements xi{
-    //Not compiled as we have not implemented all the methods
-}
-</code>
-											</pre>
-										</div>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code3"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code3" class="breadcrumb pretagcodebox">
-<code>package com.InterFace; 
-  public interface Ai {
-     void m1();  //OK
-}
-package com.InterFace; 
-  public interface Bi {
-     void m1();	 //OK
-  }
-package com.InterFace;
-  public interface Ci extends Ai,Bi {   //OK     
-     void m1();
-  }
-</code>
-											</pre>
-										</div>
-										<p>This is allowed in java</p>
-										<ul>
-											<li>interface can extend interface1 and interface2</li>
-											<li>class extends class implements interface</li>
-											<li>class implements interface</li>
-											<li>class extends class implements interface1 and
-												interface2</li>
-										</ul>
-										<hr>
-										<ul>
-											<li>
-												<p>
-													<i><b>Q.</b> Why do we need Interface?</i><br> <b>A:</b>
-													To expose the third party API
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Why not constructor?</i><br> <b>A:</b> In
-													interface it will not get called by using super by using
-													hierarchy
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> As an interface has abstract method, how
-														will you use the abstract method of interface? </i><br>
-													<b>A:</b>
-													Implement that method in class, or in other words override
-													methods, and then create object of that class and call all
-													methods
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Have you ever used others third party API
-														code?</i><br> <b>A:</b>Yes, they have their Interface and
-													API and we can use that.
-												</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="WhyInterface">
-									<div id="Div2">
-										<h2 class="breadcrumb">Why interface?</h2>
-										<p>
-											Suppose there is a requirement for Flipkart to integrate
-											ICICI bank code into their shopping cart.Their customers want
-											to make payment for products they purchased. Now, to make
-											payment, Flipkart does not have their own bank, so it must
-											take help of other banks.<br> Let's say ICICI develops
-											code like below:
-										<pre class>
-											<code>class Transaction { 
-    void withdrawAmt(int amtToWithdraw) {
-        void m1(); // abstract keyword invisibly present 
-            //logic of withdraw
-            //ICICI DB connection and updating in their DB
-    }
-}   
-</code>
-										</pre>
-										<p>Flipkart needs this class so they request ICICI bank
-											for the same. The problem with ICICI is that if they give
-											this complete code to flipkart they risk exposing everything
-											of their own database to them as well as their logic, which
-											is a security violation.</p>
-										<p>Now, what exactly Flipkart needs is the method name and
-											class name. But to compile their class they must get one like
-											below:
-										<pre class>
-											<code>Transaction t=new Transaction();  //1
-t.withdrawAmt(500);   //2
-</code>
-										</pre>
-										<p>If the first line to compile at Flipkart ends, then
-											they must have this class which ICICI cannot give. The best
-											solution here is for ICICI to develop an Interface of
-											Transaction class as shown below:</p>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code4"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code4" class="breadcrumb pretagcodebox">
-<code>interface Transactioni {
-     void withdrawAmt(int amtToWithdraw) ;
-}
-class TransactionImpl implements Transactioni { 
-    void withdrawAmt(int amtToWithdraw) {
-        //logic of withdraw
-        //ICICI DB connection and updating in their DB
-    } 
-}
-</code>
-											</pre>
-										</div>
-										<ul>
-											<li>
-												<p>
-													Flipkart will now get the interface but not class, and they
-													can use it as shown below:<br>
-													<code>Transactioni ti = new TransactionImpl();</code>
-													// the result on the right hand side may be achieved by
-													webservices or EJB TransactionImpl physically not present
-													at Flipkart<br>
-													<code>ti.withdrawAmt(500);</code>
-												</p>
-											</li>
-											<li>
-												<p>In this case, both parties achieved their
-													goal, Flipkart which only needs method name and parameter
-													and they got it</p>
-											</li>
-											<li>
-												<p>ICICI only wants to give them the name but
-													not their logic, which they provided. Also it does not
-													matter to ICICI what you purchased, they just want to have
-													amount to be deducted</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="AbstractClass">
-									<div id="Div3">
-										<h2 class="breadcrumb">Abstract Class</h2>
-										<ul>
-											<li>
-												<p>Abstract class is just like a normal class
-													but with some extra features which we will see in this
-													chapter</p>
-											</li>
-											<li>
-												<p>Abstract class can have constructor</p>
-											</li>
-											<li>
-												<p>It can have abstract methods or concrete
-													methods or nothing [empty class] or mix of both methods</p>
-											</li>
-											<li>
-												<p>To use abstract method of class, we must
-													extend the abstract class with ordinary class or must
-													implement all abstract methods in that ordinary class</p>
-											</li>
-											<li>
-												<p>If we don't want to implement or override
-													that method, make those methods as abstract</p>
-											</li>
-											<li>
-												<p>If any method is abstract in a class then
-													that class must be declared as abstract</p>
-											</li>
-											<li>
-												<p>We cannot instantiate abstract class</p>
-											</li>
-											<li>
-												<p>Multiple inheritances are not allowed in
-													abstract class but allowed in interfaces</p>
-											</li>
-											<li>
-												<p>Abstract classes are useful if we want others
-													to not call our class directly but though Inheritance</p>
-											</li>
-											<li>
-												<p>Abstract static final combinations are not
-													allowed in java</p>
-											</li>
-										</ul>
-										<hr>
-										<ul>
-											<li>
-												<p>
-													<i><b>Q.</b> Why does the abstract class have a
-														constructor even though you cannot create object?</i><br>
-													<b>A:</b> Abstract class can only be extended by class and
-													that class will have its own constructor and that
-													constructor will have super (); which is calling
-													constructor of abstract class. If the abstract class
-													doesn't have constructor then the class extending that
-													abstract class will not get compiled. Therefore, abstract
-													classes have constructors.
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Can the abstract class have concrete
-														methods only [concrete method means method with body]?</i><br>
-													<b>A:</b> Yes.
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> If abstract class can have both types of
-														methods [one having body and other without body] then what
-														is use of those methods? </i><br> <b>A:</b> We can use
-													those methods by (1) extending abstract class or (2) making
-													that method as a static so that we will not need to create
-													an object.
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> How to call m2() which is concrete of
-														abstract class?</i><br> <b>A:</b> Make it as static and
-													call as
-													<code>Ravi.m2 (); //where Ravi is class name</code>
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Can abstract class extend ordinary class?</i><br>
-													<b>A:</b> Yes.
-												</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="AbstractandInterfaceDifference">
-									<div id="Div4" class="tablediv">
-										<h2 class="breadcrumb">Difference between Abstract Class
-											& Interface</h2>
-										<table class="table-responsive-xl table-bordered table" style="width: 100%;">
-											<colgroup>
-												<col style="width: 50%" />
-												<col style="width: 50%" />
-											</colgroup>
-											<tr>
-												<th class="center">Abstract Class</th>
-												<th class="center">Interface</th>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>Constructor Present</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>No Constructor Present</li>
-													</ul>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>Multiple inheritance not allowed in case of
-															classes</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>Multiple inheritance allowed</li>
-													</ul>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>It has abstract and concrete methods. To use this
-															class we extend it</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>Methods are abstract only We implement interfaces
-															in class</li>
-													</ul>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>After extending abstract class, access specifiers
-															of overridden method must be bigger than or same as that
-															of access specifiers mentioned in method of abstract
-															class</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>In implementing class all method must be public</li>
-													</ul>
-												</td>
-											</tr>
-										</table>
-									</div>
-								</div>
-							</div>
-							<hr>
-						</div>
-					</div>
-					<div class="card-footer">
-						<ul class="pagination justify-content-center mb-4">
-							<li class="page-item"><a class="page-link btn-outline-primary"
-									href="polymorphism-in-java.html">&lArr; Previous</a></li>
-							<li class="page-item"><a class="page-link" href="garbage-collection-in-java.html">Next
-									&rArr;</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<style>
-		.footerfont {
-			font-size: 16px
+		catch (InterruptedException e)
+		{
+			System.out.println("i got interrupted");
 		}
-	</style>
-	<div class="footer footerfont" style="background: #55585a;">
-		<div class="footer-copyright border-top ">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 center py-3 text-white">
-						Copyright © 2023, <br>The content is copyrighted to Ravi Kalyan Kolloju.
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
+	}
+}
+class ThreadInterruptDemo
+{
+	public static void main(String[] args)
+	{
+		MyThread t=new MyThread();
+		t.start();
+		//t.interrupt();	//---&gt;1
+		System.out.println("end of main thread");
+	}
+}
+</pre>
+                                 <ul>
+                                    <li>If we are commenting line 1 then main Thread won't interrupt
+                                       child Thread and hence child Thread will be continued until
+                                       its completion.
+                                    </li>
+                                    <li>If we are not commenting line 1 then main Thread interrupts
+                                       child Thread and hence child Thread won't continued until
+                                       its completion in this case the output is:
+                                    </li>
+                                 </ul>
+                                 <pre>End of main thread
+I am lazy Thread: 0
+I got interrupted
+</pre>
+                                 <u><em>Note:
+                                 </em></u>
+                                 <ul>
+                                    <li>Whenever we are calling interrupt() method we may not see
+                                       the effect immediately, if the target Thread is in sleeping
+                                       or waiting state it will be interrupted immediately.
+                                    </li>
+                                    <li>If the target Thread is not in sleeping or waiting state
+                                       then interrupt call will wait until target Thread will enter
+                                       into sleeping or waiting state. Once target Thread entered
+                                       into sleeping or waiting state it will effect immediately.
+                                    </li>
+                                    <li>In its lifetime if the target Thread never entered into
+                                       sleeping or waiting state then there is no impact of
+                                       interrupt call simply interrupt call will be wasted.
+                                    </li>
+                                 </ul>
+                                 <pre>Example:
+class MyThread extends Thread
+{
+	public void run()
+	{
+		for(int i=0;i&lt;5;i++)
+		{
+			System.out.println("iam lazy thread");
+		}
+                System.out.println("I'm entered into sleeping stage");
+		try
+		{
+			Thread.sleep(3000);
+		}
+		catch (InterruptedException e)
+		{
+			System.out.println("i got interrupted");
+		}
+	}
+}
+class ThreadInterruptDemo1
+{
+	public static void main(String[] args)
+	{
+		MyThread t=new MyThread();
+		t.start();
+		t.interrupt();
+		System.out.println("end of main thread");
+	}
+}
+</pre>
+                                 <ul>
+                                    <li>In the above program interrupt() method call invoked by main
+                                       Thread will wait until child Thread entered into sleeping
+                                       state.
+                                    </li>
+                                    <li>Once child Thread entered into sleeping state then it will
+                                       be interrupted immediately.
+                                    </li>
+                                 </ul>
+                                 <h3><u>
+                                    <font color="#008080">Compression of yield, join and sleep()
+                                    method?</font>
+                                    </u>
+                                 </h3>
+                                 <table border="1">
+                                    <tbody>
+                                       <tr>
+                                          <th>property</th>
+                                          <th>Yield()</th>
+                                          <th>Join()</th>
+                                          <th>Sleep()</th>
+                                       </tr>
+                                       <tr>
+                                          <td>1) Purpose?</td>
+                                          <td>To pause current executing Thread for giving the
+                                             chance of remaining waiting Threads of same
+                                             priority.
+                                          </td>
+                                          <td> If a Thread wants to wait until completing some
+                                             other Thread then we should go for join.
+                                          </td>
+                                          <td>If a Thread don't want to perform any operation for
+                                             a particular amount of time then we should go for
+                                             sleep() method.
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>2) Is it static?</td>
+                                          <td> yes</td>
+                                          <td> no</td>
+                                          <td> yes</td>
+                                       </tr>
+                                       <tr>
+                                          <td>3) Is it final?</td>
+                                          <td> no</td>
+                                          <td> yes</td>
+                                          <td> no</td>
+                                       </tr>
+                                       <tr>
+                                          <td>4) Is it overloaded?</td>
+                                          <td> No</td>
+                                          <td> yes</td>
+                                          <td> yes</td>
+                                       </tr>
+                                       <tr>
+                                          <td>5) Is it throws
+                                             InterruptedException?
+                                          </td>
+                                          <td> no</td>
+                                          <td> yes</td>
+                                          <td> yes</td>
+                                       </tr>
+                                       <tr>
+                                          <td>6) Is it native method?</td>
+                                          <td> yes </td>
+                                          <td>no </td>
+                                          <td>sleep(long ms) --&gt;native <br>sleep(long ms,int
+                                             ns) --&gt;non-native
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <h2 id="syncronization" style="background-color: rgb(0, 0, 160);">
+                                    <font color="#ffff00">Synchronization</font>
+                                 </h2>
+                                 <ol>
+                                    <li>Synchronized is the keyword applicable for methods and
+                                       blocks but not for classes and variables.
+                                    </li>
+                                    <li>If a method or block declared as the synchronized then at a
+                                       time only one Thread is allow to execute that method or
+                                       block on the given object.
+                                    </li>
+                                    <li>The main advantage of synchronized keyword is we can resolve
+                                       date inconsistency problems.
+                                    </li>
+                                    <li>But the main disadvantage of synchronized keyword is it
+                                       increases waiting time of the Thread and effects performance
+                                       of the system.
+                                    </li>
+                                    <li>Hence if there is no specific requirement then never
+                                       recommended to use synchronized keyword.
+                                    </li>
+                                    <li>Internally synchronization concept is implemented by using
+                                       lock concept.
+                                    </li>
+                                    <li>Every object in java has a unique lock. Whenever we are
+                                       using synchronized keyword then only lock concept will come
+                                       into the picture.
+                                    </li>
+                                    <li>If a Thread wants to execute any synchronized method on the
+                                       given object 1st it has to get the lock of that object. Once
+                                       a Thread got the lock of that object then it's allow to
+                                       execute any synchronized method on that object. If the
+                                       synchronized method execution completes then automatically
+                                       Thread releases lock.
+                                    </li>
+                                    <li>While a Thread executing any synchronized method the
+                                       remaining Threads are not allowed execute any synchronized
+                                       method on that object simultaneously. But remaining Threads
+                                       are allowed to execute any non-synchronized method
+                                       simultaneously. [lock concept is implemented based on object
+                                       but not based on method].
+                                    </li>
+                                 </ol>
+                                 <pre>Example:
+class Display
+{
+	public synchronized void wish(String name)
+	{
+		for(int i=0;i&lt;5;i++)
+		{
+			System.out.print("good morning:");
+			try
+			{
+				Thread.sleep(1000);	
+			}
+			catch (InterruptedException e)
+			{}
+			System.out.println(name);
+		}
+	}
+}
+class MyThread extends Thread
+{
+	Display d;
+	String name;
+	MyThread(Display d,String name)
+	{
+		this.d=d;
+		this.name=name;
+	}
+	public void run()
+	{
+		d.wish(name);
+	}
+}
+class SynchronizedDemo
+{
+	public static void main(String[] args)
+	{
+		Display d1=new Display();
+		MyThread t1=new MyThread(d1,"dhoni");
+		MyThread t2=new MyThread(d1,"yuvaraj");
+		t1.start();
+		t2.start();
+	}
+}
+</pre>
+                                 If we are not declaring wish() method as synchronized then both
+                                 Threads will be executed simultaneously and we will get irregular
+                                 output.
+                                 <pre>Output:
+good morning:good morning:yuvaraj
+good morning:dhoni
+good morning:yuvaraj
+good morning:dhoni
+good morning:yuvaraj
+good morning:dhoni
+good morning:yuvaraj
+good morning:dhoni
+good morning:yuvaraj
+dhoni
+</pre>
+                                 If we declare wish()method as synchronized then the Threads will be
+                                 executed one by one that is until completing the 1st Thread the 2nd
+                                 Thread will wait in this case we will get regular output which is
+                                 nothing but
+                                 <pre>Output:
+good morning:dhoni
+good morning:dhoni
+good morning:dhoni
+good morning:dhoni
+good morning:dhoni
+good morning:yuvaraj
+good morning:yuvaraj
+good morning:yuvaraj
+good morning:yuvaraj
+good morning:yuvaraj
+</pre>
+                                 <h2><u>
+                                    <font color="#0000ff">Case study:</font>
+                                    </u>
+                                 </h2>
+                                 <h3>
+                                    <font color="#008040"><u><em>Case 1:</em></u></font>
+                                 </h3>
+                                 <pre>Display d1=new Display();
+Display d2=new Display();
+MyThread t1=new MyThread(d1,"dhoni");
+MyThread t2=new MyThread(d2,"yuvaraj");
+t1.start();
+t2.start();
+</pre>
+                                 <u><em>Diagram:</em></u><br><br><img alt=""
+                                    src="multiThread/image036.png"><br><br>
+                                 Even though we declared wish() method as synchronized but we will
+                                 get irregular output in this case, because both Threads are
+                                 operating on different objects.
+                                 <p><b>Conclusion :</b> If multiple threads are operating on multiple
+                                    objects then there is no impact of Syncronization.<br> If
+                                    multiple threads are operating on same java objects then
+                                    syncronized concept is required(applicable).
+                                 </p>
+                                 <h3><em><u>
+                                    <font color="#0080c0">Class level lock:</font>
+                                    </u></em>
+                                 </h3>
+                                 <ol>
+                                    <li>Every class in java has a unique lock. If a Thread wants to
+                                       execute a static synchronized method then it required class
+                                       level lock.
+                                    </li>
+                                    <li>Once a Thread got class level lock then it is allow to
+                                       execute any static synchronized method of that class.
+                                    </li>
+                                    <li>While a Thread executing any static synchronized method the
+                                       remaining Threads are not allow to execute any static
+                                       synchronized method of that class simultaneously.
+                                    </li>
+                                    <li>But remaining Threads are allowed to execute<b> normal
+                                       synchronized methods, normal static methods, and normal
+                                       instance methods</b> simultaneously.
+                                    </li>
+                                    <li>Class level lock and object lock both are different and
+                                       there is no relationship between these two.
+                                    </li>
+                                 </ol>
+                                 <h3>
+                                    <font color="#800000"><u><em>Synchronized block:</em></u></font>
+                                 </h3>
+                                 <ol>
+                                    <li>If very few lines of the code required synchronization then
+                                       it's never recommended to declare entire method as
+                                       synchronized we have to enclose those few lines of the code
+                                       with in synchronized block.
+                                    </li>
+                                    <li>The main advantage of synchronized block over synchronized
+                                       method is it reduces waiting time of Thread and improves
+                                       performance of the system.
+                                    </li>
+                                 </ol>
+                                 <p>
+                                    <strong><u><em>Example 1:</em></u></strong> To get lock of
+                                    current object we can declare synchronized block as follows.<br>
+                                    If Thread got lock of current object then only it is allowed to
+                                    execute this block.<br>
+                                    <font color="#0080ff"><strong>Synchronized(this){} </strong>
+                                    </font>
+                                 </p>
+                                 <p>
+                                    <strong><u><em>Example 2:</em></u></strong> To get the lock of a
+                                    particular object 'b' we have to declare a synchronized block as
+                                    follows.<br> If thread got lock of 'b' object then only it is
+                                    allowed to execute this block.<br>
+                                    <font color="#800000"><strong>Synchronized(b){} </strong></font>
+                                 </p>
+                                 <p>
+                                    <u><em><strong>Example 3:</strong></em></u> To get class level
+                                    lock we have to declare synchronized block as follows.<br>
+                                    <font color="#008000"><strong>Synchronized(Display.class){}
+                                    </strong></font>
+                                    <br>If thread got class level lock of Display then only it
+                                    allowed to execute this block.
+                                 </p>
+                                 <p><b>Note:</b>As the argument to the synchronized block we can pass
+                                    either object reference or ".class file" and we can't pass
+                                    primitive values as argument [because lock concept is dependent
+                                    only for objects and classes but not for primitives].
+                                 </p>
+                                 <pre>Example:
+Int x=b;
+Synchronized(x){}
+Output:
+Compile time error.
+Unexpected type.
+Found: int
+Required: reference
+</pre>
+                                 <h3 id="threadCommunication"
+                                    style="background-color: rgb(128, 0, 0);">
+                                    <font color="#ffff00">Inter Thread communication
+                                    (wait(),notify(), notifyAll()):</font>
+                                 </h3>
+                                 <ul>
+                                    <li>Two Threads can communicate with each other by using wait(),
+                                       notify() and notifyAll() methods.
+                                    </li>
+                                    <li>The Thread which is required updation it has to call wait()
+                                       method on the required object then immediately the Thread
+                                       will entered into waiting state.<br>The Thread which is
+                                       performing updation of object, it is responsible to give
+                                       notification by calling notify() method.<br> After getting
+                                       notification the waiting Thread will get those
+                                       updations.<br>
+                                       <br>Diagram:<br><br><br><br>
+                                    </li>
+                                    <li>wait(), notify() and notifyAll() methods are available in
+                                       Object class but not in Thread class because Thread can call
+                                       these methods on any common object.
+                                    </li>
+                                    <li>To call wait(), notify() and notifyAll() methods compulsory
+                                       the current Thread should be owner of that object <br> i.e.,
+                                       current Thread should has lock of that object<br>i.e.,
+                                       current Thread should be in synchronized area. Hence we can
+                                       call wait(), notify() and notifyAll() methods only from
+                                       synchronized area otherwise we will get runtime exception
+                                       saying<b> IllegalMonitorStateException</b>.
+                                    </li>
+                                    <li>Once a Thread calls wait() method on the given object 1st it
+                                       releases the lock of that object immediately and entered
+                                       into waiting state.
+                                    </li>
+                                    <li>Once a Thread calls notify() (or) notifyAll() methods it
+                                       releases the lock of that object but may not immediately.
+                                    </li>
+                                    <li>
+                                       Except these (wait(),notify(),notifyAll()) methods there is
+                                       no other place(method) where the lock release will be
+                                       happen.
+                                       <table border="1">
+                                          <tbody>
+                                             <tr>
+                                                <th>Method </th>
+                                                <th> Is Thread Releases Lock?</th>
+                                             </tr>
+                                             <tr>
+                                                <td>yield()</td>
+                                                <td> No</td>
+                                             </tr>
+                                             <tr>
+                                                <td>join()</td>
+                                                <td> No</td>
+                                             </tr>
+                                             <tr>
+                                                <td>sleep()</td>
+                                                <td> No</td>
+                                             </tr>
+                                             <tr>
+                                                <td>wait()</td>
+                                                <td> Yes</td>
+                                             </tr>
+                                             <tr>
+                                                <td>notify()</td>
+                                                <td> Yes</td>
+                                             </tr>
+                                             <tr>
+                                                <td> notifyAll()</td>
+                                                <td> Yes</td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </li>
+                                    <li>
+                                       Once a Thread calls wait(), notify(), notifyAll() methods on
+                                       any object then it releases the lock of that particular
+                                       object but not all locks it has.
+                                       <ol>
+                                          <li> public final void wait()throws InterruptedException
+                                          </li>
+                                          <li> public final native void wait(long ms)throws
+                                             InterruptedException
+                                          </li>
+                                          <li> public final void wait(long ms,int ns)throws
+                                             InterruptedException
+                                          </li>
+                                          <li> public final native void notify()</li>
+                                          <li> public final void notifyAll()</li>
+                                       </ol>
+                                    </li>
+                                 </ul>
+                                 <pre>
+Example 1:
+class ThreadA
+{
+	public static void main(String[] args)throws InterruptedException
+	{
+	ThreadB b=new ThreadB();
+	b.start();
+	synchronized(b)
+	{
+	System.out.println("main Thread calling wait() method");//step-1
+	b.wait();
+	System.out.println("main Thread got notification call");//step-4
+	System.out.println(b.total);
+	}
+	}
+}
+class ThreadB extends Thread
+{
+	int total=0;
+	public void run()
+	{
+	synchronized(this)
+	{
+	System.out.println("child thread starts calcuation");//step-2
+		for(int i=0;i&lt;=100;i++)
+		{
+			total=total+i;
+		}
+	System.out.println("child thread giving notification call");//step-3
+	this.notify();
+	}
+	}
+}
+Output:
+main Thread calling wait() method
+child thread starts calculation
+child thread giving notification call
+main Thread got notification call
+5050
+</pre>
+                                 Example 2:
+                                 <h3>
+                                    <font color="#0080c0"><u><em>Producer consumer problem:</em></u>
+                                    </font>
+                                 </h3>
+                                 <ul>
+                                    <li>Producer(producer Thread) will produce the items to the
+                                       queue and consumer(consumer thread) will consume the items
+                                       from the queue. If the queue is empty then consumer has to
+                                       call wait() method on the queue object then it will entered
+                                       into waiting state.
+                                    </li>
+                                    <li>After producing the items producer Thread call notify()
+                                       method on the queue to give notification so that consumer
+                                       Thread will get that notification and consume items.
+                                    </li>
+                                 </ul>
+                                 <u><em>Diagram:</em></u><br><br><img alt=""
+                                    src="multiThread/image046.png"><br><br>
+                                 <u>Example:</u><br><br><img alt=""
+                                    src="multiThread/image048.png"><br><br>
+                                 <h3><u>
+                                    <font color="#0000ff">Notify vs notifyAll():</font>
+                                    </u>
+                                 </h3>
+                                 <ul>
+                                    <li>We can use notify() method to give notification for only one
+                                       Thread. If multiple Threads are waiting then only one Thread
+                                       will get the chance and remaining Threads has to wait for
+                                       further notification. But which Thread will be
+                                       notify(inform) we can't expect exactly it depends on JVM.
+                                    </li>
+                                    <li>We can use notifyAll() method to give the notification for
+                                       all waiting Threads. All waiting Threads will be notified
+                                       and will be executed one by one, because they are required
+                                       lock
+                                    </li>
+                                 </ul>
+                                 <b>Note:</b> On which object we are calling wait(), notify() and
+                                 notifyAll() methods that corresponding object lock we have to get
+                                 but not other object locks.
+                                 <br>
+                                 <u>Example:</u><br><br><img alt=""
+                                    src="multiThread/image050.png"><br><br>
+                                 <h3><u> Which of the folowing statements are True ?</u></h3>
+                                 <ol>
+                                    <li>Once a Thread calls wait() on any Object immediately it will
+                                       entered into waiting state without releasing the lock ?
+                                       <br><b> NO</b>
+                                    </li>
+                                    <li>Once a Thread calls wait() on any Object it reduces the lock
+                                       of that Object but may not immediately ? <br><b>NO</b> 
+                                    </li>
+                                    <li>Once a Thread calls wait() on any Object it immediately
+                                       releases all locks whatever it has and entered into waiting
+                                       state ? <br><b>NO</b>
+                                    </li>
+                                    <li>Once a Thread calls wait() on any Object it immediately
+                                       releases the lock of that perticular Object and entered into
+                                       waiting state ? <br><b>YES</b>
+                                    </li>
+                                    <li>Once a Thread calls notify() on any Object it immediately
+                                       releases the lock of that Object ?<br><b>NO</b> 
+                                    </li>
+                                    <li>Once a Thread calls notify() on any Object it releases the
+                                       lock of that Object but may not immediately ?<br><b>YES</b>
+                                    </li>
+                                 </ol>
+                                 <h2 id="deadLock" style="background-color: rgb(0, 0, 64);">
+                                    <font color="#ffff80">Dead lock:</font>
+                                 </h2>
+                                 <ul>
+                                    <li>If 2 Threads are waiting for each other forever(without end)
+                                       such type of situation(infinite waiting) is called dead
+                                       lock.
+                                    </li>
+                                    <li>There are no resolution techniques for dead lock but several
+                                       prevention(avoidance) techniques are possible.
+                                    </li>
+                                    <li>Synchronized keyword is the cause for deadlock hence
+                                       whenever we are using synchronized keyword we have to take
+                                       special care.
+                                    </li>
+                                 </ul>
+                                 <pre>Example:
+class A
+{
+	public synchronized void foo(B b)
+	{
+		System.out.println("Thread1 starts execution of foo() method");
+		try
+		{
+			Thread.sleep(2000);
+		}
+		catch (InterruptedException e)
+		{}
+		System.out.println("Thread1 trying to call b.last()");
+		b.last();
+	}
+	public synchronized void last()
+	{
+		System.out.println("inside A, this is last()method");
+	}
+}
+class B
+{
+	public synchronized void bar(A a)
+	{
+	System.out.println("Thread2 starts execution of bar() method");
+	try
+	{
+		Thread.sleep(2000);
+	}
+	catch (InterruptedException e)
+	{}
+	System.out.println("Thread2 trying to call a.last()");
+	a.last();
+	}
+	public synchronized void last()
+	{
+	System.out.println("inside B, this is last() method");
+	}
+}
+class DeadLock implements Runnable
+{
+	A a=new A();
+	B b=new B();
+	DeadLock()
+	{
+		Thread t=new Thread(this);
+		t.start();
+		a.foo(b);//main thread
+	}
+	public void run()
+	{
+		b.bar(a);//child thread
+	}
+	public static void main(String[] args)
+	{
+		new DeadLock();//main thread
+	}
+}
+Output:
+Thread1 starts execution of foo() method
+Thread2 starts execution of bar() method
+Thread2 trying to call a.last()
+Thread1 trying to call b.last()
+//here cursor always waiting.
+</pre>
+                                 <br>
+                                 <b>Note : </b>
+                                 If we remove atleast one syncronized keywoed then we won't get
+                                 DeadLOck.Hence syncronized keyword in the only reason for DeadLock
+                                 due to this while using syncronized keyword we have to handling
+                                 carefully.
+                                 <br><br>
+                                 <h3 id="daemon" style="background-color: rgb(0, 0, 255);">
+                                    <font color="#ffff00">Daemon Threads:</font>
+                                 </h3>
+                                 <p> The Threads which are executing in the background are called
+                                    daemon Threads.<br> The main objective of daemon Threads is to
+                                    provide support for non-daemon Threads like main Thread.
+                                 </p>
+                                 <u><strong>Example:
+                                 </strong></u><br>
+                                 <font color="#0080c0"><u><em>Garbage collector</em></u></font>
+                                 <p> When ever the program runs with low memory the JVM will execute
+                                    Garbage Collector to provide free memory. So that the main
+                                    Thread can continue it's execution. 
+                                 </p>
+                                 <ul>
+                                    <li>We can check whether the Thread is daemon or not by using
+                                       isDaemon() method of Thread class. <br>
+                                       <strong>public final boolean isDaemon(); </strong>
+                                    </li>
+                                    <li>We can change daemon nature of a Thread by using setDaemon
+                                       () method. <br>
+                                       <strong>public final void setDaemon(boolean b); </strong>
+                                    </li>
+                                    <li>But we can change daemon nature before starting Thread only.
+                                       That is after starting the Thread if we are trying to change
+                                       the daemon nature we will get R.E saying
+                                       <strong><em>IllegalThreadStateException</em></strong>.
+                                    </li>
+                                    <li><b>Default Nature : </b>Main Thread is always non daemon and
+                                       we can't change its daemon nature because it's already
+                                       started at the beginning only.
+                                    </li>
+                                    <li>Main Thread is always non daemon and for the remaining
+                                       Threads daemon nature will be inheriting from parent to
+                                       child that is if the parent is daemon child is also daemon
+                                       and if the parent is non daemon then child is also non
+                                       daemon.
+                                    </li>
+                                    <li>Whenever the last non daemon Thread terminates automatically
+                                       all daemon Threads will be terminated.
+                                    </li>
+                                 </ul>
+                                 <pre>Example:
+class MyThread extends Thread
+{
 
+}
+
+class DaemonThreadDemo
+{
+	public static void main(String[] args)
+	{
+	System.out.println(Thread.currentThread().isDaemon());
+	MyThread t=new MyThread();
+	System.out.println(t.isDaemon());	           1
+	t.start();
+	t.setDaemon(true);
+	System.out.println(t.isDaemon());
+	}
+}
+Output:
+false
+false
+RE:IllegalThreadStateException
+</pre>
+                                 <pre>Example:
+class MyThread extends Thread
+{
+	public void run()
+	{
+		for(int i=0;i&lt;10;i++)
+		{
+			System.out.println("lazy thread");
+			try
+			{
+				Thread.sleep(2000);
+			}
+			catch (InterruptedException e)
+			{}
+		}
+	}
+}
+class DaemonThreadDemo
+{
+	public static void main(String[] args)
+	{
+	MyThread t=new MyThread();
+	t.setDaemon(true);	//--&gt;1
+	t.start();
+	System.out.println("end of main Thread");
+	}
+}
+Output:
+End of main Thread
+</pre>
+                                 <ul>
+                                    <li>If we comment line 1 then both main &amp; child Threads are
+                                       non-Daemon , and hence both threads will be executed untill
+                                       there completion.
+                                    </li>
+                                    <li>If we are not comment line 1 then main thread is non-Daemon
+                                       and child thread is Daemon. Hence when ever main Thread
+                                       terminates automatically child thread will be terminated.
+                                    </li>
+                                 </ul>
+                                 <h3>
+                                    <font color="#008080"><u><em>Lazy thread</em></u></font>
+                                 </h3>
+                                 <ul>
+                                    <li>If we are commenting line 1 then both main and child Threads
+                                       are non daemon and hence both will be executed until they
+                                       completion.
+                                    </li>
+                                    <li>If we are not commenting line 1 then main Thread is non
+                                       daemon and child Thread is daemon and hence whenever main
+                                       Thread terminates automatically child Thread will be
+                                       terminated.
+                                    </li>
+                                 </ul>
+                                 <h2>
+                                    <font color="#ff8000"><u><em>Deadlock vs Starvation:</em></u>
+                                    </font>
+                                 </h2>
+                                 <ul>
+                                    <li>A long waiting of a Thread which never ends is called
+                                       deadlock.
+                                    </li>
+                                    <li>A long waiting of a Thread which ends at certain point is
+                                       called starvation.
+                                    </li>
+                                    <li>A low priority Thread has to wait until completing all high
+                                       priority Threads.
+                                    </li>
+                                    <li>This long waiting of Thread which ends at certain point is
+                                       called starvation.
+                                    </li>
+                                 </ul>
+                                 <h3 id="stop">
+                                    <font color="#ff0000"><u>How to kill a Thread in the middle of
+                                    the line?</u></font>
+                                 </h3>
+                                 <ul>
+                                    <li>We can call stop() method to stop a Thread in the middle
+                                       then it will be entered into dead state immediately.<br>
+                                       <strong>public final void stop(); </strong>
+                                    </li>
+                                    <li>stop() method has been deprecated and hence not recommended
+                                       to use.
+                                    </li>
+                                 </ul>
+                                 <h3 id="suspend">
+                                    <font color="#008000"><em><u>suspend and resume
+                                    methods:</u></em></font>
+                                 </h3>
+                                 <ul>
+                                    <li>A Thread can suspend another Thread by using suspend()
+                                       method then that Thread will be paused temporarily.
+                                    </li>
+                                    <li>
+                                       A Thread can resume a suspended Thread by using resume()
+                                       method then suspended Thread will continue its execution.
+                                       <ol>
+                                          <li><strong>public final void suspend();</strong></li>
+                                          <li><strong>public final void resume();</strong></li>
+                                       </ol>
+                                    </li>
+                                    <li>Both methods are deprecated and not recommended to use.</li>
+                                 </ul>
+                                 <h3>
+                                    <font color="#0080ff"><u>RACE condition:</u></font>
+                                 </h3>
+                                 Executing multiple Threads simultaneously and causing data
+                                 inconsistency problems is nothing but<b> Race condition</b><br> we
+                                 can resolve race condition by using synchronized keyword.
+                                 <h3 id="group">
+                                    <font color="#008000"><em><u>ThreadGroup:</u></em></font>
+                                 </h3>
+                                 Based on functionality we can group threads as a single unit which
+                                 is nothing but ThreadGroup.<br>
+                                 <br>ThreadGroup provides a convenient way to perform common
+                                 operations for all threads belongs to a perticular group.
+                                 <p>
+                                    We can create a ThreadGroup by using the following constructors
+                                    <br>
+                                    <b>ThreadGroup g=new ThreadGroup(String gName);</b>
+                                 </p>
+                                 <p>
+                                    We can attach a Thread to the ThreadGroup by using the following
+                                    constructor of Thread class<br>
+                                    <b>Thread t=new Thread(ThreadGroup g, String name);</b>
+                                 </p>
+                                 <pre>ThreadGroup g=new ThreadGroup("Printing Threads");
+MyThread t1=new MyThread(g,"Header Printing");
+MyThread t2=new MyThread(g,"Footer Printing");
+MyThread t3=new MyThread(g,"Body Printing");
+-----------
+g.stop();
+</pre>
+                                 <h3 id="local">
+                                    <font color="#008000"><em><u>ThreadLocal(1.2 v):</u></em></font>
+                                 </h3>
+                                 We can use ThreadLocal to define local resources which are required
+                                 for a perticular Thread like DBConnections, counterVariables etc.,
+                                 <br><br>
+                                 We can use ThreadLocal to define Thread scope like Servlet
+                                 Scopes(page,request,session,application).
+                                 <h3 id="green">
+                                    <font color="#008000"><em><u>GreenThread:</u></em></font>
+                                 </h3>
+                                 Java multiThreading concept is implementing by using the following 2
+                                 methods :
+                                 <ol>
+                                    <li>GreenThread Model</li>
+                                    <li>Native OS Model</li>
+                                 </ol>
+                                 <h3>GreenThread Model</h3>
+                                 The threads which are managed completely by JVM without taking
+                                 support for underlying OS, such type of threads are called Green
+                                 Threads.
+                                 <h3>Native OS Model</h3>
+                                 <ul>
+                                    <li>
+                                       The Threads which are managed with the help of underlying OS
+                                       are called Native Threads.
+                                    </li>
+                                    <li>
+                                       Windows based OS provide support for Native OS Model
+                                    </li>
+                                    <li>
+                                       Very few OS like SunSolaries provide support for GreenThread
+                                       Model
+                                    </li>
+                                    <li>
+                                       Anyway GreenThread model is deprecated and not recommended
+                                       to use.
+                                    </li>
+                                 </ul>
+                                 <h2 id="life" style="background-color: rgb(0, 0, 160);">
+                                    <font color="#ffff00">Life cycle of a Thread:</font>
+                                 </h2>
+                                 <br><br>
+                                 <font color="#ff0000"><strong>What is the difference between extends
+                                 Thread and implements Runnable?
+                                 </strong></font>
+                                 <ol>
+                                    <li>Extends Thread is useful to override the public void run()
+                                       method of Thread class.
+                                    </li>
+                                    <li>Implements Runnable is useful to implement public void run()
+                                       method of Runnable interface.
+                                    </li>
+                                 </ol>
+                                 <font color="#ff0000"><strong>Extends Thread, implements Runnable
+                                 which one is advantage?
+                                 </strong></font><br> If we extend Thread class, there is no
+                                 scope to extend another class.
+                                 <p>
+                                    <strong><u>Example: </u></strong><br>
+                                    Class MyClass extends Frame,Thread//invalid <br>
+                                    If we write implements Runnable still there is a scope to extend
+                                    one more class.
+                                 </p>
+                                 <u><strong>Example:
+                                 </strong></u>
+                                 <ol>
+                                    <li>class MyClass extends Thread implements Runnable</li>
+                                    <li>class MyClass extends Frame implements Runnable</li>
+                                 </ol>
+                                 <h3>
+                                    <font color="#ff0000">How can you stop a Thread which is
+                                    running?</font>
+                                 </h3>
+                                 <p>
+                                    <u><strong>Step 1:</strong></u>
+                                    Declare a boolean type variable and store false in that
+                                    variable.<br>
+                                    <font color="#0000ff">boolean stop=false;
+                                    </font>
+                                 </p>
+                                 <p>
+                                    <u><strong>Step 2:</strong></u>
+                                    If the variable becomes true return from the run() method.<br>
+                                    <font color="#8000ff">If(stop) return;
+                                    </font>
+                                 </p>
+                                 <p>
+                                    <u><strong>Step 3: </strong></u>
+                                    Whenever to stop the Thread store true into the variable.<br>
+                                    <font color="#0080ff">System.in.read();//press enter <br>
+                                    Obj.stop=true;
+                                    </font>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <hr>
+                     </div>
+                  </div>
+                  <div class="card-footer">
+                     <ul class="pagination justify-content-center mb-4">
+                        <li class="page-item"><a class="page-link btn-outline-primary"
+                           href="java-exception.html">&lArr; Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="java-multithreading.html">Next
+                           &rArr;</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <style>
+         .footerfont {
+         font-size: 16px
+         }
+      </style>
+      <div class="footer footerfont" style="background: #55585a;">
+         <div class="footer-copyright border-top ">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-6 center py-3 text-white">
+                     Copyright © 2023, <br>The content is copyrighted to Ravi Kalyan Kolloju.
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
 </html>
