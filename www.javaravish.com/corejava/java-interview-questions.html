@@ -2800,86 +2800,502 @@ public class MyException extends IOException {
 						<h1><b>8. Java Multithreading Interview Questions</b></h1>
 						<br>
 						<details>
-							<summary>1) Can we make array volatile in Java?</summary>
+							<summary>1) What is multitasking?</summary>
 							<div class="toggle-content">
-								<p>Yes, you can make an array volatile in Java but only the
-									reference which is pointing to an array, not the whole array. What I mean, if one
-									thread changes the reference variable to points to another array, that will provide
-									a volatile guarantee, but if multiple threads are changing individual array elements
-									they won't be having happens before guarantee provided by the volatile modifier.
+								<p style="text-align:justify;">A multitasking operating system is an operating system
+									that gives you the perception of 2 or more tasks/jobs/processes running at the same
+									time. It does this by dividing system resources amongst these tasks/jobs/processes
+									and switching between the tasks/jobs/processes while they are executing over and
+									over again. Usually, the CPU processes only one task at a time but the switching is
+									so fast that it looks like the CPU is executing multiple processes at a time. They
+									can support either preemptive multitasking, where the OS provides time to
+									applications (virtually all modern OS), or cooperative multitasking, where the OS
+									waits for the program to give back control (Windows 3.x, Mac OS 9, and earlier),
+									leading to hangs and crashes. Also known as Timesharing, multitasking is a logical
+									extension of multiprogramming.</p>
+								<p style="text-align:justify;">Multitasking programming is of two types which are as
+									follows: <br>
+								<ol>
+									<li>Process-based Multitasking</li>
+									<li>Thread-based Multitasking</li>
+								</ol>
 								</p>
 							</div>
 						</details>
 
 						<details>
-							<summary>2) Can volatile make a non-atomic operation to atomic?</summary>
+							<summary>2. What is the difference between a thread and a process?
+							</summary>
 							<div class="toggle-content">
-								<p>This another good question I love to ask on volatile, mostly as a follow-up of the
-									previous question. This question is also not easy to answer because volatile is not
-									about atomicity, but there are cases where you can use a volatile variable to make
-									the operation atomic.
+								<p>By asking this, the interviewer wants to see that you understand fundamental
+									multithreading concepts. Explain the concept clearly as if you are speaking to
+									someone who does not have experience in this field.
 									<br>
-									One example I have seen is having a long field in your class. If you know that a
-									long field is accessed by more than one thread e.g. a counter, a price field or
-									anything, you better make it volatile. Why? because reading to a long variable is
-									not atomic in Java and done in two steps, If one thread is writing or updating long
-									value, it's possible for another thread to see half value (fist 32-bit). While
-									reading/writing a volatile long or double (64 bit) is atomic.<br>
+									Example: 'A process is a single application or program, whereas a thread is a
+									subprocess within that application or program. Each process has its own address
+									space in memory. Threads share their address space.'
 								</p>
 							</div>
 						</details>
 
 						<details>
-							<summary>3) What are practical uses of volatile modifier?</summary>
+							<summary>3. What are some fundamental advantages of multithreading in Java?</summary>
 							<div class="toggle-content">
-								<p>One of the practical use of the volatile variable is to make reading double and long
-									atomic. Both double and long are 64-bit wide and they are read in two parts, first
-									32-bit first time and next 32-bit second time, which is non-atomic but volatile
-									double and long read is atomic in Java. Another use of the volatile variable is to
-									provide a memory barrier, just like it is used in <span
-										style="font-family: inherit;">Disrupter </span>framework. Basically, Java Memory
-									model inserts a write barrier after you write to a volatile variable and a read
-									barrier before you read it. Which means, if you write to volatile field then it's
-									guaranteed that any thread accessing that variable will see the value you wrote and
-									anything you did before doing that right into the thread is guaranteed to have
-									happened and any updated data values will also be visible to all threads, because
-									the memory barrier flushed all other writes to the cache.<br>
+								<p>The key benefits of Java multithreading include:</p>
+								<ul role="list">
+									<li>Multiple threads can share single address spaces</li>
+									<li>Threads share the same resources from the library but can execute differently
+									</li>
+									<li>Different threads can be made to perform various functions to yield a given
+										result</li>
+								</ul>
+							</div>
+						</details>
+
+						<details>
+							<summary>4. What is inter-thread communication?</summary>
+							<div class="toggle-content">
+								<p>Communication between synchronized threads is referred to as inter-thread
+									communication. It is a core feature that helps to avoid thread-polling in Java. A
+									particular thread can be paused through inter-thread communication to allow another
+									thread to enter the block.
 								</p>
 							</div>
 						</details>
 
 						<details>
-							<summary>4) What guarantee volatile variable provides?</summary>
+							<summary>5. What are some functions used to perform inter-thread communication in Java?
+							</summary>
 							<div class="toggle-content">
-								<p>volatile variables provide the guarantee about ordering and visibility e.g. volatile
-									assignment cannot be re-ordered with other statements but in the absence of any
-									synchronization instruction compiler, JVM or JIT are free to reorder statements for
-									better performance. volatile also provides the happens-before guarantee which
-									ensures changes made in one thread is visible to others. In some cases volatile also
-									provide atomicity e.g. reading 64-bit data types like long and double are not atomic
-									but read of volatile double or long is atomic.
+								<p>This is one of the most common Java Multithreading interview questions asked in tech
+									interviews. Some common functions used to perform inter-thread communication in Java
+									are - notify(), wait() and notifyAll().
 								</p>
+							</div>
+						</details>
+						<details>
+							<summary>6. What do you understand about the wait() function in Java?</summary>
+							<div class="toggle-content">
+								<p>The wait() function, specified by the object class, is used to pause the current
+									thread and wait until another thread calls the notify() function. Note that the
+									wait() method needs to be called from a synchronized block to avoid an exception
+									from occurring.</p>
 							</div>
 						</details>
 
 						<details>
-							<summary>5) Which one would be easy to write? synchronization code for 10 threads or 2
-								threads?</summary>
+							<summary>7. What are the different states in a thread lifecycle?</summary>
 							<div class="toggle-content">
-								<p>In terms of writing code, both will be of same complexity because synchronization
-									code is independent of a number of threads. Choice of synchronization though depends
-									upon a number of threads because the number of thread present more contention, so
-									you go for advanced synchronization technique e.g. lock stripping, which requires
-									more complex code and expertise
+								<p>
+								<p>There are six thread states.&nbsp;They
+									are&nbsp;NEW,&nbsp;RUNNABLE,&nbsp;BLOCKED,&nbsp;WAITING,&nbsp;TIMED_WAITING
+									and&nbsp;TERMINATED. At any point of time, thread will be in any one of these
+									states.</p>
+								<ol>
+									<li>NEW : A thread will be in this state before calling start() method.</li>
+									<li>RUNNABLE : A thread will be in this state after calling the start() method.</li>
+									<li>BLOCKED : A thread will be in this state when a thread is waiting for object
+										lock to enter into synchronized method/block or a thread will be in this state
+										if deadlock occurs.</li>
+									<li>WAITING : A thread will be in this state when wait() or join() method is called.
+									</li>
+									<li>TIMED_WAITING : A thread will be in this state when sleep() or wait() with
+										timeOut or join() with timeOut is called.</li>
+									<li>TERMINATED : A thread will be in this state once it finishes it’s execution.
+									</li>
+								</ol>
+							</div>
+						</details>
+						<details>
+							<summary>8. What do you understand by context switching?</summary>
+							<div class="toggle-content">
+								<p>Context switching is a feature through which the current state of a thread is saved
+									for it to be restored and executed later. Through context switching, multiple
+									processes can share the same CPU.</p>
+							</div>
+						</details>
+						<details>
+							<summary>9. What is the function of the join() method?</summary>
+							<div class="toggle-content">
+								<p>The join() method causes the current thread to stop running until the thread due to
+									congregate with completes its task. It is a commonly used function that facilitates
+									the execution of multiple threads in an organized manner.</p>
+							</div>
+						</details>
+						<details>
+							<summary>10. What is the function of the sleep() method?
+							</summary>
+							<div class="toggle-content">
+								<p>This is yet another popular Java Multithreading Interview Question. The sleep()
+									method is used to pause a particular thread from executing and prioritizes another
+									thread that needs to be executed before the current thread executes. </p>
+							</div>
+						</details>
+						<details>
+							<summary>11. What do you understand about Deadlock situations in Java Multithreading?
+							</summary>
+							<div class="toggle-content">
+								<p>Deadlock is a situation where each thread is waiting for resources held by other
+									waiting threads. Due to this situation, no threads are executed, causing a pause in
+									program execution and breaking the code at runtime.</p>
+							</div>
+						</details>
+						<details>
+							<summary>12. How do you detect deadlock situations in Java?</summary>
+							<div class="toggle-content">
+								<p>Deadlock situations can be detected by running the executable code on cmd and
+									subsequently collecting the thread dump. If deadlock situations are present, the cmd
+									will throw up a message.</p>
+							</div>
+						</details>
+						<details>
+							<summary>13. How can deadlock situations be avoided in Java?</summary>
+							<div class="toggle-content">
+								<p>This is one of the most common Java Multithreading interview questions asked in
+									technical interviews. Deadlock situations in Java can be avoided by:
+
+									By way of avoiding nested thread locks and providing locks to only one thread at a
+									time
+
+									By using thread join - the function helps to wait for threads to execute before
+									other threads are executed, thereby preventing multiple threads from waiting for
+									resources used by other threads.</p>
+							</div>
+						</details>
+						<details>
+							<summary>14. Do individual threads have their respective stacks in Multithreaded
+								programming?</summary>
+							<div class="toggle-content">
+								<p>Yes, individual threads have their stacks in multithreaded programming. Each thread
+									is independent of the other and maintains its own stack in the memory.</p>
+							</div>
+						</details>
+						<details>
+							<summary>15. How is thread-safety achieved in multithreaded programming?</summary>
+							<div class="toggle-content">
+								<p>Thready safety can be achieved if multiple threads can use a particular class
+									function without the occurrence of the race condition. In Multithreaded programming,
+									thread safety can be achieved by:<br></p>
+								<ul role="list">
+									<li>Use of atomic wrapper class</li>
+									<li>Use of a volatile keyword</li>
+									<li>Employing a lock-based mechanism</li>
+									<li>Synchronization</li>
+								</ul>
+							</div>
+						</details>
+						<details>
+							<summary>16. In how many ways, you can create threads in Java? What are those? Explain with
+								examples?</summary>
+							<div class="toggle-content">
+								<p>There are two ways two create threads in Java.</p>
+								<ol>
+									<li>By extending <code>java.lang.Thread</code> class</li>
+									<li>By implementing <code>java.lang.Runnable</code> interface</li>
+								</ol>
+							</div>
+						</details>
+						<details>
+							<summary>17. How many types of threads are there in Java? Explain?</summary>
+							<div class="toggle-content">
+								<p>There are two types of threads in Java. They are,</p>
+								<ol>
+									<li>User Threads</li>
+									<li>Daemon Threads</li>
+								</ol>
+								<p>User threads are threads which are created by the application or user. They are high
+									priority threads. JVM will not exit until all user threads finish their execution.
+									JVM wait for user threads to finish their task. These threads are foreground
+									threads.</p>
+								<p>Daemon threads are threads which are mostly&nbsp;created by the JVM. These threads
+									always run in background. These threads are used to perform some background tasks
+									like garbage collection. These threads are less priority threads. JVM will not wait
+									for these threads to finish their execution. JVM will exit as soon as&nbsp;all user
+									threads finish their execution.</p>
+							</div>
+						</details>
+						<details>
+							<summary>18. Do two threads can have same name? If yes then how do you identify the threads
+								having the same name?</summary>
+							<div class="toggle-content">
+								<p>Yes, two threads can have same name. In such scenarios, Thread ID can be used to
+									identify the threads. Thread ID is a unique long number which remains unchanged
+									through out the life of a thread. Thread ID can be retrieved using
+									<code>getID()</code> method.
 								</p>
 							</div>
 						</details>
 						<details>
-							<summary>Test</summary>
+							<summary>19. What are MIN_PRIORITY, NORM_PRIORITY and MAX_PRIORITY?</summary>
 							<div class="toggle-content">
-								<p>Some</p>
+								<p>MIN_PRIORITY, NORM_PRIORITY and MAX_PRIORITY are three constant fields in
+									<code>java.lang.Thread</code> class which define lowest, normal and highest priority
+									of a thread respectively.
+								</p>
+								<p><code>MIN_PRIORITY</code> : It defines&nbsp;the lowest&nbsp;priority that a thread
+									can have and it’s value is 1.</p>
+								<p><code>NORM_PRIORITY</code> : It defines&nbsp;the normal priority that a thread can
+									have and it’s value is 5.</p>
+								<p><code>MAX_PRIORITY</code>&nbsp;: It defines&nbsp;the highest priority that a thread
+									can have and it’s value is 10.</p>
 							</div>
 						</details>
+						<details>
+							<summary>20. What do you mean by synchronization? Explain with an example?</summary>
+							<div class="toggle-content">
+								<p>Through synchronization, we can make the threads to execute particular method or
+									block in sync not simultaneously. When a method or block is declared as
+									synchronized, only one thread can enter into that method or block. When one thread
+									is executing synchronized method or block, the other threads which wants to execute
+									that method or block have to wait until first thread executes that method or block.
+									Thus avoiding the thread interference and achieving the thread safeness.</p>
+							</div>
+						</details>
+						<details>
+							<summary>21. What is object lock or monitor?</summary>
+							<div class="toggle-content">
+								<p>The synchronization in Java is built around an entity called object lock or monitor.
+									Below is the brief description about lock or monitor.</p>
+								<ul>
+									<li>Whenever an object is created to any class, an object lock is created and is
+										stored inside the object.</li>
+									<li>One object will have only one object lock associated with it.</li>
+									<li>Any thread wants to enter into synchronized methods or blocks of any object,
+										they must&nbsp;acquire object lock associated with that object and release the
+										lock after they are done with the execution.</li>
+									<li>The other threads which wants to enter into synchronized methods of that object
+										have to wait until the currently executing thread releases the object lock.</li>
+									<li>To enter into static synchronized methods or blocks, threads have to acquire
+										class lock associated with that class as static members are stored inside the
+										class memory.</li>
+								</ul>
+							</div>
+						</details>
+						<details>
+							<summary>22. I want only some part of the method to be synchronized, not the whole method?
+								How do you achieve that?</summary>
+							<div class="toggle-content">
+								<p>This can be done using synchronized blocks.</p>
+							</div>
+						</details>
+						<details>
+							<summary>23. What is the use of synchronized blocks?</summary>
+							<div class="toggle-content">
+								<p>Synchronization slows down the application. Because, at any given time, only one
+									thread can enter into synchronized method. Other threads have to wait until first
+									thread finishes it’s execution of that method. This slows down the execution of
+									whole application.
+								</p>
+								<p>
+									Instead of synchronizing the whole method, synchronizing the only that part which is
+									to be monitored for thread safe saves the time. This can be done using synchronized
+									blocks.</p>
+							</div>
+						</details>
+						<details>
+							<summary>24. How threads communicate with each other in Java?</summary>
+							<div class="toggle-content">
+								<p>Threads in Java communicate with each other using wait(), notify() and notifyAll()
+									methods.
+								</p>
+								<p>
+									wait() : This method tells the currently executing thread to release the lock of
+									this object and wait until some other thread acquires the same lock and notify it
+									using either notify() or notifyAll() methods.
+								</p>
+								<p>
+									notify() : This method wakes up one thread randomly that called wait() method on
+									this object.
+								</p>
+								<p>
+									notifyAll() : This method wakes up all the threads that called wait() method on this
+									object. But, only one thread will acquire lock of this object depending upon the
+									priority.</p>
+							</div>
+						</details>
+						<details>
+							<summary>25. What is the difference between wait() and sleep() methods in Java?</summary>
+							<div class="toggle-content">
+								<p>
+								<figure class="wp-block-table">
+									<table>
+										<tbody>
+											<tr>
+												<td><strong>wait()</strong></td>
+												<td><strong>sleep()</strong></td>
+											</tr>
+											<tr>
+												<td>The thread which calls wait() method releases the lock it holds.
+												</td>
+												<td>The thread which calls sleep() method doesn’t release the lock it
+													holds.</td>
+											</tr>
+											<tr>
+												<td>The thread regains the lock after other threads call either notify()
+													or notifyAll() methods on the same lock.</td>
+												<td>No question of regaining the lock as thread doesn’t release the
+													lock.</td>
+											</tr>
+											<tr>
+												<td>wait() method must be called within the synchronized block.</td>
+												<td>sleep() method can be called within or&nbsp;outside the synchronized
+													block.</td>
+											</tr>
+											<tr>
+												<td>wait() method is a member of java.lang.Object class.</td>
+												<td>sleep() method is a member of java.lang.Thread class.</td>
+											</tr>
+											<tr>
+												<td>wait() method is always called on objects.</td>
+												<td>sleep() method is always called on threads.</td>
+											</tr>
+											<tr>
+												<td>wait() is a non-static method of Object class.</td>
+												<td>sleep() is a static method of Thread class.</td>
+											</tr>
+											<tr>
+												<td>Waiting threads can be woken up by other threads by calling notify()
+													or notifyAll() methods.</td>
+												<td>Sleeping threads can not be woken up by other threads. If done so,
+													thread will throw InterruptedException.</td>
+											</tr>
+											<tr>
+												<td>&nbsp;To call wait() method, thread must have object lock.</td>
+												<td>&nbsp;To call sleep() method, thread need not to have object lock.
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</figure>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>26. What is the difference between notify() and notifyAll() in Java?</summary>
+							<div class="toggle-content">
+								<p>notify() : When a thread calls notify() method on a particular object, only one
+									thread will be notified which is waiting for the lock or monitor of that object. The
+									thread chosen to notify is random i.e randomly one thread will be selected for
+									notification. Notified thread doesn’t get the lock of the object immediately. It
+									gets once the calling thread releases the lock of that object.
+								</p>
+								<p>
+									notifyAll() : When a thread calls notifyAll() method on a particular object, all
+									threads which are waiting for the lock of that object are notified. All notified
+									threads will move from WAITING state to BLOCKED state. All these threads will
+									get
+									the lock of the object on a priority basis. The thread which gets the lock of
+									the
+									object moves to RUNNING state. The remaining threads will remain in BLOCKED
+									state
+									until they get the object lock.</p>
+							</div>
+						</details>
+						<details>
+							<summary>27. What do you know about interrupt() method? Why it is used?</summary>
+							<div class="toggle-content">
+								<p>interrupt() method is used to interrupt sleeping or waiting thread. The whole thread
+									interruption mechanism depends on&nbsp;an internal flag called&nbsp;interrupt
+									status. The initial value of this flag for any thread is false. When you call
+									interrupt() method on&nbsp;a thread, interrupt status of that thread will be set to
+									true. When a thread throws&nbsp;<code>InterruptedException</code>, this status will
+									be set to false again.</p>
+							</div>
+						</details>
+						<details>
+							<summary>28. What is the difference between calling start() method and calling run() method
+								directly as anyhow start() method internally calls run() method?</summary>
+							<div class="toggle-content">
+								<p>When you call start() method, a new thread is created and that newly created thread
+									executes the task kept in the run() method. If you call run() method directly, no
+									new thread is created. Any task kept in run() method is executed by the calling
+									thread itself.
+								</p>
+								<p>
+									If you are calling run() method directly, then you are not making use of the
+									multi-threaded programming concept. Because, when you call run() method directly, no
+									new thread is created. run() method is executed by the calling thread itself. It
+									just acts as normal method invocation. You are not using the concept of
+									multi-threading.</p>
+							</div>
+						</details>
+						<details>
+							<summary>29. What is executor framework?</summary>
+							<div class="toggle-content">
+								<p>Java 5 has introduced new framework named executor framework for managing threads.
+								</p>
+								<p>
+									If you need to create thousands of the threads, your application performance may
+									suffer and also, maintenance of each thread is also overhead. Executor framework
+									solves this problem by limiting number of threads and reusing the same threads once
+									threads had completed its current task.</p>
+							</div>
+						</details>
+						<details>
+							<summary>30. What is Thread pool?</summary>
+							<div class="toggle-content">
+								<p>Thread pool represents set of worker threads that are waiting for the jobs and these
+									worker threads can be reused many times.
+								</p>
+								<p>
+									Whenever a task needs to be performance, service provider will pull out a thread out
+									of thread pool to perform the task. If no worker threads are available, then task
+									has to wait for execution.
+								</p>
+								<p>
+									java.util.concurrent.Executors class provides factory methods to create the thread
+									pools.</p>
+							</div>
+						</details>
+						<details>
+							<summary>31. Can you list down important factory methods of Executors class?</summary>
+							<div class="toggle-content">
+								<p>Here are the few important methods of Executors class.</p>
+								<p>
+									newFixedThreadPool: This method returns a thread pool whose maximum size is fixed.
+									If all threads are busy in execution of tasks and additional tasks are submitted,
+									then they have to wait in queue until any thread is available for executing these
+									tasks.
+								</p>
+								<p>
+									newCachedThreadPool: This method returns unbounded thread pool. If threads are not
+									used for certain defined time (keepAliveTime), then it will kill extra threads.
+								</p>
+								<p>
+									newSingleThreadedExecutor: This method returns an Executor with single thread.
+								</p>
+								<p>
+									newScheduledThreadPool: This method returns thread pool with fixed size, that can
+									schedule task periodically or with given delay.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>32. What is BlockingQueue</summary>
+							<div class="toggle-content">
+								<p>BlockingQueue is special type of queue which is used when producer threads produce
+									object and consumer threads consume object.
+								</p>
+								<p>
+									Producer thread keeps inserting objects in the queue unless it is full and once it
+									is full, it will be blocked unless consumer threads start consuming.
+								</p>
+								<p>
+									Similarly, consumer thread keep consuming objects until it is empty. Once it is
+									empty, it will be blocked unless producer threads start producing.
+								</p>
+								<p>
+									Here are two important methods of BlockingQueue.
+									put(): This method to put objects in queue until queue is full and waits for
+									consumer thread to take object after that.
+								</p>
+								<p>
+									take(): This method is used to take objects from the queue until it becomes empty.
+									Once it is empty, it waits for producer threads to start producing the objects and
+									put into the queue.</p>
+							</div>
+						</details>
+
 
 						<br>
 						<h1><b>9. Java Collection Framework Interview Questions</b></h1>

@@ -138,510 +138,1555 @@
 
 			<div class="col-lg-9 mb-4">
 				<div class="card h-100">
-					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Abstraction in Java</h1>
+					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Exception Handling in Java</h1>
 					<div class="card-body">
 						<div class="tab" role="tabpanel">
-							<p>
-								<b>Abstraction</b> is a process of hiding details about
-								implementation from the user while letting them utilise the
-								services or functions. Therefore, the user will know what an
-								object does, but not how it does it. It is done to simplify the
-								user interface while hiding the complex processes.
-							</p>
-							<ul>
-								<li>Exposing only required or important things is called
-									abstraction</li>
-								<li>Abstraction can be done in two ways :
-									<ul>
-										<li>Abstract class</li>
-										<li>Interface</li>
-									</ul>
-								</li>
-								<li>It is used for maintaining the standards of coding in
-									project</li>
-							</ul>
+							<p><span style="font-weight: 400;">Exceptions (and Errors) in our programs are common. Java
+									exceptions</span><span style="font-weight: 500;">&nbsp;can be caused by incorrect
+									syntax, faulty logic, incorrect user input, a server offline, a network issue, etc.
+									Typically, when our programs encounter an exception, they will immediately terminate
+									execution and cause our applications to crash. This is obviously suboptimal, and
+									nobody wants that. But, we have good news… Introducing exception handling in
+									Java!</span></p>
+							<p><span style="font-weight: 400;"><strong>Exception handling in Java</strong>
+									programmatically handles runtime errors in order to avoid disrupting the program’s
+									normal flow. </span><span style="font-weight: 500;">By using exception handling, we
+									can build our programs to take appropriate actions and keep our applications from
+									crashing when an error or exception occurs.</span></p>
+							<p><span style="font-weight: 400;">Java makes use of five primary keywords for exception
+									handling: try, catch, finally, throw and throws. In the following sections, we will
+									analyze the importance of each keyword. We’ll then discuss multiple facets of Java
+									exception handling, including the Exception Hierarchy in Java, how to throw an
+									exception in Java, custom exceptions in Java, and more.</span></p>
 							<hr>
 							<div class="tab-content tabs">
 								<div role="tabpanel" class="tab-pane fade in active" id="Interface">
 									<div id="Div1">
-										<h2 class="breadcrumb">Interface</h2>
-										<ul>
-											<li>
-												<p>One of the java principles says that we must
-													follow the I to C design. This means that every class
-													should be implemented from Interface</p>
-											</li>
-											<li>
-												<p>In the industry, architect level people
-													create interfaces and then it is given to the developers
-													for writing classes by implementing interfaces provided</p>
-											</li>
-											<li>
-												<p>This is best way to expose our project’s API
-													to some other projects. For example, ICICI bank can expose
-													methods or interfaces to various shopping carts</p>
-											</li>
-											<li>
-												<p>The interface is the same as ordinary class
-													but remember below points</p>
-											</li>
-											<li>
-												<p>We cannot instantiate Interface but we can
-													create reference variables</p>
-											</li>
-											<li>
-												<p>The interface doesn't have a constructor</p>
-											</li>
-											<li>
-												<p>It can be compiled but cannot run</p>
-											</li>
-											<li>
-												<p>Interface can extends interface</p>
-											</li>
-											<li>
-												<p>The interface can extend multiple interfaces</p>
-												<ul>
-													Example:
-													<pre class>
-														<code>void m1();   //No body Method</code>
-													</pre>
-													<li>In case of classes, we must define the body of
-														method
-														<pre class>
-															<code>package com.abstraction; 
-    public class X   { 
-         void m1();   // compile time error method should have body
-}               
-</code>
-														</pre>
-													</li>
-													<li>In case of classes, if we want the above written
-														lines to compile when we have method without body, then we
-														must explicitly define that method as abstract in case of
-														classes, but not in case of interface
-														<pre class>
-															<code>package com.abstraction;
-    public class X { 
-        abstract void m1();  // compile time error  
-}     
-</code>
-														</pre>
-													</li>
-													<li>In case of classes, if method is abstract then
-														class must be declared as abstract as well.
-														<pre class>
-															<code>package com.abstraction;
-     public abstract class X { 
-        abstract void m1();  // No error  
-}     
-</code>
-														</pre>
-													</li>
-													<li>In case of interface we don't need to do explicit
-														declaration for methods like class but they are, by
-														default, abstract
-														<pre class>
-															<code>package com.InterFace; 
-    interface Xi {
-        void m1(); // abstract keyword invisibly present 
-}     
-</code>
-														</pre>
-													</li>
-													<li>All methods are public in interface. If you want
-														to mention access specifiers, mention them as public, or
-														do not mention any access specifier and JVM will
-														automatically consider it as public, every time</li>
-												</ul>
-											</li>
-										</ul>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code1"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code1" class="breadcrumb pretagcodebox">
-<code>package com.InterFace;    
-    interface xyz {
-        void m1(); // public and abstract invisibly put by JVM 
+										<h2 class="breadcrumb">Summary</h2>
+										<div id="articleLongDescription" class="tutorialContent">
+											<article id="post-16851" class="content"
+												itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+												<div class="entry-content">
+
+													<div class="toc-dropdown">
+														<div class="toc-toggle">Table of contents</div>
+														<div class="toc-panel">
+															<ul class="toc">
+																<ul class="toc-links">
+																	<ul>
+																		<li class=""><a
+																				href="#what-is-exception-handling-in-java">What
+																				is Exception Handling in Java?</a></li>
+																		<li class=""><a
+																				href="#what-is-an-exception">What is an
+																				Exception?</a>
+																			<ul>
+																				<li class=""><a href="#1-jvm">1. JVM</a>
+																				</li>
+																				<li class=""><a href="#2-developer">2.
+																						Developer</a></li>
+																			</ul>
+																		</li>
+																		<li class=""><a
+																				href="#java-exception-hierarchy">Java
+																				Exception Hierarchy</a></li>
+																		<li class=""><a
+																				href="#types-of-exception-in-java">Types
+																				of exception in Java</a></li>
+																		<li class=""><a
+																				href="#difference-between-checked-and-unchecked-exception">Difference
+																				between Checked and Unchecked
+																				Exception</a></li>
+																		<li class=""><a
+																				href="#java-exception-index">Java
+																				Exception Index</a></li>
+																		<li class=""><a
+																				href="#java-exception-keywords">Java
+																				Exception Keywords</a></li>
+																		<li class=""><a
+																				href="#java-try-catch-block">Java
+																				Try-Catch Block</a>
+																			<ul>
+																				<li class=""><a
+																						href="#compile-time-error">Compile
+																						Time Error:</a></li>
+																			</ul>
+																		</li>
+																		<li class=""><a
+																				href="#java-multiple-catch-block">Java
+																				Multiple Catch Block</a></li>
+																		<li class=""><a href="#java-nested-try">Java
+																				Nested Try</a></li>
+																		<li class=""><a href="#java-finally-block">Java
+																				Finally Block</a></li>
+																		<li class=""><a
+																				href="#java-final-vs-finally-vs-finalize">Java
+																				Final vs Finally vs Finalize</a></li>
+																		<li class=""><a href="#java-throw-keyword">Java
+																				Throw Keyword</a></li>
+																		<li class=""><a href="#java-throws-keyword">Java
+																				Throws Keyword</a></li>
+																		<li class=""><a
+																				href="#java-throw-vs-throws">Java Throw
+																				vs Throws</a></li>
+																		<li class=""><a
+																				href="#java-custom-exception">Java
+																				Custom Exception</a></li>
+																		<li class=""><a
+																				href="#exception-handling-in-java-with-method-overriding">Exception
+																				Handling in java with method
+																				overriding</a></li>
+																		<li class=""><a
+																				href="#advantages-and-disadvantages-of-exception-handling-in-java">Advantages
+																				and disadvantages of exception handling
+																				in java </a></li>
+																	</ul>
+																</ul>
+															</ul>
+														</div>
+													</div>
+
+
+
+
+													<p>Exception handling in java is one of the powerful mechanisms to
+														handle runtime errors caused by exceptions. Exception handling
+														plays an important role in software development. This article
+														helps you understand java exception, exception in java, java
+														exception handling, java exception hierarchy, types of exception
+														in java, and many more.</p>
+
+
+
+													<h2 class="wp-block-heading"
+														id="what-is-exception-handling-in-java"><strong><strong>
+														<br><br><br>
+														What is Exception Handling in Java?</strong></strong></h2>
+
+
+
+													<p>Exception handling in java helps in minimizing exceptions and
+														helps in recovering from exceptions. It is one of the powerful
+														mechanisms to handle runtime exceptions and makes it bug-free.
+														Exception handling helps in maintaining the flow of the program.
+														An exception handling is defined as an abnormal condition that
+														may happen at runtime and disturb the normal flow of the
+														program.</p>
+													<h2 class="wp-block-heading" id="what-is-an-exception"><strong><br><br><br>What
+															is an Exception?</strong></h2>
+													<p>An expectation is an unexpected&nbsp;event that occurs while
+														executing the program, that disturbs the normal flow of the
+														code. </p>
+													<p><strong>Exception handling in java with an example:</strong></p>
+													<p>Let’s say,</p>
+													<pre class="wp-block-code"><code>statement
+statement
+statement
+exception ………… an exception occurred, then JVM will handle it and will exit the prog.
+statement
+statement
+statement</code></pre>
+													<p>For handling exceptions, there are<strong> 2 possible
+															approaches</strong></p>
+
+													<h3 class="wp-block-heading" id="1-jvm"><strong><br><br><br>1. JVM</strong></h3>
+
+													<p>If an exception is not handled explicitly, then JVM takes the
+														responsibility of handling the exception.</p>
+
+													<p>Once the exception is handled, JVM will halt the program and no
+														more execution of code will take place</p>
+
+													<ul>
+														<li><strong>Example</strong>:</li>
+													</ul>
+
+													<pre class="wp-block-code"><code>import java.util.*;
+
+class Main {
+    public static void main (String[] args) {
+        System.out.println(5/0);
+        System.out.println("End of program!");
+	}
+}
+</code></pre>
+
+
+
+													<p><strong>Runtime Error:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted"> Exception in thread "main" java.lang.ArithmeticException: / by zero
+ at Main.main(File.java:5) </pre>
+
+
+
+													<h3 class="wp-block-heading" id="2-developer"><strong><br><br><br>2</strong>.
+														<strong>Developer</strong>
+													</h3>
+
+
+
+													<p>Developers can explicitly write the implementation for handling
+														the exception. Once an exception is handled, the normal
+														execution of code will continue.</p>
+
+
+
+													<p><strong>Preferable</strong>: handle exceptions to ensure your
+														code gets executed normally.</p>
+
+
+
+													<h2 class="wp-block-heading" id="java-exception-hierarchy">
+														<strong><br><br><br>Java Exception Hierarchy</strong>
+													</h2>
+
+
+
+													<p><strong>Exception Hierarchy – </strong>Following is the Exception
+														Handling in Java handling hierarchy.<br></p>
+
+
+
+													<ul>
+														<li><strong>Throwable </strong>–
+															<ul>
+																<li>It is the root class for the exception hierarchy in
+																	java.&nbsp;</li>
+
+
+
+																<li>It is in the java.lang package.</li>
+															</ul>
+														</li>
+
+
+
+														<li><strong>Error</strong> –
+															<ul>
+																<li>Subclass of Throwable.</li>
+
+
+
+																<li>Consist of abnormal condition that is out of one’s
+																	control and depends on the environment</li>
+
+
+
+																<li>They can’t be handled and will always result in the
+																	halting of the program.</li>
+
+
+
+																<li>Eg: StackOverFlowError that can happen in infinite
+																	loop or recursion</li>
+															</ul>
+														</li>
+
+
+
+														<li><strong>Exception </strong>–
+															<ul>
+																<li>Subclass of Throwable.</li>
+
+
+
+																<li>Consist of abnormal conditions that can be handled
+																	explicitly.</li>
+
+
+
+																<li>If one handles the exception then our code will
+																	continue to execute smoothly.</li>
+															</ul>
+														</li>
+													</ul>
+
+
+
+													<h2 class="wp-block-heading" id="types-of-exception-in-java">
+														<strong><br><br><br>Types of exception in Java</strong>
+													</h2>
+
+
+
+													<ul>
+														<li><strong>Checked Exceptions</strong>
+															<ul>
+																<li>Those exceptions that are checked at compile-time
+																	comprises checked exceptions.</li>
+															</ul>
+															<ul>
+																<li>They are child classes of Exception except for
+																	RuntimeException.</li>
+															</ul>
+															<ul>
+																<li>The program will not compile if they are not
+																	handled.</li>
+															</ul>
+															<ul>
+																<li>Example: IOException, ClassNotFoundException, etc.
+																</li>
+															</ul>
+															<ul>
+																<li></li>
+															</ul>
+														</li>
+
+
+
+														<li><strong>Unchecked Exceptions</strong>
+															<ul>
+																<li>Those exceptions that are checked at runtime
+																	comprises unchecked exceptions.</li>
+															</ul>
+															<ul>
+																<li>They are child classes of RuntimeException.</li>
+															</ul>
+															<ul>
+																<li>They give runtime errors if not handled explicitly.
+																</li>
+															</ul>
+															<ul>
+																<li>Example: ArithmeticException, NullPointerException
+																	etc.</li>
+															</ul>
+														</li>
+													</ul>
+
+
+
+													<h2 class="wp-block-heading"
+														id="difference-between-checked-and-unchecked-exception">
+														<strong><br><br><br>Difference between Checked and Unchecked
+															Exception</strong>
+													</h2>
+
+
+
+													<figure class="wp-block-table">
+														<table>
+															<tbody>
+																<tr>
+																	<td><strong>Checked Exceptions</strong></td>
+																	<td><strong>Unchecked Exceptions</strong></td>
+																</tr>
+																<tr>
+																	<td>Occur at compile time.</td>
+																	<td>Occur at runtime.</td>
+																</tr>
+																<tr>
+																	<td>The compiler checks for a checked exception.
+																	</td>
+																	<td>The compiler doesn’t check for exceptions.</td>
+																</tr>
+																<tr>
+																	<td>Can be handled at the compilation time.</td>
+																	<td>Can’t be caught or handled during compilation
+																		time.</td>
+																</tr>
+																<tr>
+																	<td>The JVM requires that the exception be caught
+																		and handled.</td>
+																	<td>The JVM doesn’t require the exception to be
+																		caught and handled.</td>
+																</tr>
+																<tr>
+																	<td>Example of Checked exception- ‘File Not Found
+																		Exception’</td>
+																	<td>Example of Unchecked Exceptions- ‘No Such
+																		Element Exception’</td>
+																</tr>
+															</tbody>
+														</table>
+													</figure>
+
+
+
+													<h2 class="wp-block-heading" id="java-exception-index"><strong><br><br><br>Java
+															Exception Index</strong></h2>
+
+
+
+													<h2 class="wp-block-heading" id="java-exception-keywords">
+														<strong><br><br><br>Java Exception Keywords</strong>
+													</h2>
+
+
+
+													<p>Exception Handling in java is managed via five keywords: try,
+														catch, throw, throws, and finally. Here are 5 keywords that are
+														used in handling exceptions in Java</p>
+
+
+
+													<figure class="wp-block-table">
+														<table>
+															<tbody>
+																<tr>
+																	<td><strong>Keyword</strong></td>
+																	<td><strong>Description</strong></td>
+																</tr>
+																<tr>
+																	<td>try</td>
+																	<td>This keyword is used to specify a block and this
+																		block must be followed by either catch or
+																		finally. That is, we can’t use try block alone.
+																	</td>
+																</tr>
+																<tr>
+																	<td>catch</td>
+																	<td>This keyword must be preceded by a try block to
+																		handle the exception and can be followed by a
+																		final block later.</td>
+																</tr>
+																<tr>
+																	<td>finally</td>
+																	<td>This keyword is used to execute the program,
+																		whether an exception is handled or not.</td>
+																</tr>
+																<tr>
+																	<td>throw</td>
+																	<td>This keyword is used to throw an exception.</td>
+																</tr>
+																<tr>
+																	<td>throws</td>
+																	<td>This keyword is used to declare exceptions.</td>
+																</tr>
+															</tbody>
+														</table>
+													</figure>
+
+
+
+													<h2 class="wp-block-heading" id="java-try-catch-block"><strong><br><br><br>Java
+															Try-Catch Block</strong></h2>
+
+
+
+													<p>Try-catch syntax:</p>
+
+
+
+													<pre class="wp-block-code"><code>try{
+}
+catch(Exception e){
+}</code></pre>
+
+
+
+													<ul>
+														<li><strong>Try-catch Example:</strong></li>
+													</ul>
+
+
+
+													<pre class="wp-block-code"><code>public class ExceptionDemo {
+	public static void main (String[] args) {
+		int a=10;
+		for(int i=3;i&gt;=0;i--)
+		   try{
+		     System.out.println(a/i);  
+		   }catch(ArithmeticException e){
+		       System.out.println(e);
+		   }
+	}
+}
+</code></pre>
+
+
+
+													<h4 class="wp-block-heading" id="output">Output:</h4>
+
+
+
+													<pre class="wp-block-preformatted">3
+5
+10
+java.lang.ArithmeticException: / by zero </pre>
+
+
+
+													<ul>
+														<li><strong>try </strong>block contains the code that might
+															throw an exception. Don’t write anything extra in try as
+															statements after the exception will not get executed if the
+															exception occurred. Try must be immediately followed by
+															catch or finally block.</li>
+													</ul>
+
+
+
+													<pre class="wp-block-code"><code>public class ExceptionDemo {
+	public static void main (String[] args) {
+		int a=10;
+		for(int i=3;i&gt;=0;i--)
+		   try{
+		     System.out.println(a/i);  
+		   }
+	}
+}
+</code></pre>
+
+
+
+													<p><strong>Compile-time error:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted">prog.java:5: error: 'try' without 'catch', 'finally' or resource declarations
+  &nbsp; try{
+  &nbsp; ^
+1 error </pre>
+
+
+
+													<ul>
+														<li>The catch block is used to catch the exception thrown by
+															statements in the try block. The catch must follow try else
+															it will give a compile-time error.</li>
+													</ul>
+
+
+
+													<pre class="wp-block-code"><code>public class ExceptionDemo {
+	public static void main (String[] args) {
+		int a=10;
+		for(int i=3;i&gt;=0;i--)
+		   try{
+		     System.out.println(a/i);  
+		   }
+		   System.out.println("between try and catch");
+		   catch(ArithmeticException e){
+		       System.out.println(e);
+		   }
+	}
+}
+
+</code></pre>
+
+
+
+													<h3 class="wp-block-heading" id="compile-time-error"><strong><br><br><br>Compile
+															Time Error:</strong></h3>
+
+
+
+													<pre class="wp-block-preformatted">prog.java:5: error: 'try' without 'catch', 'finally' or resource declarations
+  &nbsp; try{
+  &nbsp; ^
+prog.java:9: error: 'catch' without 'try'
+  &nbsp; catch(ArithmeticException e){
+  &nbsp; ^
+2 errors </pre>
+
+
+
+													<h4 class="wp-block-heading" id="things-to-remember"><strong>Things
+															to Remember:</strong></h4>
+
+
+
+													<p>Do not keep any code after the statement which is prone to
+														exception. Because if an exception occurred, it will straight
+														away jump to the catch or finally block, ignoring all other
+														statements in the try block.</p>
+
+
+
+													<pre class="wp-block-code"><code>class Main {
+	public static void main (String[] args) {
+         try
+       {
+             System.out.println(4/0);
+	 //will not get printed
+             System.out.println("end of try!");
+        }
+catch(ArithmeticException e)
+        {
+            System.out.println("divide by 0");
+        }
     }
-package com.InterFace;    
-public interface x {
-    public abstract void m1();	//OK 
-        public void m3();	//OK  
-        abstract void m6();//OK
-        void m7();//OK
 }
-</code>
-											</pre>
-										</div>
-										<ul>
-											<li>Variables are public final static in interface and
-												act like constants</li>
-											<li>If we want to use methods of interface, we have to
-												implement that interface in any class, and methods of
-												interface must be implemented in a class by using the
-												implements keyword</li>
-										</ul>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code2"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code2" class="breadcrumb pretagcodebox">
-<code>package com.InterFace; 
-  interface Xi {
-        void m1();
+</code></pre>
+
+
+
+													<h4 class="wp-block-heading" id="output">Output:</h4>
+
+
+
+													<pre class="wp-block-preformatted">divide by 0</pre>
+
+
+
+													<ul>
+														<li>While catching the exception in the catch block, either you
+															can have directly the class of exception or its superclass.
+														</li>
+													</ul>
+
+
+
+													<p><strong>Example: Exact Exception</strong></p>
+
+
+
+													<pre class="wp-block-code"><code>class Main {
+	public static void main (String[] args) {
+        try{
+            System.out.println(4/0);
+           }
+      
+        //ArithmeticException 
+        catch(ArithmeticException e){
+            System.out.println("divide by 0");
+        }
     }
-package com.InterFace;
-  public class	XImpl implements xi{
-    //Not compiled as we have not implemented all the methods
 }
-</code>
-											</pre>
-										</div>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code3"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code3" class="breadcrumb pretagcodebox">
-<code>package com.InterFace; 
-  public interface Ai {
-     void m1();  //OK
+</code></pre>
+
+
+
+													<p><strong>Output:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted">divide by 0</pre>
+
+
+
+													<p><strong>Example: Superclass of Exact Exception</strong></p>
+
+
+
+													<pre class="wp-block-code"><code>class Main {
+	public static void main (String[] args) {
+        try{
+            System.out.println(4/0);
+           }
+      
+        //superclass of ArithmeticException 
+        catch(Exception e){
+            System.out.println("divide by 0");
+        }
+     }
 }
-package com.InterFace; 
-  public interface Bi {
-     void m1();	 //OK
-  }
-package com.InterFace;
-  public interface Ci extends Ai,Bi {   //OK     
-     void m1();
-  }
-</code>
-											</pre>
-										</div>
-										<p>This is allowed in java</p>
-										<ul>
-											<li>interface can extend interface1 and interface2</li>
-											<li>class extends class implements interface</li>
-											<li>class implements interface</li>
-											<li>class extends class implements interface1 and
-												interface2</li>
-										</ul>
-										<hr>
-										<ul>
-											<li>
-												<p>
-													<i><b>Q.</b> Why do we need Interface?</i><br> <b>A:</b>
-													To expose the third party API
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Why not constructor?</i><br> <b>A:</b> In
-													interface it will not get called by using super by using
-													hierarchy
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> As an interface has abstract method, how
-														will you use the abstract method of interface? </i><br>
-													<b>A:</b>
-													Implement that method in class, or in other words override
-													methods, and then create object of that class and call all
-													methods
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Have you ever used others third party API
-														code?</i><br> <b>A:</b>Yes, they have their Interface and
-													API and we can use that.
-												</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="WhyInterface">
-									<div id="Div2">
-										<h2 class="breadcrumb">Why interface?</h2>
-										<p>
-											Suppose there is a requirement for Flipkart to integrate
-											ICICI bank code into their shopping cart.Their customers want
-											to make payment for products they purchased. Now, to make
-											payment, Flipkart does not have their own bank, so it must
-											take help of other banks.<br> Let's say ICICI develops
-											code like below:
-										<pre class>
-											<code>class Transaction { 
-    void withdrawAmt(int amtToWithdraw) {
-        void m1(); // abstract keyword invisibly present 
-            //logic of withdraw
-            //ICICI DB connection and updating in their DB
+</code></pre>
+
+
+
+													<p><strong>Output</strong>:</p>
+
+
+
+													<pre class="wp-block-preformatted">divide by 0</pre>
+
+
+
+													<h2 class="wp-block-heading" id="java-multiple-catch-block">
+														<strong><br><br><br>Java Multiple Catch Block</strong>
+													</h2>
+
+
+
+													<p>If you have multiple catches, you have to maintain the hierarchy
+														from subclass to superclass.</p>
+
+
+
+													<p><strong>Incorrect:</strong></p>
+
+
+
+													<pre class="wp-block-code"><code>class Main {
+	public static void main (String[] args) {
+        try{
+            System.out.println(4/0);
+        }catch(Exception e)
+        {
+            System.out.println("Exception : divide by 0");
+        }catch(ArithmeticException e)
+        {
+            System.out.println("ArithmeticException :divide by 0");
+        }
+	}
+}
+</code></pre>
+
+
+
+													<p><strong>Compile-time error:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted"> prog.java:11: error: exception ArithmeticException has already been caught
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}catch(ArithmeticException e)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^
+1 error </pre>
+
+
+
+													<p><strong>Correct:</strong></p>
+
+
+
+													<pre class="wp-block-code"><code>class Main {
+	public static void main (String[] args) {
+        try{
+            System.out.println(4/0);
+        }catch(ArithmeticException e)
+        {
+            System.out.println("ArithmeticException : divide by 0");
+        }catch(Exception e)
+        {
+            System.out.println("Exception : divide by 0");
+        }
+   }
+}
+</code></pre>
+
+
+
+													<p><strong>Output:</strong></p>
+
+
+
+													<pre
+														class="wp-block-preformatted">ArithmeticException: Divide by 0</pre>
+
+
+
+													<h2 class="wp-block-heading" id="java-nested-try"><strong><br><br><br>Java
+															Nested Try</strong></h2>
+
+
+
+													<p>When there is another try block within the try block: </p>
+
+
+
+													<pre class="wp-block-code"><code>class Main {
+	public static void main (String[] args) {
+        try{
+                try{
+                    int[] a={1,2,3};
+                    System.out.println(a[3]);
+                }
+   catch(ArrayIndexOutOfBoundsException e)
+                {
+                    System.out.println("Out of bounds");
+                }
+              System.out.println(4/0);
+        }
+       catch(ArithmeticException e)
+        {
+            System.out.println("ArithmeticException : divide by 0");
+        }
+	}
     }
-}   
-</code>
-										</pre>
-										<p>Flipkart needs this class so they request ICICI bank
-											for the same. The problem with ICICI is that if they give
-											this complete code to flipkart they risk exposing everything
-											of their own database to them as well as their logic, which
-											is a security violation.</p>
-										<p>Now, what exactly Flipkart needs is the method name and
-											class name. But to compile their class they must get one like
-											below:
-										<pre class>
-											<code>Transaction t=new Transaction();  //1
-t.withdrawAmt(500);   //2
-</code>
-										</pre>
-										<p>If the first line to compile at Flipkart ends, then
-											they must have this class which ICICI cannot give. The best
-											solution here is for ICICI to develop an Interface of
-											Transaction class as shown below:</p>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code4"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code4" class="breadcrumb pretagcodebox">
-<code>interface Transactioni {
-     void withdrawAmt(int amtToWithdraw) ;
+</code></pre>
+
+
+
+													<p><strong>Output:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted">Out of bounds
+ArithmeticException: Divide by 0 </pre>
+
+
+
+													<p><strong>Note – If we put code of outer try before inner try, then
+															if an exception occurred, it will ignore the entire inner
+															try and move directly to its catch block.</strong></p>
+
+
+
+													<pre class="wp-block-code"><code>class Main {
+	public static void main (String[] args) {
+        try{
+               System.out.println(4/0);
+               try{
+                    int[] a={1,2,3};
+                    System.out.println(a[3]);
+                }
+   catch(ArrayIndexOutOfBoundsException e)
+                {
+                    System.out.println("Out of bounds");
+                }
+        }
+       catch(ArithmeticException e)
+        {
+            System.out.println("ArithmeticException : divide by 0");
+        }
+	}
+    }
+</code></pre>
+
+
+
+													<p><strong>Output:</strong></p>
+
+
+
+													<pre
+														class="wp-block-preformatted">ArithmeticException: Divide by 0</pre>
+
+
+
+													<h2 class="wp-block-heading" id="java-finally-block"><strong><br><br><br>Java
+															Finally Block</strong></h2>
+
+
+
+													<p>Contains code that must be executed no matter if an exception is
+														thrown or not. It contains code of file release, closing
+														connections, etc.</p>
+
+
+
+													<ul>
+														<li><strong>Example:</strong></li>
+													</ul>
+
+
+
+													<pre class="wp-block-code"><code>class Main {
+	public static void main (String[] args) {
+        try{
+            System.out.println(4/0);
+        }catch(Exception e)
+        {
+            System.out.println(e);       
+        }
+        finally
+        {
+            System.out.println("finally executed");
+        }
+        
+       	        System.out.println("end");
+	}
 }
-class TransactionImpl implements Transactioni { 
-    void withdrawAmt(int amtToWithdraw) {
-        //logic of withdraw
-        //ICICI DB connection and updating in their DB
-    } 
+</code></pre>
+
+
+
+													<p><strong>Output:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted">java.lang.ArithmeticException: / by zero
+finally executed
+end </pre>
+
+
+
+													<p>Finally, will execute even when we do not handle exceptions.
+														Before halting the program, JVM checks if there is a “finally”
+														block.</p>
+
+
+
+													<pre class="wp-block-code"><code>class Main {
+	public static void main (String[] args) {
+        try{
+            System.out.println(4/0);
+            
+        }finally
+        {
+            System.out.println("cleaning.......");
+        }
+	}
 }
-</code>
-											</pre>
+
+</code></pre>
+
+
+
+													<p><strong>Runtime Error:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted"> Exception in thread "main" java.lang.ArithmeticException: / by zero
+ at Main.main(File.java:4) </pre>
+
+
+
+													<p><strong>Output:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted">cleaning.......</pre>
+
+
+
+													<h2 class="wp-block-heading" id="java-final-vs-finally-vs-finalize">
+														<strong><br><br><br>Java Final vs Finally vs Finalize</strong>
+													</h2>
+
+
+
+													<figure class="wp-block-table">
+														<table>
+															<tbody>
+																<tr>
+																	<td><strong>Final</strong></td>
+																	<td><strong>Finally</strong></td>
+																	<td><strong>Finalize</strong></td>
+																</tr>
+																<tr>
+																	<td>Final is used to apply restrictions on class,
+																		method, and variable</td>
+																	<td>Finally is used in coding, it will be executed
+																		whether an exception is handled or not.</td>
+																	<td>Finalize is used to perform clean-up processing
+																		before garbage is collected.</td>
+																</tr>
+																<tr>
+																	<td>Final is a keyword in java</td>
+																	<td>Finally is a block in java</td>
+																	<td>Finalize is a method in java</td>
+																</tr>
+																<tr>
+																	<td>Final is executed upon its call.</td>
+																	<td>Finally executes after”try-catch” block.</td>
+																	<td>finalize executes just before the destruction of
+																		the object.</td>
+																</tr>
+															</tbody>
+														</table>
+													</figure>
+
+
+
+													<h2 class="wp-block-heading" id="java-throw-keyword"><strong><br><br><br>Java
+															Throw Keyword</strong></h2>
+
+
+
+													<p>It is a keyword that is used to explicitly throw an exception.
+													</p>
+
+
+
+													<p>We can use throw where according to our logic an exception should
+														occur. </p>
+
+
+
+													<p><strong>Example</strong>:</p>
+
+
+
+													<pre class="wp-block-code"><code>public class ExceptionDemo {
+	static void canVote(int age){
+		if(age&lt;18)
+            try{
+                throw new Exception();
+            }catch(Exception e){
+                System.out.println("you are not an adult!");
+            }
+		else
+		   System.out.println("you can vote!");
+	}
+	public static void main (String[] args) {
+		canVote(20);
+		canVote(10);
+	}
+}
+
+</code></pre>
+
+
+
+													<p><strong>Output:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted">you can vote!
+you are not an adult! </pre>
+
+
+
+													<h2 class="wp-block-heading" id="java-throws-keyword"><strong><br><br><br>Java
+															Throws Keyword</strong></h2>
+
+
+
+													<ul>
+														<li>Throws keyword is used when callee doesn’t want to handle
+															the exception rather it wants to extend this responsibility
+															of handling the exception to the caller of the function.
+														</li>
+
+
+
+														<li>Basically says what sort of exception the code can throw and
+															relies on the caller to handle it.</li>
+
+
+
+														<li>It is used to handle checked Exceptions as the compiler will
+															not allow code to compile until they are handled.</li>
+													</ul>
+
+
+
+													<p><strong>Example:</strong></p>
+
+
+
+													<pre class="wp-block-code"><code>public class ExceptionDemo {
+	static void func(int a) throws Exception{
+		   System.out.println(10/a);  
+	}
+	public static void main (String[] args) {
+		try{
+		    func(10);
+		    func(0);
+		}catch(Exception e){
+		   System.out.println("can't divide by zero");
+		}
+	
+	}
+}
+</code></pre>
+
+
+
+													<p><strong>Output:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted">1
+can't divide by zero </pre>
+
+
+
+													<p>If callee can throw multiple exceptions, then all will be thrown
+														simultaneously.</p>
+
+
+
+													<pre class="wp-block-code"><code>import java.util.*;
+
+public class ExceptionDemo {
+	static void func(int a,int b) throws ArithmeticException, ArrayIndexOutOfBoundsException{
+		   System.out.println(10/a); 
+		   int[] arr={1,2,3};
+		   System.out.println(arr[b]);
+	}
+	public static void main (String[] args) {
+		Scanner in=new Scanner(System.in);
+		for(int i=0;i&lt;3;i++){
+		try{
+		    func(in.nextInt(),in.nextInt());
+    		}catch(ArithmeticException e){
+    		   System.out.println("can't divide by zero");
+    		}catch(ArrayIndexOutOfBoundsException e){
+    		   System.out.println("Out of bounds!");
+    		}
+		     }
+		
+	}
+   }
+</code></pre>
+
+
+
+													<p><strong>Input:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted">2 1
+0 1
+2 3 </pre>
+
+
+
+													<p><strong>Output:</strong></p>
+
+
+
+													<pre class="wp-block-preformatted">5
+2
+can't divide by zero
+5
+Out of bounds! </pre>
+
+
+
+													<h2 class="wp-block-heading" id="java-throw-vs-throws"><strong><br><br><br>Java
+															Throw vs Throws</strong></h2>
+
+
+
+													<figure class="wp-block-table">
+														<table style="margin-left: 0px; margin-right: 0px; text-align: left;">
+															<tbody>
+																<tr>
+																	<td><strong>Throw</strong></td>
+																	<td><strong>Throws</strong></td>
+																</tr>
+																<tr>
+																	<td>This keyword is used to explicitly throw an
+																		exception.</td>
+																	<td>This keyword is used to declare an exception.
+																	</td>
+																</tr>
+																<tr>
+																	<td>A checked exception cannot be propagated with
+																		throw only.</td>
+																	<td>A checked exception can be propagated with
+																		throws.</td>
+																</tr>
+																<tr>
+																	<td>The throw is followed by an instance and used
+																		with a method</td>
+																	<td>Throws are followed by class and used with the
+																		method signature.</td>
+																</tr>
+																<tr>
+																	<td>You cannot throw multiple exceptions.</td>
+																	<td>You can declare multiple exceptions</td>
+																</tr>
+															</tbody>
+														</table>
+													</figure>
+
+
+
+													<h2 class="wp-block-heading" id="java-custom-exception"><strong><br><br><br>Java
+															Custom Exception</strong></h2>
+
+
+
+													<p>You can create your own exception and give implementation as to
+														how it should behave. Your exception will behave like a child’s
+														class of Exception.</p>
+
+
+
+													<h4 class="wp-block-heading" id="syntax"><strong>Syntax</strong>:
+													</h4>
+
+
+													<div class="wp-block-syntaxhighlighter-code ">
+														<div>
+															<div id="highlighter_607855"
+																class="syntaxhighlighter  java">
+																<table border="0" cellpadding="0" cellspacing="0">
+																	<tbody>
+																		<tr>
+																			<td class="gutter">
+																				<div class="line number1 index0 alt2">1
+																				</div>
+																			</td>
+																			<td class="code">
+																				<div class="container">
+																					<div
+																						class="line number1 index0 alt2">
+																						<code
+																							class="java keyword">class</code>
+																						<code
+																							class="java plain">YourException </code><code
+																							class="java keyword">extends</code>
+																						<code
+																							class="java plain">Exception{}</code>
+																					</div>
+																				</div>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+
+
+													<ul>
+														<li><strong>Example:</strong>
+															<ul>
+																<li>let’s say, you are working with an airline
+																	company&nbsp;</li>
+
+
+
+																<li>You are in the luggage check-in department and as
+																	per rules, you can allow 15kg per customer.</li>
+
+
+
+																<li>So now more than 15kg of weight is an abnormal
+																	condition for us or in other words its an exception
+																</li>
+
+
+
+																<li>This is our logic-based exception, so we’ll create
+																	our custom exception WeightLimitExceeded&nbsp;</li>
+
+
+
+																<li>As per syntax, it will extend Exception.</li>
+
+
+
+																<li>We define the constructor which will get invoked as
+																	soon as an exception will be thrown</li>
+
+
+
+																<li>We have to explicitly throw the exception and hence
+																	we will use throw keyword for that.</li>
+
+
+
+																<li>Using throws keyword is as per our need. If we are
+																	handling an exception where it is getting thrown
+																	then we can avoid throws, else we will use throws
+																	and handle it in the caller.</li>
+															</ul>
+														</li>
+													</ul>
+
+
+
+													<p><strong>Implementation:</strong></p>
+
+
+
+													<pre class="wp-block-code"><code>import java.util.*;
+
+class WeightLimitExceeded extends Exception{
+    WeightLimitExceeded(int x){
+        System.out.print(Math.abs(15-x)+" kg : ");
+    }
+}
+
+
+class Main {
+    void validWeight(int weight) throws WeightLimitExceeded{
+        if(weight&gt;15)
+            throw new WeightLimitExceeded(weight);
+        else
+            System.out.println("You are ready to fly!");
+    }
+    
+      public static void main (String[] args) {
+        Main ob=new Main();
+        Scanner in=new Scanner(System.in);
+        for(int i=0;i&lt;2;i++){
+            try{
+                ob.validWeight(in.nextInt());
+            }catch(WeightLimitExceeded e){
+                System.out.println(e);
+            }
+        }
+        
+	}
+}
+</code></pre>
+
+
+
+													<p><strong>Input</strong>:</p>
+
+
+
+													<pre class="wp-block-preformatted">20
+7 </pre>
+
+
+
+													<p><strong>Output</strong>:</p>
+
+
+
+													<pre class="wp-block-preformatted">5 kg : WeightLimitExceeded
+You are ready to fly! </pre>
+
+
+
+													<h2 class="wp-block-heading"
+														id="exception-handling-in-java-with-method-overriding">
+														<strong><br><br><br>Exception Handling in java with method
+															overriding</strong>
+													</h2>
+
+
+
+													<p>Exception Handling in Java with Method Overriding is an<strong>
+														</strong>overridden method that declares to throw an exception
+														and declare that it can throw the same exception or subtype of
+														that exception.</p>
+
+
+
+													<p>To handle the exception in Java, you will have to follow three
+														important rules. They are depicted in the below figure.</p>
+
+
+
+													<figure
+														class="wp-block-image size-large td-caption-align-https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13.png">
+														<img decoding="async" width="100%" height="400"
+															src="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png"
+															alt="exception handling in java"
+															class="wp-image-39194 entered lazyloaded"
+															data-lazy-srcset="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png 1024w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-300x204.png 300w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-768x522.png 768w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-696x473.png 696w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-617x420.png 617w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-150x102.png 150w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13.png 1051w"
+															data-lazy-sizes="(max-width: 1024px) 100vw, 1024px"
+															data-lazy-src="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png"
+															data-ll-status="loaded"
+															sizes="(max-width: 1024px) 100vw, 1024px"
+															srcset="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png 1024w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-300x204.png 300w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-768x522.png 768w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-696x473.png 696w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-617x420.png 617w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-150x102.png 150w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13.png 1051w"><noscript><img
+																decoding="async" width="1024" height="697"
+																src="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png"
+																alt="exception handling in java" class="wp-image-39194"
+																srcset="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png 1024w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-300x204.png 300w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-768x522.png 768w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-696x473.png 696w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-617x420.png 617w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-150x102.png 150w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13.png 1051w"
+																sizes="(max-width: 1024px) 100vw, 1024px" /></noscript>
+														<figcaption class="wp-element-caption">Exception Handling in
+															Java with Method Overriding</figcaption>
+													</figure>
+
+													<br>
+
+
+													<h2 class="wp-block-heading"
+														id="advantages-and-disadvantages-of-exception-handling-in-java">
+														<strong><br><br><br>Advantages and disadvantages of exception handling in
+															java </strong>
+													</h2>
+
+
+
+													<h4 class="wp-block-heading"
+														id="advantages-of-excepting-handling-in-java"><strong>Advantages
+															of excepting handling in java&nbsp;</strong></h4>
+
+
+
+													<ul>
+														<li>Separating Error-Handling Code from “Regular” Code</li>
+
+
+
+														<li>Propagating Errors Up the Call Stack</li>
+
+
+
+														<li>Grouping and Differentiating Error Types</li>
+													</ul>
+
+
+
+													<h4 class="wp-block-heading"
+														id="disadvantages-of-excepting-handling-in-java">
+														<strong>Disadvantages of excepting handling in
+															java</strong>&nbsp;
+													</h4>
+
+
+
+													<ul>
+														<li>Experiencing unnecessary overhead</li>
+
+
+
+														<li>Not understanding how the application really works</li>
+
+
+
+														<li>Filling your logs with noisy events</li>
+
+
+
+														<li>Inability to focus on what actually matters</li>
+													</ul>
+
+
+
+													<p>This brings us to the end of this article on exception handling
+														in java. We hope that you are now clear about the concept of
+														exception handling in java. If you wish to know more about the
+														java programming language, then log on to our free <a
+															href="https://www.mygreatlearning.com/academy/learn-for-free/courses/java-programming?gl_blog_id=16851"
+															target="_blank" rel="noreferrer noopener">java online course
+															with certificate</a> and power ahead in your career.</p>
+
+
+
+													<p><strong>Also Watch: </strong></p>
+
+
+
+													<figure
+														class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio">
+														<div class="wp-block-embed__wrapper">
+															<div class="ast-oembed-container" style="height: 100%;">
+																<div class="rll-youtube-player"
+																	data-src="https://www.youtube.com/embed/tsEfe7kFvlM"
+																	data-id="tsEfe7kFvlM"
+																	data-query="start=3&amp;feature=oembed"
+																	data-alt="Exception Handling in Java in Hindi | Java Programming | Java Tutorial | Great Learning">
+																	<div data-id="tsEfe7kFvlM"
+																		data-query="start=3&amp;feature=oembed"
+																		data-src="https://www.youtube.com/embed/tsEfe7kFvlM">
+																		<img data-lazy-src="https://i.ytimg.com/vi/tsEfe7kFvlM/hqdefault.jpg"
+																			alt="Exception Handling in Java in Hindi | Java Programming | Java Tutorial | Great Learning"
+																			width="480" height="360"
+																			data-ll-status="loaded"
+																			class="entered lazyloaded"
+																			src="https://i.ytimg.com/vi/tsEfe7kFvlM/hqdefault.jpg"><noscript><img
+																				src="https://i.ytimg.com/vi/ID/hqdefault.jpg"
+																				alt="" width="480"
+																				height="360"></noscript><button
+																			class="play"
+																			aria-label="play Youtube video"></button>
+																	</div>
+																</div><noscript><iframe
+																		title="Exception Handling in Java in Hindi | Java Programming | Java Tutorial | Great Learning"
+																		width="1200" height="675"
+																		src="https://www.youtube.com/embed/tsEfe7kFvlM?start=3&#038;feature=oembed"
+																		frameborder="0"
+																		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+																		allowfullscreen></iframe></noscript>
+															</div>
+														</div>
+													</figure>
+
+
+
+													<p>Engaging in the study of Java programming suggests a keen
+														interest in the realm of software development. For those
+														embarking upon this journey with aspirations towards a career in
+														this field, it is recommended to explore the following pages in
+														order to acquire a comprehensive understanding of the
+														development career path:</p>
+
+
+
+													<figure class="wp-block-table aligncenter">
+														<table
+															class="has-cyan-bluish-gray-background-color has-background">
+															<tbody>
+																<tr>
+																	<td><a href="https://www.mygreatlearning.com/software-engineering/courses/certificates"
+																			target="_blank"
+																			rel="noreferrer noopener">Software
+																			engineering courses certificates</a></td>
+																</tr>
+																<tr>
+																	<td><a href="https://www.mygreatlearning.com/software-engineering/courses/placements"
+																			target="_blank"
+																			rel="noreferrer noopener">Software
+																			engineering courses placements</a></td>
+																</tr>
+																<tr>
+																	<td><a href="https://www.mygreatlearning.com/software-engineering/courses/syllabus"
+																			target="_blank"
+																			rel="noreferrer noopener">Software
+																			engineering courses syllabus</a></td>
+																</tr>
+																<tr>
+																	<td><a href="https://www.mygreatlearning.com/software-engineering/courses/fees"
+																			target="_blank"
+																			rel="noreferrer noopener">Software
+																			engineering courses fees</a></td>
+																</tr>
+																<tr>
+																	<td><a href="https://www.mygreatlearning.com/software-engineering/courses/eligibility"
+																			target="_blank"
+																			rel="noreferrer noopener">Software
+																			engineering courses eligibility</a></td>
+																</tr>
+															</tbody>
+														</table>
+													</figure>
+												</div>
+											</article>
 										</div>
-										<ul>
-											<li>
-												<p>
-													Flipkart will now get the interface but not class, and they
-													can use it as shown below:<br>
-													<code>Transactioni ti = new TransactionImpl();</code>
-													// the result on the right hand side may be achieved by
-													webservices or EJB TransactionImpl physically not present
-													at Flipkart<br>
-													<code>ti.withdrawAmt(500);</code>
-												</p>
-											</li>
-											<li>
-												<p>In this case, both parties achieved their
-													goal, Flipkart which only needs method name and parameter
-													and they got it</p>
-											</li>
-											<li>
-												<p>ICICI only wants to give them the name but
-													not their logic, which they provided. Also it does not
-													matter to ICICI what you purchased, they just want to have
-													amount to be deducted</p>
-											</li>
-										</ul>
+
+
+										<h2 class="breadcrumb">Summary</h2>
+										<div class="fusion-text fusion-text-28">
+											<p><span style="font-weight: 400;">Exception Handling in Java is used to
+													keep our programs from crashing when something goes wrong. It is a
+													day-to-day skill required by all Java developers. Java exception
+													handling consists of several main elements:</span></p>
+											<ul>
+												<li><span style="font-weight: 400;">The <strong>Try/Catch
+															Statement</strong> is used to “try” a block of code for
+														potential exceptions, and “catch” any exceptions that may
+														occur.</span></li>
+												<li><span style="font-weight: 400;">The <strong>Finally</strong> block
+														is executed after <strong>every</strong> try/catch Java
+														statement, whether or not the “try” block triggers the “catch”
+														block.</span></li>
+												<li><span style="font-weight: 400;">You can “<strong>throw</strong>”
+														exceptions from the current method to the calling method, so the
+														calling method can then handle the exception.</span></li>
+												<li><span style="font-weight: 400;">If a method <em>potentially</em>
+														throws an exception, you add the “<strong>throws</strong>”
+														clause to the method signature to inform others that this method
+														<em>may</em> “throw” an exception back at them.</span></li>
+											</ul>
+											<p>It’s also helpful to know that:</p>
+											<ul>
+												<li><span style="font-weight: 400;">You can use <strong>multiple “catch”
+															statements</strong> after a single “try”.</span>
+													<ul>
+														<li><span style="font-weight: 400;">When using multiple catch
+																statements, the most specific should come first – this
+																is the <strong>exception hierarchy in Java</strong>. You
+																must catch subclass exceptions before (above) catching
+																any super class exceptions.&nbsp;</span></li>
+													</ul>
+												</li>
+												<li><span style="font-weight: 400;">You can <strong>nest</strong>
+														Try/Catch Java Statements.</span></li>
+												<li><span style="font-weight: 400;">You can create <strong>custom
+															exceptions in Java</strong> quite easily.</span></li>
+											</ul>
+										</div>
 									</div>
 								</div>
-								<div role="tabpanel" class="tab-pane fade" id="AbstractClass">
-									<div id="Div3">
-										<h2 class="breadcrumb">Abstract Class</h2>
-										<ul>
-											<li>
-												<p>Abstract class is just like a normal class
-													but with some extra features which we will see in this
-													chapter</p>
-											</li>
-											<li>
-												<p>Abstract class can have constructor</p>
-											</li>
-											<li>
-												<p>It can have abstract methods or concrete
-													methods or nothing [empty class] or mix of both methods</p>
-											</li>
-											<li>
-												<p>To use abstract method of class, we must
-													extend the abstract class with ordinary class or must
-													implement all abstract methods in that ordinary class</p>
-											</li>
-											<li>
-												<p>If we don't want to implement or override
-													that method, make those methods as abstract</p>
-											</li>
-											<li>
-												<p>If any method is abstract in a class then
-													that class must be declared as abstract</p>
-											</li>
-											<li>
-												<p>We cannot instantiate abstract class</p>
-											</li>
-											<li>
-												<p>Multiple inheritances are not allowed in
-													abstract class but allowed in interfaces</p>
-											</li>
-											<li>
-												<p>Abstract classes are useful if we want others
-													to not call our class directly but though Inheritance</p>
-											</li>
-											<li>
-												<p>Abstract static final combinations are not
-													allowed in java</p>
-											</li>
-										</ul>
-										<hr>
-										<ul>
-											<li>
-												<p>
-													<i><b>Q.</b> Why does the abstract class have a
-														constructor even though you cannot create object?</i><br>
-													<b>A:</b> Abstract class can only be extended by class and
-													that class will have its own constructor and that
-													constructor will have super (); which is calling
-													constructor of abstract class. If the abstract class
-													doesn't have constructor then the class extending that
-													abstract class will not get compiled. Therefore, abstract
-													classes have constructors.
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Can the abstract class have concrete
-														methods only [concrete method means method with body]?</i><br>
-													<b>A:</b> Yes.
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> If abstract class can have both types of
-														methods [one having body and other without body] then what
-														is use of those methods? </i><br> <b>A:</b> We can use
-													those methods by (1) extending abstract class or (2) making
-													that method as a static so that we will not need to create
-													an object.
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> How to call m2() which is concrete of
-														abstract class?</i><br> <b>A:</b> Make it as static and
-													call as
-													<code>Ravi.m2 (); //where Ravi is class name</code>
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Can abstract class extend ordinary class?</i><br>
-													<b>A:</b> Yes.
-												</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="AbstractandInterfaceDifference">
-									<div id="Div4" class="tablediv">
-										<h2 class="breadcrumb">Difference between Abstract Class
-											& Interface</h2>
-										<table class="table-responsive-xl table-bordered table" style="width: 100%;">
-											<colgroup>
-												<col style="width: 50%" />
-												<col style="width: 50%" />
-											</colgroup>
-											<tr>
-												<th class="center">Abstract Class</th>
-												<th class="center">Interface</th>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>Constructor Present</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>No Constructor Present</li>
-													</ul>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>Multiple inheritance not allowed in case of
-															classes</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>Multiple inheritance allowed</li>
-													</ul>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>It has abstract and concrete methods. To use this
-															class we extend it</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>Methods are abstract only We implement interfaces
-															in class</li>
-													</ul>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>After extending abstract class, access specifiers
-															of overridden method must be bigger than or same as that
-															of access specifiers mentioned in method of abstract
-															class</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>In implementing class all method must be public</li>
-													</ul>
-												</td>
-											</tr>
-										</table>
-									</div>
-								</div>
+								<hr>
 							</div>
-							<hr>
+						</div>
+						<div class="card-footer">
+							<ul class="pagination justify-content-center mb-4">
+								<li class="page-item"><a class="page-link btn-outline-primary"
+										href="polymorphism-in-java.html">&lArr; Previous</a></li>
+								<li class="page-item"><a class="page-link" href="garbage-collection-in-java.html">Next
+										&rArr;</a></li>
+							</ul>
 						</div>
 					</div>
-					<div class="card-footer">
-						<ul class="pagination justify-content-center mb-4">
-							<li class="page-item"><a class="page-link btn-outline-primary"
-									href="polymorphism-in-java.html">&lArr; Previous</a></li>
-							<li class="page-item"><a class="page-link" href="garbage-collection-in-java.html">Next
-									&rArr;</a></li>
-						</ul>
-					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<style>
-		.footerfont {
-			font-size: 16px
-		}
-	</style>
-	<div class="footer footerfont" style="background: #55585a;">
-		<div class="footer-copyright border-top ">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-6 center py-3 text-white">
-						Copyright © 2023, <br>The content is copyrighted to Ravi Kalyan Kolloju.
+		<style>
+			.footerfont {
+				font-size: 16px
+			}
+		</style>
+		<div class="footer footerfont" style="background: #55585a;">
+			<div class="footer-copyright border-top ">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-6 center py-3 text-white">
+							Copyright © 2023, <br>The content is copyrighted to Ravi Kalyan Kolloju.
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 </body>
 
 </html>
