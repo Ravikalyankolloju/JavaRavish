@@ -92,18 +92,24 @@
 					<div class="list-group">
 						<ul class="leftBarList">
 							<li><a href="java-introduction.html">Java Introduction</a></li>
+							<li><a href="java-languag-fundamentals.html">Java Language Fundamentals</a></li>
+							<li><a href="java-access-modifiers.html">Access Modifiers</a></li>
+							<li><a href="java-flow-control.html">Flow Control</a></li>
+							<li><a href="java-oops.html">Object Oriented Programming</a></li>
 							<li><a href="java-vm-memory-management.html">JVM Memory Management</a></li>
 							<li><a href="java-garbage-collection.html">Garbage Collection</a></li>
-							<li><a href="java-final-keyword.html">Final Keyword </a></li>
-							<li><a href="java-strings.html">Strings</a></li>
+							<li><a href="java-inner-classes.html">Inner Classes</a></li>
 							<li><a href="java-abstraction.html">Abstraction</a></li>
 							<li><a href="java-encapsulation.html">Encapsulation</a></li>
 							<li><a href="java-polymorphism.html">Polymorphism</a></li>
 							<li><a href="java-inheritance.html">Inheritance </a></li>
-							<li><a href="java-exception.html">Exception</a></li>
+							<li><a href="java-exception.html">Exception Handling</a></li>
 							<li><a href="java-multithreading.html">Multithreading</a></li>
+							<li><a href="java-lang-package.html">Fundamentals of java.lang.package</a></li>
 							<li><a href="java-serialization.html">Serialization</a></li>
+							<li><a href="java-generics.html">Generics</a></li>
 							<li><a href="java-collection-framework.html">Collection Framework</a></li>
+							<li><a href="java-internationalization.html">Internationalization</a></li>
 							<li><a href="java-8-features.html">Java 8 Features</a></li>
 							<li><a href="java-interview-questions.html">Java Interview Questions</a></li>
 						</ul>
@@ -114,18 +120,24 @@
 					<div class="list-group">
 						<ul class="leftBarList">
 							<li><a href="java-introduction.html">Java Introduction</a></li>
+							<li><a href="java-languag-fundamentals.html">Java Language Fundamentals</a></li>
+							<li><a href="java-access-modifiers.html">Access Modifiers</a></li>
+							<li><a href="java-flow-control.html">Flow Control</a></li>
+							<li><a href="java-oops.html">Object Oriented Programming</a></li>
 							<li><a href="java-vm-memory-management.html">JVM Memory Management</a></li>
 							<li><a href="java-garbage-collection.html">Garbage Collection</a></li>
-							<li><a href="java-final-keyword.html">Final Keyword </a></li>
-							<li><a href="java-strings.html">Strings</a></li>
+							<li><a href="java-inner-classes.html">Inner Classes</a></li>
 							<li><a href="java-abstraction.html">Abstraction</a></li>
 							<li><a href="java-encapsulation.html">Encapsulation</a></li>
 							<li><a href="java-polymorphism.html">Polymorphism</a></li>
 							<li><a href="java-inheritance.html">Inheritance </a></li>
-							<li><a href="java-exception.html">Exception</a></li>
+							<li><a href="java-exception.html">Exception Handling</a></li>
 							<li><a href="java-multithreading.html">Multithreading</a></li>
+							<li><a href="java-lang-package.html">Fundamentals of java.lang.package</a></li>
 							<li><a href="java-serialization.html">Serialization</a></li>
+							<li><a href="java-generics.html">Generics</a></li>
 							<li><a href="java-collection-framework.html">Collection Framework</a></li>
+							<li><a href="java-internationalization.html">Internationalization</a></li>
 							<li><a href="java-8-features.html">Java 8 Features</a></li>
 							<li><a href="java-interview-questions.html">Java Interview Questions</a></li>
 						</ul>
@@ -138,486 +150,472 @@
 
 			<div class="col-lg-9 mb-4">
 				<div class="card h-100">
-					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Abstraction in Java</h1>
+					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Garbage Collection in Java</h1>
 					<div class="card-body">
 						<div class="tab" role="tabpanel">
-							<p>
-								<b>Abstraction</b> is a process of hiding details about
-								implementation from the user while letting them utilise the
-								services or functions. Therefore, the user will know what an
-								object does, but not how it does it. It is done to simplify the
-								user interface while hiding the complex processes.
-							</p>
-							<ul>
-								<li>Exposing only required or important things is called
-									abstraction</li>
-								<li>Abstraction can be done in two ways :
-									<ul>
-										<li>Abstract class</li>
-										<li>Interface</li>
-									</ul>
+							<ol>
+								<li><a href="#intro"> Introduction:</a></li>
+								<li><a href="#gc"> The way to make an object eligible for GC</a>
+									<ol type="i">
+										<li><a href="#null"> Nullifying the reference variable</a></li>
+										<li><a href="#reassign"> Reassign the reference variable</a></li>
+										<li><a href="#method">Objects created inside a method</a></li>
+										<li><a href="#isolation"> Island of Isolation</a></li>
+									</ol>
 								</li>
-								<li>It is used for maintaining the standards of coding in
-									project</li>
+								<li><a href="#jvm"> The methods for requesting JVM to run GC</a>
+									<ol type="i">
+										<li><a href="#system"> By System class</a></li>
+										<li><a href="#runtime"> By Runtime class</a></li>
+									</ol>
+								</li>
+								<li><a href="#finalise"> Finalization</a></li>
+								<ul>
+									<li><a href="#case1"> Case 1 : Just before destroying any object GC calls finalize()
+											method on the object</a></li>
+									<li><a href="#case2"> Case 2 : We can call finalize() method explicitly</a></li>
+									<li><a href="#case3"> Case 3 : finalize() method can be call either by the
+											programmer or by the GC</a></li>
+									<li><a href="#case4"> Case 4 : On any object GC calls finalize() method only
+											once</a></li>
+								</ul>
+								<li><a href="#leak"> Memory leaks</a></li>
+
+							</ol>
+
+							<h3 id="intro"><u>
+									<font color="#0000ff">Introduction:</font>
+								</u></h3>
+							<ul>
+								<li>In old languages like C++ programmer is responsible for both creation and
+									destruction of objects. Usually programmer is taking very much care while creating
+									object and neglect destruction of useless objects .Due to his negligence at certain
+									point of time for creation of new object sufficient memory may not be available and
+									entire application may be crashed due to memory problems.</li>
+								<li>But in java programmer is responsible only for creation of new object and his not
+									responsible for destruction of objects.</li>
+								<li>Sun people provided one assistant which is always running in the background for
+									destruction at useless objects. Due to this assistant the chance of failing java
+									program is very rare because of memory problems.</li>
+								<li>This assistant is nothing but garbage collector. Hence the main objective of GC is
+									to destroy useless objects.</li>
 							</ul>
-							<hr>
-							<div class="tab-content tabs">
-								<div role="tabpanel" class="tab-pane fade in active" id="Interface">
-									<div id="Div1">
-										<h2 class="breadcrumb">Interface</h2>
-										<ul>
-											<li>
-												<p>One of the java principles says that we must
-													follow the I to C design. This means that every class
-													should be implemented from Interface</p>
-											</li>
-											<li>
-												<p>In the industry, architect level people
-													create interfaces and then it is given to the developers
-													for writing classes by implementing interfaces provided</p>
-											</li>
-											<li>
-												<p>This is best way to expose our project’s API
-													to some other projects. For example, ICICI bank can expose
-													methods or interfaces to various shopping carts</p>
-											</li>
-											<li>
-												<p>The interface is the same as ordinary class
-													but remember below points</p>
-											</li>
-											<li>
-												<p>We cannot instantiate Interface but we can
-													create reference variables</p>
-											</li>
-											<li>
-												<p>The interface doesn't have a constructor</p>
-											</li>
-											<li>
-												<p>It can be compiled but cannot run</p>
-											</li>
-											<li>
-												<p>Interface can extends interface</p>
-											</li>
-											<li>
-												<p>The interface can extend multiple interfaces</p>
-												<ul>
-													Example:
-													<pre class>
-														<code>void m1();   //No body Method</code>
-													</pre>
-													<li>In case of classes, we must define the body of
-														method
-														<pre class>
-															<code>package com.abstraction; 
-    public class X   { 
-         void m1();   // compile time error method should have body
-}               
-</code>
-														</pre>
-													</li>
-													<li>In case of classes, if we want the above written
-														lines to compile when we have method without body, then we
-														must explicitly define that method as abstract in case of
-														classes, but not in case of interface
-														<pre class>
-															<code>package com.abstraction;
-    public class X { 
-        abstract void m1();  // compile time error  
-}     
-</code>
-														</pre>
-													</li>
-													<li>In case of classes, if method is abstract then
-														class must be declared as abstract as well.
-														<pre class>
-															<code>package com.abstraction;
-     public abstract class X { 
-        abstract void m1();  // No error  
-}     
-</code>
-														</pre>
-													</li>
-													<li>In case of interface we don't need to do explicit
-														declaration for methods like class but they are, by
-														default, abstract
-														<pre class>
-															<code>package com.InterFace; 
-    interface Xi {
-        void m1(); // abstract keyword invisibly present 
-}     
-</code>
-														</pre>
-													</li>
-													<li>All methods are public in interface. If you want
-														to mention access specifiers, mention them as public, or
-														do not mention any access specifier and JVM will
-														automatically consider it as public, every time</li>
-												</ul>
-											</li>
-										</ul>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code1"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code1" class="breadcrumb pretagcodebox">
-<code>package com.InterFace;    
-    interface xyz {
-        void m1(); // public and abstract invisibly put by JVM 
-    }
-package com.InterFace;    
-public interface x {
-    public abstract void m1();	//OK 
-        public void m3();	//OK  
-        abstract void m6();//OK
-        void m7();//OK
+
+							<h3 id="gc"><u>
+									<font color="#004080">The ways to make an object eligible for GC:</font>
+								</u></h3>
+							<ul>
+								<li>Even through programmer is not responsible for destruction of objects but it is
+									always a good programming practice to make an object eligible for GC if it is no
+									longer required.</li>
+								<li>An object is eligible for GC if and only if it does not have any references.</li>
+							</ul>
+
+							<h3><u>
+									<font color="#008000">The following are various possible ways to make an object
+										eligible for GC:</font>
+								</u></h3>
+
+							<p>
+								<font color="#0000ff"><u></u></font>
+							</p>
+							<h3 id="null">
+								<font color="#0000ff"><u>1.Nullifying the reference variable: </u></font>
+							</h3><br>
+							If an object is no longer required then we can make eligible for GC by assigning "null" to
+							all its reference variables.
+							<p></p>
+							<u>Example:</u><br><br><img alt="" src="flow/image142.png"><br><br>
+
+
+							<p>
+								<font color="#800000"> <u></u></font>
+							</p>
+							<h3 id="reassign">
+								<font color="#800000"><u>2.Reassign the reference variable: </u></font>
+							</h3><br>
+							If an object is no longer required then reassign all its reference variables to some other
+							objects then old object is by default eligible for GC.
+							<p></p>
+							<u>Example:</u><br><br><img alt="" src="flow/image144.png"><br>
+							<font color="#008080"><br></font>
+
+							<p>
+								<u>
+									<font color="#008080"></font>
+								</u>
+							</p>
+							<h3 id="method"><u>
+									<font color="#008080">3. Objects created inside a method: </font>
+								</u></h3><br>
+							Objects created inside a method are by default eligible for GC once method completes.
+							<p></p>
+							<u>Example 1:</u><br><br><img alt="" src="flow/image146.png"><br><br>
+
+							<br>
+
+							<u>Example 2:</u><br><br><img alt="" src="flow/image148.png"><br><br>
+
+							<br>
+
+							<u>Example 3:</u><br><br><img alt="" src="flow/image150.png"><br><br>
+
+							<br>
+
+							<u>Example 4:</u><br><br><img alt="" src="flow/image151.png"><br><br>
+
+							<h3 id="isolation">
+								<font color="#0000ff"><u>4.Island of Isolation:</u></font>
+							</h3>
+							<br><br><img alt="" src="flow/image152.png"><br><br>
+
+							<p>
+								<strong>Note:</strong> if an object doesn't have any reference then it always eligible
+								for GC. <br>
+								<strong>Note:</strong> Even though object having reference still it is eligible for GC
+								some times.<br>
+							</p>
+							<p><strong>Example: </strong><br></p>
+							<p><strong>
+									<font color="#008000">island of isolation. (Island of Isolation all references are
+										internal references )
+									</font>
+								</strong></p>
+
+							<h3 id="jvm"><u>
+									<font color="#0000ff">The methods for requesting JVM to run GC:</font>
+								</u></h3>
+							<ul>
+								<li>Once we made an object eligible for GC it may not be destroyed immediately by the
+									GC. Whenever jvm runs GC then only object will be destroyed by the GC. But when
+									exactly JVM runs GC we can't expert it is vendor dependent.</li>
+								<li>We can request jvm to run garbage collector programmatically, but whether jvm accept
+									our request or not there is no guaranty. But most of the times JVM will accept our
+									request. </li>
+							</ul>
+
+							<h3 id="method">
+								<font color="#800040"><u>The following are various ways for requesting jvm to run
+										GC:</u></font>
+							</h3>
+
+							<p>
+								<u>
+									<font color="#800040"></font>
+								</u>
+							</p>
+							<h4 id="system"><u>
+									<font color="#800040">By System class:</font>
+								</u></h4>&nbsp;&nbsp; System class contains a static method GC for this purpose. <br>
+							<strong>Example: </strong><br><strong>System.gc();
+							</strong>
+							<p></p>
+
+							<p>
+								<font color="#0000ff"><u></u></font>
+							</p>
+							<h4 id="runtime">
+								<font color="#0000ff"><u>By Runtime class:</u></font>
+							</h4>
+							<ul>
+								<li>
+									A java application can communicate with jvm by using Runtime object. </li>
+								<li>
+									Runtime class is a singleton class present in java.lang. Package.</li>
+								<li> We can create Runtime object by using factory method getRuntime().</li>
+							</ul>
+							<strong>Example: </strong><br>
+							<p></p>
+							<p><strong>Runtime r=Runtime.getRuntime();
+								</strong></p>
+
+							<p>Once we got Runtime object we can call the following methods on that object.</p>
+
+
+							<p>
+								<u>
+									<font color="#804000"><strong>freeMemory():</strong></font>
+								</u> returns the free memory present in the heap.<br>
+								<font color="#800040"><u><strong>totalMemory():</strong></u></font> returns total memory
+								of the heap.<br>
+								<font color="#0000ff"><u><strong>gc():</strong></u></font> for requesting jvm to run gc.
+							</p>
+							<u>Example:
+							</u>
+							<pre>import java.util.Date;
+class RuntimeDemo
+{
+public static void main(String args[]){
+Runtime r=Runtime.getRuntime();
+System.out.println("total memory of the heap :"+r.totalMemory());
+System.out.println("free memory of the heap :"+r.freeMemory());
+for(int i=0;i&lt;10000;i++)
+{
+Date d=new Date();
+d=null;
 }
-</code>
-											</pre>
-										</div>
-										<ul>
-											<li>Variables are public final static in interface and
-												act like constants</li>
-											<li>If we want to use methods of interface, we have to
-												implement that interface in any class, and methods of
-												interface must be implemented in a class by using the
-												implements keyword</li>
-										</ul>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code2"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code2" class="breadcrumb pretagcodebox">
-<code>package com.InterFace; 
-  interface Xi {
-        void m1();
-    }
-package com.InterFace;
-  public class	XImpl implements xi{
-    //Not compiled as we have not implemented all the methods
+System.out.println("free memory of the heap :"+r.freeMemory());
+r.gc();
+System.out.println("free memory of the heap :"+r.freeMemory());
 }
-</code>
-											</pre>
-										</div>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code3"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code3" class="breadcrumb pretagcodebox">
-<code>package com.InterFace; 
-  public interface Ai {
-     void m1();  //OK
 }
-package com.InterFace; 
-  public interface Bi {
-     void m1();	 //OK
-  }
-package com.InterFace;
-  public interface Ci extends Ai,Bi {   //OK     
-     void m1();
-  }
-</code>
-											</pre>
-										</div>
-										<p>This is allowed in java</p>
-										<ul>
-											<li>interface can extend interface1 and interface2</li>
-											<li>class extends class implements interface</li>
-											<li>class implements interface</li>
-											<li>class extends class implements interface1 and
-												interface2</li>
-										</ul>
-										<hr>
-										<ul>
-											<li>
-												<p>
-													<i><b>Q.</b> Why do we need Interface?</i><br> <b>A:</b>
-													To expose the third party API
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Why not constructor?</i><br> <b>A:</b> In
-													interface it will not get called by using super by using
-													hierarchy
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> As an interface has abstract method, how
-														will you use the abstract method of interface? </i><br>
-													<b>A:</b>
-													Implement that method in class, or in other words override
-													methods, and then create object of that class and call all
-													methods
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Have you ever used others third party API
-														code?</i><br> <b>A:</b>Yes, they have their Interface and
-													API and we can use that.
-												</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="WhyInterface">
-									<div id="Div2">
-										<h2 class="breadcrumb">Why interface?</h2>
-										<p>
-											Suppose there is a requirement for Flipkart to integrate
-											ICICI bank code into their shopping cart.Their customers want
-											to make payment for products they purchased. Now, to make
-											payment, Flipkart does not have their own bank, so it must
-											take help of other banks.<br> Let's say ICICI develops
-											code like below:
-										<pre class>
-											<code>class Transaction { 
-    void withdrawAmt(int amtToWithdraw) {
-        void m1(); // abstract keyword invisibly present 
-            //logic of withdraw
-            //ICICI DB connection and updating in their DB
-    }
-}   
-</code>
-										</pre>
-										<p>Flipkart needs this class so they request ICICI bank
-											for the same. The problem with ICICI is that if they give
-											this complete code to flipkart they risk exposing everything
-											of their own database to them as well as their logic, which
-											is a security violation.</p>
-										<p>Now, what exactly Flipkart needs is the method name and
-											class name. But to compile their class they must get one like
-											below:
-										<pre class>
-											<code>Transaction t=new Transaction();  //1
-t.withdrawAmt(500);   //2
-</code>
-										</pre>
-										<p>If the first line to compile at Flipkart ends, then
-											they must have this class which ICICI cannot give. The best
-											solution here is for ICICI to develop an Interface of
-											Transaction class as shown below:</p>
-										<div>
-											<button class="copycodebuttonstyle" data-clipboard-target="#code4"
-												onclick="copySuccessMessage()">
-												<i class="fa fa-clipboard"></i>
-											</button>
-											<pre id="code4" class="breadcrumb pretagcodebox">
-<code>interface Transactioni {
-     void withdrawAmt(int amtToWithdraw) ;
+Output:
+Total memory of the heap: 5177344
+Free memory of the heap: 4994920
+Free memory of the heap: 4743408
+Free memory of the heap: 5049776
+</pre>
+							<b>Note :</b> Runtime class is a singleton class so not create the object to use
+							constructor.
+							<p>
+								<font color="#ff0000"><strong>Which of the following are valid ways for requesting jvm
+										to run GC ? </strong></font><br>
+								System.gc(); (valid) <br>
+								Runtime.gc(); (invalid) <br>
+								(new Runtime).gc(); (invalid) <br>
+								Runtime.getRuntime().gc(); (valid)
+							</p>
+							<p>
+								<u><strong>Note:</strong></u> gc() method present in System class is static, where as it
+								is instance method in Runtime class. <br>
+								<u><strong>Note: </strong></u>Over Runtime class gc() method , System class gc() method
+								is recommended to use. <br>
+								<u><strong>Note:</strong></u> in java it is not possible to find size of an object and
+								address of an object.
+							</p>
+
+							<h3 id="finalise" style="background-color: rgb(0, 128, 64);">
+								<font color="#ffffff">Finalization:</font>
+							</h3>
+							<ul>
+								<li>
+									Just before destroying any object gc always calls finalize() method to perform
+									cleanup activities.</li>
+								<li>
+									If the corresponding class contains finalize() method then it will be executed
+									otherwise Object class finalize() method will be executed.</li>
+							</ul>
+							which is declared as follows. <br>
+							<b>protected void finalize() throws Throwable </b>
+							<p></p>
+
+							<font color="#800000"><u>
+									<h4 id="case1">Case 1:
+									</h4>
+								</u></font>
+							<p> Just before destroying any object GC calls finalize() method on the object which is
+								eligible for GC then the corresponding class finalize() method will be executed. <br>
+							</p>
+							<p>For Example if String object is eligible for GC then String class finalize()method is
+								executed but not Test class finalize()method.</p>
+
+							<u>Example:
+							</u>
+							<pre>class Test
+{
+public static void main(String args[]){
+String s=new String("bhaskar");
+Test t=new Test();
+s=null;
+System.gc();
+System.out.println("End of main.");
 }
-class TransactionImpl implements Transactioni { 
-    void withdrawAmt(int amtToWithdraw) {
-        //logic of withdraw
-        //ICICI DB connection and updating in their DB
-    } 
+public void finalize(){
+System.out.println("finalize() method is executed");
 }
-</code>
-											</pre>
-										</div>
-										<ul>
-											<li>
-												<p>
-													Flipkart will now get the interface but not class, and they
-													can use it as shown below:<br>
-													<code>Transactioni ti = new TransactionImpl();</code>
-													// the result on the right hand side may be achieved by
-													webservices or EJB TransactionImpl physically not present
-													at Flipkart<br>
-													<code>ti.withdrawAmt(500);</code>
-												</p>
-											</li>
-											<li>
-												<p>In this case, both parties achieved their
-													goal, Flipkart which only needs method name and parameter
-													and they got it</p>
-											</li>
-											<li>
-												<p>ICICI only wants to give them the name but
-													not their logic, which they provided. Also it does not
-													matter to ICICI what you purchased, they just want to have
-													amount to be deducted</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="AbstractClass">
-									<div id="Div3">
-										<h2 class="breadcrumb">Abstract Class</h2>
-										<ul>
-											<li>
-												<p>Abstract class is just like a normal class
-													but with some extra features which we will see in this
-													chapter</p>
-											</li>
-											<li>
-												<p>Abstract class can have constructor</p>
-											</li>
-											<li>
-												<p>It can have abstract methods or concrete
-													methods or nothing [empty class] or mix of both methods</p>
-											</li>
-											<li>
-												<p>To use abstract method of class, we must
-													extend the abstract class with ordinary class or must
-													implement all abstract methods in that ordinary class</p>
-											</li>
-											<li>
-												<p>If we don't want to implement or override
-													that method, make those methods as abstract</p>
-											</li>
-											<li>
-												<p>If any method is abstract in a class then
-													that class must be declared as abstract</p>
-											</li>
-											<li>
-												<p>We cannot instantiate abstract class</p>
-											</li>
-											<li>
-												<p>Multiple inheritances are not allowed in
-													abstract class but allowed in interfaces</p>
-											</li>
-											<li>
-												<p>Abstract classes are useful if we want others
-													to not call our class directly but though Inheritance</p>
-											</li>
-											<li>
-												<p>Abstract static final combinations are not
-													allowed in java</p>
-											</li>
-										</ul>
-										<hr>
-										<ul>
-											<li>
-												<p>
-													<i><b>Q.</b> Why does the abstract class have a
-														constructor even though you cannot create object?</i><br>
-													<b>A:</b> Abstract class can only be extended by class and
-													that class will have its own constructor and that
-													constructor will have super (); which is calling
-													constructor of abstract class. If the abstract class
-													doesn't have constructor then the class extending that
-													abstract class will not get compiled. Therefore, abstract
-													classes have constructors.
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Can the abstract class have concrete
-														methods only [concrete method means method with body]?</i><br>
-													<b>A:</b> Yes.
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> If abstract class can have both types of
-														methods [one having body and other without body] then what
-														is use of those methods? </i><br> <b>A:</b> We can use
-													those methods by (1) extending abstract class or (2) making
-													that method as a static so that we will not need to create
-													an object.
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> How to call m2() which is concrete of
-														abstract class?</i><br> <b>A:</b> Make it as static and
-													call as
-													<code>Ravi.m2 (); //where Ravi is class name</code>
-												</p>
-											</li>
-											<li>
-												<p>
-													<i><b>Q.</b> Can abstract class extend ordinary class?</i><br>
-													<b>A:</b> Yes.
-												</p>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div role="tabpanel" class="tab-pane fade" id="AbstractandInterfaceDifference">
-									<div id="Div4" class="tablediv">
-										<h2 class="breadcrumb">Difference between Abstract Class
-											& Interface</h2>
-										<table class="table-responsive-xl table-bordered table" style="width: 100%;">
-											<colgroup>
-												<col style="width: 50%" />
-												<col style="width: 50%" />
-											</colgroup>
-											<tr>
-												<th class="center">Abstract Class</th>
-												<th class="center">Interface</th>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>Constructor Present</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>No Constructor Present</li>
-													</ul>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>Multiple inheritance not allowed in case of
-															classes</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>Multiple inheritance allowed</li>
-													</ul>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>It has abstract and concrete methods. To use this
-															class we extend it</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>Methods are abstract only We implement interfaces
-															in class</li>
-													</ul>
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<ul>
-														<li>After extending abstract class, access specifiers
-															of overridden method must be bigger than or same as that
-															of access specifiers mentioned in method of abstract
-															class</li>
-													</ul>
-												</td>
-												<td>
-													<ul>
-														<li>In implementing class all method must be public</li>
-													</ul>
-												</td>
-											</tr>
-										</table>
-									</div>
-								</div>
-							</div>
-							<hr>
+}
+Output:
+End of main.
+</pre>
+
+							In the above program String class finalize()method got executed. Which has empty
+							implementation.
+							<p>If we replace String object with Test object then Test class finalize() method will be
+								executed .</p>
+							<p>The following program is an Example of this.</p>
+							<u>Example:
+
+							</u>
+							<pre>class Test
+{
+public static void main(String args[]){
+String s=new String("bhaskar");
+Test t=new Test();
+t=null;
+System.gc();
+System.out.println("End of main.");
+}
+public void finalize(){
+System.out.println("finalize() method is executed");
+}
+}
+Output:
+finalize() method is executed
+End of main
+</pre>
+
+							<font color="#0000ff"><u>
+									<h4 id="case2">Case 2:
+									</h4>
+								</u></font>
+							<p> We can call finalize() method explicitly then it will be executed just like a normal
+								method call and object won't be destroyed. But before destroying any object GC always
+								calls finalize() method.</p>
+							<u>Example: </u>
+							<pre>class Test
+{
+public static void main(String args[]){
+Test t=new Test();
+t.finalize();
+t.finalize();
+t=null;
+System.gc();
+System.out.println("End of main.");
+}
+public void finalize(){
+System.out.println("finalize() method called");
+}
+}
+Output:
+finalize() method called.
+finalize() method called.
+finalize() method called.
+End of main.
+</pre>
+							<p>
+								In the above program finalize() method got executed 3 times in that 2 times explicitly
+								by the programmer and one time by the gc. <br>
+								<u><strong>Note:</strong></u> In Servlets we can call destroy() method explicitly from
+								init() and service() methods. Then it will be executed just like a normal method call
+								and Servlet object won't be destroyed.
+							</p>
+							<u>Diagram:</u><br><br><img alt="" src="flow/image154.png"><br><br>
+							<br>
+							<font color="#0080ff"><u>
+									<h4 id="case3">Case 3:
+									</h4>
+								</u></font>
+							<p>
+								finalize() method can be call either by the programmer or by the GC . <br></p>
+							<p>If the programmer calls explicitly finalize() method and while executing the finalize()
+								method if an exception raised and uncaught then the program will be terminated
+								abnormally.<br>
+								If GC calls finalize() method and while executing the finalize()method if an exception
+								raised and uncaught then JVM simply ignores that exception and the program will be
+								terminated normally.</p>
+							<u>Example:
+							</u>
+							<pre>class Test
+{
+public static void main(String args[]){
+Test t=new Test();
+//t.finalize();-------line(1)
+t=null;
+System.gc();
+System.out.println("End of main.");
+}
+public void finalize(){
+System.out.println("finalize() method called");
+System.out.println(10/0);
+}
+</pre>
+							<p>
+								If we are not comment line1 then programmer calling finalize() method explicitly and
+								while executing the finalize()method ArithmeticException raised which is uncaught hence
+								the program terminated abnormally.<br>
+								If we are comment line1 then GC calls finalize() method and JVM ignores
+								ArithmeticException and program will be terminated normally.</p>
+
+							<p>
+								<font color="#ff0000"><u><strong>Which of the following is true? </strong></u></font>
+								<br>
+								While executing finalize() method JVM ignores every exception(invalid). <br>
+								While executing finalize() method JVM ignores only uncaught exception(valid).
+							</p>
+
+							<font color="#008000"><u>
+									<h4 id="case4">Case 4:
+									</h4>
+								</u></font>
+							<p>On any object GC calls finalize() method only once.</p>
+							<u>Example:
+							</u>
+							<pre>class FinalizeDemo
+{
+static FinalizeDemo s;
+public static void main(String args[])throws Exception{
+FinalizeDemo f=new FinalizeDemo();
+System.out.println(f.hashCode());
+f=null;
+System.gc();
+Thread.sleep(5000);
+System.out.println(s.hashCode());
+s=null;
+System.gc();
+Thread.sleep(5000);
+System.out.println("end of main method");
+}
+public void finalize()
+{
+System.out.println("finalize method called");
+s=this;
+}
+}
+Output:
+D:\Enum&gt;java FinalizeDemo
+4072869
+finalize method called
+4072869
+End of main method
+</pre>
+
+							<u><strong>Note: </strong></u><br>
+							The behavior of the GC is vendor dependent and varied from JVM to JVM hence we can't expert
+							exact answer for the following.<br>
+							<ol>
+								<li> What is the algorithm followed by GC.</li>
+								<li> Exactly at what time JVM runs GC.</li>
+								<li> In which order GC identifies the eligible objects.</li>
+								<li> In which order GC destroys the object etc.</li>
+								<li> Whether GC destroys all eligible objects or not.</li>
+							</ol>
+							<p>When ever the program runs with low memory then the JVM runs GC, but we can't except
+								exactly at what time.
+								<br>
+								Most of the GC's followed <b>mark &amp; sweap</b> algorithm , but it doesn't mean every
+								GC follows the same algorithm.
+							</p>
+
+							<h3 id="leak"><u>
+									<font color="#800040">Memory leaks:</font>
+								</u></h3>
+							<ul type="square">
+								<li>An object which is not using in our application and it is not eligible for GC such
+									type of objects are called "memory leaks".</li>
+								<li>In the case of memory leaks GC also can't do anything the application will be
+									crashed due to memory problems.</li>
+								<li>In our program if memory leaks present then certain point we will get
+									<b>OutOfMemoryException</b>. Hence if an object is no longer required then it's
+									highly recommended to make that object eligible for GC.
+								</li>
+								<li>By using monitoring tools we can identify memory leaks.</li>
+							</ul>
+							<pre>Example:
+
+HPJ meter
+HP ovo
+IBM Tivoli		These are monitoring tools.
+J Probe			(or memory management tools)
+Patrol and etc
+
+</pre>
 						</div>
 					</div>
 					<div class="card-footer">
 						<ul class="pagination justify-content-center mb-4">
 							<li class="page-item"><a class="page-link btn-outline-primary"
-									href="polymorphism-in-java.html">&lArr; Previous</a></li>
-							<li class="page-item"><a class="page-link" href="garbage-collection-in-java.html">Next
+									href="java-vm-memory-management.html">&lArr; Previous</a></li>
+							<li class="page-item"><a class="page-link" href="java-inner-classes.html">Next
 									&rArr;</a></li>
 						</ul>
 					</div>

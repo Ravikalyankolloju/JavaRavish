@@ -92,18 +92,24 @@
 					<div class="list-group">
 						<ul class="leftBarList">
 							<li><a href="java-introduction.html">Java Introduction</a></li>
+							<li><a href="java-languag-fundamentals.html">Java Language Fundamentals</a></li>
+							<li><a href="java-access-modifiers.html">Access Modifiers</a></li>
+							<li><a href="java-flow-control.html">Flow Control</a></li>
+							<li><a href="java-oops.html">Object Oriented Programming</a></li>
 							<li><a href="java-vm-memory-management.html">JVM Memory Management</a></li>
 							<li><a href="java-garbage-collection.html">Garbage Collection</a></li>
-							<li><a href="java-final-keyword.html">Final Keyword </a></li>
-							<li><a href="java-strings.html">Strings</a></li>
+							<li><a href="java-inner-classes.html">Inner Classes</a></li>
 							<li><a href="java-abstraction.html">Abstraction</a></li>
 							<li><a href="java-encapsulation.html">Encapsulation</a></li>
 							<li><a href="java-polymorphism.html">Polymorphism</a></li>
 							<li><a href="java-inheritance.html">Inheritance </a></li>
-							<li><a href="java-exception.html">Exception</a></li>
+							<li><a href="java-exception.html">Exception Handling</a></li>
 							<li><a href="java-multithreading.html">Multithreading</a></li>
+							<li><a href="java-lang-package.html">Fundamentals of java.lang.package</a></li>
 							<li><a href="java-serialization.html">Serialization</a></li>
+							<li><a href="java-generics.html">Generics</a></li>
 							<li><a href="java-collection-framework.html">Collection Framework</a></li>
+							<li><a href="java-internationalization.html">Internationalization</a></li>
 							<li><a href="java-8-features.html">Java 8 Features</a></li>
 							<li><a href="java-interview-questions.html">Java Interview Questions</a></li>
 						</ul>
@@ -114,18 +120,24 @@
 					<div class="list-group">
 						<ul class="leftBarList">
 							<li><a href="java-introduction.html">Java Introduction</a></li>
+							<li><a href="java-languag-fundamentals.html">Java Language Fundamentals</a></li>
+							<li><a href="java-access-modifiers.html">Access Modifiers</a></li>
+							<li><a href="java-flow-control.html">Flow Control</a></li>
+							<li><a href="java-oops.html">Object Oriented Programming</a></li>
 							<li><a href="java-vm-memory-management.html">JVM Memory Management</a></li>
 							<li><a href="java-garbage-collection.html">Garbage Collection</a></li>
-							<li><a href="java-final-keyword.html">Final Keyword </a></li>
-							<li><a href="java-strings.html">Strings</a></li>
+							<li><a href="java-inner-classes.html">Inner Classes</a></li>
 							<li><a href="java-abstraction.html">Abstraction</a></li>
 							<li><a href="java-encapsulation.html">Encapsulation</a></li>
 							<li><a href="java-polymorphism.html">Polymorphism</a></li>
 							<li><a href="java-inheritance.html">Inheritance </a></li>
-							<li><a href="java-exception.html">Exception</a></li>
+							<li><a href="java-exception.html">Exception Handling</a></li>
 							<li><a href="java-multithreading.html">Multithreading</a></li>
+							<li><a href="java-lang-package.html">Fundamentals of java.lang.package</a></li>
 							<li><a href="java-serialization.html">Serialization</a></li>
+							<li><a href="java-generics.html">Generics</a></li>
 							<li><a href="java-collection-framework.html">Collection Framework</a></li>
+							<li><a href="java-internationalization.html">Internationalization</a></li>
 							<li><a href="java-8-features.html">Java 8 Features</a></li>
 							<li><a href="java-interview-questions.html">Java Interview Questions</a></li>
 						</ul>
@@ -141,6 +153,47 @@
 					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Exception Handling in Java</h1>
 					<div class="card-body">
 						<div class="tab" role="tabpanel">
+							<ol>
+								<li><a href="#intro"> Introduction</a></li>
+								<li><a href="#stackMech">Runtime stack mechanism</a></li>
+								<li><a href="#exception">Default exception handling in java</a></li>
+								<li><a href="#hierarchy">Exception hierarchy</a></li>
+								<li><a href="#Customized">Customized exception handling by try catch</a></li>
+								<li><a href="#Control">Control flow in try catch</a></li>
+								<li><a href="#Methods">Methods to print exception information</a></li>
+								<li><a href="#multiple">Try with multiple catch blocks</a></li>
+								<li><a href="#Finally">Finally</a></li>
+								<li><a href="#difference">Difference between final, finally, finalize</a></li>
+								<li><a href="#flow">Control flow in try catch finally</a></li>
+								<li><a href="#nested">Control flow in nested try catch finally</a></li>
+								<li><a href="#combinations">Various possible combinations of try catch finally</a></li>
+								<li><a href="#throw">throw keyword</a></li>
+								<li><a href="#throws">throws keyword</a></li>
+								<li><a href="#keywords">Exception handling keywords summary</a></li>
+								<li><a href="#compileErrors">Various possible compile time errors in exception
+										handling</a></li>
+								<li><a href="#custExceptions">Customized exceptions</a></li>
+								<li><a href="#topten">Top-10 exceptions</a></li>
+
+								<li><a href="#17">1.7 Version Enhansements </a>
+									<ol>
+										<li><a href="#withr">try with resources</a></li>
+										<li><a href="#multic">multi catch block</a></li>
+									</ol>
+								</li>
+								<li><a href="#expro">Exception Propagation </a></li>
+								<li><a href="#rethrow">Rethrowing an Exception</a></li>
+
+
+
+							</ol>
+							<h2 id="intro" style="background-color: rgb(0, 64, 128);">
+								<font color="#ffff00">Introduction</font>
+							</h2>
+							<p>
+								<u><strong>Exception:</strong></u> An unwanted unexpected event that disturbs normal
+								flow of the program is called exception.
+							</p>
 							<p><span style="font-weight: 400;">Exceptions (and Errors) in our programs are common. Java
 									exceptions</span><span style="font-weight: 500;">&nbsp;can be caused by incorrect
 									syntax, faulty logic, incorrect user input, a server offline, a network issue, etc.
@@ -158,1314 +211,2195 @@
 									analyze the importance of each keyword. We’ll then discuss multiple facets of Java
 									exception handling, including the Exception Hierarchy in Java, how to throw an
 									exception in Java, custom exceptions in Java, and more.</span></p>
-							<hr>
-							<div class="tab-content tabs">
-								<div role="tabpanel" class="tab-pane fade in active" id="Interface">
-									<div id="Div1">
-										<h2 class="breadcrumb">Table of contents</h2>
-										<div id="articleLongDescription" class="tutorialContent">
-											<article id="post-16851" class="content"
-												itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
-												<div class="entry-content">
+							<strong><em>Example: </em></strong><br>
+							SleepingException <br>
+							TyrePunchuredException <br>
+							FileNotFoundException ...etc
 
-													<div class="toc-dropdown">
-														<div class="toc-panel">
-															<ul class="toc">
-																<ul class="toc-links">
-																	<ul>
-																		<li class=""><a
-																				href="#what-is-exception-handling-in-java">What
-																				is Exception Handling in Java?</a></li>
-																		<li class=""><a
-																				href="#what-is-an-exception">What is an
-																				Exception?</a>
-																			<ul>
-																				<li class=""><a href="#1-jvm">1. JVM</a>
-																				</li>
-																				<li class=""><a href="#2-developer">2.
-																						Developer</a></li>
-																			</ul>
-																		</li>
-																		<li class=""><a
-																				href="#java-exception-hierarchy">Java
-																				Exception Hierarchy</a></li>
-																		<li class=""><a
-																				href="#types-of-exception-in-java">Types
-																				of exception in Java</a></li>
-																		<li class=""><a
-																				href="#difference-between-checked-and-unchecked-exception">Difference
-																				between Checked and Unchecked
-																				Exception</a></li>
-																		<li class=""><a
-																				href="#java-exception-index">Java
-																				Exception Index</a></li>
-																		<li class=""><a
-																				href="#java-exception-keywords">Java
-																				Exception Keywords</a></li>
-																		<li class=""><a
-																				href="#java-try-catch-block">Java
-																				Try-Catch Block</a>
-																			<ul>
-																				<li class=""><a
-																						href="#compile-time-error">Compile
-																						Time Error:</a></li>
-																			</ul>
-																		</li>
-																		<li class=""><a
-																				href="#java-multiple-catch-block">Java
-																				Multiple Catch Block</a></li>
-																		<li class=""><a href="#java-nested-try">Java
-																				Nested Try</a></li>
-																		<li class=""><a href="#java-finally-block">Java
-																				Finally Block</a></li>
-																		<li class=""><a
-																				href="#java-final-vs-finally-vs-finalize">Java
-																				Final vs Finally vs Finalize</a></li>
-																		<li class=""><a href="#java-throw-keyword">Java
-																				Throw Keyword</a></li>
-																		<li class=""><a href="#java-throws-keyword">Java
-																				Throws Keyword</a></li>
-																		<li class=""><a
-																				href="#java-throw-vs-throws">Java Throw
-																				vs Throws</a></li>
-																		<li class=""><a
-																				href="#java-custom-exception">Java
-																				Custom Exception</a></li>
-																		<li class=""><a
-																				href="#exception-handling-in-java-with-method-overriding">Exception
-																				Handling in java with method
-																				overriding</a></li>
-																		<li class=""><a
-																				href="#advantages-and-disadvantages-of-exception-handling-in-java">Advantages
-																				and disadvantages of exception handling
-																				in java </a></li>
-																	</ul>
-																</ul>
-															</ul>
-														</div>
-													</div>
+							<ul>
+								<li>It is highly recommended to handle exceptions. The main objective of exception
+									handling is graceful (normal) termination of the program.</li>
+							</ul>
+							<u>
+								<font color="#ff0000"><strong>What is the meaning of exception handling?
+									</strong></font>
+							</u>
+							<p>Exception handling doesn't mean repairing an exception. We have to define alternative way
+								to continue rest of the program normally this way of "defining alternative is nothing
+								but exception handling".</p>
+
+							<p>
+								<strong><em><u>Example</u>:</em></strong> Suppose our programming requirement is to read
+								data from remote file locating at London at runtime if London file is not available our
+								program should not be terminated abnormally. <br>
+							</p>
+							<p>We have to provide a local file to continue rest of the program normally. This way of
+								defining alternative is nothing but exception handling.</p>
 
 
+							<pre>Example:
 
-
-													<p>Exception handling in java is one of the powerful mechanisms to
-														handle runtime errors caused by exceptions. Exception handling
-														plays an important role in software development. This article
-														helps you understand java exception, exception in java, java
-														exception handling, java exception hierarchy, types of exception
-														in java, and many more.</p>
-
-
-
-													<h2 class="wp-block-heading"
-														id="what-is-exception-handling-in-java"><strong><strong>
-																<br><br><br>
-																What is Exception Handling in Java?</strong></strong>
-													</h2>
-
-
-
-													<p>Exception handling in java helps in minimizing exceptions and
-														helps in recovering from exceptions. It is one of the powerful
-														mechanisms to handle runtime exceptions and makes it bug-free.
-														Exception handling helps in maintaining the flow of the program.
-														An exception handling is defined as an abnormal condition that
-														may happen at runtime and disturb the normal flow of the
-														program.</p>
-													<h2 class="wp-block-heading" id="what-is-an-exception">
-														<strong><br><br><br>What
-															is an Exception?</strong>
-													</h2>
-													<p>An expectation is an unexpected&nbsp;event that occurs while
-														executing the program, that disturbs the normal flow of the
-														code. </p>
-													<p><strong>Exception handling in java with an example:</strong></p>
-													<p>Let’s say,</p>
-													<pre class="wp-block-code"><code>statement
-statement
-statement
-exception ………… an exception occurred, then JVM will handle it and will exit the prog.
-statement
-statement
-statement</code></pre>
-													<p>For handling exceptions, there are<strong> 2 possible
-															approaches</strong></p>
-
-													<h3 class="wp-block-heading" id="1-jvm"><strong><br><br><br>1.
-															JVM</strong></h3>
-
-													<p>If an exception is not handled explicitly, then JVM takes the
-														responsibility of handling the exception.</p>
-
-													<p>Once the exception is handled, JVM will halt the program and no
-														more execution of code will take place</p>
-
-													<ul>
-														<li><strong>Example</strong>:</li>
-													</ul>
-
-													<pre class="wp-block-code"><code>import java.util.*;
-
-class Main {
-    public static void main (String[] args) {
-        System.out.println(5/0);
-        System.out.println("End of program!");
-	}
+Try
+{
+read data from london file
 }
-</code></pre>
-
-
-
-													<p><strong>Runtime Error:</strong></p>
-
-
-
-													<pre class="wp-block-preformatted"> Exception in thread "main" java.lang.ArithmeticException: / by zero
- at Main.main(File.java:5) </pre>
-
-
-
-													<h3 class="wp-block-heading" id="2-developer">
-														<strong><br><br><br>2</strong>.
-														<strong>Developer</strong>
-													</h3>
-
-
-
-													<p>Developers can explicitly write the implementation for handling
-														the exception. Once an exception is handled, the normal
-														execution of code will continue.</p>
-
-
-
-													<p><strong>Preferable</strong>: handle exceptions to ensure your
-														code gets executed normally.</p>
-
-
-
-													<h2 class="wp-block-heading" id="java-exception-hierarchy">
-														<strong><br><br><br>Java Exception Hierarchy</strong>
-													</h2>
-
-
-
-													<p><strong>Exception Hierarchy – </strong>Following is the Exception
-														Handling in Java handling hierarchy.<br></p>
-
-
-
-													<ul>
-														<li><strong>Throwable </strong>–
-															<ul>
-																<li>It is the root class for the exception hierarchy in
-																	java.&nbsp;</li>
-
-
-
-																<li>It is in the java.lang package.</li>
-															</ul>
-														</li>
-
-
-
-														<li><strong>Error</strong> –
-															<ul>
-																<li>Subclass of Throwable.</li>
-
-
-
-																<li>Consist of abnormal condition that is out of one’s
-																	control and depends on the environment</li>
-
-
-
-																<li>They can’t be handled and will always result in the
-																	halting of the program.</li>
-
-
-
-																<li>Eg: StackOverFlowError that can happen in infinite
-																	loop or recursion</li>
-															</ul>
-														</li>
-
-
-
-														<li><strong>Exception </strong>–
-															<ul>
-																<li>Subclass of Throwable.</li>
-
-
-
-																<li>Consist of abnormal conditions that can be handled
-																	explicitly.</li>
-
-
-
-																<li>If one handles the exception then our code will
-																	continue to execute smoothly.</li>
-															</ul>
-														</li>
-													</ul>
-
-
-
-													<h2 class="wp-block-heading" id="types-of-exception-in-java">
-														<strong><br><br><br>Types of exception in Java</strong>
-													</h2>
-
-
-
-													<ul>
-														<li><strong>Checked Exceptions</strong>
-															<ul>
-																<li>Those exceptions that are checked at compile-time
-																	comprises checked exceptions.</li>
-															</ul>
-															<ul>
-																<li>They are child classes of Exception except for
-																	RuntimeException.</li>
-															</ul>
-															<ul>
-																<li>The program will not compile if they are not
-																	handled.</li>
-															</ul>
-															<ul>
-																<li>Example: IOException, ClassNotFoundException, etc.
-																</li>
-															</ul>
-															<ul>
-																<li></li>
-															</ul>
-														</li>
-
-
-
-														<li><strong>Unchecked Exceptions</strong>
-															<ul>
-																<li>Those exceptions that are checked at runtime
-																	comprises unchecked exceptions.</li>
-															</ul>
-															<ul>
-																<li>They are child classes of RuntimeException.</li>
-															</ul>
-															<ul>
-																<li>They give runtime errors if not handled explicitly.
-																</li>
-															</ul>
-															<ul>
-																<li>Example: ArithmeticException, NullPointerException
-																	etc.</li>
-															</ul>
-														</li>
-													</ul>
-
-
-
-													<h2 class="wp-block-heading"
-														id="difference-between-checked-and-unchecked-exception">
-														<strong><br><br><br>Difference between Checked and Unchecked
-															Exception</strong>
-													</h2>
-
-
-
-													<figure class="wp-block-table">
-														<table>
-															<tbody>
-																<tr>
-																	<td><strong>Checked Exceptions</strong></td>
-																	<td><strong>Unchecked Exceptions</strong></td>
-																</tr>
-																<tr>
-																	<td>Occur at compile time.</td>
-																	<td>Occur at runtime.</td>
-																</tr>
-																<tr>
-																	<td>The compiler checks for a checked exception.
-																	</td>
-																	<td>The compiler doesn’t check for exceptions.</td>
-																</tr>
-																<tr>
-																	<td>Can be handled at the compilation time.</td>
-																	<td>Can’t be caught or handled during compilation
-																		time.</td>
-																</tr>
-																<tr>
-																	<td>The JVM requires that the exception be caught
-																		and handled.</td>
-																	<td>The JVM doesn’t require the exception to be
-																		caught and handled.</td>
-																</tr>
-																<tr>
-																	<td>Example of Checked exception- ‘File Not Found
-																		Exception’</td>
-																	<td>Example of Unchecked Exceptions- ‘No Such
-																		Element Exception’</td>
-																</tr>
-															</tbody>
-														</table>
-													</figure>
-
-
-
-													<h2 class="wp-block-heading" id="java-exception-index">
-														<strong><br><br><br>Java
-															Exception Index</strong>
-													</h2>
-
-
-
-													<h2 class="wp-block-heading" id="java-exception-keywords">
-														<strong><br><br><br>Java Exception Keywords</strong>
-													</h2>
-
-
-
-													<p>Exception Handling in java is managed via five keywords: try,
-														catch, throw, throws, and finally. Here are 5 keywords that are
-														used in handling exceptions in Java</p>
-
-
-
-													<figure class="wp-block-table">
-														<table>
-															<tbody>
-																<tr>
-																	<td><strong>Keyword</strong></td>
-																	<td><strong>Description</strong></td>
-																</tr>
-																<tr>
-																	<td>try</td>
-																	<td>This keyword is used to specify a block and this
-																		block must be followed by either catch or
-																		finally. That is, we can’t use try block alone.
-																	</td>
-																</tr>
-																<tr>
-																	<td>catch</td>
-																	<td>This keyword must be preceded by a try block to
-																		handle the exception and can be followed by a
-																		final block later.</td>
-																</tr>
-																<tr>
-																	<td>finally</td>
-																	<td>This keyword is used to execute the program,
-																		whether an exception is handled or not.</td>
-																</tr>
-																<tr>
-																	<td>throw</td>
-																	<td>This keyword is used to throw an exception.</td>
-																</tr>
-																<tr>
-																	<td>throws</td>
-																	<td>This keyword is used to declare exceptions.</td>
-																</tr>
-															</tbody>
-														</table>
-													</figure>
-
-
-
-													<h2 class="wp-block-heading" id="java-try-catch-block">
-														<strong><br><br><br>Java
-															Try-Catch Block</strong>
-													</h2>
-
-
-
-													<p>Try-catch syntax:</p>
-
-
-
-													<pre class="wp-block-code"><code>try{
+catch(FileNotFoundException e)
+{
+use local file and continue rest of the program normally
+}
+}
+.
+.
+.
+</pre>
+
+							<h2 id="stackMech" style="background-color: rgb(0, 0, 255);">
+								<font color="#ffff00">Runtime stack mechanism:</font>
+							</h2>
+
+							<p> For every thread JVM will create a separate stack all method calls performed by the
+								thread will be stored in that stack. Each entry in the stack is called "one activation
+								record" (or) "stack frame".</p>
+							<p> After completing every method call JVM removes the corresponding entry from the stack.
+								<br>
+							</p>
+							<p>After completing all method calls JVM destroys the empty stack and terminates the program
+								normally.</p>
+
+							<pre>Example:
+
+class Test
+{
+public static void main(String[] args){
+doStuff();
+}
+public static void doStuff(){
+doMoreStuff();
+}
+public static void doMoreStuff(){
+System.out.println("Hello");
+}}
+Output:
+Hello
+
+</pre>
+
+							<em><u><strong>Diagram:</strong></u></em>
+
+							<br><br><img alt="" src="excep/image001.png" width="933" height="213"><br><br>
+
+							<br>
+							<h2 id="exception" style="background-color: rgb(0, 128, 0);">
+								<font color="#ffff00">Default exception handling in java:</font>
+							</h2> If an exception raised inside any method then the method is responsible to create
+							Exception object with the following information.
+							<ol>
+								<li>Name of the exception.</li>
+								<li>Description of the exception.</li>
+								<li>Location of the exception.(StackTrace)</li>
+								<li>After creating that Exception object the method handovers that object to the JVM.
+								</li>
+								<li>JVM checks whether the method contains any exception handling code or not. If method
+									won't contain any handling code then JVM terminates that method abnormally and
+									removes corresponding entry form the stack.</li>
+								<li>JVM identifies the caller method and checks whether the caller method contain any
+									handling code or not. If the caller method also does not contain handling code then
+									JVM terminates that caller also abnormally and the removes corresponding entry from
+									the stack.</li>
+								<li>This process will be continued until main() method and if the main() method also
+									doesn't contain any exception handling code then JVM terminates main() method and
+									removes corresponding entry from the stack.</li>
+								<li>Then JVM handovers the responsibility of exception handling to the default exception
+									handler.</li>
+								<li>Default exception handler just print exception information to the console in the
+									following formats and terminates the program abnormally.<br>
+									<strong><em>Name of exception: description </em></strong><br>
+									<strong><em>Location of exception (stack trace) </em></strong>
+								</li>
+							</ol>
+
+							<pre>Example:
+
+class Test
+{
+public static void main(String[] args){
+doStuff();
+}
+public static void doStuff(){
+doMoreStuff();
+}
+public static void doMoreStuff(){
+System.out.println(10/0);
+}}
+Output:
+Runtime error
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at Test.doMoreStuff(Test.java:10)
+        at Test.doStuff(Test.java:7)
+        at Test.main(Test.java:4)
+</pre>
+
+							Diagram:<br><br><img alt="" src="excep/image002.png"><br><br>
+
+							<h3 id="hierarchy" style="background-color: rgb(128, 128, 255);">
+								<font color="#ffff00">Exception hierarchy:</font>
+							</h3>
+							<br><br><img alt="" src="excep/image003.png"><br><br>
+							Throwable acts as a root for exception hierarchy. <br>
+							Throwable class contains the following two child classes.
+
+							<br><br><img alt="" src="excep/image004.png"><br><br>
+
+							<p>
+								<font color="#008080"><u><strong>Exception:</strong></u></font> <br>Most of the cases
+								exceptions are caused by our program and these are recoverable. <br>
+
+								<b>Ex :</b> If FileNotFoundException occurs we can use local file and we can continue
+								rest of the program execution normally.
+
+								<br> <br>
+
+
+								<font color="#800000"><u><strong>Error:</strong></u></font><br> Most of the cases errors
+								are not caused by our program these are due to lack of system resources and these are
+								non recoverable.
+								<br>
+
+								<b>Ex : </b>
+								If OutOfMemoryError occurs being a programmer we can't do anything the program will be
+								terminated abnormally.<br>
+								System Admin or Server Admin is responsible to raise/increase heap memory.
+								<br>
+
+							</p>
+
+							<h2><u>
+									<font color="#8000ff">Checked Vs Unchecked Exceptions:</font>
+								</u></h2>
+							<ul>
+								<li>The exceptions which are checked by the compiler for smooth execution of the program
+									at runtime are called checked exceptions.
+									<ol>
+										<li>HallTicketMissingException</li>
+										<li>PenNotWorkingException</li>
+										<li>FileNotFoundException</li>
+									</ol>
+								</li>
+								<li>The exceptions which are not checked by the compiler are called unchecked
+									exceptions.
+									<ol>
+										<li>BombBlaustException</li>
+										<li>ArithmeticException</li>
+										<li>NullPointerException</li>
+									</ol>
+								</li>
+							</ul>
+
+							<p>
+								<u><strong>Note:</strong></u> RuntimeException and its child classes, Error and its
+								child classes are unchecked and all the remaining are considered as checked
+								exceptions.<br>
+								<u><strong>Note:</strong></u> Whether exception is checked or unchecked compulsory it
+								should occur at runtime only there is no chance of occurring any exception at compile
+								time.
+							</p>
+
+							<h3><u>
+									<font color="#800040">Partially checked Vs fully checked : </font>
+								</u></h3>
+							A checked exception is said to be fully checked if and only if all its child classes are
+							also checked.
+							<br>
+							<u><strong>Example: </strong></u><br>
+							1) IOException <br>
+							2) InterruptedException
+
+							<p> A checked exception is said to be partially checked if and only if some of its child
+								classes are unchecked.</p>
+
+							<u><strong>Example:
+								</strong></u><br>
+							Exception
+							The only partially checked exceptions available in java are:
+							<ol>
+								<li> Throwable.</li>
+								<li> Exception.</li>
+							</ol>
+
+
+
+							<font color="#ff0000"><u><strong>Which of the following are checked?
+									</strong></u></font>
+							<ol>
+								<li>RuntimeException-----unchecked</li>
+								<li> Error-----unchecked</li>
+								<li> IOException-----fully checked</li>
+								<li> Exception-----partially checked</li>
+								<li> InterruptedException-----fully checked</li>
+								<li> Throwable------partially checked</li>
+								<li>ArithmeticException ----- unchecked</li>
+								<li>NullPointerException ------ unchecked</li>
+								<li>FileNotFoundException ----- fully checked </li>
+							</ol>
+
+
+
+							<u><em>Diagram: <br><br><img alt="" src="excep/image005.png" width="969"
+										height="840"><br><br>
+
+
+								</em></u>
+							<h3 id="Customized" style="background-color: rgb(255, 128, 0);">
+								<font color="#ffff00">Customized exception handling by try catch:</font>
+							</h3>
+							<ul>
+								<li>It is highly recommended to handle exceptions.</li>
+								<li>In our program the code which may cause an exception is called risky code, we have
+									to place risky code inside try block and the corresponding handling code inside
+									catch block.</li>
+							</ul>
+
+							<pre>Example:
+
+Try
+{
+risky code
+}
+catch(Exception e)
+{
+handling code
+}
+</pre>
+
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<th>Without try catch</th>
+										<th>With try catch</th>
+									</tr>
+									<tr>
+										<td>
+											<pre>class Test
+{
+public static void main(String[] args){
+System.out.println("statement1");
+System.out.println(10/0);
+System.out.println("statement3");
+}
+}
+output:
+statement1
+RE:AE:/by zero
+at Test.main()
+
+Abnormal termination.
+</pre>
+										</td>
+										<td>
+											<pre>class Test{
+public static void main(String[] args){
+System.out.println("statement1");
+try{
+System.out.println(10/0);
+}
+catch(ArithmeticException e){
+System.out.println(10/2);
+}
+System.out.println("statement3");
+}}
+Output:
+statement1
+5
+statement3
+
+Normal termination.
+</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<h3 id="Control" style="background-color: rgb(0, 128, 192);">
+								<font color="#ffff00">Control flow in try catch:</font>
+							</h3>
+
+							<pre>try{
+statement1;
+statement2;
+statement3;
+}
+catch(X e) {
+statement4;
+}
+statement5;
+</pre>
+							<ul>
+								<li>
+									<strong>
+										<font color="#8080ff">Case 1:</font>
+									</strong> There is no exception. <br>
+									1, 2, 3, 5 normal termination.
+								</li>
+								<li><strong>
+										<font color="#800040">
+											Case 2:</font>
+									</strong> if an exception raised at statement 2 and corresponding catch block
+									matched 1, 4, 5 normal termination.</li>
+								<li><strong>
+										<font color="#0080ff">Case 3</font>
+									</strong>: if an exception raised at statement 2 but the corresponding catch block
+									not matched , 1 followed by abnormal termination.</li>
+								<li><strong>
+										<font color="#008000">Case 4:</font>
+									</strong> if an exception raised at statement 4 or statement 5 then it's always
+									abnormal termination of the program.</li>
+							</ul>
+							<strong><em><u>Note: </u></em></strong>
+							<ol>
+								<li>Within the try block if anywhere an exception raised then rest of the try block
+									won't be executed even though we handled that exception. Hence we have to place/take
+									only risk code inside try and length of the try block should be as less as possible.
+								</li>
+								<li>If any statement which raises an exception and it is not part of any try block then
+									it is always abnormal termination of the program.</li>
+								<li>There may be a chance of raising an exception inside catch and finally blocks also
+									in addition to try block.</li>
+							</ol>
+
+							<h3 id="Methods" style="background-color: rgb(128, 128, 128);">
+								<font color="#ffff00">Various methods to print exception information:</font>
+							</h3>
+							Throwable class defines the following methods to print exception information to the console.
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<td>
+
+											<font color="#0000ff"><strong>printStackTrace():</strong></font>
+										</td>
+										<td> This method prints exception information in the following format. <br><b>
+												Name of the exception: description of exception <br>
+												Stack trace</b></td>
+									</tr>
+
+									<tr>
+										<td>
+											<font color="#800040"><strong>toString():</strong></font>
+										</td>
+										<td> This method prints exception information in the following format. <br><b>
+												Name of the exception: description of exception</b>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<strong>
+												<font color="#008080">getMessage():</font>
+											</strong>
+										</td>
+										<td> This method returns only description of the exception. <br>
+											<b>Description.</b>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+
+
+
+
+							<u><strong>Example:
+								</strong></u>
+							<br><br><img alt="" src="excep/image006.png"><br><br>
+
+							<p>
+								<font color="#8080ff"><u><strong>Note:</strong></u></font> Default exception handler
+								internally uses printStackTrace() method to print exception information to the console.
+							</p>
+
+							<h2 id="multiple">
+								<font color="#800040" style="background-color: rgb(192, 192, 192);"><u><strong>Try with
+											multiple catch blocks:</strong></u></font> <br>
+							</h2>
+
+							<p>The way of handling an exception is varied from exception to exception hence for every
+								exception raise a separate catch block is required that is try with multiple catch
+								blocks is possible and recommended to use.
+							</p>
+							<strong>Example:</strong>
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<td>
+											<pre>
+try
+{
+.
+.
+.
+.
+}
+catch(Exception e)
+{
+default handler
+}
+</pre>
+
+
+										</td>
+										<td>
+											<pre>try
+{
+.
+.
+.
+.
+catch(FileNotFoundException e)
+{
+use local file
+}
+catch(ArithmeticException e)
+{
+perform these Arithmetic operations
+}
+catch(SQLException e)
+{
+don't use oracle db, use mysql db
+}
+catch(Exception e)
+{
+default handler
+}
+</pre>
+
+
+										</td>
+									</tr>
+
+									<tr>
+										<td>This approach is not recommended<br> because for any type of Exception
+											<br>we are using the same catch block.
+										</td>
+										<td>This approach is highly recommended<br> because for any exception raise<br>
+											we are defining a separate catch block.</td>
+									</tr>
+
+								</tbody>
+							</table>
+							<ul>
+								<li>If try with multiple catch blocks presents then order of catch blocks is very
+									important it should be from child to parent by mistake if we are taking from parent
+									to child then we will get Compile time error saying "exception xxx has already been
+									caught".</li>
+							</ul>
+							<strong>Example:</strong>
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<td>
+											<pre>
+class Test
+{
+public static void main(String[] args)
+{
+try
+{
+System.out.println(10/0);
+}
+catch(Exception e)
+{
+e.printStackTrace();
+}
+catch(ArithmeticException e)
+{
+e.printStackTrace();
+}}}
+Output:
+Compile time error.
+Test.java:13: exception 
+java.lang.ArithmeticException  has already
+been caught catch(ArithmeticException e)
+</pre>
+										</td>
+										<td>
+											<pre>class Test
+{
+public static void main(String[] args)
+{
+try
+{
+System.out.println(10/0);
+}
+catch(ArithmeticException e)
+{
+e.printStackTrace();
+}
+catch(Exception e)
+{
+e.printStackTrace();
+}}}
+Output:
+Compile successfully.
+</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<h3 id="Finally" style="background-color: rgb(0, 128, 128);">
+								<font color="#ffff00">Finally block:</font>
+							</h3>
+							<ul>
+								<li>It is never recommended to take clean up code inside try block because there is no
+									guarantee for the execution of every statement inside a try.</li>
+								<li>It is never recommended to place clean up code inside catch block because if there
+									is no exception then catch block won't be executed.</li>
+								<li>We require some place to maintain clean up code which should be executed always
+									irrespective of whether exception raised or not raised and whether handled or not
+									handled such type of place is nothing but finally block.</li>
+								<li>Hence the main objective of finally block is to maintain cleanup code.</li>
+							</ul>
+
+							<pre>Example:
+
+Try
+{
+risky code
+}
+catch(x e)
+{
+handling code
+}
+finally
+{
+cleanup code
+}
+</pre>
+
+							The speciality of finally block is it will be executed always irrespective of whether the
+							exception raised or not raised and whether handled or not handled.
+
+							<pre>Example 1:
+
+class Test
+{
+public static void main(String[] args)
+{
+try
+{
+System.out.println("try block executed");
+}
+catch(ArithmeticException e)
+{
+System.out.println("catch block executed");
+}
+finally
+{
+System.out.println("finally block executed");
+}}}
+Output:
+Try block executed
+Finally block executed
+</pre>
+
+							<pre>Example 2:
+class Test
+{
+public static void main(String[] args)
+{
+try
+{
+System.out.println("try block executed");
+System.out.println(10/0);
+}
+catch(ArithmeticException e)
+{
+System.out.println("catch block executed");
+}
+finally
+{
+System.out.println("finally block executed");
+}}}
+Output:
+Try block executed
+Catch block executed
+Finally block executed
+</pre>
+
+							<pre>Example 3:
+class Test
+{
+public static void main(String[] args)
+{
+try
+{
+System.out.println("try block executed");
+System.out.println(10/0);
+}
+catch(NullPointerException e)
+{
+System.out.println("catch block executed");
+}
+finally
+{
+System.out.println("finally block executed");
+}}}
+Output:
+Try block executed
+Finally block executed
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at Test.main(Test.java:8)
+        
+</pre>
+
+
+							<h3>
+								<font color="#0000ff"><u>Return Vs Finally:</u></font>
+							</h3>
+							Even though return present in try or catch blocks first finally will be executed and after
+							that only return statement will be considered that is finally block dominates return
+							statement.
+
+
+							<pre>Example:
+
+class Test
+{
+public static void main(String[] args)
+{
+try
+{
+System.out.println("try block executed");
+return;
+}
+catch(ArithmeticException e)
+{
+System.out.println("catch block executed");
+}
+finally
+{
+System.out.println("finally block executed");
+}}}
+Output:
+Try block executed
+Finally block executed
+</pre>
+
+							If return statement present try catch and finally blocks then finally block return statement
+							will be considered.
+
+							<pre>Example:
+
+class Test
+{
+public static void main(String[] args)
+{
+System.out.println(methodOne());
+}
+public static int methodOne(){
+try
+{
+System.out.println(10/0);
+return 777;
+}
+catch(ArithmeticException e)
+{
+return 888;
+}
+finally{
+return 999;
+}}}
+Output:
+999
+</pre>
+
+
+							There is only one situation where the finally block won't be executed is whenever we are
+							using <strong>System.exit(0)</strong> method. <br> Then JVM itself will be shutdown , in
+							this case finally block won't be executed. <br> i.e., <b>System.exit(0);</b> dominates
+							finally block.
+
+
+							<pre>Example:
+class Test
+{
+public static void main(String[] args)
+{
+try
+{
+System.out.println("try");
+System.exit(0);
+}
+catch(ArithmeticException e)
+{
+System.out.println("catch block executed");
+}
+finally
+{
+System.out.println("finally block executed");
+}}}
+Output:
+Try
+</pre>
+							<p><u>Note :</u> <br>
+								<b>System.exit(0);</b>
+								<br>insteadof zero, we can take any integer value <br>
+								zero means normal termination , non-zero means abnormal termination
+								<br>
+								this status code internally used by JVM, whether it is zero or non-zero there is no
+								change in the result and effect is same
+
+							</p>
+							<h3 id="difference" style="background-color: rgb(128, 0, 128);">
+								<font color="#ffff00">Difference between final, finally, and finalize:</font>
+							</h3>
+							<u>
+								<font color="#0000ff"><strong>Final:
+									</strong></font>
+							</u>
+							<ul>
+								<li>Final is the modifier applicable for class, methods and variables.</li>
+								<li>If a class declared as the final then child class creation is not possible.</li>
+								<li>If a method declared as the final then overriding of that method is not possible.
+								</li>
+								<li>If a variable declared as the final then reassignment is not possible.</li>
+							</ul>
+							<u>
+								<font color="#008000"><strong>Finally:
+									</strong></font>
+							</u>
+							<ul>
+								<li>It is the block always associated with try catch to maintain clean up code which
+									should be executed always irrespective of whether exception raised or not raised and
+									whether handled or not handled.</li>
+							</ul>
+							<font color="#800040"><u><strong>Finalize:
+									</strong></u></font>
+							<ul>
+								<li>It is a method which should be called by garbage collector always just before
+									destroying an object to perform cleanup activities.</li>
+							</ul>
+							<font color="#804000"><u><strong>Note:
+									</strong></u></font>
+							<p> To maintain clean up code faunally block is recommended over finalize() method because
+								we can't expect exact behavior of GC.</p>
+
+							<h3 id="flow" style="background-color: rgb(128, 128, 255);">
+								<font color="#ffff00">Control flow in try catch finally:</font>
+							</h3>
+							<pre>Example:
+class Test
+{
+public static void main(String[] args){
+try{
+System.out.println("statement1");
+System.out.println("statement2");
+System.out.println("statement3");
 }
 catch(Exception e){
-}</code></pre>
-
-
-
-													<ul>
-														<li><strong>Try-catch Example:</strong></li>
-													</ul>
-
-
-
-													<pre class="wp-block-code"><code>public class ExceptionDemo {
-	public static void main (String[] args) {
-		int a=10;
-		for(int i=3;i&gt;=0;i--)
-		   try{
-		     System.out.println(a/i);  
-		   }catch(ArithmeticException e){
-		       System.out.println(e);
-		   }
-	}
+System.out.println("statement4");
 }
-</code></pre>
-
-
-
-													<h4 class="wp-block-heading" id="output">Output:</h4>
-
-
-
-													<pre class="wp-block-preformatted">3
-5
-10
-java.lang.ArithmeticException: / by zero </pre>
-
-
-
-													<ul>
-														<li><strong>try </strong>block contains the code that might
-															throw an exception. Don’t write anything extra in try as
-															statements after the exception will not get executed if the
-															exception occurred. Try must be immediately followed by
-															catch or finally block.</li>
-													</ul>
-
-
-
-													<pre class="wp-block-code"><code>public class ExceptionDemo {
-	public static void main (String[] args) {
-		int a=10;
-		for(int i=3;i&gt;=0;i--)
-		   try{
-		     System.out.println(a/i);  
-		   }
-	}
+finally
+{
+System.out.println("statement5");
 }
-</code></pre>
-
-
-
-													<p><strong>Compile-time error:</strong></p>
-
-
-
-													<pre class="wp-block-preformatted">prog.java:5: error: 'try' without 'catch', 'finally' or resource declarations
-  &nbsp; try{
-  &nbsp; ^
-1 error </pre>
-
-
-
-													<ul>
-														<li>The catch block is used to catch the exception thrown by
-															statements in the try block. The catch must follow try else
-															it will give a compile-time error.</li>
-													</ul>
-
-
-
-													<pre class="wp-block-code"><code>public class ExceptionDemo {
-	public static void main (String[] args) {
-		int a=10;
-		for(int i=3;i&gt;=0;i--)
-		   try{
-		     System.out.println(a/i);  
-		   }
-		   System.out.println("between try and catch");
-		   catch(ArithmeticException e){
-		       System.out.println(e);
-		   }
-	}
+System.out.println("statement6");
 }
-
-</code></pre>
-
-
-
-													<h3 class="wp-block-heading" id="compile-time-error">
-														<strong><br><br><br>Compile
-															Time Error:</strong>
-													</h3>
-
-
-
-													<pre class="wp-block-preformatted">prog.java:5: error: 'try' without 'catch', 'finally' or resource declarations
-  &nbsp; try{
-  &nbsp; ^
-prog.java:9: error: 'catch' without 'try'
-  &nbsp; catch(ArithmeticException e){
-  &nbsp; ^
-2 errors </pre>
-
-
-
-													<h4 class="wp-block-heading" id="things-to-remember"><strong>Things
-															to Remember:</strong></h4>
-
-
-
-													<p>Do not keep any code after the statement which is prone to
-														exception. Because if an exception occurred, it will straight
-														away jump to the catch or finally block, ignoring all other
-														statements in the try block.</p>
-
-
-
-													<pre class="wp-block-code"><code>class Main {
-	public static void main (String[] args) {
-         try
-       {
-             System.out.println(4/0);
-	 //will not get printed
-             System.out.println("end of try!");
-        }
-catch(ArithmeticException e)
-        {
-            System.out.println("divide by 0");
-        }
-    }
 }
-</code></pre>
-
-
-
-													<h4 class="wp-block-heading" id="output">Output:</h4>
-
-
-
-													<pre class="wp-block-preformatted">divide by 0</pre>
-
-
-
-													<ul>
-														<li>While catching the exception in the catch block, either you
-															can have directly the class of exception or its superclass.
-														</li>
-													</ul>
-
-
-
-													<p><strong>Example: Exact Exception</strong></p>
-
-
-
-													<pre class="wp-block-code"><code>class Main {
-	public static void main (String[] args) {
-        try{
-            System.out.println(4/0);
-           }
-      
-        //ArithmeticException 
-        catch(ArithmeticException e){
-            System.out.println("divide by 0");
-        }
-    }
-}
-</code></pre>
-
-
-
-													<p><strong>Output:</strong></p>
-
-
-
-													<pre class="wp-block-preformatted">divide by 0</pre>
-
-
-
-													<p><strong>Example: Superclass of Exact Exception</strong></p>
-
-
-
-													<pre class="wp-block-code"><code>class Main {
-	public static void main (String[] args) {
-        try{
-            System.out.println(4/0);
-           }
-      
-        //superclass of ArithmeticException 
-        catch(Exception e){
-            System.out.println("divide by 0");
-        }
-     }
-}
-</code></pre>
-
-
-
-													<p><strong>Output</strong>:</p>
-
-
-
-													<pre class="wp-block-preformatted">divide by 0</pre>
-
-
-
-													<h2 class="wp-block-heading" id="java-multiple-catch-block">
-														<strong><br><br><br>Java Multiple Catch Block</strong>
-													</h2>
-
-
-
-													<p>If you have multiple catches, you have to maintain the hierarchy
-														from subclass to superclass.</p>
-
-
-
-													<p><strong>Incorrect:</strong></p>
-
-
-
-													<pre class="wp-block-code"><code>class Main {
-	public static void main (String[] args) {
-        try{
-            System.out.println(4/0);
-        }catch(Exception e)
-        {
-            System.out.println("Exception : divide by 0");
-        }catch(ArithmeticException e)
-        {
-            System.out.println("ArithmeticException :divide by 0");
-        }
-	}
-}
-</code></pre>
-
-
-
-													<p><strong>Compile-time error:</strong></p>
-
-
-
-													<pre class="wp-block-preformatted"> prog.java:11: error: exception ArithmeticException has already been caught
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}catch(ArithmeticException e)
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^
-1 error </pre>
-
-
-
-													<p><strong>Correct:</strong></p>
-
-
-
-													<pre class="wp-block-code"><code>class Main {
-	public static void main (String[] args) {
-        try{
-            System.out.println(4/0);
-        }catch(ArithmeticException e)
-        {
-            System.out.println("ArithmeticException : divide by 0");
-        }catch(Exception e)
-        {
-            System.out.println("Exception : divide by 0");
-        }
-   }
-}
-</code></pre>
-
-
-
-													<p><strong>Output:</strong></p>
-
-
-
-													<pre
-														class="wp-block-preformatted">ArithmeticException: Divide by 0</pre>
-
-
-
-													<h2 class="wp-block-heading" id="java-nested-try">
-														<strong><br><br><br>Java
-															Nested Try</strong>
-													</h2>
-
-
-
-													<p>When there is another try block within the try block: </p>
-
-
-
-													<pre class="wp-block-code"><code>class Main {
-	public static void main (String[] args) {
-        try{
-                try{
-                    int[] a={1,2,3};
-                    System.out.println(a[3]);
-                }
-   catch(ArrayIndexOutOfBoundsException e)
-                {
-                    System.out.println("Out of bounds");
-                }
-              System.out.println(4/0);
-        }
-       catch(ArithmeticException e)
-        {
-            System.out.println("ArithmeticException : divide by 0");
-        }
-	}
-    }
-</code></pre>
-
-
-
-													<p><strong>Output:</strong></p>
-
-
-
-													<pre class="wp-block-preformatted">Out of bounds
-ArithmeticException: Divide by 0 </pre>
-
-
-
-													<p><strong>Note – If we put code of outer try before inner try, then
-															if an exception occurred, it will ignore the entire inner
-															try and move directly to its catch block.</strong></p>
-
-
-
-													<pre class="wp-block-code"><code>class Main {
-	public static void main (String[] args) {
-        try{
-               System.out.println(4/0);
-               try{
-                    int[] a={1,2,3};
-                    System.out.println(a[3]);
-                }
-   catch(ArrayIndexOutOfBoundsException e)
-                {
-                    System.out.println("Out of bounds");
-                }
-        }
-       catch(ArithmeticException e)
-        {
-            System.out.println("ArithmeticException : divide by 0");
-        }
-	}
-    }
-</code></pre>
-
-
-
-													<p><strong>Output:</strong></p>
-
-
-
-													<pre
-														class="wp-block-preformatted">ArithmeticException: Divide by 0</pre>
-
-
-
-													<h2 class="wp-block-heading" id="java-finally-block">
-														<strong><br><br><br>Java
-															Finally Block</strong>
-													</h2>
-
-
-
-													<p>Contains code that must be executed no matter if an exception is
-														thrown or not. It contains code of file release, closing
-														connections, etc.</p>
-
-
-
-													<ul>
-														<li><strong>Example:</strong></li>
-													</ul>
-
-
-
-													<pre class="wp-block-code"><code>class Main {
-	public static void main (String[] args) {
-        try{
-            System.out.println(4/0);
-        }catch(Exception e)
-        {
-            System.out.println(e);       
-        }
-        finally
-        {
-            System.out.println("finally executed");
-        }
-        
-       	        System.out.println("end");
-	}
-}
-</code></pre>
-
-
-
-													<p><strong>Output:</strong></p>
-
-
-
-													<pre class="wp-block-preformatted">java.lang.ArithmeticException: / by zero
-finally executed
-end </pre>
-
-
-
-													<p>Finally, will execute even when we do not handle exceptions.
-														Before halting the program, JVM checks if there is a “finally”
-														block.</p>
-
-
-
-													<pre class="wp-block-code"><code>class Main {
-	public static void main (String[] args) {
-        try{
-            System.out.println(4/0);
-            
-        }finally
-        {
-            System.out.println("cleaning.......");
-        }
-	}
-}
-
-</code></pre>
-
-
-
-													<p><strong>Runtime Error:</strong></p>
-
-
-
-													<pre class="wp-block-preformatted"> Exception in thread "main" java.lang.ArithmeticException: / by zero
- at Main.main(File.java:4) </pre>
-
-
-
-													<p><strong>Output:</strong></p>
-
-
-
-													<pre class="wp-block-preformatted">cleaning.......</pre>
-
-
-
-													<h2 class="wp-block-heading" id="java-final-vs-finally-vs-finalize">
-														<strong><br><br><br>Java Final vs Finally vs Finalize</strong>
-													</h2>
-
-
-
-													<figure class="wp-block-table">
-														<table>
-															<tbody>
-																<tr>
-																	<td><strong>Final</strong></td>
-																	<td><strong>Finally</strong></td>
-																	<td><strong>Finalize</strong></td>
-																</tr>
-																<tr>
-																	<td>Final is used to apply restrictions on class,
-																		method, and variable</td>
-																	<td>Finally is used in coding, it will be executed
-																		whether an exception is handled or not.</td>
-																	<td>Finalize is used to perform clean-up processing
-																		before garbage is collected.</td>
-																</tr>
-																<tr>
-																	<td>Final is a keyword in java</td>
-																	<td>Finally is a block in java</td>
-																	<td>Finalize is a method in java</td>
-																</tr>
-																<tr>
-																	<td>Final is executed upon its call.</td>
-																	<td>Finally executes after”try-catch” block.</td>
-																	<td>finalize executes just before the destruction of
-																		the object.</td>
-																</tr>
-															</tbody>
-														</table>
-													</figure>
-
-
-
-													<h2 class="wp-block-heading" id="java-throw-keyword">
-														<strong><br><br><br>Java
-															Throw Keyword</strong>
-													</h2>
-
-
-
-													<p>It is a keyword that is used to explicitly throw an exception.
-													</p>
-
-
-
-													<p>We can use throw where according to our logic an exception should
-														occur. </p>
-
-
-
-													<p><strong>Example</strong>:</p>
-													<pre class="wp-block-code"><code>public class ExceptionDemo {
-	static void canVote(int age){
-		if(age&lt;18)
-            try{
-                throw new Exception();
-            }catch(Exception e){
-                System.out.println("you are not an adult!");
-            }
-		else
-		   System.out.println("you can vote!");
-	}
-	public static void main (String[] args) {
-		canVote(20);
-		canVote(10);
-	}
-}
-
-</code></pre>
-													<p><strong>Output:</strong></p>
-													<pre class="wp-block-preformatted">you can vote!
-you are not an adult! </pre>
-													<h2 class="wp-block-heading" id="java-throws-keyword">
-														<strong><br><br><br>Java
-															Throws Keyword</strong>
-													</h2>
-													<ul>
-														<li>Throws keyword is used when callee doesn’t want to handle
-															the exception rather it wants to extend this responsibility
-															of handling the exception to the caller of the function.
-														</li>
-														<li>Basically says what sort of exception the code can throw and
-															relies on the caller to handle it.</li>
-														<li>It is used to handle checked Exceptions as the compiler will
-															not allow code to compile until they are handled.</li>
-													</ul>
-													<p><strong>Example:</strong></p>
-													<pre class="wp-block-code"><code>public class ExceptionDemo {
-	static void func(int a) throws Exception{
-		   System.out.println(10/a);  
-	}
-	public static void main (String[] args) {
-		try{
-		    func(10);
-		    func(0);
-		}catch(Exception e){
-		   System.out.println("can't divide by zero");
-		}
-	
-	}
-}
-</code></pre>
-													<p><strong>Output:</strong></p>
-													<pre class="wp-block-preformatted">1
-can't divide by zero </pre>
-													<p>If callee can throw multiple exceptions, then all will be thrown
-														simultaneously.</p>
-													<pre class="wp-block-code"><code>import java.util.*;
-
-public class ExceptionDemo {
-	static void func(int a,int b) throws ArithmeticException, ArrayIndexOutOfBoundsException{
-		   System.out.println(10/a); 
-		   int[] arr={1,2,3};
-		   System.out.println(arr[b]);
-	}
-	public static void main (String[] args) {
-		Scanner in=new Scanner(System.in);
-		for(int i=0;i&lt;3;i++){
-		try{
-		    func(in.nextInt(),in.nextInt());
-    		}catch(ArithmeticException e){
-    		   System.out.println("can't divide by zero");
-    		}catch(ArrayIndexOutOfBoundsException e){
-    		   System.out.println("Out of bounds!");
-    		}
-		     }
-		
-	}
-   }
-</code></pre>
-
-
-
-													<p><strong>Input:</strong></p>
-
-
-
-													<pre class="wp-block-preformatted">2 1 0 1 2 3 </pre>
-													<p><strong>Output:</strong></p>
-													<pre class="wp-block-preformatted">5
-2
-can't divide by zero
-5
-Out of bounds! </pre>
-													<h2 class="wp-block-heading" id="java-throw-vs-throws">
-														<strong><br><br><br>Java
-															Throw vs Throws</strong>
-													</h2>
-													<figure class="wp-block-table">
-														<table
-															style="margin-left: 0px; margin-right: 0px; text-align: left;">
-															<tbody>
-																<tr>
-																	<td><strong>Throw</strong></td>
-																	<td><strong>Throws</strong></td>
-																</tr>
-																<tr>
-																	<td>This keyword is used to explicitly throw an
-																		exception.</td>
-																	<td>This keyword is used to declare an exception.
-																	</td>
-																</tr>
-																<tr>
-																	<td>A checked exception cannot be propagated with
-																		throw only.</td>
-																	<td>A checked exception can be propagated with
-																		throws.</td>
-																</tr>
-																<tr>
-																	<td>The throw is followed by an instance and used
-																		with a method</td>
-																	<td>Throws are followed by class and used with the
-																		method signature.</td>
-																</tr>
-																<tr>
-																	<td>You cannot throw multiple exceptions.</td>
-																	<td>You can declare multiple exceptions</td>
-																</tr>
-															</tbody>
-														</table>
-													</figure>
-													<h2 class="wp-block-heading" id="java-custom-exception">
-														<strong><br><br><br>Java
-															Custom Exception</strong>
-													</h2>
-													<p>You can create your own exception and give implementation as to
-														how it should behave. Your exception will behave like a child’s
-														class of Exception.</p>
-													<h4 class="wp-block-heading" id="syntax"><strong>Syntax</strong>:
-													</h4>
-													<div class="wp-block-syntaxhighlighter-code ">
-														<div>
-															<div id="highlighter_607855"
-																class="syntaxhighlighter  java">
-																<table border="0" cellpadding="0" cellspacing="0">
-																	<tbody>
-																		<tr>
-																			<td class="gutter">
-																				<div class="line number1 index0 alt2">1
-																				</div>
-																			</td>
-																			<td class="code">
-																				<div class="container">
-																					<div
-																						class="line number1 index0 alt2">
-																						<code
-																							class="java keyword">class</code>
-																						<code
-																							class="java plain">YourException </code><code
-																							class="java keyword">extends</code>
-																						<code
-																							class="java plain">Exception{}</code>
-																					</div>
-																				</div>
-																			</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</div>
-														</div>
-													</div>
-
-
-													<ul>
-														<li><strong>Example:</strong>
-															<ul>
-																<li>let’s say, you are working with an airline
-																	company&nbsp;</li>
-																<li>You are in the luggage check-in department and as
-																	per rules, you can allow 15kg per customer.</li>
-																<li>So now more than 15kg of weight is an abnormal
-																	condition for us or in other words its an exception
-																</li>
-																<li>This is our logic-based exception, so we’ll create
-																	our custom exception WeightLimitExceeded&nbsp;</li>
-																<li>As per syntax, it will extend Exception.</li>
-																<li>We define the constructor which will get invoked as
-																	soon as an exception will be thrown</li>
-																<li>We have to explicitly throw the exception and hence
-																	we will use throw keyword for that.</li>
-																<li>Using throws keyword is as per our need. If we are
-																	handling an exception where it is getting thrown
-																	then we can avoid throws, else we will use throws
-																	and handle it in the caller.</li>
-															</ul>
-														</li>
-													</ul>
-													<p><strong>Implementation:</strong></p>
-													<pre class="wp-block-code"><code>import java.util.*;
-
-class WeightLimitExceeded extends Exception{
-    WeightLimitExceeded(int x){
-        System.out.print(Math.abs(15-x)+" kg : ");
-    }
-}
-
-
-class Main {
-    void validWeight(int weight) throws WeightLimitExceeded{
-        if(weight&gt;15)
-            throw new WeightLimitExceeded(weight);
-        else
-            System.out.println("You are ready to fly!");
-    }
-    
-      public static void main (String[] args) {
-        Main ob=new Main();
-        Scanner in=new Scanner(System.in);
-        for(int i=0;i&lt;2;i++){
-            try{
-                ob.validWeight(in.nextInt());
-            }catch(WeightLimitExceeded e){
-                System.out.println(e);
-            }
-        }
-        
-	}
-}
-</code></pre>
-													<p><strong>Input</strong>:</p>
-													<pre class="wp-block-preformatted">207 </pre>
-													<p><strong>Output</strong>:</p>
-													<pre
-														class="wp-block-preformatted">5 kg : WeightLimitExceeded You are ready to fly! </pre>
-													<h2 class="wp-block-heading"
-														id="exception-handling-in-java-with-method-overriding">
-														<strong><br><br><br>Exception Handling in java with method
-															overriding</strong>
-													</h2>
-													<p>Exception Handling in Java with Method Overriding is an<strong>
-														</strong>overridden method that declares to throw an exception
-														and declare that it can throw the same exception or subtype of
-														that exception.</p>
-													<p>To handle the exception in Java, you will have to follow three
-														important rules. They are depicted in the below figure.</p>
-													<figure
-														class="wp-block-image size-large td-caption-align-https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13.png">
-														<img decoding="async" width="100%" height="400"
-															src="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png"
-															alt="exception handling in java"
-															class="wp-image-39194 entered lazyloaded"
-															data-lazy-srcset="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png 1024w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-300x204.png 300w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-768x522.png 768w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-696x473.png 696w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-617x420.png 617w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-150x102.png 150w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13.png 1051w"
-															data-lazy-sizes="(max-width: 1024px) 100vw, 1024px"
-															data-lazy-src="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png"
-															data-ll-status="loaded"
-															sizes="(max-width: 1024px) 100vw, 1024px"
-															srcset="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png 1024w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-300x204.png 300w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-768x522.png 768w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-696x473.png 696w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-617x420.png 617w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-150x102.png 150w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13.png 1051w"><noscript><img
-																decoding="async" width="1024" height="697"
-																src="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png"
-																alt="exception handling in java" class="wp-image-39194"
-																srcset="https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-1024x697.png 1024w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-300x204.png 300w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-768x522.png 768w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-696x473.png 696w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-617x420.png 617w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13-150x102.png 150w, https://d1m75rqqgidzqn.cloudfront.net/wp-data/2021/07/11140123/java13.png 1051w"
-																sizes="(max-width: 1024px) 100vw, 1024px" /></noscript>
-														<figcaption class="wp-element-caption">Exception Handling in
-															Java with Method Overriding</figcaption>
-													</figure>
-													<br>
-													<h2 class="wp-block-heading"
-														id="advantages-and-disadvantages-of-exception-handling-in-java">
-														<strong><br><br><br>Advantages and disadvantages of exception
-															handling in
-															java </strong>
-													</h2>
-													<h4 class="wp-block-heading"
-														id="advantages-of-excepting-handling-in-java"><strong>Advantages
-															of excepting handling in java&nbsp;</strong></h4>
-													<ul>
-														<li>Separating Error-Handling Code from “Regular” Code</li>
-														<li>Propagating Errors Up the Call Stack</li>
-														<li>Grouping and Differentiating Error Types</li>
-													</ul>
-
-													<h4 class="wp-block-heading"
-														id="disadvantages-of-excepting-handling-in-java">
-														<strong>Disadvantages of excepting handling in
-															java</strong>&nbsp;
-													</h4>
-													<ul>
-														<li>Experiencing unnecessary overhead</li>
-														<li>Not understanding how the application really works</li>
-														<li>Filling your logs with noisy events</li>
-														<li>Inability to focus on what actually matters</li>
-													</ul>
-												</div>
-											</article>
-										</div>
-
-
-										<h2 class="breadcrumb">Summary</h2>
-										<div class="fusion-text fusion-text-28">
-											<p><span style="font-weight: 400;">Exception Handling in Java is used to
-													keep our programs from crashing when something goes wrong. It is a
-													day-to-day skill required by all Java developers. Java exception
-													handling consists of several main elements:</span></p>
-											<ul>
-												<li><span style="font-weight: 400;">The <strong>Try/Catch
-															Statement</strong> is used to “try” a block of code for
-														potential exceptions, and “catch” any exceptions that may
-														occur.</span></li>
-												<li><span style="font-weight: 400;">The <strong>Finally</strong> block
-														is executed after <strong>every</strong> try/catch Java
-														statement, whether or not the “try” block triggers the “catch”
-														block.</span></li>
-												<li><span style="font-weight: 400;">You can “<strong>throw</strong>”
-														exceptions from the current method to the calling method, so the
-														calling method can then handle the exception.</span></li>
-												<li><span style="font-weight: 400;">If a method <em>potentially</em>
-														throws an exception, you add the “<strong>throws</strong>”
-														clause to the method signature to inform others that this method
-														<em>may</em> “throw” an exception back at them.</span></li>
-											</ul>
-											<p>It’s also helpful to know that:</p>
-											<ul>
-												<li><span style="font-weight: 400;">You can use <strong>multiple “catch”
-															statements</strong> after a single “try”.</span>
-													<ul>
-														<li><span style="font-weight: 400;">When using multiple catch
-																statements, the most specific should come first – this
-																is the <strong>exception hierarchy in Java</strong>. You
-																must catch subclass exceptions before (above) catching
-																any super class exceptions.&nbsp;</span></li>
-													</ul>
-												</li>
-												<li><span style="font-weight: 400;">You can <strong>nest</strong>
-														Try/Catch Java Statements.</span></li>
-												<li><span style="font-weight: 400;">You can create <strong>custom
-															exceptions in Java</strong> quite easily.</span></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<hr>
-							</div>
-						</div>
-						<div class="card-footer">
-							<ul class="pagination justify-content-center mb-4">
-								<li class="page-item"><a class="page-link btn-outline-primary"
-										href="polymorphism-in-java.html">&lArr; Previous</a></li>
-								<li class="page-item"><a class="page-link" href="java-multithreading.html">Next
-										&rArr;</a></li>
+</pre>
+
+							<ul type="square">
+								<li><strong>
+										<font color="#800040">Case 1:</font>
+									</strong> If there is no exception. 1, 2, 3, 5, 6 normal termination.</li>
+								<li><strong>
+										<font color="#008000">Case 2:</font>
+									</strong> if an exception raised at statement 2 and corresponding catch block
+									matched. 1,4,5,6 normal terminations.</li>
+								<li><strong>
+										<font color="#800000">Case 3:</font>
+									</strong> if an exception raised at statement 2 and corresponding catch block is not
+									matched. 1,5 abnormal termination.</li>
+								<li><strong>
+										<font color="#0000a0">Case 4:</font>
+									</strong> if an exception raised at statement 4 then it's always abnormal
+									termination but before the finally block will be executed.</li>
+								<li><strong>
+										<font color="#8000ff">Case 5:</font>
+									</strong> if an exception raised at statement 5 or statement 6 its always abnormal
+									termination.</li>
 							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
-		<style>
-			.footerfont {
-				font-size: 16px
-			}
-		</style>
-		<div class="footer footerfont" style="background: #55585a;">
-			<div class="footer-copyright border-top ">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-6 center py-3 text-white">
-							Copyright © 2023, <br>The content is copyrighted to Ravi Kalyan Kolloju.
+							<h2 id="nested" style="background-color: rgb(0, 128, 128);">
+								<font color="#ffff00">Control flow in nested try catch finally:</font>
+							</h2>
+							<pre>Example:
+class Test
+{
+public static void main(String[] args){
+try{
+System.out.println("statement1");
+System.out.println("statement2");
+System.out.println("statement3");
+	try{
+	       System.out.println("statement4");
+	       System.out.println("statement5");
+	       System.out.println("statement6");
+	     }
+	     catch(ArithmeticException  e){
+	     System.out.println("statement7");
+	     }
+	    finally
+	    {
+	    System.out.println("statement8");
+	    }
+	    System.out.println("statement9");
+    }
+catch(Exception e)
+{
+System.out.println("statement10");
+}
+finally
+{
+System.out.println("statement11");
+}
+System.out.println("statement12");
+}
+}
+</pre>
+
+							<ul type="square">
+								<li><strong>
+										<font color="#ff8000">Case 1:</font>
+									</strong> if there is no exception. 1, 2, 3, 4, 5, 6, 8, 9, 11, 12 normal
+									termination.</li>
+								<li><strong>
+										<font color="#8080ff">Case 2:</font>
+									</strong> if an exception raised at statement 2 and corresponding catch block
+									matched 1,10,11,12 normal terminations.</li>
+								<li><strong>
+										<font color="#800000">Case 3</font>
+									</strong>: if an exception raised at statement 2 and corresponding catch block is
+									not matched 1, 11 abnormal termination.</li>
+								<li>
+									<font color="#ff8000"><strong>Case 4:</strong></font> if an exception raised at
+									statement 5 and corresponding inner catch has matched 1, 2, 3, 4, 7, 8, 9, 11, 12
+									normal termination.
+								</li>
+								<li><strong>
+										<font color="#804000">Case 5:</font>
+									</strong> if an exception raised at statement 5 and inner catch has not matched but
+									outer catch block has matched. 1, 2, 3, 4, 8, 10, 11, 12 normal termination.</li>
+								<li>
+									<font color="#808000"><strong>Case 6:</strong></font> if an exception raised at
+									statement 5 and both inner and outer catch blocks are not matched. 1, 2, 3, 4, 8, 11
+									abnormal termination.
+								</li>
+								<li>
+									<font color="#008000"><strong>Case 7:</strong></font> if an exception raised at
+									statement 7 and the corresponding catch block matched 1, 2, 3, 4, 5, 6, 8, 10, 11,
+									12 normal termination.
+								</li>
+								<li>
+									<font color="#004000"><strong>Case 8:</strong></font> if an exception raised at
+									statement 7 and the corresponding catch block not matched 1, 2, 3, 4, 5, 6, 8, 11
+									abnormal terminations.
+								</li>
+								<li>
+									<font color="#008080"><strong>Case 9:</strong></font> if an exception raised at
+									statement 8 and the corresponding catch block has matched 1, 2, 3, 4, 5, 6, 7, 10,
+									11,12 normal termination.
+								</li>
+								<li>
+									<font color="#808080"><strong>Case 10:</strong></font> if an exception raised at
+									statement 8 and the corresponding catch block not matched 1, 2, 3, 4, 5, 6, 7, 11
+									abnormal terminations.
+								</li>
+								<li>
+									<font color="#0000ff"><strong>Case 11:</strong></font> if an exception raised at
+									statement 9 and corresponding catch block matched 1, 2, 3, 4, 5, 6, 7, 8,10,11,12
+									normal termination.
+								</li>
+								<li>
+									<font color="#408080"><strong>Case 12:</strong></font> if an exception raised at
+									statement 9 and corresponding catch block not matched 1, 2, 3, 4, 5, 6, 7, 8, 11
+									abnormal termination.
+								</li>
+								<li>
+									<font color="#0080c0"><strong>Case 13:</strong></font> if an exception raised at
+									statement 10 is always abnormal termination but before that finally block 11 will be
+									executed.
+								</li>
+								<li>
+									<font color="#800080"><strong>Case 14:</strong></font> if an exception raised at
+									statement 11 or 12 is always abnormal termination.
+								</li>
+							</ul>
+
+							<p><u><strong>Note:</strong></u> if we are not entering into the try block then the finally
+								block won't be executed. Once we entered into the try block without executing finally
+								block we can't come out.</p>
+							<p>
+								We can take try-catch inside try i.e., nested try-catch is possible <br> The most
+								specific exceptions can be handled by using inner try-catch and generalized exceptions
+								can be handle by using outer try-catch.
+							</p>
+							<pre>Example:
+class Test
+{
+public static void main(String[] args){
+try{
+System.out.println(10/0);
+}
+catch(ArithmeticException e)
+{
+System.out.println(10/0);
+}
+finally{
+String s=null;
+System.out.println(s.length());
+}}}
+
+output :
+RE:NullPointerException
+</pre>
+
+
+							<u><strong>Note:</strong></u> Default exception handler can handle only one exception at a
+							time and that is the most recently raised exception.
+
+
+							<h3 id="combinations" style="background-color: rgb(0, 128, 192);">
+								<font color="#ffff00">Various possible combinations of try catch finally:</font>
+							</h3>
+
+							<ol>
+								<li>Whenever we are writing try block compulsory we should write either catch or
+									finally. <br>i.e., try without catch or finally is invalid.</li>
+								<li>Whenever we are writing catch block compulsory we should write try. <br>i.e., catch
+									without try is invalid.</li>
+								<li>Whenever we are writing finally block compulsory we should write try. <br>i.e.,
+									finally without try is invalid. </li>
+								<li>In try-catch-finally order is important.</li>
+								<li>With in the try-catch -finally blocks we can take try-catch-finally.<br> i.e.,
+									nesting of try-catch-finally is possible. </li>
+								<li>For try-catch-finally blocks curly braces are mandatory.</li>
+							</ol>
+
+
+
+							<pre>Example 1:
+class Test1{
+public static void main(String[] args){
+try
+{}
+catch(ArithmeticException e)
+{}
+}}
+Output:
+Compile and running successfully.
+</pre>
+
+							<pre>Example 2:
+class Test1{
+public static void main(String[] args){
+try
+{}
+catch(ArithmeticException e)
+{}
+catch(NullPointerException e)
+{}
+}
+}
+Output:
+Compile and running successfully.
+</pre>
+
+							<pre>Example 3:
+class Test1{
+public static void main(String[] args){
+try
+{}
+catch(ArithmeticException e)
+{}
+catch(ArithmeticException e)
+{}
+}
+}
+Output:
+Compile time error.
+Test1.java:7: exception java.lang.ArithmeticException 
+                                          has already been caught
+catch(ArithmeticException e)
+</pre>
+
+							<pre>Example 4:
+class Test1{
+public static void main(String[] args){
+try
+{}
+}
+}
+Output:
+Compile time error
+Test1.java:3: 'try' without 'catch' or 'finally'
+try
+</pre>
+
+
+							<pre>Example 5:
+
+class Test1{
+public static void main(String[] args){
+catch(Exception e)
+{}
+}
+}
+Output:
+Compile time error.
+Test1.java:3: 'catch' without 'try'
+catch(Exception e)
+</pre>
+
+							<pre>Example 6:
+class Test1{
+public static void main(String[] args){
+try
+{}
+System.out.println("hello");
+catch(Exception e)
+{}
+}
+}
+Output:
+Compile time error.
+Test1.java:3: 'try' without 'catch' or 'finally'
+Try
+</pre>
+
+							<pre>Example 7:
+class Test1{
+public static void main(String[] args){
+try
+{}
+catch(Exception e)
+{}
+finally
+{}
+}
+}
+Output:
+Compile and running successfully.
+</pre>
+
+							<pre>Example 8:
+class Test1{
+public static void main(String[] args){
+try
+{}
+finally
+{}
+}
+}
+Output:
+Compile and running successfully.
+</pre>
+
+							<pre>Example 9:
+class Test1{
+public static void main(String[] args){
+try
+{}
+finally
+{}
+finally
+{}
+}
+}
+Output:
+Compile time error.
+Test1.java:7: 'finally' without 'try'
+Finally
+</pre>
+
+							<pre>Example 10:
+class Test1{
+public static void main(String[] args){
+try
+{}
+catch(Exception e)
+{}
+System.out.println("hello");
+finally
+{}
+}
+}
+Output:
+Compile time error.
+Test1.java:8: 'finally' without 'try'
+Finally
+</pre>
+
+							<pre>Example 11:
+class Test1{
+public static void main(String[] args){
+try
+{}
+finally
+{}
+catch(Exception e)
+{}
+}
+}
+Output:
+Compile time error.
+Test1.java:7: 'catch' without 'try'
+catch(Exception e)
+</pre>
+
+							<pre>Example 12:
+class Test1{
+public static void main(String[] args){
+finally
+{}
+}
+}
+Output:
+Test1.java:3: 'finally' without 'try'
+Finally
+</pre>
+
+							<pre>Example 13:
+class Test1{
+public static void main(String[] args){
+try
+{   try{}
+     catch(Exception e){}
+}
+catch(Exception e)
+{}
+}
+}
+Output:
+Compile and running successfully.
+</pre>
+
+							<pre>Example 14:
+class Test1{
+public static void main(String[] args){
+try
+{ }
+catch(Exception e)
+{
+  try{}
+   finally{}
+}
+}
+}
+Output:
+Compile and running successfully.
+</pre>
+
+							<pre>Example 15:
+class Test1{
+public static void main(String[] args){
+try
+{ }
+catch(Exception e)
+{
+  try{}
+  catch(Exception e){}
+}
+finally{
+   finally{}
+    }
+}
+}
+Output:
+Compile time error.
+Test1.java:11: 'finally' without 'try'
+   finally{}
+   
+</pre>
+
+							<pre>Example 16:
+class Test1{
+public static void main(String[] args){
+finally{}
+try{ }
+catch(Exception e){}
+}
+}
+Output:
+Compile time error.
+Test1.java:3: 'finally' without 'try'
+finally{}
+</pre>
+
+
+							<pre>Example 17:
+class Test1{
+public static void main(String[] args){
+try{ }
+catch(Exception e){}
+finally
+{
+try{}
+catch(Exception e){}
+finally{}
+}
+}
+}
+Output:
+Compile and running successfully.
+</pre>
+
+							<h3 id="throw">
+								<font color="#ffff00" style="background-color: rgb(0, 0, 128);"><u><strong>Throw
+											statement:</strong></u></font> <br>
+							</h3>
+							<p>Sometimes we can create Exception object explicitly and we can hand over to the JVM
+								manually by using throw keyword.
+							</p>
+
+							<font color="#008080"><em><u>Example:
+									</u></em></font><br>
+							<br><br><img alt="" src="excep/image007.png"><br><br>
+							The result of following 2 programs is exactly same.
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<td>
+											<pre>class Test
+{
+public static void main(String[] args){
+System.out.println(10/0);
+}}
+</pre>
+
+											In this case creation of ArithmeticException object and handover to the jvm
+											will be performed automatically by the main() method.
+										</td>
+
+										<td>
+											<pre>class Test
+{
+public static void main(String[] args){
+throw new ArithmeticException("/ by zero");
+}}
+</pre>
+
+											In this case we are creating exception object explicitly and handover to the
+											JVM manually.
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<p>
+								<font color="#800080"><u><em>Note:</em></u></font> In general we can use throw keyword
+								for customized exceptions but not for predefined exceptions.
+							</p>
+
+							<strong>
+								<font color="#008040">Case 1:</font>
+							</strong><br> <strong>throw e;
+							</strong>
+							<p> If e refers null then we will get NullPointerException.</p>
+							Example:
+							<table border="1">
+								<tbody>
+									<tr>
+										<td>
+											<pre>class Test3
+{
+static ArithmeticException e=new 
+                      ArithmeticException();
+public static void main(String[] args){
+throw e;
+}
+}
+Output:
+Runtime exception: Exception in thread "main"
+            java.lang.ArithmeticException
+</pre>
+										</td>
+										<td>
+											<pre>class Test3
+{
+static ArithmeticException e;
+public static void main(String[] args){
+throw e;
+}
+}
+Output:
+Exception in thread "main"
+   java.lang.NullPointerException
+        at Test3.main(Test3.java:5)
+</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<font color="#800040"><strong>Case 2:</strong></font><br> After throw statement we can't
+							take any statement directly otherwise we will get compile time error saying unreachable
+							statement.
+							<br>Example:
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<td>
+											<pre>class Test3
+{
+public static void main(String[] args){
+System.out.println(10/0);
+System.out.println("hello");
+}
+}
+Output:
+Runtime error: Exception in thread "main"
+  java.lang.ArithmeticException: / by zero
+        at Test3.main(Test3.java:4)
+</pre>
+										</td>
+										<td>
+											<pre>class Test3
+{
+public static void main(String[] args){
+throw new ArithmeticException("/ by zero");
+System.out.println("hello");
+}
+}
+Output:
+Compile time error.
+Test3.java:5: unreachable statement
+System.out.println("hello");
+</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<font color="#0000ff"><strong>Case 3:</strong></font><br> We can use throw keyword only for
+							Throwable types otherwise we will get compile time error saying incomputable types.
+							<br>Example:
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<td>
+											<pre>class Test3
+{
+public static void main(String[] args){
+throw new Test3();
+}
+}Output:
+Compile time error.
+Test3.java:4: incompatible types
+found   : Test3
+required: java.lang.Throwable
+throw new Test3();	
+</pre>
+										</td>
+										<td>
+											<pre>class Test3 extends RuntimeException
+{
+public static void main(String[] args){
+throw new Test3();
+}
+}
+Output:
+Runtime error: Exception in thread "main" Test3
+        at Test3.main(Test3.java:4)
+</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<h3 id="throws">
+								<font color="#ffff00" style="background-color: rgb(128, 128, 0);"><u><strong>Throws
+											statement:</strong></u></font> <br>
+							</h3>
+							<p>In our program if there is any chance of raising checked exception compulsory we should
+								handle either by try catch or by throws keyword otherwise the code won't compile.
+							</p>
+
+
+							<pre>Example:
+
+import java.io.*;
+class Test3
+{
+public static void main(String[] args){
+PrinterWriter out=new PrintWriter("abc.txt");
+out.println("hello");
+}
+}
+
+CE :
+Unreported exception java.io.FileNotFoundException;
+ must be caught or declared to be thrown. 
+</pre>
+
+
+							<pre>Example:
+class Test3
+{
+public static void main(String[] args){
+Thread.sleep(5000);
+}
+}
+
+
+Unreported exception java.lang.InterruptedException;
+ must be caught or declared to be thrown. 
+</pre>
+
+							We can handle this compile time error by using the following 2 ways.
+							<br>
+							Example:
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<th>By using try catch</th>
+										<th> By using throws keyword</th>
+									</tr>
+									<tr>
+										<td>
+											<pre>class Test3
+{
+public static void main(String[] args){
+try{
+Thread.sleep(5000);
+}
+catch(InterruptedException e){}
+}
+}
+Output:
+Compile and running successfully
+</pre>
+										</td>
+
+										<td>
+											We can use throws keyword to delicate the responsibility of exception
+											handling to the caller method. Then caller method is responsible to handle
+											that exception.
+
+											<pre>class Test3
+{
+public static void main(String[] args)throws
+                                  InterruptedException{
+Thread.sleep(5000);
+}
+}
+Output:
+Compile and running successfully
+</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br>
+							<b><u>Note :</u> </b>
+							<ul>
+								<li>Hence the main objective of "throws" keyword is to delicate the responsibility of
+									exception handling to the caller method.</li>
+								<li>"throws" keyword required only checked exceptions. Usage of throws for unchecked
+									exception there is no use.</li>
+								<li>"throws" keyword required only to convenes complier. Usage of throws keyword doesn't
+									prevent abnormal termination of the program.<br> Hence recommended to use try-catch
+									over throws keyword.</li>
+							</ul>
+
+							<pre>Example:
+class Test
+{
+public static void main(String[] args)throws InterruptedException{
+doStuff();
+}
+public static void doStuff()throws InterruptedException{
+doMoreStuff();
+}
+public static void doMoreStuff()throws InterruptedException{ 
+Thread.sleep(5000);
+}
+}
+Output:
+Compile and running successfully.
+</pre>
+
+							In the above program if we are removing at least one throws keyword then the program won't
+							compile.
+
+							<p>
+								<font color="#0080ff"><strong>Case 1: </strong></font><br> we can use throws keyword
+								only for Throwable types otherwise we will get compile time error saying incompatible
+								types.
+							</p>
+							Example:
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<td>
+											<pre>class Test3{
+public static void main(String[] args)
+                       throws Test3
+{}
+}
+Output:
+Compile time error
+Test3.java:2: incompatible types
+found   : Test3
+required: java.lang.Throwable
+public static void main(String[] args)
+                         throws Test3
+</pre>
+										</td>
+										<td>
+											<pre>class Test3 extends RuntimeException{
+public static void main(String[] args)
+                           throws Test3
+{}
+}
+Output:
+Compile and running successfully.
+</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+
+							<font color="#008040"><strong>Case 2:
+								</strong></font>
+							Example:
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<td>
+											<pre>class Test3{
+public static void main(String[] args){
+throw new Exception();
+}
+}
+Output:
+Compile time error.
+Test3.java:3: unreported exception
+     java.lang.Exception;
+must be caught or declared to be thrown
+</pre>
+										</td>
+										<td>
+											<pre>class Test3{
+public static void main(String[] args){
+throw new Error();
+}
+}
+Output:
+Runtime error
+Exception in thread "main" java.lang.Error
+        at Test3.main(Test3.java:3)
+</pre>
+										</td>
+									</tr>
+								</tbody>
+							</table><br>
+
+							<font color="#800080"><strong>Case 3:
+								</strong></font>
+							<p>
+								In our program with in the try block, if there is no chance of rising an exception then
+								we can't right catch block for that exception otherwise we will get compile time error
+								saying<b> exception XXX is never thrown in body of corresponding try statement.</b> But
+								this rule is applicable only for fully checked exception.
+							</p>
+							<strong><em>Example: <br><br><img alt="" src="excep/image008.png" width="1050"
+										height="342"><br><br>
+									<br><br><img alt="" src="excep/image009.png"><br><br>
+
+
+								</em></strong>
+
+							<br>
+
+							<font color="#800080"><strong>Case 4:
+								</strong></font><br>We can use throws keyword only for constructors and methods but not
+							for classes.<br><br>
+							Example: <br><br><img alt="" src="excep/ex1.png"><br><br>
+							<h3 id="keywords" style="background-color: rgb(128, 128, 192);">
+								<font color="#ffff00">Exception handling keywords summary:</font>
+							</h3>
+							<ol>
+								<li>
+									<font color="#0000ff"><strong>try:</strong></font> To maintain risky code.
+								</li>
+								<li>
+									<font color="#008000"><strong>catch:</strong></font> To maintain handling code.
+								</li>
+								<li>
+									<font color="#800080"><strong>finally:</strong></font> To maintain cleanup code.
+								</li>
+								<li>
+									<font color="#804000"><strong>throw: </strong></font>To handover our created
+									exception object to the JVM manually.
+								</li>
+								<li>
+									<font color="#0080ff"><strong>throws:</strong></font> To delegate responsibility of
+									exception handling to the caller method.
+								</li>
+							</ol>
+
+							<h3 id="compileErrors" style="background-color: rgb(0, 128, 0);">
+								<font color="#ffff00">Various possible compile time errors in exception handling:</font>
+							</h3>
+							<ol>
+								<li>Exception XXX has already been caught.</li>
+								<li>Unreported exception XXX must be caught or declared to be thrown.</li>
+								<li>Exception XXX is never thrown in body of corresponding try statement.</li>
+								<li>Try without catch or finally.</li>
+								<li>Catch without try.</li>
+								<li>Finally without try.</li>
+								<li>
+									<pre>  Incompatible types.
+  Found:test
+  Requried:java.lang.Throwable;</pre>
+								</li>
+								<li>Unreachable statement.</li>
+							</ol>
+
+							<h3 id="custExceptions" style="background-color: rgb(128, 128, 192);">
+								<font color="#ffff00">Customized Exceptions (User defined Exceptions):</font>
+							</h3>
+							<p> Sometimes we can create our own exception to meet our programming requirements. Such
+								type of exceptions are called customized exceptions (user defined exceptions).</p>
+
+							<em><strong>Example:
+								</strong></em>
+							<ol>
+								<li>InSufficientFundsException</li>
+								<li>TooYoungException</li>
+								<li>TooOldException</li>
+							</ol>
+
+
+							<pre>Program:
+class TooYoungException extends RuntimeException
+{
+TooYoungException(String s)
+{
+super(s);
+}
+}
+class TooOldException extends RuntimeException
+{
+TooOldException(String s)
+{
+super(s);
+}
+}
+class CustomizedExceptionDemo
+{
+public static void main(String[] args){
+int age=Integer.parseInt(args[0]);
+if(age&gt;60)
+{
+throw new TooYoungException("please wait some more time.... u will get best match");
+}
+else if(age&lt;18)
+{
+throw new TooOldException("u r age already crossed....no chance of getting married");
+}
+else
+{
+System.out.println("you will get match details soon by e-mail");
+}}}
+
+Output:
+
+1)E:\scjp&gt;java CustomizedExceptionDemo 61
+Exception in thread "main" TooYoungException:
+please wait some more time.... u will get best match
+at CustomizedExceptionDemo.main(CustomizedExceptionDemo.java:21)
+
+
+
+2)E:\scjp&gt;java CustomizedExceptionDemo 27
+You will get match details soon by e-mail
+
+3)E:\scjp&gt;java CustomizedExceptionDemo 9
+Exception in thread "main" TooOldException:
+u r age already crossed....no chance of getting married
+at CustomizedExceptionDemo.main(CustomizedExceptionDemo.java:25)
+</pre>
+
+							<p>
+								<u><strong>Note:</strong></u> It is highly recommended to maintain our customized
+								exceptions as unchecked by extending RuntimeException.<br>
+								We can catch any Throwable type including Errors also.
+							</p>
+							Example:
+							<br><br><img alt="" src="excep/image010.png"><br><br>
+
+							<h3 id="topten" style="background-color: rgb(0, 128, 192);">
+								<font color="#ffff00">Top-10 Exceptions:</font>
+							</h3>
+							Exceptions are divided into two types. <br>They are:
+
+							<br>1) JVM Exceptions:
+							<br>2) Programatic exceptions: <br><br>
+							<h2>
+								JVM Exceptions:</h2>&nbsp; The exceptions which are raised automatically by the jvm
+							whenever a particular event occurs. <br>
+							Example:
+							<br>1) ArrayIndexOutOfBoundsException(AIOOBE)
+							<br>2) NullPointerException (NPE).
+
+							<h3>Programatic Exceptions:</h3>
+							The exceptions which are raised explicitly by the programmer (or) by the API developer are
+							called programatic exceptions.<br>
+							Example:
+							1) IllegalArgumentException(IAE).
+
+
+
+							<h4><u>Top 10 Exceptions :</u></h4>
+
+							<ol>
+								<li>
+									<font color="#0000ff"><u><strong>ArrayIndexOutOfBoundsException:</strong></u></font>
+									<br> It is the child class of RuntimeException and hence it is unchecked. Raised
+									automatically by the JVM whenever we are trying to access array element with out of
+									range index.
+									Example:
+									<pre>class Test{
+public static void main(String[] args){
+int[] x=new int[10];
+System.out.println(x[0]);//valid
+System.out.println(x[100]);//AIOOBE
+System.out.println(x[-100]);//AIOOBE
+}
+}
+</pre>
+								</li>
+
+								<li>
+									<font color="#008000"><u><strong>NullPointerException:</strong></u></font>
+									<br> It is the child class of RuntimeException and hence it is unchecked. Raised
+									automatically by the JVM, whenever we are trying to call any method on null.
+									<pre>Example:
+class Test{
+public static void main(String[] args){
+String s=null;
+System.out.println(s.length()); //R.E: NullPointerException
+}
+}
+</pre>
+								</li>
+
+								<li>
+									<font color="#800000"><u><strong>StackOverFlowError:</strong></u></font>
+									<br> It is the child class of Error and hence it is unchecked. Whenever we are
+									trying to invoke recursive method call JVM will raise StackOverFloeError
+									automatically.
+									<pre>Example:
+class Test
+{
+public static void methodOne()
+{
+methodTwo();
+}
+public static void methodTwo()
+{
+methodOne();
+}
+public static void main(String[] args)
+{
+methodOne();
+}
+}
+Output:
+Run time error: StackOverFloeError
+</pre>
+								</li>
+
+								<li>
+									<font color="#8080ff"><u><strong>NoClassDefFound:</strong></u> </font><br>It is the
+									child class of Error and hence it is unchecked. JVM will raise this error
+									automatically whenever it is unable to find required .class file.<strong>
+										Example: java Test&nbsp;</strong> If Test.class is not available. Then we will
+									get NoClassDefFound error.
+								</li>
+
+								<li><u>
+										<font color="#0080ff"><strong>ClassCastException:</strong></font>
+									</u>&nbsp;<br> It is the child class of RuntimeException and hence it is unchecked.
+									Raised automatically by the JVM whenever we are trying to type cast parent object to
+									child type. <br>
+									Example: <br><br><img alt="" src="excep/image011.png" width="1057"
+										height="284"><br><br>
+
+								</li>
+
+								<li><u>
+										<font color="#800040"><strong>ExceptionInInitializerError:</strong></font>
+									</u>
+									<br> It is the child class of Error and it is unchecked. Raised automatically by the
+									JVM, if any exception occurs while performing static variable initialization and
+									static block execution.
+
+
+									<pre>Example 1:
+class Test{
+static int i=10/0;
+}
+Output:
+Runtime exception:
+ Exception in thread "main" java.lang.ExceptionInInitializerError
+</pre>
+
+									<pre>Example 2:
+class Test{
+static {
+String s=null;
+System.out.println(s.length());
+}}
+Output:
+Runtime exception:
+Exception in thread "main" java.lang.ExceptionInInitializerError
+</pre>
+								</li>
+
+								<li><u>
+										<font color="#008000"><strong>IllegalArgumentException:
+											</strong></font>
+									</u>
+									<p> It is the child class of RuntimeException and hence it is unchecked. Raised
+										explicitly by the programmer (or) by the API developer to indicate that a method
+										has been invoked with inappropriate argument.</p>
+									<pre>
+Example: 
+class Test{ 
+public static void main(String[] args){ 
+Thread t=new Thread(); 
+t.setPriority(10);//valid 
+t.setPriority(100);//invalid 
+}} 
+Output: 
+Runtime exception 
+Exception in thread "main" java.lang.IllegalArgumentException. 
+</pre>
+								</li>
+
+								<li>
+									<u>
+										<font color="#8080ff"><strong>NumberFormatException:
+											</strong></font>
+									</u>
+									<p> It is the child class of IllegalArgumentException and hence is unchecked. Raised
+										explicitly by the programmer or by the API developer to indicate that we are
+										attempting to convert string to the number. But the string is not properly
+										formatted.</p>
+									<pre>Example:
+class Test{
+public static void main(String[] args){
+int i=Integer.parseInt("10");
+int j=Integer.parseInt("ten");
+}}
+Output:
+Runtime Exception
+Exception in thread "main" java.lang.NumberFormatException: For input string: "ten"
+</pre>
+								</li>
+
+								<li>
+									<u>
+										<font color="#0080c0"><strong>IllegalStateException:
+											</strong></font>
+									</u>
+									<p> It is the child class of RuntimeException and hence it is unchecked. Raised
+										explicitly by the programmer or by the API developer to indicate that a method
+										has been invoked at inappropriate time.</p>
+
+									Example:
+									<p> Once session expires we can't call any method on the session object otherwise we
+										will get IllegalStateException</p>
+									<pre>HttpSession session=req.getSession();
+System.out.println(session.getId());
+session.invalidate();
+System.out.println(session.getId()); // illgalstateException
+</pre>
+
+								</li>
+
+
+								<li><u>
+										<font color="#800040"><strong>AssertionError:
+											</strong></font>
+									</u>
+									<p>It is the child class of Error and hence it is unchecked. Raised explicitly by
+										the programmer or by API developer to indicate that Assert statement fails.</p>
+
+									Example: <br>
+									assert(false);
+								</li>
+							</ol>
+							<table border="1">
+								<tbody>
+									<tr>
+										<th>Exception/Error</th>
+										<th> Raised by</th>
+									</tr>
+									<tr>
+										<td>
+											<ol>
+												<li>AIOOBE</li>
+												<li>NPE(NullPointerException)</li>
+												<li>StackOverFlowError</li>
+												<li>NoClassDefFoundError</li>
+												<li>CCE(ClassCastException)</li>
+												<li> ExceptionInInitializerError</li>
+											</ol>
+										</td>
+										<td>
+											Raised automatically by JVM(JVM Exceptions)
+										</td>
+									</tr>
+
+									<tr>
+										<td>
+
+											<ol>
+												<li> IAE(IllegalArgumentException)</li>
+												<li> NFE(NumberFormatException)</li>
+												<li> ISE(IllegalStateException)</li>
+												<li> AE(AssertionError)</li>
+											</ol>
+										</td>
+										<td>
+
+
+											<p>Raised explicitly either by programmer or by API developer (Programatic
+												Exceptions).</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+
+
+
+							<h3 id="17" style="background-color: rgb(0, 128, 0);">
+								<font color="#ffff00">1.7 Version Enhansements :</font>
+							</h3>
+							As part of 1.7 version enhansements in Exception Handling the following 2 concepts
+							introduced
+							<ol>
+								<li>try with resources</li>
+								<li>multi catch block</li>
+							</ol>
+
+							<h3 id="withr"><u>try with resources</u></h3>
+							Untill 1.5 version it is highly recommended to write finally block to close all resources
+							which are open as part of try block.
+
+							<pre>BufferedReader br=null;
+try{
+br=new BufferedReader(new FileReader("abc.txt"));
+  //use br based on our requirements
+ }
+catch(IOException e) {
+  // handling code
+}
+finally {
+  if(br != null)
+  br.close();
+}
+</pre>
+
+							<h4><u>problems in this approach :</u></h4>
+							<ul>
+								<li>Compulsory programmer is required to close all opned resources with increases the
+									complexity of the programming</li>
+								<li>Compulsory we should write finally block explicity which increases length of the
+									code and reviews readability.
+									<br>
+									To overcome these problems Sun People introduced "try with resources" in 1.7
+									version.
+								</li>
+							</ul>
+							<h4><u>The main advantage of "try with resources" is </u></h4>
+							the resources which are opened as part of try block will be closed automatically<br>
+							Once the control reaches end of the try block either normally or abnormally and hence we are
+							not required to close explicitly
+							<br><br>
+							due to the complexity of programming will be reduced, it is not required to write finally
+							block explicitly and hence length of the code will be reduced and readability will be
+							improved.
+							<br>
+							<pre>
+try(BufferedReader br=new BufferedReader(new FileReader("abc.txt"))) 
+{
+use be based on our requirement, br will be  closed automatically ,
+Onec control reaches end of try either normally
+or abnormally and we are not required to close explicitly
+ }
+catch(IOException e) {
+  // handling code
+}
+</pre>
+
+							<br>
+							We can declare any no of resources but all these resources should be seperated with
+							<b>;(semicolon)</b>
+							<pre>try(R1 ; R2 ; R3)
+{
+  -------------
+  -------------
+}
+</pre>
+
+
+							<br>
+							All resources should be auto closable resources , a resource is said to be auto closable if
+							and only if the corresponding class implements the<b> java.lang.AutoClosable </b> interface
+							either directly or indirectly.
+							<br><br>
+							All resource reference variables are implicitly final and hence we can't perform
+							reassignment with in the try block.
+							<pre>try(BufferedReader br=new BufferedReader(new FileReader("abc.txt"))) ;
+{
+   br=new BufferedReader(new FileReader("abc.txt"));
+ }
+
+output :
+CE : Can't reassign a value  to final variable br
+</pre>
+
+							Untill 1.6 version try should be followed by either catch or finally but 1.7 version we can
+							take only try with resource without catch or finally
+							<pre>try(R)
+{                   //valid
+ }
+</pre>
+
+
+							The main advantage of "try with resources" is finally block will become dummy because we are
+							not required to close resources of explicitly.
+
+							<h3 id="multic"><u>Multi catch block :</u></h3>
+							Eventhough Multiple Exceptions having same handling code we have to write a seperate catch
+							block for every exceptions, it increases length of the code and reviews readability
+							<pre>try{
+   -----------------
+   -----------------
+ }
+catch(ArithmeticException e) {
+  e.printStackTrace();
+}
+catch(NullPointerException e) {
+  e.printStackTrace();
+}
+catch(ClassCastException e) {
+  System.out.println(e.getMessage());
+}
+catch(IOException e) {
+  System.out.println(e.getMessage());
+}
+</pre>
+
+
+							To overcome this problem Sun People introduced "Multi catch block" concept in 1.7 version.
+							<br><br>
+							The main advantage of multi catch block is we can write a single catch block , which can
+							handle multiple different exceptions
+
+							<pre>try{
+   -----------------
+   -----------------
+ }
+catch(ArithmeticException | NullPointerException e) {
+  e.printStackTrace();
+}
+catch(ClassCastException | IOException e) {
+  System.out.println(e.getMessage());
+}
+</pre>
+
+							In multi catch block, there should not be any relation between Exception types(either child
+							to parent Or parent to child Or same type , otherwise we will get Compile time error )
+							<br><br>
+							Example:
+							<br><br><img alt="" src="excep/ex2.png"><br><br>
+
+							<h3 id="expro"><u>Exception Propagation :</u></h3>
+							With in a method if an exception raised and if that method doesn't handle that exception
+							then Exception object will be propagated to the caller then caller method is responsible to
+							handle that exceptions. This process is called Exception Propagation.
+
+
+							<h3 id="rethrow"><u>Rethrowing an Exception :</u></h3>
+							To convert the one exception type to another exception type , we can use rethrowing
+							exception concept.
+
+							<pre>class Test
+{
+ public static void main(String[] args){
+   try {
+     System.out.println(10/0);
+    }
+   catch(ArithmeticException e) {
+       throw new NullPointerException();
+    }
+  }
+}
+output:
+RE:NPE
+</pre>
+
+
+							<br>
+
 						</div>
+					</div>
+					<div class="card-footer">
+						<ul class="pagination justify-content-center mb-4">
+							<li class="page-item"><a class="page-link btn-outline-primary"
+									href="java-inheritance.html">&lArr; Previous</a></li>
+							<li class="page-item"><a class="page-link" href="java-multithreading.html">Next
+									&rArr;</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 center py-3 text-white">
+						Copyright © 2023, <br>The content is copyrighted to Ravi Kalyan Kolloju.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
