@@ -1,0 +1,3344 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Java By Ravi Kalyan">
+
+	<title>Java Ravish | Java Interview Questions</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="../scripts/images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="../scripts/images/favicon/apple-touch-icon.jpeg">
+	<link href="../scripts/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../scripts/css/customcss.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+	<style>
+		.div-to-hide {
+			display: block;
+			/* Display the div by default */
+		}
+
+		@media screen and (max-width: 767px) {
+			.div-to-hide {
+				display: none;
+				/* Hide the div on screens smaller than 768px (mobile) */
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+		<div class="container p-0">
+			<a class="navbar-brand pull-left" href="../main/home.html"><img src="../scripts/images/jrlogo.PNG"
+					style="height: 50px; max-width: 100%;" alt="java by Kalyan" title="Java Ravish Tutorials"></a>
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto text-center">
+					<li class="nav-item"><a class="nav-link" href="../main/home.html"><img
+								src="../scripts/images/small/home.jpg"></i></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../corejava/java-introduction.html">Java</a></li>
+					<li class="nav-item"><a class="nav-link" href="../spring/spring-introduction.html">Spring</a></li>
+					<li class="nav-item"><a class="nav-link" href="../springboot/sb-introduction.html">SpringBoot</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../main/interview-questions.html">Interview
+							Questions</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br>
+	<div class="container-fluid">
+		<br />
+		<ol class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="../main/home.html"> <span itemprop="name">Home</span></a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="../corejava/java-interview-questions.html"> <span
+						itemprop="name">Java Interview Questions</span></a>
+				<meta itemprop="position" content="1" />
+			</li>
+		</ol>
+
+		<div class="row">
+			<link rel="stylesheet" href="../scripts/css/sidebarcollapsecss.css">
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#sideBarResponsive" aria-controls="sideBarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+				aria-multiselectable="true">
+				<div class="collapse card" id="sideBarResponsive">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Java</h2>
+					<div class="list-group">
+						<ul class="leftBarList">
+							<li><a href="../corejava/java-interview-questions.html">Java Interview Questions</a></li>
+							<li><a href="../spring/spring-interview-questions.html">Spring Interview Questions</a></li>
+							<li><a href="../springboot/sb-interview-questions.html">SpringBoot Interview Questions</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="div-to-hide card" id="sideBarResponsive">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Java</h2>
+					<div class="list-group">
+						<ul class="leftBarList">
+							<li><a href="../corejava/java-interview-questions.html">Java Interview Questions</a></li>
+							<li><a href="../spring/spring-interview-questions.html">Spring Interview Questions</a></li>
+							<li><a href="../springboot/sb-interview-questions.html">SpringBoot Interview Questions</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Interview Questions</h1>
+					<s="card-body">
+						<br>
+						<h1><b>1. Java Basic Interview Questions</b></h1>
+						<br>
+						<details>
+							<summary>1. What do you know about Java?</summary>
+							<div class="toggle-content">
+								<p>Java is a high-level programming language originally developed by Sun
+									Microsystems and released in 1995. Java runs on a variety of platforms, such as
+									Windows, Mac OS, and the various versions of UNIX.</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>2. What are the supported platforms by Java Programming Language?</summary>
+							<div class="toggle-content">
+								<p>Java runs on a variety of platforms, such as Windows, Mac OS, and the various
+									versions of UNIX/Linux like HP-Unix, Sun Solaris, Redhat Linux, Ubuntu, CentOS,
+									etc.</p>
+							</div>
+						</details>
+						<details>
+							<summary>3. List any five features of Java?</summary>
+							<div class="toggle-content">
+								<p>Some features include Object Oriented, Platform Independent, Robust, Interpreted,
+									Multi-threaded</p>
+							</div>
+						</details>
+						<details>
+							<summary>4. Why is Java Architectural Neutral?</summary>
+							<div class="toggle-content">
+								<p>It’s compiler generates an architecture-neutral object file format, which makes
+									the compiled code to be executable on many processors, with the presence of Java
+									runtime system.</p>
+							</div>
+						</details>
+						<details>
+							<summary>5. How Java enabled High Performance?</summary>
+							<div class="toggle-content">
+								<p>Java uses Just-In-Time compiler to enable high performance. Just-In-Time compiler
+									is a program that turns Java bytecode, which is a program that contains
+									instructions that must be interpreted into instructions that can be sent
+									directly to the processor.</p>
+							</div>
+						</details>
+						<details>
+							<summary>6. Why Java is considered dynamic?</summary>
+							<div class="toggle-content">
+								<p>It is designed to adapt to an evolving environment. Java programs can carry
+									extensive amount of run-time information that can be used to verify and resolve
+									accesses to objects on run-time.</p>
+							</div>
+						</details>
+						<details>
+							<summary>7. What is Java Virtual Machine and how it is considered in context of Java’s
+								platform independent feature?</summary>
+							<div class="toggle-content">
+								<p>When Java is compiled, it is not compiled into platform specific machine, rather
+									into platform independent byte code. This byte code is distributed over the web
+									and interpreted by virtual Machine (JVM) on whichever platform it is being run.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>8. What is a Class Variable?</summary>
+							<div class="toggle-content">
+								<p>These are variables declared with in a class, outside any method, with the static
+									keyword.</p>
+							</div>
+						</details>
+						<details>
+							<summary>9. What do you mean by Object?</summary>
+							<div class="toggle-content">
+								<p>Object is a runtime entity and it’s state is stored in fields and behavior is
+									shown via methods. Methods operate on an object's internal state and serve as
+									the primary mechanism for object-to-object communication.</p>
+							</div>
+						</details>
+						<details>
+							<summary>1. Define class?</summary>
+							<div class="toggle-content">
+								<p>A class is a blue print from which individual objects are created. A class can
+									contain fields and methods to describe the behavior of an object.</p>
+							</div>
+						</details>
+						<details>
+							<summary>11. What kind of variables a class can consist of?</summary>
+							<div class="toggle-content">
+								<p>A class consist of Local variable, instance variables and class variables.</p>
+							</div>
+						</details>
+						<details>
+							<summary>12. What is a Local Variable?</summary>
+							<div class="toggle-content">
+								<p>Variables defined inside methods, constructors or blocks are called local
+									variables. The variable will be declared and initialized within the method and
+									it will be destroyed when the method has completed.</p>
+							</div>
+						</details>
+						<details>
+							<summary>13. What is a Instance Variable?</summary>
+							<div class="toggle-content">
+								<p>Instance variables are variables within a class but outside any method. These
+									variables are instantiated when the class is loaded.</p>
+							</div>
+						</details>
+						<details>
+							<summary>14. What is Singleton class?</summary>
+							<div class="toggle-content">
+								<p>Singleton class control object creation, limiting the number to one but allowing
+									the flexibility to create more objects if the situation changes.</p>
+							</div>
+						</details>
+						<details>
+							<summary>15. What do you mean by Constructor?</summary>
+							<div class="toggle-content">
+								<p>Constructor gets invoked when a new object is created. Every class has a
+									constructor. If we do not explicitly write a constructor for a class the java
+									compiler builds a default constructor for that class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>16. What is a static variable?</summary>
+							<div class="toggle-content">
+								<p>Class variables also known as static variables are declared with the static
+									keyword in a class, but outside a method, constructor or a block.</p>
+							</div>
+						</details>
+						<details>
+							<summary>17. What do you mean by Access Modifier?</summary>
+							<div class="toggle-content">
+								<p>Java provides access modifiers to set access levels for classes, variables,
+									methods and constructors. A member has package or default accessibility when no
+									accessibility modifier is specified.</p>
+							</div>
+						</details>
+						<details>
+							<summary>18. What is protected access modifier?</summary>
+							<div class="toggle-content">
+								<p>Variables, methods and constructors which are declared protected in a superclass
+									can be accessed only by the subclasses in other package or any class within the
+									package of the protected members' class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>19. Why is String class considered immutable?</summary>
+							<div class="toggle-content">
+								<p>The String class is immutable, so that once it is created a String object cannot
+									be changed. Since String is immutable it can safely be shared between many
+									threads ,which is considered very important for multithreaded programming.</p>
+							</div>
+						</details>
+						<details>
+							<summary>20. Why is StringBuffer called mutable?</summary>
+							<div class="toggle-content">
+								<p>The String class is considered as immutable, so that once it is created a String
+									object cannot be changed. If there is a necessity to make alot of modifications
+									to Strings of characters then StringBuffer should be used.</p>
+							</div>
+						</details>
+						<details>
+							<summary>21. What is the difference between StringBuffer and StringBuilder class?</summary>
+							<div class="toggle-content">
+								<p>Use StringBuilder whenever possible because it is faster than StringBuffer. But,
+									if thread safety is necessary then use StringBuffer objects.</p>
+							</div>
+						</details>
+						<details>
+							<summary>22. Explain garbage collection in Java?</summary>
+							<div class="toggle-content">
+								<p>It uses garbage collection to free the memory. By cleaning those objects that is
+									no longer reference by any of the program.</p>
+							</div>
+						</details>
+						<details>
+							<summary>23. Define immutable object?</summary>
+							<div class="toggle-content">
+								<p>An immutable object can’t be changed once it is created.</p>
+							</div>
+						</details>
+						<details>
+							<summary>24. Explain the usage of this() with constructors?</summary>
+							<div class="toggle-content">
+								<p>It is used with variables or methods and used to call constructer of same class.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>25. Explain the following line used under Java Program −
+								public static void main (String args[ ])
+							</summary>
+							<div class="toggle-content">
+								<p>The following shows the explanation individually −</p>
+								<ul class="list">
+									<li>
+										<p>public − it is the access specifier.</p>
+									</li>
+									<li>
+										<p>static − it allows main() to be called without instantiating a particular
+											instance of a class.</p>
+									</li>
+									<li>
+										<p>void − it affirns the compiler that no value is returned by main().</p>
+									</li>
+									<li>
+										<p>main() − this method is called at the beginning of a Java program.</p>
+									</li>
+									<li>
+										<p>String args[ ] − args parameter is an instance array of class String</p>
+									</li>
+								</ul>
+							</div>
+						</details>
+						<details>
+							<summary>26. Define JRE i.e. Java Runtime Environment?</summary>
+							<div class="toggle-content">
+								<p>Java Runtime Environment is an implementation of the Java Virtual Machine which
+									executes Java programs. It provides the minimum requirements for executing a
+									Java application;</p>
+							</div>
+						</details>
+						<details>
+							<summary>27. What is JAR file?</summary>
+							<div class="toggle-content">
+								<p>JAR files is Java Archive fles and it aggregates many files into one. It holds
+									Java classes in a library. JAR files are built on ZIP file format and have .jar
+									file extension.</p>
+							</div>
+						</details>
+						<details>
+							<summary>28. What is a WAR file?</summary>
+							<div class="toggle-content">
+								<p>This is Web Archive File and used to store XML, java classes, and JavaServer
+									pages. which is used to distribute a collection of JavaServer Pages, Java
+									Servlets, Java classes, XML files, static Web pages etc.</p>
+							</div>
+						</details>
+						<details>
+							<summary>29. Define JIT compiler?</summary>
+							<div class="toggle-content">
+								<p>It improves the runtime performance of computer programs based on bytecode.</p>
+							</div>
+						</details>
+						<details>
+							<summary>30. What is the difference between object oriented programming language and object
+								based programming language?</summary>
+							<div class="toggle-content">
+								<p>Object based programming languages follow all the features of OOPs except
+									Inheritance. JavaScript is an example of object based programming languages.</p>
+							</div>
+						</details>
+						<details>
+							<summary>31. What is the purpose of default constructor?</summary>
+							<div class="toggle-content">
+								<p>The java compiler creates a default constructor only if there is no constructor
+									in the class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>32. Can a constructor be made final?</summary>
+							<div class="toggle-content">
+								<p>No, this is not possible.</p>
+							</div>
+						</details>
+						<details>
+							<summary> What 33.is static block?</summary>
+							<div class="toggle-content">
+								<p>It is used to initialize the static data member, It is excuted before main method
+									at the time of classloading.</p>
+							</div>
+						</details>
+						<details>
+							<summary>34. What is final class?</summary>
+							<div class="toggle-content">
+								<p>Final classes are created so the methods implemented by that class cannot be
+									overridden. It can’t be inherited.</p>
+							</div>
+						</details>
+						<details>
+							<summary>35. What is NullPointerException?</summary>
+							<div class="toggle-content">
+								<p>A NullPointerException is thrown when calling the instance method of a null
+									object, accessing or modifying the field of a null object etc.</p>
+							</div>
+						</details>
+						<details>
+							<summary>36. How many bits are used to represent Unicode, ASCII, UTF-16, and UTF-8
+								characters?</summary>
+							<div class="toggle-content">
+								<p>Unicode requires 16 bits and ASCII require 7 bits. Although the ASCII character
+									set uses only 7 bits, it is usually represented as 8 bits. UTF-8 represents
+									characters using 8, 16, and 18 bit patterns. UTF-16 uses 16-bit and larger bit
+									patterns.</p>
+							</div>
+						</details>
+						<details>
+							<summary>37. What are Wrapper classes?</summary>
+							<div class="toggle-content">
+								<p>These are classes that allow primitive types to be accessed as objects. Example:
+									Integer, Character, Double, Boolean etc.</p>
+							</div>
+						</details>
+						<details>
+							<summary>38. What is the difference between static and non-static variables?</summary>
+							<div class="toggle-content">
+								<p>A static variable is associated with the class as a whole rather than with
+									specific instances of a class. Non-static variables take on unique values with
+									each object instance.</p>
+							</div>
+						</details>
+						<details>
+							<summary>39. What is Serialization and deserialization?</summary>
+							<div class="toggle-content">
+								<p>Serialization is the process of writing the state of an object to a byte stream.
+									Deserialization is the process of restoring these objects.</p>
+							</div>
+						</details>
+						<details>
+							<summary>40. What's the difference between constructors and other methods?</summary>
+							<div class="toggle-content">
+								<p>Constructors must have the same name as the class and can not return a value.
+									They are only called once while regular methods could be called many times.</p>
+							</div>
+						</details>
+						<details>
+							<summary>41. What is a transient variable?</summary>
+							<div class="toggle-content">
+								<p>A transient variable is a variable that may not be serialized during
+									Serialization and which is initialized by its default value during
+									de-serialization,</p>
+							</div>
+						</details>
+						<details>
+							<summary>42. What is synchronization?</summary>
+							<div class="toggle-content">
+								<p>Synchronization is the capability to control the access of multiple threads to
+									shared resources. synchronized keyword in java provides locking which ensures
+									mutual exclusive access of shared resource and prevent data race.</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>43. Does garbage collection guarantee that a program will not run out of
+								memory?</summary>
+							<div class="toggle-content">
+								<p>Garbage collection does not guarantee that a program will not run out of memory.
+									It is possible for programs to use up memory resources faster than they are
+									garbage collected. It is also possible for programs to create objects that are
+									not subject to garbage collection.</p>
+							</div>
+						</details>
+						<details>
+							<summary>44. What is the difference between a break statement and a continue
+								statement?</summary>
+							<div class="toggle-content">
+								<p>A break statement results in the termination of the statement to which it applies
+									(switch, for, do, or while). A continue statement is used to end the current
+									loop iteration and return control to the loop statement.</p>
+							</div>
+						</details>
+						<details>
+							<summary>45. If a variable is declared as private, where may the variable be
+								accessed?</summary>
+							<div class="toggle-content">
+								<p>A private variable may only be accessed within the class in which it is declared.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>46. What is the purpose of the System class?</summary>
+							<div class="toggle-content">
+								<p>The purpose of the System class is to provide access to system resources.</p>
+							</div>
+						</details>
+						<details>
+							<summary>47. List primitive Java types?</summary>
+							<div class="toggle-content">
+								<p>The eight primitive types are byte, char, short, int, long, float, double, and
+									boolean.</p>
+							</div>
+						</details>
+						<details>
+							<summary>48. Under what conditions is an object's finalize() method invoked by the garbage
+								collector?</summary>
+							<div class="toggle-content">
+								<p>The garbage collector invokes an object's finalize() method when it detects that
+									the object has become unreachable.</p>
+							</div>
+						</details>
+						<details>
+							<summary>49. What are ClassLoaders?</summary>
+							<div class="toggle-content">
+								<p>A class loader is an object that is responsible for loading classes. The class
+									ClassLoader is an abstract class.</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>50. Why do we need wrapper classes?</summary>
+							<div class="toggle-content">
+								<p>We can pass them around as method parameters where a method expects an object. It
+									also provides utility methods.</p>
+							</div>
+						</details>
+						<details>
+							<summary>51. What is the Locale class?</summary>
+							<div class="toggle-content">
+								<p>The Locale class is used to tailor program output to the conventions of a
+									particular geographic, political, or cultural region.</p>
+							</div>
+						</details>
+						<details>
+							<summary>52. What are synchronized methods and synchronized statements?</summary>
+							<div class="toggle-content">
+								<p>Synchronized methods are methods that are used to control access to an object. A
+									synchronized statement can only be executed after a thread has acquired the lock
+									for the object or class referenced in the synchronized statement.</p>
+							</div>
+						</details>
+						<details>
+							<summary>53. Describe life cycle of thread?</summary>
+							<div class="toggle-content">
+								<p>A thread is a execution in a program. The life cycle of a thread include −</p>
+								<ul class="list">
+									<li>Newborn state</li>
+									<li>Runnable state</li>
+									<li>Running state</li>
+									<li>Blocked state</li>
+									<li>Dead state</li>
+								</ul>
+							</div>
+						</details>
+
+						<details>
+							<summary>54. Why Generics are used in Java?</summary>
+							<div class="toggle-content">
+								<p>Generics provide compile-time type safety that allows programmers to catch
+									invalid types at compile time. Java Generic methods and generic classes enable
+									programmers to specify, with a single method declaration, a set of related
+									methods or, with a single class declaration, a set of related types.</p>
+							</div>
+						</details>
+						<details>
+							<summary>55. What environment variables do I need to set on my machine in order to be able
+								to
+								run Java programs?</summary>
+							<div class="toggle-content">
+								<p>CLASSPATH and PATH are the two variables.</p>
+							</div>
+						</details>
+						<details>
+							<summary>56. Is there any need to import java.lang package?</summary>
+							<div class="toggle-content">
+								<p>No, there is no need to import this package. It is by default loaded internally
+									by the JVM.</p>
+							</div>
+						</details>
+						<details>
+							<summary>57. What is Externalizable interface?</summary>
+							<div class="toggle-content">
+								<p>Externalizable is an interface which contains two methods readExternal and
+									writeExternal. These methods give you a control over the serialization
+									mechanism.</p>
+							</div>
+						</details>
+						<details>
+							<summary>58. If System.exit (0); is written at the end of the try block, will the finally
+								block still execute?</summary>
+							<div class="toggle-content">
+								<p>No in this case the finally block will not execute because when you say
+									System.exit (0); the control immediately goes out of the program, and thus
+									finally never executes.</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>59. What is the GregorianCalendar class?</summary>
+							<div class="toggle-content">
+								<p>The GregorianCalendar provides support for traditional Western calendars</p>
+							</div>
+						</details>
+						<details>
+							<summary>60. What is the SimpleTimeZone class?</summary>
+							<div class="toggle-content">
+								<p>The SimpleTimeZone class provides support for a Gregorian calendar .</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>61. What is difference between Path and Classpath?</summary>
+							<div class="toggle-content">
+								<p>Path and Classpath are operating system level environment variales. Path is
+									defines where the system can find the executables(.exe) files and classpath is
+									used to specify the location of .class files.</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>62. What is an object's lock and which object's have locks?</summary>
+							<div class="toggle-content">
+								<p>An object's lock is a mechanism that is used by multiple threads to obtain
+									synchronized access to the object. A thread may execute a synchronized method of
+									an object only after it has acquired the object's lock.</p>
+							</div>
+						</details>
+						<details>
+							<summary>63. What is Downcasting?</summary>
+							<div class="toggle-content">
+								<p>It is the casting from a general to a more specific type, i.e. casting down the
+									hierarchy.</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>64. What is the difference between inner class and nested class?</summary>
+							<div class="toggle-content">
+								<p>When a class is defined within a scope of another class, then it becomes inner
+									class. If the access modifier of the inner class is static, then it becomes
+									nested class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>65. What is constructor chaining and how is it achieved in Java?</summary>
+							<div class="toggle-content">
+								<p>A child object constructor always first needs to construct its parent. In Java it
+									is done via an implicit call to the no-args constructor as the first statement.
+								</p>
+							</div>
+						</details>
+						<br>
+						<h1><b>2. Java Encapsulation Interview Questions</b></h1>
+						<br>
+						<details>
+							<summary>1. What is Encapsulation in Java?</summary>
+							<div class="toggle-content">
+								<p>Encapsulation is the main concept of OOPs (Object-Oriented programming).
+									Encapsulation means wrapping or binding data and methods in a single unit. It is
+									also known as data hiding. Data hiding means it derived the result of a specific
+									class. This also means that is not directly accessible. Data in Encapsulation is
+									private, the results of the data are called by using different methods. The code is
+									wrapped in such a way that it cannot be randomly accessed by other codes outside the
+									class.<br>
+									Encapsulation Rules:
+									<br>
+									Always make-instance variable private.<br>
+									Always make public accessor methods and force calling code to these methods instead
+									of directly calling the instance variable.<br>
+									Use naming convention set() and get for these methods.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>2. How Encapsulation is helpful in Java?</summary>
+							<div class="toggle-content">
+								<p>
+								<ol>
+									<li>Encapsulated codes can be tested easily. Encapsulation helps in securing the
+										code.</li>
+
+									<li>To do changes in the Encapsulated code is easy as we can change in a code or
+										class without
+										affecting other code or classes.
+									</li>
+
+									<li>Encapsulated code can be reused and maintained for data hiding.</li>
+								</ol>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>3. What are the advantages of Encapsulation?</summary>
+							<div class="toggle-content">
+								<p>
+								<ol>
+									<li><b>Security: </b>It keeps the codes and data safe from external inheritance.
+									</li>
+									<li><b>Flexibility: </b> It keeps the codes and data safe from external inheritance.
+									</li>
+									<li><b>Easy unit testing: </b>As all data is encapsulated or wrapped in a single
+										unit the code
+										testing becomes easier.
+									</li>
+									<li><b>Reuse of code: </b>It allows modifying implemented code without breaking
+										other code that
+										has implemented the code.
+									</li>
+
+									<li>Encapsulation in Java is used for data hiding.</li>
+									<li>It is helpful to reuse the code.</li>
+									<li>Unit testing is very easy for an encapsulated code.</li>
+									<li>Encapsulated code is easy to maintain like we can change in a code or class
+										without
+										affecting other code or classes.</li>
+									<li>Encapsulation helps to make our code secure.</li>
+								</ol>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>4. What are the difference between data hiding and Encapsulation?</summary>
+							<div class="toggle-content">
+								<p>Data hiding and encapsulation both are important concepts of object-oriented
+									programming.
+									<br>
+									Data hiding means protecting the variable of a class from outside world access.
+									Encapsulation means wrapping or binding data in a single unit.
+									<br>
+									The core differences between data hiding and encapsulation are :<br>
+								<table border="1" cellpadding="1" cellspacing="1" style="width:95%;font-size: 0.999rem;"
+									class="table">
+									<tbody>
+										<tr style="background-color: #f8fcff;">
+											<td style="text-align: center;width: 40vw;">
+												<h5>Data hiding</h5>
+											</td>
+											<td style="text-align: center;width: 40vw;">
+												<h5>Encapsulation</h5>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>Data hiding more focuses on securing the data along with hiding.</p>
+											</td>
+											<td>
+												<p>Encapsulation focuses more on wrapping data to make classes and the
+													methods in the
+													simplest form for the system.</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>It is a technique and process both.</p>
+											</td>
+											<td>
+												<p>It is a sub-process in data hiding.</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>The data is always private and inaccessible.</p>
+											</td>
+											<td>
+												<p>The data may be private or public.</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>5. Where Encapsulation is used?</summary>
+							<div class="toggle-content">
+								<p>Encapsulation is used in various design patterns and real-life problems that make use
+									of the Encapsulation object-oriented concept. It is used to hide the values or state
+									of a structured data object inside a class, preventing unauthorized parties direct
+									access to them.</p>
+							</div>
+						</details>
+						<details>
+							<summary>6. What are the difference between Encapsulation and Inheritance?</summary>
+							<div class="toggle-content">
+								<p>
+								<table border="1" cellpadding="1" cellspacing="1"
+									style="width:95%;border: 1px solid #000;font-size: 0.999rem;" class="table">
+									<tbody>
+										<tr mode="sticky" style="background-color: #f8fcff;">
+											<td style="text-align: center;width: 5vw;">
+												<h5>Difference</h5>
+											</td>
+											<td style="text-align: center;width: 45vw;">
+												<h5>Encapsulation</h5>
+											</td>
+											<td style="text-align: center;width: 45vw;">
+												<h5>Inheritance</h5>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>Basic</p>
+											</td>
+											<td>
+												<p>Encapsulation in Java is the process of enclosing variables and
+													methods code that
+													perform on data as a single unit. It hides a class's variables,
+													helping to make them
+													unreachable from outside the class.</p>
+											</td>
+											<td>
+												<p>Inheritance is the process of creating a new class by using an
+													existing class in a
+													function. In other words, inheritance is a process where a child
+													class /subclass
+													inherits all the properties and behaviors of the parent
+													class/superclass.</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>Focus</p>
+											</td>
+											<td>
+												<p>It focuses on minimizing the complex system. It mainly works in
+													Design patterns.</p>
+											</td>
+											<td>
+												<p>It focuses on behavior and attributes of a parent class is inherited
+													by the child
+													class.</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>Conclusion</p>
+											</td>
+											<td>
+												<p>The result is derived by calling a particular class without affecting
+													other
+													classes.</p>
+											</td>
+											<td>
+												<p>The result is derived by calling each class that is inherited.</p>
+											</td>
+										</tr>
+
+										<tr>
+											<td>
+												<p>Process</p>
+											</td>
+											<td>
+												<p>Encapsulation has methods in which there is one main class and other
+													sub-classes
+													(private, protected, public).</p>
+											</td>
+											<td>
+												<p>Types of inheritance are FIVE :
+												</p>
+												<ol>
+													<li>Single Inheritance</li>
+
+													<li>Multilevel Inheritance</li>
+
+													<li>Hierarchical Inheritance</li>
+
+													<li>Multiple Inheritance (Through Interface)</li>
+
+													<li>Hybrid Inheritance (Through Interface)</li>
+												</ol>
+												<p></p>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>7. What is the difference between Encapsulation and Abstraction?</summary>
+							<div class="toggle-content">
+								<p>
+								<ol>
+									<li>Definition: Encapsulation is wrapping or binding data in a single unit.</li>
+
+									<li>Abstraction is hiding the implementation details from the user.</li>
+
+									<li>Encapsulation solves the problem at an implementation level. Abstraction solves
+										the problem
+										at a design level.
+									</li>
+
+									<li>Encapsulation is used for code binding in single-unit to protect from the
+										outside world.
+									</li>
+
+									<li>Abstraction is used for hiding unwanted data and giving results for relevant
+										data.</li>
+
+									<li>Encapsulation focus on an object, its behavior and properties, and what it does.
+									</li>
+
+									<li>Abstraction only focuses on the object and not how it works.</li>
+
+									<li>Example of Encapsulation: Laptop: Inner implementation of the laptop, display
+										screen, and
+										buttons are connected using different circuits. (sample code is to be given).
+									</li>
+
+									<li>Example of Abstraction: Laptop: Outer look of laptop, screen size, keyboard.
+									</li>
+
+								</ol>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>8. Why Encapsulation is called Data hiding in Java?</summary>
+							<div class="toggle-content">
+								<p>Encapsulation is a technique whereby the implementation details of a class are kept
+									hidden
+									from the user. In other words, the variable of the class is hidden and is accessed
+									only by
+									using methods. Therefore, it is also known as data hiding.</p>
+							</div>
+						</details>
+						<details>
+							<summary>9. What are the advantages of using Encapsulation?</summary>
+							<div class="toggle-content">
+								<p>Encapsulation can be achieved by declaring all the variables in the class as private
+									and
+									writing public methods in the class to set and get the values of the variables.</p>
+							</div>
+						</details>
+						<details>
+							<summary>10. How does getter and setter functions help in encapsulation?</summary>
+							<div class="toggle-content">
+								<p>In encapsulation, the getters and setters method is because to hide the attributes of
+									an
+									object class from other classes so that no accidental modification of the data
+									happens by
+									methods in other classes.<br> Example:
+									<br>
+									Declare class variables/attributes as private.<br>
+									Provide public get and set methods to access and update the value of a private
+									variable.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>11.What is the difference between Encapsulation and Polymorphism?</summary>
+							<div class="toggle-content">
+								<p>Packaging data and methods in a single unit are Encapsulation. Their own methods are
+									used for
+									accessing the data which are hidden in the objects.
+									<br>
+									The word polymorphism means Poly means many and morph means form.
+									<br>
+									Polymorphism means the ability to take more than one form by using a single
+									interface. when
+									single or many types are not defined by name it represents any type by using
+									abstract
+									symbols. Polymorphism is a process used for implementing inherited data.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>12. What do you understand by interfaces and abstract classes? How do they help
+								with encapsulation?</summary>
+							<div class="toggle-content">
+								<p>Interfaces and abstract classes help with encapsulation by allowing you to specify
+									the behavior of a class without having to provide a concrete implementation. This
+									means that you can hide the details of how a class works from the outside world, and
+									only expose the interface that you want other classes to use. This makes it much
+									easier to change the internals of a class without breaking any code that depends on
+									it.</p>
+							</div>
+						</details>
+						<details>
+							<summary>13. Why should we use private constructors?</summary>
+							<div class="toggle-content">
+								<p>Private constructors are used in order to prevent a class from being instantiated.
+									This is often done in order to enforce the Singleton pattern, where only one
+									instance of a class is allowed to exist.</p>
+							</div>
+						</details>
+						<details>
+							<summary>14. What are some ways to achieve encapsulation in Java?</summary>
+							<div class="toggle-content">
+								<p>There are a few ways to achieve encapsulation in Java. One way is to make all fields
+									in a class private, and then provide getter and setter methods for accessing those
+									fields. Another way is to use the JavaBeans convention of using only getters and
+									setters, and keeping all fields private.</p>
+							</div>
+						</details>
+						<details>
+							<summary>15. How to achieve Data hiding programmatically?</summary>
+							<div class="toggle-content">
+								<p>By declaring data members (variables) as private, we can achieve or implement data
+									hiding. If the variables are declared as private in the class, nobody can access
+									them
+									from outside the class.
+									<br>
+									The biggest advantage of data hiding is we can achieve security.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>16. Does reflection violates encapsulation in Java?</summary>
+							<div class="toggle-content">
+								<p>Reflection violates encapsulation because it reveals the internal data structures.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>17. Explain design pattern based on encapsulation in java?</summary>
+							<div class="toggle-content">
+								<p>In many design patterns, Java uses the encapsulation technique and one of them is
+									Factory
+									pattern which is used to create the objects.
+									<br>
+									Factory pattern is a better choice in creating the object of those classes whose
+									creation logic can vary. It is also used for creating different implementations of
+									the
+									same interface.
+									<br>
+									‘BorderFactory class’ of JDK is a good example of encapsulation in Java which
+									creates
+									different types of ‘border’ and encapsulates creation logic of border.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>18. What is a Tightly encapsulated class in Java?</summary>
+							<div class="toggle-content">
+								<p>If each variable is declared as private in the class, it is called tightly
+									encapsulated
+									class in Java. For tightly encapsulated class, we are not required to check whether
+									class contains getter and setter method or not and whether these methods are
+									declared as
+									public or not.</p>
+							</div>
+						</details>
+						<br>
+						<h1><b>3. Java Abstraction Interview Questions</b></h1>
+						<br>
+						<details>
+							<summary>1. What is Abstraction in Java?</summary>
+							<div class="toggle-content">
+								<p>In computer science terms, abstraction means separating ideas from their actual
+									implementations.<br>
+									Abstraction in Java is a technique by which we can hide the data that is not
+									required
+									to users. It hides all unwanted data so that users can work only with the required
+									data<br>Using abstraction, you define only ideas in one class so that those ideas
+									can be implemented by its sub classes according to their requirments.<br>
+									In Java, abstraction is implemented by abstrat classes and interfaces.<br>
+									Abstract is a non-access modifier in java that is applicable for classes,
+									interfaces, methods, and inner classes.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>2. How to achieve or implement Abstraction in Java?</summary>
+							<div class="toggle-content">
+								<p>There are two ways to implement abstraction in java. They are as follows:
+									<br>
+									a) Abstract class (0 to 100%)<br>
+									b) Interface (100%)
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>3. What is the difference between abstract class and concrete class?
+							</summary>
+							<div class="toggle-content">
+								<p>There are mainly two differences between an abstract class and concrete class. They
+									are:<br>
+
+									a) We cannot create an object of abstract class. Only objects of its non-abstract
+									(or concrete) sub classes can be created.
+									<br>
+									b) It can have zero or more abstract methods that are not allowed in a non-abstract
+									class (concrete class).
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>4. When to use Abstract method in Java?</summary>
+							<div class="toggle-content">
+								<p>An abstract method can be used
+									<br>
+									a) When the same method has to perform different tasks depending on the object
+									calling it.<br>
+									b) When you need to be overridden in its non-abstract subclasses.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>5. Is abstract class a pure abstraction in Java?</summary>
+							<div class="toggle-content">
+								<p>No, It provides 0 to 100% abstraction.</p>
+							</div>
+						</details>
+						<details>
+							<summary>6. Is it possible to create an object of abstract class in Java?</summary>
+							<div class="toggle-content">
+								<p>No. It is not possible but we can create an object of its subclass.</p>
+							</div>
+						</details>
+						<details>
+							<summary>7. Is it possible that an abstract class can have without any abstract method?
+							</summary>
+							<div class="toggle-content">
+								<p>Yes.</p>
+							</div>
+						</details>
+						<details>
+							<summary>8. Can an abstract class have constructor?</summary>
+							<div class="toggle-content">
+								<p>Yes.</p>
+							</div>
+						</details>
+						<details>
+							<summary>9. Is abstract class allow to define private, final, static, and concrete methods?
+							</summary>
+							<div class="toggle-content">
+								<p>Yes.</p>
+							</div>
+						</details>
+						<details>
+							<summary>10. Is it possible to achieve multiple inheritance through abstract class?
+							</summary>
+							<div class="toggle-content">
+								<p>No.</p>
+							</div>
+						</details>
+						<details>
+							<summary>11. Why abstract class has constructor even though you cannot create object?
+							</summary>
+							<div class="toggle-content">
+								<p>We cannot create an object of abstract class but we can create an object of subclass
+									of abstract class. When we create an object of subclass of an abstract class, it
+									calls the constructor of subclass.
+									<br>
+									This subclass constructor has a super keyword in the first line that calls
+									constructor of an abstract class. Thus, the constructors of an abstract class are
+									used from constructor of its subclass.
+									<br>
+									If the abstract class doesn’t have constructor, a class that extends that abstract
+									class will not get compiled.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>12. What is the advantage of Abstract class in Java?</summary>
+							<div class="toggle-content">
+								<p>The main advantages of using abstract class are as follows:
+									<br>
+									Abstract class makes programming better and more flexible by giving the scope of
+									implementing abstract methods.<br>
+									Programmer can implement abstract method to perform different tasks depending on the
+									need.<br>It is helpful in hiding unwanted details from users.<br>
+									We can easily manage code.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>13. What are the differences between Abstraction and Encapsulation?</summary>
+							<div class="toggle-content">
+								<p>
+								<table border="1" cellpadding="1" cellspacing="1"
+									style="width:95%;border: 1px solid #000;font-size: 0.999rem;" class="table">
+									<tbody>
+										<tr mode="sticky" style="background-color: #f8fcff;">
+											<td style="text-align: center;width: 5vw;">
+												<h5>Difference</h5>
+											</td>
+											<td style="text-align: center;width: 45vw;">
+												<h5>Abstraction</h5>
+											</td>
+											<td style="text-align: center;width: 45vw;">
+												<h5>Encapsulation</h5>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>Basic</p>
+											</td>
+											<td>
+												<p>Abstraction means hiding details from the users and showing only
+													necessary details to
+													the users.</p>
+											</td>
+											<td>
+												<p>Encapsulation means binding data in a single unit.</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>Focus</p>
+											</td>
+											<td>
+												<p>
+													Abstraction solves the problem at the <b>design level</b>.<br>
+													Abstraction only focuses on the object and not how it works.
+												</p>
+											</td>
+											<td>
+												<p>Encapsulation solves the problem at the <b>implementation level</b>.
+												</p>
+												<p>Encapsulation focus on an binding data in one unit and implementing
+													its object, its
+													behavior and properties, and what it does.
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>Conclusion</p>
+											</td>
+											<td>
+												<p>Abstraction breaks the <b>complexity</b> of the data.</p>
+											</td>
+											<td>
+												<p>Encapsulation maintains the <b>flexibility</b> of the data.</p>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>14. What are the difference between Abstraction and Polymorphism?</summary>
+							<div class="toggle-content">
+								<p>
+								<table border="1" cellpadding="1" cellspacing="1"
+									style="width:95%;border: 1px solid #000;font-size: 0.999rem;" class="table">
+									<tbody>
+										<tr mode="sticky" style="background-color: #f8fcff;">
+											<td style="text-align: center;width: 5vw;">
+												<h5>Difference</h5>
+											</td>
+											<td style="text-align: center;width: 45vw;">
+												<h5>Abstraction</h5>
+											</td>
+											<td style="text-align: center;width: 45vw;">
+												<h5>Polymorphism</h5>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>Basic</p>
+											</td>
+											<td>
+												<p>Abstraction is a technique of showing necessary details.</p>
+											</td>
+											<td>
+												<p>Polymorphism is a process for implementing inherited data.</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>Focus</p>
+											</td>
+											<td>
+												<p>Abstraction is based on design level pattern. There are two types of
+													abstraction:
+												</p>
+												<ul>
+													<li>Data Abstraction</li>
+													<li>Process Abstraction</li>
+												</ul>
+												<p></p>
+											</td>
+											<td>
+												<p>Polymorphism is used when single or many types are not defined by
+													name it represents
+													any type by using abstract symbols.</p>
+												<p>There are two types of Polymorphism:
+												</p>
+												<ul>
+													<li>Compile-time Polymorphism (or Static polymorphism) - Example
+														Method
+														Overloading
+													</li>
+													<li>Runtime Polymorphism (or Dynamic polymorphism) - Example Method
+														Overriding</li>
+												</ul>
+												<p></p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>Conclusion</p>
+											</td>
+											<td>
+												<p>Abstraction can be implemented , when the main class is <b>static</b>
+													or
+													<b>concrete</b>. Overridden is must.
+												</p>
+											</td>
+											<td>
+												<p>Polymorphism can be implemented when data is <b>static</b> or
+													<b>dynamic</b>.
+												</p>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>15. Difference between Abstract class and Interface in java?</summary>
+							<div class="toggle-content">
+								<p>
+								<table border="1" cellpadding="1" cellspacing="1"
+									style="width:95%;border: 1px solid #000;font-size: 0.999rem;" class="table">
+									<tbody>
+										<tr mode="sticky" style="background-color: #f8fcff;">
+											<td style="text-align: center;width: 45vw;">
+												<h5>Abstract class</h5>
+											</td>
+											<td style="text-align: center;width: 45vw;">
+												<h5>Interface</h5>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>In abstract class both the methods are used abstract and
+													non-abstract.</p>
+											</td>
+											<td>
+												<p>In interface, only an abstract method is used.</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>Multiple inheritances are not supported in abstract classes.
+												</p>
+											</td>
+											<td>
+												<p>The interface supports multiple inheritances.
+												</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>The implementation of an interface is provided by the abstract class.
+												</p>
+											</td>
+											<td>
+												<p>The interface cannot provide implementation to an abstract class.</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p>The abstract is protected and private.</p>
+											</td>
+											<td>
+												<p>An interface is only public.</p>
+											</td>
+										</tr>
+
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>16. Should abstract methods be overridden?</summary>
+							<div class="toggle-content">
+								<p>Yes, all the abstract methods in the subclass should be overridden because the java
+									compiler will not accept and give the compile-time error.</p>
+							</div>
+						</details>
+						<details>
+							<summary>17. Why should we create reference to superclass (abstract class reference)?
+							</summary>
+							<div class="toggle-content">
+								<p>We should create a reference of the superclass to access subclass features because
+									superclass reference allows only to access those features of subclass which have
+									already declared in superclass.
+									<br>
+									If you create an individual method in subclass, the superclass reference cannot
+									access that method. Thus, any programmer cannot add their own additional features in
+									subclasses other than whatever is given in superclass.
+								</p>
+							</div>
+						</details>
+						<br>
+						<h1><b>4. Java Polymorphism Interview Questions</b></h1>
+						<br>
+						<details>
+							<summary>1. What is Polymorphism in Java OOPs?</summary>
+							<div class="toggle-content">
+								<p>Polymorphism in java is one of the core concepts of object-oriented programming
+									system. Polymorphism means “many forms” in Greek. That is one thing that can take
+									many forms.
+									<br>
+									Polymorphism is a concept by which we can perform a single task in different ways.
+									That is, when a single entity (object) behaves differently in different cases, it is
+									called polymorphism.
+									<br>
+									In other words, if a single object shows multiple forms or multiple behaviors, it is
+									called polymorphism.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>2. What are the types of Polymorphism in Java?</summary>
+							<div class="toggle-content">
+								<p>There are two types of polymorphism in java. They are:<br>
+								<ul style="list-style-type: square;">
+									<li>Static polymorphism (Compile time Polymorphism)</li>
+									<li>Dynamic polymorphism (Runtime Polymorphism)</li>
+								</ul>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>3. What are different ways to achieve or implement polymorphism in Java?</summary>
+							<div class="toggle-content">
+								<p>Polymorphism in Java can be primarily achieved by subclassing or by implementing an
+									interface. The subclasses can have their own unique implementation for certain
+									features and can also share some of the functionality through inheritance.</p>
+							</div>
+						</details>
+						<details>
+							<summary>4. How is Inheritance useful to achieve Polymorphism in Java?</summary>
+							<div class="toggle-content">
+								<p>Inheritance represents the parent-child relationship between two classes and
+									polymorphism take the advantage of that relationship to add dynamic behavior in the
+									code (or to make the program more dynamic).</p>
+							</div>
+						</details>
+						<details>
+							<summary>5. What are the differences between Polymorphism and Inheritance in Java?</summary>
+							<div class="toggle-content">
+								<p>The differences between polymorphism and inheritance in java are as follows:
+									<br>
+									a. Inheritance represents the parent-child relationship between two classes. On the
+									other hand, polymorphism takes the advantage of that relationship to make the
+									program more dynamic.
+									<br>
+									b. Inheritance helps in code reusability in child class by inheriting behavior from
+									parent class. On the other hand, polymorphism enables child class to redefine
+									already defined behavior inside parent class.
+									<br>
+									Without polymorphism, it is not possible for a child class to execute its own
+									behavior.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>6. What is Compile time polymorphism (Static polymorphism)?</summary>
+							<div class="toggle-content">
+								<p>A polymorphism where object binding with methods happens at compile time is called
+									static polymorphism or compile-time polymorphism.
+									<br>
+									In static polymorphism, the behavior of method is decided at compile-time based on
+									the parameters or arguments of method.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>7. How to achieve or implement static polymorphism in Java?</summary>
+							<div class="toggle-content">
+								<p>Static polymorphism can be achieved by method overloading. Other examples of compile
+									time polymorphism are constructor overloading and method hiding.</p>
+							</div>
+						</details>
+						<details>
+							<summary>8. What is Runtime Polymorphism (Dynamic Polymorphism)?</summary>
+							<div class="toggle-content">
+								<p>A polymorphism where object binding with methods happens at runtime is called runtime
+									polymorphism. In runtime polymorphism, the behavior of a method is decided at
+									runtime.
+									<br>
+									JVM (Java Virtual Machine) binds the method call with method definition/body at
+									runtime and invokes the relevant method during runtime when the method is called.
+									This happens because objects are created at runtime and the method is called using
+									an object of the class.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>9. How to achieve/implement dynamic polymorphism in Java?</summary>
+							<div class="toggle-content">
+								<p>Dynamic or runtime polymorphism can be achieved or implemented via method overriding
+									in java. It is another way to implement polymorphism and a common approach when we
+									have an IS-A relationship.</p>
+							</div>
+						</details>
+						<details>
+							<summary>10. What are the differences between compile-time polymorphism and runtime
+								polymorphism in java?</summary>
+							<div class="toggle-content">
+								<p>There are three main differences between compile-time polymorphism and runtime
+									polymorphism that are as follows:</p>
+								<p>
+									a) In the compile-time polymorphism, the behavior of a method is decided at
+									compile-time. Hence, Java compiler binds method calls with method definition/body
+									during compilation.</p>
+								<p>
+									In runtime polymorphism, the behavior of a method is decided at runtime, JVM binds
+									the method call with method definition at runtime and invokes the relevant method
+									during runtime when the method is called.</p>
+								<p>
+									b) Compile time polymorphism is also known as early binding because the binding is
+									performed at compile time.</p>
+								<p>
+									Runtime polymorphism is also known as late binding because the binding is performed
+									at runtime.</p>
+								<p>
+									c) Compile time polymorphism can be achieved via method overloading.</p>
+								<p>
+									Runtime polymorphism can be achieved via method overriding.</p>
+							</div>
+						</details>
+						<details>
+							<summary>11. How is an abstract class related to polymorphism in Java?</summary>
+							<div class="toggle-content">
+								<p>Polymorphism in Java allows objects of different classes to be treated as if they
+									were of the same type. An abstract class can be used as a base class for creating
+									objects of its subclasses, and these objects can be treated as if they were of the
+									abstract class type. This allows for polymorphic behavior, where different
+									subclasses can have their own implementation of the abstract methods defined in the
+									abstract class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>12. Understand the benefits and drawbacks:</summary>
+							<div class="toggle-content">
+								<p>Polymorphism has several benefits, including code reuse and flexibility. However, it
+									can also lead to performance issues and increased complexity. Make sure you
+									understand the advantages and disadvantages of using polymorphism in Java.</p>
+							</div>
+						</details>
+						<details>
+							<summary>13. What are the differences between method overloading and method overriding?
+							</summary>
+							<div class="toggle-content">
+								<p>
+								<table border="1" cellpadding="1" cellspacing="1" style="width:95%;font-size: 0.999rem;"
+									class="table">
+									<thead>
+										<tr>
+											<th>Type</th>
+											<th>Overloaded Method</th>
+											<th>Overloaded Method</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Arguments</td>
+											<td>Must change</td>
+											<td>Must not change</td>
+										</tr>
+										<tr>
+											<td>Return type</td>
+											<td>Can change</td>
+											<td>Can‟t change except for covariant returns</td>
+										</tr>
+										<tr>
+											<td>Exceptions</td>
+											<td>Can change</td>
+											<td>Can reduce or eliminate. Must not throw new or broader checked
+												exceptions.</td>
+										</tr>
+										<tr>
+											<td>Access</td>
+											<td>Can change</td>
+											<td>Must not make more restrictive (can be less restrictive)</td>
+										</tr>
+										<tr>
+											<td>Invocation</td>
+											<td>Reference type determines which overloaded version is selected. Happens
+												at compile time.</td>
+											<td>Object type determines which method is selected. Happens at runtime.
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>14. What is the difference between compile-time polymorphism and runtime
+								polymorphism?</summary>
+							<div class="toggle-content">
+								<p>
+								<table style="margin-left: 0px; margin-right: 0px; text-align: left;">
+									<tbody>
+										<tr>
+											<th style="border: 1px solid #ccc; padding: 5px;">SN</th>
+											<th style="border: 1px solid #ccc; padding: 5px;">compile-time polymorphism
+											</th>
+											<th style="border: 1px solid #ccc; padding: 5px;">Runtime polymorphism</th>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;">1</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">In compile-time
+												polymorphism, call to a method is resolved at
+												compile-time.</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">In runtime polymorphism,
+												call to an overridden method is resolved at
+												runtime.</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;">2</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">It is also known as static
+												binding, early binding, or overloading.</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">It is also known as
+												dynamic binding, late binding, overriding, or
+												dynamic method dispatch.</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;">3</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Overloading is a way to
+												achieve compile-time polymorphism in which, we
+												can define multiple methods or constructors with different signatures.
+											</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Overriding is a way to
+												achieve runtime polymorphism in which, we can
+												redefine some particular method or variable in the derived class. By
+												using overriding, we can give some specific implementation to the base
+												class properties in the derived class.</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;">4</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">It provides fast execution
+												because the type of an object is determined
+												at compile-time.</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">It provides slower
+												execution as compare to compile-time because the type
+												of an object is determined at run-time.</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;">5</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Compile-time polymorphism
+												provides less flexibility because all the
+												things are resolved at compile-time.</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Run-time polymorphism
+												provides more flexibility because all the things
+												are resolved at runtime.</td>
+										</tr>
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<br>
+						<h1><b>5. Java Inheritance Interview Questions</b></h1>
+						<br>
+						<details>
+							<summary>1. What is inheritance in Java?</summary>
+							<div class="toggle-content">
+								<p>Acquiring the features from existing entities is known as “inheritance”.<br> The
+									existing entity is called a super or parent class and the new entity that is
+									acquiring the
+									features of an existing entity is called sub-class or child class. <br>The process
+									of
+									inheriting the properties and behaviors from one object to another object is known
+									as java. <br>Creating a new class from an existing class using an IS-A relationship
+									is
+									known as “inheritance”.</p>
+							</div>
+						</details>
+						<details>
+							<summary>2. What is the purpose of inheritance?</summary>
+							<div class="toggle-content">
+								<p>Inheritance offers code reusability and thereby Rapid Application Development (RAD)
+									is possible.</p>
+							</div>
+						</details>
+						<details>
+							<summary>3. What are the types of inheritance?</summary>
+							<div class="toggle-content">
+								<p>The following are the types of inheritances:<br>
+									a. Single inheritance<br>
+									b. Multi-level inheritance<br>
+									c. Hierarchical inheritance<br>
+									d. Multiple inheritance<br>
+									e. Hybrid inheritance</p>
+
+								<u>Single inheritance:</u> If a class is having only one parent class that is known as
+								“single inheritance”.<br>
+								<u>Multi-level inheritance:</u><br>
+								<u>Hierarchical inheritance:</u>In this inheritance, one class is being extended to more
+								than one class.<br>
+								<u>Multiple Inheritance:</u> In multilevel inheritance, one class is extended by one
+								class. That extended class or the subclass is being extended by another class and forms
+								a chain of relationships between the classes multilevel inheritance.<br>
+								<u>Hybrid inheritance:</u>A hybrid inheritance in java is a combination of single and
+								multiple inheritance. It can be achieved through interfaces.<br></p>
+							</div>
+						</details>
+						<details>
+							<summary>4. What is the purpose of the ‘super’ keyword in Java?</summary>
+							<div class="toggle-content">
+								<p> The following are the major uses of super keyword they are:
+								<ul>
+									<li>If your method overrides one of its super class’s methods, you can invoke the
+										overridden method through the use of the keyword super.</li>
+
+									<li>Using a super keyword we can explicitly call the immediate superclass
+										constructor
+										from the subclass constructor.</li>
+
+									<li>From sub-class, to access instance variables of superclass where a subclass is
+										also
+										having a variable with the same name.</li>
+								</ul>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>5. What are the differences between ‘this’ and ‘super’ keyword?</summary>
+							<div class="toggle-content">
+								<p>Using ‘this’ from within one class constructor, a call can be made to another
+									constructor of the same class.<br> Whereas, using ‘super’ keyword superclass
+									constructor
+									is called from sub-class constructor.</p>
+							</div>
+						</details>
+						<details>
+							<summary>6. I don’t want my class to be inherited by any other class. What should I do?
+							</summary>
+							<div class="toggle-content">
+								<p>You should declare your class as final. But you can’t define your class as final if
+									it is an abstract class. A class declared as final can’t be extended by any other
+									class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>7. What is Is-A relationship in Java?</summary>
+							<div class="toggle-content">
+								<p>Is-A relationship represents Inheritance. It is implemented using the “extends”
+									keyword. It is used for code reusability.</p>
+							</div>
+						</details>
+						<details>
+							<summary>8. Can we assign superclass to subclass?</summary>
+							<div class="toggle-content">
+								<p>No</p>
+							</div>
+						</details>
+						<details>
+							<summary>9. Can a class extend more than one class?</summary>
+							<div class="toggle-content">
+								<p>No, one class can extend only a single class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>10. Are constructor and instance initialization block inherited to subclass?
+							</summary>
+							<div class="toggle-content">
+								<p>No, constructor and instance initialization block of the superclass cannot be
+									inherited to its subclass but they are executed while creating an object of the
+									subclass.</p>
+							</div>
+						</details>
+						<details>
+							<summary>11. Are static members inherited to subclass in Java?</summary>
+							<div class="toggle-content">
+								<p>Static block cannot be inherited to its subclass.
+
+									A static method of superclass is inherited to the subclass as a static member and
+									non-static method is inherited as a non-static member only.</p>
+							</div>
+						</details>
+						<details>
+							<summary>12. Can we extend (inherit) final class?</summary>
+							<div class="toggle-content">
+								<p>No, a class declared with final keyword cannot be inherited.</p>
+							</div>
+						</details>
+						<details>
+							<summary>13. Can a final method and private members overridden?</summary>
+							<div class="toggle-content">
+								<p>No</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>14. What is order of calling constructors in case of inheritance?</summary>
+							<div class="toggle-content">
+								<p>In case of inheritance, constructors are called from the top to down hierarchy.</p>
+							</div>
+						</details>
+						<details>
+							<summary>15. What are the advantages of inheritance in Java?</summary>
+							<div class="toggle-content">
+								<p>The advantages of inheritance in java are as follows:
+								<ul>
+									<li>We can minimize the length of duplicate code in an application by putting the
+										common code in the superclass and sharing it amongst several subclasses.</li>
+									<li>Due to reducing the length of code, the redundancy of the application is also
+										reduced.</li>
+									<li>Inheritance can also make application code more flexible to change.</li>
+								</ul>
+
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>16. Why multiple inheritance is not supported in java through class?</summary>
+							<div class="toggle-content">
+								<p>Multiple inheritance means that one class extends two superclasses or base classes
+									but in Java, one class cannot extend more than one class simultaneously. At most,
+									one class can extend only one class.
+									<br>
+									Therefore, to reduce ambiguity, complexity, and confusion, Java does not support
+									multiple inheritance through classes.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>17. How will you restrict a member of a class from inheriting its subclass?
+							</summary>
+							<div class="toggle-content">
+								<p>We can restrict members of a class by declaring them private because the private
+									members of superclass are not available to the subclass directly. They are only
+									available in their own class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>18. Can we access subclass members if we create an object of superclass?</summary>
+							<div class="toggle-content">
+								<p>No, we can access only superclass members but not the subclass members.</p>
+							</div>
+						</details>
+						<details>
+							<summary>19. Can we access both superclass and subclass members if we create an object of
+								subclass?</summary>
+							<div class="toggle-content">
+								<p>Yes, we can access both superclass and subclass members.</p>
+							</div>
+						</details>
+						<details>
+							<summary>20. What happens if both superclass and subclass have a field with the same name?
+							</summary>
+							<div class="toggle-content">
+								<p>Only subclass members are accessible if an object of subclass is instantiated.</p>
+							</div>
+						</details>
+						<details>
+							<summary>21. What is the diamond problem in inheritance? How can it be resolved in Java?
+							</summary>
+							<div class="toggle-content">
+								<p>The diamond problem is a situation that arises in multiple inheritance when a
+									subclass inherits from two classes that have a common parent class. This creates a
+									diamond-shaped inheritance hierarchy, and if the common parent class has a method
+									that is overridden in both subclasses, it becomes ambiguous which implementation
+									should be used. In Java, this problem is resolved by using the "default" method
+									feature introduced in Java 8. A default method is a method declared in an interface
+									with a default implementation that can be overridden in the implementing class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>23. What is the difference between composition and inheritance?</summary>
+							<div class="toggle-content">
+								<p> Java supports both composition and inheritance, but both are different in many ways.
+									Composition objects have a reference to the composition classes by having a loosely
+									bounded relationship, and it has a – has a relationship between classes. Using this,
+									we can use single classes that can be composed within multiple classes and used in
+									dependency injection and composition is a relationship between objects, whereas
+									Inheritance is a relationship between the classes and it has is a relationship
+									between the classes and using inheritance derived class object carries the base
+									class definition hence it is a tightly bounded relationship. It is mostly used in
+									run time polymorphism, and in this, a single class can only inherit only one class.
+								</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>24. What is the difference between "is-a" and "has-a" relationship?</summary>
+							<div class="toggle-content">
+								<p>"Is-a" relationship is a type of inheritance relationship where a subclass is a
+									specialized version of its superclass. For example, a "Cat" class can inherit from
+									an "Animal" class as it is a specialized type of animal. On the other hand, "has-a"
+									relationship is a type of composition relationship where a class has an instance of
+									another class as one of its members. For example, a "Car" class may have an instance
+									of a "Wheel" class.</p>
+							</div>
+						</details>
+						<br>
+						<h1><b>6. Method Overloading and Overriding Interview Questions</b></h1>
+						<br>
+
+						<details>
+							<summary>1. What is method overloading in Java?</summary>
+							<div class="toggle-content">
+								<p>If two or more methods have same name, but different argument then it is called
+									method overloading.<br>
+									Method overloading is a feature in Java that allows a class to have more than one
+									method with the same name, as long as the methods have different parameter lists.
+									This can be a useful way of providing different behavior for a method depending on
+									the context in which it is called.</p>
+							</div>
+						</details>
+						<details>
+							<summary>2. What are rules of method overloading?</summary>
+							<div class="toggle-content">
+								<p>
+								<table>
+									<tbody>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Number of Arguments</b>
+											</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Overloaded method can have
+												different number of arguments</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Date type</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Overload method can have
+												different data type for argument</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Return type</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Return type can be changed
+												but either number of argument or data type of argument should also be
+												changed.</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Order of arguments</b>
+											</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">If you change sequence of
+												arguments then it is also valid method overloading provided you have
+												different data types arguments.</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Constructor</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can be overloaded</td>
+										</tr>
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>3. Can we change only return type while method overloading?</summary>
+							<div class="toggle-content">
+								<p>You can not.If we change only return type, it will become ambiguous for compiler to
+									figure out which method to call.That is why you can not change only return type.</p>
+							</div>
+						</details>
+						<details>
+							<summary>4. Can we overload static and main method in java?</summary>
+							<div class="toggle-content">
+								<p>Yes, we can overload static methods in java but we can not override them.<br>
+									you can overload main method in java but only method with signature public static
+									void main(String[] args) will be used when your class is invoked by JVM.</p>
+							</div>
+						</details>
+						<details>
+							<summary>5. Can overloaded method be overrided?</summary>
+							<div class="toggle-content">
+								<p>Yes, we can override a method which is overloaded in super class.</p>
+							</div>
+						</details>
+						<details>
+							<summary>6. Can we declare one overloaded method as static and another one as non-static?
+							</summary>
+							<div class="toggle-content">
+								<p>Yes. Overloaded methods can be either static or non static.</p>
+							</div>
+						</details>
+						<details>
+							<summary>7. How do compiler differentiate overloaded methods from duplicate methods?
+							</summary>
+							<div class="toggle-content">
+								<p>Compiler uses method signature to check whether the method is overloaded or
+									duplicated. Duplicate methods will have same method signatures i.e same name, same
+									number of arguments and same types of arguments. Overloaded methods will also have
+									same name but differ in number of arguments or else types of arguments.</p>
+							</div>
+						</details>
+						<details>
+							<summary>8. What is method overriding in Java?</summary>
+							<div class="toggle-content">
+								<p>Method overriding is another way to define a method with same name but different code
+									but it must be in subclass. Overriding is based upon run-time Polymorphism as method
+									calls are resolved at run-time depending upon actual object.
+									<br>
+									For example if a variable of type Parent holds an object of Child class then method
+									invoked will be from child class and not parent class, provides its overridden.
+									<br>
+									In order to override a method, you must follow rules of method overriding which
+									means declaring method with same signature in sub class. See here to learn more
+									about method overriding in Java.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>9. Can we override static method in Java?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot override static method in Java because they are resolved and bonded
+									during compile time. Since overriding is a run-time activity and if a method call is
+									already resolved at compile time then it will not take place and that's why it's not
+									possible to override static method in Java.
+									<br>
+									But, you can define another static method of same signature in sub class, this is
+									known as method hiding. Actual method called will depends upon the type of class and
+									not on type of object as its the case with overriding. See here to learn more about
+									why you cannot override static method in Java.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>10. Can we override a private method in Java?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot override private method in Java. Since private methods are not visible
+									outside the class, they are not available in sub-class hence they cannot be
+									overridden.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>11. What is covariant method overriding?</summary>
+							<div class="toggle-content">
+								<p>One of the rule of method overriding is that return type of overriding method must be
+									same as overridden method but this restriction is relaxed little bit from Java 1.5
+									and now overridden method can return sub class of return type of original method.
+									<br>
+									This relaxation is known as co-variant method overriding and it allows you to remove
+									casting at client end.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>12. What are rules of method overriding?</summary>
+							<div class="toggle-content">
+								<p>
+								<table style="margin-left: 0px; margin-right: 0px; text-align: left;">
+									<tbody>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Arguments</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Must not change</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Return type</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can’t change except for
+												covariant (subtype) returns</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Access Modifier</b>
+											</td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Must not be more
+												restrictive. Can be less restrictive.</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Exceptions </b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can reduce or eliminate
+												but must not throw new/broader checked exceptions</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Contructor</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can not be overridden</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>Static method</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can not be overridden</td>
+										</tr>
+										<tr>
+											<td style="border: 1px solid #ccc; padding: 5px;"><b>final method</b></td>
+											<td style="border: 1px solid #ccc; padding: 5px;">Can not be&nbsp;overridden
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>13. Can we change argument list of overridden method?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot change the argument list of overridden method in Java. An overriding
+									method must have same signature as original method. Only return type can be changed
+									that to only to sub type of return type of original method.</p>
+							</div>
+						</details>
+						<details>
+							<summary>14. Can we change return type of method in subclass while overriding?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot change the return type of method during overriding. It would be
+									violation of rules of overriding. Though from Java 5 onward you can replace the
+									return type with sub type e.g. if original method has return type as
+									java.lang.Object then you can change return type of overridden method as any type
+									e.g. clone() method.</p>
+							</div>
+						</details>
+						<details>
+							<summary>15. Can we override a method which throws run-time exception without throws clause?
+							</summary>
+							<div class="toggle-content">
+								<p>Yes, you can. There is no restriction on throwing RuntimeException from overriding
+									method. So if your original method throws NullPointerException than its not
+									necessary to throw NPE from overriding method as well.</p>
+							</div>
+						</details>
+						<details>
+							<summary>16. How do you call super class version of an overriding method in sub class?
+							</summary>
+							<div class="toggle-content">
+								<p>You can call it using super keyword. For example if you have a method calculate() in
+									both parent and child class then from child class you can invoke parent class method
+									calculate() as super.calculate().</p>
+							</div>
+						</details>
+						<details>
+							<summary>17. Can we override a non-static method as static in Java?</summary>
+							<div class="toggle-content">
+								<p>No, its not possible to define a non-static method of same name as static method in
+									parent class, its compile time error in Java. See here to learn more about the
+									overriding static method in Java.</p>
+							</div>
+						</details>
+						<details>
+							<summary>18. Can we override the constructor in Java?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot override constructors in Java because they are not inherited.
+									Remember, we are talking about overriding here not overloading, you can overload
+									construct but you cannot override them.<br>
+									Overriding always happens in child class and since constructors are not inherited
+									and their name is always the same as the class name it's not possible to override
+									them in Java.</p>
+							</div>
+						</details>
+						<details>
+							<summary>19. Can we override a final method in Java?</summary>
+							<div class="toggle-content">
+								<p>No, you cannot override a final method in Java. Trying to override a final method in
+									a subclass will result in a compile-time error. Actually making a method final is
+									signal to all developer that this method is not for inheritance and it should be
+									used in its present form. You generally make a method final due to security reasons.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>20. Difference Between Method Overloading and Method Overriding in Java</summary>
+							<div class="toggle-content">
+								<p>
+								<table border="1">
+									<tbody>
+										<tr>
+											<td style="width: 50%;"><strong>Method Overloading</strong></td>
+											<td style="width: 50%;"><strong>Method Overriding</strong></td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>It is used to increase the readability of the program</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Provides a specific implementation of the method already in the
+														parent class</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>It is performed within the same class</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>It involves multiple classes</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Parameters must be different in case of overloading</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Parameters must be same in case of overriding</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Is an example of compile-time polymorphism</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>It is an example of runtime polymorphism</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>In java, method overloading can't be performed by changing
+														return type of the method only. Return type can be same or
+														different in method overloading. But you must have to change the
+														parameter.</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Return type must be same or covariant in method overriding.</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Static methods can be overloaded</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Overriding does not involve static methods.</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Method overloading is performed within class.</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Method overriding occurs in two classes that have IS-A
+														(inheritance) relationship.</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Poor Performance due to compile time polymorphism.</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>It gives better performance. The reason behind this is that the
+														binding of overridden methods is being done at runtime.</li>
+												</ul>
+											</td>
+										</tr>
+										<tr>
+											<td style="width: 50%;">
+												<ul>
+													<li>Private and final methods can be overloaded.</li>
+												</ul>
+											</td>
+											<td style="width: 50%;">
+												<ul>
+													<li>Private and final methods can’t be overridden.</li>
+												</ul>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>21. Advantages of Covariant Return Type?</summary>
+							<div class="toggle-content">
+								<p>Before Java5, it was not possible to override any method by changing the return type.
+									But now, since Java5, it is possible to override method by changing the return type
+									if subclass overrides any method whose return type is Non-Primitive but it changes
+									its return type to subclass type<br>
+									Following are the advantages of the covariant return type.
+									<br>
+									1) Covariant return type assists to stay away from the confusing type casts in the
+									class hierarchy and makes the code more usable, readable, and maintainable.
+									<br>
+									2) In the method overriding, the covariant return type provides the liberty to have
+									more to the point return types.
+									<br>
+									3) Covariant return type helps in preventing the run-time ClassCastExceptions on
+									returns.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>22. Java Access Modifiers with Method Overriding?</summary>
+							<div class="toggle-content">
+								<p>If you are overriding any method, overridden method (i.e. declared in subclass) must
+									not be more restrictive.</p>
+							</div>
+						</details>
+						<details>
+							<summary>23. Exception Handling with Method Overriding in Java</summary>
+							<div class="toggle-content">
+								<p>
+								<ul class="points">
+									<li><strong>If the superclass method does not declare an exception</strong>
+										<ul class="points">
+											<li>If the superclass method does not declare an exception, subclass
+												overridden method cannot declare the checked exception but it can
+												declare unchecked exception.</li>
+										</ul>
+									</li>
+									<li><strong>If the superclass method declares an exception</strong>
+										<ul class="points">
+											<li>If the superclass method declares an exception, subclass overridden
+												method can declare same, subclass exception or no exception but cannot
+												declare parent exception.</li>
+										</ul>
+									</li>
+								</ul>
+								</p>
+							</div>
+						</details>
+						<br>
+						<h1><b>7. Java Exception Handling Interview Questions</b></h1>
+						<br>
+						<details>
+							<summary>1. What is an exception in Java, and why is it essential for error handling?
+							</summary>
+							<div class="toggle-content">
+								<p>An exception is an event that occurs during the execution of a program, disrupting
+									the normal flow. It is essential for handling errors and exceptional conditions
+									gracefully.</p>
+							</div>
+						</details>
+						<details>
+							<summary>2. How many types of exception can occur in a Java program?</summary>
+							<div class="toggle-content">
+								<p>There are mainly two types of exceptions: checked and unchecked. Here, an error is
+									considered as the unchecked exception. According to Oracle, there are three types of
+									exceptions:<br>
+								<ul class="points">
+									<li><strong>Checked Exception:</strong> Checked exceptions are the one which are
+										checked at compile-time. For example, SQLException, ClassNotFoundException, etc.
+									</li><br>
+									<li><strong>Unchecked Exception:</strong> Unchecked exceptions are the one which are
+										handled at runtime because they can not be checked at compile-time. For example,
+										ArithmaticException, NullPointerException, ArrayIndexOutOfBoundsException, etc.
+									</li><br>
+									<li><strong>Error:</strong> Error cause the program to exit since they are not
+										recoverable. For Example, OutOfMemoryError, AssertionError, etc.</li>
+								</ul>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>3. What is Exception Handling?</summary>
+							<div class="toggle-content">
+								<p>Exception Handling is a mechanism that is used to handle runtime errors. It is used
+									primarily to handle checked exceptions. Exception handling maintains the normal flow
+									of the program. There are mainly two types of exceptions: checked and unchecked.
+									Here, the error is considered as the unchecked exception.</p>
+							</div>
+						</details>
+						<details>
+							<summary>4. What is the difference between Checked Exception and Unchecked Exception?
+							</summary>
+							<div class="toggle-content">
+								<p>1) Checked Exception<br>
+									The classes that extend Throwable class except RuntimeException and Error are known
+									as checked exceptions, e.g., IOException, SQLException, etc. Checked exceptions are
+									checked at compile-time.
+									<br>
+									2) Unchecked Exception<br>
+									The classes that extend RuntimeException are known as unchecked exceptions, e.g.,
+									ArithmeticException, NullPointerException, etc. Unchecked exceptions are not checked
+									at compile-time.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>5. What is the base class for Error and Exception</summary>
+							<div class="toggle-content">
+								<p>The Throwable class is the base class for Error and Exception.</p>
+							</div>
+						</details>
+						<details>
+							<summary>6. Is it necessary that each try block must be followed by a catch block?</summary>
+							<div class="toggle-content">
+								<p>It is not necessary that each try block must be followed by a catch block. It should
+									be followed by either a catch block OR a finally block. So whatever exceptions are
+									likely to be thrown should be declared in the throws clause of the method.</p>
+							</div>
+						</details>
+						<details>
+							<summary>7. What is finally block?</summary>
+							<div class="toggle-content">
+								<p>The "finally" block is used to execute the important code of the program. It is
+									executed whether an exception is handled or not. In other words, we can say that
+									finally block is the block which is always executed. Finally block follows try or
+									catch block. If you don't handle the exception, before terminating the program, JVM
+									runs finally block, (if any). The finally block is mainly used to place the cleanup
+									code such as closing a file or closing a connection. Here, we must know that for
+									each try block there can be zero or more catch blocks, but only one finally block.
+									The finally block will not be executed if program exits(either by calling
+									System.exit() or by causing a fatal error that causes the process to abort).</p>
+							</div>
+						</details>
+						<details>
+							<summary>8. Can finally block be used without a catch?</summary>
+							<div class="toggle-content">
+								<p>Yes, According to the definition of finally block, it must be followed by a try or
+									catch block, therefore, we can use try block instead of catch.</p>
+							</div>
+						</details>
+						<details>
+							<summary>9. Is there any case when finally will not be executed?</summary>
+							<div class="toggle-content">
+								<p>Finally block will not be executed if program exits(either by calling System.exit()
+									or by causing a fatal error that causes the process to abort).</p>
+							</div>
+						</details>
+						<details>
+							<summary>10. What is the difference between throw and throws?</summary>
+							<div class="toggle-content">
+								<p>
+								<table class="alt">
+									<tbody>
+										<tr>
+											<th>throw keyword</th>
+											<th>throws keyword</th>
+										</tr>
+										<tr>
+											<td>1) The <strong>throw</strong> keyword is used to throw an exception
+												explicitly.</td>
+											<td>The <strong>throws</strong> keyword is used to declare an exception.
+											</td>
+										</tr>
+										<tr>
+											<td>2) The checked exceptions cannot be propagated with throw only.</td>
+											<td>The checked exception can be propagated with throws</td>
+										</tr>
+										<tr>
+											<td>3) The <strong>throw</strong> keyword is followed by an instance.</td>
+											<td>The <strong>throws</strong> keyword is followed by class.</td>
+										</tr>
+										<tr>
+											<td>4) The <strong>throw</strong> keyword is used within the method.</td>
+											<td>The <strong>throws</strong> keyword is used with the method signature.
+											</td>
+										</tr>
+										<tr>
+											<td>5) You cannot throw multiple exceptions.</td>
+											<td>You can declare multiple exceptions, e.g., public void method()throws
+												IOException, SQLException.</td>
+										</tr>
+									</tbody>
+								</table>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>11. Can an exception be rethrown?</summary>
+							<div class="toggle-content">
+								<p>Yes.</p>
+							</div>
+						</details>
+						<details>
+							<summary>12. Can subclass overriding method declare an exception if parent class method
+								doesn't throw an exception?</summary>
+							<div class="toggle-content">
+								<p>Yes but only unchecked exception not checked.</p>
+							</div>
+						</details>
+						<details>
+							<summary>13. What is exception propagation?</summary>
+							<div class="toggle-content">
+								<p>An exception is first thrown from the top of the stack and if it is not caught, it
+									drops down the call stack to the previous method, If not caught there, the exception
+									again drops down to the previous method, and so on until they are caught or until
+									they reach the very bottom of the call stack. This procedure is called exception
+									propagation. By default, checked exceptions are not propagated.</p>
+							</div>
+						</details>
+						<details>
+							<summary>14. What are the Exception Handling Keywords in Java?</summary>
+							<div class="toggle-content">
+								<p>There are four keywords used in java exception handling.<br>
+								<ol>
+									<li><strong>throw</strong>: Sometimes we explicitly want to create an exception
+										object and then throw it to halt the normal processing of the program. The
+										<strong>throw</strong> keyword is used to throw exceptions to the runtime to
+										handle it.
+									</li>
+									<li><strong>throws</strong>: When we are throwing any checked exception in a method
+										and not handling it, then we need to use the throws keyword in the method
+										signature to let the caller program know the exceptions that might be thrown by
+										the method. The caller method might handle these exceptions or propagate them to
+										its caller method using the <code>throws</code> keyword. We can provide multiple
+										exceptions in the throws clause and it can be used with the
+										<strong>main()</strong> method also.
+									</li>
+									<li><strong>try-catch</strong>: We use try-catch block for exception handling in our
+										code. try is the start of the block and catch is at the end of the try block to
+										handle the exceptions. We can have multiple catch blocks with a try and
+										try-catch blocks can be nested also. catch block requires a parameter that
+										should be of type Exception.</li>
+									<li><strong>finally</strong>: The finally block is optional and can be used only
+										with a try-catch block. Since exception halts the process of execution, we might
+										have some resources open that will not get closed, so we can use the finally
+										block. The finally block gets executed always, whether an exception occurs or
+										not.</li>
+								</ol>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>15. What is the difference between Checked and Unchecked Exceptions in Java?
+							</summary>
+							<div class="toggle-content">
+								<p>
+								<ol>
+									<li>Checked Exceptions should be handled in the code using try-catch block or else
+										the method should use the throws keyword to let the caller know about the
+										checked exceptions that might be thrown from the method. Unchecked Exceptions
+										are not required to be handled in the program or to mention them in the throws
+										clause of the method.</li>
+									<li><code>Exception</code> is the superclass of all checked exceptions whereas
+										<code>RuntimeException</code> is the superclass of all unchecked exceptions.
+										Note that RuntimeException is the child class of Exception.
+									</li>
+									<li>Checked exceptions are error scenarios that require to be handled in the code,
+										or else you will get compile time error. For example, if you use FileReader to
+										read a file, it throws <code>FileNotFoundException</code> and we must catch it
+										in the try-catch block or throw it again to the caller method. Unchecked
+										exceptions are mostly caused by poor programming, for example,
+										NullPointerException when invoking a method on an object reference without
+										making sure that it’s not null. For example, I can write a method to remove all
+										the vowels from the string. It’s the caller’s responsibility to make sure not to
+										pass a null string. I might change the method to handle these scenarios but
+										ideally, the caller should take care of this.</li>
+								</ol>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>16. What is the difference between the throw and throws keyword in Java?</summary>
+							<div class="toggle-content">
+								<p>throws keyword is used with method signature to declare the exceptions that the
+									method might throw whereas throw keyword is used to disrupt the flow of the program
+									and handing over the exception object to runtime to handle it.</p>
+							</div>
+						</details>
+						<details>
+							<summary>17. How to write custom exceptions in Java?</summary>
+							<div class="toggle-content">
+								<p>We can extend Exception class or any of its subclasses to create our custom exception
+									class. The custom exception class can have its own variables and methods that we can
+									use to pass error codes or other exception-related information to the exception
+									handler. A simple example of a custom exception is shown below.
+								<pre><code>package com.javaravish.exceptions;
+
+import java.io.IOException;
+
+public class MyException extends IOException {
+
+	private static final long serialVersionUID = 4664456874499611218L;
+	
+	private String errorCode="Unknown_Exception";
+	
+	public MyException(String message, String errorCode){
+		super(message);
+		this.errorCode=errorCode;
+	}
+	
+	public String getErrorCode(){
+		return this.errorCode;
+	}
+}
+</code></pre>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>18. What is the difference between final, finally, and finalize in Java?</summary>
+							<div class="toggle-content">
+								<p>final and finally are keywords in java whereas finalize is a method. final keyword
+									can be used with class variables so that they can’t be reassigned, with the class to
+									avoid extending by classes and with methods to avoid overriding by subclasses,
+									finally keyword is used with try-catch block to provide statements that will always
+									get executed even if some exception arises, usually finally is used to close
+									resources. finalize() method is executed by Garbage Collector before the object is
+									destroyed, it’s a great way to make sure all the global resources are closed. Out of
+									the three, only finally is related to java exception handling.</p>
+							</div>
+						</details>
+						<details>
+							<summary>19. Can we have an empty catch block?</summary>
+							<div class="toggle-content">
+								<p>We can have an empty catch block but it’s an example of bad programming. We should
+									never have an empty catch block because if the exception is caught by that block, we
+									will have no information about the exception and it wil be a nightmare to debug it.
+									There should be at least a logging statement to log the exception details in console
+									or log files.</p>
+							</div>
+						</details>
+						<details>
+							<summary>20. What is the ‘try-with-resources’ statement in Java, and how does it simplify
+								resource management and exception handling?</summary>
+							<div class="toggle-content">
+								<p>The ‘try-with-resources’ statement simplifies resource management by automatically
+									closing resources like streams, ensuring proper cleanup and exception handling.</p>
+							</div>
+						</details>
+						<details>
+							<summary>21. What is the ‘throws’ clause in method declarations, and how does it indicate
+								that a method may throw exceptions?</summary>
+							<div class="toggle-content">
+								<p>The ‘throws’ clause in method declarations specifies the exceptions that a method may
+									throw. It provides information to the calling code about potential exceptions.</p>
+							</div>
+						</details>
+						<details>
+							<summary>22. What is the ‘try-with-resources’ statement, and how does it handle exceptions
+								that occur during resource closure?</summary>
+							<div class="toggle-content">
+								<p> The ‘try-with-resources’ statement automatically closes resources and handles
+									exceptions that occur during closure by suppressing them or adding them to the list
+									of suppressed exceptions.</p>
+							</div>
+						</details>
+						<details>
+							<summary>23. Explain the ‘finally’ block’s behavior when an exception is thrown in the
+								‘catch’ block.</summary>
+							<div class="toggle-content">
+								<p>The ‘finally’ block is executed even if an exception is thrown in the ‘catch’ block.
+									It ensures that cleanup code is executed regardless of the exception outcome.</p>
+							</div>
+						</details>
+						<details>
+							<summary>24. Explain the hierarchy of exceptions in Java?</summary>
+							<div class="toggle-content">
+								<p>
+								<figure class="aligncenter size-full"><a><img width="808" height="420"
+											src="../scripts/images/HierarchyOfExceptions.webp"
+											alt="Java Exception Handling" </a></figure>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>25. Can we keep the statements after finally block If the finally block is
+								returning the control?</summary>
+							<div class="toggle-content">
+								<p>No, it gives unreachable code error. Because, control is returning from the finally
+									block itself. Compiler will not see the statements after it. That’s why it shows
+									unreachable code error.</p>
+							</div>
+						</details>
+						<details>
+							<summary>26. Does finally block get executed If either try or catch blocks are returning the
+								control?</summary>
+							<div class="toggle-content">
+								<p>Yes, finally block will be always executed no matter whether try or catch blocks are
+									returning the control or not.
+
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>27. What is the difference between final, finally and finalize in Java?</summary>
+							<div class="toggle-content">
+								<p>
+								<figure class="wp-block-table is-style-regular">
+									<table class="has-fixed-layout">
+										<tbody>
+											<tr>
+												<td>final</td>
+												<td>finally</td>
+												<td>finalize()</td>
+											</tr>
+											<tr>
+												<td>final is a keyword in Java which is used to make a variable or a
+													method or a class as unchangeable.</td>
+												<td>finally&nbsp;is a block in Java which is used for exception handling
+													along with try and catch blocks.</td>
+												<td>finalize() method&nbsp;is a protected method
+													of&nbsp;<code>java.lang.Object</code>&nbsp;class which is used to
+													perform some clean up operations on an object before it is removed
+													from the memory.</td>
+											</tr>
+											<tr>
+												<td>The value of a variable which is declared as final can’t be changed
+													once it is initialized.</td>
+												<td>finally block is always executed whether an exception is occurred or
+													not and occurred exception is handled or not.</td>
+												<td>This method is called by garbage collector thread before an object
+													is removed from the memory.</td>
+											</tr>
+											<tr>
+												<td>A method declared as final can’t be overridden or modified in the
+													sub class and a class declared as final can’t be extended.</td>
+												<td>Most of&nbsp;time, this block is used to close the resources like
+													database connection, I/O resources etc soon after their use.</td>
+												<td>This method is inherited to every class you create in Java.</td>
+											</tr>
+										</tbody>
+									</table>
+								</figure>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>28. What is the difference between throw, throws and throwable in Java?</summary>
+							<div class="toggle-content">
+								<p>
+								<figure class="wp-block-table is-style-regular">
+									<table class="has-fixed-layout">
+										<tbody>
+											<tr>
+												<td><strong>throw</strong></td>
+												<td><strong>throws</strong></td>
+												<td><strong>Throwable</strong></td>
+											</tr>
+											<tr>
+												<td>throw&nbsp;is a keyword&nbsp;in Java which is used to throw an
+													exception manually.</td>
+												<td>throws&nbsp;is also a keyword in java which is used in the method
+													signature to indicate that this method may throw mentioned
+													exceptions.</td>
+												<td>Throwable&nbsp;is a super class for all types of errors and
+													exceptions in Java. This class is a member
+													of&nbsp;java.lang&nbsp;package.</td>
+											</tr>
+											<tr>
+												<td>Using throw keyword, you can throw an exception from any method or
+													block. But, that exception must&nbsp;be of
+													type&nbsp;<strong>java.lang.Throwable</strong>&nbsp;class or it’s
+													sub classes.</td>
+												<td>The caller to such methods must handle the mentioned exceptions
+													either using try-catch blocks or using throws keyword.</td>
+												<td>Only instances of this class or it’s sub classes are thrown by the
+													java virtual machine or by the throw statement.</td>
+											</tr>
+										</tbody>
+									</table>
+								</figure>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>29. Can we override a super class method which is throwing an unchecked exception
+								with checked exception in the sub class?</summary>
+							<div class="toggle-content">
+								<p>No. If a super class method is throwing an unchecked exception, then it can be
+									overridden in the sub class with same exception or with any other unchecked
+									exceptions but can not be overridden with checked exceptions.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>30. What are the differences between StackOverflowError and OutOfMemoryError In
+								Java?</summary>
+							<div class="toggle-content">
+								<p>
+								<figure class="wp-block-table is-style-regular">
+									<table class="has-fixed-layout">
+										<tbody>
+											<tr>
+												<td><strong>StackOverflowError</strong></td>
+												<td><strong>OutOfMemoryError</strong></td>
+											</tr>
+											<tr>
+												<td>It is related to Stack memory.</td>
+												<td>It is related to heap memory.</td>
+											</tr>
+											<tr>
+												<td>It occurs when Stack is full.</td>
+												<td>It occurs when heap is full.</td>
+											</tr>
+											<tr>
+												<td>It is thrown when you call a method and there is no space left in
+													the stack.</td>
+												<td>It is thrown when you create a new object and there is no space left
+													in the heap.</td>
+											</tr>
+											<tr>
+												<td>It occurs when you are calling a method recursively without proper
+													terminating condition.</td>
+												<td>It occurs when you are creating lots of objects in the heap memory.
+												</td>
+											</tr>
+											<tr>
+												<td>How to avoid?<br>Make sure that methods are finishing their
+													execution and leaving the stack memory.</td>
+												<td>How to avoid?<br>Try to remove references to objects which you don’t
+													need anymore.</td>
+											</tr>
+										</tbody>
+									</table>
+								</figure>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>31. What are the changes made to exception handling from Java 7?</summary>
+							<div class="toggle-content">
+								<p>Multi-catch exceptions and try-with-resources are two major changes made to exception
+									handling from Java 7</p>
+							</div>
+						</details>
+						<br>
+						<h1><b>8. Java Multithreading Interview Questions</b></h1>
+						<br>
+						<details>
+							<summary>1) What is multitasking?</summary>
+							<div class="toggle-content">
+								<p style="text-align:justify;">A multitasking operating system is an operating system
+									that gives you the perception of 2 or more tasks/jobs/processes running at the same
+									time. It does this by dividing system resources amongst these tasks/jobs/processes
+									and switching between the tasks/jobs/processes while they are executing over and
+									over again. Usually, the CPU processes only one task at a time but the switching is
+									so fast that it looks like the CPU is executing multiple processes at a time. They
+									can support either preemptive multitasking, where the OS provides time to
+									applications (virtually all modern OS), or cooperative multitasking, where the OS
+									waits for the program to give back control (Windows 3.x, Mac OS 9, and earlier),
+									leading to hangs and crashes. Also known as Timesharing, multitasking is a logical
+									extension of multiprogramming.</p>
+								<p style="text-align:justify;">Multitasking programming is of two types which are as
+									follows: <br>
+								<ol>
+									<li>Process-based Multitasking</li>
+									<li>Thread-based Multitasking</li>
+								</ol>
+								</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>2. What is the difference between a thread and a process?
+							</summary>
+							<div class="toggle-content">
+								<p>By asking this, the interviewer wants to see that you understand fundamental
+									multithreading concepts. Explain the concept clearly as if you are speaking to
+									someone who does not have experience in this field.
+									<br>
+									Example: 'A process is a single application or program, whereas a thread is a
+									subprocess within that application or program. Each process has its own address
+									space in memory. Threads share their address space.'
+								</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>3. What are some fundamental advantages of multithreading in Java?</summary>
+							<div class="toggle-content">
+								<p>The key benefits of Java multithreading include:</p>
+								<ul role="list">
+									<li>Multiple threads can share single address spaces</li>
+									<li>Threads share the same resources from the library but can execute differently
+									</li>
+									<li>Different threads can be made to perform various functions to yield a given
+										result</li>
+								</ul>
+							</div>
+						</details>
+
+						<details>
+							<summary>4. What is inter-thread communication?</summary>
+							<div class="toggle-content">
+								<p>Communication between synchronized threads is referred to as inter-thread
+									communication. It is a core feature that helps to avoid thread-polling in Java. A
+									particular thread can be paused through inter-thread communication to allow another
+									thread to enter the block.
+								</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>5. What are some functions used to perform inter-thread communication in Java?
+							</summary>
+							<div class="toggle-content">
+								<p>This is one of the most common Java Multithreading interview questions asked in tech
+									interviews. Some common functions used to perform inter-thread communication in Java
+									are - notify(), wait() and notifyAll().
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>6. What do you understand about the wait() function in Java?</summary>
+							<div class="toggle-content">
+								<p>The wait() function, specified by the object class, is used to pause the current
+									thread and wait until another thread calls the notify() function. Note that the
+									wait() method needs to be called from a synchronized block to avoid an exception
+									from occurring.</p>
+							</div>
+						</details>
+
+						<details>
+							<summary>7. What are the different states in a thread lifecycle?</summary>
+							<div class="toggle-content">
+								<p>
+								<p>There are six thread states.&nbsp;They
+									are&nbsp;NEW,&nbsp;RUNNABLE,&nbsp;BLOCKED,&nbsp;WAITING,&nbsp;TIMED_WAITING
+									and&nbsp;TERMINATED. At any point of time, thread will be in any one of these
+									states.</p>
+								<ol>
+									<li>NEW : A thread will be in this state before calling start() method.</li>
+									<li>RUNNABLE : A thread will be in this state after calling the start() method.</li>
+									<li>BLOCKED : A thread will be in this state when a thread is waiting for object
+										lock to enter into synchronized method/block or a thread will be in this state
+										if deadlock occurs.</li>
+									<li>WAITING : A thread will be in this state when wait() or join() method is called.
+									</li>
+									<li>TIMED_WAITING : A thread will be in this state when sleep() or wait() with
+										timeOut or join() with timeOut is called.</li>
+									<li>TERMINATED : A thread will be in this state once it finishes it’s execution.
+									</li>
+								</ol>
+							</div>
+						</details>
+						<details>
+							<summary>8. What do you understand by context switching?</summary>
+							<div class="toggle-content">
+								<p>Context switching is a feature through which the current state of a thread is saved
+									for it to be restored and executed later. Through context switching, multiple
+									processes can share the same CPU.</p>
+							</div>
+						</details>
+						<details>
+							<summary>9. What is the function of the join() method?</summary>
+							<div class="toggle-content">
+								<p>The join() method causes the current thread to stop running until the thread due to
+									congregate with completes its task. It is a commonly used function that facilitates
+									the execution of multiple threads in an organized manner.</p>
+							</div>
+						</details>
+						<details>
+							<summary>10. What is the function of the sleep() method?
+							</summary>
+							<div class="toggle-content">
+								<p>This is yet another popular Java Multithreading Interview Question. The sleep()
+									method is used to pause a particular thread from executing and prioritizes another
+									thread that needs to be executed before the current thread executes. </p>
+							</div>
+						</details>
+						<details>
+							<summary>11. What do you understand about Deadlock situations in Java Multithreading?
+							</summary>
+							<div class="toggle-content">
+								<p>Deadlock is a situation where each thread is waiting for resources held by other
+									waiting threads. Due to this situation, no threads are executed, causing a pause in
+									program execution and breaking the code at runtime.</p>
+							</div>
+						</details>
+						<details>
+							<summary>12. How do you detect deadlock situations in Java?</summary>
+							<div class="toggle-content">
+								<p>Deadlock situations can be detected by running the executable code on cmd and
+									subsequently collecting the thread dump. If deadlock situations are present, the cmd
+									will throw up a message.</p>
+							</div>
+						</details>
+						<details>
+							<summary>13. How can deadlock situations be avoided in Java?</summary>
+							<div class="toggle-content">
+								<p>This is one of the most common Java Multithreading interview questions asked in
+									technical interviews. Deadlock situations in Java can be avoided by:
+
+									By way of avoiding nested thread locks and providing locks to only one thread at a
+									time
+
+									By using thread join - the function helps to wait for threads to execute before
+									other threads are executed, thereby preventing multiple threads from waiting for
+									resources used by other threads.</p>
+							</div>
+						</details>
+						<details>
+							<summary>14. Do individual threads have their respective stacks in Multithreaded
+								programming?</summary>
+							<div class="toggle-content">
+								<p>Yes, individual threads have their stacks in multithreaded programming. Each thread
+									is independent of the other and maintains its own stack in the memory.</p>
+							</div>
+						</details>
+						<details>
+							<summary>15. How is thread-safety achieved in multithreaded programming?</summary>
+							<div class="toggle-content">
+								<p>Thready safety can be achieved if multiple threads can use a particular class
+									function without the occurrence of the race condition. In Multithreaded programming,
+									thread safety can be achieved by:<br></p>
+								<ul role="list">
+									<li>Use of atomic wrapper class</li>
+									<li>Use of a volatile keyword</li>
+									<li>Employing a lock-based mechanism</li>
+									<li>Synchronization</li>
+								</ul>
+							</div>
+						</details>
+						<details>
+							<summary>16. In how many ways, you can create threads in Java? What are those? Explain with
+								examples?</summary>
+							<div class="toggle-content">
+								<p>There are two ways two create threads in Java.</p>
+								<ol>
+									<li>By extending <code>java.lang.Thread</code> class</li>
+									<li>By implementing <code>java.lang.Runnable</code> interface</li>
+								</ol>
+							</div>
+						</details>
+						<details>
+							<summary>17. How many types of threads are there in Java? Explain?</summary>
+							<div class="toggle-content">
+								<p>There are two types of threads in Java. They are,</p>
+								<ol>
+									<li>User Threads</li>
+									<li>Daemon Threads</li>
+								</ol>
+								<p>User threads are threads which are created by the application or user. They are high
+									priority threads. JVM will not exit until all user threads finish their execution.
+									JVM wait for user threads to finish their task. These threads are foreground
+									threads.</p>
+								<p>Daemon threads are threads which are mostly&nbsp;created by the JVM. These threads
+									always run in background. These threads are used to perform some background tasks
+									like garbage collection. These threads are less priority threads. JVM will not wait
+									for these threads to finish their execution. JVM will exit as soon as&nbsp;all user
+									threads finish their execution.</p>
+							</div>
+						</details>
+						<details>
+							<summary>18. Do two threads can have same name? If yes then how do you identify the threads
+								having the same name?</summary>
+							<div class="toggle-content">
+								<p>Yes, two threads can have same name. In such scenarios, Thread ID can be used to
+									identify the threads. Thread ID is a unique long number which remains unchanged
+									through out the life of a thread. Thread ID can be retrieved using
+									<code>getID()</code> method.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>19. What are MIN_PRIORITY, NORM_PRIORITY and MAX_PRIORITY?</summary>
+							<div class="toggle-content">
+								<p>MIN_PRIORITY, NORM_PRIORITY and MAX_PRIORITY are three constant fields in
+									<code>java.lang.Thread</code> class which define lowest, normal and highest priority
+									of a thread respectively.
+								</p>
+								<p><code>MIN_PRIORITY</code> : It defines&nbsp;the lowest&nbsp;priority that a thread
+									can have and it’s value is 1.</p>
+								<p><code>NORM_PRIORITY</code> : It defines&nbsp;the normal priority that a thread can
+									have and it’s value is 5.</p>
+								<p><code>MAX_PRIORITY</code>&nbsp;: It defines&nbsp;the highest priority that a thread
+									can have and it’s value is 10.</p>
+							</div>
+						</details>
+						<details>
+							<summary>20. What do you mean by synchronization? Explain with an example?</summary>
+							<div class="toggle-content">
+								<p>Through synchronization, we can make the threads to execute particular method or
+									block in sync not simultaneously. When a method or block is declared as
+									synchronized, only one thread can enter into that method or block. When one thread
+									is executing synchronized method or block, the other threads which wants to execute
+									that method or block have to wait until first thread executes that method or block.
+									Thus avoiding the thread interference and achieving the thread safeness.</p>
+							</div>
+						</details>
+						<details>
+							<summary>21. What is object lock or monitor?</summary>
+							<div class="toggle-content">
+								<p>The synchronization in Java is built around an entity called object lock or monitor.
+									Below is the brief description about lock or monitor.</p>
+								<ul>
+									<li>Whenever an object is created to any class, an object lock is created and is
+										stored inside the object.</li>
+									<li>One object will have only one object lock associated with it.</li>
+									<li>Any thread wants to enter into synchronized methods or blocks of any object,
+										they must&nbsp;acquire object lock associated with that object and release the
+										lock after they are done with the execution.</li>
+									<li>The other threads which wants to enter into synchronized methods of that object
+										have to wait until the currently executing thread releases the object lock.</li>
+									<li>To enter into static synchronized methods or blocks, threads have to acquire
+										class lock associated with that class as static members are stored inside the
+										class memory.</li>
+								</ul>
+							</div>
+						</details>
+						<details>
+							<summary>22. I want only some part of the method to be synchronized, not the whole method?
+								How do you achieve that?</summary>
+							<div class="toggle-content">
+								<p>This can be done using synchronized blocks.</p>
+							</div>
+						</details>
+						<details>
+							<summary>23. What is the use of synchronized blocks?</summary>
+							<div class="toggle-content">
+								<p>Synchronization slows down the application. Because, at any given time, only one
+									thread can enter into synchronized method. Other threads have to wait until first
+									thread finishes it’s execution of that method. This slows down the execution of
+									whole application.
+								</p>
+								<p>
+									Instead of synchronizing the whole method, synchronizing the only that part which is
+									to be monitored for thread safe saves the time. This can be done using synchronized
+									blocks.</p>
+							</div>
+						</details>
+						<details>
+							<summary>24. How threads communicate with each other in Java?</summary>
+							<div class="toggle-content">
+								<p>Threads in Java communicate with each other using wait(), notify() and notifyAll()
+									methods.
+								</p>
+								<p>
+									wait() : This method tells the currently executing thread to release the lock of
+									this object and wait until some other thread acquires the same lock and notify it
+									using either notify() or notifyAll() methods.
+								</p>
+								<p>
+									notify() : This method wakes up one thread randomly that called wait() method on
+									this object.
+								</p>
+								<p>
+									notifyAll() : This method wakes up all the threads that called wait() method on this
+									object. But, only one thread will acquire lock of this object depending upon the
+									priority.</p>
+							</div>
+						</details>
+						<details>
+							<summary>25. What is the difference between wait() and sleep() methods in Java?</summary>
+							<div class="toggle-content">
+								<p>
+								<figure class="wp-block-table">
+									<table>
+										<tbody>
+											<tr>
+												<td><strong>wait()</strong></td>
+												<td><strong>sleep()</strong></td>
+											</tr>
+											<tr>
+												<td>The thread which calls wait() method releases the lock it holds.
+												</td>
+												<td>The thread which calls sleep() method doesn’t release the lock it
+													holds.</td>
+											</tr>
+											<tr>
+												<td>The thread regains the lock after other threads call either notify()
+													or notifyAll() methods on the same lock.</td>
+												<td>No question of regaining the lock as thread doesn’t release the
+													lock.</td>
+											</tr>
+											<tr>
+												<td>wait() method must be called within the synchronized block.</td>
+												<td>sleep() method can be called within or&nbsp;outside the synchronized
+													block.</td>
+											</tr>
+											<tr>
+												<td>wait() method is a member of java.lang.Object class.</td>
+												<td>sleep() method is a member of java.lang.Thread class.</td>
+											</tr>
+											<tr>
+												<td>wait() method is always called on objects.</td>
+												<td>sleep() method is always called on threads.</td>
+											</tr>
+											<tr>
+												<td>wait() is a non-static method of Object class.</td>
+												<td>sleep() is a static method of Thread class.</td>
+											</tr>
+											<tr>
+												<td>Waiting threads can be woken up by other threads by calling notify()
+													or notifyAll() methods.</td>
+												<td>Sleeping threads can not be woken up by other threads. If done so,
+													thread will throw InterruptedException.</td>
+											</tr>
+											<tr>
+												<td>&nbsp;To call wait() method, thread must have object lock.</td>
+												<td>&nbsp;To call sleep() method, thread need not to have object lock.
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</figure>
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>26. What is the difference between notify() and notifyAll() in Java?</summary>
+							<div class="toggle-content">
+								<p>notify() : When a thread calls notify() method on a particular object, only one
+									thread will be notified which is waiting for the lock or monitor of that object. The
+									thread chosen to notify is random i.e randomly one thread will be selected for
+									notification. Notified thread doesn’t get the lock of the object immediately. It
+									gets once the calling thread releases the lock of that object.
+								</p>
+								<p>
+									notifyAll() : When a thread calls notifyAll() method on a particular object, all
+									threads which are waiting for the lock of that object are notified. All notified
+									threads will move from WAITING state to BLOCKED state. All these threads will
+									get
+									the lock of the object on a priority basis. The thread which gets the lock of
+									the
+									object moves to RUNNING state. The remaining threads will remain in BLOCKED
+									state
+									until they get the object lock.</p>
+							</div>
+						</details>
+						<details>
+							<summary>27. What do you know about interrupt() method? Why it is used?</summary>
+							<div class="toggle-content">
+								<p>interrupt() method is used to interrupt sleeping or waiting thread. The whole thread
+									interruption mechanism depends on&nbsp;an internal flag called&nbsp;interrupt
+									status. The initial value of this flag for any thread is false. When you call
+									interrupt() method on&nbsp;a thread, interrupt status of that thread will be set to
+									true. When a thread throws&nbsp;<code>InterruptedException</code>, this status will
+									be set to false again.</p>
+							</div>
+						</details>
+						<details>
+							<summary>28. What is the difference between calling start() method and calling run() method
+								directly as anyhow start() method internally calls run() method?</summary>
+							<div class="toggle-content">
+								<p>When you call start() method, a new thread is created and that newly created thread
+									executes the task kept in the run() method. If you call run() method directly, no
+									new thread is created. Any task kept in run() method is executed by the calling
+									thread itself.
+								</p>
+								<p>
+									If you are calling run() method directly, then you are not making use of the
+									multi-threaded programming concept. Because, when you call run() method directly, no
+									new thread is created. run() method is executed by the calling thread itself. It
+									just acts as normal method invocation. You are not using the concept of
+									multi-threading.</p>
+							</div>
+						</details>
+						<details>
+							<summary>29. What is executor framework?</summary>
+							<div class="toggle-content">
+								<p>Java 5 has introduced new framework named executor framework for managing threads.
+								</p>
+								<p>
+									If you need to create thousands of the threads, your application performance may
+									suffer and also, maintenance of each thread is also overhead. Executor framework
+									solves this problem by limiting number of threads and reusing the same threads once
+									threads had completed its current task.</p>
+							</div>
+						</details>
+						<details>
+							<summary>30. What is Thread pool?</summary>
+							<div class="toggle-content">
+								<p>Thread pool represents set of worker threads that are waiting for the jobs and these
+									worker threads can be reused many times.
+								</p>
+								<p>
+									Whenever a task needs to be performance, service provider will pull out a thread out
+									of thread pool to perform the task. If no worker threads are available, then task
+									has to wait for execution.
+								</p>
+								<p>
+									java.util.concurrent.Executors class provides factory methods to create the thread
+									pools.</p>
+							</div>
+						</details>
+						<details>
+							<summary>31. Can you list down important factory methods of Executors class?</summary>
+							<div class="toggle-content">
+								<p>Here are the few important methods of Executors class.</p>
+								<p>
+									newFixedThreadPool: This method returns a thread pool whose maximum size is fixed.
+									If all threads are busy in execution of tasks and additional tasks are submitted,
+									then they have to wait in queue until any thread is available for executing these
+									tasks.
+								</p>
+								<p>
+									newCachedThreadPool: This method returns unbounded thread pool. If threads are not
+									used for certain defined time (keepAliveTime), then it will kill extra threads.
+								</p>
+								<p>
+									newSingleThreadedExecutor: This method returns an Executor with single thread.
+								</p>
+								<p>
+									newScheduledThreadPool: This method returns thread pool with fixed size, that can
+									schedule task periodically or with given delay.
+								</p>
+							</div>
+						</details>
+						<details>
+							<summary>32. What is BlockingQueue</summary>
+							<div class="toggle-content">
+								<p>BlockingQueue is special type of queue which is used when producer threads produce
+									object and consumer threads consume object.
+								</p>
+								<p>
+									Producer thread keeps inserting objects in the queue unless it is full and once it
+									is full, it will be blocked unless consumer threads start consuming.
+								</p>
+								<p>
+									Similarly, consumer thread keep consuming objects until it is empty. Once it is
+									empty, it will be blocked unless producer threads start producing.
+								</p>
+								<p>
+									Here are two important methods of BlockingQueue.
+									put(): This method to put objects in queue until queue is full and waits for
+									consumer thread to take object after that.
+								</p>
+								<p>
+									take(): This method is used to take objects from the queue until it becomes empty.
+									Once it is empty, it waits for producer threads to start producing the objects and
+									put into the queue.</p>
+							</div>
+						</details>
+
+
+						<br>
+						<h1><b>9. Java Collection Framework Interview Questions</b></h1>
+						<br>
+
+						<details>
+							<summary>Test</summary>
+							<div class="toggle-content">
+								<p>Some</p>
+							</div>
+						</details>
+
+						<br>
+						<h1><b>10. Java Important Interview Questions</b></h1>
+						<br>
+
+						<details>
+							<summary>Test</summary>
+							<div class="toggle-content">
+								<p>Some</p>
+							</div>
+						</details>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 center py-3 text-white">
+						Copyright © 2023, <br>The content is copyrighted to Ravi Kalyan Kolloju.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
