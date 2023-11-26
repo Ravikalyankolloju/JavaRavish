@@ -301,9 +301,28 @@ details>p {
 	margin: 0;
 	box-shadow: 3px 3px 4px black;
 }
-figure{
+
+figure {
 	display: inline;
 }
+
 figcaption {
 	text-align: center;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+table {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 5px;
+  text-align: left;
 }
