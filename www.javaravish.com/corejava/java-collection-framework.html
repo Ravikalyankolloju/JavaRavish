@@ -1863,7 +1863,7 @@ class MyComparator implements Comparator
 							<h3 id="comsetimp"><u>
 									<font color="#008000">Compression of Set implemented class objects: </font>
 								</u></h3>
-							<table border="1">
+							<table border="1" cellpadding="1" cellspacing="1" style="width:95%;font-size: 0.999rem;">
 								<tbody>
 									<tr>
 										<th>Property</th>
@@ -1872,37 +1872,38 @@ class MyComparator implements Comparator
 										<th> TreeSet</th>
 									</tr>
 									<tr>
-										<td>1) Underlying Data structure.</td>
+										<td>Underlying Data 
+											structure.</td>
 										<td> Hashtable.</td>
 										<td> LinkedList + Hashtable.</td>
 										<td> Balanced Tree.</td>
 									</tr>
 									<tr>
-										<td>2) Insertion order.</td>
+										<td>Insertion order.</td>
 										<td> Not preserved.</td>
 										<td> Preserved.</td>
 										<td> Not preserved (by default).</td>
 									</tr>
 									<tr>
-										<td>3) Duplicate objects.</td>
+										<td>Duplicate objects.</td>
 										<td> Not allowed.</td>
 										<td> Not allowed.</td>
 										<td> Not allowed.</td>
 									</tr>
 									<tr>
-										<td>4) Sorting order.</td>
+										<td>Sorting order.</td>
 										<td> Not applicable.</td>
 										<td> Not applicable.</td>
 										<td> Applicable.</td>
 									</tr>
 									<tr>
-										<td>5) Heterogeneous objects.</td>
+										<td>Heterogeneous objects.</td>
 										<td> Allowed.</td>
 										<td> Allowed.</td>
 										<td> Not allowed.</td>
 									</tr>
 									<tr>
-										<td>6) Null insertion.</td>
+										<td>Null insertion.</td>
 										<td> Allowed.</td>
 										<td> Allowed.</td>
 										<td> For the empty TreeSet as the 1st element null insertion is possible in all
