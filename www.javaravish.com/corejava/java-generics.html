@@ -162,18 +162,14 @@
 								<li><a href="#non">Communication with non generic code</a></li>
 								<li><a href="#conclu">Conclusions</a></li>
 							</ol>
-
-
-
-							<h3 id="intro" style="background-color: rgb(0, 128, 0);">
-								<font color="#ffff00">Introduction:</font>
-							</h3>
+							<hr>
+							<h2 id="intro"><br><br><br></h2>
+							<h2 class="breadcrumb">1. Introduction :</h2>
 							<font color="#FF0000">Deff :</font>
 							The main objective of Generics is to provide <strong>Type-Safety</strong> and to resolve
 							<strong> Type-Casting </strong> problems.
-							<font color="#0000ff"><u>
-									<h3 id="tsafe">Case 1: Type-Safety</h3>
-								</u></font>
+							<h2 id="tsafe"><br><br><br></h2>
+							<h2 class="breadcrumb">2. Case 1: Type-Safety :</h2>
 							<ul>
 								<li>Arrays are always type safe that is we can give the guarantee for the type of
 									elements present inside array.</li>
@@ -200,13 +196,8 @@
 								height="360"><br><br>
 							<p> Hence we can't provide guarantee for the type of elements present inside collections
 								that is collections are not safe to use with respect to type.</p>
-
-
-							<font color="#0080ff"><u>
-									<h3 id="tcast">Case 2: Type-Casting
-									</h3>
-								</u></font>
-
+							<h2 id="tcast"><br><br><br></h2>
+							<h2 class="breadcrumb">3. Case 2: Type-Casting :</h2>
 							<p> In the case of array at the time of retrieval it is not required to perform any type
 								casting.</p>
 
@@ -266,12 +257,8 @@
 
 							<u>Example:</u><br><br><img alt="generics" src="gener/image008.png" width="850px"><br><br>
 
-							<br>
-							<h2 id="generic" style="background-color: rgb(128, 0, 128);">
-
-								<font color="#ffff00" style="background-color: rgb(128, 0, 128);">Generic classes:
-								</font>
-							</h2>
+							<h2 id="generic"><br><br><br></h2>
+							<h2 class="breadcrumb">4. Generic classes :</h2>
 							<p> Until 1.4v a non-generic version of ArrayList class is declared as follows.</p>
 
 							<u>Example:
@@ -402,11 +389,8 @@ Akshay
 The type of object is: java.lang. Double
 10.5
 </pre>
-
-
-							<h3 id="bound" style="background-color: rgb(128, 128, 192);">
-								<font color="#ffffff">Bounded types:</font>
-							</h3>
+							<h2 id="bound"><br><br><br></h2>
+							<h2 class="breadcrumb">5. Bounded types :</h2>
 							<p> We can bound the type parameter for a particular range by using extends keyword such
 								types are called bounded types.</p>
 
@@ -501,14 +485,11 @@ Test &lt;String&gt; t2=new Test &lt; String&gt;();
 									{}</strong>(<font color="#8000ff">invalid</font>) <br> We have to take 1st class
 								followed by interface.
 							</p>
-
-							<h3 id="gmethos" style="background-color: rgb(0, 128, 192);">
-								<font color="#ffffff">Generic methods and wild-card character (?) :</font>
-							</h3>
-
-							<h3>
+							<h2 id="gmethos"><br><br><br></h2>
+							<h2 class="breadcrumb">6. Generic methods and wild-card character (?):</h2>
+							<h2>
 								<font color="#8000ff">methodOne(ArrayList&lt;String&gt; l):</font>
-							</h3>
+							</h2>
 
 							This method is applicable for ArrayList of only String type. <br>
 
@@ -522,9 +503,9 @@ l.add(10);//(invalid)
 
 							Within the method we can add only String type of objects and null to the List.
 
-							<h3>
+							<h2>
 								<font color="#008000">methodOne(ArrayList&lt;?&gt; l):</font>
-							</h3>
+							</h2>
 
 							We can use this method for ArrayList of any type but within the method we can't add anything
 							to the List except null.<br>&nbsp;<u>Example:
@@ -537,9 +518,9 @@ l.add(10);//(invalid)
 							<ul>
 								<li> This method is useful whenever we are performing only read operation.</li>
 							</ul>
-							<h3>
+							<h2>
 								<font color="#804000">methodOne(ArrayList&lt;? Extends x&gt; l):</font>
-							</h3>
+							</h2>
 							<ul>
 								<li>If x is a class then this method is applicable for ArrayList of either x type or its
 									child classes.</li>
@@ -549,9 +530,9 @@ l.add(10);//(invalid)
 								</li>
 							</ul>
 
-							<h3>
+							<h2>
 								<font color="#800040">methodOne(ArrayList&lt;? super x&gt; l):</font>
-							</h3>
+							</h2>
 							<ul>
 								<li>If x is a class then this method is applicable for ArrayList of either x type or its
 									super classes.</li>
@@ -560,9 +541,9 @@ l.add(10);//(invalid)
 								<li>But within the method we can add x type objects and null to the List.</li>
 							</ul>
 
-							<h3><u>
+							<h2><u>
 									<font color="#0000ff">Which of the following declarations are allowed?</font>
-								</u></h3>
+								</u></h2>
 							<ol>
 								<li> ArrayList&lt;String&gt; l1=new ArrayList&lt;String&gt;();//(valid)</li>
 								<li> ArrayList&lt;?&gt; l2=new ArrayList&lt;String&gt;();//(valid)</li>
@@ -605,9 +586,9 @@ Required: class or interface without bounds
 								<li>We can declare the type parameter either at class level or method level.</li>
 							</ul>
 
-							<h3 style="background-color: rgb(128, 128, 0);">
+							<h2 style="background-color: rgb(128, 128, 0);">
 								<font color="#ffffff">Declaring type parameter at class level:</font>
-							</h3>
+							</h2>
 
 							<pre>class Test&lt;T&gt; 
 {
@@ -615,9 +596,9 @@ Required: class or interface without bounds
 }
 </pre>
 
-							<h3 style="background-color: rgb(128, 128, 192);">
+							<h2 style="background-color: rgb(128, 128, 192);">
 								<font color="#ffffff">Declaring type parameter at method level:</font>
-							</h3>
+							</h2>
 							We have to declare just before return type.
 							<br>
 							<u>Example:
@@ -639,10 +620,8 @@ Test.java:8: interface expected here
 
 public &lt;T extends Number&amp;Runnable&gt; void methodOne(T t){}//valid
 </pre>
-
-							<h3 id="non" style="background-color: rgb(0, 128, 0);">
-								<font color="#ffffff">Communication with non generic code:</font>
-							</h3>
+							<h2 id="non"><br><br><br></h2>
+							<h2 class="breadcrumb">7. Communication with non generic code :</h2>
 							<p> To provide compatibility with old version sun people compramized the concept of generics
 								in very few area's the following is one such area.</p>
 
@@ -668,9 +647,8 @@ public static void methodOne(ArrayList l) {
 }
 }
 </string></string></pre>
-							<h3 id="conclu" style="background-color: rgb(0, 100, 123);">
-								<font color="#ffffff">Conclusions :</font>
-							</h3>
+							<h2 id="conclu"><br><br><br></h2>
+							<h2 class="breadcrumb">8. Conclusions :</h2>
 							<ul>
 								<li>Generics concept is applicable only at compile time, at runtime there is no such
 									type of concept. Hence the following declarations are equal.</li>

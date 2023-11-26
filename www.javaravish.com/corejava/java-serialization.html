@@ -166,16 +166,10 @@
 								<li><a href="#serexter">Difference between Serialization &amp; Externalization </a>
 								</li>
 								<li><a href="#uid">SerialVersionUID </a></li>
-
-
-
-
 							</ol>
-
-
-							<h2 id="ser" style="background-color: rgb(0, 0, 255);">
-								<font color="#ffff00">Serialization: (1.1 v)</font>
-							</h2>
+							<hr>
+							<h2 id="ser"><br><br><br></h2>
+							<h2 class="breadcrumb">1. Serialization: (1.1 v) :</h2>
 							<ol>
 								<li>The process of saving (or) writing state of an object to a file is called
 									serialization </li>
@@ -188,11 +182,8 @@
 							<br><br><strong>
 								<font color="#800040">Diagram:</font>
 							</strong><br><img alt="" src="./serial/image001.png"><br><br>
-
-
-							<h2 id="deser" style="background-color: rgb(38, 77, 0);">
-								<font color="#ffff00">De-Serialization:</font>
-							</h2>
+							<h2 id="deser"><br><br><br></h2>
+							<h2 class="breadcrumb">2. De-Serialization:</h2>
 							<ol>
 								<li> The process of reading state of an object from a file is called DeSerialization
 								</li>
@@ -298,11 +289,8 @@ Deserialization ended
 10................20
 30................40
 </pre>
-
-
-							<h2 id="transient" style="background-color: rgb(0, 128, 192);">
-								<font color="#ffff00">Transient keyword:</font>
-							</h2>
+							<h2 id="transient"><br><br><br></h2>
+							<h2 class="breadcrumb">3. Transient keyword:</h2>
 							<ol>
 								<li>transient is the modifier applicable only for variables.</li>
 								<li> While performing serialization if we don't want to save the value of a particular
@@ -312,20 +300,15 @@ Deserialization ended
 									and save default value to the file .</li>
 								<li> That is transient means "<strong>not to serialize</strong>".</li>
 							</ol>
-
-							<h2 id="stavtra" style="background-color: rgb(0, 128, 255);">
-								<font color="#ffff00">Static Vs Transient :</font>
-							</h2>
+							<h2 id="stavtra"><br><br><br></h2>
+							<h2 class="breadcrumb">4. Static Vs Transient :</h2>
 							<ol>
 								<li> static variable is not part of object state hence they won't participate in
 									serialization because of this declaring a static variable as transient there is no
 									use.</li>
 							</ol>
-
-							<h2 id="travfin" style="background-color: rgb(128, 128, 192);">
-								<font color="#ffff00">Transient Vs Final:</font>
-							</h2>
-
+							<h2 id="travfin"><br><br><br></h2>
+							<h2 class="breadcrumb">5. Transient Vs Final:</h2>
 							<ol>
 								<li> final variables will be participated into serialization directly by their values.
 									Hence declaring a final variable as transient there is no use. <br> //the compiler
@@ -439,11 +422,8 @@ Object o=ois.readObject( );
 
 </pre>
 
-							<br>
-
-							<h2 id="objgraph" style="background-color: rgb(128, 0, 64);">
-								<font color="#ffff00">Object graph in serialization:</font>
-							</h2>
+							<h2 id="objgraph"><br><br><br></h2>
+							<h2 class="breadcrumb">6. Object graph in serialization :</h2>
 							<ol>
 								<li> Whenever we are serializing an object the set of all objects which are reachable
 									from that object will be serialized automatically. This group of objects is nothing
@@ -496,10 +476,8 @@ Output:
 								<li>Among Dog, Cat, Rat if at least one object is not serializable then we will get
 									runtime exception saying "<em><strong>NotSerializableException</strong></em>".</li>
 							</ul>
-
-							<h2 id="custom" style="background-color: rgb(0, 64, 128);">
-								<font color="#ffff00">Customized serialization:</font>
-							</h2>
+							<h2 id="custom"><br><br><br></h2>
+							<h2 class="breadcrumb">7. Customized serialization :</h2>
 							<p>During default Serialization there may be a chance of lose of information due to
 								transient keyword.(<strong>Ex : </strong>mango ,money , box)</p>
 							<br>
@@ -621,12 +599,8 @@ Bhaskar.........kajal
 								method then JVM feels very happy and executes that Account class writeObject() method.
 								The same rule is applicable for readObject() method also.
 							</p>
-
-
-							<h2 id="serinher" style="background-color: rgb(0, 0, 255);">
-								<font color="#ffff00">Serialization with respect to inheritance : </font>
-							</h2>
-
+							<h2 id="serinher"><br><br><br></h2>
+							<h2 class="breadcrumb">8. Serialization with respect to inheritance :</h2>
 							<u><strong>
 									<font color="#ffff00" style="background-color: rgb(64, 0, 64);">Case 1:
 
@@ -738,13 +712,8 @@ Animal constructor called
 							<br><br>
 							<font color="#800040"><strong>Diagram:</strong></font><br><img alt=""
 								src="./serial/image008.png"><br><br>
-
-
-
-
-							<h2 id="exter" style="background-color: rgb(128, 0, 0);">
-								<font color="#ffff00">Externalization : ( 1.1 v )</font>
-							</h2>
+							<h2 id="exter"><br><br><br></h2>
+							<h2 class="breadcrumb">9. Externalization : ( 1.1 v )</h2>
 							<ol>
 								<li>In default serialization every thing takes care by JVM and programmer doesn't have
 									any control.</li>
@@ -760,39 +729,44 @@ Animal constructor called
 							</ol>
 							<br>
 
-							<h3 style="background-color: rgb(0, 128, 192);">
-								<font color="#ffffff"><u><strong>Externalizable interface defines 2 methods :
-										</strong></u></font>
-							</h3>
-							<ol>
-								<li>writeExternal( ) </li>
-								<li>readExternal( ) </li>
-							</ol>
+							<h2<u><strong>Externalizable interface defines 2 methods :
+								</strong></u>
+								</h2>
+								<ol>
+									<li>writeExternal( ) </li>
+									<li>readExternal( ) </li>
+								</ol>
 
 
 
-							<h3>
-								<font color="#0000a0"><em>public void writeExternal(ObjectOutput out) throws IOException
-									</em></font>
-							</h3>
-							<p>This method will be executed automaticcay at the time of Serialization with in this
-								method , we have to write code to save required variables to the file .</p>
+								<h3>
+									<font color="#0000a0"><em>public void writeExternal(ObjectOutput out) throws
+											IOException
+										</em></font>
+								</h3>
+								<p>This method will be executed automaticcay at the time of Serialization with in this
+									method , we have to write code to save required variables to the file .</p>
 
-							<h3>
-								<font color="#0000ff"><em>public void readExternal(ObjectInput in) throws IOException ,
-										ClassNotFoundException</em></font>
-							</h3>
-							<p>This method will be executed automatically at the time of deserialization with in this
-								method , we have to write code to save read required variable from file and assign to
-								the current object </p>
-							<p>At the time of deserialization Jvm will create a seperate new object by executing public
-								no-arg constructor on that object JVM will call readExternal() method.</p>
-							<p>Every Externalizable class should compusory contains public no-arg constructor otherwise
-								we will get RuntimeExcepion saying "<strong>InvaidClassException</strong>" . </p>
+								<h3>
+									<font color="#0000ff"><em>public void readExternal(ObjectInput in) throws
+											IOException ,
+											ClassNotFoundException</em></font>
+								</h3>
+								<p>This method will be executed automatically at the time of deserialization with in
+									this
+									method , we have to write code to save read required variable from file and assign
+									to
+									the current object </p>
+								<p>At the time of deserialization Jvm will create a seperate new object by executing
+									public
+									no-arg constructor on that object JVM will call readExternal() method.</p>
+								<p>Every Externalizable class should compusory contains public no-arg constructor
+									otherwise
+									we will get RuntimeExcepion saying "<strong>InvaidClassException</strong>" . </p>
 
-							<br>
+								<br>
 
-							<pre>Example :
+								<pre>Example :
 
 import java.io.*;
 
@@ -839,119 +813,129 @@ public no-arg constructor
  ashok -------- 10 ------ 0 
 </pre>
 
-							<br><br>
-							<font color="#0080ff"><strong>Diagram :<br>
-									<img alt="" src="./serial/image009.jpg" width="359" height="196"></strong></font>
-							<br><br>
+								<br><br>
+								<font color="#0080ff"><strong>Diagram :<br>
+										<img alt="" src="./serial/image009.jpg" width="359" height="196"></strong>
+								</font>
+								<br><br>
 
-							<ol>
-								<li>If the class implements Externalizable interface then only part of the object will
-									be saved in the case output is
-									<pre>  public no-arg constructor
+								<ol>
+									<li>If the class implements Externalizable interface then only part of the object
+										will
+										be saved in the case output is
+										<pre>  public no-arg constructor
   ashok ---- 10 ----- 0
 </pre>
-								</li>
-								<li>If the class implements Serializable interface then the output is <strong> ashok ---
-										10 --- 20 </strong> </li>
-								<li>In externalization transient keyword won't play any role , hence transient keyword
-									not required. </li>
-							</ol>
+									</li>
+									<li>If the class implements Serializable interface then the output is <strong> ashok
+											---
+											10 --- 20 </strong> </li>
+									<li>In externalization transient keyword won't play any role , hence transient
+										keyword
+										not required. </li>
+								</ol>
 
-							<br>
+								<br>
+								<h2 id="serexter"><br><br><br></h2>
+								<h2 class="breadcrumb">10. Difference between Serialization &amp; Externalization :</h2>
+								<table border="1">
+									<tbody>
+										<tr>
+											<th>Serialization</th>
+											<th>Externalization</th>
+										</tr>
+										<tr>
+											<td>It is meant for default Serialization</td>
+											<td>It is meant for Customized Serialization</td>
+										</tr>
+										<tr>
+											<td> Here every thing takes care by JVM and programmer doesn't have any
+												control
+											</td>
+											<td> Here every thing takes care by programmer and JVM doesn't have any
+												control.
+											</td>
+										</tr>
+										<tr>
+											<td>Here total object will be saved always and it is not possible to save
+												part
+												of the object.</td>
+											<td>Here based on our requirement we can save either total object or part of
+												the
+												object.</td>
+										</tr>
+										<tr>
+											<td>Serialization is the best choice if we want to save total object to the
+												file.</td>
+											<td>Externalization is the best choice if we want to save part of the
+												object.
+											</td>
+										</tr>
+										<tr>
+											<td>relatively performence is low </td>
+											<td>relatively performence is high</td>
+										</tr>
+										<tr>
+											<td>Serializable interface doesn't contain any method , and it is marker
+												interface.</td>
+											<td>Externalizable interface contains 2 methods :<br>1.writeExternal()
+												<br>2.
+												readExternal() <br>It is not a marker interface.
+											</td>
+										</tr>
+										<tr>
+											<td>Serializable class not required to contains public no-arg constructor.
+											</td>
+											<td>Externalizable class should compulsory contains public no-arg
+												constructor
+												otherwise we will get RuntimeException saying "InvalidClassException"
+											</td>
+										</tr>
+										<tr>
+											<td>transient keyword play role in serialization</td>
+											<td>transient keyword don't play any role in Externalization</td>
+										</tr>
+									</tbody>
+								</table>
 
-							<h3 id="serexter" style="background-color: rgb(0, 128, 128);">
-								<font color="#ffff00">Difference between Serialization &amp; Externalization : </font>
-							</h3>
+								<br>
+								<br>
+								<h2 id="uid"><br><br><br></h2>
+								<h2 class="breadcrumb">11. serialVersionUID :</h2>
+								<p>To perform Serialization &amp; Deserialization internally JVM will use a unique
+									identifier , which is nothing but serialVersionUID .</p>
+								<p>At the time of serialization JVM will save serialVersionUID with object.</p>
+								<p>At the time of Deserialization JVM will compare serialVersionUID and if it is matched
+									then only object will be Deserialized otherwise we will get RuntimeException saying
+									"InvalidClassException".</p>
 
-							<table border="1">
-								<tbody>
-									<tr>
-										<th>Serialization</th>
-										<th>Externalization</th>
-									</tr>
-									<tr>
-										<td>It is meant for default Serialization</td>
-										<td>It is meant for Customized Serialization</td>
-									</tr>
-									<tr>
-										<td> Here every thing takes care by JVM and programmer doesn't have any control
-										</td>
-										<td> Here every thing takes care by programmer and JVM doesn't have any control.
-										</td>
-									</tr>
-									<tr>
-										<td>Here total object will be saved always and it is not possible to save part
-											of the object.</td>
-										<td>Here based on our requirement we can save either total object or part of the
-											object.</td>
-									</tr>
-									<tr>
-										<td>Serialization is the best choice if we want to save total object to the
-											file.</td>
-										<td>Externalization is the best choice if we want to save part of the object.
-										</td>
-									</tr>
-									<tr>
-										<td>relatively performence is low </td>
-										<td>relatively performence is high</td>
-									</tr>
-									<tr>
-										<td>Serializable interface doesn't contain any method , and it is marker
-											interface.</td>
-										<td>Externalizable interface contains 2 methods :<br>1.writeExternal() <br>2.
-											readExternal() <br>It is not a marker interface.</td>
-									</tr>
-									<tr>
-										<td>Serializable class not required to contains public no-arg constructor.</td>
-										<td>Externalizable class should compulsory contains public no-arg constructor
-											otherwise we will get RuntimeException saying "InvalidClassException"</td>
-									</tr>
-									<tr>
-										<td>transient keyword play role in serialization</td>
-										<td>transient keyword don't play any role in Externalization</td>
-									</tr>
-								</tbody>
-							</table>
+								<br>
 
-							<br>
-							<br>
+								<u><strong>The process in depending on default serialVersionUID are :
+									</strong></u>
+								<ol>
+									<li>After Serializing object if we change the .class file then we can't perform
+										deserialization because of mismatch in serialVersionUID of local class and
+										serialized object in this case at the time of Deserialization we will get
+										RuntimeException saying in "InvalidClassException".</li>
+									<li>Both sender and receiver should use the same version of JVM if there any
+										incompatability in JVM versions then receive anable to deserializable because of
+										different serialVersionUID , in this case receiver will get RuntimeException
+										saying
+										"InvalidClassException" .</li>
+									<li>To generate serialVersionUID internally JVM will use complexAlgorithm which may
+										create performence problems.</li>
+								</ol>
+								<p>We can solve above problems by configuring our own serialVersionUID .</p>
+								<h2>
 
-							<h2 id="uid" style="background-color: rgb(0, 128, 0);">
-								<font color="#ffff00">serialVersionUID :</font>
-							</h2>
-							<p>To perform Serialization &amp; Deserialization internally JVM will use a unique
-								identifier , which is nothing but serialVersionUID .</p>
-							<p>At the time of serialization JVM will save serialVersionUID with object.</p>
-							<p>At the time of Deserialization JVM will compare serialVersionUID and if it is matched
-								then only object will be Deserialized otherwise we will get RuntimeException saying
-								"InvalidClassException".</p>
+									<u>
+										<font color="#0000ff">we can configure serialVersionUID as follows :
+										</font>
+									</u>
+								</h2><strong>private static final long serialVersionUID = 1L;</strong><br>
 
-							<br>
-
-							<u><strong>The process in depending on default serialVersionUID are :
-								</strong></u>
-							<ol>
-								<li>After Serializing object if we change the .class file then we can't perform
-									deserialization because of mismatch in serialVersionUID of local class and
-									serialized object in this case at the time of Deserialization we will get
-									RuntimeException saying in "InvalidClassException".</li>
-								<li>Both sender and receiver should use the same version of JVM if there any
-									incompatability in JVM versions then receive anable to deserializable because of
-									different serialVersionUID , in this case receiver will get RuntimeException saying
-									"InvalidClassException" .</li>
-								<li>To generate serialVersionUID internally JVM will use complexAlgorithm which may
-									create performence problems.</li>
-							</ol>
-							<p>We can solve above problems by configuring our own serialVersionUID .</p>
-							<h3>
-
-								<u>
-									<font color="#0000ff">we can configure serialVersionUID as follows :
-									</font>
-								</u>
-							</h3><strong>private static final long serialVersionUID = 1L;</strong><br>
-
-							<pre>Example :
+								<pre>Example :
 
 class Dog implements Serializable {
 	private  static final  long  serialVersionUID=1L;
@@ -978,16 +962,16 @@ class Receiver {
 </pre>
 
 
-							<br>
+								<br>
 
-							<p>In the above program after serialization even though if we perform any change to
-								Dog.class file , we can deserialize object.</p>
-							<p>We if configure our own serialVersionUID both sender and receiver not required to
-								maintain the same JVM versions.</p>
+								<p>In the above program after serialization even though if we perform any change to
+									Dog.class file , we can deserialize object.</p>
+								<p>We if configure our own serialVersionUID both sender and receiver not required to
+									maintain the same JVM versions.</p>
 
 
-							<p><u><strong>Note :</strong></u> some IDE's generate explicit serialVersionUID.</p>
-							<br>
+								<p><u><strong>Note :</strong></u> some IDE's generate explicit serialVersionUID.</p>
+								<br>
 
 						</div>
 					</div>

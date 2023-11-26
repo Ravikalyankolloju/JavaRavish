@@ -286,11 +286,9 @@
 									</ul>
 								</li>
 							</ol>
-
-
-							<h2 id="source" style="background-color: rgb(0, 128, 0);">
-								<font color="#ffffff">Java source file structure:</font>
-							</h2>
+							<hr>
+							<h2 id="source"><br><br><br></h2>
+							<h2 class="breadcrumb">1. Java source file structure:</h2>
 							<ul>
 								<li>A java Program can contain any no. Of classes but at most one class can be declared
 									as public. "If there is a public class the name of the Program and name of the
@@ -298,7 +296,7 @@
 								<li>If there is no public class then any name we gives for java source file.</li>
 							</ul>
 
-							<u>Example: <br><br><img alt="" src="flow/image025.png"><br><br>
+							<u>Example: <br><br><img alt="" src="./images/flow/image025.png"><br><br>
 							</u><br><br>
 							<u>
 								<font color="#0000ff"><strong>Case 1:
@@ -330,7 +328,7 @@
 							</u>
 							<pre> <br>class A <br>{ <br>public static void main(String args[]){ <br>System.out.println("A class main method is executed"); <br>} <br>} <br>class B <br>{ <br>public static void main(String args[]){ <br>System.out.println("B class main method is executed"); <br>} <br>} <br>class C <br>{ <br>public static void main(String args[]){ <br>System.out.println("C class main method is executed"); <br>} <br>} <br>class D <br>{ <br>} <br>Output: 
 <br></pre>
-							<br><br><img alt="" src="flow/image027.png"><br><br>
+							<br><br><img alt="" src="./images/flow/image027.png"><br><br>
 							<pre> <br>D:\Java&gt;java A <br>A class main method is executed <br>D:\Java&gt;java B <br>B class main method is executed <br>D:\Java&gt;java C <br>C class main method is executed <br>D:\Java&gt;java D <br>Exception in thread "main" java.lang.NoSuchMethodError: main <br>D:\Java&gt;java Ashok <br>Exception in thread "main" java.lang.NoClassDefFoundError: Ashok 
 <br></pre>
 							<ul>
@@ -406,7 +404,7 @@
 
 
 
-								</strong></font><br><br><br><img alt="" src="flow/image029.png"><br><br><br>
+								</strong></font><br><br><br><img alt="" src="./images/flow/image029.png"><br><br><br>
 
 							<font color="#0080ff"><u><strong>Case 3: </strong></u></font><br>
 							<p>consider the following code.</p>
@@ -459,13 +457,13 @@
 							<p> Whenever we are importing a package all classes and interfaces present in that package
 								are by default available but not sub package classes.</p>
 
-							<u>Example:</u><br><br><img alt="" src="flow/image031.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image031.png"><br><br>
 
 							<p>
 								<font color="#ff0000"><strong>To use pattern class in our Program directly which import
 										statement is required ?</strong></font>
 							</p>
-							<img alt="" src="flow/image033.png"><br><br>
+							<img alt="" src="./images/flow/image033.png"><br><br>
 
 							<u>
 								<font color="#804000"><strong>Case7:
@@ -608,8 +606,8 @@ D:\Java&gt;java Test
 									<h3 id="println">Explain about System.out.println statement ? </h3>
 								</u></font>
 							<u>Example 1</u> and <u>Example 2</u>:
-							<br><br><img alt="" src="flow/image035.png"><br><br>
-							<br><br><img alt="" src="flow/image037.png"><br><br>
+							<br><br><img alt="" src="./images/flow/image035.png"><br><br>
+							<br><br><img alt="" src="./images/flow/image037.png"><br><br>
 
 
 							<br>
@@ -661,17 +659,19 @@ System.out.println(MAX_VALUE);
 								<li> implict static import.</li>
 							</ol>
 
-							<u>Example:</u><br><br><img alt="" src="flow/image039.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image039.png"><br><br>
 							<ul>
 								<li>If we comet line one then we will get Integer class MAX_VALUE
-									<strong>2147483647</strong>.</li>
+									<strong>2147483647</strong>.
+								</li>
 								<li>If we comet lines one and two then Byte class MAX_VALUE will be considered
-									<strong>127</strong>.</li>
+									<strong>127</strong>.
+								</li>
 							</ul>
 
 							<font color="#ff0000"><u><strong>Which of the following import statements are valid ?
-									</strong></u></font><br> <img alt="" src="flow/image041.png"><br><br>
-							<u>Diagram:</u><br><br><img alt="" src="flow/image043.png"><br><br>
+									</strong></u></font><br> <img alt="" src="./images/flow/image041.png"><br><br>
+							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image043.png"><br><br>
 							<p> Usage of static import reduces readability and creates confusion hence if there is no
 								specific requirement never recommended to use static import.</p>
 
@@ -707,7 +707,7 @@ System.out.println(MAX_VALUE);
 									internet domain name in reverse.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="" src="flow/image045.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image045.png"><br><br>
 
 							<br>
 							<font color="#0000ff"><u>
@@ -728,7 +728,7 @@ System.out.println("package demo");
 </pre>
 							<p> Javac HydJobs.java generated class file will be placed in current working directory.</p>
 							<u>Diagram:
-							</u><br><br><img alt="" src="flow/image047.png"><br><br>
+							</u><br><br><img alt="" src="./images/flow/image047.png"><br><br>
 
 							<ul>
 								<li><strong>Javac -d . HydJobs.java</strong></li>
@@ -737,7 +737,7 @@ System.out.println("package demo");
 								<li>Generated class file will be placed into corresponding package structure.</li>
 							</ul>
 
-							<u>Diagram:</u><br><br><img alt="" src="flow/image049.png"><br><br>
+							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image049.png"><br><br>
 
 							<ul>
 								<li>If the specified package structure is not already available then this command itself
@@ -749,7 +749,7 @@ System.out.println("package demo");
 							<u>Example:
 							</u>
 							<p><strong>D:\Java&gt;javac -d c: HydJobs.java</strong></p>
-							<u>Diagram:</u><br><br><img alt="" src="flow/image051.png"><br><br>
+							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image051.png"><br><br>
 
 							<p> If the specified destination is not available then we will get compile time error.</p>
 							<u>Example:
@@ -805,16 +805,14 @@ package pack1;
 							<h3 id="struct" style="background-color: rgb(0, 64, 128);">
 								<font color="#ffffff">Java source file structure:</font>
 							</h3>
-							<br><br><img alt="" src="flow/image053.png"><br><br>
+							<br><br><img alt="" src="./images/flow/image053.png"><br><br>
 							<p> All the following are valid java Programs.</p>
-							<br><br><img alt="" src="flow/image055.png"><br><br>
+							<br><br><img alt="" src="./images/flow/image055.png"><br><br>
 
 
 							<strong><u>Note:</u></strong> An empty source file is a valid java Program.
-
-							<h3 id="class" style="background-color: rgb(0, 0, 160);">
-								<font color="#ffffff">Class Modifiers</font>
-							</h3>
+							<h2 id="class"><br><br><br></h2>
+							<h2 class="breadcrumb">2. Class Modifiers :</h2>
 							<p> Whenever we are writing our own classes compulsory we have to provide some information
 								about our class to the jvm.</p> Like
 							<ol>
@@ -856,7 +854,7 @@ Test.java:1: modifier private not allowed here
 private class Test
 </pre>
 							<p> But For the inner classes the following modifiers are allowed.</p>
-							<u>Diagram:</u><br><br><img alt="" src="flow/image057.png"><br><br>
+							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image057.png"><br><br>
 
 
 
@@ -1050,14 +1048,14 @@ x=999;
 								modifier.<br> That is abstract methods have only declaration but not implementation.<br>
 								Hence abstract method declaration should compulsory ends with semicolon.</p>
 
-							<u>Example:</u><br><br><img alt="" src="flow/image059.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image059.png"><br><br>
 
 							<p> Child classes are responsible to provide implementation for parent class abstract
 								methods.</p>
 
 							<u><strong>Example: </strong></u><br><br>
 							<u>Program:
-							</u><br><br><img alt="" src="flow/image061.png"><br><br>
+							</u><br><br><img alt="" src="./images/flow/image061.png"><br><br>
 
 
 							<ul>
@@ -1072,7 +1070,7 @@ x=999;
 
 
 
-							<u>Diagram:</u><br><br><img alt="" src="flow/image063.png"><br><br>
+							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image063.png"><br><br>
 
 							<p> All the 6 combinations are illegal.</p>
 
@@ -1201,7 +1199,7 @@ class child extends Parent
 									final method.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="" src="flow/image065.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image065.png"><br><br>
 
 							<br>
 
@@ -1225,7 +1223,7 @@ class child extends Parent
 									results.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="" src="flow/image067.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image067.png"><br><br>
 							<p> If a class declares as the Strictfp then every concrete method(which has body) of that
 								class has to follow IEEE754 standard for floating point arithmetic, so we will get
 								platform independent results.</p>
@@ -1244,7 +1242,7 @@ class child extends Parent
 							</ul>
 
 							<u>Example:
-							</u><br><br><img alt="" src="flow/image069.png"><br><br>
+							</u><br><br><img alt="" src="./images/flow/image069.png"><br><br>
 
 
 							<h2 id="member" style="background-color: rgb(0, 128, 192);">
@@ -1419,7 +1417,8 @@ methodOne is executed
 methodOne is executed
 </pre>
 
-							<u><strong>Example 2:</strong></u><br><br><img alt="" src="flow/image071.png"><br><br>
+							<u><strong>Example 2:</strong></u><br><br><img alt=""
+								src="./images/flow/image071.png"><br><br>
 
 							<h3 id="compdpp" style="background-color: rgb(128, 0, 64);">
 								<font color="#ffffff">Compression of private, default, protected and public:</font>
@@ -1435,43 +1434,44 @@ methodOne is executed
 									</tr>
 									<tr>
 										<td>1)With in the same class </td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
 									</tr>
 
 									<tr>
 										<td>2)From child class of same package </td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
 									</tr>
 
 									<tr>
 										<td>3)From non-child class of same package</td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
 									</tr>
 
 									<tr>
 										<td>4)From child class of outside package</td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"><br><img alt="" src="flow/image077.png">
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"><br><img alt=""
+												src="./images/flow/image077.png">
 										</td>
-										<td><img alt="" src="flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
 									</tr>
 
 									<tr>
 										<td>5)From non-child class of outside package</td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
 									</tr>
 
 								</tbody>
@@ -1493,7 +1493,8 @@ methodOne is executed
 								</tbody>
 							</table>
 							<p> Recommended modifier for <b> variables is private </b> where as recommended modifier for
-								<b>methods is public</b>.</p>
+								<b>methods is public</b>.
+							</p>
 
 							<h3 id="fvariable" style="background-color: rgb(128, 0, 64);">
 								<font color="#ffffff">Final variables:</font>
@@ -1508,7 +1509,7 @@ methodOne is executed
 								<li>For every object a separate copy of instance variables will be created.</li>
 							</ul>
 
-							<u>DIAGRAM:</u><br><br><img alt="" src="flow/image079.png"><br><br>
+							<u>DIAGRAM:</u><br><br><img alt="" src="./images/flow/image079.png"><br><br>
 							<p> For the instance variables it is not required to perform initialization explicitly jvm
 								will always provide default values.</p>
 
@@ -1662,7 +1663,7 @@ Value of i is: 0
 								explicitly whether we are using or not otherwise we will get compile time error.(The JVM
 								won't provide any default values)</p>
 
-							<u>Example:</u><br><br><img alt="" src="flow/image081.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image081.png"><br><br>
 
 							<br>
 							<font color="#0000ff"><u><strong>Rule:
@@ -1787,7 +1788,7 @@ hello
 							</p>
 
 
-							<u>Example:</u><br><br><img alt="" src="flow/image083.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image083.png"><br><br>
 
 							<pre>
 Output:
@@ -1807,7 +1808,7 @@ private int x=10;
 									method.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="" src="flow/image085.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image085.png"><br><br>
 							<ul>
 								<li>For instance and static variables JVM will provide default values but if instance
 									and static declared as final JVM won't provide default value compulsory we should
@@ -1828,7 +1829,7 @@ private int x=10;
 									shared by all objects of that class.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="" src="flow/image087.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image087.png"><br><br>
 
 							<pre>
 Output:
@@ -1970,7 +1971,8 @@ public static void methodOne(){
 
 
 
-							<u>Example:</u><br><br><img alt="" src="flow/image089.png"><br>Output :<br>String() method
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image089.png"><br>Output :<br>String()
+							method
 							is called<br>
 
 							<h3 style="background-color: rgb(0, 12, 64);">
@@ -1992,10 +1994,10 @@ class child extends Parent{
 }
 Output:
 </pre>
-							<br><br><img alt="" src="flow/image091.png"><br><br>
-							<u>Example:</u><br><br><img alt="" src="flow/image093.png"><br><br>
+							<br><br><img alt="" src="./images/flow/image091.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image093.png"><br><br>
 							<br>
-							<u>Output:</u><br><br><img alt="" src="flow/image095.png"><br><br>
+							<u>Output:</u><br><br><img alt="" src="./images/flow/image095.png"><br><br>
 							<br>
 
 							<ul>
@@ -2030,7 +2032,7 @@ Output:
 							<h3 id="pseudo"><u>
 									<font color="#800040">Pseudo code:</font>
 								</u></h3>
-							<br><br><img alt="" src="flow/image097.png"><br><br>
+							<br><br><img alt="" src="./images/flow/image097.png"><br><br>
 
 							<ul>
 								<li>For native methods implementation is already available and we are not responsible to
@@ -2051,7 +2053,8 @@ Output:
 								</li>
 								<li>The main advantage of native keyword is performence will be improves.</li>
 								<li> The main disadvantage of native keyword is usage of native keyword in java
-									<b>breaks platform independent nature</b> of java language.</li>
+									<b>breaks platform independent nature</b> of java language.
+								</li>
 							</ul>
 
 							<h3 id="syncro" style="background-color: rgb(128, 128, 192);">
@@ -2130,135 +2133,135 @@ Output:
 									</tr>
 									<tr>
 										<th>Public</th>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
 									</tr>
 									<tr>
 										<th>Private</th>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
 									</tr>
 									<tr>
 										<th>Protected</th>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
 									</tr>
 									<tr>
 										<th>Default</th>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
 									</tr>
 									<tr>
 										<th>Final</th>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
 									</tr>
 									<tr>
 										<th>Abstract </th>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
 									</tr>
 									<tr>
 										<th>Strictfp </th>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
 									</tr>
 									<tr>
 										<th>Static </th>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
 									</tr>
 									<tr>
 										<th>Synchronized </th>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
 									</tr>
 									<tr>
 										<th>Native </th>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
 									</tr>
 									<tr>
 										<th>Transient </th>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
 									</tr>
 									<tr>
 										<th>Volatile</th>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image073.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
-										<td><img alt="" src="flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image073.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
+										<td><img alt="" src="./images/flow/image075.png"></td>
 									</tr>
 								</tbody>
 							</table><br><br>
@@ -2293,13 +2296,13 @@ Output:
 								will provide implementation for that.
 							</p>
 
-							<u>Diagram:</u><br><br><img alt="" src="flow/image099.png"><br><br>
+							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image099.png"><br><br>
 							<p>
 								<strong><u>Example2:</u> </strong>Sun people define Servlet API to develop web
 								applications web server vendor is responsible to provide implementation.
 							</p>
 
-							<u>Diagram:</u><br><br><img alt="" src="flow/image101.png"><br><br>
+							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image101.png"><br><br>
 
 							<p>
 								<font color="#0000ff"><u><strong>Def2:</strong></u></font> From the client point of view
@@ -2347,7 +2350,7 @@ void methodOne();
 void methodTwo();
 }
 </pre>
-							<br><br><img alt="" src="flow/image103.png"><br><br>
+							<br><br><img alt="" src="./images/flow/image103.png"><br><br>
 							<pre>
 class SubServiceProvider extends ServiceProvider
 {
@@ -2621,7 +2624,7 @@ int x=10;
 </pre>
 							<u>Example 1:
 							</u><br>
-							<br><br><img alt="" src="flow/image107.png"><br><br>
+							<br><br><img alt="" src="./images/flow/image107.png"><br><br>
 							<u>Example 2:
 
 							</u>
@@ -2914,7 +2917,7 @@ public void m3(){
 }}
 </pre>
 
-							<u>Example:</u><br><br><img alt="" src="flow/image110.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image110.png"><br><br>
 
 							<p>Generic Servlet simply acts as an adapter class for Servlet interface.</p>
 							<b>Note :</b> marker interface and Adapter class are big utilities to the programmer to
@@ -2937,7 +2940,7 @@ public void m3(){
 							</ul>
 
 
-							<u>Example:</u><br><br><img alt="" src="flow/image112.png"><br><br>
+							<u>Example:</u><br><br><img alt="" src="./images/flow/image112.png"><br><br>
 
 							<h3 id="difiaclass" style="background-color: rgb(0, 0, 64);">
 								<font color="#ffffff">What is the Difference between interface and abstract class ?
@@ -3039,7 +3042,7 @@ System.out.println(c.hashCode());
 							It may create performence problems also.<br>
 							(this is just like recruiting IAS officer for sweeping purpose)
 							<br><br>
-							<img alt="" src="flow/decla.png"> <br>
+							<img alt="" src="./images/flow/decla.png"> <br>
 
 							If every thing is abstract then it is recommended to go for interafce.
 
