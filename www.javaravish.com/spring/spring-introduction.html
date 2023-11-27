@@ -65,6 +65,17 @@
 				<a class="text-dark" itemprop="item" href="../main/home.html"> <span itemprop="name">Home</span></a>
 				<meta itemprop="position" content="1" />
 			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="spring-introduction.html"> <span
+						itemprop="name">Spring</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="#">
+					<span itemprop="name">Spring Introduction</span>
+				</a>
+			</li>
 		</ol>
 
 		<div class="row">
@@ -77,24 +88,58 @@
 			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
 				aria-multiselectable="true">
 				<div class="collapse card" id="sideBarResponsive">
-					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Tutorials</h2>
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Spring</h2>
 					<div class="list-group">
 						<ul class="leftBarList">
-							<li><a href="../corejava/java-introduction.html">Java</a></li>
-							<li><a href="../spring/spring-introduction.html">Spring</a></li>
-							<li><a href="../springboot/sb-introduction.html">Spring Boot</a></li>
-							<li><a href="../main/interview-questions.html">Interview Questions</a></li>
+							<li><a href="../spring/spring-introduction.html">Introduction</a></li>
+							<li><a href="../spring/spring-ioc.html">Inversion Of Control</a></li>
+							<li><a href="../spring/spring-aop.html">Aspect Oriented Programming</a></li>
+							<li><a href="../spring/spring-point.html">Pointcut and Advisors</a>
+							</li>
+							<li><a href="../spring/spring-aop-2.0.html">Spring 2.0 AOP Support</a></li>
+							<li><a href="../spring/spring-jdbc.html">JDBC and DAO Module</a></li>
+							<li><a href="../spring/spring-hibernate.html">Hibernate</a></li>
+							<li><a href="../spring/spring-persistent.html">Persistent Classes Mapping</a></li>
+							<li><a href="../spring/spring-hql.html">HQL and Criterion
+									API</a></li>
+							<li><a href="../spring/spring-hibernate-integration.html">Hibernate with Spring</a></li>
+							<li><a href="../spring/spring-mvc.html">MVC Introduction</a></li>
+							<li><a href="../spring/spring-mvc-fw.html">MVC Framework</a></li>
+
+							<li><a href="../spring/spring-dservlet.html">DispatcherServlet</a>
+							</li>
+							<li><a href="../spring/spring-controller.html">Controllers and Validations</a>
+							</li>
+							<li><a href="../spring/spring-view.html">View-Resolver and View</a></li>
+							<li><a href="../spring/spring-jms.html">Implementing JMS using Spring</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="div-to-hide card" id="sideBarResponsive">
-					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Tutorials</h2>
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Spring</h2>
 					<div class="list-group">
 						<ul class="leftBarList">
-							<li><a href="../corejava/java-introduction.html">Java</a></li>
-							<li><a href="../spring/spring-introduction.html">Spring</a></li>
-							<li><a href="../springboot/sb-introduction.html">Spring Boot</a></li>
-							<li><a href="../main/interview-questions.html">Interview Questions</a></li>
+							<li><a href="../spring/spring-introduction.html">Introduction</a></li>
+							<li><a href="../spring/spring-ioc.html">Inversion Of Control</a></li>
+							<li><a href="../spring/spring-aop.html">Aspect Oriented Programming</a></li>
+							<li><a href="../spring/spring-point.html">Pointcut and Advisors</a>
+							</li>
+							<li><a href="../spring/spring-aop-2.0.html">Spring 2.0 AOP Support</a></li>
+							<li><a href="../spring/spring-jdbc.html">JDBC and DAO Module</a></li>
+							<li><a href="../spring/spring-hibernate.html">Hibernate</a></li>
+							<li><a href="../spring/spring-persistent.html">Persistent Classes Mapping</a></li>
+							<li><a href="../spring/spring-hql.html">HQL and Criterion
+									API</a></li>
+							<li><a href="../spring/spring-hibernate-integration.html">Hibernate with Spring</a></li>
+							<li><a href="../spring/spring-mvc.html">MVC Introduction</a></li>
+							<li><a href="../spring/spring-mvc-fw.html">MVC Framework</a></li>
+
+							<li><a href="../spring/spring-dservlet.html">DispatcherServlet</a>
+							</li>
+							<li><a href="../spring/spring-controller.html">Controllers and Validations</a>
+							</li>
+							<li><a href="../spring/spring-view.html">View-Resolver and View</a></li>
+							<li><a href="../spring/spring-jms.html">Implementing JMS using Spring</a></li>
 						</ul>
 					</div>
 				</div>
@@ -103,7 +148,503 @@
 				<div class="card h-100">
 					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Spring Introduction</h1>
 					<div class="card-body">
-						<h2>The web page is is still underconstruction. Please wait for a while and return later.</h2>
+						<div class="tab" role="tabpanel">
+							<ol>
+								<li><a href="#Introduction"> Spring Framework Introduction</a></li>
+								<li><a href="#Features">Features of Spring framework </a></li>
+								<li><a href="#Architecture">Spring Architecture </a></li>
+								<li><a href="#Modules">Modules of Spring framework </a>
+									<ol type="i">
+										<li><a href="#Core">Core Module </a></li>
+										<li><a href="#DAO">DAO Module </a></li>
+										<li><a href="#ORM">ORM Module </a></li>
+										<li><a href="#JEE">JEE/Application Context Module </a></li>
+										<li><a href="#AOP">AOP Module </a></li>
+										<li><a href="#Web-MVC">Web MVC Module </a></li>
+									</ol>
+								</li>
+
+								<li><a href="#Terminology ">Terminology </a></li>
+							</ol>
+
+
+							<hr color="yellow">
+
+
+
+
+							<h5>Framework:</h5>
+							<ul>
+								<li> It is a special software that is capable of developing applications based on
+									ceratian
+									architecture with the ability to generate common logics of the application.</li>
+								<li>It is given based on core technologies.</li>
+								<li> It provides an abstraction layer on core technologies.</li>
+							</ul>
+							<p><strong>Struts:</strong> It is a framework to develop MVC-II architecture based web
+								applications only.</p>
+							<p><strong>Hibernate:</strong> Its a ORM Framework which is used only for database
+								operations.</p>
+
+							<h5>Spring:</h5>
+							Its a framework software which can be used to develop any kind of Java/J2EE applications.
+							<br> Spring framework provides abstraction layer on:
+							<ul>
+								<li>java &amp; J2EE core technologies</li>
+								<li> ORM Tools like:<ol>
+										<li> Hibernate</li>
+										<li> JDO</li>
+										<li> iBastis etc..,</li>
+										<li>AOP Framework etc..,</li>
+									</ol>
+								</li>
+							</ul>
+
+
+							<h2 id="Introduction">Introduction:</h2>
+							<ol>
+								<li>Spring framework is developed to simplify the development of enterprise applications
+									in
+									Java technologies.</li>
+								<li>It is an open source framework begin developed by Interface21.</li>
+								<li> The Spring provides light weight IoC Container and AOP framework.</li>
+								<li>It provides support for JPA, Hibernate, Web services, Schedulers, Ajax, Struts, JSF
+									and
+									many other frameworks.</li>
+								<li> The Spring MVC components can be used to develop MVC based web applications.</li>
+								<li> The Spring 3.0 framework has been released with major enhancements and support for
+									the
+									Java 5 [JDK1.5].</li>
+								<li> Spring can be used to configure declarative transaction management, remote access
+									to your
+									logic using RMI or web services, mailing facilities and various options in
+									persisting your
+									data to a database.</li>
+								<li> Spring framework can be used in modular fashion, it allows to use in parts and
+									leave the
+									other components which is not required by the application.</li>
+
+							</ol>
+
+
+
+							<ul>
+								<li>Spring is an open source framework, which is very flexible while developing any kind
+									of application.
+									i.e. stand alone application/web-application/enterprise applications.</li>
+								<li>Struts is used only for web applications, where as Spring can be used for developing
+									stand-alone application, applet based application, web application and enterprise
+									application.</li>
+								<li>Spring framework is created to address the complexity of enterprise application
+									development.</li>
+								<li>One of the chief advantages of the Spring framework is its layered architecture</li>
+								<li>Spring is a light-weight framework.</li>
+								<li>Spring is having total 6 modules.</li>
+								<li>We can use the modules independently or combine depending on the type of application
+									and requirement.</li>
+								<li>Main core of Spring is IOC module.</li>
+							</ul>
+
+							<h3>The Advantages of spring framework</h3>
+
+
+							The advantages of spring are as follows:
+							<ul>
+								<li>Spring has layered architecture. Use what you need and leave you don't need now.
+								</li>
+								<li>Spring Enables POJO Programming. There is no behind the scene magic here. POJO
+									programming enables continuous integration and testability.</li>
+								<li>Dependency Injection and Inversion of Control Simplifies JDBC</li>
+								<li>Open source and no vendor lock-in.</li>
+							</ul>
+
+							<h4 id="Features">The Features of Spring framework</h4>
+							The features of spring framework are as follows
+							<ul>
+								<li><strong>Lightweight:</strong>
+									Spring is lightweight when it comes to size and transparency. The basic version of
+									spring framework is around 1MB. And the processing overhead is also very negligible.
+								</li>
+								<li><strong>Inversion of control (IOC):</strong>
+									Loose coupling is achieved in spring using the technique Inversion of Control. The
+									objects give their dependencies instead of creating or looking for dependent
+									objects.</li>
+								<li><strong>Aspect oriented (AOP):</strong>
+									Spring supports Aspect oriented programming and enables cohesive development by
+									separating application business logic from system services.</li>
+								<li><strong>Container:</strong>
+									Spring contains and manages the life cycle and configuration of application objects.
+								</li>
+								<li><strong>MVC Framework:</strong>
+									Spring comes with MVC web application framework, built on core Spring functionality.
+									This framework is highly configurable via strategy interfaces, and accommodates
+									multiple view technologies like JSP, Velocity, Tiles, iText, and POI. But other
+									frameworks can be easily used instead of Spring MVC Framework.</li>
+								<li><strong>Transaction Management:</strong>
+									Spring framework provides a generic abstraction layer for transaction management.
+									This allowing the developer to add the pluggable transaction managers, and making it
+									easy to demarcate transactions without dealing with low-level issues. Spring's
+									transaction support is not tied to J2EE environments and it can be also used in
+									container less environments.</li>
+								<li><strong>JDBC Exception Handling:</strong>
+									The JDBC abstraction layer of the Spring offers a meaningful exception hierarchy,
+									which simplifies the error handling strategy. Integration with Hibernate, JDO, and
+									iBATIS: Spring provides best Integration services with Hibernate, JDO and iBATIS
+								</li>
+							</ul>
+
+
+
+
+
+							Spring framework came up with every module for every tier. No other framework contains these
+							many modules.
+
+							<ul>
+								<li><strong>Tier:</strong> It is a clear separation of two or more Systems arranged by
+									one after another.</li>
+							</ul>
+
+
+							Possible Tiers while developing an application.
+
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<td bgcolor="CFB53B" align="center"><strong>UI Tier</strong><br> Web browser
+										</td>
+										<td bgcolor="CF34l" align="center"><strong>Presentation Tier</strong><br>
+											HTML/JSP</td>
+										<td bgcolor="qwert" align="center"><strong>Business Tier </strong><br> J2EE</td>
+										<td bgcolor="999999" align="center"><strong>Integration Tier</strong><br>
+											JDBC/DAO</td>
+										<td bgcolor="asdfgh" align="center"><strong>DataBase Tier </strong><br> EIS</td>
+									</tr>
+
+								</tbody>
+							</table>
+
+
+
+							<ul>
+								<li><strong>UI Tier:</strong> User Interface Tier. Like a web browser</li>
+								<li><strong>Presentation Tier:</strong> CSS, HTML, JavaScript, Images, Servlet, Jsp, Web
+									MVC Module of spring,Struts.</li>
+								<li><strong>Business Tier:</strong> we can use plain java class, java beans, ejb,
+									messaging services. For this Spring is providing J2EE Module.</li>
+								<li><strong>Integration Tier:</strong> JDBC or any ORM tools like Hibernate, IBatis. For
+									this Spring is providing JDBC&amp; DAO Module.</li>
+								<li><strong>DataBase Tier:</strong> under this Enterprise Information Services will
+									come.</li>
+							</ul>
+
+							If you are using any ORM related tools like Hibernate, for this Spring provides one module
+							ORM.
+
+
+							<h2 id="Architecture">Spring Architecture:</h2>
+							<p> Spring is well-organized architecture consisting of seven modules. <br>
+								Modules in the Spring framework are:</p>
+							Spring1.x: It has 7 modules. They are:
+							<ol>
+								<li>Core</li>
+								<li> DAO</li>
+								<li> ORM</li>
+								<li> JEE/Context</li>
+								<li> Web</li>
+								<li> MVC</li>
+								<li> AOP</li>
+							</ol>
+							<br>
+
+							<table border="5" width="650" align="center">
+								<tbody>
+									<tr>
+										<td bgcolor="yellow" align="center">AOP Module</td>
+										<td>
+											<table border="5">
+												<tbody>
+													<tr>
+														<td bgcolor="FF7F00" align="center">O/R Mapping Module</td>
+														<td bgcolor="green" align="center">Web Context and Utility
+															Module</td>
+													</tr>
+													<tr>
+														<td bgcolor="CFB53B" align="center">JDBC and DAO Module</td>
+														<td bgcolor="FF1CAE" align="center">Application Contex Module
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+
+										<td bgcolor="yellow" align="center"> MVC Module</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table border="5" width="650" align="center">
+								<tbody>
+									<tr>
+										<td align="center" bgcolor="yellow">Core Container and Supporting Utilities</td>
+									</tr>
+								</tbody>
+							</table>
+							<br>
+
+							<strong>
+								Spring2.x:</strong> It has 6 modules only. Because Web &amp; Web MVC modules were
+							clubbed together &amp;
+							given as Web MVC module.
+
+
+
+
+
+
+							<br><br>
+
+							<table border="5" width="650" align="center">
+								<tbody>
+									<tr>
+										<td>
+											<table border="5" width="350">
+												<tbody>
+													<tr>
+														<td bgcolor="FF7F00" align="center">O/R Mapping Module</td>
+														<td bgcolor="CFB53B" align="center">JDBC and DAO Module</td>
+													</tr>
+												</tbody>
+											</table>
+											<table border="5" width="350">
+												<tbody>
+													<tr>
+														<td bgcolor="yellow" align="center">AOP Module</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+										<td bgcolor="FF1CAE" align="center">JEE/Contex Module</td>
+										<td bgcolor="yellow" align="center">Web <br>&amp; <br> MVC Module</td>
+									</tr>
+								</tbody>
+							</table>
+							<table border="5" width="650" align="center">
+								<tbody>
+									<tr>
+										<td align="center" bgcolor="yellow">Core Container and Supporting Utilities</td>
+									</tr>
+								</tbody>
+							</table>
+							<br>
+
+
+							<h3 id="Core">Core Module:</h3>
+							<ol>
+								<li> It is base module for all modules.</li>
+								<li> Provides BeanFactory container which makes Spring as a container</li>
+								<li> provides the fundamental functionality of the Spring framework.</li>
+								<li> The Core package is the most import component of the Spring Framework.</li>
+								<li> This component provides the Dependency Injection [DI] features.</li>
+							</ol>
+
+							This module contains IOC container.
+							<p>IOC container is a piece of s/w, Which creates the objects and establish the
+								dependencies.</p>
+
+							Core module is sub-divided into 4 modules :
+							They are
+							<ol>
+								<li>bean</li>
+								<li>core</li>
+								<li>context</li>
+								<li>Expression Language</li>
+							</ol>
+
+
+							<ul>
+								<li>The beans &amp; core modules contains the code of IOC container.</li>
+								<li>Context module is dependent on beans &amp; core module.<br> When we use context
+									module, it takes care of developing I18N applications, and validations.</li>
+								<li>By using context module also we can create IOC container.</li>
+								<li>If we created IOC container based on beans and core modules, If we want to take care
+									of I18N applications we have to provide our own code.</li>
+								<li>If we created IOC container based on context module, It will take care of I18N
+									applications on it's own.</li>
+							</ul>
+
+							<strong>Expression Language :</strong> This module is an extension to the JSPEL
+							expression.<br>
+							We can use Expression Language as part of configuration files as well as java programs and
+							etc.,
+
+
+
+
+							<h3 id="DAO">DAO Module:</h3>
+							DAO stands for Data Access Object<br>
+							This module contains set of classes &amp; interfaces, which takes care of JDBC code by using
+							DAO module, we no need to provide a tedious JDBC code.
+
+
+
+							<ol>
+								<li>It provides abstraction layer on JDBC &amp; allows us to do database operations.
+								</li>
+								<li> Using it we can focus only on database operations instead of doing repeated work by
+									writing
+									common code again and again.</li>
+								<li>Here we can make use of JdbcTemplate class where we can call methods to do required
+									database operation.</li>
+								<li> We can connect to database either by manual code same like jdbc or we can do easily
+									by
+									using JdbcTemplate class.</li>
+								<li> Using JdbcTemplate class we can retrieve data from database in the form of
+									serializable
+									objects.</li>
+							</ol>
+
+							<h3 id="ORM">ORM Module:</h3>
+							<ol>
+								<li>It provides an abstraction layer on ORM Framework software's like Hibernate, iBatis,
+									JDO
+									etc..,</li>
+								<li> Spring doesn't attempt to implement its own ORM solution</li>
+								<li> Spring's transaction management supports each of these ORM frameworks as well as
+									JDBC.</li>
+								<li>As part of ORM module, Spring guys given the classes like HibernateTemplate,
+									JPATemplate etc.,</li>
+							</ol>
+
+
+							<h3 id="JEE">JEE/Application Context Module:</h3>
+							<ol>
+								<li>It provides abstraction layer on Java/J2EE technologies like Java Mail, JMS, JMX,
+									EJB etc..,</li>
+								<li> The context module is what makes spring as a framework.</li>
+								<li> This module extends the concept of BeanFactory</li>
+								<li> Adds support for internationalization (I18N) messages, application life cycle
+									events, and
+									validation.</li>
+								<li> Supplies many enterprise services such as e-mail, JNDI access, EJB integration,
+									remoting,
+									and scheduling.</li>
+							</ol>
+
+
+							<h3 id="AOP">AOP [Aspect Oriented Programming] Module:</h3>
+							<ol>
+								<li> One of the key components of Spring is the AOP framework.</li>
+								<li> It provides a methodology to configure middle-ware services or to perform any
+									authentication, validations or to perform any pre processing logic or post
+									processing logic
+									on our business logic methods.</li>
+								<li> Without disturbing any kind of spring resources we can integrate our spring
+									application with
+									any kind of middle-ware service.</li>
+								<li> Spring provides a separate layer for middle-Ware configuration.</li>
+								<li> This module serves as the basis for developing your own aspects for your
+									Spring-enabled
+									application.</li>
+							</ol>
+
+							<ul>
+								<li>This module takes care of staring the AOP &amp; ending the AOP.</li>
+								<li>This AoP programming module is integrated with AspectJ.</li>
+								<li>This AOP model, address of all the problems of object orientation(OOP)</li>
+								<li>A programming Language AspectJ is built based on AOP programming model.</li>
+								<li>The spring guys has integrated AspectJ programming language as part of spring.</li>
+								<li>Spring guys has developed their own aspects &amp; placed inside the AOP module.</li>
+							</ul>
+							<strong>Ex:</strong> TransactionManager is predefined aspect given by the spring guys.
+
+
+
+
+							<h3 id="Web-MVC">Web MVC Module:</h3>
+							It is given for two operations:
+							<ol>
+								<li> To integrate spring application with any other web based framework like Struts, JSF
+									etc..,</li>
+								<li>It provides its own web framework named as Spring MVC to develop MVC-II architecture
+									based web applications. It provides the MVC implementations for the web
+									applications.</li>
+							</ol>
+
+							<ul>
+								<li>In the web based applications we generate reports, Spring guys has integrated the
+									report generation tools like Jasper, IReports generation of excel sheets as part of
+									spring.</li>
+								<li>The web module is divided into a 4 sub-modules : They are-<ol>
+										<li>Web</li>
+										<li>Spring Servlet</li>
+										<li>Spring Struts</li>
+										<li>Spring Portlets</li>
+									</ol>
+								</li>
+								<li>From Spring 3.0 onwards, they are removed a support of integrating Spring with
+									Struts. <br>
+									According to Spring documentation, using struts 2 is same as Spring MVC. </li>
+							</ul>
+
+
+
+
+							<br>
+							<b>Note:</b> We can develop a spring application either by using all modules or only by
+							using few
+							modules of spring. We can also integrate our spring module with any kind of a java
+							application. So
+							spring is loosely coupled.
+
+							<br>
+
+							<h6 id="Terminology">Terminology :</h6>
+
+							<p><strong>Spring </strong> is a open source, light weight, loosely coupled, aspect oriented
+								&amp; dependency injection
+								based framework software which can be used to develop any kind of java/j2ee application.
+							</p>
+
+							<p><strong>Open Source:</strong> Spring software can be down loaded and used at free of
+								cost. Spring developed
+								source code can referred by any one who is interested.</p>
+							<p><strong>Container</strong> is a special software which can manage complete life cycle of
+								a given resource.</p>
+							<p><strong>Loosely Coupled:</strong> Need not to inherit any class or interface as we do for
+								our servlet programming.
+								Instead of having "is-a" relationship here we can have "has-a" relationship.</p>
+
+							<p><strong>Lightweight:</strong></p>
+							<ol>
+								<li>Spring is lightweight in terms of both size and overhead.</li>
+								<li> The entire Spring framework can be distributed in a single JAR file that weighs in
+									at just
+									over 1 MB.</li>
+								<li> Spring is non-intrusive: objects in a Spring-enabled application typically have no
+									dependencies on Spring specific classes.</li>
+								<li> Mainly spring is used for business logic. The same business logic if we try to
+									develop using
+									EJB, then its compulsory to have support of any application server like weblogic.
+									But the
+									same logic can be executed in Spring without help of any web server or application
+									server.
+									Because Spring provides its own containers in the form of pre defined classes.
+								</li>
+							</ol>
+
+
+							<p><strong>Note:</strong>Servlet Container &amp; EJB Container are heavy weight because
+								unless we start web server or
+								application server we cannot activate either servlet container or EJB Container.</p>
+
+
+
+
+							<br>
+							<br>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Java By Ravi Kalyan">
+
+	<title>Java Ravish | Spring Introduction</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="../scripts/images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="../scripts/images/favicon/apple-touch-icon.jpeg">
+	<link href="../scripts/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../scripts/css/customcss.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+	<style>
+		.div-to-hide {
+			display: block;
+			/* Display the div by default */
+		}
+
+		@media screen and (max-width: 767px) {
+			.div-to-hide {
+				display: none;
+				/* Hide the div on screens smaller than 768px (mobile) */
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+		<div class="container p-0">
+			<a class="navbar-brand pull-left" href="../main/home.html"><img src="../scripts/images/jrlogo.PNG"
+					style="height: 50px; max-width: 100%;" alt="java by Kalyan" title="Java Ravish Tutorials"></a>
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto text-center">
+					<li class="nav-item"><a class="nav-link" href="../main/home.html"><img
+								src="../scripts/images/small/home.jpg"></i></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../corejava/java-introduction.html">Java</a></li>
+					<li class="nav-item"><a class="nav-link" href="../spring/spring-introduction.html">Spring</a></li>
+					<li class="nav-item"><a class="nav-link" href="../springboot/sb-introduction.html">SpringBoot</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../main/interview-questions.html">Interview
+							Questions</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br>
+	<div class="container-fluid">
+		<br />
+		<ol class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="../main/home.html"> <span itemprop="name">Home</span></a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="spring-introduction.html"> <span
+						itemprop="name">Spring</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="#">
+					<span itemprop="name">Spring Introduction</span>
+				</a>
+			</li>
+		</ol>
+
+		<div class="row">
+			<link rel="stylesheet" href="../scripts/css/sidebarcollapsecss.css">
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#sideBarResponsive" aria-controls="sideBarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+				aria-multiselectable="true">
+				<div class="collapse card" id="sideBarResponsive">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Spring</h2>
+					<div class="list-group">
+						<ul class="leftBarList">
+							<li><a href="../spring/spring-introduction.html">Introduction</a></li>
+							<li><a href="../spring/spring-ioc.html">Inversion Of Control</a></li>
+							<li><a href="../spring/spring-aop.html">Aspect Oriented Programming</a></li>
+							<li><a href="../spring/spring-point.html">Pointcut and Advisors</a>
+							</li>
+							<li><a href="../spring/spring-aop-2.0.html">Spring 2.0 AOP Support</a></li>
+							<li><a href="../spring/spring-jdbc.html">JDBC and DAO Module</a></li>
+							<li><a href="../spring/spring-hibernate.html">Hibernate</a></li>
+							<li><a href="../spring/spring-persistent.html">Persistent Classes Mapping</a></li>
+							<li><a href="../spring/spring-hql.html">HQL and Criterion
+									API</a></li>
+							<li><a href="../spring/spring-hibernate-integration.html">Hibernate with Spring</a></li>
+							<li><a href="../spring/spring-mvc.html">MVC Introduction</a></li>
+							<li><a href="../spring/spring-mvc-fw.html">MVC Framework</a></li>
+
+							<li><a href="../spring/spring-dservlet.html">DispatcherServlet</a>
+							</li>
+							<li><a href="../spring/spring-controller.html">Controllers and Validations</a>
+							</li>
+							<li><a href="../spring/spring-view.html">View-Resolver and View</a></li>
+							<li><a href="../spring/spring-jms.html">Implementing JMS using Spring</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="div-to-hide card" id="sideBarResponsive">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Spring</h2>
+					<div class="list-group">
+						<ul class="leftBarList">
+							<li><a href="../spring/spring-introduction.html">Introduction</a></li>
+							<li><a href="../spring/spring-ioc.html">Inversion Of Control</a></li>
+							<li><a href="../spring/spring-aop.html">Aspect Oriented Programming</a></li>
+							<li><a href="../spring/spring-point.html">Pointcut and Advisors</a>
+							</li>
+							<li><a href="../spring/spring-aop-2.0.html">Spring 2.0 AOP Support</a></li>
+							<li><a href="../spring/spring-jdbc.html">JDBC and DAO Module</a></li>
+							<li><a href="../spring/spring-hibernate.html">Hibernate</a></li>
+							<li><a href="../spring/spring-persistent.html">Persistent Classes Mapping</a></li>
+							<li><a href="../spring/spring-hql.html">HQL and Criterion
+									API</a></li>
+							<li><a href="../spring/spring-hibernate-integration.html">Hibernate with Spring</a></li>
+							<li><a href="../spring/spring-mvc.html">MVC Introduction</a></li>
+							<li><a href="../spring/spring-mvc-fw.html">MVC Framework</a></li>
+
+							<li><a href="../spring/spring-dservlet.html">DispatcherServlet</a>
+							</li>
+							<li><a href="../spring/spring-controller.html">Controllers and Validations</a>
+							</li>
+							<li><a href="../spring/spring-view.html">View-Resolver and View</a></li>
+							<li><a href="../spring/spring-jms.html">Implementing JMS using Spring</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Spring Introduction</h1>
+					<div class="card-body">
+						<div class="tab" role="tabpanel">
+							<ol>
+								<li><a href="#IOC">Inversion of Control (IoC) </a></li>
+								<li><a href="#DI">Dependency Injection (DI) </a></li>
+
+								<li><a href="#Containers">Spring Containers </a>
+									<ul>
+										<li><a href="#BeanFactroy">BeanFactroy container </a></li>
+										<li><a href="#ApplicationContext">ApplicationContext container </a></li>
+										<li><a href="#advantages">ApplicationContext container advantages </a></li>
+									</ul>
+								</li>
+
+								<li><a href="#Initializing">Initializing Spring Core Container </a></li>
+
+								<li><a href="#Dependency">Types of Dependency Injection </a>
+									<ul>
+										<li><a href="#Constructor">Constructor Injection </a></li>
+										<li><a href="#Setter">Setter Method Injection </a></li>
+									</ul>
+								</li>
+
+								<li><a href="#abstract">abstract attribute </a></li>
+								<li><a href="#FileSystemResource">spring container based on FileSystemResource </a></li>
+								<li><a href="#getBean">purpose of getBean() method </a></li>
+								<li><a href="#lazy-init">lazy-init attribute </a></li>
+
+								<li><a href="#Wiring">What is Wiring </a>
+									<ul>
+										<li><a href="#auto-wire">auto-wire attribute </a></li>
+										<li><a href="#byName">auto-wire="byName" </a></li>
+										<li><a href="#byType">auto-wire="byType" </a></li>
+									</ul>
+								</li>
+
+								<li><a href="#Difference">Difference between id and name attributes </a></li>
+
+
+								<li><a href="#ref">ref tag </a>
+									<ul>
+										<li><a href="#bean">bean attribute</a></li>
+										<li><a href="#parent">parent attribute</a></li>
+										<li><a href="#local">local attribute</a></li>
+									</ul>
+								</li>
+
+								<li><a href="#manual">Developing spring based application by using manual procedure </a>
+								</li>
+								<li><a href="#property">Data Types of property tag </a></li>
+								<li><a href="#Example">Dependency Injection Example </a></li>
+
+								<li><a href="#Configuring">Configuring Beans </a>
+									<ul>
+										<li><a href="#Instantiating">Instantiating Bean using Constructor </a></li>
+										<li><a href="#Static">Instantiating Bean using Static factory method </a></li>
+										<li><a href="#Non-Static">Instantiating Bean using Non-static factory method
+											</a></li>
+									</ul>
+								</li>
+
+
+								<li><a href="#LifeCycle">Bean Scopes and LifeCycle </a>
+									<ul>
+										<li><a href="#Initialization">Initialization </a></li>
+										<li><a href="#Destruction">Destruction </a></li>
+									</ul>
+								</li>
+
+
+								<li><a href="#Method">Method Injection </a>
+									<ul>
+										<li><a href="#LookUp">LookUp Method Injection </a></li>
+									</ul>
+								</li>
+
+								<li><a href="#I18N">I18N applications in core module </a>
+									<ul>
+										<li><a href="#Procedure">Procedure to use I18N applications </a></li>
+										<li><a href="#bundles">Using multiple bundles in spring </a></li>
+									</ul>
+								</li>
+							</ol>
+							<ul>
+								<li><a href="#multiple">Requirement :In spring project maintains multiple spring bean
+										configuration files </a></li>
+								<li><a href="#dependencies">Requirement : Implement dependency between an address object
+										and employee object </a></li>
+							</ul>
+
+
+
+							<h3 id="IOC">Inversion of Control (IoC)</h3>
+							<b>The advantage of Spring instead of developer create the object and establish the
+								dependencies, the spring container create the object and establish the dependencies.
+								This process is called as Inversion of Control(IOC).</b>
+							<ul>
+								<li>
+									IOC describes that a Dependency Injection needs to be done by an external
+									entity(i.e., container) instead of creating the dependencies by the component
+									itself.</li>
+								<li>Dependency Injection is a process of Injecting(Pushing) the dependencies into an
+									object.</li>
+							</ul>
+
+
+
+							<ul>
+								<li>In general object is controlled by our java programmer, otherwise we can store the
+									state of object using Serialization or Externalization.</li>
+								<li>If controlling of object is done by configuration files i.e. creating of object,
+									storing state of object (i.e. somewhat inverse of way), this is called Inversion of
+									Control.(IOC).<br><br></li>
+								<li>This IOC concept is base for every module of spring.</li>
+								<li>IOC is core in case of spring.</li>
+								<li>IOC is also called as Dependence Injection.</li>
+								<li>Here we are achieving dependency injection depending on object whatever the data
+									requires, that will be injected through configuration file.</li>
+								<li>IOC container provides objects bases on the configuration in xml files. We are not
+									creating object by using new operator for an entity. We will get object from IOC
+									container. It goes to configuration file, based on that it generates object.</li>
+								<li>IOC container generates objects and it is giving those objects to our programmer.
+								</li>
+								<li>IOC is maintains Singleton Object</li>
+							</ul>
+
+
+
+							<h5 id="DI">Dependency Injection (DI)</h5>
+
+							Dependency Injection is a process which takes place when IOC getting perform because this
+							reason we call Dependency Injection &amp; IOC are same.
+
+							<ul>
+								<li>
+									In developing huge systems using the object oriented programming methodology, we
+									generally divide the system into objects where each of the objects represents some
+									functionality.</li>
+								<li>In this case, the objects in the system use some other objects to complete the given
+									response.</li>
+								<li>The objects with which our object collaborates to provide the services are known as
+									its dependencies.</li>
+							</ul>
+
+							The traditional ways of obtaining the dependencies are by creating the dependencies or by
+							pulling the dependencies using some factory classes and methods or form the naming
+							registry.<br>
+							But these approaches result in some problems which are
+							<ul>
+								<li>The complexity of the application increases.</li>
+								<li>The development time-dependency increases.</li>
+								<li>The difficulty for unit testing increases.</li>
+							</ul>
+
+
+							To solve these problem we have to use Push Model.<br> i.e., inject the dependent objects
+							into our object instead of creating or pulling the dependent objects.
+
+							<p>
+								<strong>The process of injecting(pushing) the dependencies into an object is known as
+									Dependency Injection (DI) </strong>
+
+							</p>
+							<h2 id="Containers">Spring Containers :</h2>
+
+							<h4 id="BeanFactroy">Core container or IOC container or BeanFactroy container</h4>
+							<ol>
+								<li>Its an implementation class of an interface BeanFactory</li>
+								<li>It supports lazy loading.
+									<ul>
+										<li>It means container will not create objects of configured pojo classes
+											immediately.</li>
+										<li>It waits till it receives the first request.</li>
+										<li>Once the object is created the same object will be maintained till end of
+											the application.</li>
+									</ul>
+								</li>
+								<li> By default it considers all the configured classes as singleton classes.</li>
+								<li> So that the same object will be given to all requests which belongs to same class.
+								</li>
+								<li> We cannot change singleton scope for core container.</li>
+								<li> provides the fundamental functionality of the Spring framework.</li>
+								<li> BeanFactory, the heart of any Spring-based application.</li>
+							</ol>
+
+
+							<h4 id="ApplicationContext">Advanced container or ApplicationContext container</h4>
+							<ol>
+								<li>It is advanced container.</li>
+								<li> By default it supports early loading.
+									<ul>
+										<li>It means without receiving any request from client program immediately it
+											will
+											create object for every singleton scoped class.</li>
+										<li>When ever the container gets activated immediately it creates objects of all
+											singleton
+											classes.</li>
+									</ul>
+								</li>
+								<li>Has many advantages over core container.</li>
+							</ol>
+
+
+
+
+
+
+							<h5 id="advantages"> ApplicationContext container is enhancement of bean factory container
+								with some advantages.</h5>
+							<strong>Its features are as follows:</strong>
+
+							<ol>
+								<li>Pre initialization of beans by default. [Early loading]. It means in our spring
+									configuration
+									file we may have any no. of bean tags. Objects will be created sequentially for each
+									and
+									every bean class as specified in the sequence of &lt;bean&gt; tags in xml file.</li>
+								<li>Ability to read values of bean properties from properties file.</li>
+								<li>supports Internationalization (I18n)</li>
+								<li>Gives the ability to work with events &amp; listeners.</li>
+								<li><strong>org.springframework.context.ApplicationContext</strong> interface is the sub
+									interface of
+									<strong>org.springframework.beans.factory.BeanFactory</strong> interface.
+								</li>
+								<li> Activating application context interface is nothing but creating object of a class
+									that
+									implements <strong>org.springframework.context.ApplicationContext</strong>
+									interface.</li>
+								<li>There are three regularly used implementation classes of application context
+									interface. By
+									creating object for any of these three classes we can activate ApplicationContext
+									container.</li>
+								<li>This container is available in JEE module.</li>
+								<li><strong>
+										org.springframework.context.support.FileSystemXmlApplicationContext:</strong> It
+									activates
+									application context container by locating given spring configuration file in the
+									specified
+									path.<br>
+
+									Ex:
+									<pre>FileSystemXmlApplicationContext ctx = new
+  FileSystemXmlApplicationContext("c:\f1\spriong.cfg.xml")
+</pre>
+								</li>
+								<li><strong>org.springframework.context.support.ClassPathXmlApplicationContext:</strong>
+									It activates
+									application context container by locating spring configuration file in the same
+									working
+									directory or from jar files added in the classpath.<br>
+									Ex:
+									<pre>ClassPathXmlApplicationContext ctx = new
+  ClassPathXmlApplicationContext("spring.cfg.xml");
+</pre>
+
+								</li>
+								<li><strong>org.springframework.context.support.XmlWebApplicationContext:</strong> this
+									class activates
+									application context container by locating spring configuration file in deployment
+									directory
+									structure of web application by default in WEB-INF folder.<br>
+									Ex:
+									<pre>XmlWebApplicationContext ctx = 
+    new XmlWebApplicationContext("spring.cfg.xml");
+</pre>
+								</li>
+								<li>In real time applications we can find regularly working with Application Context
+									container
+									rather than working with Bean Factory container.</li>
+								<li>Application context container can perform all modes of dependency injection like
+									bean
+									factory container.</li>
+								<li>Application context container performs pre instantiation on all singleton scoped on
+									spring
+									bean classes of spring configuration file at the moment of application context
+									container gets
+									activated.</li>
+								<li>Pre-instantiation means creating spring bean class objects immediately after the
+									application
+									context container activation.</li>
+								<li>BeanFactory cannot perform this pre instantiation on spring bean classes.
+								</li>
+								<li>when we call factory.getBean(_) then bean factory container immediately creates the
+									object
+									and uses the same for further requests on same id-value.</li>
+								<li>When we call ctx.getBean(_) then application context container gives access to bean
+									id
+									related spring bean class object which is created at pre-instantiation process.</li>
+								<li>Application context container can perform pre-instantiation only on singleton scoped
+									spring
+									bean classes that are configured in spring configuration file.</li>
+								<li>If we give scope value as prototype then object will not be created for bean at the
+									time of
+									pre-instantiation.</li>
+								<li>If the object is not created at pre-instantiation then it will be created after
+									receiving the call
+									along with its dependent objects.</li>
+								<li>If singleton scope bean class property has prototype scoped bean class object as
+									dependent
+									value then the application context container also creates prototype scoped spring
+									bean class
+									object during pre instantiation process along with singleton scope bean class
+									object.</li>
+								<li>It happens to satisfy dependency injection needs done on singleton scope bean class
+									properties.</li>
+							</ol>
+
+
+
+
+
+
+
+
+
+
+
+							<h4 id="Initializing">Initializing Spring Core Container &amp; Accessing Spring Beans :</h4>
+
+							<pre>//Using BeanFactory to instantiate spring core container
+
+BeanFactory beans= new XmlBeanFactory(
+		new FileSystemResource("mybeans.xml"));
+ </pre>
+
+							We are using XmlBeanFactory implementation for instantiating the spring container with
+							'mybeans.xml' file as configuration file.
+
+
+							<pre> //Using ApplicationContext to instantiate spring core container
+ApplicationContext context=
+      new ClassPathXmlApplicationContext("mybeans.xml");
+ </pre>
+							We are using ClassPathXmlApplicationContext implementation for instantiating the spring
+							container with 'mybeans.xml' file as configuration file.
+
+							<h6>Example 1:</h6>
+
+							HelloService.java
+							<pre> package com.core;
+
+public class HelloService {
+ String message;
+ public HelloService(){
+  message="msg from default Constructor";
+ }
+ 
+ public HelloService(String msg){
+  message=msg;
+ }
+ 
+ public String getMessage(){
+  return message;
+ }
+}//class 
+</pre>
+
+							mybeans.xml
+							<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"&gt;
+	
+&lt;bean id="helloService1" class="com.core.HelloService"/&gt;
+
+&lt;bean id="helloService2" class="com.core.HelloService"&gt;
+ &lt;constructor-arg&gt;
+  &lt;value&gt;hello from configuration&lt;/value&gt;
+ &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+
+&lt;/beans&gt;
+</pre>
+
+
+							HelloServiceTestCase.java
+							<pre>package com.core;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
+public class HelloServiceTestCase {
+public static void main(String[] args) {
+	
+ BeanFactory beans=
+       new XmlBeanFactory(new FileSystemResource("mybeans.xml"));
+ 
+ HelloService hello1=(HelloService)beans.getBean("helloService1");
+ System.out.println(hello1.getMessage());
+ 
+ HelloService hello2=(HelloService)beans.getBean("helloService2");
+ System.out.println(hello2.getMessage()); 
+}//main
+
+}//class
+</pre>
+
+							output :
+							<pre>msg from default Constructor
+hello from configuration
+</pre>
+
+
+
+
+
+							<h4 id="Dependency">Types of Dependency Injection :</h4>
+							We have 2 types of dependency injection options
+							<ol>
+								<li>Constructor Injection</li>
+								<li>Setter Method Injection</li>
+							</ol>
+
+							<h5 id="Constructor">Constructor Injection</h5>
+							<strong>Injecting the dependencies of an object through its constructor arguments</strong>
+							<p>If the constructor is establishing the dependencies between objects, we call it as
+								Constructor Injection.</p>
+
+
+
+							<pre>
+</pre>
+							<h6 id="example">constructor Injection example :</h6>
+
+							Employee.java
+							<pre>package com.core;
+
+public class Employee {
+
+private String no;
+private String name;
+private String address;
+
+Employee(String no,String name,String address){
+ this.no=no;
+ this.name=name;
+ this.address=address;
+ 
+ System.out.println("We are in Parameter Constructor");
+}
+
+}
+</pre>
+
+							applicationContext.xml
+
+							<pre>&lt;bean id="emp" class="com.core.Employee"&gt;
+ &lt;constructor-arg type="java.lang.String" index="0"&gt;
+   &lt;value type="java.lang.String"&gt;25&lt;/value&gt;
+ &lt;/constructor-arg&gt;
+  &lt;constructor-arg type="java.lang.String" index="1"&gt;
+   &lt;value type="java.lang.String"&gt;Ashok&lt;/value&gt;
+ &lt;/constructor-arg&gt;
+  &lt;constructor-arg type="java.lang.String" index="2"&gt;
+   &lt;value type="java.lang.String"&gt;HYD&lt;/value&gt;
+ &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+</pre>
+							<ul>
+								<li>The spring container find the constructors based on number of parameters.</li>
+								<li>When we configure constructor injection, we know need to supply index attribute, if
+									we doesn't supply index attribute by default the tag is considered as parameter
+									zero, 2<sup>nd</sup> tag is considered as parameter index '1' etc.,</li>
+								<li>If we don't specify type default spring uses the data types of spring bean.</li>
+								<li>Even though index and type attributes are optional its always recommended to use
+									index and type attributes.</li>
+								<li>These resolve the conflict of overloaded constructors instead of using index
+									attribute we can use name attribute to specify to which variable we are supplying
+									the value. </li>
+							</ul>
+							<pre>&lt;bean id="emp" class="com.core.Employee"&gt;
+ &lt;constructor-arg name="no" type="int" value="2"/&gt;
+ &lt;constructor-arg name="name" type="String" value="Ashok"/&gt;
+ &lt;constructor-arg name="address" type="String" value="HYD"/&gt; 
+&lt;/bean&gt;
+</pre>
+
+							<ul>
+								<li>When ever mandatory properties are available , when the object is created we have to
+									initialize them, in this scenario we use constructor injection.</li>
+								<li>Based on the user choice we want to initialize the properties in this scenario we
+									use setter method injection.</li>
+							</ul>
+
+
+							<h5 id="Setter">Setter Method Injection</h5>
+
+							<p>If the setter method is establishing the dependencies between objects, we call it as
+								Setter Method Injection.</p>
+
+
+
+
+
+
+							<h6>Requirement :<br> create a spring bean address with 3 properties and establish the
+								dependencies and ask the spring container to create the object </h6>
+							<strong>spring bean :</strong>In spring, java beans are considered as spring-beans.
+							<br><br>
+							Address.java
+							<pre>package com.core;
+
+public class Address {
+
+private String street;
+private String city;
+private String state;
+
+public String getStreet() {
+	return street;
+}
+public void setStreet(String street) {
+	this.street = street;
+}
+public String getCity() {
+	return city;
+}
+public void setCity(String city) {
+	this.city = city;
+}
+public String getState() {
+	return state;
+}
+public void setState(String state) {
+	this.state = state;
+}
+
+}//class
+</pre>
+							<ul>
+								<li>
+									If we want spring container to create the object and establish the dependencies, we
+									must configure spring configuration file.</li>
+								<li> Instead of manual configuration, we take a help of view(i.e., spring explorer)</li>
+							</ul>
+
+							<br><br>
+
+							applicationContext.xml
+							<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"&gt;
+	
+&lt;bean id="addr" class="com.core.Address" 
+      abstract="false" lazy-init="default" autowire="default"&gt;
+
+&lt;property name="street"&gt;
+ &lt;value type="java.lang.String"&gt;Apet&lt;/value&gt;
+&lt;/property&gt;
+&lt;property name="city"&gt;
+ &lt;value type="java.lang.String"&gt;HYD&lt;/value&gt;
+&lt;/property&gt;
+&lt;property name="state"&gt;
+ &lt;value type="java.lang.String"&gt;IND&lt;/value&gt;
+&lt;/property&gt;
+
+&lt;/bean&gt;
+
+&lt;/beans&gt; 
+</pre>
+
+							<ul>
+								<li>
+									When we configure spring bean into spring bean configuration file we must specified
+									spring type.</li>
+								<li>The spring type is based on the property data type.<br>
+									spring types : <b>ref, idref, value, null, set, list, map, props</b></li>
+								<li>When we configure spring bean into spring bean configuration file, <strong>to reduce
+										the spring bean configuration file</strong> Spring 3.0 has provided an option
+									P-namespace.
+
+									<p><strong>xmlns:p="http://www.springframework.org/schema/p"</strong></p>
+
+									<pre>&lt;bean id="addr" class="com.core.Address" 
+      p:street="APet" p:city="HYD" p:state="IND" /&gt;
+</pre>
+								</li>
+								<li> Spring container consider attributes as properties.
+									<br>
+									If We doesn't to specify type attribute by default spring uses the property type of
+									spring bean.
+									<br>
+									To resolve the configuration is to spring bean configuration file instead of value
+									tags, we can use value attribute.
+									<pre>&lt;bean id="addr" class="com.core.Address" &gt;      
+
+  &lt;property name="city" value="Bangalore" /&gt;
+  &lt;property name="state" value="Karnataka" /&gt;
+ 
+&lt;/bean&gt;
+</pre>
+
+								</li>
+							</ul>
+
+
+
+
+
+
+							<ul>
+								<li><strong>ClassPathResource</strong> can be used to read the context of resources
+									which is available in side ClassPath of our ClassPath.</li>
+								<li><strong>FileSystemResource</strong> can be used to read the content of resource
+									which is available in our computer.</li>
+							</ul>
+
+							MyApp.java
+							<pre>package com.core;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+
+public class MyApp {
+
+public static void main(String[] args) {
+ Resource resource=
+    new ClassPathResource("com/core/applicationContext.xml");
+ BeanFactory container=new XmlBeanFactory(resource);
+ System.out.println("container : "+container);
+ 
+ Object o=container.getBean("addr");
+ Address a=(Address)o;
+ System.out.println("Street : "+a.getStreet());
+ System.out.println("City : "+a.getCity());
+ System.out.println("State : "+a.getState());
+}//main
+
+}
+</pre>
+							<b>Output :</b>
+							<pre>container : org.springframework.beans.factory.xml.XmlBeanFactory@64883c: 
+             defining beans [addr]; root of factory hierarchy
+        
+Street : Apet
+City : HYD
+State : IND
+</pre>
+							<ul>
+								<li>
+									When we create a spring container object based on XmlBeanFactory immediately it is
+									not creating spring bean object and establish the dependencies.</li>
+								<li>When ever we call a method <strong>getBean()</strong>, then only we create the
+									object and perform dependency.</li>
+							</ul>
+
+							<p>When we try to remove configuration file from classpath and try to run the program, we
+								get an exception saying <b>java.io.FileNotFoundException</b></p>
+
+							<p>When the spring container create the object, it has initialized with default values.</p>
+
+							<h5 id="abstract">abstract attribute :</h5>
+							<ul>
+								<li>
+									We can use an abstract attribute, if we don't want to allow any body to create an
+									object by default <strong>abstract="false"</strong></li>
+								<li>If we make as <strong>abstract="true"</strong>, spring container can't create the
+									object to the spring bean <strong>id</strong>.</li>
+								<li>specify <strong>abstract="true"</strong>, we can not saying the spring bean class
+									also abstract.</li>
+							</ul>
+
+							<h6 id="FileSystemResource">The following is an example of creating a spring container based
+								on FileSystemResource :</h6>
+							<pre>package com.core;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
+
+public class MyApp {
+
+public static void main(String[] args) {
+ Resource resource=
+    new FileSystemResource("D:/work/applicationContext.xml");
+ BeanFactory container=new XmlBeanFactory(resource);
+ System.out.println("container : "+container);
+ 
+}//main
+
+}
+</pre>
+
+
+							<h6 id="getBean">What is the purpose of getBean() method :</h6>
+
+							<ul>
+								<li>getBean() is used to ask the spring container and establish dependencies.</li>
+								<li>When ever we call getBean() method every time it is not creating spring bean object.
+								</li>
+							</ul>
+
+							<p>In the most of the projects we may use singleton design pattern (OR) We may create
+								multiple objects we can control this based on scope.</p>
+
+							<ul>
+								<li>
+									When we create the spring container object based on the XmlBeanFactory until &amp;
+									unless we call getBean() it will not create spring bean object and establish the
+									dependencies
+									<pre> Object o=container.getBean("addr");
+</pre>
+								</li>
+								<li>When the above code is executed, it will take the id and check whether the id is
+									available, it will take the class name and create the object and establish the
+									dependencies.
+
+									Now the getBean() converts the object into super-class object.</li>
+								<li>If we call getBean() with an id, which is not available we will get an Exception
+									<b>org.springframework.beans.factory.NoSuchBeanDefinitionException</b>.
+								</li>
+								<li>Instead of using getBean() we can directly get the object by using our loaded method
+									getBean()
+									<pre>syntax :
+ 
+T  getBean(String name, class&lt;T&gt; required type)
+ 
+Address addr=container.getBean("addr",Address.class);
+</pre>
+								</li>
+							</ul>
+
+							<h6>Every time when we call a getBean(), is it creating a new spring bean and establishing
+								dependencies ?</h6>
+							<ul>
+								<li><strong>getBean()</strong> behavior is based on the scope attribute in the spring
+									bean configuration file.</li>
+								<li>If no scope attribute is specified by-default it uses <b>scope="singleton"</b> it
+									will create the object only once and it will returns the same object every time,
+									when we call getBean()
+									<pre>Address addr1=container.getBean("addr",Address.class);
+Address addr2=container.getBean("addr",Address.class);
+
+System.out.println(addr1); 
+System.out.println(addr2);  //same hashcode
+</pre>
+								</li>
+							</ul>
+
+
+							<hr>
+
+
+
+							<ul>
+								<li>Core module we have to bean package &amp; context package.</li>
+								<li>By using context package we can create IOC container.</li>
+								<li>By using context IOC package it takes care of I18N applications.</li>
+								<li>The context package contains an interface "ApplicationContext"
+									(org.springframework.context)</li>
+								<li>This interface internally inherits the properties of "BeanFactory" interface</li>
+								<li>Any class which provide the implementation of ApplicationContext also can be called
+									as spring container.</li>
+								<li>ClassPathXmlApplicationContext, FileSystemXmlApplicationContext provide the
+									implementation of ApplicationContext.(org.springframework.context.support) </li>
+							</ul>
+
+
+							<br>
+
+							<ul>
+								<li>When ever we create spring container object based on ApplicationContext and if the
+									scope="singleton" immediately spring container create the object and establish the
+									dependencies.</li>
+								<li>When ever we configure spring bean into spring bean configuration file and
+									scope="singleton", it will create the objects the order of object creation is
+									<strong>top to bottom</strong>.
+								</li>
+							</ul>
+
+
+
+							<h5 id="lazy-init">lazy-init attribute :</h5>
+							<ul>
+								<li> lazy-init attribute is used to specified when the spring container has to create
+									spring bean object.</li>
+								<li>lazy-init attribute work only if scope="singleton".</li>
+								<li>spring container will not consider lazy-init if the scope value is
+									prototype/request/session.</li>
+								<li>lazy-init="default" means lazy-init="false"</li>
+								<li>If lazy-init="false" and scope="singleton" whenever spring container creates the
+									object immediately.</li>
+							</ul>
+							<pre>&lt;bean name="addr" class="com.core.Address" 
+            lazy-init="false" scope="singleton"/&gt;
+</pre>
+
+							<h6 id="dependencies">Requirement : <br>
+								Implement dependency between an address object and employee object </h6>
+
+							Address.java
+							<pre>package com.core;
+
+public class Address {
+
+private String street;
+private String city;
+private String state;
+
+public String getStreet() {
+	return street;
+}
+public void setStreet(String street) {
+	this.street = street;
+}
+public String getCity() {
+	return city;
+}
+public void setCity(String city) {
+	this.city = city;
+}
+public String getState() {
+	return state;
+}
+public void setState(String state) {
+	this.state = state;
+}
+
+}//class
+</pre>
+
+							Employee.java
+							<pre>package com.core;
+
+public class Employee {
+	
+private int no;
+private String name;
+private Address address;
+
+public int getNo() {
+	return no;
+}
+public void setNo(int no) {
+	this.no = no;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public Address getAddress() {
+	return address;
+}
+public void setAddress(Address address) {
+	this.address = address;
+}
+
+}
+</pre>
+							Employee spring bean dependent on Address spring bean.
+							<p>We have to configure the above 2 spring beans into spring configuration file.</p>
+
+							applicationContext.xml
+							<pre>&lt;bean id="emp" class="com.core.Employee" &gt;
+ &lt;property name="no" value="1"/&gt;
+ &lt;property name="name" value="Ashok"/&gt;
+ &lt;property name="address"&gt;
+    &lt;ref bean="addr"/&gt;
+ &lt;/property&gt;
+&lt;/bean&gt;
+	
+&lt;bean id="addr" class="com.core.Address" &gt;
+  &lt;property name="street" value="Abc"/&gt;
+  &lt;property name="city" value="Bangalore"/&gt;
+  &lt;property name="state" value="Chennai"/&gt;
+&lt;/bean&gt;
+</pre>
+
+							<p>When we create a spring container object and call the getBean() method, it will create
+								the Employee object as well as Address object.Because Employee is dependent on Address.
+							</p>
+
+							<h5 id="Wiring">What is Wiring :</h5>
+							<ul>
+								<li>Connecting 2 different objects is called Wiring (OR) Establishing dependencies
+									between the objects is called as Wiring.</li>
+								<li>By default spring uses manual wiring the meaning of it is, if we doesn't specify the
+									dependencies spring container will not establish the dependencies.</li>
+							</ul>
+
+							<h6 id="auto-wire">auto-wire attribute :</h6>
+
+							By default auto-wire attribute take values <ul>
+								<li>byName</li>
+								<li>byType</li>
+							</ul>
+
+							By default auto-wire="no" , the meaning of it is spring container is looking for manual
+							wiring.
+
+							<h6 id="byName"> auto-wire="byName" </h6>
+							<p>in this case the spring container automatically establish the wiring/dependencies, if the
+								<strong>property name</strong> and <strong>bean id</strong> are same.
+							</p>
+
+							<pre>&lt;bean id="emp" class="com.core.Employee" 
+               lazy-init="true" autowire="byName"&gt;
+ &lt;property name="no" value="1"/&gt;
+ &lt;property name="name" value="Ashok"/&gt;
+&lt;/bean&gt;
+	
+&lt;bean id="address" class="com.core.Address" lazy-init="true"&gt;
+  &lt;property name="street" value="Abc"/&gt;
+  &lt;property name="city" value="Bangalore"/&gt;
+  &lt;property name="state" value="Chennai"/&gt;
+&lt;/bean&gt;
+</pre>
+
+							Note : If manual wiring is specify, auto-wire will not considered by spring container.
+
+							<h6 id="byType">auto-wire="byType"</h6>
+
+							<p>in this case the spring container check is there any beans are configured with that
+								<strong>data type</strong> , if it is configured it will establish the dependency.
+							</p>
+
+							<pre>&lt;bean id="emp" class="com.core.Employee" 
+               lazy-init="true" autowire="byType"&gt;
+ &lt;property name="no" value="1"/&gt;
+ &lt;property name="name" value="Ashok"/&gt;
+&lt;/bean&gt;
+	
+&lt;bean id="addr" class="com.core.Address" lazy-init="true"&gt;
+  &lt;property name="street" value="Abc"/&gt;
+  &lt;property name="city" value="Bangalore"/&gt;
+  &lt;property name="state" value="Chennai"/&gt;
+&lt;/bean&gt;
+</pre>
+
+							The dis-advantage of "byType" is if multiple spring beans are configured for the same type
+							it throws an Exception "UnsatisfiedLinkError".
+
+
+							<hr>
+
+							While we are configuring spring bean into spring bean configuration file we use
+							<strong>id</strong> or <strong>name</strong>.
+
+							<h6 id="Difference">Difference between id and name attributes :</h6>
+							<ul>
+								<li>
+									<strong>id</strong> attribute doesn't allow to take special character as input.<br>
+									where as <strong>name</strong> attribute allow as to take special character.
+									<pre>&lt;bean id="/addr" /&gt;   //invalid
+&lt;bean name="/addr" /&gt;  //valid
+</pre>
+								</li>
+
+								<li>By using name attribute to a single name (or) two names to a bean.
+									<pre>&lt;bean name="addr1, addr2" class="com.Address" scope="prototype" /&gt;
+</pre>
+									<b>Note : </b> We can use space also as a character for the names in bean type.
+									<pre>&lt;bean name="addr1 addr2" /&gt;
+</pre>
+								</li>
+								<li>To the spring beans we can assign the alias names also.<br>
+									The advantage of alias names is different people can use sane bean with different
+									names.
+									<pre>&lt;beans&gt;
+&lt;bean id="addr1" class="com.core.Address" scope="singleton"/&gt;
+&lt;alias name="addr1" alias="addr2"/&gt;
+&lt;/beans&gt;
+</pre>
+								</li>
+								<li>
+									We can ask the spring container creates the object based on alias names also.
+									<pre>container.getBean("addr2");
+</pre>
+								</li>
+							</ul>
+
+							<h4 id="multiple">
+								Requirement :<br>
+								In the spring based project we always use multiple spring bean configuration files
+								because of the maintanance of the project becomes easy</h4>
+
+							configure Employee bean into applicationContext.xml and Address bean into
+							customerContext.xml
+
+							<p>We have to supply both these beans parameter to container object, we can use any of the
+								following two approaches </p>
+
+							<b>Approach 1:</b>
+							<pre>ApplicationContext container=new ClassPathXmlApplicationContext(
+       new String[]{"com/core/applicationContext.xml",
+                         "com/core/customerContext.xml"});
+
+ container.getBean("addr");
+ container.getBean("emp");
+</pre>
+
+							<b>Approach 2:</b>
+							<pre>ApplicationContext container=new ClassPathXmlApplicationContext(
+		              "com/core/applicationContext.xml",
+		                      "com/core/customerContext.xml");
+ container.getBean("addr");
+ container.getBean("emp");
+</pre>
+
+							<p>In the above configuration we are hard coding the configuration file names instead of
+								hard coding we use <strong>wild character search</strong></p>
+							<pre>ApplicationContext container=
+   new ClassPathXmlApplicationContext("com/core/*.xml");
+                           //not working BeanFactory
+
+ container.getBean("addr");
+ container.getBean("emp");
+</pre>
+
+							<p>We can use an import tag to import one spring bean into another spring bean.</p>
+							applicationContext.xml
+							<pre>&lt;beans&gt;
+ &lt;import resource="customerContext.xml"/&gt;	
+&lt;/beans&gt;
+</pre>
+
+							<hr>
+							<h3 id="ref">ref tag :</h3>
+							<p><b>ref </b> tag takes multiple attributes they are : <strong>bean, parent,
+									local</strong>.</p>
+
+							<h6 id="bean">&lt;ref bean="addr"/&gt;</h6>
+							When we specified <strong>&lt;ref bean="addr"/&gt;</strong> spring container checks whether
+							the reference is available in current configuration file,<br>
+							if not available it checks in all the imported configuration file and create the object.
+
+
+
+							<h6 id="local">&lt;ref local="addr"/&gt;</h6>
+							When we specified <strong>&lt;ref local="addr"/&gt;</strong> spring container always checks
+							in the current configuration file only.<br>
+							If it is not available in the current configuration file spring container throws an
+							exception.
+
+
+							<h6 id="parent">&lt;ref parent="addr"/&gt;</h6>
+							When we specified <strong>&lt;ref parent="addr"/&gt;</strong> spring container checks for
+							reference in parent spring container.
+
+							<p>In spring we can create multiple spring containers, we can make some container are parent
+								containers, some containers are child containers.</p>
+
+							The advantage of using child containers is we can access the beans from child containers as
+							well as parent containers.
+							<p>The following configuration of parent and child containers</p>
+							<pre>ApplicationContext pContainer=new ClassPathXmlApplicationContext(
+		                 "com/core/applicationContext.xml");
+
+ApplicationContext cContainer=new ClassPathXmlApplicationContext(
+	new String[]{"com/core/customerContext.xml"},pContainer);
+
+ cContainer.getBean("addr");
+ cContainer.getBean("emp");
+</pre>
+
+
+							<h6 id="manual">Developing spring based application by using manual procedure :</h6>
+							<ol>
+								<li>
+									To develop the manual procedure we have to set the class path to following jar files
+									:
+									<ol>
+										<li>beans.jar</li>
+										<li>core.jar</li>
+										<li>context.jar</li>
+										<li>context-support.jar</li>
+										<li>expression.jar</li>
+										<li>asm.jar</li>
+									</ol>
+									As spring internally uses log4j we have to set the classpath to "common-logging.jar"
+								</li>
+								<li>Develop spring bean configuration file.(EX: applicationContext.xml)</li>
+								<li>Develop spring bean and configure in spring configuration file.</li>
+								<li>Develop the java application to call the spring container.</li>
+							</ol>
+
+
+
+							<p>We have to supply the values to properties according to the datatypes of the property.
+							</p>
+
+							<h2 id="property">Data Types of property :</h2>
+							We have to classified data types into 5 categories
+							<ol>
+								<li>String type</li>
+								<li>Reference type</li>
+								<li>Primitive type</li>
+								<li>Arrays</li>
+								<li>Collections</li>
+							</ol>
+
+							<h5>null :</h5>
+							We use this tag to supply null value to a property
+							<pre>&lt;property name="name"&gt;
+  &lt;null/&gt;
+&lt;/property&gt;
+</pre>
+							According to the above configuration name property hold the "null" value.
+							<h5>primitive :</h5>
+							For primitive datatypes we use a tag "value". <br> We can specify the data type by using
+							"type" attribute.
+							<pre> &lt;property name="no"&gt;
+  &lt;value type="int"&gt;10&lt;/value&gt;
+ &lt;/property&gt;
+ 
+ &lt;property name="male"&gt;
+  &lt;value type="boolean"&gt;true&lt;/value&gt;
+ &lt;/property&gt;
+ 
+ &lt;property name="salary"&gt;
+  &lt;value type="double"&gt;1000.00&lt;/value&gt;
+ &lt;/property&gt;
+</pre>
+
+							<h5>Arrays :</h5>
+							If we have any property whose type is an array to supply the value, we use a tag value with
+							comma(,) separator.
+
+							Employee.java
+							<pre>package com.core;
+
+public class Employee {
+
+String[] parents;
+
+public String[] getParents() {
+	return parents;
+}
+public void setParents(String[] parents) {
+	this.parents = parents;
+}
+
+}
+</pre>
+
+							applicationContext.java
+							<pre>&lt;bean id="emp" class="com.core.Employee"&gt;
+ &lt;property name="parents"&gt;
+  &lt;value&gt;father,mother&lt;/value&gt;
+ &lt;/property&gt; 
+&lt;/bean&gt;
+</pre>
+
+
+
+
+
+							<h5>Collections :</h5>
+
+							<h6>ArrayList :</h6>
+							To supply a value to arraylist property we use a tag "list"
+							<br>
+							<br>
+							Employee.java
+							<pre>package com.core;
+import java.util.ArrayList;
+
+public class Employee {
+
+ArrayList projects;
+public ArrayList getProjects() {
+	return projects;
+}
+public void setProjects(ArrayList projects){
+	this.projects = projects;
+}
+
+}
+</pre>
+
+							applicationContext.xml
+							<pre>&lt;bean id="emp" class="com.core.Employee"&gt;
+ &lt;property name="projects"&gt;
+  &lt;list&gt;
+   &lt;value&gt;BMS project&lt;/value&gt;
+   &lt;value&gt;ZING project&lt;/value&gt;
+  &lt;/list&gt;
+ &lt;/property&gt; 
+&lt;/bean&gt;
+</pre>
+
+							MyApp.java
+							<pre>package com.core;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MyApp {
+
+public static void main(String[] args) {
+ 
+ApplicationContext container=new ClassPathXmlApplicationContext(
+		                        "com/core/applicationContext.xml");
+
+ Employee e=(Employee)container.getBean("emp");
+ System.out.println(e.getProjects());
+ 
+}//main
+
+}
+
+output :
+
+[BMS project, ZING project]
+</pre>
+
+							<hr>
+							<strong>Ex 2 :</strong>
+
+							<p>We are created a project bean, the project bean is responsible for holding the project
+								information.</p>
+
+							Project.java
+							<pre>package com.core;
+
+public class Project {
+ String projectName;
+ String customerName;
+  
+public String getProjectName() {
+	return projectName;
+}
+public void setProjectName(String projectName) {
+	this.projectName = projectName;
+}
+public String getCustomerName() {
+	return customerName;
+}
+public void setCustomerName(String customerName) {
+	this.customerName = customerName;
+}
+ 
+}
+</pre>
+							<p>An Employee can have multiple projects to store the project information<br>
+								We are using the following bean with ArrayList property.
+								<br><br>
+
+								Employee.java
+							</p>
+							<pre>package com.core;
+import java.util.ArrayList;
+
+public class Employee {
+
+ArrayList projects;
+public ArrayList getProjects() {
+	return projects;
+}
+public void setProjects(ArrayList projects){
+	this.projects = projects;
+}
+
+}
+</pre>
+
+							To supply ArrayList values with object, we use following tags
+							<pre>&lt;bean name="bms" class="com.core.Project"&gt;
+ &lt;property name="projectName" value="BMS project"/&gt;
+ &lt;property name="customerName" value="Ashok"/&gt; 
+&lt;/bean&gt;
+&lt;bean name="zing" class="com.core.Project"&gt;
+ &lt;property name="projectName" value="Zing project"/&gt;
+ &lt;property name="customerName" value="Arun"/&gt; 
+&lt;/bean&gt;
+
+&lt;bean id="emp" class="com.core.Employee"&gt;
+ &lt;property name="projects"&gt;
+  &lt;list&gt;
+    &lt;ref bean="bms"/&gt;
+    &lt;ref bean="zing"/&gt;
+  &lt;/list&gt;
+ &lt;/property&gt; 
+&lt;/bean&gt;
+</pre>
+
+							<h6>Set :</h6>
+							Employee.java
+							<pre>package com.core;
+import java.util.HashSet;
+
+public class Employee {
+
+HashSet projects;
+public HashSet getProjects() {
+	return projects;
+}
+public void setProjects(HashSet projects) {
+	this.projects = projects;
+}
+
+}
+</pre>
+
+							To configure setProperty to use <b> set tag</b> as shown below
+							<p>applicationContext.xml</p>
+							<pre>&lt;bean id="emp" class="com.core.Employee"&gt;
+ &lt;property name="projects"&gt;
+  &lt;set&gt;
+   &lt;value&gt;LIC&lt;/value&gt;
+   &lt;value&gt;KSRTC&lt;/value&gt;
+  &lt;/set&gt;
+ &lt;/property&gt; 
+&lt;/bean&gt;
+</pre>
+
+
+
+							<h6>Map :</h6>
+							Employee.java
+							<pre>package com.core;
+import java.util.HashMap;
+
+public class Employee {
+
+HashMap projects;
+public HashMap getProjects() {
+	return projects;
+}
+public void setProjects(HashMap projects) {
+	this.projects = projects;
+}
+
+}
+</pre>
+							<p>The following configuration for HashMap</p>
+							<pre>&lt;bean id="emp" class="com.core.Employee"&gt;
+ &lt;property name="projects"&gt;
+  &lt;map&gt;
+   &lt;entry key="p1" value="BMS project"/&gt;
+   &lt;entry key="p2" value="Zing project"/&gt;
+  &lt;/map&gt;
+ &lt;/property&gt; 
+&lt;/bean&gt;
+</pre>
+
+							<h6>Props :</h6>
+							Employee.java
+							<pre>package com.core;
+import java.util.Properties;
+
+public class Employee {
+
+Properties projects;
+public Properties getProjects() {
+	return projects;
+}
+public void setProjects(Properties projects) {
+	this.projects = projects;
+}
+
+}
+</pre>
+							<p>applicationContext.xml (spring configuration file)</p>
+
+							<pre>&lt;bean id="emp" class="com.core.Employee"&gt;
+ &lt;property name="projects"&gt;
+  &lt;props&gt;
+   &lt;prop key="p1"&gt;BMS project&lt;/prop&gt;
+   &lt;prop key="p2"&gt;Zing project&lt;/prop&gt;
+  &lt;/props&gt;
+ &lt;/property&gt; 
+&lt;/bean&gt;
+</pre>
+
+							<hr>
+							<p>Getting the data from spring bean configuration file and storing the data into object is
+								called "Data binding process" <br>
+								When the data binding process is happening we get "Bind Exception".</p>
+
+							We would like to create a spring bean <strong>Student</strong> with sno, name, fatherName,
+							motherName properties
+							<p>Student.java</p>
+							<pre>package com.core;
+
+public class Student {
+	
+int no;
+String name;
+String fatherName;
+String motherName;
+
+public int getNo() {
+	return no;
+}
+public void setNo(int no) {
+	this.no = no;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+public String getFatherName() {
+	return fatherName;
+}
+public void setFatherName(String fatherName) {
+	this.fatherName = fatherName;
+}
+public String getMotherName() {
+	return motherName;
+}
+public void setMotherName(String motherName) {
+	this.motherName = motherName;
+}
+
+}
+</pre>
+							When we want to use above spring bean to configure into 2 students properties like
+							fatherName, motherName are getting related.
+							<p>To resolve this problem we have configured the spring bean for configuring fatherName
+								&amp; motherName in one place declared the class as abstract.</p>
+
+							Parent.java
+							<pre>package com.core;
+
+public abstract class Parent {
+ String fatherName;
+ String motherName;
+ 
+public String getFatherName() {
+	return fatherName;
+}
+public void setFatherName(String fatherName) {
+	this.fatherName = fatherName;
+}
+public String getMotherName() {
+	return motherName;
+}
+public void setMotherName(String motherName) {
+	this.motherName = motherName;
+}
+
+}
+</pre>
+
+							Student.java
+							<pre>package com.core;
+
+public class Student extends Parent{
+	
+int no;
+String name;
+
+public int getNo() {
+	return no;
+}
+public void setNo(int no) {
+	this.no = no;
+}
+public String getName() {
+	return name;
+}
+public void setName(String name) {
+	this.name = name;
+}
+
+}
+</pre>
+
+							configuration file :
+							<pre>&lt;bean id="parents" class="com.core.Parent" abstract="true"&gt;
+ &lt;property name="fatherName" value="abc"/&gt;
+ &lt;property name="motherName" value="xyz"/&gt; 
+&lt;/bean&gt;
+
+&lt;bean id="students" class="com.core.Student" parent="parents"&gt;
+ &lt;property name="no" value="1"/&gt;
+ &lt;property name="name" value="SaiCharan"/&gt;
+&lt;/bean&gt;
+</pre>
+
+
+							Java application :
+							<pre>package com.core;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.*;
+
+public class MyApp {
+
+public static void main(String[] args) {
+ 
+ApplicationContext container=new ClassPathXmlApplicationContext(
+		                  "com/core/applicationContext.xml");
+
+Student s=(Student)container.getBean("students");
+ System.out.println(s.getNo());
+ System.out.println(s.getMotherName()); 
+}//main
+
+}
+</pre>
+
+							The advantage of above approach is we can inherit the properties of abstract bean and use
+							it.
+
+
+
+
+
+
+
+
+							<h4 id="Example">Dependency Injection Example :</h4>
+
+							EmployeeServices.java
+							<pre>package com.core;
+
+public interface EmployeeServices {
+ public boolean incrementSalary(int eno,double amount);
+}
+</pre>
+
+							EmployeeServicesImpl.java
+							<pre>package com.core;
+
+public class EmployeeServicesImpl implements EmployeeServices{
+private	EmployeeDao employeeDao;
+
+public void setEmployeeDao(EmployeeDao dao){
+	employeeDao=dao;
+}
+
+ public boolean incrementSalary(int eno,double amount){
+	 double sal=employeeDao.getSal(eno);
+	 sal+=amount;
+	 employeeDao.setSal(eno,sal);
+	 System.out.println("salary :"+ sal);
+	 
+	 return true;
+  }
+}
+</pre>
+
+							EmployeeDao.java
+							<pre>package com.core;
+
+public interface EmployeeDao {
+ 
+void setSal(int eno,double amount);
+double getSal(int eno); 
+}
+</pre>
+
+							EmployeeDaoImpl.java
+							<pre>package com.core;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+public class EmployeeDaoImpl implements EmployeeDao{
+ 
+private DataSource dataSource;
+public EmployeeDaoImpl(DataSource ds) {
+	dataSource=ds;
+}
+private Connection con;
+public void setSal(int eno,double sal){
+ try{
+	 con=dataSource.getConnection();
+	 PreparedStatement pstmt=
+	       con.prepareStatement("update emp set sal=? where eno=?");
+	 pstmt.setDouble(1, sal);
+	 pstmt.setInt(2,eno);
+	 int count=pstmt.executeUpdate();
+	 System.out.println("update records :" +count);	 
+ }
+ catch(Exception e){
+	 e.printStackTrace();
+ }
+ finally{
+	try {
+	 con.close();
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+ }//finally
+	
+}//setSal
+public double getSal(int eno){
+ try{
+  con=dataSource.getConnection();
+  PreparedStatement pstmt=
+           con.prepareStatement("select sal from emp where eno=?");
+  pstmt.setInt(1,eno);
+  ResultSet rs=pstmt.executeQuery();
+	if(rs.next())
+	 return rs.getDouble(1);
+	 throw new RuntimeException("Employee not found");
+	 }//try
+  catch(Exception e){
+	e.printStackTrace();
+	throw new RuntimeException();
+  }
+ finally{
+	try {
+	 con.close();
+	} catch (SQLException e) {
+		e.printStackTrace();
+	}
+ }//finally
+} 
+ 
+}
+</pre>
+
+							mybeans.xml
+							<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"&gt;
+	
+&lt;bean id="empservices" class="com.core.EmployeeServicesImpl"&gt;
+ &lt;property name="employeeDao"&gt;
+    &lt;ref local="dao"/&gt;
+ &lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;bean id="dao" class="com.core.EmployeeDaoImpl"&gt;
+ &lt;constructor-arg&gt;
+   &lt;ref local="ds"/&gt;
+ &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+
+&lt;bean id="ds" class="org.apache.commons.dbcp.BasicDataSource"&gt;
+ &lt;property name="driverClassName"&gt;
+  &lt;value&gt;oracle.jdbc.driver.OracleDriver&lt;/value&gt;
+ &lt;/property&gt;
+ &lt;property name="url"&gt;
+  &lt;value&gt;jdbc:oracle:thin:@localhost:1521:xe&lt;/value&gt;
+ &lt;/property&gt;
+ &lt;property name="username"&gt;
+   &lt;value&gt;system&lt;/value&gt;
+ &lt;/property&gt;
+ &lt;property name="password"&gt;
+  &lt;value&gt;tiger&lt;/value&gt;
+ &lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;/beans&gt;
+</pre>
+
+							EmployeeServicesTestCase.java
+							<pre>package com.core;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
+public class EmployeeServicesTestCase {
+public static void main(String[] args) {
+	
+ BeanFactory beans=
+     new XmlBeanFactory(new FileSystemResource("mybeans.xml"));
+ EmployeeServices empservices=
+            (EmployeeServices)beans.getBean("empservices");
+ empservices.incrementSalary(Integer.parseInt(args[0]), 1000d);
+}//main
+
+}//class
+</pre>
+
+
+
+
+
+							<h4 id="Configuring">Configuring Beans :</h4>
+							<ul>
+								<li>The Spring Core Container supports the bean configurations for different types of
+									instantiations.</li>
+								<li> This is one of the advantage of spring framework allowing us to configure any
+									existing java class to be instantiated and managed by the spring container.</li>
+								<li>Spring even supports the configuration of a static inner class for instantiation.
+								</li>
+							</ul>
+							Spring supports 3 types of instantiations :
+							<ol>
+								<li>Using constructor</li>
+								<li>Static factory method</li>
+								<li>Non-static factory method</li>
+							</ol>
+
+							<h5 id="Instantiating">Instantiating Bean using Constructor :</h5>
+
+
+							<pre>&lt;!--instantiating bean with no argument constructor--&gt;
+&lt;bean id="bean1" class="MyBeanClass1"/&gt;
+
+&lt;!--instantiating bean with one String argument constructor--&gt;
+&lt;bean id="bean2" class="MyBeanClass2"&gt;
+ &lt;constructor-arg type="java.lang.String"&gt;
+   &lt;value&gt;Hello&lt;/value&gt;
+ &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+
+&lt;!--instantiating bean with two argument constructor--&gt;
+&lt;bean id="bean3" class="MyBeanClass3"&gt;
+ &lt;constructor-arg index="1"&gt;
+  &lt;value&gt;Hello&lt;/value&gt;
+ &lt;/constructor-arg&gt;
+ 
+ &lt;constructor-arg index="0"&gt;
+  &lt;ref local="mybean"/&gt;
+ &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+</pre>
+
+							<h5 id="Static">Instantiating Bean using Static factory method :</h5>
+							syntax :
+							<pre>&lt;bean id="mybean" class="com.core.MyFactoryBean" 
+                   factory-method="getInstance"/&gt;
+</pre>
+
+							<pre>&lt;bean id="con" class="java.sql.DriverManager" 
+                               factory-method="getConnection"&gt;
+&lt;constructor-arg&gt;
+  &lt;value&gt;jdbc:oracle:thin:@localhost:1521:xe&lt;/value&gt;
+&lt;/constructor-arg&gt;
+&lt;constructor-arg&gt;
+  &lt;value&gt;scott&lt;/value&gt;
+&lt;/constructor-arg&gt;
+&lt;constructor-arg&gt;
+  &lt;value&gt;tiger&lt;/value&gt;
+&lt;/constructor-arg&gt;
+
+&lt;property name="autoCommit"&gt;
+ &lt;value type="boolean"&gt;false&lt;/value&gt;
+&lt;/property&gt;
+&lt;/bean&gt;
+</pre>
+
+							<h5 id="Non-Static">Instantiating Bean using Non-static factory method :</h5>
+							<pre>&lt;bean id="bean1" class="com.core.MyFactoryBean"/&gt;
+
+&lt;bean id="bean2" factory-bean="bean1" 
+                 factory-method="getConnection"/&gt;
+</pre>
+
+
+
+							<h4 id="LifeCycle">Bean Scopes and LifeCycle</h4>
+
+
+							<table border="1">
+								<tbody>
+									<tr>
+										<th>Scopes</th>
+										<th>Description</th>
+									</tr>
+									<tr>
+										<th>singleton</th>
+										<td>
+											<ul>
+												<li> This is default scope.</li>
+												<li>
+													A bean defination configured with this scope is instantiated <b>
+														only once per container instance.</b></li>
+												<li>
+													And all the requests for this bean or references created for this
+													bean in the context will be given with the single object reference.
+												</li>
+											</ul>
+										</td>
+									</tr>
+
+									<tr>
+										<th>prototype</th>
+										<td>
+											<ul>
+												<li>
+													A bean defination configured with this scope is instantiated
+													<b>every time it is requested or referenced</b>.
+												</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>request</th>
+										<td>
+											<ul>
+												<li>
+													This scope is applicable only when using a web aware spring
+													ApplicationContext.</li>
+												<li>
+													A bean defination configured with this scope is instantiated <b> for
+														each HTTP request</b>.</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>session</th>
+										<td>
+											<ul>
+												<li>
+													This scope is applicable only when using a web aware spring
+													ApplicationContext.</li>
+												<li>
+													A bean defination configured with this scope is instantiated <b> for
+														each HTTP session</b>.</li>
+												<li>
+													That is, the bean scoped with a session is shared between all the
+													session's requests.</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>global session</th>
+										<td>
+											<ul>
+												<li>
+													This scope is applicable only when using a web aware spring
+													ApplicationContext.</li>
+												<li>
+													A bean defination configured with this scope is same as session
+													scope.</li>
+												<li>
+													Beans defind as the global session scope are scoped to the lifetime
+													of the global portlet session.</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+
+
+							<h5 id="Initialization">Initialization :</h5>
+
+							<ul>
+								<li>To listen for the initialization lifecycle event the bean can implement
+									<strong>org.springframework.beans.factory.InitializingBean</strong> interface.
+								</li>
+								<li>This interface declares only one method <b>afterPropertiesSet()</b></li>
+							</ul>
+
+
+							<pre>&lt;bean id="mybean" class="com.core.BeanLifeCycle" 
+                       init-method="initialize"/&gt;
+</pre>
+
+							BeanLifeCycle.java
+							<pre>package com.core;
+
+import org.springframework.beans.factory.InitializingBean;
+
+public class BeanLifeCycle implements InitializingBean{
+
+public BeanLifeCycle(){
+ //invoke before the bean properties are set
+//can perform initializations, but bean properties are not available
+}
+public void afterPropertiesSet()throws Exception{
+ //invoke after the bean properties are set successfully
+//can perform initializations, even using the bean properties 
+}
+
+}//class
+</pre>
+
+
+							Spring allows us to configure the default initialization method for all the beans configured
+							in an XML configuration file.
+							<pre>&lt;beans default-init-method="initialize"&gt;
+ &lt;bean id="mybean1" class="com.core.BeanLifeCycle1"/&gt;
+ &lt;bean id="mybean2" class="com.core.BeanLifeCycle2"/&gt;
+
+ &lt;bean id="mybean3" class="com.core.BeanLifeCycle3" 
+                                     init-method="init"/&gt;
+&lt;/beans&gt;
+</pre>
+
+							<h5 id="Destruction">Destruction :</h5>
+
+							<ul>
+								<li>To listen for the destruction lifecycle event the bean can implement
+									<strong>org.springframework.beans.factory.DisposableBean</strong> interface.
+								</li>
+								<li>This interface declares only one method <b>destroy()</b></li>
+							</ul>
+
+
+							<pre>&lt;bean id="mybean" class="com.core.BeanLifeCycle" 
+                            destroy-method="close"/&gt;
+</pre>
+
+							BeanLifeCycle.java
+							<pre>package com.core;
+
+import org.springframework.beans.factory.DisposableBean;
+
+public class BeanLifeCycle implements DisposableBean{
+
+public void destroy() throws Exception {
+ //invoked just before the bean is put out of service
+//can perform finalizations
+}
+
+}//class
+</pre>
+
+
+							Spring allows us to configure the default destruction method for all the beans configured in
+							an XML configuration file.
+
+
+							<pre> &lt;beans default-destroy-method="close"&gt;
+  &lt;bean id="mybean1" class="com.core.BeanLifeCycle1"/&gt;
+  &lt;bean id="mybean2" class="com.core.BeanLifeCycle2"/&gt;
+  &lt;bean id="mybean3" class="com.core.BeanLifeCycle3" 
+                               destroy-method="destroy"/&gt;
+ &lt;/beans&gt;
+ </pre>
+
+
+
+
+
+
+							<h4 id="Method">Method Injection </h4>
+
+
+
+
+							<h5 id="LookUp">LookUp Method Injection :</h5>
+
+							BusinessObject1.java
+							<pre>package com.core;
+
+public abstract class BusinessObject1 {
+	
+public void service(){
+ BusinessObject2 bo2=getBusinessObject2();		
+}
+
+public abstract BusinessObject2 getBusinessObject2();
+}
+</pre>
+
+							mybeans.xml
+							<pre>&lt;bean id="bean1" class="com.core.BusinessObject1" scope="singleton"&gt;
+ &lt;lookup-method name="getBusinessObject2" bean="businessObject2"/&gt;
+&lt;/bean&gt;
+
+&lt;bean id="businessObject2" class="com.core.BusinessObject2" 
+                                              scope="prototype"/&gt;
+</pre>
+
+
+
+
+							<hr>
+
+
+
+							<h3 id="I18N">I18N applications in core :</h3>
+
+							To deal with I18N applications spring guys are provided an interface
+							<strong>org.springframework.context.MessageSource</strong>
+							<p>This interface contains the methods which are used to deal with I18N applications.</p>
+							The following UML diagram shows the important methods of interface
+
+							<br>
+							<table border="1" bordercolor="red">
+								<tbody>
+									<tr>
+										<th>MessageSource</th>
+									</tr>
+									<tr>
+										<td>getMessage(key, arguments, locale)</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<br>
+							<p>'ApplicationContext' interface inherits the properties of 'MessageSource' because of this
+								reason when ever we create spring container object , it is taking care of I18N
+								applications as part of <strong>org.springframework.context.support</strong> package.
+							</p>
+
+							The following classes provides implementation of MessageSource inteface
+							<ul>
+								<li>ResourceBundleMessageSource</li>
+								<li>ReloadableResourceBundleMessageSource</li>
+								<li>StaticMessageSource</li>
+							</ul>
+							<p>By using above classes we provide the information about our property files to spring
+								container.</p>
+
+							<h5 id="Procedure">Procedure to use I18N applications: </h5>
+
+							<ol>
+								<li>create the property files based on the number of languages we would like to
+									support.<br>(src folder)
+									<pre>one = one in English
+two = two in English
+three = three in English
+</pre>
+									<p>resOne_en_US.properties</p>
+									<br><br>
+
+									<pre>one = one in French
+two = two in French
+three = three in French
+</pre>
+									<p>resOne_fr_CA.properties</p>
+									<br>
+
+								</li>
+								<li>configure <b>ResourceBundleMessageSource</b> in spring bean configuration file.
+									<pre>&lt;bean id="messageSource" class=
+  "org.springframework.context.support.ResourceBundleMessageSource"&gt;
+  
+ &lt;property name="basename" value="resOne"/&gt;
+&lt;/bean&gt;
+</pre>
+								</li>
+								<li>create a spring container object and call a method <b>getMessage()</b>
+									<pre>package com.core;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.*;
+
+
+public class MyApp {
+
+public static void main(String[] args) {
+ 
+ApplicationContext container=new ClassPathXmlApplicationContext(
+		              "com/core/applicationContext.xml");
+
+ System.out.println(container.getMessage("one", null, null));
+}//main
+
+}
+</pre>
+
+								</li>
+								<li>If we are retrieving a key which is not available we get an exception
+									<strong>NoSuchMessageException</strong>.
+								</li>
+								<li>As part of spring property file we can use configurable messages for example
+									<pre>one = one in English {0} and {1}
+</pre>
+									<p>resOne_en_US.properties</p>
+								</li>
+								<li>
+									To supply the values to above parameters we use the following syntax :
+									<pre>package com.core;
+import java.util.Locale;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.*;
+
+
+public class MyApp {
+
+public static void main(String[] args) {
+ 
+ApplicationContext container=new ClassPathXmlApplicationContext(
+                       "com/core/applicationContext.xml");
+
+ System.out.println(container.getMessage("one", 
+		  new String[]{"valueOne", "valueTwo"}, 
+		                 Locale.getDefault()));
+}//main
+
+}
+</pre>
+									<p>MyApp.java</p>
+								</li>
+							</ol>
+
+
+
+							<h6 id="bundles">Using multiple bundles in spring :</h6>
+							<p>To use multiple bundles we have to use a property basenames by using a comma(,) separated
+								values of basenames.</p>
+
+							<pre>&lt;bean id="messageSource" class=
+  "org.springframework.context.support.ResourceBundleMessageSource"&gt;
+  
+ &lt;property name="basenames" value="resOne,resTwo"/&gt;
+&lt;/bean&gt;
+</pre>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 center py-3 text-white">
+						Copyright © 2023, <br>The content is copyrighted to Ravi Kalyan Kolloju.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

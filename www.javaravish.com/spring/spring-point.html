@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Java By Ravi Kalyan">
+
+	<title>Java Ravish | Spring Introduction</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="../scripts/images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="../scripts/images/favicon/apple-touch-icon.jpeg">
+	<link href="../scripts/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../scripts/css/customcss.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+	<style>
+		.div-to-hide {
+			display: block;
+			/* Display the div by default */
+		}
+
+		@media screen and (max-width: 767px) {
+			.div-to-hide {
+				display: none;
+				/* Hide the div on screens smaller than 768px (mobile) */
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+		<div class="container p-0">
+			<a class="navbar-brand pull-left" href="../main/home.html"><img src="../scripts/images/jrlogo.PNG"
+					style="height: 50px; max-width: 100%;" alt="java by Kalyan" title="Java Ravish Tutorials"></a>
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto text-center">
+					<li class="nav-item"><a class="nav-link" href="../main/home.html"><img
+								src="../scripts/images/small/home.jpg"></i></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../corejava/java-introduction.html">Java</a></li>
+					<li class="nav-item"><a class="nav-link" href="../spring/spring-introduction.html">Spring</a></li>
+					<li class="nav-item"><a class="nav-link" href="../springboot/sb-introduction.html">SpringBoot</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../main/interview-questions.html">Interview
+							Questions</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br>
+	<div class="container-fluid">
+		<br />
+		<ol class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="../main/home.html"> <span itemprop="name">Home</span></a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="spring-introduction.html"> <span
+						itemprop="name">Spring</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="#">
+					<span itemprop="name">Spring Introduction</span>
+				</a>
+			</li>
+		</ol>
+
+		<div class="row">
+			<link rel="stylesheet" href="../scripts/css/sidebarcollapsecss.css">
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#sideBarResponsive" aria-controls="sideBarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+				aria-multiselectable="true">
+				<div class="collapse card" id="sideBarResponsive">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Spring</h2>
+					<div class="list-group">
+						<ul class="leftBarList">
+							<li><a href="../spring/spring-introduction.html">Introduction</a></li>
+							<li><a href="../spring/spring-ioc.html">Inversion Of Control</a></li>
+							<li><a href="../spring/spring-aop.html">Aspect Oriented Programming</a></li>
+							<li><a href="../spring/spring-point.html">Pointcut and Advisors</a>
+							</li>
+							<li><a href="../spring/spring-aop-2.0.html">Spring 2.0 AOP Support</a></li>
+							<li><a href="../spring/spring-jdbc.html">JDBC and DAO Module</a></li>
+							<li><a href="../spring/spring-hibernate.html">Hibernate</a></li>
+							<li><a href="../spring/spring-persistent.html">Persistent Classes Mapping</a></li>
+							<li><a href="../spring/spring-hql.html">HQL and Criterion
+									API</a></li>
+							<li><a href="../spring/spring-hibernate-integration.html">Hibernate with Spring</a></li>
+							<li><a href="../spring/spring-mvc.html">MVC Introduction</a></li>
+							<li><a href="../spring/spring-mvc-fw.html">MVC Framework</a></li>
+
+							<li><a href="../spring/spring-dservlet.html">DispatcherServlet</a>
+							</li>
+							<li><a href="../spring/spring-controller.html">Controllers and Validations</a>
+							</li>
+							<li><a href="../spring/spring-view.html">View-Resolver and View</a></li>
+							<li><a href="../spring/spring-jms.html">Implementing JMS using Spring</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="div-to-hide card" id="sideBarResponsive">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Spring</h2>
+					<div class="list-group">
+						<ul class="leftBarList">
+							<li><a href="../spring/spring-introduction.html">Introduction</a></li>
+							<li><a href="../spring/spring-ioc.html">Inversion Of Control</a></li>
+							<li><a href="../spring/spring-aop.html">Aspect Oriented Programming</a></li>
+							<li><a href="../spring/spring-point.html">Pointcut and Advisors</a>
+							</li>
+							<li><a href="../spring/spring-aop-2.0.html">Spring 2.0 AOP Support</a></li>
+							<li><a href="../spring/spring-jdbc.html">JDBC and DAO Module</a></li>
+							<li><a href="../spring/spring-hibernate.html">Hibernate</a></li>
+							<li><a href="../spring/spring-persistent.html">Persistent Classes Mapping</a></li>
+							<li><a href="../spring/spring-hql.html">HQL and Criterion
+									API</a></li>
+							<li><a href="../spring/spring-hibernate-integration.html">Hibernate with Spring</a></li>
+							<li><a href="../spring/spring-mvc.html">MVC Introduction</a></li>
+							<li><a href="../spring/spring-mvc-fw.html">MVC Framework</a></li>
+
+							<li><a href="../spring/spring-dservlet.html">DispatcherServlet</a>
+							</li>
+							<li><a href="../spring/spring-controller.html">Controllers and Validations</a>
+							</li>
+							<li><a href="../spring/spring-view.html">View-Resolver and View</a></li>
+							<li><a href="../spring/spring-jms.html">Implementing JMS using Spring</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Spring Introduction</h1>
+					<div class="card-body">
+						<div class="tab" role="tabpanel">
+
+							<ol>
+								<li><a href="spring-Introduction">Introduction to Pointcuts </a><br><br></li>
+							</ol>
+
+
+							<h3>Types of Pointcuts </h3>
+							<ol>
+								<li>Static Pointcut</li>
+								<li>Dynamic Pointcut</li>
+							</ol>
+
+							<h4>Static Pointcut</h4>
+
+							<b>NameMatchMethodPointcut :</b>
+							<p></p>
+							mybeans.xml
+							<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans
+ xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"&gt;
+
+&lt;bean id="accdao" class="com.pointcut.AccountDAOTestImpl"/&gt;
+  
+&lt;bean id="accServices" class="com.pointcut.AccountServicesImpl"&gt;
+ &lt;constructor-arg&gt;
+  &lt;ref local="accdao"/&gt;
+ &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+
+&lt;bean id="logging" class="com.pointcut.LoggingAdvice"/&gt;
+
+&lt;bean id="mypointcut" 
+  class="org.springframework.aop.support.NameMatchMethodPointcut"&gt;
+ &lt;property name="mappedName"&gt;
+  &lt;value&gt;withdraw&lt;/value&gt;
+ &lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;bean id="loggingAdvisor" 
+  class="org.springframework.aop.support.DefaultPointcutAdvisor"&gt;
+ &lt;property name="advice"&gt;
+  &lt;ref local="logging"/&gt;
+ &lt;/property&gt;
+ &lt;property name="pointcut"&gt;
+  &lt;ref local="mypointcut"/&gt;
+ &lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;bean id="accountServices" 
+   class="org.springframework.aop.framework.ProxyFactoryBean"&gt;
+ &lt;property name="targetName" value="accServices"/&gt;
+ &lt;property name="interceptorNames"&gt;
+  &lt;list&gt;
+   &lt;value&gt;loggingAdvisor&lt;/value&gt;
+  &lt;/list&gt;
+ &lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;/beans&gt;
+</pre>
+
+							<b>Regular Expression Method Pointcut : </b>
+
+							<pre>&lt;bean id="mypointcut" 
+  class="org.springframework.aop.support.JdkRegexpMethodPointcut"&gt;
+ &lt;property name="patterns"&gt;
+  &lt;list&gt;
+   &lt;value&gt;.*get.*&lt;/value&gt;
+   &lt;value&gt;.*set.*&lt;/value&gt;
+  &lt;/list&gt;
+ /property&gt;
+&lt;/bean&gt;
+</pre>
+
+							<h4>Dynamic Pointcuts </h4>
+
+							<b>Control Flow Pointcut :</b>
+
+							<pre>&lt;bean id="mypointcut" 
+  class="org.springframework.aop.support.ControlFlowPointcut"&gt;
+ &lt;constructor-arg&gt;
+  &lt;value&gt;com.aop.WithDrawService&lt;/value&gt;
+ &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+</pre>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 center py-3 text-white">
+						Copyright © 2023, <br>The content is copyrighted to Ravi Kalyan Kolloju.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

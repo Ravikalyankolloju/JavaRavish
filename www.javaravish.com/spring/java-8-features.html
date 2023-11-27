@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Java By Ravi Kalyan">
+
+	<title>Java Ravish | Introduction to Spring</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="../scripts/images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="../scripts/images/favicon/apple-touch-icon.jpeg">
+	<link href="../scripts/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../scripts/css/customcss.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+	<style>
+		.div-to-hide {
+			display: block;
+			/* Display the div by default */
+		}
+
+		@media screen and (max-width: 767px) {
+			.div-to-hide {
+				display: none;
+				/* Hide the div on screens smaller than 768px (mobile) */
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+		<div class="container p-0">
+			<a class="navbar-brand pull-left" href="../main/home.html"><img src="../scripts/images/jrlogo.PNG"
+					style="height: 50px; max-width: 100%;" alt="java by Kalyan" title="Java Ravish Tutorials"></a>
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto text-center">
+					<li class="nav-item"><a class="nav-link" href="../main/home.html"><img
+								src="../scripts/images/small/home.jpg"></i></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../corejava/java-introduction.html">Java</a></li>
+					<li class="nav-item"><a class="nav-link" href="../spring/spring-introduction.html">Spring</a></li>
+					<li class="nav-item"><a class="nav-link" href="../springboot/sb-introduction.html">SpringBoot</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../main/interview-questions.html">Interview
+							Questions</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br>
+	<div class="container-fluid">
+		<br />
+		<ol class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="../main/home.html"> <span itemprop="name">Home</span>
+				</a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="java-introduction.html"> <span itemprop="name">Spring</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="#">
+					<span itemprop="name">Java 8 Features</span>
+				</a>
+			</li>
+		</ol>
+		<div class="row">
+			<link rel="stylesheet" href="../scripts/css/sidebarcollapsecss.css">
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#sideBarResponsive" aria-controls="sideBarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+				aria-multiselectable="true">
+				<div class="collapse card" id="sideBarResponsive">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Spring Framework</h2>
+					<div class="list-group">
+						<ul class="leftBarList">
+							<li><a href="java-introduction.html">Introduction to Spring Framework</a></li>
+							<li><a href="java-languag-fundamentals.html">Java Language Fundamentals</a></li>
+							<li><a href="java-access-modifiers.html">Access Modifiers</a></li>
+							<li><a href="java-flow-control.html">Flow Control</a></li>
+							<li><a href="java-oops.html">Object Oriented Programming</a></li>
+							<li><a href="java-vm-memory-management.html">JVM Memory Management</a></li>
+							<li><a href="java-garbage-collection.html">Garbage Collection</a></li>
+							<li><a href="java-inner-classes.html">Inner Classes</a></li>
+							<li><a href="java-abstraction.html">Abstraction</a></li>
+							<li><a href="java-encapsulation.html">Encapsulation</a></li>
+							<li><a href="java-polymorphism.html">Polymorphism</a></li>
+							<li><a href="java-inheritance.html">Inheritance </a></li>
+							<li><a href="java-exception.html">Exception Handling</a></li>
+							<li><a href="java-multithreading.html">Multithreading</a></li>
+							<li><a href="java-lang-package.html">Fundamentals of java.lang.package</a></li>
+							<li><a href="java-serialization.html">Serialization</a></li>
+							<li><a href="java-generics.html">Generics</a></li>
+							<li><a href="java-collection-framework.html">Collection Framework</a></li>
+							<li><a href="java-internationalization.html">Internationalization</a></li>
+							<li><a href="java-8-features.html">Java 8 Features</a></li>
+							<li><a href="java-interview-questions.html">Java Interview Questions</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="div-to-hide card" id="sideBarResponsive">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Java</h2>
+					<div class="list-group">
+						<ul class="leftBarList">
+							<li><a href="java-introduction.html">Java Introduction</a></li>
+							<li><a href="java-languag-fundamentals.html">Java Language Fundamentals</a></li>
+							<li><a href="java-access-modifiers.html">Access Modifiers</a></li>
+							<li><a href="java-flow-control.html">Flow Control</a></li>
+							<li><a href="java-oops.html">Object Oriented Programming</a></li>
+							<li><a href="java-vm-memory-management.html">JVM Memory Management</a></li>
+							<li><a href="java-garbage-collection.html">Garbage Collection</a></li>
+							<li><a href="java-inner-classes.html">Inner Classes</a></li>
+							<li><a href="java-abstraction.html">Abstraction</a></li>
+							<li><a href="java-encapsulation.html">Encapsulation</a></li>
+							<li><a href="java-polymorphism.html">Polymorphism</a></li>
+							<li><a href="java-inheritance.html">Inheritance </a></li>
+							<li><a href="java-exception.html">Exception Handling</a></li>
+							<li><a href="java-multithreading.html">Multithreading</a></li>
+							<li><a href="java-lang-package.html">Fundamentals of java.lang.package</a></li>
+							<li><a href="java-serialization.html">Serialization</a></li>
+							<li><a href="java-generics.html">Generics</a></li>
+							<li><a href="java-collection-framework.html">Collection Framework</a></li>
+							<li><a href="java-internationalization.html">Internationalization</a></li>
+							<li><a href="java-8-features.html">Java 8 Features</a></li>
+							<li><a href="java-interview-questions.html">Java Interview Questions</a></li>
+						</ul>
+					</div>
+				</div>
+				<br>
+			</div>
+
+
+
+			<div class="col-lg-9 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Java 8 Features</h1>
+					<div class="card-body">
+						<div class="tab" role="tabpanel">
+
+						</div>
+					</div>
+					<div class="card-footer">
+						<ul class="pagination justify-content-center mb-4">
+							<li class="page-item"><a class="page-link btn-outline-primary"
+									href="java-internationalization.html">&lArr; Previous</a></li>
+							<li class="page-item"><a class="page-link" href="java-interview-questions.html">Next
+									&rArr;</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 center py-3 text-white">
+						Copyright © 2023, <br>The content is copyrighted to Ravi Kalyan Kolloju.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

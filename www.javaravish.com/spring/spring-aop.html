@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Java By Ravi Kalyan">
+
+	<title>Java Ravish | Spring Introduction</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="../scripts/images/favicon/android-chrome-192x192.png" />
+	<link rel="apple-touch-icon" href="../scripts/images/favicon/apple-touch-icon.jpeg">
+	<link href="../scripts/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../scripts/css/customcss.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+	<style>
+		.div-to-hide {
+			display: block;
+			/* Display the div by default */
+		}
+
+		@media screen and (max-width: 767px) {
+			.div-to-hide {
+				display: none;
+				/* Hide the div on screens smaller than 768px (mobile) */
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg border-bottom navbarmenu fixed-top bg-white">
+		<div class="container p-0">
+			<a class="navbar-brand pull-left" href="../main/home.html"><img src="../scripts/images/jrlogo.PNG"
+					style="height: 50px; max-width: 100%;" alt="java by Kalyan" title="Java Ravish Tutorials"></a>
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="collapse navbar-collapse pull-right" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto text-center">
+					<li class="nav-item"><a class="nav-link" href="../main/home.html"><img
+								src="../scripts/images/small/home.jpg"></i></a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../corejava/java-introduction.html">Java</a></li>
+					<li class="nav-item"><a class="nav-link" href="../spring/spring-introduction.html">Spring</a></li>
+					<li class="nav-item"><a class="nav-link" href="../springboot/sb-introduction.html">SpringBoot</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="../main/interview-questions.html">Interview
+							Questions</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br>
+	<div class="container-fluid">
+		<br />
+		<ol class="breadcrumb no-padding  mt-5 bg-light nohighlight">
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="../main/home.html"> <span itemprop="name">Home</span></a>
+				<meta itemprop="position" content="1" />
+			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="spring-introduction.html"> <span
+						itemprop="name">Spring</span>
+				</a>
+				<meta itemprop="position" content="2" />
+			</li>
+			<li itemprop="itemListElement" class="breadcrumb-item">
+				<a class="text-dark" itemprop="item" href="#">
+					<span itemprop="name">Spring Introduction</span>
+				</a>
+			</li>
+		</ol>
+
+		<div class="row">
+			<link rel="stylesheet" href="../scripts/css/sidebarcollapsecss.css">
+			<button class="w3-button w3-teal w3-hide-large" type="button" data-toggle="collapse"
+				data-target="#sideBarResponsive" aria-controls="sideBarResponsive" aria-expanded="false"
+				aria-label="Toggle navigation">
+				&#9776;
+			</button>
+			<div class="col-lg-3 w3-collapse w3-animate-right hidesidebar sidebarfont" id="mySidebar" role="tablist"
+				aria-multiselectable="true">
+				<div class="collapse card" id="sideBarResponsive">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Spring</h2>
+					<div class="list-group">
+						<ul class="leftBarList">
+							<li><a href="../spring/spring-introduction.html">Introduction</a></li>
+							<li><a href="../spring/spring-ioc.html">Inversion Of Control</a></li>
+							<li><a href="../spring/spring-aop.html">Aspect Oriented Programming</a></li>
+							<li><a href="../spring/spring-point.html">Pointcut and Advisors</a>
+							</li>
+							<li><a href="../spring/spring-aop-2.0.html">Spring 2.0 AOP Support</a></li>
+							<li><a href="../spring/spring-jdbc.html">JDBC and DAO Module</a></li>
+							<li><a href="../spring/spring-hibernate.html">Hibernate</a></li>
+							<li><a href="../spring/spring-persistent.html">Persistent Classes Mapping</a></li>
+							<li><a href="../spring/spring-hql.html">HQL and Criterion
+									API</a></li>
+							<li><a href="../spring/spring-hibernate-integration.html">Hibernate with Spring</a></li>
+							<li><a href="../spring/spring-mvc.html">MVC Introduction</a></li>
+							<li><a href="../spring/spring-mvc-fw.html">MVC Framework</a></li>
+
+							<li><a href="../spring/spring-dservlet.html">DispatcherServlet</a>
+							</li>
+							<li><a href="../spring/spring-controller.html">Controllers and Validations</a>
+							</li>
+							<li><a href="../spring/spring-view.html">View-Resolver and View</a></li>
+							<li><a href="../spring/spring-jms.html">Implementing JMS using Spring</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="div-to-hide card" id="sideBarResponsive">
+					<h2 class="card-header text-white" style="background: rgb(0,0,0);">Spring</h2>
+					<div class="list-group">
+						<ul class="leftBarList">
+							<li><a href="../spring/spring-introduction.html">Introduction</a></li>
+							<li><a href="../spring/spring-ioc.html">Inversion Of Control</a></li>
+							<li><a href="../spring/spring-aop.html">Aspect Oriented Programming</a></li>
+							<li><a href="../spring/spring-point.html">Pointcut and Advisors</a>
+							</li>
+							<li><a href="../spring/spring-aop-2.0.html">Spring 2.0 AOP Support</a></li>
+							<li><a href="../spring/spring-jdbc.html">JDBC and DAO Module</a></li>
+							<li><a href="../spring/spring-hibernate.html">Hibernate</a></li>
+							<li><a href="../spring/spring-persistent.html">Persistent Classes Mapping</a></li>
+							<li><a href="../spring/spring-hql.html">HQL and Criterion
+									API</a></li>
+							<li><a href="../spring/spring-hibernate-integration.html">Hibernate with Spring</a></li>
+							<li><a href="../spring/spring-mvc.html">MVC Introduction</a></li>
+							<li><a href="../spring/spring-mvc-fw.html">MVC Framework</a></li>
+
+							<li><a href="../spring/spring-dservlet.html">DispatcherServlet</a>
+							</li>
+							<li><a href="../spring/spring-controller.html">Controllers and Validations</a>
+							</li>
+							<li><a href="../spring/spring-view.html">View-Resolver and View</a></li>
+							<li><a href="../spring/spring-jms.html">Implementing JMS using Spring</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 mb-4">
+				<div class="card h-100">
+					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Spring Introduction</h1>
+					<div class="card-body">
+						<div class="tab" role="tabpanel">
+
+							<ol>
+								<li><a href="spring-Introduction">Introduction to Spring Framework </a><br><br></li>
+							</ol>
+
+							<h5>Terminology :</h5>
+							<ol>
+								<li>Concern</li>
+								<li>Joinpoint</li>
+								<li>Advice</li>
+								<li>Pointcut</li>
+								<li>Aspect</li>
+								<li>Weaving</li>
+							</ol>
+
+
+							<h6>Spring AOP</h6>
+
+							<h6>Spring Advice API</h6>
+							<ul>
+								<li>Before advice</li>
+								<li>After returning advice</li>
+								<li>Throws advice</li>
+								<li>Around advice</li>
+							</ul>
+
+							<h4>Before Advice</h4>
+
+							<b>public void before(Method m,)</b>
+
+
+							<h5>Working with before advice :</h5>
+
+							AccountServices.java
+							<pre>package com.aop;
+
+public interface AccountServices {
+ boolean deposit(int accno,double amt) throws MyException;
+ boolean withdraw(int accno,double amt) throws MyException;
+
+} 
+</pre>
+
+							AccountServicesImpl.java
+							<pre>package com.aop;
+
+public class AccountServicesImpl implements AccountServices {
+	
+private AccountDAO accountDAO;
+	
+public AccountServicesImpl(){ }
+
+public AccountServicesImpl(AccountDAO accountDAO){
+ this.accountDAO=accountDAO;
+}
+
+public boolean deposit(int accno, double amt) throws MyException {
+ System.out.println("in deposit method");
+ double bal=accountDAO.getBalance(accno);
+ bal+=amt;
+ accountDAO.setBalance(accno,bal);
+ return true;
+}
+
+public boolean withdraw(int accno, double amt) throws MyException {
+ System.out.println("in withdraw method");
+ double bal=accountDAO.getBalance(accno);
+ bal-=amt;
+ 
+ if(bal&gt;=1000){
+	 accountDAO.setBalance(accno,bal);
+	 return true;
+ }
+ return false;
+}
+
+}
+</pre>
+
+							MyException.java
+							<pre>package com.aop;
+
+public class MyException extends Exception {
+	
+ public MyException(){ }
+ 
+ public MyException(String message){
+  super(message);
+ }
+
+} 
+</pre>
+
+							AccountDAO.java
+							<pre>package com.aop;
+
+public interface AccountDAO {
+
+ double getBalance(int accno)throws MyException;
+ void setBalance(int accno,double amt)throws MyException; 
+
+} 
+</pre>
+
+							AccountDAOTestImpl.java
+							<pre>package com.aop;
+
+public class AccountDAOTestImpl implements AccountDAO {
+
+ public double getBalance(int accno)throws MyException {
+  return 5000;
+ }
+
+ public void setBalance(int accno, double amt)throws MyException {
+		
+ }
+
+}
+</pre>
+
+							LoggingAdvice.java
+							<pre>package com.aop;
+
+import java.lang.reflect.Method;
+
+import org.apache.log4j.Logger;
+import org.springframework.aop.MethodBeforeAdvice;
+
+public class LoggingAdvice implements MethodBeforeAdvice {
+
+ public void before(Method m, Object[] args, Object target){
+  System.out.println("Logging Advice applied for :"+m.getName());
+  Logger logger=Logger.getLogger(target.getClass());
+  logger.info("Method :"+m.getName()+"invoked with"+
+                               args.length+"arguments");
+ }//before
+
+}
+</pre>
+
+							log4j.properties
+							<pre>log4j.rootLogger=info, myapp
+#log4j.appender.myapp=org.apache.log4j.ConsoleAppender
+
+log4j.appender.myapp=org.apache.log4j.FileAppender
+log4j.appender.myapp.file=mylog.html
+log4j.appender.myapp.layout=org.apache.log4j.HTMLLayout
+log4j.appender.myapp.append=false
+</pre>
+
+							mybeans.xml
+							<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans
+ xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"&gt;
+  
+&lt;bean id="accDAO" class="com.aop.AccountDAOTestImpl"/&gt;
+
+&lt;bean id="accServices" class="com.aop.AccountServicesImpl"&gt;
+ &lt;constructor-arg&gt;
+  &lt;ref local="accDAO"/&gt;
+ &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+
+&lt;bean id="logging" class="com.aop.LoggingAdvice"/&gt;
+&lt;bean id="accountServices" 
+     class="org.springframework.aop.framework.ProxyFactoryBean"&gt;
+ &lt;property name="targetName"&gt;
+  &lt;value&gt;accServices&lt;/value&gt;
+ &lt;/property&gt;
+ &lt;property name="proxyInterfaces"&gt;
+  &lt;list&gt;
+   &lt;value&gt;com.aop.AccountServices&lt;/value&gt;
+  &lt;/list&gt;
+ &lt;/property&gt;
+ &lt;property name="interceptorNames"&gt;
+  &lt;list&gt;
+   &lt;value&gt;logging&lt;/value&gt;
+  &lt;/list&gt;
+ &lt;/property&gt;
+&lt;/bean&gt;
+  
+&lt;/beans&gt;
+</pre>
+
+							AccountServicesTestCase.java
+							<pre>package com.aop;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
+public class AccountServicesTestCase {
+	
+public static void main(String args[])throws Exception{
+ BeanFactory beans=
+   new XmlBeanFactory(new FileSystemResource("src/mybeans.xml"));
+ AccountServices as=(AccountServices)beans.getBean("accountServices");
+ System.out.println(as.withdraw(1, 1000));
+ System.out.println("\n");
+ System.out.println(as.deposit(1, 1000));
+}
+} 
+</pre>
+
+							result :
+							<pre>Logging Advice applied for : withdraw
+in withdraw method
+true
+
+Logging Advice applied for : deposit
+in deposit method
+true
+</pre>
+
+							<h4>After Returning Advice </h4>
+
+							<h5>Working with AfterReturningAdvice :</h5>
+
+							MyBusinessObject.java
+							<pre>package com.aop;
+
+public class MyBusinessObject{
+ public String businessService(int id)throws MyException{
+  System.out.println("in business service");
+  if(id==0){
+   System.out.println("returning test1...");
+   return "Test1";
+  }
+  else if(id==1){
+   System.out.println("returning test2...");
+   return "Test2";
+  }
+  else {
+	System.out.println("returning Hello...");
+	return "Hello from business service";
+  }
+ }
+}
+</pre>
+
+							MyAfterReturningAdvice.java
+							<pre>package com.aop;
+
+import java.lang.reflect.Method;
+
+import org.springframework.aop.AfterReturningAdvice;
+
+public class MyAfterReturningAdvice implements AfterReturningAdvice{
+
+ public void afterReturning(Object return_value, Method m, 
+		         Object[] args,Object target)throws Throwable {
+  System.out.println("In MyAfterReturningAdvice :"+m.getName());
+  System.out.println("Accessing return value...");
+  if(return_value.equals("Test1")){
+   System.out.println("return value found Test1");
+   System.out.println("advice throwing MyException");
+   throw new MyException("MyException from AfterReturningAdvice");
+  }
+  if(return_value.equals("Test2")){
+   System.out.println("return value found Test2");
+   System.out.println("advice throwing MyException");
+   throw new MyException("MyException from AfterReturningAdvice");
+  }
+  System.out.println("return value found :"+return_value);
+  System.out.println("advice ending without throwing exception...");
+ }//afterReturning
+
+}//class
+</pre>
+
+							MyException.java
+							<pre>package com.aop;
+
+public class MyException extends Exception {
+	
+ public MyException(){ }
+ 
+ public MyException(String message){
+  super(message);
+ }
+
+} 
+</pre>
+
+							MyBusinessObjectTestCase.java
+							<pre>package com.aop;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
+public class MyBusinessObjectTestCase {
+
+ public static void main(String[] args)throws Exception{
+  BeanFactory beans=
+	  new XmlBeanFactory(new FileSystemResource("src/mybeans.xml"));
+  MyBusinessObject bo=(MyBusinessObject)beans.getBean("myServices");
+  System.out.println("Testing normal flow ...");
+  System.out.println(bo.businessService(2));
+  System.out.println("\n");
+  
+  try{
+   System.out.println("Testing flow when MyException is thrown by advice");
+   System.out.println(bo.businessService(0));
+  }
+  catch (MyException e) {
+   System.out.println(e);
+  }
+  System.out.println("\n");
+  try{
+   System.out.println("Testing flow when MyException is thrown by advice");
+   System.out.println(bo.businessService(1));
+  }
+  catch (Exception e) {
+   System.out.println(e);
+  }
+  
+ }//main
+}//class
+</pre>
+
+							mybeans.xml
+							<pre>&lt;beans&gt;
+
+&lt;bean id="myser" class="com.aop.MyBusinessObject"/&gt;
+  
+&lt;bean id="afterReturning" class="com.aop.MyAfterReturningAdvice"/&gt;
+
+&lt;bean id="myServices" 
+        class="org.springframework.aop.framework.ProxyFactoryBean"&gt;
+ &lt;property name="targetName" value="myser"/&gt;
+ &lt;property name="interceptorNames"&gt;
+  &lt;list&gt;
+   &lt;value&gt;afterReturning&lt;/value&gt;
+  &lt;/list&gt;
+ &lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;/beans&gt;
+</pre>
+
+
+
+							result :
+							<pre>Testing normal flow ...
+in business service
+returning Hello...
+In MyAfterReturningAdvice :businessService
+Accessing return value...
+return value found :Hello from business service
+advice ending without throwing exception...
+Hello from business service
+
+
+Testing flow when MyException is thrown by advice
+in business service
+returning test1...
+In MyAfterReturningAdvice :businessService
+Accessing return value...
+return value found Test1
+advice throwing MyException
+com.aop.MyException: MyException from AfterReturningAdvice
+
+
+Testing flow when MyException is thrown by advice
+in business service
+returning test2...
+In MyAfterReturningAdvice :businessService
+Accessing return value...
+return value found Test2
+advice throwing MyException
+com.aop.MyException: MyException from AfterReturningAdvice
+</pre>
+
+
+							<h3>THROWS ADVICE </h3>
+							<h5>Working with throws advice :</h5>
+
+							MyBusinessObject.java
+							<pre>package com.aop;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
+public class MyBusinessObjectTestCase {
+
+ public static void main(String[] args)throws Exception{
+  BeanFactory beans=
+	  new XmlBeanFactory(new FileSystemResource("src/mybeans.xml"));
+  MyBusinessObject bo=(MyBusinessObject)beans.getBean("myServices");
+  
+  try{
+   System.out.println("Testing flow when MyException1 is
+                        thrown by businessService()...");
+   bo.businessService(0);
+  }
+  catch (MyException1 e){
+   System.out.println(e);
+  }
+  
+  System.out.println("\n");
+  
+  try{
+   System.out.println("Testing flow when MyException2
+               is thrown by businessService()...");
+   bo.businessService(1);
+  }
+  catch (Exception e) {
+   System.out.println(e);
+  }  
+  
+  System.out.println("\n");
+  System.out.println("Testing flow when there is
+         no MyException thrown by businessService()...");
+  bo.businessService(2);
+ }//main
+}//class
+</pre>
+
+							MyException1.java
+							<pre>package com.aop;
+
+public class MyException1 extends Exception {
+
+ public MyException1(){ }
+	
+ public MyException1(String message){
+  super(message);
+ }
+
+}
+</pre>
+
+							MyException2.java
+							<pre>package com.aop;
+
+public class MyException2 extends Exception {
+
+ public MyException2(){ }
+	
+ public MyException2(String message){
+  super(message);
+ }
+
+}
+</pre>
+
+							MyThrowsAdvice.java
+							<pre>package com.aop;
+
+import org.springframework.aop.ThrowsAdvice;
+
+public class MyThrowsAdvice implements ThrowsAdvice{
+	
+ public void afterThrowing(MyException1 me)throws Throwable{
+ //Exception handling logic as per our system requirement test logic 
+  System.out.println("In afterThrowing(MyException1)");
+ }
+	
+ public void afterThrowing(MyException2 me)throws Throwable{
+ //Exception handling logic as per our system requirement test logic 
+  System.out.println("In afterThrowing(MyException2)");
+ }
+ 
+}
+</pre>
+
+							mybeans.xml
+							<pre>&lt;beans&gt;
+
+&lt;bean id="myser" class="com.aop.MyBusinessObject"/&gt;
+  
+&lt;bean id="exceptionHandler" class="com.aop.MyThrowsAdvice"/&gt;
+
+&lt;bean id="myServices" 
+     class="org.springframework.aop.framework.ProxyFactoryBean"&gt;
+ &lt;property name="targetName" value="myser"/&gt;
+ &lt;property name="interceptorNames"&gt;
+  &lt;list&gt;
+   &lt;value&gt;exceptionHandler&lt;/value&gt;
+  &lt;/list&gt;
+ &lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;/beans&gt;
+</pre>
+
+							MyBusinessObjectTestCase.java
+							<pre>package com.aop;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
+public class MyBusinessObjectTestCase {
+
+ public static void main(String[] args)throws Exception{
+  BeanFactory beans=
+	  new XmlBeanFactory(new FileSystemResource("src/mybeans.xml"));
+  MyBusinessObject bo=(MyBusinessObject)beans.getBean("myServices");
+  
+  try{
+   System.out.println("Testing flow when MyException1 is 
+                thrown by businessService()...");
+   bo.businessService(0);
+  }
+  catch (MyException1 e){
+   System.out.println(e);
+  }
+  
+  System.out.println("\n");
+  
+  try{
+   System.out.println("Testing flow when MyException2 is
+                         thrown by businessService()...");
+   bo.businessService(1);
+  }
+  catch (Exception e) {
+   System.out.println(e);
+  }  
+  
+  System.out.println("\n");
+  System.out.println("Testing flow when there is 
+        no MyException thrown by businessService()...");
+  bo.businessService(2);
+ }//main
+}//class
+</pre>
+
+							<b>output :</b>
+							<pre>Testing flow when MyException1 is thrown by businessService()...
+in business service
+throwing MyException1...
+In afterThrowing(MyException1)
+com.aop.MyException1: MyException1 from MyBusinessObject
+
+Testing flow when MyException2 is thrown by businessService()...
+in business service
+throwing MyException2...
+In afterThrowing(MyException2)
+com.aop.MyException2: MyException2 from MyBusinessObject
+
+Testing flow when there is no MyException thrown by businessService()...
+in business service
+ending without throwing any exception
+</pre>
+
+							<h3>AROUND ADVICE</h3>
+
+							<h5>Working with around advice :</h5>
+
+							MyBusinessObject.java
+							<pre>package com.aop;
+
+public class MyBusinessObject{
+ public String businessService(int id)throws MyException1, MyException2{
+  System.out.println("in business service");
+  
+  if(id==0){
+   System.out.println("throwing MyException1...");
+   throw new MyException1("MyException1 from MyBusinessObject");
+  }
+  else if(id==1){
+   System.out.println("throwing MyException2...");
+   throw new MyException2("MyException2 from MyBusinessObject");
+  }
+  else if(id==2){
+   System.out.println("returning Test1...");
+   return "Test1";
+  }
+  else{
+   System.out.println("returning Test2...");
+   return "Test2";
+  } 
+  
+ }//businessService
+}
+
+</pre>
+
+							MyAroundAdvice.java
+							<pre>package com.aop;
+
+import org.aopalliance.intercept.MethodInterceptor;
+import org.aopalliance.intercept.MethodInvocation;
+
+public class MyAroundAdvice implements MethodInterceptor {
+
+ public Object invoke(MethodInvocation mi) throws Throwable {
+  //all the pre processing (before advice)
+ try{
+  System.out.println("invoke() method before calling proceed()");
+  Object o= mi.proceed();
+	
+  if(o.equals("Test1")){
+   System.out.println("invoke() after executing proceed()");
+   return "Method returned Test1 but advice has changed";
+  }
+   return o;	
+ }//try
+ catch (MyException1 e) {
+  System.out.println("invoke(), proceed() thrown MyException1");
+  return "Hello, there was an Exception";
+ }
+		
+ }//invoke
+
+}
+</pre>
+
+							MyException1.java
+							<pre>package com.aop;
+
+public class MyException1 extends Exception {
+
+ public MyException1(){ }
+	
+ public MyException1(String message){
+  super(message);
+ }
+
+}
+</pre>
+
+							MyException2.java
+							<pre>package com.aop;
+
+public class MyException2 extends Exception {
+
+ public MyException2(){ }
+	
+ public MyException2(String message){
+  super(message);
+ }
+
+}
+</pre>
+
+							log4j.properties
+							<pre>log4j.rootLogger=info, myapp
+#log4j.appender.myapp=org.apache.log4j.ConsoleAppender
+
+log4j.appender.myapp=org.apache.log4j.FileAppender
+log4j.appender.myapp.file=mylog.html
+log4j.appender.myapp.layout=org.apache.log4j.HTMLLayout
+log4j.appender.myapp.append=false
+</pre>
+
+							mybeans.xml
+							<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans
+ xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+  http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"&gt;
+
+&lt;bean id="myser" class="com.aop.MyBusinessObject"/&gt;
+  
+&lt;bean id="around" class="com.aop.MyAroundAdvice"/&gt;
+
+&lt;bean id="myServices" 
+   class="org.springframework.aop.framework.ProxyFactoryBean"&gt;
+ &lt;property name="targetName" value="myser"/&gt;
+ &lt;property name="interceptorNames"&gt;
+  &lt;list&gt;
+   &lt;value&gt;around&lt;/value&gt;
+  &lt;/list&gt;
+ &lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;/beans&gt;
+</pre>
+
+							MyBusinessObjectTestCase.java
+							<pre>package com.aop;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.FileSystemResource;
+
+public class MyBusinessObjectTestCase {
+
+ public static void main(String[] args)throws Exception{
+  BeanFactory beans=
+	  new XmlBeanFactory(new FileSystemResource("src/mybeans.xml"));
+  MyBusinessObject bo=(MyBusinessObject)beans.getBean("myServices");
+  
+  System.out.println("Testing flow when MyException1 is" +
+  		               " thrown by businessService()...");
+  System.out.println(bo.businessService(0)); 
+  System.out.println("\n");
+  try{
+   System.out.println("Testing flow when MyException2 is" +
+   		               " thrown by businessService()...");
+   System.out.println(bo.businessService(1));
+  }
+  catch (MyException2 e){
+   System.out.println(e);
+  }
+  
+  System.out.println("\n");
+  System.out.println("Testing flow when businessService() returns Test1...");
+  System.out.println(bo.businessService(2));
+  
+  System.out.println("\n");
+  System.out.println("Testing flow when businessService() returns Test2...");
+  System.out.println(bo.businessService(3));
+ }//main
+}//class
+</pre>
+
+
+
+							<b>output :</b>
+							<pre>Testing flow when MyException1 is thrown by businessService()...
+invoke() method before calling proceed()
+in business service
+throwing MyException1...
+invoke(), proceed() thrown MyException1
+Hello, there was an Exception
+
+
+Testing flow when MyException2 is thrown by businessService()...
+invoke() method before calling proceed()
+in business service
+throwing MyException2...
+com.aop.MyException2: MyException2 from MyBusinessObject
+
+
+Testing flow when businessService() returns Test1...
+invoke() method before calling proceed()
+in business service
+returning Test1...
+invoke() after executing proceed()
+Method returned Test1 but advice has changed
+
+
+Testing flow when businessService() returns Test2...
+invoke() method before calling proceed()
+in business service
+returning Test2...
+Test2
+</pre>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style>
+		.footerfont {
+			font-size: 16px
+		}
+	</style>
+	<div class="footer footerfont" style="background: #55585a;">
+		<div class="footer-copyright border-top ">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 center py-3 text-white">
+						Copyright © 2023, <br>The content is copyrighted to Ravi Kalyan Kolloju.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
