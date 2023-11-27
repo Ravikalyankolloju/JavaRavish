@@ -168,7 +168,8 @@
 								<li><a href="#uid">SerialVersionUID </a></li>
 							</ol>
 							<hr>
-							<h2 id="ser"><br><br><br></h2>
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=ser"><br><br><br></h2>
 							<h2 class="breadcrumb">1. Serialization: (1.1 v) :</h2>
 							<ol>
 								<li>The process of saving (or) writing state of an object to a file is called
@@ -182,7 +183,8 @@
 							<br><br><strong>
 								<font color="#800040">Diagram:</font>
 							</strong><br><img alt="" src="./serial/image001.png" width="300"><br><br>
-							<h2 id="deser"><br><br><br></h2>
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=deser"><br><br><br></h2>
 							<h2 class="breadcrumb">2. De-Serialization:</h2>
 							<ol>
 								<li> The process of reading state of an object from a file is called DeSerialization
@@ -289,7 +291,8 @@ Deserialization ended
 10................20
 30................40
 </pre>
-							<h2 id="transient"><br><br><br></h2>
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=transient"><br><br><br></h2>
 							<h2 class="breadcrumb">3. Transient keyword:</h2>
 							<ol>
 								<li>transient is the modifier applicable only for variables.</li>
@@ -300,14 +303,16 @@ Deserialization ended
 									and save default value to the file .</li>
 								<li> That is transient means "<strong>not to serialize</strong>".</li>
 							</ol>
-							<h2 id="stavtra"><br><br><br></h2>
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=stavtra"><br><br><br></h2>
 							<h2 class="breadcrumb">4. Static Vs Transient :</h2>
 							<ol>
 								<li> static variable is not part of object state hence they won't participate in
 									serialization because of this declaring a static variable as transient there is no
 									use.</li>
 							</ol>
-							<h2 id="travfin"><br><br><br></h2>
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=travfin"><br><br><br></h2>
 							<h2 class="breadcrumb">5. Transient Vs Final:</h2>
 							<ol>
 								<li> final variables will be participated into serialization directly by their values.
@@ -422,7 +427,8 @@ Object o=ois.readObject( );
 
 </pre>
 
-							<h2 id="objgraph"><br><br><br></h2>
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=objgraph"><br><br><br></h2>
 							<h2 class="breadcrumb">6. Object graph in serialization :</h2>
 							<ol>
 								<li> Whenever we are serializing an object the set of all objects which are reachable
@@ -476,7 +482,8 @@ Output:
 								<li>Among Dog, Cat, Rat if at least one object is not serializable then we will get
 									runtime exception saying "<em><strong>NotSerializableException</strong></em>".</li>
 							</ul>
-							<h2 id="custom"><br><br><br></h2>
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=custom"><br><br><br></h2>
 							<h2 class="breadcrumb">7. Customized serialization :</h2>
 							<p>During default Serialization there may be a chance of lose of information due to
 								transient keyword.(<strong>Ex : </strong>mango ,money , box)</p>
@@ -599,7 +606,8 @@ Bhaskar.........kajal
 								method then JVM feels very happy and executes that Account class writeObject() method.
 								The same rule is applicable for readObject() method also.
 							</p>
-							<h2 id="serinher"><br><br><br></h2>
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=serinher"><br><br><br></h2>
 							<h2 class="breadcrumb">8. Serialization with respect to inheritance :</h2>
 							<u><strong>
 									<font color="#ffff00" style="background-color: rgb(64, 0, 64);">Case 1:
@@ -712,7 +720,8 @@ Animal constructor called
 							<br><br>
 							<font color="#800040"><strong>Diagram:</strong></font><br><img alt=""
 								src="./serial/image008.png" width="300"><br><br>
-							<h2 id="exter"><br><br><br></h2>
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=exter"><br><br><br></h2>
 							<h2 class="breadcrumb">9. Externalization : ( 1.1 v )</h2>
 							<ol>
 								<li>In default serialization every thing takes care by JVM and programmer doesn't have
@@ -836,7 +845,8 @@ public no-arg constructor
 								</ol>
 
 								<br>
-								<h2 id="serexter"><br><br><br></h2>
+								<h2 id="ravi"><br><br><br></h2>
+								<h2 class="breadcrumb" id=serexter"><br><br><br></h2>
 								<h2 class="breadcrumb">10. Difference between Serialization &amp; Externalization :</h2>
 								<table border="1">
 									<tbody>
@@ -900,7 +910,8 @@ public no-arg constructor
 
 								<br>
 								<br>
-								<h2 id="uid"><br><br><br></h2>
+								<h2 id="ravi"><br><br><br></h2>
+								<h2 class="breadcrumb" id=uid"><br><br><br></h2>
 								<h2 class="breadcrumb">11. serialVersionUID :</h2>
 								<p>To perform Serialization &amp; Deserialization internally JVM will use a unique
 									identifier , which is nothing but serialVersionUID .</p>

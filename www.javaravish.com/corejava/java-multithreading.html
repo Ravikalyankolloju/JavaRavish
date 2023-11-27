@@ -182,7 +182,8 @@
 								<li><a href="#life">Life cycle of a Thread</a></li>
 							</ol>
 							<hr>
-							<h2 id="intro"><br><br><br></h2>
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=intro"><br><br><br></h2>
 							<h2 class="breadcrumb">1. Introduction :</h2>
 							<p>
 								<span style="font-weight: 400;">
@@ -257,7 +258,8 @@
 									improve performance of the system by reducing response time.</li>
 							</ol>
 
-							<h2 id="define" style="background-color: rgb(128, 0, 64);">
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=define" style="background-color: rgb(128, 0, 64);">
 								<font color="#ffff00">The ways to define instantiate and start a new Thread:</font>
 							</h2>
 							What is singleton? Give example? <br>
@@ -485,15 +487,19 @@ t.start();//valid
 t.start();//we will get R.E saying: IllegalThreadStateException
 </pre>
 
-							<h2 id="implement"><u>Defining a Thread by implementing Runnable interface:</u></h2>
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=implement"><u>Defining a Thread by implementing Runnable
+									interface:</u></h2>
 							We can define a Thread even by implementing Runnable interface also.<br>
 							Runnable interface present in java.lang.pkg and contains only one method run().
 
 							<br>
-							<em><u>Diagram:</u></em><br><br><img alt="" src="multiThread/image016.png" width="300"><br><br>
+							<em><u>Diagram:</u></em><br><br><img alt="" src="multiThread/image016.png"
+								width="300"><br><br>
 
 
-							<u><em>Example:</em></u><br><br><img alt="" src="multiThread/image018.png" width="300"><br><br>
+							<u><em>Example:</em></u><br><br><img alt="" src="multiThread/image018.png"
+								width="300"><br><br>
 							<pre>class ThreadDemo
 {
 	public static void main(String[] args)
@@ -681,7 +687,8 @@ main thread
 							</ul>
 
 
-							<h2 id="constructor" style="background-color: rgb(128, 128, 192);">
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=constructor" style="background-color: rgb(128, 128, 192);">
 								<font color="#ffff00">Thread class constructors:</font>
 							</h2>
 							<ol>
@@ -698,14 +705,16 @@ main thread
 									</u></em></strong><br><br><img alt="" src="multiThread/image021.png" width="1012"
 								height="330"><br><br>
 
-							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image023.png" width="300"><br><br>
+							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image023.png"
+								width="300"><br><br>
 
 							<pre>Output:
 main method
 run method
 </pre>
 
-							<h2 id="nameThread" style="background-color: rgb(0, 128, 128);">
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=nameThread" style="background-color: rgb(0, 128, 128);">
 								<font color="#ffff00">Getting and setting name of a Thread:</font>
 							</h2>
 							<ul>
@@ -740,7 +749,8 @@ class ThreadDemo
 							method.
 
 
-							<h2 id="priority" style="background-color: rgb(0, 128, 192);">
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=priority" style="background-color: rgb(0, 128, 192);">
 								<font color="#ffff00">Thread Priorities</font>
 							</h2>
 							<ul>
@@ -851,7 +861,8 @@ main thread
 							Some operating systems(like windowsXP) may not provide proper support for Thread priorities.
 							We have to install separate bats provided by vendor to provide support for priorities.
 
-							<h2 id="execution" style="background-color: rgb(0, 128, 0);">
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=execution" style="background-color: rgb(0, 128, 0);">
 								<font color="#ffff00">The Methods to Prevent a Thread from Execution:</font>
 							</h2>
 							We can prevent(stop) a Thread execution by using the following methods.
@@ -1074,7 +1085,8 @@ Thread.currentThread().join();
 
 
 
-							<h2 id="sleep">
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=sleep">
 								<font color="#8080ff"><u><em>Sleep() method:</em></u></font>
 							</h2>
 							If a Thread don't want to perform any operation for a particular amount of time then we
@@ -1275,7 +1287,8 @@ class ThreadInterruptDemo1
 							</table>
 
 
-							<h2 id="syncronization" style="background-color: rgb(0, 0, 160);">
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=syncronization" style="background-color: rgb(0, 0, 160);">
 								<font color="#ffff00">Synchronization</font>
 							</h2>
 							<ol>
@@ -1398,7 +1411,8 @@ t2.start();
 </pre>
 
 
-							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image036.png" width="300"><br><br>
+							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image036.png"
+								width="300"><br><br>
 
 							Even though we declared wish() method as synchronized but we will get irregular output in
 							this case, because both Threads are operating on different objects.
@@ -1637,7 +1651,8 @@ main Thread got notification call
 									notification so that consumer Thread will get that notification and consume items.
 								</li>
 							</ul>
-							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image046.png" width="300"><br><br>
+							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image046.png"
+								width="300"><br><br>
 
 							<u>Example:</u><br><br><img alt="" src="multiThread/image048.png" width="300"><br><br>
 
@@ -1679,7 +1694,8 @@ main Thread got notification call
 
 
 
-							<h2 id="deadLock" style="background-color: rgb(0, 0, 64);">
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=deadLock" style="background-color: rgb(0, 0, 64);">
 								<font color="#ffff80">Dead lock:</font>
 							</h2>
 							<ul>
@@ -2013,7 +2029,8 @@ g.stop();
 
 
 
-							<h2 id="life" style="background-color: rgb(0, 0, 160);">
+							<h2 id="ravi"><br><br><br></h2>
+							<h2 class="breadcrumb" id=life" style="background-color: rgb(0, 0, 160);">
 								<font color="#ffff00">Life cycle of a Thread:</font>
 							</h2>
 							<br><br><img alt="" src="multiThread/image052.png" width="990" height="753"><br><br>
