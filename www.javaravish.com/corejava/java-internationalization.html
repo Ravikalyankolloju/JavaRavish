@@ -167,17 +167,6 @@
 										<li><a href="#nfdl">Getting NumberFormat object for the default Locale</a></li>
 										<li><a href="#nfsl">Getting NumberFormat object for the specific Locale </a>
 										</li>
-
-										<li><a href="#nfreq">Requirements </a>
-											<ul>
-												<li><a href="#nfreq1"> Write a program to display java number form into
-														Italy specific form</a></li>
-												<li><a href="#nfreq2"> Write a program to print a java number in INDIA,
-														UK, US and ITALY currency formats</a></li>
-
-											</ul>
-										</li>
-
 										<li><a href="#nfset"> Setting Maximum, Minimum, Fraction and Integer digits </a>
 										</li>
 									</ul>
@@ -186,23 +175,14 @@
 									<ul>
 										<li><a href="#dfdl"> Getting DateFormat object for default Locale</a></li>
 										<li><a href="#dfsl"> Getting DateFormat object for specific Locale</a></li>
-										<li><a href="#dtreq">Requirements </a>
-											<ul>
-												<li><a href="#dfreq1"> Write a program to represent current system date
-														in all possible styles of us format </a></li>
-												<li><a href="#dfreq2"> Write a program to represent current system date
-														in UK, US and ITALY styles </a></li>
-											</ul>
-										</li>
 										<li><a href="#dfget"> Getting DateFormat object to get both date and time</a>
 										</li>
 									</ul>
 								</li>
 							</ol>
 							<hr>
-							<h2 id="ravi"><br><br><br></h2>
-							<h2 class="breadcrumb" id=intro"><br><br><br></h2>
-							<h2 class="breadcrumb">1. Introduction :</h2>
+							<h2 id="intro"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">1. Introduction :</h2>
 							<p>The process of designing a web application such that it supports various countries,
 								various languages without performing any changes in the application is called
 								Internationalization.</p>
@@ -219,9 +199,9 @@
 							</ol>
 
 
-							<h2 id="ravi"><br><br><br></h2>
-							<h2 class="breadcrumb" id=locale" style="background-color: rgb(0, 0, 255);">
-								<font color="#ffff00">1. Locale:</font>
+							<h2 id="locale"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">
+								<font>2. Locale:</font>
 							</h2>
 
 							<ul>
@@ -231,10 +211,9 @@
 								<li>It is a final class and direct child class of Object and , implements Cloneable, and
 									Serializable Interfaces.</li>
 							</ul>
-
-							<h3 id="locobj" style="background-color: rgb(255, 128, 64);">
-								<font color="#ffff00">How to create a Locale object:</font>
-							</h3>
+							<hr>
+							<h2 id="locobj"><br><br><br></h2>
+							<h2 class="breadcrumb">A. How to create a Locale object:</h2>
 							We can create a Locale object by using the following constructors of Locale class.
 							<pre>Locale l=new Locale(String language);
 Locale l=new Locale(String language,String country);
@@ -248,9 +227,9 @@ Locale. ITALY
 Locale. CHINA
 </pre>
 
-							<h2 id="ravi"><br><br><br></h2>
-							<h2 class="breadcrumb" id=locmethod" style="background-color: rgb(0, 128, 192);">
-								<font color="#ffff00">Important methods of Locale class:</font>
+							<h2 id="locmethod"><br><br><br></h2>
+							<h2 class="breadcrumb" id="locmethod">
+								<font>B. Important methods of Locale class:</font>
 							</h2>
 							<ol>
 								<li>public static Locale getDefault()</li>
@@ -294,9 +273,9 @@ for(Locale s1:s)
 </pre>
 
 
-							<h2 id="ravi"><br><br><br></h2>
-							<h2 class="breadcrumb" id=nf" style="background-color: rgb(0, 0, 160);">
-								<font color="#ffff00">2. NumberFormat:</font>
+							<h2 id="nf"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="nf">
+								<font>3. NumberFormat:</font>
 							</h2>
 							Various countries follow various styles to represent number.
 							<pre>Example:
@@ -321,46 +300,49 @@ double d=123456.789;
 
 
 							<u>
-								<h3 id="nfdl">Getting NumberFormat object for the default Locale:</h3>
+								<h2 id="nfdl"><br><br><br></h2>
+								<h2 class="breadcrumb" id="nfdl">A. Getting NumberFormat object for the default Locale:
+								</h2>
 							</u><br>
 							NumberFormat class defines the following methods for this.
 
-							<br><br><img alt="" src="in/image001.png" width="300"><br><br>
-
-							<h3 id="nfsl">Getting NumberFormat object for the specific Locale: </h3>
+							<br><br><img alt="" src="in/image001.png"><br><br>
+							<h2 id="nfdl"><br><br><br></h2>
+							<h2 class="breadcrumb" id="nfsl">B. Getting NumberFormat object for the specific Locale:
+							</h2>
 							<ul>
 								<li>
 									The methods are exactly same but we have to pass the corresponding Locale object as
 									argument.<br>
 									<em>
-										<font color="#008080"><strong>Example:</strong></font>
+										<font><strong>Example:</strong></font>
 									</em> <em>
-										<font color="#0080c0">public static NumberFormat getNumberInstance(Locale l);
+										<font>public static NumberFormat getNumberInstance(Locale l);
 										</font>
 									</em>
 								</li>
 								<li>
 									Once we got NumberFormat object we can call the following methods to format and
 									parse numbers.<br>
-									<font color="#800040"><em>public String format(long l); <br>
+									<font><em>public String format(long l); <br>
 											public String format(double d);
 										</em></font>
 								</li>
 								<li>
 
 									To convert a number from java form to Locale specific form. <br>
-									<font color="#8000ff"><em>public Number parse(String source)throws ParseException
+									<font><em>public Number parse(String source)throws ParseException
 										</em></font>
 								</li>
 								<li>
 									To convert from Locale specific String form to java specific form.
 								</li>
 							</ul>
-							<br><br><img alt="" src="in/in1.png" width="300"><br><br>
+							<br><br><img alt="" src="in/in1.png"><br><br>
 
 
-							<h3 id="nfreq1"></h3>
-							<font color="#8080c0"><u><strong><em>Requirement:</em></strong></u></font> Write a program
+							<h2 id="nfreq1"></h2>
+							<font><u><strong><em>Requirement:</em></strong></u></font> Write a program
 							to display java number form into Italy specific form.
 
 							<pre>Example:
@@ -378,10 +360,10 @@ Output:
 ITALY form is :123.456,789
 </pre>
 
-							<h3 id="nfreq2"></h3>
+							<h2 id="nfreq2"></h2>
 
 
-							<font color="#8080c0"><u><strong><em>Requirement:</em></strong></u></font> Write a program
+							<font><u><strong><em>Requirement:</em></strong></u></font> Write a program
 							to print a java number in INDIA, UK, US and ITALY currency formats.
 
 							<pre>Program:
@@ -408,10 +390,10 @@ UK notation is: ú123,456.79
 US notation is: $123,456.79
 ITALY notation is: Ç 123.456,79
 </pre>
-
-							<h3 id="nfset"><u>
-									<font color="#0000ff">Setting Maximum, Minimum, Fraction and Integer digits:</font>
-								</u></h3>
+							<h2 id="nfset"><br><br><br></h2>
+							<h2 class="breadcrumb" id="nfset"><u>
+									<font>C. Setting Maximum, Minimum, Fraction and Integer digits:</font>
+								</u></h2>
 							NumberFormat class defines the following methods for this purpose.
 							<ol>
 								<li>public void setMaximumFractionDigits(int n);</li>
@@ -451,25 +433,24 @@ Output:
 </pre>
 
 
-							<h2 id="ravi"><br><br><br></h2>
-							<h2 class="breadcrumb" id=df" style="background-color: rgb(128, 0, 0);">
-								<font color="#ffff80">3. DateFormat:</font>
+							<h2 id="df"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="df">
+								<font>4. DateFormat:</font>
 							</h2>
 							<p> Various countries follow various styles to represent Date. We can format the date
 								according to a particular locale by using DateFormat class.</p>
 							DateFormat class present in java.text package and it is an abstract class.
-
-							<h3 id="dfdl"><u>
-									<font color="#0000ff">Getting DateFormat object for default Locale:</font>
-								</u></h3>
+							<h2 id="datatype"><br><br><br></h2>
+							<h2 class="breadcrumb" id="dfdl">Getting DateFormat object for default Locale:</h2>
 							DateFormat class defines the following methods for this purpose.
 							<br><br><img alt="" src="in/image002.png">
 							<br>
 							The dafault style is Medium style<br>
 							<p>
 							</p>
-							<h3 id="dfsl"><u>Getting DateFormat object for the specific Locale:</u></h3><br>
-							<font color="#0000ff"><em>public static DateFormat getDateInstance(int style, Locale
+							<h2 id="dfsl"><br><br><br></h2>
+							<h2 class="breadcrumb" id="dfsl"><u>Getting DateFormat object for the specific Locale:</u></h2><br>
+							<font><em>public static DateFormat getDateInstance(int style, Locale
 									l);</em></font>
 							<p></p>
 
@@ -478,22 +459,22 @@ Output:
 							Once we got DateFormat object we can format and parse Date by using the following
 							methods.<br><br>
 							<em>
-								<font color="#0000ff">public String format(Date date);
+								<font>public String format(Date date);
 								</font>
 							</em>
 							<br>
 							To convert the date from java form to locale specific string form.<br> <br>
 							<em>
-								<font color="#000080">public Date parse(String source)throws ParseException</font>
+								<font>public Date parse(String source)throws ParseException</font>
 							</em><br>
 							To convert the date from locale specific form to java form.
 
 
-							<br><br><img alt="" src="in/in2.png" width="300"><br><br>
+							<br><br><img alt="" src="in/in2.png"><br><br>
 
-							<h3 id="dfreq1"></h3>
+							<h2 id="dfreq1"></h2>
 							<p>
-								<font color="#800000"><u><em><strong>Requirement:</strong></em></u></font> Write a
+								<font><u><em><strong>Requirement:</strong></em></u></font> Write a
 								program to represent current system date in all possible styles of us format.
 							</p>
 
@@ -520,9 +501,10 @@ Short form is: 7/20/11
 							<u><strong>Note:</strong></u> The default style is medium style.
 							<br>
 
-							<h3 id="dfreq2"></h3>
+							<h2 id="dfreq2"></h2>
 
-							<font color="#ff00ff"><u><strong><em>Requirement:</em></strong></u></font> Write a program
+							<font><u><strong><em>Requirement:</em></strong></u></font> Write a
+							program
 							to represent current system date in UK, US and ITALY styles.
 
 							<pre>Program:
@@ -545,11 +527,10 @@ US style is: Wednesday, July 20, 2011
 ITALY style is: mercoled 20 luglio 2011
 </pre>
 
-							<h3 id="dfget"><u>
-									<font color="#0000ff">Getting DateFormat object to get both date and time:</font>
-								</u></h3>
+							<h2 id="dfget"><br><br><br></h2>
+							<h2 class="breadcrumb" id="dfget">Getting DateFormat object to get both date and time:</h2>
 							DateFormat class defines the following methods for this.
-							<br><br><img alt="" src="in/image003.png" width="300"><br><br>
+							<br><br><img alt="" src="in/image003.png"><br><br>
 							<pre>Example:
 import java.text.*;
 import java.util.*;

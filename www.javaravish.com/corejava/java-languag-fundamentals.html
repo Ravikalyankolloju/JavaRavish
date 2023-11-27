@@ -308,7 +308,7 @@
 							</ol>
 							<hr>
 							<h2 id="identi"><br><br><br></h2>
-							<h2 class="breadcrumb">1. Identifier :</h2>
+							<h2 class="mainbreadcrumb">1. Identifier :</h2>
 
 							A name in java program is called identifier. It may be class name, method name, variable
 							name and label name.
@@ -317,9 +317,7 @@
 							<br><br><img alt="" src="fund/image001.png"><br><br>
 
 							<h2 id="rules"><br><br><br></h2>
-							<h2 class="breadcrumb" id="rules">
-								<font color="green">A. Rules to define java identifiers:</font>
-							</h2>
+							<h2 class="breadcrumb" id="rules">A. Rules to define java identifiers:</h2>
 
 							<b>Rule 1:</b> The only allowed characters in java identifiers are:
 
@@ -398,14 +396,14 @@ Output:
 							<br><br><img alt="" src="fund/image004.png"><br><br>
 							<hr>
 							<h2 id="rword"><br><br><br></h2>
-							<h2 class="breadcrumb">2. Reserved words:</h2>
+							<h2 class="mainbreadcrumb">2. Reserved words:</h2>
 							In java some identifiers are reserved to associate some functionality or meaning such type
 							of reserved identifiers are called reserved words.
 
 							<br><br>
 							Diagram:
 
-							<br><br><img alt="" src="fund/image006.png" width="900"><br><br>
+							<br><br><img alt="" src="fund/image006.png"><br><br>
 							<h2 id="rdatatype"><br><br><br></h2>
 							<h2 class="breadcrumb" id="rdatatype">A. Reserved words for data types: (8)</h2>
 							<pre>1)	byte
@@ -563,7 +561,7 @@ int          but not  Int
 							</ol>
 							<hr>
 							<h2 id="datatype"><br><br><br></h2>
-							<h2 class="breadcrumb" id="datatype">3. Data types:</h2>
+							<h2 class="mainbreadcrumb" id="datatype">3. Data types:</h2>
 
 							Every variable has a type, every expression has a type and all types are strictly define
 							more over every assignment should be checked by the compiler by the type compatibility hence
@@ -688,7 +686,7 @@ boolean b=0;//C.E:incompatible types
 
 							Example 2:
 
-							<br><br><img alt="" src="fund/image013.png" width="900"><br><br>
+							<br><br><img alt="" src="fund/image013.png"><br><br>
 							<h2 id="cdata"><br><br><br></h2>
 							<h2 class="breadcrumb" id="cdata">D. Char data type:</h2>
 
@@ -716,7 +714,7 @@ char ch2=65536;//C.E:possible loss of precision
 							moreover we are depending on primitive data types which are non objects.
 
 							<br><br>Diagram:
-							<br><br><img alt="" src="fund/image009.png" width="900"><br><br>
+							<br><br><img alt="" src="fund/image009.png"><br><br>
 
 							Except Boolean and char all remaining data types are considered as signed data types because
 							we can represent both "+ve" and"-ve" numbers.
@@ -729,15 +727,12 @@ char ch2=65536;//C.E:possible loss of precision
 										<th>data type</th>
 										<th>Size</th>
 										<th>Range</th>
-										<th>Corresponding
-											Wrapper class</th>
 										<th>Default value</th>
 									</tr>
 									<tr>
 										<td>byte</td>
 										<td>1 byte</td>
 										<td>-2<sup>7</sup> to 2<sup>7</sup>-1(-128 to 127) </td>
-										<td>Byte</td>
 										<td>0</td>
 									</tr>
 									<tr>
@@ -745,7 +740,6 @@ char ch2=65536;//C.E:possible loss of precision
 										<td>2 bytes</td>
 										<td>-2<sup>15</sup> to 2<sup>15</sup>-1
 											(-32768 to 32767)</td>
-										<td>Short</td>
 										<td>0</td>
 									</tr>
 									<tr>
@@ -753,42 +747,36 @@ char ch2=65536;//C.E:possible loss of precision
 										<td> 4 bytes</td>
 										<td> -2<sup>31</sup> to 2<sup>31</sup>-1
 											(-2147483648 to 2147483647)</td>
-										<td> Integer</td>
 										<td> 0</td>
 									</tr>
 									<tr>
 										<td>long</td>
 										<td> 8 bytes</td>
 										<td> -2<sup>63</sup> to 2<sup>63</sup>-1</td>
-										<td> Long</td>
 										<td>0</td>
 									</tr>
 									<tr>
 										<td>float</td>
 										<td> 4 bytes</td>
 										<td> -3.4e38 to 3.4e38 </td>
-										<td>Float</td>
 										<td> 0.0</td>
 									</tr>
 									<tr>
 										<td>double</td>
 										<td> 8 bytes</td>
 										<td> -1.7e308 to 1.7e308</td>
-										<td> Double</td>
 										<td> 0.0</td>
 									</tr>
 									<tr>
 										<td>boolean</td>
 										<td> Not applicable</td>
 										<td> Not applicable(but allowed values true|false) </td>
-										<td>Boolean</td>
 										<td> false</td>
 									</tr>
 									<tr>
 										<td>char</td>
 										<td> 2 bytes</td>
 										<td> 0 to 65535</td>
-										<td> Character </td>
 										<td>0(represents blank space)</td>
 									</tr>
 								</tbody>
@@ -803,9 +791,7 @@ char ch2=65536;//C.E:possible loss of precision
 							The default value for the object references is "null".
 							<hr>
 							<h2 id="lit"><br><br><br></h2>
-							<h2 class="breadcrumb" id="lit">
-								<font>4. Literals:</font>
-							</h2>
+							<h2 class="mainbreadcrumb" id="lit">4. Literals:</h2>
 							Any constant value which can be assigned to the variable is called literal.
 							<br>Example:
 
@@ -936,7 +922,7 @@ float f=10e2F;(valid)
 								<li> boolean b=True;//C.E:cannot find symbol(invalid)</li>
 								<li> boolean b="true";//C.E:incompatible types(invalid)</li>
 							</ol>
-							<br><br><img alt="" src="fund/image013.png" width="900"><br><br>
+							<br><br><img alt="" src="fund/image013.png"><br><br>
 
 
 
@@ -1139,9 +1125,7 @@ System.out.println(f); //10.0
 
 							<hr>
 							<h2 id="arr"><br><br><br></h2>
-							<h2 class="breadcrumb" id="arr">
-								<font>5. Arrays:</font>
-							</h2>
+							<h2 class="mainbreadcrumb" id="arr">5. Arrays:</h2>
 
 
 							1) Introduction<br>
@@ -1786,7 +1770,7 @@ B
 
 							<hr>
 							<h2 id="typevar"><br><br><br></h2>
-							<h2 class="breadcrumb" id="typevar">6. Types of Variables:</h2>
+							<h2 class="mainbreadcrumb" id="typevar">6. Types of Variables:</h2>
 							<b>Division 1 :</b>
 							Based on the type of value represented by a variable all variables are divided into 2 types.
 							They are:
@@ -2027,7 +2011,7 @@ B
 							<br><br>
 							Example:
 
-							<br><br><img alt="" src="fund/image065.png" width="900"><br><br>
+							<br><br><img alt="" src="fund/image065.png"><br><br>
 							Example:
 
 							<pre>class Test 
@@ -2125,9 +2109,7 @@ java Test
 
 							<hr>
 							<h2 id="uninitarr"><br><br><br></h2>
-							<h2 class="breadcrumb" id="uninitarr">
-								<font>7. Un Initialized arrays:</font>
-							</h2>
+							<h2 class="mainbreadcrumb" id="uninitarr">7. Un Initialized arrays:</h2>
 
 
 							Example:
@@ -2196,7 +2178,7 @@ System.out.println(a[0]);//0
 
 							<hr>
 							<h2 id="vararg"><br><br><br></h2>
-							<h2 class="breadcrumb" id="vararg">8. Var- arg methods (variable no of argument methods)
+							<h2 class="mainbreadcrumb" id="vararg">8. Var- arg methods (variable no of argument methods)
 								(1.5)
 							</h2>
 							<ul>
@@ -2449,7 +2431,7 @@ Output:
 							<br><br><img alt="" src="fund/image080.png"><br><br>
 							<hr>
 							<h2 id="main"><br><br><br></h2>
-							<h2 class="breadcrumb" id="main">
+							<h2 class="mainbreadcrumb" id="main">
 								<font>9. Main Method</font>
 							</h2>
 							Whether the class contains main() method or not, <br> and whether it is properly declared or
@@ -2465,7 +2447,7 @@ java Test R.E: NoSuchMethodError: main
 </pre>
 							At runtime JVM always searches for the main() method with the following prototype.
 
-							<br><br><img alt="" src="fund/image082.png" width="900"><br><br>
+							<br><br><img alt="" src="fund/image082.png"><br><br>
 							If we are performing any changes to the above syntax then the code won't run and will get
 							Runtime exception saying NoSuchMethodError.
 
@@ -2723,7 +2705,7 @@ main method
 
 							<hr>
 							<h2 id="commandline"><br><br><br></h2>
-							<h2 class="breadcrumb" id="commandline">
+							<h2 class="mainbreadcrumb" id="commandline">
 								<font>10. Command line arguments:</font>
 							</h2>
 							The arguments which are passing from command prompt are called command line arguments.<br>
@@ -2820,7 +2802,7 @@ Sai Charan
 							<br>
 							<hr>
 							<h2 id="javacode"><br><br><br></h2>
-							<h2 class="breadcrumb" id="javacode">
+							<h2 class="mainbreadcrumb" id="javacode">
 								<font>11. Java coding standards</font>
 							</h2>
 							<ul>
@@ -2831,7 +2813,7 @@ Sai Charan
 									the component should reflect the purpose or functionality.</li>
 							</ul>
 							Example:
-							<br><br><img alt="" src="fund/image093.png" width="900"><br><br>
+							<br><br><img alt="" src="fund/image093.png"><br><br>
 
 							<h2 id="javaclass"><br><br><br></h2>
 							<h2 class="breadcrumb" id="javaclass">A. Coding standards for classes:</h2>
@@ -2983,11 +2965,11 @@ NORM_PRIORITY
 
 							<hr>
 							<h2 id="jvmm"><br><br><br></h2>
-							<h2 class="breadcrumb" id="jvmm">
+							<h2 class="mainbreadcrumb" id="jvmm">
 								<font>12. Various Memory areas present inside JVM :</font>
 							</h2>
 
-							<br><img alt="" src="fund/fund2.png" width="999"><br><br>
+							<br><img alt="" src="fund/fund2.png"><br><br>
 
 							<ol>
 								<li>Class level binary data includung static variables will be stored in method area.
