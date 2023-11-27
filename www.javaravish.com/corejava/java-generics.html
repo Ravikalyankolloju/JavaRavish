@@ -164,14 +164,14 @@
 							</ol>
 							<hr>
 							
-							<h2 class="breadcrumb" id=intro"><br><br><br></h2>
-							<h2 class="breadcrumb">1. Introduction :</h2>
-							<font color="#FF0000">Deff :</font>
+							<h2 id="intro"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">1. Introduction :</h2>
+							<font>Deff :</font>
 							The main objective of Generics is to provide <strong>Type-Safety</strong> and to resolve
 							<strong> Type-Casting </strong> problems.
 							
-							<h2 class="breadcrumb" id=tsafe"><br><br><br></h2>
-							<h2 class="breadcrumb">2. Case 1: Type-Safety :</h2>
+							<h2 id="tsafe"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">2. Type-Safety :</h2>
 							<ul>
 								<li>Arrays are always type safe that is we can give the guarantee for the type of
 									elements present inside array.</li>
@@ -181,7 +181,7 @@
 									compile time error.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image001.png" width="700px"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image001.png"><br><br>
 							<ul>
 								<li>That is we can always provide guarantee for the type of elements present inside
 									array and hence arrays are safe to use with respect to type that is arrays are type
@@ -194,21 +194,20 @@
 									error but the program may fail at runtime.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image002.png" width="847"
-								height="360"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image002.png"><br><br>
 							<p> Hence we can't provide guarantee for the type of elements present inside collections
 								that is collections are not safe to use with respect to type.</p>
 							
-							<h2 class="breadcrumb" id=tcast"><br><br><br></h2>
-							<h2 class="breadcrumb">3. Case 2: Type-Casting :</h2>
+							<h2 id="tcast"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">3. Type-Casting :</h2>
 							<p> In the case of array at the time of retrieval it is not required to perform any type
 								casting.</p>
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image003.png" width="300"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image003.png"><br><br>
 							<p> But in the case of collection at the time of retrieval compulsory we should perform type
 								casting otherwise we will get compile time error.</p>
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image004.png" width="300"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image004.png"><br><br>
 							<ul>
 								<li>That is in collections type casting is bigger headache.</li>
 								<li>To overcome the above problems of collections(type-safety, type casting)sun people
@@ -223,7 +222,7 @@
 							</ul>
 
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image005.png" width="300"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image005.png"><br><br>
 							<ul>
 								<li>For this ArrayList we can add only string type of objects by mistake if we are
 									trying to add any other type we will get compile time error that is through generics
@@ -231,14 +230,14 @@
 								<li>At the time of retrieval it is not required to perform any type casting we can
 									assign elements directly to string type variables.</li>
 							</ul>
-							<u>Example:</u><br><br><img alt="generics" src="gener/image006.png" width="300"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image006.png"><br><br>
 
 							<ul>
 								<li>That is through generic syntax we can resolve type casting problems.</li>
 							</ul>
 
 							<u>
-								<font color="#800000"><strong>Conclusion1:
+								<font><strong>Conclusion1:
 									</strong></font>
 							</u>
 							<ul>
@@ -246,23 +245,22 @@
 									type[usage of parent reference to hold child object is called polymorphism].</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image007.png" width="867"
-								height="313"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image007.png"><br><br>
 
 							<br>
 
-							<font color="#8080ff"><u><strong>Concluson2:
+							<font><u><strong>Concluson2:
 
 									</strong></u></font>
 							<p>Collections concept applicable only for objects , Hence for the parameter type we can use
 								any class or interface name but not primitive value(type).Otherwise we will get compile
 								time error.</p>
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image008.png" width="850px"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image008.png"><br><br>
 
 							
-							<h2 class="breadcrumb" id=generic"><br><br><br></h2>
-							<h2 class="breadcrumb">4. Generic classes :</h2>
+							<h2 id="generic"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">4. Generic classes :</h2>
 							<p> Until 1.4v a non-generic version of ArrayList class is declared as follows.</p>
 
 							<u>Example:
@@ -282,7 +280,7 @@
 							</ul>
 							But in 1.5v a generic version of ArrayList class is declared as follows.
 							<br><br>
-							<u>Example:</u><br><br><img alt="generics" src="gener/image009.png" width="300"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image009.png"><br><br>
 							<ul>
 								<li>Based on our requirement T will be replaced with our provided type.</li>
 								<li> For Example to hold only string type of objects we can create ArrayList object as
@@ -318,20 +316,20 @@
 								objects to the List. <br></p>
 							<p>By mistake if we are trying to add any other type we will get compile time error.</p>
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image010.png" width="800px"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image010.png"><br><br>
 							<ul>
 								<li>Hence through generics we are getting type safety.</li>
 								<li>At the time of retrieval it is not required to perform any type casting we can
 									assign its values directly to string variables.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image011.png" width="300"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image011.png"><br><br>
 
 							<p>
 								In Generics we are associating a type-parameter to the class, such type of parameterised
 								classes are nothing but Generic classes.
 								<br><strong>
-									<font color="#CC0066"> Generic class : class with type-parameter</font>
+									<font> Generic class : class with type-parameter</font>
 								</strong>
 							</p>
 							<p> Based on our requirement we can create our own generic classes also.</p>
@@ -394,8 +392,8 @@ The type of object is: java.lang. Double
 10.5
 </pre>
 							
-							<h2 class="breadcrumb" id=bound"><br><br><br></h2>
-							<h2 class="breadcrumb">5. Bounded types :</h2>
+							<h2 id="bound"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">5. Bounded types :</h2>
 							<p> We can bound the type parameter for a particular range by using extends keyword such
 								types are called bounded types.</p>
 
@@ -426,30 +424,28 @@ Test &lt;String&gt; t2=new Test &lt; String&gt;();
 									implementation classes.</li>
 							</ul>
 
-							<u>Example 1:</u><br><br><img alt="generics" src="gener/image012.png" width="857"
-								height="332"><br><br>
+							<u>Example 1:</u><br><br><img alt="generics" src="gener/image012.png"><br><br>
 
 							<br>
 
 
 
-							<u>Example 2:</u><br><br><img alt="generics" src="gener/image013.png" width="852"
-								height="337"><br><br>
+							<u>Example 2:</u><br><br><img alt="generics" src="gener/image013.png"><br><br>
 							<ul>
 								<li>We can't define bounded types by using implements and super keyword.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image014.png" width="300"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image014.png"><br><br>
 							<ul>
 								<li>But implements keyword purpose we can replace with extends keyword.</li>
 								<li>As the type parameter we can use any valid java identifier but it convention to use
 									T always.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image015.png" width="300"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image015.png"><br><br>
 							<p> We can pass any no of type parameters need not be one.</p>
 
-							<u>Example:</u><br><br><img alt="generics" src="gener/image016.png" width="300"><br><br>
+							<u>Example:</u><br><br><img alt="generics" src="gener/image016.png"><br><br>
 
 							<br>
 
@@ -461,40 +457,40 @@ Test &lt;String&gt; t2=new Test &lt; String&gt;();
 								<u>Example 1: </u><br>
 
 								<strong>class Test &lt;T extends Number&amp;Runnable&gt;
-									{}</strong>(<font color="#0000ff">valid</font>) <br> As the type parameter we can
+									{}</strong>(<font>valid</font>) <br> As the type parameter we can
 								pass any type which extends Number class and implements Runnable interface.
 							</p>
 
 							<p>
 								<u>Example 2: </u><br>
 								<strong>class Test&lt;T extends Number&amp;Runnable&amp;Comparable&gt;
-									{}</strong>(<font color="#ff0000">valid</font>)
+									{}</strong>(<font>valid</font>)
 							</p>
 
 							<p>
 								<u>Example 3: </u><br>
 								<strong>class Test&lt;T extends Number&amp;String&gt;
-									{}</strong>(<font color="#800040">invalid</font>) <br> We can't extend more than one
+									{}</strong>(<font>invalid</font>) <br> We can't extend more than one
 								class at a time.
 							</p>
 
 							<p>
 								<u>Example 4: </u><br>
 								<strong>class Test&lt;T extends Runnable&amp;Comparable&gt;
-									{}</strong>(<font color="#000080">valid</font>)
+									{}</strong>(<font>valid</font>)
 							</p>
 
 							<p>
 								Example 5: <br>
 								<strong>class Test&lt;T extends Runnable&amp;Number&gt;
-									{}</strong>(<font color="#8000ff">invalid</font>) <br> We have to take 1st class
+									{}</strong>(<font>invalid</font>) <br> We have to take 1st class
 								followed by interface.
 							</p>
 							
-							<h2 class="breadcrumb" id=gmethos"><br><br><br></h2>
-							<h2 class="breadcrumb">6. Generic methods and wild-card character (?):</h2>
+							<h2 id="gmethos"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">6. Generic methods and wild-card character (?):</h2>
 							<h2>
-								<font color="#8000ff">methodOne(ArrayList&lt;String&gt; l):</font>
+								<font>methodOne(ArrayList&lt;String&gt; l):</font>
 							</h2>
 
 							This method is applicable for ArrayList of only String type. <br>
@@ -510,7 +506,7 @@ l.add(10);//(invalid)
 							Within the method we can add only String type of objects and null to the List.
 
 							<h2>
-								<font color="#008000">methodOne(ArrayList&lt;?&gt; l):</font>
+								<font>methodOne(ArrayList&lt;?&gt; l):</font>
 							</h2>
 
 							We can use this method for ArrayList of any type but within the method we can't add anything
@@ -525,7 +521,7 @@ l.add(10);//(invalid)
 								<li> This method is useful whenever we are performing only read operation.</li>
 							</ul>
 							<h2>
-								<font color="#804000">methodOne(ArrayList&lt;? Extends x&gt; l):</font>
+								<font>methodOne(ArrayList&lt;? Extends x&gt; l):</font>
 							</h2>
 							<ul>
 								<li>If x is a class then this method is applicable for ArrayList of either x type or its
@@ -537,7 +533,7 @@ l.add(10);//(invalid)
 							</ul>
 
 							<h2>
-								<font color="#800040">methodOne(ArrayList&lt;? super x&gt; l):</font>
+								<font>methodOne(ArrayList&lt;? super x&gt; l):</font>
 							</h2>
 							<ul>
 								<li>If x is a class then this method is applicable for ArrayList of either x type or its
@@ -548,7 +544,7 @@ l.add(10);//(invalid)
 							</ul>
 
 							<h2><u>
-									<font color="#0000ff">Which of the following declarations are allowed?</font>
+									<font>Which of the following declarations are allowed?</font>
 								</u></h2>
 							<ol>
 								<li> ArrayList&lt;String&gt; l1=new ArrayList&lt;String&gt;();//(valid)</li>
@@ -592,8 +588,8 @@ Required: class or interface without bounds
 								<li>We can declare the type parameter either at class level or method level.</li>
 							</ul>
 
-							<h2 style="background-color: rgb(128, 128, 0);">
-								<font color="#ffffff">Declaring type parameter at class level:</font>
+							<h2>
+								<font>Declaring type parameter at class level:</font>
 							</h2>
 
 							<pre>class Test&lt;T&gt; 
@@ -602,8 +598,8 @@ Required: class or interface without bounds
 }
 </pre>
 
-							<h2 style="background-color: rgb(128, 128, 192);">
-								<font color="#ffffff">Declaring type parameter at method level:</font>
+							<h2 >
+								<font>Declaring type parameter at method level:</font>
 							</h2>
 							We have to declare just before return type.
 							<br>
@@ -627,8 +623,8 @@ Test.java:8: interface expected here
 public &lt;T extends Number&amp;Runnable&gt; void methodOne(T t){}//valid
 </pre>
 							
-							<h2 class="breadcrumb" id=non"><br><br><br></h2>
-							<h2 class="breadcrumb">7. Communication with non generic code :</h2>
+							<h2 id="non"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">7. Communication with non generic code :</h2>
 							<p> To provide compatibility with old version sun people compramized the concept of generics
 								in very few area's the following is one such area.</p>
 
@@ -655,8 +651,8 @@ public static void methodOne(ArrayList l) {
 }
 </string></string></pre>
 							
-							<h2 class="breadcrumb" id=conclu"><br><br><br></h2>
-							<h2 class="breadcrumb">8. Conclusions :</h2>
+							<h2 id="conclu"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">8. Conclusions :</h2>
 							<ul>
 								<li>Generics concept is applicable only at compile time, at runtime there is no such
 									type of concept. Hence the following declarations are equal.</li>

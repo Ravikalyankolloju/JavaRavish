@@ -5288,7 +5288,7 @@ h2.mainbreadcrumb {
 .breadcrumb-item+.breadcrumb-item::before {
 	display: inline-block;
 	padding-right: .1rem;
-	color: rgb(0, 255, 255);
+	color: rgb(0, 0, 0);
 	content: "/";
 }
 

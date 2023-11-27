@@ -169,22 +169,22 @@
 								<li><a href="#threadCommunication">Inter Thread communication.</a></li>
 								<li><a href="#deadLock">Deadlock</a></li>
 								<li><a href="#daemon">Daemon Threads.</a></li>
-								<li>Various Conclusion
-									<ol>
-										<li><a href="#stop"> To stop a Thread</a></li>
-										<li><a href="#suspend">Suspend &amp; resume of a thread</a> </li>
-										<li><a href="#group">Thread group </a></li><a href="#group">
-										</a>
-										<li><a href="#group"></a><a href="#green">Green Thread</a></li>
-										<li><a href="#local">Thread Local</a></li>
-									</ol>
+								<li><a href="#various">Various Conclusion
+										<ol>
+											<li><a href="#stop"> To stop a Thread</a></li>
+											<li><a href="#suspend">Suspend &amp; resume of a thread</a> </li>
+											<li><a href="#group">Thread group </a></li><a href="#group">
+											</a>
+											<li><a href="#group"></a><a href="#green">Green Thread</a></li>
+											<li><a href="#local">Thread Local</a></li>
+									</a></li>
 								</li>
 								<li><a href="#life">Life cycle of a Thread</a></li>
 							</ol>
 							<hr>
-							
-							<h2 class="breadcrumb" id=intro"><br><br><br></h2>
-							<h2 class="breadcrumb">1. Introduction :</h2>
+
+							<h2 id="intro"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">1. Introduction :</h2>
 							<p>
 								<span style="font-weight: 400;">
 									<p><strong>Multithreading in Java</strong> is a process
@@ -207,19 +207,18 @@
 							of multitasking's.
 							<ol>
 								<li>
-									<font color="#0080ff"><strong>Process based multitasking.</strong></font>
+									<font><strong>Process based multitasking.</strong></font>
 								</li>
 								<li>
-									<font color="#0080ff"><strong>Thread based multitasking.</strong></font>
+									<font><strong>Thread based multitasking.</strong></font>
 								</li>
 							</ol>
-							<font color="#008000"><u><strong>Diagram:
-									</strong></u></font><br><br><img alt="" src="multiThread/image001.png" width="678"
-								height="152"><br><br>
+							<font><u><strong>Diagram:
+									</strong></u></font><br><br><img alt="" src="multiThread/image001.png"><br><br>
 
-							<h3><em><u>
-										<font color="#0000ff">Process based multitasking:</font>
-									</u></em></h3>
+							<h2><em><u>
+										<font>Process based multitasking:</font>
+									</u></em></h2>
 							Executing several tasks simultaneously where each task is a separate independent process
 							such type of multitasking is called process based multitasking.
 							<br>
@@ -232,9 +231,9 @@
 								<li>This type of multitasking is best suitable at "os level".</li>
 							</ul>
 
-							<h3>
-								<font color="#0000ff"><em><u>Thread based multitasking:</u></em></font>
-							</h3>
+							<h2>
+								<font><em><u>Thread based multitasking:</u></em></font>
+							</h2>
 							Executing several tasks simultaneously where each task is a separate independent part of the
 							same program, is called Thread based multitasking.<br> And each independent part is called a
 							"Thread".
@@ -258,9 +257,9 @@
 									improve performance of the system by reducing response time.</li>
 							</ol>
 
-							
-							<h2 class="breadcrumb" id=define" style="background-color: rgb(128, 0, 64);">
-								<font color="#ffff00">The ways to define instantiate and start a new Thread:</font>
+							<h2 id="define"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="define">2. The ways to define instantiate and start a new
+								Thread:
 							</h2>
 							What is singleton? Give example? <br>
 							We can define a Thread in the following 2 ways.
@@ -269,12 +268,12 @@
 								<li>By implementing Runnable interface.</li>
 							</ol>
 
-							<h3 id="extend"><u>Defining a Thread by extending "Thread class":</u></h3>
+							<h2 id="extend"><u>Defining a Thread by extending "Thread class":</u></h2>
 
 
 							Example:
 
-							<br><br><img alt="" src="multiThread/image003.png" width="666" height="382"><br><br>
+							<br><br><img alt="" src="multiThread/image003.png"><br><br>
 							<pre>
 class ThreadDemo
 {
@@ -291,9 +290,9 @@ class ThreadDemo
 }
 </pre>
 
-							<h3><u><em>
-										<font color="#800040">Case 1: Thread Scheduler:</font>
-									</em></u></h3>
+							<h2><u><em>
+										<font>Case 1: Thread Scheduler:</font>
+									</em></u></h2>
 
 							<ul>
 								<li>If multiple Threads are waiting to execute then which Thread will execute 1st is
@@ -302,14 +301,14 @@ class ThreadDemo
 									is the JVM vendor dependent hence in multithreading examples we can't expect exact
 									execution order and exact output.</li>
 								<li>The following are various possible outputs for the above program.
-									<br><br><img alt="" src="multiThread/image006.png" width="671" height="539"><br><br>
+									<br><br><img alt="" src="multiThread/image006.png"><br><br>
 								</li>
 							</ul>
 
-							<h3><u><em>
-										<font color="#800080">Case 2: Difference between t.start() and t.run() methods.
+							<h2><u><em>
+										<font>Case 2: Difference between t.start() and t.run() methods.
 										</font>
-									</em></u></h3>
+									</em></u></h2>
 							<ul>
 								<li> In the case of t.start() a new Thread will be created which is responsible for the
 									execution of run() method.</li>
@@ -337,10 +336,10 @@ main thread
 </pre>
 							Entire output produced by only main Thread.
 
-							<h3>
-								<font color="#0080c0"><em><u>Case 3: importance of Thread class start() method.</u></em>
+							<h2>
+								<font><em><u>Case 3: importance of Thread class start() method.</u></em>
 								</font>
-							</h3>
+							</h2>
 							For every Thread the required mandatory activities like registering the Thread with Thread
 							Scheduler will takes care by Thread class start() method and programmer is responsible just
 							to define the job of the Thread inside run() method. <br>
@@ -358,10 +357,10 @@ start()
 							starting a new Thread in java. Due to this start() is considered as<strong> heart of
 								multithreading</strong>.
 
-							<h3>
-								<font color="#008080"><u><em>Case 4: If we are not overriding run() method:</em></u>
+							<h2>
+								<font><u><em>Case 4: If we are not overriding run() method:</em></u>
 								</font>
-							</h3>
+							</h2>
 							If we are not overriding run() method then Thread class run() method will be executed which
 							has empty implementation and hence we won't get any output.
 							<pre>Example:
@@ -379,9 +378,9 @@ class ThreadDemo
 							It is highly recommended to override run() method. Otherwise don't go for multithreading
 							concept.
 
-							<h3>
-								<font color="#0080c0"><u><em>Case 5: Overloding of run() method.</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Case 5: Overloding of run() method.</em></u></font>
+							</h2>
 							We can overload run() method but Thread class start() method always invokes no argument
 							run() method the other overload run() methods we have to call explicitly then only it will
 							be executed just like normal method.
@@ -410,9 +409,9 @@ Output:
 No arg method
 </pre>
 
-							<h3>
-								<font color="#0080ff"><u><em>Case 6: overriding of start() method:</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Case 6: overriding of start() method:</em></u></font>
+							</h2>
 							If we override start() method then our start() method will be executed just like a normal
 							method call and no new Thread will be started.
 							<pre>Example:
@@ -445,24 +444,20 @@ main method
 							<br>
 							Note : It is never recommended to override start() method.
 
-							<h3>
-								<font color="#8000ff"><u><em>Case 7:</em></u></font>
-							</h3>
-							<u><em>Example 1:</em></u><br><br><img alt="" src="multiThread/image008.png" width="1028"
-								height="454"><br><br>
+							<h2>
+								<font><u><em>Case 7:</em></u></font>
+							</h2>
+							<u><em>Example 1:</em></u><br><br><img alt="" src="multiThread/image008.png"><br><br>
 
-							<u><em>Example 2:</em></u><br><br><img alt="" src="multiThread/image010.png" width="1019"
-								height="402"><br><br>
+							<u><em>Example 2:</em></u><br><br><img alt="" src="multiThread/image010.png"><br><br>
 
-							<em><u>Output:</u></em><br><br><img alt="" src="multiThread/image012.png" width="431"
-								height="251"><br><br>
+							<em><u>Output:</u></em><br><br><img alt="" src="multiThread/image012.png"><br><br>
 
 
-							<h3><u><em>
-										<font color="#8080ff">Case 8: life cycle of the Thread:</font>
-									</em></u></h3>
-							<em><u>Diagram:</u></em><br><br><img alt="" src="multiThread/image014.png" width="949"
-								height="161"><br><br>
+							<h2><u><em>
+										<font>Case 8: life cycle of the Thread:</font>
+									</em></u></h2>
+							<em><u>Diagram:</u></em><br><br><img alt="" src="multiThread/image014.png"><br><br>
 
 							<ul>
 								<li>Once we created a Thread object then the Thread is said to be in new state or born
@@ -474,9 +469,9 @@ main method
 								<li>Once run() method completes then the Thread will entered into dead state.</li>
 							</ul>
 
-							<h3>
-								<font color="#0080ff"><u><em>Case 9:</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Case 9:</em></u></font>
+							</h2>
 							After starting a Thread we are not allowed to restart the same Thread once again otherwise
 							we will get runtime exception saying "IllegalThreadStateException".
 
@@ -487,19 +482,17 @@ t.start();//valid
 t.start();//we will get R.E saying: IllegalThreadStateException
 </pre>
 
-							
-							<h2 class="breadcrumb" id=implement"><u>Defining a Thread by implementing Runnable
+
+							<h2 class="breadcrumb" id="implement"><u>Defining a Thread by implementing Runnable
 									interface:</u></h2>
 							We can define a Thread even by implementing Runnable interface also.<br>
 							Runnable interface present in java.lang.pkg and contains only one method run().
 
 							<br>
-							<em><u>Diagram:</u></em><br><br><img alt="" src="multiThread/image016.png"
-								width="300"><br><br>
+							<em><u>Diagram:</u></em><br><br><img alt="" src="multiThread/image016.png"><br><br>
 
 
-							<u><em>Example:</em></u><br><br><img alt="" src="multiThread/image018.png"
-								width="300"><br><br>
+							<u><em>Example:</em></u><br><br><img alt="" src="multiThread/image018.png"><br><br>
 							<pre>class ThreadDemo
 {
 	public static void main(String[] args)
@@ -540,16 +533,16 @@ child Thread
 							We can't expect exact output but there are several possible outputs.
 
 							<h2><u>
-									<font color="#0000ff">Case study:</font>
+									<font>Case study:</font>
 								</u></h2>
 							<pre>MyRunnable r=new MyRunnable();
 Thread t1=new Thread();
 Thread t2=new Thread(r);
 </pre>
 
-							<h3>
-								<font color="#8080ff"><u><em>Case 1: t1.start():</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Case 1: t1.start():</em></u></font>
+							</h2>
 							A new Thread will be created which is responsible for the execution of Thread class
 							run()method.
 							<pre>Output:
@@ -559,9 +552,9 @@ main thread
 main thread
 main thread
 </pre>
-							<h3>
-								<font color="#8080c0"><u><em>Case 2: t1.run():</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Case 2: t1.run():</em></u></font>
+							</h2>
 							No new Thread will be created but Thread class run() method will be executed just like a
 							normal method call.
 							<pre>Output:
@@ -572,9 +565,9 @@ main thread
 main thread
 </pre>
 
-							<h3>
-								<font color="#0080c0"><u><em>Case 3: t2.start():</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Case 3: t2.start():</em></u></font>
+							</h2>
 							New Thread will be created which is responsible for the execution of MyRunnable run()
 							method.
 							<pre>Output:
@@ -590,9 +583,9 @@ child Thread
 child Thread
 </pre>
 
-							<h3>
-								<font color="#008080"><u><em>Case 4: t2.run():</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Case 4: t2.run():</em></u></font>
+							</h2>
 							No new Thread will be created and MyRunnable run() method will be executed just like a
 							normal method call.
 							<pre>Output:
@@ -608,9 +601,9 @@ main thread
 main thread
 </pre>
 
-							<h3>
-								<font color="#8080ff"><u><em>Case 5: r.start():</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Case 5: r.start():</em></u></font>
+							</h2>
 							We will get compile time error saying start()method is not available in MyRunnable class.
 							<pre>Output:
 Compile time error
@@ -620,9 +613,9 @@ Symbol: method start()
 Location: class MyRunnable
 </pre>
 
-							<h3>
-								<font color="#8000ff"><u><em>Case 6: r.run():</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Case 6: r.run():</em></u></font>
+							</h2>
 							No new Thread will be created and MyRunnable class run() method will be executed just like a
 							normal method call.
 							<pre>Output:
@@ -675,7 +668,7 @@ main thread
 
 
 
-							<h3><em><u>Best approach to define a Thread:</u></em></h3>
+							<h2><em><u>Best approach to define a Thread:</u></em></h2>
 							<ul>
 								<li>Among the 2 ways of defining a Thread, implements Runnable approach is always
 									recommended.</li>
@@ -687,9 +680,8 @@ main thread
 							</ul>
 
 
-							
-							<h2 class="breadcrumb" id=constructor" style="background-color: rgb(128, 128, 192);">
-								<font color="#ffff00">Thread class constructors:</font>
+							<h2 id="constructor"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="constructor">3. Thread class constructors:
 							</h2>
 							<ol>
 								<li>Thread t=new Thread();</li>
@@ -702,20 +694,17 @@ main thread
 								<li>Thread t=new Thread(ThreadGroup g,Runnable r,String name,long stackSize);</li>
 							</ol>
 							<strong><em><u>Ashok's approach to define a Thread(not recommended to use):
-									</u></em></strong><br><br><img alt="" src="multiThread/image021.png" width="1012"
-								height="330"><br><br>
+									</u></em></strong><br><br><img alt="" src="multiThread/image021.png"><br><br>
 
-							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image023.png"
-								width="300"><br><br>
+							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image023.png"><br><br>
 
 							<pre>Output:
 main method
 run method
 </pre>
 
-							
-							<h2 class="breadcrumb" id=nameThread" style="background-color: rgb(0, 128, 128);">
-								<font color="#ffff00">Getting and setting name of a Thread:</font>
+							<h2 id="nameThread"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="nameThread">5. Getting and setting name of a Thread:
 							</h2>
 							<ul>
 								<li>Every Thread in java has some name it may be provided explicitly by the programmer
@@ -749,9 +738,8 @@ class ThreadDemo
 							method.
 
 
-							
-							<h2 class="breadcrumb" id=priority" style="background-color: rgb(0, 128, 192);">
-								<font color="#ffff00">Thread Priorities</font>
+							<h2 id="priority"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="priority">4. Thread Priorities
 							</h2>
 							<ul>
 								<li>Every Thread in java has some priority it may be default priority generated by JVM
@@ -783,7 +771,7 @@ class ThreadDemo
 							</ul>
 
 							<h2>
-								<font color="#800080"><u><em>Default priority:</em></u></font>
+								<font><u><em>Default priority:</em></u></font>
 							</h2>
 							The default priority only for the main Thread is 5. But for all the remaining Threads the
 							default priority will be inheriting from parent to child. That is whatever the priority
@@ -861,9 +849,8 @@ main thread
 							Some operating systems(like windowsXP) may not provide proper support for Thread priorities.
 							We have to install separate bats provided by vendor to provide support for priorities.
 
-							
-							<h2 class="breadcrumb" id=execution" style="background-color: rgb(0, 128, 0);">
-								<font color="#ffff00">The Methods to Prevent a Thread from Execution:</font>
+							<h2 id="execution"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="execution">6. The Methods to Prevent a Thread from Execution:
 							</h2>
 							We can prevent(stop) a Thread execution by using the following methods.
 							<ol>
@@ -872,9 +859,9 @@ main thread
 								<li>sleep();</li>
 							</ol>
 
-							<h3 id="yield"><u><em>
-										<font color="#808040">yield():</font>
-									</em></u></h3>
+							<h2 id="yield"><u><em>
+										<font>yield():</font>
+									</em></u></h2>
 							<ol>
 								<li>yield() method causes "to pause current executing Thread for giving the chance of
 									remaining waiting Threads of same priority".</li>
@@ -886,8 +873,7 @@ main thread
 									on mercy of the Thread scheduler.</li>
 								<li>public static native void yield();</li>
 							</ol>
-							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image026.png" width="1050"
-								height="213"><br><br>
+							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image026.png"><br><br>
 
 							<pre>Example:
 class MyThread extends Thread
@@ -939,9 +925,9 @@ child thread
 
 
 
-							<h3 id="join"><u><em>
-										<font color="#804040">Join():</font>
-									</em></u></h3>
+							<h2 id="join"><u><em>
+										<font>Join():</font>
+									</em></u></h2>
 							If a Thread wants to wait until completing some other Thread then we should go for join()
 							method.
 
@@ -950,7 +936,7 @@ child thread
 							If a Thread t1 executes t2.join() then t1 should go for waiting state until completing t2.
 							<br>
 							<br>
-							Diagram:<br><br><img alt="" src="multiThread/image028.png" width="894" height="345"><br><br>
+							Diagram:<br><br><img alt="" src="multiThread/image028.png"><br><br>
 
 
 							<ol>
@@ -959,8 +945,7 @@ child thread
 								<li>public final void join(long ms,int ns) throws InterruptedException</li>
 							</ol>
 
-							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image030.png" width="1016"
-								height="447"><br><br>
+							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image030.png"><br><br>
 
 
 
@@ -1085,9 +1070,9 @@ Thread.currentThread().join();
 
 
 
-							
-							<h2 class="breadcrumb" id=sleep">
-								<font color="#8080ff"><u><em>Sleep() method:</em></u></font>
+
+							<h2 class="breadcrumb" id="sleep">
+								<font><u><em>Sleep() method:</em></u></font>
 							</h2>
 							If a Thread don't want to perform any operation for a particular amount of time then we
 							should go for sleep() method.
@@ -1098,8 +1083,7 @@ Thread.currentThread().join();
 								</li>
 							</ol>
 
-							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image033.png" width="1014"
-								height="436"><br><br>
+							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image033.png"><br><br>
 
 							<pre>
 Example:
@@ -1124,7 +1108,7 @@ A
 </pre>
 
 							<h2>
-								<font color="#800080"><u><em>Interrupting a Thread:</em></u></font>
+								<font><u><em>Interrupting a Thread:</em></u></font>
 							</h2>
 
 
@@ -1230,9 +1214,9 @@ class ThreadInterruptDemo1
 							</ul>
 
 
-							<h3><u>
-									<font color="#008080">Compression of yield, join and sleep() method?</font>
-								</u></h3>
+							<h2><u>
+									<font>Compression of yield, join and sleep() method?</font>
+								</u></h2>
 							<table border="1">
 								<tbody>
 									<tr>
@@ -1286,10 +1270,8 @@ class ThreadInterruptDemo1
 								</tbody>
 							</table>
 
-
-							
-							<h2 class="breadcrumb" id=syncronization" style="background-color: rgb(0, 0, 160);">
-								<font color="#ffff00">Synchronization</font>
+							<h2 id="syncronization"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="syncronization">7. Synchronization
 							</h2>
 							<ol>
 								<li>Synchronized is the keyword applicable for methods and blocks but not for classes
@@ -1396,12 +1378,12 @@ good morning:yuvaraj
 
 
 							<h2><u>
-									<font color="#0000ff">Case study:</font>
+									<font>Case study:</font>
 								</u></h2>
 
-							<h3>
-								<font color="#008040"><u><em>Case 1:</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Case 1:</em></u></font>
+							</h2>
 							<pre>Display d1=new Display();
 Display d2=new Display();
 MyThread t1=new MyThread(d1,"dhoni");
@@ -1411,8 +1393,7 @@ t2.start();
 </pre>
 
 
-							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image036.png"
-								width="300"><br><br>
+							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image036.png"><br><br>
 
 							Even though we declared wish() method as synchronized but we will get irregular output in
 							this case, because both Threads are operating on different objects.
@@ -1421,9 +1402,9 @@ t2.start();
 								no impact of Syncronization.<br> If multiple threads are operating on same java objects
 								then syncronized concept is required(applicable).
 							</p>
-							<h3><em><u>
-										<font color="#0080c0">Class level lock:</font>
-									</u></em></h3>
+							<h2><em><u>
+										<font>Class level lock:</font>
+									</u></em></h2>
 							<ol>
 								<li>Every class in java has a unique lock. If a Thread wants to execute a static
 									synchronized method then it required class level lock.</li>
@@ -1439,9 +1420,9 @@ t2.start();
 							</ol>
 
 
-							<h3>
-								<font color="#800000"><u><em>Synchronized block:</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Synchronized block:</em></u></font>
+							</h2>
 							<ol>
 								<li>If very few lines of the code required synchronization then it's never recommended
 									to declare entire method as synchronized we have to enclose those few lines of the
@@ -1454,20 +1435,20 @@ t2.start();
 								<strong><u><em>Example 1:</em></u></strong> To get lock of current object we can declare
 								synchronized block as follows.<br> If Thread got lock of current object then only it is
 								allowed to execute this block.<br>
-								<font color="#0080ff"><strong>Synchronized(this){} </strong></font>
+								<font><strong>Synchronized(this){} </strong></font>
 							</p>
 
 							<p>
 								<strong><u><em>Example 2:</em></u></strong> To get the lock of a particular object 'b'
 								we have to declare a synchronized block as follows.<br> If thread got lock of 'b' object
 								then only it is allowed to execute this block.<br>
-								<font color="#800000"><strong>Synchronized(b){} </strong></font>
+								<font><strong>Synchronized(b){} </strong></font>
 							</p>
 
 							<p>
 								<u><em><strong>Example 3:</strong></em></u> To get class level lock we have to declare
 								synchronized block as follows.<br>
-								<font color="#008000"><strong>Synchronized(Display.class){} </strong></font>
+								<font><strong>Synchronized(Display.class){} </strong></font>
 								<br>If thread got class level lock of Display then only it allowed to execute this
 								block.
 							</p>
@@ -1486,9 +1467,9 @@ Required: reference
 </pre>
 
 
-							<h3><u>
-									<font color="#0000ff">Questions:</font>
-								</u></h3>
+							<h2><u>
+									<font>Questions:</font>
+								</u></h2>
 							<ol>
 								<li>Explain about synchronized keyword and its advantages and disadvantages?</li>
 								<li>What is object lock and when a Thread required?</li>
@@ -1504,11 +1485,9 @@ Required: reference
 									Ans: Yes, up course from different objects.
 
 
-									Example:<br><br><img alt="" src="multiThread/image038.png" width="840"
-										height="274"><br><br>
+									Example:<br><br><img alt="" src="multiThread/image038.png"><br><br>
 
-									<em><u>Diagram:</u></em><br><br><img alt="" src="multiThread/image040.png"
-										width="311" height="222"><br><br>
+									<em><u>Diagram:</u></em><br><br><img alt="" src="multiThread/image040.png"><br><br>
 								</li>
 								<li>What is synchronized statement? <br>
 									Ans: The statements which present inside synchronized method and synchronized block
@@ -1517,9 +1496,10 @@ Required: reference
 
 
 
-							<h3 id="threadCommunication" style="background-color: rgb(128, 0, 0);">
-								<font color="#ffff00">Inter Thread communication (wait(),notify(), notifyAll()):</font>
-							</h3>
+							<h2 id="threadCommunication"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="threadCommunication">8. Inter Thread communication
+								(wait(),notify(), notifyAll()):
+							</h2>
 							<ul>
 								<li>Two Threads can communicate with each other by using wait(), notify() and
 									notifyAll() methods.</li>
@@ -1528,8 +1508,7 @@ Required: reference
 									which is performing updation of object, it is responsible to give notification by
 									calling notify() method.<br> After getting notification the waiting Thread will get
 									those updations.<br>
-									<br>Diagram:<br><br><img alt="" src="multiThread/image042.png" width="997"
-										height="850"><br><br>
+									<br>Diagram:<br><br><img alt="" src="multiThread/image042.png"><br><br>
 								</li>
 								<li>wait(), notify() and notifyAll() methods are available in Object class but not in
 									Thread class because Thread can call these methods on any common object.</li>
@@ -1587,8 +1566,7 @@ Required: reference
 										<li> public final native void notify()</li>
 										<li> public final void notifyAll()</li>
 									</ol>
-									<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image044.png"
-										width="1009" height="483"><br><br>
+									<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image044.png"><br><br>
 
 								</li>
 							</ul>
@@ -1639,9 +1617,9 @@ main Thread got notification call
 
 
 							Example 2:
-							<h3>
-								<font color="#0080c0"><u><em>Producer consumer problem:</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Producer consumer problem:</em></u></font>
+							</h2>
 							<ul>
 								<li>Producer(producer Thread) will produce the items to the queue and consumer(consumer
 									thread) will consume the items from the queue. If the queue is empty then consumer
@@ -1651,15 +1629,14 @@ main Thread got notification call
 									notification so that consumer Thread will get that notification and consume items.
 								</li>
 							</ul>
-							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image046.png"
-								width="300"><br><br>
+							<u><em>Diagram:</em></u><br><br><img alt="" src="multiThread/image046.png"><br><br>
 
-							<u>Example:</u><br><br><img alt="" src="multiThread/image048.png" width="300"><br><br>
+							<u>Example:</u><br><br><img alt="" src="multiThread/image048.png"><br><br>
 
 
-							<h3><u>
-									<font color="#0000ff">Notify vs notifyAll():</font>
-								</u></h3>
+							<h2><u>
+									<font>Notify vs notifyAll():</font>
+								</u></h2>
 							<ul>
 								<li>We can use notify() method to give notification for only one Thread. If multiple
 									Threads are waiting then only one Thread will get the chance and remaining Threads
@@ -1673,9 +1650,9 @@ main Thread got notification call
 							<b>Note:</b> On which object we are calling wait(), notify() and notifyAll() methods that
 							corresponding object lock we have to get but not other object locks.
 							<br>
-							<u>Example:</u><br><br><img alt="" src="multiThread/image050.png" width="300"><br><br>
+							<u>Example:</u><br><br><img alt="" src="multiThread/image050.png"><br><br>
 
-							<h3><u> Which of the folowing statements are True ?</u></h3>
+							<h2><u> Which of the folowing statements are True ?</u></h2>
 
 							<ol>
 								<li>Once a Thread calls wait() on any Object immediately it will entered into waiting
@@ -1694,9 +1671,8 @@ main Thread got notification call
 
 
 
-							
-							<h2 class="breadcrumb" id=deadLock" style="background-color: rgb(0, 0, 64);">
-								<font color="#ffff80">Dead lock:</font>
+							<h2 id="deadLock"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="deadLock">9. Dead lock:
 							</h2>
 							<ul>
 								<li>If 2 Threads are waiting for each other forever(without end) such type of
@@ -1785,17 +1761,16 @@ Thread1 trying to call b.last()
 
 
 
-
-							<h3 id="daemon" style="background-color: rgb(0, 0, 255);">
-								<font color="#ffff00">Daemon Threads:</font>
-							</h3>
+							<h2 id="daemon"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="daemon">10. Daemon Threads:
+							</h2>
 							<p> The Threads which are executing in the background are called daemon Threads.<br> The
 								main objective of daemon Threads is to provide support for non-daemon Threads like main
 								Thread.</p>
 
 							<u><strong>Example:
 								</strong></u><br>
-							<font color="#0080c0"><u><em>Garbage collector</em></u></font>
+							<font><u><em>Garbage collector</em></u></font>
 
 							<p> When ever the program runs with low memory the JVM will execute Garbage Collector to
 								provide free memory. So that the main Thread can continue it's execution. </p>
@@ -1895,9 +1870,9 @@ End of main Thread
 
 
 
-							<h3>
-								<font color="#008080"><u><em>Lazy thread</em></u></font>
-							</h3>
+							<h2>
+								<font><u><em>Lazy thread</em></u></font>
+							</h2>
 
 							<ul>
 								<li>If we are commenting line 1 then both main and child Threads are non daemon and
@@ -1909,7 +1884,7 @@ End of main Thread
 
 
 							<h2>
-								<font color="#ff8000"><u><em>Deadlock vs Starvation:</em></u></font>
+								<font><u><em>Deadlock vs Starvation:</em></u></font>
 							</h2>
 							<ul>
 								<li>A long waiting of a Thread which never ends is called deadlock.</li>
@@ -1917,10 +1892,11 @@ End of main Thread
 								<li>A low priority Thread has to wait until completing all high priority Threads.</li>
 								<li>This long waiting of Thread which ends at certain point is called starvation.</li>
 							</ul>
-
-							<h3 id="stop">
-								<font color="#ff0000"><u>How to kill a Thread in the middle of the line?</u></font>
-							</h3>
+							<h2 id="various"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="various">11. Various Conclusion</h2>
+							<h2 id="stop">
+								How to kill a Thread in the middle of the line?
+							</h2>
 							<ul>
 								<li>We can call stop() method to stop a Thread in the middle then it will be entered
 									into dead state immediately.<br>
@@ -1929,9 +1905,9 @@ End of main Thread
 								<li>stop() method has been deprecated and hence not recommended to use.</li>
 							</ul>
 
-							<h3 id="suspend">
-								<font color="#008000"><em><u>suspend and resume methods:</u></em></font>
-							</h3>
+							<h2 id="suspend">
+								<font><em><u>suspend and resume methods:</u></em></font>
+							</h2>
 							<ul>
 								<li>A Thread can suspend another Thread by using suspend() method then that Thread will
 									be paused temporarily.</li>
@@ -1945,16 +1921,16 @@ End of main Thread
 								<li>Both methods are deprecated and not recommended to use.</li>
 							</ul>
 
-							<h3>
-								<font color="#0080ff"><u>RACE condition:</u></font>
-							</h3>
+							<h2>
+								<font><u>RACE condition:</u></font>
+							</h2>
 							Executing multiple Threads simultaneously and causing data inconsistency problems is nothing
 							but<b> Race condition</b><br> we can resolve race condition by using synchronized keyword.
 
 
-							<h3 id="group">
-								<font color="#008000"><em><u>ThreadGroup:</u></em></font>
-							</h3>
+							<h2 id="group">
+								<font><em><u>ThreadGroup:</u></em></font>
+							</h2>
 
 							Based on functionality we can group threads as a single unit which is nothing but
 							ThreadGroup.<br>
@@ -1982,9 +1958,9 @@ MyThread t3=new MyThread(g,"Body Printing");
 g.stop();
 </pre>
 
-							<h3 id="local">
-								<font color="#008000"><em><u>ThreadLocal(1.2 v):</u></em></font>
-							</h3>
+							<h2 id="local">
+								<font><em><u>ThreadLocal(1.2 v):</u></em></font>
+							</h2>
 							We can use ThreadLocal to define local resources which are required for a perticular Thread
 							like DBConnections, counterVariables etc.,
 							<br><br>
@@ -1995,20 +1971,20 @@ g.stop();
 							Scopes(page,request,session,application).
 
 
-							<h3 id="green">
-								<font color="#008000"><em><u>GreenThread:</u></em></font>
-							</h3>
+							<h2 id="green">
+								<font><em><u>GreenThread:</u></em></font>
+							</h2>
 							Java multiThreading concept is implementing by using the following 2 methods :
 							<ol>
 								<li>GreenThread Model</li>
 								<li>Native OS Model</li>
 							</ol>
-							<h3>GreenThread Model</h3>
+							<h2>GreenThread Model</h2>
 							The threads which are managed completely by JVM without taking support for underlying OS,
 							such type of threads are called Green Threads.
 
 
-							<h3>Native OS Model</h3>
+							<h2>Native OS Model</h2>
 							<ul>
 								<li>
 									The Threads which are managed with the help of underlying OS are called Native
@@ -2024,17 +2000,11 @@ g.stop();
 									Anyway GreenThread model is deprecated and not recommended to use.
 								</li>
 							</ul>
-
-
-
-
-
-							
-							<h2 class="breadcrumb" id=life" style="background-color: rgb(0, 0, 160);">
-								<font color="#ffff00">Life cycle of a Thread:</font>
+							<h2 id="life"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="life">12. Life cycle of a Thread:
 							</h2>
-							<br><br><img alt="" src="multiThread/image052.png" width="990" height="753"><br><br>
-							<font color="#ff0000"><strong>What is the difference between extends Thread and implements
+							<br><br><img alt="" src="multiThread/image052.png"><br><br>
+							<font><strong>What is the difference between extends Thread and implements
 									Runnable?
 								</strong></font>
 							<ol>
@@ -2044,7 +2014,7 @@ g.stop();
 									interface.</li>
 							</ol>
 
-							<font color="#ff0000"><strong>Extends Thread, implements Runnable which one is advantage?
+							<font><strong>Extends Thread, implements Runnable which one is advantage?
 								</strong></font><br> If we extend Thread class, there is no scope to extend another
 							class.
 
@@ -2065,35 +2035,35 @@ g.stop();
 								<li>class MyClass extends Frame implements Runnable</li>
 							</ol>
 
-							<h3>
-								<font color="#ff0000">How can you stop a Thread which is running?</font>
-							</h3>
+							<h2>
+								<font>How can you stop a Thread which is running?</font>
+							</h2>
 							<p>
 								<u><strong>Step 1:</strong></u>
 								Declare a boolean type variable and store false in that variable.<br>
-								<font color="#0000ff">boolean stop=false;
+								<font>boolean stop=false;
 								</font>
 							</p>
 
 							<p>
 								<u><strong>Step 2:</strong></u>
 								If the variable becomes true return from the run() method.<br>
-								<font color="#8000ff">If(stop) return;
+								<font>If(stop) return;
 								</font>
 							</p>
 
 							<p>
 								<u><strong>Step 3: </strong></u>
 								Whenever to stop the Thread store true into the variable.<br>
-								<font color="#0080ff">System.in.read();//press enter <br>
+								<font>System.in.read();//press enter <br>
 									Obj.stop=true;
 
 								</font>
 							</p>
 
-							<h3 style="background-color: rgb(128, 0, 64);">
-								<font color="#ffff00">Questions:</font>
-							</h3>
+							<h2 style="background-color: rgb(128, 0, 64);">
+								<font>Questions:</font>
+							</h2>
 							<ol>
 								<li>What is a Thread?</li>
 								<li>Which Thread by default runs in every java program? <br>
@@ -2120,7 +2090,8 @@ g.stop();
 					<div class="card-footer">
 						<ul class="pagination justify-content-center mb-4">
 							<li class="page-item"><a class="page-link btn-outline-primary"
-									href="java-exception.html">&lArr; Previous</a></li>
+									href="java-exception.html">&lArr;
+									Previous</a></li>
 							<li class="page-item"><a class="page-link" href="java-lang-package.html">Next
 									&rArr;</a>
 							</li>

@@ -169,8 +169,8 @@
 							</ol>
 							<hr>
 							
-							<h2 class="breadcrumb" id=ser"><br><br><br></h2>
-							<h2 class="breadcrumb">1. Serialization: (1.1 v) :</h2>
+							<h2 id="ser"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">1. Serialization: (1.1 v) :</h2>
 							<ol>
 								<li>The process of saving (or) writing state of an object to a file is called
 									serialization </li>
@@ -181,11 +181,11 @@
 								<li><strong>Ex</strong>: big ballon </li>
 							</ol>
 							<br><br><strong>
-								<font color="#800040">Diagram:</font>
-							</strong><br><img alt="" src="./serial/image001.png" width="300"><br><br>
+								Diagram:
+							</strong><br><img alt="" src="./serial/image001.png"><br><br>
 							
-							<h2 class="breadcrumb" id=deser"><br><br><br></h2>
-							<h2 class="breadcrumb">2. De-Serialization:</h2>
+							<h2 id="deser"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">2. De-Serialization:</h2>
 							<ol>
 								<li> The process of reading state of an object from a file is called DeSerialization
 								</li>
@@ -195,8 +195,8 @@
 									DeSerialization.</li>
 							</ol>
 							<br><br>
-							<font color="#800040"><strong>Diagram:</strong></font><br><img alt=""
-								src="./serial/image002.png" width="300"><br><br>
+							<strong>Diagram:</strong><br><img alt=""
+								src="./serial/image002.png"><br><br>
 
 							<pre>Example 1:
 import java.io.*;
@@ -231,8 +231,8 @@ Deserialization ended
 </pre>
 
 							<br><br>
-							<font color="#800040"><strong>Diagram</strong></font>:<br><img alt=""
-								src="./serial/image003.png" width="300"><br><br>
+							<strong>Diagram</strong>:<br><img alt=""
+								src="./serial/image003.png"><br><br>
 
 							<u><strong>Note:
 								</strong></u>
@@ -292,8 +292,8 @@ Deserialization ended
 30................40
 </pre>
 							
-							<h2 class="breadcrumb" id=transient"><br><br><br></h2>
-							<h2 class="breadcrumb">3. Transient keyword:</h2>
+							<h2 id="transient"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">3. Transient keyword:</h2>
 							<ol>
 								<li>transient is the modifier applicable only for variables.</li>
 								<li> While performing serialization if we don't want to save the value of a particular
@@ -304,16 +304,16 @@ Deserialization ended
 								<li> That is transient means "<strong>not to serialize</strong>".</li>
 							</ol>
 							
-							<h2 class="breadcrumb" id=stavtra"><br><br><br></h2>
-							<h2 class="breadcrumb">4. Static Vs Transient :</h2>
+							<h2 id="stavtra"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">4. Static Vs Transient :</h2>
 							<ol>
 								<li> static variable is not part of object state hence they won't participate in
 									serialization because of this declaring a static variable as transient there is no
 									use.</li>
 							</ol>
 							
-							<h2 class="breadcrumb" id=travfin"><br><br><br></h2>
-							<h2 class="breadcrumb">5. Transient Vs Final:</h2>
+							<h2 id="travfin"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">5. Transient Vs Final:</h2>
 							<ol>
 								<li> final variables will be participated into serialization directly by their values.
 									Hence declaring a final variable as transient there is no use. <br> //the compiler
@@ -344,11 +344,11 @@ Output:
 10................20
 </pre>
 							<br><br>
-							<font color="#800040"><strong>Diagram:</strong></font><br><img alt=""
-								src="./serial/image004.png" width="300"><br><br>
+							<strong>Diagram:</strong><br><img alt=""
+								src="./serial/image004.png"><br><br>
 
 
-							<font color="#ffff00" style="background-color: rgb(0, 0, 64);"><u><strong>Table:
+							<font><u><strong>Table:
 									</strong></u></font>
 							<table border="1">
 								<tbody>
@@ -402,7 +402,7 @@ Rat r2=(Rat)ois.readObject();
 </pre>
 
 							<br>
-							<font color="#0000ff"><u><strong>If we don't know order of objects :
+							<font><u><strong>If we don't know order of objects :
 
 									</strong></u></font><br>
 
@@ -428,8 +428,8 @@ Object o=ois.readObject( );
 </pre>
 
 							
-							<h2 class="breadcrumb" id=objgraph"><br><br><br></h2>
-							<h2 class="breadcrumb">6. Object graph in serialization :</h2>
+							<h2 id="objgraph"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">6. Object graph in serialization :</h2>
 							<ol>
 								<li> Whenever we are serializing an object the set of all objects which are reachable
 									from that object will be serialized automatically. This group of objects is nothing
@@ -471,8 +471,8 @@ Output:
 </pre>
 
 							<br><br>
-							<font color="#800040"><strong>Diagram:</strong></font><br><img alt=""
-								src="./serial/image005.png" width="300"><br><br>
+							<font><strong>Diagram:</strong></font><br><img alt=""
+								src="./serial/image005.png"><br><br>
 
 
 							<ul>
@@ -483,8 +483,8 @@ Output:
 									runtime exception saying "<em><strong>NotSerializableException</strong></em>".</li>
 							</ul>
 							
-							<h2 class="breadcrumb" id=custom"><br><br><br></h2>
-							<h2 class="breadcrumb">7. Customized serialization :</h2>
+							<h2 id="custom"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">7. Customized serialization :</h2>
 							<p>During default Serialization there may be a chance of lose of information due to
 								transient keyword.(<strong>Ex : </strong>mango ,money , box)</p>
 							<br>
@@ -519,8 +519,8 @@ Bhaskar.........null
 </pre>
 
 							<br><br>
-							<font color="#0080c0"><strong>Diagram:</strong></font><br><img alt=""
-								src="./serial/image006.png" width="300"><br><br>
+							<font><strong>Diagram:</strong></font><br><img alt=""
+								src="./serial/image006.png"><br><br>
 
 							<ul>
 								<li>In the above example before serialization Account object can provide proper username
@@ -532,7 +532,7 @@ Bhaskar.........null
 							</ul>
 
 							<u>
-								<font color="#0000ff"><strong>We can implements customized serialization by using the
+								<font><strong>We can implements customized serialization by using the
 										following two methods.</strong></font>
 							</u><br><br>
 							<ol>
@@ -595,8 +595,8 @@ Bhaskar.........kajal
 Bhaskar.........kajal
 </pre>
 							<br><br>
-							<font color="#0080c0"><strong>Diagram:</strong></font><br><img alt=""
-								src="./serial/image007.png" width="300"><br><br>
+							<font><strong>Diagram:</strong></font><br><img alt=""
+								src="./serial/image007.png"><br><br>
 
 
 
@@ -607,10 +607,10 @@ Bhaskar.........kajal
 								The same rule is applicable for readObject() method also.
 							</p>
 							
-							<h2 class="breadcrumb" id=serinher"><br><br><br></h2>
-							<h2 class="breadcrumb">8. Serialization with respect to inheritance :</h2>
+							<h2 id="serinher"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">8. Serialization with respect to inheritance :</h2>
 							<u><strong>
-									<font color="#ffff00" style="background-color: rgb(64, 0, 64);">Case 1:
+									<font>Case 1:
 
 									</font>
 								</strong></u>
@@ -657,7 +657,7 @@ Output:
 							<br>
 
 
-							<font color="#ffff00" style="background-color: rgb(128, 0, 0);"><u><strong>Case
+							<font><u><strong>Case
 										2:</strong></u></font>
 							<ol>
 								<li> Even though parent class does not implements Serializable we can serialize child
@@ -718,11 +718,11 @@ Animal constructor called
 10.........999
 </pre>
 							<br><br>
-							<font color="#800040"><strong>Diagram:</strong></font><br><img alt=""
-								src="./serial/image008.png" width="300"><br><br>
+							<font><strong>Diagram:</strong></font><br><img alt=""
+								src="./serial/image008.png"><br><br>
 							
-							<h2 class="breadcrumb" id=exter"><br><br><br></h2>
-							<h2 class="breadcrumb">9. Externalization : ( 1.1 v )</h2>
+							<h2 id="exter"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">9. Externalization : ( 1.1 v )</h2>
 							<ol>
 								<li>In default serialization every thing takes care by JVM and programmer doesn't have
 									any control.</li>
@@ -748,19 +748,19 @@ Animal constructor called
 
 
 
-								<h3>
-									<font color="#0000a0"><em>public void writeExternal(ObjectOutput out) throws
+								<h2>
+									<font><em>public void writeExternal(ObjectOutput out) throws
 											IOException
 										</em></font>
-								</h3>
+								</h2>
 								<p>This method will be executed automaticcay at the time of Serialization with in this
 									method , we have to write code to save required variables to the file .</p>
 
-								<h3>
-									<font color="#0000ff"><em>public void readExternal(ObjectInput in) throws
+								<h2>
+									<font><em>public void readExternal(ObjectInput in) throws
 											IOException ,
 											ClassNotFoundException</em></font>
-								</h3>
+								</h2>
 								<p>This method will be executed automatically at the time of deserialization with in
 									this
 									method , we have to write code to save read required variable from file and assign
@@ -823,8 +823,8 @@ public no-arg constructor
 </pre>
 
 								<br><br>
-								<font color="#0080ff"><strong>Diagram :<br>
-										<img alt="" src="./serial/image009.jpg" width="359" height="196"></strong>
+								<font><strong>Diagram :<br>
+										<img alt="" src="./serial/image009.jpg"></strong>
 								</font>
 								<br><br>
 
@@ -846,8 +846,8 @@ public no-arg constructor
 
 								<br>
 								
-								<h2 class="breadcrumb" id=serexter"><br><br><br></h2>
-								<h2 class="breadcrumb">10. Difference between Serialization &amp; Externalization :</h2>
+								<h2 id="serexter"><br><br><br></h2>
+								<h2 class="mainbreadcrumb">10. Difference between Serialization &amp; Externalization :</h2>
 								<table border="1">
 									<tbody>
 										<tr>
@@ -911,8 +911,8 @@ public no-arg constructor
 								<br>
 								<br>
 								
-								<h2 class="breadcrumb" id=uid"><br><br><br></h2>
-								<h2 class="breadcrumb">11. serialVersionUID :</h2>
+								<h2 id="uid"><br><br><br></h2>
+								<h2 class="mainbreadcrumb">11. serialVersionUID :</h2>
 								<p>To perform Serialization &amp; Deserialization internally JVM will use a unique
 									identifier , which is nothing but serialVersionUID .</p>
 								<p>At the time of serialization JVM will save serialVersionUID with object.</p>
@@ -941,7 +941,7 @@ public no-arg constructor
 								<h2>
 
 									<u>
-										<font color="#0000ff">we can configure serialVersionUID as follows :
+										<font>we can configure serialVersionUID as follows :
 										</font>
 									</u>
 								</h2><strong>private static final long serialVersionUID = 1L;</strong><br>
