@@ -5261,15 +5261,16 @@ input[type=submit].btn-block {
 	list-style: none;
 	background-color: #e9ecef;
 	border-radius: .25rem;
+	padding-left: .3rem;
 }
 
 .breadcrumb-item+.breadcrumb-item {
-	padding-left: .5rem;
+	padding-left: .4rem;
 }
 
 .breadcrumb-item+.breadcrumb-item::before {
 	display: inline-block;
-	padding-right: .5rem;
+	padding-right: .1rem;
 	color: #6c757d;
 	content: "/";
 }
