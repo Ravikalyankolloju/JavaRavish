@@ -287,9 +287,8 @@
 								</li>
 							</ol>
 							<hr>
-							
-							<h2 class="breadcrumb" id=source"><br><br><br></h2>
-							<h2 class="breadcrumb">1. Java source file structure:</h2>
+							<h2 id="source"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">1. Java source file structure:</h2>
 							<ul>
 								<li>A java Program can contain any no. Of classes but at most one class can be declared
 									as public. "If there is a public class the name of the Program and name of the
@@ -297,26 +296,26 @@
 								<li>If there is no public class then any name we gives for java source file.</li>
 							</ul>
 
-							<u>Example: <br><br><img alt="" src="./images/flow/image025.png" width="300"><br><br>
-							</u><br><br>
-							<u>
-								<font color="#0000ff"><strong>Case 1:
-									</strong></font>
-							</u>
+							Example: <br><br><img alt="" src="./images/flow/image025.png"><br><br>
+							<br><br>
+
+							<strong>Case 1:
+							</strong>
+
 							<p> If there is no public class then we can use any name for java source file there are no
 								restrictions.</p>
 
 							<pre> <br>Example: <br>A.java <br>B.java <br>C.java <br>Ashok.java 
 <br></pre>
 
-							<font color="#004080"><u><strong>case 2:
-									</strong></u></font>
+							<strong>case 2:
+							</strong>
 							<p> If class B declared as public then the name of the Program should be B.java otherwise we
 								will get compile time error saying "class B is public, should be declared in a file
 								named B.java".</p>
 
-							<font color="#0080ff"><u><strong>Case 3:
-									</strong></u></font>
+							<strong>Case 3:
+							</strong>
 							<ul>
 								<li>If both B and C classes are declared as public and name of the file is B.java then
 									we will get compile time error saying "class C is public, should be declared in a
@@ -325,11 +324,11 @@
 									Program (file) must be same as class name. This approach improves readability and
 									understandability of the code.</li>
 							</ul>
-							<u>Example:
-							</u>
+							Example:
+
 							<pre> <br>class A <br>{ <br>public static void main(String args[]){ <br>System.out.println("A class main method is executed"); <br>} <br>} <br>class B <br>{ <br>public static void main(String args[]){ <br>System.out.println("B class main method is executed"); <br>} <br>} <br>class C <br>{ <br>public static void main(String args[]){ <br>System.out.println("C class main method is executed"); <br>} <br>} <br>class D <br>{ <br>} <br>Output: 
 <br></pre>
-							<br><br><img alt="" src="./images/flow/image027.png" width="300"><br><br>
+							<br><br><img alt="" src="./images/flow/image027.png"><br><br>
 							<pre> <br>D:\Java&gt;java A <br>A class main method is executed <br>D:\Java&gt;java B <br>B class main method is executed <br>D:\Java&gt;java C <br>C class main method is executed <br>D:\Java&gt;java D <br>Exception in thread "main" java.lang.NoSuchMethodError: main <br>D:\Java&gt;java Ashok <br>Exception in thread "main" java.lang.NoClassDefFoundError: Ashok 
 <br></pre>
 							<ul>
@@ -344,9 +343,10 @@
 									"<strong>NoClassDefFoundError:</strong> Ashok".</li>
 							</ul>
 
-							
-							<h2 class="breadcrumb" id=import" style="background-color: rgb(0, 128, 192);">
-								<font color="#ffffff">Import statement:</font>
+
+							<h2 id="import"><br><br><br></h2>
+							<h2 class="breadcrumb" id="import">
+								Import statement:
 							</h2>
 
 							<pre> <br>class Test{ <br>public static void main(String args[]){ <br>ArrayList l=new ArrayList(); <br>} <br>} <br>Output: <br>Compile time error. <br>D:\Java&gt;javac Test.java <br>Test.java:3: cannot find symbol <br>symbol  : class ArrayList <br>location: class Test <br> <br>ArrayList l=new ArrayList();</pre>
@@ -359,8 +359,8 @@
 								<li>We can resolve this problem by using import statements.</li>
 							</ul>
 
-							<u>Example:
-							</u>
+							Example:
+
 							<pre> <br>import java.util.ArrayList; <br>class Test{ <br>public static void main(String args[]){ <br>ArrayList l=new ArrayList(); <br>}	 <br>} <br>Output: <br>D:\Java&gt;javac Test.java 
 <br></pre>
 
@@ -368,20 +368,22 @@
 								names we can use short names directly. This approach decreases length of the code and
 								improves readability.</p>
 
-							<h3 id="types" style="background-color: rgb(0, 128, 128);">
-								<font color="#ffffff">Case 1: Types of Import Statements:</font>
-							</h3>
+							<h2 id="types"><br><br><br></h2>
+							<h2 class="breadcrumb" id="types">
+								Case 1: Types of Import Statements:
+							</h2>
 
 							<p> There are 2 types of import statements.</p><span>
 								1) </span><strong>Explicit class import </strong><br><span>
 								2) </span><strong>Implicit class import.
 
 							</strong>
-							<h3 id="explicit" style="background-color: rgb(255, 128, 0);">
-								<font color="#ffffff">Explicit class import:</font>
-							</h3>
+							<h2 id="explicit"><br><br><br></h2>
+							<h2 class="breadcrumb" id="explicit">
+								Explicit class import:
+							</h2>
 
-							<u>Example:</u><span> </span><strong>Import java.util.ArrayList
+							Example:<span> </span><strong>Import java.util.ArrayList
 							</strong>
 							<ul>
 								<li>This type of import is highly recommended to use because it improves readability of
@@ -389,11 +391,12 @@
 								<li>Best suitable for Hi-Tech city where readability is important.</li>
 							</ul>
 
-							<h3 id="implicit" style="background-color: rgb(128, 128, 192);">
-								<font color="#ffffff">Implicit class import:</font>
-							</h3>
+							<h2 id="implicit"><br><br><br></h2>
+							<h2 class="breadcrumb" id="implicit">
+								Implicit class import:
+							</h2>
 
-							<u>Example:</u><span> </span><strong> import java.util.*;
+							Example:<span> </span><strong> import java.util.*;
 
 							</strong>
 							<ul>
@@ -401,15 +404,14 @@
 								<li>Best suitable for Ameerpet where typing is important.</li>
 							</ul>
 
-							<font color="#0000ff"><u><strong>Case 2: </strong></u></font><br>
-							<font color="#ff0000"><strong>Which of the following import statements are meaningful ?
+							<strong>Case 2: </strong><br>
+							<strong>Which of the following import statements are meaningful ?
 
 
 
-								</strong></font><br><br><br><img alt="" src="./images/flow/image029.png"
-								width="300"><br><br><br>
+							</strong><br><br><br><img alt="" src="./images/flow/image029.png"><br><br><br>
 
-							<font color="#0080ff"><u><strong>Case 3: </strong></u></font><br>
+							<strong>Case 3: </strong><br>
 							<p>consider the following code.</p>
 
 							<pre> <br>class MyArrayList extends java.util.ArrayList <br>{ <br>}  
@@ -423,19 +425,19 @@
 									use fully qualified name.</li>
 							</ul>
 
-							<font color="#800040"><u><strong>Case 4: </strong></u></font><br><br>
-							<u>Example: </u><br>
+							<strong>Case 4: </strong><br><br>
+							Example: <br>
 
 							<pre> <br>import java.util.*; <br>import java.sql.*; <br>class Test <br>{ <br>public static void main(String args[]) <br>{ <br>Date d=new Date(); <br>}} <br>Output: <br>Compile time error. <br>D:\Java&gt;javac Test.java <br>Test.java:7: reference to Date is ambiguous,  <br> both class java.sql.Date in java.sql and class java.util.Date in java.util match 
 <br></pre>
 
 							<strong>Date d=new Date();
 							</strong>
-							<p><u><strong>Note:</strong></u> Even in the List case also we may get the same ambiguity
+							<p><strong>Note:</strong> Even in the List case also we may get the same ambiguity
 								problem because it is available in both <b>util</b> and <b>awt</b> packages.</p>
 
-							<font color="#008000"><u><strong>Case 5:
-									</strong></u></font>
+							<strong>Case 5:
+							</strong>
 							<p> <strong>While resolving class names compiler will always gives the importance in the
 									following order.</strong></p>
 
@@ -446,8 +448,8 @@
 							</ol>
 
 
-							<u>Example:
-							</u>
+							Example:
+
 							<pre> <br>import java.util.Date; <br>import java.sql.*; <br>class Test <br>{ <br>public static void main(String args[]){ <br>Date d=new Date(); <br>}} 
 <br></pre>
 
@@ -455,31 +457,31 @@
 								considered.</p>
 
 
-							<font color="#8000ff"><u><strong>Case 6:
-									</strong></u></font>
+							<strong>Case 6:
+							</strong>
 							<p> Whenever we are importing a package all classes and interfaces present in that package
 								are by default available but not sub package classes.</p>
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image031.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image031.png"><br><br>
 
 							<p>
-								<font color="#ff0000"><strong>To use pattern class in our Program directly which import
-										statement is required ?</strong></font>
+								<strong>To use pattern class in our Program directly which import
+									statement is required ?</strong>
 							</p>
-							<img alt="" src="./images/flow/image033.png" width="300"><br><br>
+							<img alt="" src="./images/flow/image033.png"><br><br>
 
-							<u>
-								<font color="#804000"><strong>Case7:
-									</strong></font>
-							</u>
+
+							<strong>Case7:
+							</strong>
+
 							<p> In any java Program the following 2 packages are not require to import because these are
 								available by default to every java Program.</p>
 							<p>
 								1. java.lang package <br>
 								2. default package(current working directory) </p>
 
-							<font color="#800040"><u><strong>Case 8:
-									</strong></u></font>
+							<strong>Case 8:
+							</strong>
 							<p> "<strong>Import statement is totally compile time concept</strong>" if more no of
 								imports are there then more will be the compile time but there is "no change in
 								execution time".</p>
@@ -487,10 +489,12 @@
 
 
 
-							<font color="#ff0000">
-								<h3 id="difcj">Difference between C language #include and java language import ?
-								</h3>
-							</font>
+
+							<h2 id="difcj"><br><br><br></h2>
+							<h2 class="breadcrumb" id="difcj">Difference between C language #include and java language
+								import ?
+							</h2>
+
 							<table border="1">
 								<tbody>
 									<tr>
@@ -533,9 +537,10 @@
 							</ul>
 
 
-							<h3 id="1.5" style="background-color: rgb(0, 64, 128);">
-								<font color="#ffffff">1.5 versions new features : <br></font>
-							</h3>
+							<h2 id="1.5"><br><br><br></h2>
+							<h2 class="breadcrumb" id="1.5">
+								1.5 versions new features : <br>
+							</h2>
 							<ol>
 								<li>For-Each</li>
 								<li> Var-arg</li>
@@ -551,11 +556,12 @@
 
 
 
-							<font color="#ffffff">
-								<h3 id="static" style="background-color: rgb(0, 128, 0);">Static import:
 
-								</h3>
-							</font>
+							<h2 id="static"><br><br><br></h2>
+							<h2 class="breadcrumb" id="static">Static import:
+
+							</h2>
+
 							<p> This concept introduced in 1.5 versions. According to sun static import improves
 								readability of the code but according to worldwide Programming exports (like us) static
 								imports creates confusion and reduces readability of the code. Hence if there is no
@@ -565,9 +571,10 @@
 								static import it is not require to use class name we can access directly.</p>
 
 
-							<h3 id="without" style="background-color: rgb(128, 0, 255);">
-								<font color="#ffffff">Without static import:</font>
-							</h3>
+							<h2 id="without"><br><br><br></h2>
+							<h2 class="breadcrumb" id="without">
+								Without static import:
+							</h2>
 
 							<pre>class Test
 {
@@ -584,9 +591,10 @@ D:\Java&gt;java Test
 0.841306154315576
 </pre>
 
-							<h3 id="with" style="background-color: rgb(0, 128, 0);">
-								<font color="#fff000">With static import:</font>
-							</h3>
+							<h2 id="with"><br><br><br></h2>
+							<h2 class="breadcrumb" id="with">
+								With static import:
+							</h2>
 							<pre>import static java.lang.Math.sqrt;
 import static java.lang.Math.*;
 class Test
@@ -605,17 +613,18 @@ D:\Java&gt;java Test
 </pre>
 							<br>
 
-							<font color="#ff0000"><u>
-									<h3 id="println">Explain about System.out.println statement ? </h3>
-								</u></font>
-							<u>Example 1</u> and <u>Example 2</u>:
-							<br><br><img alt="" src="./images/flow/image035.png" width="300"><br><br>
-							<br><br><img alt="" src="./images/flow/image037.png" width="300"><br><br>
+
+							<h2 id="println"><br><br><br></h2>
+							<h2 class="breadcrumb" id="println">Explain about System.out.println statement ? </h2>
+
+							Example 1 and Example 2:
+							<br><br><img alt="" src="./images/flow/image035.png"><br><br>
+							<br><br><img alt="" src="./images/flow/image037.png"><br><br>
 
 
 							<br>
-							<u>Example 3:
-							</u>
+							Example 3:
+
 							<pre>import static java.lang.System.out;
 class Test
 {
@@ -630,9 +639,9 @@ hello
 hi
 </pre>
 
-							<u>Example 4:
+							Example 4:
 
-							</u>
+
 							<pre>import static java.lang.Integer.*;
 import static java.lang.Byte.*;
 class Test
@@ -648,7 +657,7 @@ Test.java:6: reference to MAX_VALUE is ambiguous,
 System.out.println(MAX_VALUE);
 </pre>
 
-							<p><strong><u>Note:</u></strong> Two packages contain a class or interface with the same is
+							<p><strong>Note:</strong> Two packages contain a class or interface with the same is
 								very rare hence ambiguity problem is very rare in normal import.</p>
 							<p> But 2 classes or interfaces can contain a method or variable with the same name is very
 								common hence ambiguity problem is also very common in static import.</p>
@@ -662,7 +671,7 @@ System.out.println(MAX_VALUE);
 								<li> implict static import.</li>
 							</ol>
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image039.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image039.png"><br><br>
 							<ul>
 								<li>If we comet line one then we will get Integer class MAX_VALUE
 									<strong>2147483647</strong>.
@@ -672,20 +681,21 @@ System.out.println(MAX_VALUE);
 								</li>
 							</ul>
 
-							<font color="#ff0000"><u><strong>Which of the following import statements are valid ?
-									</strong></u></font><br> <img alt="" src="./images/flow/image041.png"
-								width="300"><br><br>
-							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image043.png" width="300"><br><br>
+							<strong>Which of the following import statements are valid ?
+							</strong><br> <img alt="" src="./images/flow/image041.png"><br><br>
+							Diagram:<br><br><img alt="" src="./images/flow/image043.png"><br><br>
 							<p> Usage of static import reduces readability and creates confusion hence if there is no
 								specific requirement never recommended to use static import.</p>
 
 
-							<u>
-								<font color="#ff0000">
-									<h3 id="difgisi">What is the difference between general import and static import ?
-									</h3>
-								</font>
-							</u>
+
+
+							<h2 id="difgisi"><br><br><br></h2>
+							<h2 class="breadcrumb" id="difgisi">What is the difference between general import and static
+								import ?
+							</h2>
+
+
 							<ul>
 								<li>We can use normal imports to import classes and interfaces of a package. whenever we
 									are using normal import we can access class and interfaces directly by their short
@@ -695,9 +705,10 @@ System.out.println(MAX_VALUE);
 									members directly.</li>
 							</ul>
 
-							<h3 id="pack" style="background-color: rgb(0, 128, 128);">
-								<font color="#ffffff">Package statement:</font>
-							</h3>
+							<h2 id="pack"><br><br><br></h2>
+							<h2 class="breadcrumb" id="pack">
+								Package statement:
+							</h2>
 							<p> It is an encapsulation mechanism to group related classes and interfaces into a single
 								module.</p>
 
@@ -711,17 +722,18 @@ System.out.println(MAX_VALUE);
 									internet domain name in reverse.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image045.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image045.png"><br><br>
 
 							<br>
-							<font color="#0000ff"><u>
-									<h3 id="compile">How to compile package Program:
 
-									</h3>
-								</u></font><br>
-							<u>Example:
+							<h2 id="compile"><br><br><br></h2>
+							<h2 class="breadcrumb" id="compile">How to compile package Program:
 
-							</u>
+							</h2>
+							<br>
+							Example:
+
+
 							<pre>package com.durgajobs.itjobs;
 class HydJobs
 {
@@ -731,8 +743,8 @@ System.out.println("package demo");
 }
 </pre>
 							<p> Javac HydJobs.java generated class file will be placed in current working directory.</p>
-							<u>Diagram:
-							</u><br><br><img alt="" src="./images/flow/image047.png" width="300"><br><br>
+							Diagram:
+							<br><br><img alt="" src="./images/flow/image047.png"><br><br>
 
 							<ul>
 								<li><strong>Javac -d . HydJobs.java</strong></li>
@@ -741,7 +753,7 @@ System.out.println("package demo");
 								<li>Generated class file will be placed into corresponding package structure.</li>
 							</ul>
 
-							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image049.png" width="300"><br><br>
+							Diagram:<br><br><img alt="" src="./images/flow/image049.png"><br><br>
 
 							<ul>
 								<li>If the specified package structure is not already available then this command itself
@@ -750,31 +762,32 @@ System.out.println("package demo");
 								<li>If the specified destination is not available then we will get compile time error.
 								</li>
 							</ul>
-							<u>Example:
-							</u>
+							Example:
+
 							<p><strong>D:\Java&gt;javac -d c: HydJobs.java</strong></p>
-							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image051.png" width="300"><br><br>
+							Diagram:<br><br><img alt="" src="./images/flow/image051.png"><br><br>
 
 							<p> If the specified destination is not available then we will get compile time error.</p>
-							<u>Example:
-							</u>
+							Example:
+
 							<p><strong>D:\Java&gt;javac -d z: HydJobs.java </strong><br>
 								If Z: is not available then we will get compile time error.</p>
 
-							<h3 id="execute"><u>
-									<font color="#800040">How to execute package Program:</font>
-								</u></h3>
+							<h2 id="execute"><br><br><br></h2>
+							<h2 class="breadcrumb" id="execute">
+								How to execute package Program:
+							</h2>
 							<strong>D:\Java&gt;java com.durgajobs.itjobs.HydJobs
 							</strong>
 							<p>At the time of execution compulsory we should provide fully qualified name.</p>
 
-							<strong><u>Conclusion 1:
-								</u></strong>
+							<strong>Conclusion 1:
+							</strong>
 							<p> In any java Program there should be at most one package statement that is if we are
 								taking more than one package statement we will get compile time error.</p>
 
-							<u>Example:
-							</u>
+							Example:
+
 							<pre>package pack1;
 package pack2;
 class A
@@ -788,12 +801,12 @@ package pack2;
 </pre>
 
 
-							<u><strong>Conclusion 2:</strong></u>
+							<strong>Conclusion 2:</strong>
 							<p> In any java Program the 1st non comment statement should be package statement [if it is
 								available] otherwise we will get compile time error.</p>
 
-							<u>Example:
-							</u>
+							Example:
+
 							<pre>import java.util.*;
 package pack1;
 class A
@@ -806,18 +819,19 @@ A.java:2: class, interface, or enum expected
 package pack1;
 </pre>
 
-							<h3 id="struct" style="background-color: rgb(0, 64, 128);">
-								<font color="#ffffff">Java source file structure:</font>
-							</h3>
-							<br><br><img alt="" src="./images/flow/image053.png" width="300"><br><br>
+							<h2 id="struct"><br><br><br></h2>
+							<h2 class="breadcrumb" id="struct">
+								Java source file structure:
+							</h2>
+							<br><br><img alt="" src="./images/flow/image053.png"><br><br>
 							<p> All the following are valid java Programs.</p>
-							<br><br><img alt="" src="./images/flow/image055.png" width="300"><br><br>
+							<br><br><img alt="" src="./images/flow/image055.png"><br><br>
 
 
-							<strong><u>Note:</u></strong> An empty source file is a valid java Program.
-							
-							<h2 class="breadcrumb" id=class"><br><br><br></h2>
-							<h2 class="breadcrumb">2. Class Modifiers :</h2>
+							<strong>Note:</strong> An empty source file is a valid java Program.
+							<hr>
+							<h2 id="class"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">2. Class Modifiers :</h2>
 							<p> Whenever we are writing our own classes compulsory we have to provide some information
 								about our class to the jvm.</p> Like
 							<ol>
@@ -828,8 +842,10 @@ package pack1;
 							<p> We can specify this information by using the corresponding modifiers.</p>
 
 
-							<h3 id="modifier">The only applicable modifiers for Top Level classes are:
-							</h3>
+							<h2 id="modifier"><br><br><br></h2>
+							<h2 class="breadcrumb" id="modifier">The only applicable modifiers for Top Level classes
+								are:
+							</h2>
 							<ol>
 								<li> Public</li>
 								<li> Default</li>
@@ -839,9 +855,9 @@ package pack1;
 							</ol>
 
 							<p> If we are using any other modifier we will get compile time error.</p>
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>private class Test
 {
 public static void main(String args[]){
@@ -859,14 +875,16 @@ Test.java:1: modifier private not allowed here
 private class Test
 </pre>
 							<p> But For the inner classes the following modifiers are allowed.</p>
-							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image057.png" width="300"><br><br>
+							Diagram:<br><br><img alt="" src="./images/flow/image057.png"><br><br>
 
 
 
-							<font color="#ff0000">
-								<h3 id="difasam">What is the difference between access specifier and access modifier ?
-								</h3>
-							</font>
+
+							<h2 id="difasam"><br><br><br></h2>
+							<h2 class="breadcrumb" id="difasam">What is the difference between access specifier and
+								access modifier ?
+							</h2>
+
 							<ul>
 								<li>In old languages 'C' (or) 'C++' public, private, protected, default are considered
 									as access specifiers and all the remaining are considered as access modifiers.</li>
@@ -875,17 +893,18 @@ private class Test
 							</ul>
 
 
-							<h3 id="public" style="background-color: rgb(0, 128, 0);">
-								<font color="#ffffff">Public Classes:</font>
-							</h3>
+							<h2 id="public"><br><br><br></h2>
+							<h2 class="breadcrumb" id="public">
+								Public Classes:
+							</h2>
 							<p> If a class declared as public then we can access that class from anywhere. With in the
 								package or outside the package. </p>
 
-							<u><strong>Example: </strong></u><br>
+							<strong>Example: </strong><br>
 
 
-							<u>Program1:
-							</u>
+							Program1:
+
 							<pre>package pack1;
 public class Test
 {
@@ -895,7 +914,7 @@ System.out.println("test class methodone is executed");
 Compile the above Program:
 D:\Java&gt;javac -d . Test.java
 </pre>
-							<u>Program2: </u>
+							Program2:
 							<pre>package pack2;
 import pack1.Test;
 class Test1
@@ -914,16 +933,17 @@ Test class methodone is executed.
 								error saying<b> pack1.Test is not public in pack1; cannot be accessed from outside
 									package.</b></p>
 
-							<h3 id="default" style="background-color: rgb(128, 64, 0);">
-								<font color="#ffffff">Default Classes:</font>
-							</h3>
+							<h2 id="default"><br><br><br></h2>
+							<h2 class="breadcrumb" id="default">
+								Default Classes:
+							</h2>
 							<p> If a class declared as the default then we can access that class only within the current
 								package hence default access is also known as "<strong>package level access</strong>".
 							</p>
 
-							<u><strong>Example:</strong></u>
-							<br><br><u>Program 1:
-							</u>
+							<strong>Example:</strong>
+							<br><br>Program 1:
+
 							<pre>package pack1;
 class Test
 {
@@ -932,8 +952,8 @@ System.out.println("test class methodone is executed");
 }}
 </pre>
 
-							<u>Program 2:
-							</u>
+							Program 2:
+
 							<pre>package pack1;
 import pack1.Test;
 class Test1
@@ -949,24 +969,26 @@ D:\Java&gt;java pack1.Test1
 Test class methodone is executed
 </pre>
 
-							<h3 id="final" style="background-color: rgb(0, 128, 128);">
-								<font color="#ffffff">Final Modifier:</font>
-							</h3>
+							<h2 id="final"><br><br><br></h2>
+							<h2 class="breadcrumb" id="final">
+								Final Modifier:
+							</h2>
 							<p> Final is the modifier applicable for classes, methods and variables.</p>
 
-							<h3 id="fmethods" style="background-color: rgb(128, 0, 64);">
-								<font color="#ffffff">Final Methods:</font>
-							</h3>
+							<h2 id="fmethods"><br><br><br></h2>
+							<h2 class="breadcrumb" id="fmethods" >
+								Final Methods:
+							</h2>
 							<ul>
 								<li> Whatever the methods parent has by default available to the child.</li>
 								<li>If the child is not allowed to override any method, that method we have to declare
 									with final in parent class. That is final methods cannot overridden.</li>
 							</ul>
 
-							<u><strong>Example:
-								</strong></u><br><br>
-							<u>Program 1:
-							</u>
+							<strong>Example:
+							</strong><br><br>
+							Program 1:
+
 							<pre>class Parent
 {
 public void property(){
@@ -977,8 +999,8 @@ System.out.println("subbalakshmi");
 }}
 </pre>
 
-							<u>Program 2:
-							</u>
+							Program 2:
+
 							<pre>class child extends Parent
 {
 public void marriage(){
@@ -993,21 +1015,22 @@ overridden method is final
 public void marriage(){
 </pre>
 
-							<h3 id="fclass" style="background-color: rgb(0, 64, 64);">
-								<font color="#ffff00">Final Class:</font>
-							</h3>
+							<h2 id="fclass"><br><br><br></h2>
+							<h2 class="breadcrumb" id="fclass">
+								Final Class:
+							</h2>
 							<p> If a class declared as the final then we cann't creates the child class that is
 								inheritance concept is not applicable for final classes.</p>
 
-							<u><strong>Example: </strong></u><br><br>
-							<u>Program 1:
-							</u>
+							<strong>Example: </strong><br><br>
+							Program 1:
+
 							<pre>final class Parent
 {
 }
 </pre>
-							<u>Program 2:
-							</u>
+							Program 2:
+
 							<pre>class child extends Parent
 {
 }
@@ -1019,12 +1042,12 @@ child.java:1: cannot inherit from final Parent
 class child extends Parent
 </pre>
 
-							<p> <u><strong>Note:</strong></u> Every method present inside a final class is always final
+							<p> <strong>Note:</strong> Every method present inside a final class is always final
 								by default whether we are declaring or not. But every variable present inside a final
 								class need not be final.</p>
 
-							<u>Example:
-							</u>
+							Example:
+
 							<pre>final class parent
 {
 static int x=10;
@@ -1039,28 +1062,30 @@ x=999;
 								final methods), inheritance (because of final classes) hence if there is no specific
 								requirement never recommended to use final keyboard.</p>
 
-							<h3 id="amodifier" style="background-color: rgb(0, 128, 192);">
-								<font color="#ffffff">Abstract Modifier: </font>
-							</h3>
+							<h2 id="amodifier"><br><br><br></h2>
+							<h2 class="breadcrumb" id="amodifier">
+								Abstract Modifier:
+							</h2>
 
 							<p> Abstract is the modifier applicable only for methods and classes but not for variables.
 							</p>
 
-							<h3 id="amethods" style="background-color: rgb(64, 0, 128);">
-								<font color="#ffffff">Abstract Methods:</font>
-							</h3>
+							<h2 id="amethods"><br><br><br></h2>
+							<h2 class="breadcrumb" id="amethods">
+								Abstract Methods:
+							</h2>
 							<p> Even though we don't have implementation still we can declare a method with abstract
 								modifier.<br> That is abstract methods have only declaration but not implementation.<br>
 								Hence abstract method declaration should compulsory ends with semicolon.</p>
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image059.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image059.png"><br><br>
 
 							<p> Child classes are responsible to provide implementation for parent class abstract
 								methods.</p>
 
-							<u><strong>Example: </strong></u><br><br>
-							<u>Program:
-							</u><br><br><img alt="" src="./images/flow/image061.png" width="300"><br><br>
+							<strong>Example: </strong><br><br>
+							Program:
+							<br><br><img alt="" src="./images/flow/image061.png"><br><br>
 
 
 							<ul>
@@ -1071,25 +1096,28 @@ x=999;
 									implementation then the modifier will be enemy to abstract and that is always
 									illegal combination for methods.</li>
 							</ul>
-							<h3 id="illegal"><u>The following are the various illegal combinations for methods.</u></h3>
+							<h2 id="illegal"><br><br><br></h2>
+							<h2 class="breadcrumb" id="illegal">The following are the various illegal combinations for
+								methods.</h2>
 
 
 
-							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image063.png" width="300"><br><br>
+							Diagram:<br><br><img alt="" src="./images/flow/image063.png"><br><br>
 
 							<p> All the 6 combinations are illegal.</p>
 
-							<h3 id="aclass" style="background-color: rgb(128, 128, 192);">
-								<font color="#ffff00">Abstract class:</font>
-							</h3>
+							<h2 id="aclass"><br><br><br></h2>
+							<h2 class="breadcrumb" id="aclass">
+								Abstract class:
+							</h2>
 							<p> For any java class if we are not allow to create an object such type of class we have to
 								declare with abstract modifier that is for abstract class instantiation is not possible.
 							</p>
 
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>abstract class Test
 {
 public static void main(String args[]){
@@ -1102,12 +1130,14 @@ Test.java:4: Test is abstract; cannot be instantiated
 Test t=new Test();
 </pre>
 
-							<u>
-								<font color="#ff0000">
-									<h3 id="difacam">What is the difference between abstract class and abstract method ?
-									</h3>
-								</font>
-							</u>
+
+
+							<h2 id="difacam"><br><br><br></h2>
+							<h2 class="breadcrumb" id="difacam">What is the difference between abstract class and
+								abstract method ?
+							</h2>
+
+
 							<ul>
 								<li>If a class contain at least on abstract method then compulsory the corresponding
 									class should be declare with abstract modifier. Because implementation is not
@@ -1117,14 +1147,14 @@ Test t=new Test();
 									also.</li>
 							</ul>
 							<p>
-								<strong><u>Example1</u>:</strong> HttpServlet class is abstract but it doesn't contain
+								<strong>Example1:</strong> HttpServlet class is abstract but it doesn't contain
 								any abstract method. <br>
-								<u><strong>Example2:</strong></u> Every adapter class is abstract but it doesn't contain
+								<strong>Example2:</strong> Every adapter class is abstract but it doesn't contain
 								any abstract method.
 
 							</p>
-							<u>Example1:
-							</u>
+							Example1:
+
 							<pre>class Parent
 {
 public void methodOne();
@@ -1136,8 +1166,8 @@ Parent.java:3: missing method body, or declare abstract
 public void methodOne();
 </pre>
 
-							<u>Example2:
-							</u>
+							Example2:
+
 							<pre>class Parent
 {
 public abstract void methodOne(){}
@@ -1148,8 +1178,8 @@ Parent.java:3: abstract methods cannot have a body
 public abstract void methodOne(){}
 </pre>
 
-							<u>Example3:
-							</u>
+							Example3:
+
 							<pre>class Parent
 {
 public abstract void methodOne();
@@ -1166,9 +1196,9 @@ class Parent
 								for every abstract method of the parent class otherwise we have to declare child class
 								as abstract.</p>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>abstract class Parent
 {
 public abstract void methodOne();
@@ -1189,10 +1219,11 @@ class child extends Parent
 							<p> If we declare class child as abstract then the code compiles fine but child of child is
 								responsible to provide implementation for methodTwo().</p>
 
-							<font color="#ff0000"><u>
-									<h3 id="diffa">What is the difference between final and abstract ?
-									</h3>
-								</u></font>
+
+							<h2 id="diffa"><br><br><br></h2>
+							<h2 class="breadcrumb" id="diffa">What is the difference between final and abstract ?
+							</h2>
+
 							<ul>
 								<li> For abstract methods compulsory we should override in the child class to provide
 									implementation. Whereas for final methods we can't override hence abstract final
@@ -1204,19 +1235,20 @@ class child extends Parent
 									final method.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image065.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image065.png"><br><br>
 
 							<br>
 
 
-							<u><strong>Note:
-								</strong></u>
+							<strong>Note:
+							</strong>
 							<p> Usage of abstract methods, abstract classes and interfaces is always good Programming
 								practice.</p>
 
-							<h3 id="strictfp" style="background-color: rgb(128, 0, 64);">
-								<font color="#ffffff">Strictfp:</font>
-							</h3>
+							<h2 id="strictfp"><br><br><br></h2>
+							<h2 class="breadcrumb" id="strictfp">
+								Strictfp:
+							</h2>
 							<ul>
 								<li> strictfp is the modifier applicable for methods and classes but not for variables.
 								</li>
@@ -1228,16 +1260,18 @@ class child extends Parent
 									results.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image067.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image067.png"><br><br>
 							<p> If a class declares as the Strictfp then every concrete method(which has body) of that
 								class has to follow IEEE754 standard for floating point arithmetic, so we will get
 								platform independent results.</p>
 
-							<u>
-								<font color="#ff0000">
-									<h3 id="difas">What is the difference between abstract and strictfp ? </h3>
-								</font>
-							</u>
+
+
+							<h2 id="difas"><br><br><br></h2>
+							<h2 class="breadcrumb" id="difas">What is the difference between abstract and strictfp ?
+							</h2>
+
+
 							<ul>
 								<li>Strictfp method talks about implementation where as abstract method never talks
 									about implementation hence abstract, strictfp combination is illegal for methods.
@@ -1246,26 +1280,26 @@ class child extends Parent
 									is abstract strictfp combination is legal for classes but illegal for methods.</li>
 							</ul>
 
-							<u>Example:
-							</u><br><br><img alt="" src="./images/flow/image069.png" width="300"><br><br>
+							Example:
+							<br><br><img alt="" src="./images/flow/image069.png"><br><br>
 
-
-							
-							<h2 class="breadcrumb" id=member" style="background-color: rgb(0, 128, 192);">
-								<font color="#ffffff">Member modifiers:</font>
+							<hr>
+							<h2 id="member"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="member">3. Member modifiers:
 							</h2>
 
-							<h3 id="pmember" style="background-color: rgb(128, 0, 128);">
-								<font color="#ffff00">Public members:</font>
-							</h3>
+							<h2 id="pmember"><br><br><br></h2>
+							<h2 class="breadcrumb" id="pmember">
+								Public members:
+							</h2>
 
 							<p> If a member declared as the public then we can access that member from anywhere "but the
 								corresponding class must be visible" hence before checking member visibility we have to
 								check class visibility.</p>
 
-							<u><strong>Example: </strong></u><br><br>
-							<u>Program 1:
-							</u>
+							<strong>Example: </strong><br><br>
+							Program 1:
+
 							<pre>package pack1;
 class A
 {
@@ -1275,8 +1309,8 @@ System.out.println("a class method");
 D:\Java&gt;javac -d . A.java
 </pre>
 
-							<u>Program 2:
-							</u>
+							Program 2:
+
 							<pre>package pack2;
 import pack1.A;
 class B
@@ -1297,16 +1331,17 @@ import pack1.A;
 								B because the corresponding class A is not public that is both classes and methods are
 								public then only we can access.</p>
 
-							<h3 id="dmember" style="background-color: rgb(0, 128, 255);">
-								<font color="#ffffff">Default member: </font>
-							</h3>
+							<h2 id="dmember"><br><br><br></h2>
+							<h2 class="breadcrumb" id="dmember">
+								Default member:
+							</h2>
 							<p> If a member declared as the default then we can access that member only within the
 								current package hence default member is also known as <b> package level access</b>.</p>
 
-							<u><strong>Example 1: </strong></u><br><br>
+							<strong>Example 1: </strong><br><br>
 
-							<u>Program 1:
-							</u>
+							Program 1:
+
 							<pre>package pack1;
 class A
 {
@@ -1315,8 +1350,8 @@ System.out.println("methodOne is executed");
 }}
 </pre>
 
-							<u>Program 2:
-							</u>
+							Program 2:
+
 							<pre>package pack1;
 import pack1.A;
 class B
@@ -1332,11 +1367,11 @@ D:\Java&gt;java pack1.B
 methodOne is executed
 </pre>
 
-							<u><strong>Example 2: </strong></u><br><br>
+							<strong>Example 2: </strong><br><br>
 
-							<u>Program 1:
+							Program 1:
 
-							</u>
+
 							<pre>package pack1;
 class A
 {
@@ -1345,8 +1380,8 @@ System.out.println("methodOne is executed");
 }}
 </pre>
 
-							<u>Program 2:
-							</u>
+							Program 2:
+
 							<pre>package pack2;
 import pack1.A;
 class B
@@ -1363,9 +1398,10 @@ B.java:2: pack1.A is not public in pack1; cannot be accessed from outside packag
 import pack1.A;
 </pre>
 
-							<h3 id="primember" style="background-color: rgb(128, 64, 0);">
-								<font color="#ffffff">Private members:</font>
-							</h3>
+							<h2 id="primember"><br><br><br></h2>
+							<h2 class="breadcrumb" id="primember">
+								Private members:
+							</h2>
 							<ul>
 								<li> If a member declared as the private then we can access that member only with in the
 									current class.</li>
@@ -1374,9 +1410,10 @@ import pack1.A;
 									combination is illegal for methods.</li>
 							</ul>
 
-							<h3 id="prmember" style="background-color: rgb(0, 128, 128);">
-								<font color="#ffff00">Protected members:</font>
-							</h3>
+							<h2 id="prmember"><br><br><br></h2>
+							<h2 class="breadcrumb" id="prmember">
+								Protected members:
+							</h2>
 							<ul>
 								<li>If a member declared as the protected then we can access that member within the
 									current package anywhere but outside package only in child classes.
@@ -1389,9 +1426,9 @@ import pack1.A;
 									protected members from outside package.</li>
 							</ul>
 
-							<u><strong>Example: </strong></u><br><br><u>Program 1:
+							<strong>Example: </strong><br><br>Program 1:
 
-							</u>
+
 							<pre>package pack1;
 public class A
 {
@@ -1400,9 +1437,9 @@ System.out.println("methodOne is executed");
 }}
 </pre>
 
-							<u>Program 2:
+							Program 2:
 
-							</u>
+
 							<pre>package pack1;
 class B extends A
 {
@@ -1423,12 +1460,12 @@ methodOne is executed
 methodOne is executed
 </pre>
 
-							<u><strong>Example 2:</strong></u><br><br><img alt="" src="./images/flow/image071.png"
-								width="300"><br><br>
+							<strong>Example 2:</strong><br><br><img alt="" src="./images/flow/image071.png"><br><br>
 
-							<h3 id="compdpp" style="background-color: rgb(128, 0, 64);">
-								<font color="#ffffff">Compression of private, default, protected and public:</font>
-							</h3>
+							<h2 id="compdpp"><br><br><br></h2>
+							<h2 class="breadcrumb" id="compdpp">
+								Compression of private, default, protected and public:
+							</h2>
 							<table border="1">
 								<tbody>
 									<tr>
@@ -1502,26 +1539,28 @@ methodOne is executed
 								<b>methods is public</b>.
 							</p>
 
-							<h3 id="fvariable" style="background-color: rgb(128, 0, 64);">
-								<font color="#ffffff">Final variables:</font>
-							</h3>
+							<h2 id="fvariable"><br><br><br></h2>
+							<h2 class="breadcrumb" id="fvariable">
+								Final variables:
+							</h2>
 
-							<h3 id="finstance" style="background-color: rgb(0, 128, 192);">
-								<font color="#ffffff">Final instance variables:</font>
-							</h3>
+							<h2 id="finstance"><br><br><br></h2>
+							<h2 class="breadcrumb" id="finstance">
+								Final instance variables:
+							</h2>
 							<ul>
 								<li>If the value of a variable is varied from object to object such type of variables
 									are called instance variables.</li>
 								<li>For every object a separate copy of instance variables will be created.</li>
 							</ul>
 
-							<u>DIAGRAM:</u><br><br><img alt="" src="./images/flow/image079.png" width="300"><br><br>
+							DIAGRAM:<br><br><img alt="" src="./images/flow/image079.png"><br><br>
 							<p> For the instance variables it is not required to perform initialization explicitly jvm
 								will always provide default values.</p>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
 int i;
@@ -1539,11 +1578,11 @@ D:\Java&gt;java Test
 								initialization explicitly and JVM won't provide any default values. <br> whether we are
 								using or not otherwise we will get compile time error.</p>
 
-							<u><strong>Example: </strong></u><br><br>
+							<strong>Example: </strong><br><br>
 
-							<u>Program 1:
+							Program 1:
 
-							</u>
+
 							<pre>class Test
 {
 int i;
@@ -1565,16 +1604,17 @@ class Test
 </pre>
 
 
-							<font color="#0000ff"><u><strong>Rule:
-									</strong></u></font>
+							<strong>Rule:
+							</strong>
 							<p> For the final instance variables we should perform initialization before constructor
 								completion. That is the following are various possible places for this.</p>
-							<h3 id="decla"><u>
-									<font color="#800040">1) At the time of declaration:</font>
-								</u></h3>
-							<u>Example:
+							<h2 id="decla"><br><br><br></h2>
+							<h2 class="breadcrumb" id="decla">
+								1) At the time of declaration:
+							</h2>
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
  final int i=10;
@@ -1584,11 +1624,12 @@ D:\Java&gt;javac Test.java
 D:\Java&gt;
 </pre>
 
-							<h3 id="insta"><u>
-									<font color="#400080">2) Inside instance block:</font>
-								</u></h3>
-							<u>Example:
-							</u>
+							<h2 id="insta"><br><br><br></h2>
+							<h2 class="breadcrumb" id="insta">
+								2) Inside instance block:
+							</h2>
+							Example:
+
 							<pre>class Test
 {
 final int i;
@@ -1600,12 +1641,13 @@ D:\Java&gt;javac Test.java
 D:\Java&gt;
 </pre>
 
-							<h3 id="con"><u>
-									<font color="#0080ff">3) Inside constructor:</font>
-								</u></h3>
-							<u>Example:
+							<h2 id="con"><br><br><br></h2>
+							<h2 class="breadcrumb" id="con">
+								3) Inside constructor:
+							</h2>
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
 final int i;
@@ -1620,9 +1662,9 @@ D:\Java&gt;
 
 							<p> If we are performing initialization anywhere else we will get compile time error.</p>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
 final int i;
@@ -1636,9 +1678,10 @@ Test.java:5: cannot assign a value to final variable i
 i=10;
 </pre>
 
-							<h3 id="fstatic" style="background-color: rgb(0, 128, 0);">
-								<font color="#ffffff">Final static variables:</font>
-							</h3>
+							<h2 id="fstatic"><br><br><br></h2>
+							<h2 class="breadcrumb" id="fstatic">
+								Final static variables:
+							</h2>
 							<ul>
 								<li> If the value of a variable is not varied from object to object such type of
 									variables is not recommended to declare as the instance variables. We have to
@@ -1650,9 +1693,9 @@ i=10;
 									jvm will always provide default values.</li>
 							</ul>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
 static int i;
@@ -1669,20 +1712,21 @@ Value of i is: 0
 								explicitly whether we are using or not otherwise we will get compile time error.(The JVM
 								won't provide any default values)</p>
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image081.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image081.png"><br><br>
 
 							<br>
-							<font color="#0000ff"><u><strong>Rule:
-									</strong></u></font>
+							<strong>Rule:
+							</strong>
 							<p> For the final static variables we should perform initialization before class loading
 								completion otherwise we will get compile time error. That is the following are possible
 								places.</p>
 
-							<h3 id="declara"><u>
-									<font color="#800040">1) At the time of declaration:</font>
-								</u></h3>
+							<h2 id="declara"><br><br><br></h2>
+							<h2 class="breadcrumb" id="declara">
+								1) At the time of declaration:
+							</h2>
 
-							<u>Example: </u>
+							Example:
 
 							<pre>class Test
 {
@@ -1693,12 +1737,13 @@ D:\Java&gt;javac Test.java
 D:\Java&gt;
 </pre>
 
-							<h3 id="fstatic1">
-								<font color="#8000ff"><u>2) Inside static block: </u></font>
-							</h3>
+							<h2 id="fstatic1"><br><br><br></h2>
+							<h2 class="breadcrumb" id="fstatic1">
+								2) Inside static block:
+							</h2>
 
-							<u>Example:
-							</u>
+							Example:
+
 							<pre>class Test
 {
 final static int i;
@@ -1712,9 +1757,9 @@ Compile successfully.
 
 							<p> If we are performing initialization anywhere else we will get compile time error.</p>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
 final static int i;
@@ -1728,9 +1773,10 @@ Test.java:5: cannot assign a value to final variable i
 i=10;
 </pre>
 
-							<h3 id="flvar"><u>
-									<font color="#804040">Final local variables:</font>
-								</u></h3>
+							<h2 id="flvar"><br><br><br></h2>
+							<h2 class="breadcrumb" id="flvar">
+								Final local variables:
+							</h2>
 							<ul>
 								<li> To meet temporary requirement of the Programmer sometime we can declare the
 									variable inside a method or block or constructor such type of variables are called
@@ -1739,9 +1785,9 @@ i=10;
 									perform initialization explicitly before using that variable.</li>
 							</ul>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
 public static void main(String args[]){
@@ -1754,9 +1800,9 @@ D:\Java&gt;java Test
 Hello
 </pre>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
 public static void main(String args[]){
@@ -1773,9 +1819,9 @@ System.out.println(i);
 							<p> Even though local variable declared as the final before using only we should perform
 								initialization.</p>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
 public static void main(String args[]){
@@ -1788,13 +1834,13 @@ D:\Java&gt;java Test
 hello
 </pre>
 							<p>
-								<font color="#0080ff"><u><strong>Note: </strong></u></font>The only applicable modifier
+								<strong>Note: </strong>The only applicable modifier
 								for local variables is final if we are using any other modifier we will get compile time
 								error.
 							</p>
 
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image083.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image083.png"><br><br>
 
 							<pre>
 Output:
@@ -1804,9 +1850,10 @@ Test.java:5: illegal start of expression
 private int x=10;
 </pre>
 
-							<h3 id="formal" style="background-color: rgb(0, 64, 128);">
-								<font color="#ffff00">Formal parameters:</font>
-							</h3>
+							<h2 id="formal"><br><br><br></h2>
+							<h2 class="breadcrumb" id="formal">
+								Formal parameters:
+							</h2>
 							<ul>
 								<li> The formal parameters of a method are simply acts as local variables of that method
 									hence it is possible to declare formal parameters as final.</li>
@@ -1814,7 +1861,7 @@ private int x=10;
 									method.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image085.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image085.png"><br><br>
 							<ul>
 								<li>For instance and static variables JVM will provide default values but if instance
 									and static declared as final JVM won't provide default value compulsory we should
@@ -1823,9 +1870,10 @@ private int x=10;
 									explicitly before using that variables , this rule is same whether local variable
 									final or not.</li>
 							</ul>
-							<h3 id="static2" style="background-color: rgb(0, 0, 128);">
-								<font color="#ffffff">Static modifier:</font>
-							</h3>
+							<h2 id="static2"><br><br><br></h2>
+							<h2 class="breadcrumb" id="static2">
+								Static modifier:
+							</h2>
 							<ul>
 								<li> Static is the modifier applicable for methods, variables and blocks.</li>
 								<li> We can't declare a class with static but inner classes can be declaring as the
@@ -1835,7 +1883,7 @@ private int x=10;
 									shared by all objects of that class.</li>
 							</ul>
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image087.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image087.png"><br><br>
 
 							<pre>
 Output:
@@ -1863,16 +1911,16 @@ D:\Java&gt;java Test
                  }
 </pre>
 							<p>
-								<u>
-									<font color="#ff0000"><strong>Which are the following declarations are allow within
-											the same class simultaneously ? </strong></font>
-								</u><br>
+
+								<strong>Which are the following declarations are allow within
+									the same class simultaneously ? </strong>
+								<br>
 								a) 1 and 3
 							</p>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
 int x=10;
@@ -1884,8 +1932,8 @@ Compile successfully.
 </pre><br>
 							b) 1 and 4<br>
 
-							<u>Example:
-							</u>
+							Example:
+
 							<pre>class Test
 {
 int x=10;
@@ -1901,9 +1949,9 @@ System.out.println(x);
 							c) 2 and 3
 							<br>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
 static int x=10;
@@ -1916,8 +1964,8 @@ Compile successfully.
 							d) 2 and 4
 							<br>
 
-							<u>Example:
-							</u>
+							Example:
+
 							<pre>class Test
 {
 static int x=10;
@@ -1929,9 +1977,9 @@ Compile successfully.
 </pre><br>e) 1 and 2<br>
 
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Test
 {
 int x=10;
@@ -1945,9 +1993,9 @@ static int x=10;
 </pre><br>f) 3 and 4<br>
 
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Test{
 public void methodOne(){
 System.out.println(x);
@@ -1964,9 +2012,9 @@ public static void methodOne(){
 
 							For static methods implementation should be available but for abstract methods
 							implementation is not available hence static abstract combination is illegal for methods.
-							<h3 style="background-color: rgb(128, 12, 64);">
-								<font color="#ffffff">case 1:</font>
-							</h3>
+							<h2>
+								case 1:
+							</h2>
 
 							<p> Overloading concept is applicable for static method including main method also.But JVM
 								will always call <b>String[] args </b> main method .<br> The other overloaded method we
@@ -1977,21 +2025,21 @@ public static void methodOne(){
 
 
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image089.png" width="300"><br>Output
+							Example:<br><br><img alt="" src="./images/flow/image089.png"><br>Output
 							:<br>String()
 							method
 							is called<br>
 
-							<h3 style="background-color: rgb(0, 12, 64);">
-								<font color="#ffffff">case 2:</font>
-							</h3>
+							<h2>
+								case 2:
+							</h2>
 							<p> Inheritance concept is applicable for static methods including main() method hence while
 								executing child class, if the child doesn't contain main() method then the parent class
 								main method will be executed.</p>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>class Parent{
 public static void main(String args[]){
 System.out.println("parent main() method called");
@@ -2001,10 +2049,10 @@ class child extends Parent{
 }
 Output:
 </pre>
-							<br><br><img alt="" src="./images/flow/image091.png" width="300"><br><br>
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image093.png" width="300"><br><br>
+							<br><br><img alt="" src="./images/flow/image091.png"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image093.png"><br><br>
 							<br>
-							<u>Output:</u><br><br><img alt="" src="./images/flow/image095.png" width="300"><br><br>
+							Output:<br><br><img alt="" src="./images/flow/image095.png"><br><br>
 							<br>
 
 							<ul>
@@ -2012,9 +2060,10 @@ Output:
 									overriding it is method hiding.</li>
 							</ul>
 
-							<h3 id="native" style="background-color: rgb(128, 0, 64);">
-								<font color="#ffffff">Native modifier:</font>
-							</h3>
+							<h2 id="native"><br><br><br></h2>
+							<h2 class="breadcrumb" id="native">
+								Native modifier:
+							</h2>
 							<ul>
 								<li>Native is a modifier applicable only for methods but not for variables and classes.
 								</li>
@@ -2022,9 +2071,9 @@ Output:
 									methods.</li>
 							</ul>
 
-							<h3>
-								<font color="#0000ff">The main objectives of native keyword are:</font>
-							</h3>
+							<h2>
+								The main objectives of native keyword are:
+							</h2>
 							<ul>
 								<li> To improve performance of the system.</li>
 								<li> To use already existing legacy non-java code.</li>
@@ -2033,13 +2082,14 @@ Output:
 							</ul>
 
 							<h2>
-								<font color="#008000">To use native keyword:</font>
+								To use native keyword:
 							</h2>
 
-							<h3 id="pseudo"><u>
-									<font color="#800040">Pseudo code:</font>
-								</u></h3>
-							<br><br><img alt="" src="./images/flow/image097.png" width="300"><br><br>
+							<h2 id="pseudo"><br><br><br></h2>
+							<h2 class="breadcrumb" id="pseudo">
+								Pseudo code:
+							</h2>
+							<br><br><img alt="" src="./images/flow/image097.png"><br><br>
 
 							<ul>
 								<li>For native methods implementation is already available and we are not responsible to
@@ -2064,9 +2114,10 @@ Output:
 								</li>
 							</ul>
 
-							<h3 id="syncro" style="background-color: rgb(128, 128, 192);">
-								<font color="#ffff00">Synchronized:</font>
-							</h3>
+							<h2 id="syncro"><br><br><br></h2>
+							<h2 class="breadcrumb" id="syncro">
+								Synchronized:
+							</h2>
 							<ol>
 								<li> Synchronized is the modifier applicable for methods and blocks but not for
 									variables and classes.</li>
@@ -2081,9 +2132,10 @@ Output:
 							For syncronized methods compulsory implementation should be available , but for abstract
 							methods implementation won't be available , Hence abstract - syncronized combination is
 							illegal for methods.
-							<h3 id="transient" style="background-color: rgb(128, 128, 192);">
-								<font color="#ffffff">Transient modifier:</font>
-							</h3>
+							<h2 id="transient"><br><br><br></h2>
+							<h2 class="breadcrumb" id="transient">
+								Transient modifier:
+							</h2>
 							<ol>
 								<li> Transient is the modifier applicable only for variables but not for methods and
 									classes.</li>
@@ -2099,9 +2151,10 @@ Output:
 									due to this declaring a final variable as transient there is no impact.</li>
 							</ol>
 
-							<h3 id="volatile" style="background-color: rgb(0, 128, 255);">
-								<font color="#ffffff">Volatile modifier:</font>
-							</h3>
+							<h2 id="volatile"><br><br><br></h2>
+							<h2 class="breadcrumb" id="volatile">
+								Volatile modifier:
+							</h2>
 							<ol>
 								<li> Volatile is the modifier applicable only for variables but not for classes and
 									methods.</li>
@@ -2121,9 +2174,10 @@ Output:
 									changes hence final volatile combination is illegal for variables.</li>
 							</ol>
 
-							<h3 id="summary" style="background-color: rgb(128, 0, 64);">
-								<font color="#ffff00">Summary of modifier:</font>
-							</h3>
+							<h2 id="summary"><br><br><br></h2>
+							<h2 class="breadcrumb" id="summary">
+								Summary of modifier:
+							</h2>
 
 							<table border="1" cellpadding="1" cellspacing="1" style="width:95%;font-size: 0.999rem;">
 								<tbody>
@@ -2317,7 +2371,7 @@ Output:
 									</tr>
 								</tbody>
 							</table><br><br>
-							<b><u>Note : </u></b>
+							<b>Note : </b>
 							<ol>
 								<li>The modifiers which are applicable for inner classes but not for outer classes are
 									private, protected, static.</li>
@@ -2335,10 +2389,9 @@ Output:
 
 
 
-
-							
-							<h2 class="breadcrumb" id=interfaces" style="background-color: rgb(0, 0, 160);">
-								<font color="#ffff00">Interfaces:</font>
+							<hr>
+							<h2 id="interfaces"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="interfaces">4. Interfaces:
 							</h2>
 
 
@@ -2349,61 +2402,62 @@ Output:
 								will provide implementation for that.
 							</p>
 
-							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image099.png" width="300"><br><br>
+							Diagram:<br><br><img alt="" src="./images/flow/image099.png"><br><br>
 							<p>
-								<strong><u>Example2:</u> </strong>Sun people define Servlet API to develop web
+								<strong>Example2: </strong>Sun people define Servlet API to develop web
 								applications web server vendor is responsible to provide implementation.
 							</p>
 
-							<u>Diagram:</u><br><br><img alt="" src="./images/flow/image101.png" width="300"><br><br>
+							Diagram:<br><br><img alt="" src="./images/flow/image101.png"><br><br>
 
 							<p>
-								<font color="#0000ff"><u><strong>Def2:</strong></u></font> From the client point of view
+								<strong>Def2:</strong> From the client point of view
 								an interface define the set of services what is expecting. From the service provider
 								point of view an interface defines the set of services what is offering. Hence an
 								interface is considered as a contract between client and service provider.<br>
-								<u><strong>Example:</strong></u> ATM GUI screen describes the set of services what bank
+								<strong>Example:</strong> ATM GUI screen describes the set of services what bank
 								people offering, at the same time the same GUI screen the set of services what customer
 								is expecting hence this GUI screen acts as a contract between bank and customer.
 							</p>
 
 							<p>
-								<font color="#000080"><u><strong>Def3:</strong></u></font> Inside interface every method
+								<strong>Def3:</strong> Inside interface every method
 								is always abstract whether we are declaring or not hence interface is considered as 100%
 								pure abstract class.
 							</p>
 
 							<p>
-								<u><strong>Summery def:</strong></u> Any service requirement specification (SRS) or any
+								<strong>Summery def:</strong> Any service requirement specification (SRS) or any
 								contract between client and service provider or 100% pure abstract classes is considered
 								as an interface.
 							</p>
 
-							<h3 id="idecla" style="background-color: rgb(0, 128, 0);">
-								<font color="#ffffff">Declaration and implementation of an interface:</font>
-							</h3>
+							<h2 id="idecla"><br><br><br></h2>
+							<h2 class="breadcrumb" id="idecla">
+								Declaration and implementation of an interface:
+							</h2>
 							<p>
-								<u><strong>Note1:</strong></u> <br>
+								<strong>Note1:</strong> <br>
 							</p>
 							<p>Whenever we are implementing an interface compulsory for every method of that interface
 								we should provide implementation otherwise we have to declare class as abstract in that
 								case child class is responsible to provide implementation for remaining methods.</p>
 							<p><br>
-								<u><strong>Note2: </strong></u><br>
+								<strong>Note2: </strong><br>
 							</p>
 							<p>Whenever we are implementing an interface method compulsory it should be declared as
 								public otherwise we will get compile time error.</p>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>interface Interf
 {
 void methodOne();
 void methodTwo();
 }
 </pre>
-							<br><br><img alt="" src="./images/flow/image103.png" width="300"><br><br>
+							<br><br><img alt="" src="./images/flow/image103.png"><br><br>
 							<pre>
 class SubServiceProvider extends ServiceProvider
 {
@@ -2418,12 +2472,13 @@ class SubServiceProvider extends ServiceProvider
 </pre>
 
 
-							<h3 id="extends" style="background-color: rgb(64, 0, 64);">
-								<font color="#ffffff">Extends vs implements:</font>
-							</h3>
+							<h2 id="extends"><br><br><br></h2>
+							<h2 class="breadcrumb" id="extends">
+								Extends vs implements:
+							</h2>
 							<p>A class can extends only one class at a time.</p>
-							<u>Example:
-							</u>
+							Example:
+
 							<pre>class One{
 public void methodOne(){
 }
@@ -2432,8 +2487,8 @@ class Two extends One{
 }
 </pre>
 							<p>A class can implements any no. Of interfaces at a time.</p>
-							<u>Example:
-							</u>
+							Example:
+
 							<pre>interface One{
 public void methodOne();
 }
@@ -2465,8 +2520,8 @@ public void methodOne(){
 </pre>
 
 							<p>An interface can extend any no. Of interfaces at a time.</p>
-							<u>Example:
-							</u>
+							Example:
+
 							<pre>interface One{
 void methodOne();
 }
@@ -2479,8 +2534,8 @@ interface Three extends One,Two
 </pre>
 
 
-							<font color="#ff0080"><strong>Which of the following is true?
-								</strong></font>
+							<strong>Which of the following is true?
+							</strong>
 							<ol>
 								<li>A class can extend any no.Of classes at a time.</li>
 								<li>An interface can extend only one interface at a time.</li>
@@ -2493,8 +2548,8 @@ interface Three extends One,Two
 							Ans: 6
 
 							<p>
-								<font color="#ff0000"><strong>Consider the expression X extends Y for which of the
-										possibility of X and Y this expression is true?</strong></font>
+								<strong>Consider the expression X extends Y for which of the
+									possibility of X and Y this expression is true?</strong>
 							</p>
 							<ol>
 								<li>Both x and y should be classes.</li>
@@ -2506,19 +2561,19 @@ interface Three extends One,Two
 
 
 							<p><strong>
-									<font color="#ff0000">X extends Y, Z ? </font>
+									X extends Y, Z ?
 								</strong><br>
 								X, Y, Z should be interfaces.</p>
 
 							<p><strong>
-									<font color="#ff0000">X extends Y implements Z ? </font>
+									X extends Y implements Z ?
 								</strong><br>
 								X, Y should be classes. <br>
 								Z should be interface. </p>
 
 							<p>
 								<strong>
-									<font color="#ff0000">X implements Y, Z ? </font>
+									X implements Y, Z ?
 								</strong><br>
 								X should be class. <br>
 								Y, Z should be interfaces.
@@ -2526,13 +2581,13 @@ interface Three extends One,Two
 
 							<p>
 								<strong>
-									<font color="#ff0000">X implements Y extend Z ? </font>
+									X implements Y extend Z ?
 								</strong>
 							</p>
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>interface One{
 }
 class Two {
@@ -2546,9 +2601,10 @@ Three.java:5: '{' expected
 class Three implements One extends Two{
 </pre>
 
-							<h3 id="imethod" style="background-color: rgb(0, 128, 0);">
-								<font color="#ffffff">Interface methods:</font>
-							</h3>
+							<h2 id="imethod"><br><br><br></h2>
+							<h2 class="breadcrumb" id="imethod">
+								Interface methods:
+							</h2>
 
 							<p>Every method present inside interface is always public and abstract whether we are
 								declaring or not. Hence inside interface the following method declarations are equal.
@@ -2559,9 +2615,9 @@ abstract Void methodOne();		  Equal
 public abstract Void methodOne();
 </pre>
 							<p>
-								<font color="#0000ff"><strong>public:</strong></font> To make this method available for
+								<strong>public:</strong> To make this method available for
 								every implementation class.<br>
-								<font color="#800040"><strong>abstract:</strong></font> Implementation class is
+								<strong>abstract:</strong> Implementation class is
 								responsible to provide implementation .<br>
 							</p>
 							<p>
@@ -2572,7 +2628,7 @@ public abstract Void methodOne();
 
 							<p>
 								<strong>
-									<font color="#ff0000">Inside interface which method declarations are valid? </font>
+									Inside interface which method declarations are valid?
 								</strong>
 							</p>
 							<ol>
@@ -2584,9 +2640,10 @@ public abstract Void methodOne();
 							</ol>
 							Ans: 5
 
-							<h3 id="ivar" style="background-color: rgb(0, 128, 255);">
-								<font color="#ffff00">Interface variables:</font>
-							</h3>
+							<h2 id="ivar"><br><br><br></h2>
+							<h2 class="breadcrumb" id="ivar">
+								Interface variables:
+							</h2>
 							<ul>
 								<li>An interface can contain variables</li>
 								<li>The main purpose of interface variables is to define<b> requirement level
@@ -2595,19 +2652,19 @@ public abstract Void methodOne();
 									declaring or not.</li>
 							</ul>
 
-							<u>Example:
-							</u>
+							Example:
+
 							<pre>interface interf
 {
 int x=10;
 }
 </pre>
 							<p>
-								<font color="#0000ff"><strong>public:</strong></font> To make it available for every
+								<strong>public:</strong> To make it available for every
 								implementation class.<br>
-								<font color="#800040"><strong>static:</strong></font> Without existing object also we
+								<strong>static:</strong> Without existing object also we
 								have to access this variable.<br>
-								<font color="#000080"><strong>final:</strong></font> Implementation class can access
+								<strong>final:</strong> Implementation class can access
 								this value but cannot modify.
 							</p>
 
@@ -2639,9 +2696,9 @@ public static final int x=10;
 							</ul>
 
 
-							<u>Example:
+							Example:
 
-							</u>
+
 							<pre>interface Interf
 {
 int x;
@@ -2654,10 +2711,10 @@ int x;
 </pre>
 
 
-							<font color="#ff0000"><strong>Which of the following declarations are valid inside interface
-									?
+							<strong>Which of the following declarations are valid inside interface
+								?
 
-								</strong></font>
+							</strong>
 							<ol>
 								<li>int x;</li>
 								<li>private int x=10;</li>
@@ -2669,18 +2726,18 @@ int x;
 
 							<p>Interface variables can be access from implementation class but cannot be modified.</p>
 
-							<u>Example:</u>
+							Example:
 							<pre>interface Interf
 {
 int x=10;
 }
 </pre>
-							<u>Example 1:
-							</u><br>
-							<br><br><img alt="" src="./images/flow/image107.png" width="300"><br><br>
-							<u>Example 2:
+							Example 1:
+							<br>
+							<br><br><img alt="" src="./images/flow/image107.png"><br><br>
+							Example 2:
 
-							</u>
+
 							<pre>class Test implements Interf
 {
 public static void main(String args[]){
@@ -2695,39 +2752,41 @@ D:\Java&gt;java Test
 20
 </pre>
 
-							<h3 id="inaming" style="background-color: rgb(0, 0, 160);">
-								<font color="#ffffff">Interface naming conflicts:</font>
-							</h3>
+							<h2 id="inaming"><br><br><br></h2>
+							<h2 class="breadcrumb" id="inaming">
+								Interface naming conflicts:
+							</h2>
 
-							<h3 id="mconflict" style="background-color: rgb(128, 128, 192);">
-								<font color="#ffffff">Method naming conflicts:</font>
-							</h3>
+							<h2 id="mconflict"><br><br><br></h2>
+							<h2 class="breadcrumb" id="mconflict">
+								Method naming conflicts:
+							</h2>
 
 
-							<font color="#0000a0"><u><strong>Case 1:
+							<strong>Case 1:
 
-									</strong></u></font>
+							</strong>
 							<p>If two interfaces contain a method with same signature and same return type in the
 								implementation class only one method implementation is enough.</p>
 
-							<u>Example 1:
-							</u>
+							Example 1:
+
 							<pre>interface Left
 {
 public void methodOne();
 }
 </pre>
-							<u>Example 2:
-							</u>
+							Example 2:
+
 							<pre>interface Right
 {
 public void methodOne();
 }
 </pre>
 
-							<u>Example 3:
+							Example 3:
 
-							</u>
+
 							<pre>class Test implements Left,Right
 {
 public void methodOne()
@@ -2739,22 +2798,22 @@ D:\Java&gt;javac Right.java
 D:\Java&gt;javac Test.java
 </pre>
 
-							<font color="#800040"><u><strong>Case 2:
-									</strong></u></font>
+							<strong>Case 2:
+							</strong>
 							<p>if two interfaces contain a method with same name but different arguments in the
 								implementation class we have to provide implementation for both methods and these
 								methods acts as a overloaded methods</p>
 
-							<u>Example 1:
-							</u>
+							Example 1:
+
 							<pre>interface Left
 {
 public void methodOne();
 }
 </pre>
 
-							<u>Example 2:
-							</u>
+							Example 2:
+
 							<pre>interface Right
 {
 public void methodOne(int i);
@@ -2774,22 +2833,22 @@ D:\Java&gt;javac Left.java
 D:\Java&gt;javac Right.java
 D:\Java&gt;javac Test.java
 </pre>
-							<font color="#800000"><u><strong>Case 3:
-									</strong></u></font>
+							<strong>Case 3:
+							</strong>
 							<p>If two interfaces contain a method with same signature but different return types then it
 								is not possible to implement both interfaces simultaneously.</p>
 
-							<u>Example 1:
-							</u>
+							Example 1:
+
 							<pre>interface Left
 {
 public void methodOne();
 }
 </pre>
 
-							<u>Example 2:
+							Example 2:
 
-							</u>
+
 							<pre>interface Right
 {
 public int methodOne(int i);
@@ -2800,29 +2859,30 @@ public int methodOne(int i);
 
 							<p>
 								<strong>
-									<font color="#0000ff">Is a java class can implement any no. Of interfaces
-										simultaneously ? </font>
+									Is a java class can implement any no. Of interfaces
+									simultaneously ?
 								</strong><br>
 								Yes, except if two interfaces contains a method with same signature but different return
 								types.
 							</p>
 
-							<h3 id="vconflict" style="background-color: rgb(0, 0, 160);">
-								<font color="#ffffff">Variable naming conflicts:</font>
-							</h3>
+							<h2 id="vconflict"><br><br><br></h2>
+							<h2 class="breadcrumb" id="vconflict">
+								Variable naming conflicts:
+							</h2>
 							<p>Two interfaces can contain a variable with the same name and there may be a chance
 								variable naming conflicts but we can resolve variable naming conflicts by using
 								interface names.</p>
 
-							<u>Example 1:
-							</u>
+							Example 1:
+
 							<pre>interface Left
 {
 int x=888;
 }
 </pre>
 
-							<u>Example 2:</u>
+							Example 2:
 
 							<pre>interface Right
 {
@@ -2830,8 +2890,8 @@ int x=999;
 }
 </pre>
 
-							<u>Example 3:
-							</u>
+							Example 3:
+
 							<pre>class Test implements Left,Right
 {
 public static void main(String args[]){
@@ -2849,14 +2909,15 @@ D:\Java&gt;java Test
 999
 </pre>
 
-							<h3 id="marker" style="background-color: rgb(0, 64, 128);">
-								<font color="#ffffff"><u>Marker interface:</u></font>
-							</h3> If an interface doesn't contain any methods and by implementing that interface if our
+							<h2 id="marker"><br><br><br></h2>
+							<h2 class="breadcrumb" id="marker">
+								Marker interface:
+							</h2> If an interface doesn't contain any methods and by implementing that interface if our
 							objects will get some ability such type of interfaces are called Marker interface (or) Tag
 							interface (or) Ability interface.
 							<br>
-							<u>Example:
-							</u>
+							Example:
+
 							<pre>Serializable
 Cloneable
 RandomAccess	     These are marked for some ability
@@ -2868,43 +2929,44 @@ SingleThreadModel
 </pre>
 
 							<p>
-								<u>Example 1:</u> <br>
+								Example 1: <br>
 							</p>
 							<p>By implementing Serilaizable interface we can send that object across the network and we
 								can save state of an object into a file.</p>
 							<p><br>
-								<u>Example 2:</u>
+								Example 2:
 							</p>
 							<p> By implementing SingleThreadModel interface Servlet can process only one client request
 								at a time so that we can get "Thread Safety".</p>
 							<p><br>
-								<u>Example 3: </u><br>
+								Example 3: <br>
 							</p>
 							<p>By implementing Cloneable interface our object is in a position to provide exactly
 								duplicate cloned object.
 							</p>
 
 							<p>
-								<font color="#ff0000"><strong>Without having any methods in marker interface how objects
-										will get ability ? </strong></font><br>
+								<strong>Without having any methods in marker interface how objects
+									will get ability ? </strong><br>
 								Internally JVM is responsible to provide required ability.
 							</p>
 
 							<p>
-								<font color="#ff0000"><strong>Why JVM is providing the required ability in marker
-										interfaces ? </strong></font><br>
+								<strong>Why JVM is providing the required ability in marker
+									interfaces ? </strong><br>
 								To reduce complexity of the programming.
 							</p>
 
 							<p>
-								<font color="#ff0000"><strong>Is it possible to create our own marker interface ?
-									</strong></font><br>
+								<strong>Is it possible to create our own marker interface ?
+								</strong><br>
 								Yes, but customization of JVM must be required.<br>Ex : Sleepable , Jumpable , ....
 							</p>
 
-							<h3 id="adapter" style="background-color: rgb(128, 0, 64);">
-								<font color="#ffffff">Adapter class:</font>
-							</h3>
+							<h2 id="adapter"><br><br><br></h2>
+							<h2 class="breadcrumb" id="adapter">
+								Adapter class:
+							</h2>
 							<ul>
 								<li>Adapter class is a simple java class that implements an interface only with empty
 									implementation for every method.</li>
@@ -2912,9 +2974,9 @@ SingleThreadModel
 									provide implementation whether it is required or not. This approach increases length
 									of the code and reduces readability.</li>
 							</ul>
-							<u>Example 1:
+							Example 1:
 
-							</u>
+
 							<pre>interface X{
 void m1();
 void m2();
@@ -2928,8 +2990,8 @@ void m5();
 }
 </pre>
 
-							<u>Example 2:
-							</u>
+							Example 2:
+
 							<pre>class Test implements X{
 public void m3(){
 System.out.println("m3() method is called");
@@ -2948,9 +3010,9 @@ public void m5(){}
 								<li>This approach decreases length of the code and improves readability.</li>
 							</ul>
 
-							<u>Example 1:
+							Example 1:
 
-							</u>
+
 							<pre>abstract class AdapterX implements X{
 public void m1(){}
 public void m2(){}
@@ -2962,26 +3024,27 @@ public void m4(){}
 public void m1000(){}
 }
 </pre>
-							<u>Example 2:
+							Example 2:
 
-							</u>
+
 							<pre>public class Test extend AdapterX{{ 
 public void m3(){
 }}
 </pre>
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image110.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image110.png"><br><br>
 
 							<p>Generic Servlet simply acts as an adapter class for Servlet interface.</p>
 							<b>Note :</b> marker interface and Adapter class are big utilities to the programmer to
 							simplify programming.
-							<h3 id="iac" style="background-color: rgb(128, 0, 64);">
-								<font color="#ffffff">What is the difference between interface, abstract class and
-									concrete class?
-									<br>
-									When we should go for interface, abstract class and concrete class?
-								</font>
-							</h3>
+							<h2 id="iac"><br><br><br></h2>
+							<h2 class="breadcrumb" id="iac">
+								What is the difference between interface, abstract class and
+								concrete class?
+								<br>
+								When we should go for interface, abstract class and concrete class?
+
+							</h2>
 
 							<ul>
 								<li>If we don't know anything about implementation just we have requirement
@@ -2993,12 +3056,13 @@ public void m3(){
 							</ul>
 
 
-							<u>Example:</u><br><br><img alt="" src="./images/flow/image112.png" width="300"><br><br>
+							Example:<br><br><img alt="" src="./images/flow/image112.png"><br><br>
 
-							<h3 id="difiaclass" style="background-color: rgb(0, 0, 64);">
-								<font color="#ffffff">What is the Difference between interface and abstract class ?
-								</font>
-							</h3>
+							<h2 id="difiaclass"><br><br><br></h2>
+							<h2 class="breadcrumb" id="difiaclass">
+								What is the Difference between interface and abstract class ?
+
+							</h2>
 
 							<table border="1">
 								<tbody>
@@ -3052,17 +3116,17 @@ public void m3(){
 
 
 
-							<h3>
-								<font color="#ff0000">We can't create object for abstract class but abstract class can
-									contain constructor what is the need ? </font>
-							</h3>
+							<h2>
+								We can't create object for abstract class but abstract class can
+								contain constructor what is the need ?
+							</h2>
 							abstract class constructor will be executed when ever we are creating child class object to
 							perform initialization of child object.
 
 							<br>
 							<br>
 
-							<u>Example: </u>
+							Example:
 
 							<pre>class Parent{
 Parent()
@@ -3085,11 +3149,11 @@ System.out.println(c.hashCode());
 							Note : We can't create object for abstract class either directly or indirectly.
 
 
-							<h3 style="background-color: rgb(128, 128, 0);">
-								<font color="#ffffff">Every method present inside interface is abstract but in abstract
-									class also we can take only abstract methods then what is the need of interface
-									concept ? </font>
-							</h3>
+							<h2>
+								Every method present inside interface is abstract but in abstract
+								class also we can take only abstract methods then what is the need of interface
+								concept ?
+							</h2>
 							We can replace interface concept with abstract class. But it is not a good programming
 							practice. We are misusing the roll of abstract class.
 							It may create performence problems also.<br>
@@ -3099,10 +3163,10 @@ System.out.println(c.hashCode());
 
 							If every thing is abstract then it is recommended to go for interafce.
 
-							<h3 style="background-color: rgb(0, 128, 0);">
-								<font color="#ffffff">Why abstract class can contain constructor where as interface
-									doesn't contain constructor ?</font>
-							</h3>
+							<h2>
+								Why abstract class can contain constructor where as interface
+								doesn't contain constructor ?
+							</h2>
 							The main purpose of constructor is to perform initialization of an object i.e., provide
 							values for the instance variables, Inside interface every variable is always static and
 							there is no chance of existing instance variables.

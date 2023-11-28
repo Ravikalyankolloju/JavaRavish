@@ -144,16 +144,13 @@
 				</div>
 				<br>
 			</div>
-
-
-
 			<div class="col-lg-9 mb-4">
 				<div class="card h-100">
 					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Inner Classes in Java</h1>
 					<div class="card-body">
 						<div class="tab" role="tabpanel">
 							<ol>
-								<li><a href="#intro"> Introduction.</a></li>
+								<li><a href="#intro"> Introduction</a></li>
 								<li><a href="#normal">Normal or Regular inner classes</a>
 									<ul>
 										<li><a href="#static"> Accessing inner class code from static area of outer
@@ -200,9 +197,9 @@
 								<li><a href="#conclu">Conclusions</a></li>
 							</ol>
 							<hr>
-							
-							<h2 class="breadcrumb" id=intro"><br><br><br></h2>
-							<h2 class="breadcrumb">1. Introduction :</h2>
+
+							<h2 id="intro"><br><br><br></h2>
+							<h2 class="mainbreadcrumb">1. Introduction :</h2>
 
 
 
@@ -217,7 +214,7 @@
 									called inner classes.</li>
 							</ul>
 
-							<u>Diagram:</u><br><br><img alt="" src="inner\image001.png" width="300"><br><br>
+							<u>Diagram:</u><br><br><img alt="" src="inner\image001.png"><br><br>
 							<ul>
 								<li>Sun people introduced inner classes in 1.1 version as part of "EventHandling" to
 									resolve GUI bugs.</li>
@@ -229,11 +226,11 @@
 
 							<u>Example:</u><br><br> Without existing University object there is no chance of existing
 							Department object hence we have to define Department class inside University class.<br><br>
-							<u>Example1:</u><br><br><img alt="" src="inner\image002.png" width="300"><br><br>
+							<u>Example1:</u><br><br><img alt="" src="inner\image002.png"><br><br>
 							<br>
 							<u>Example 2:</u><br><br> Without existing Bank object there is no chance of existing
 							Account object hence we have to define Account class inside Bank class.<br><br>
-							<u>Example:</u><br><br><br><img alt="" src="inner\image003.png" width="300"><br><br>
+							<u>Example:</u><br><br><br><img alt="" src="inner\image003.png"><br><br>
 
 							<u>Example 3:</u><br><br> Without existing Map object there is no chance of existing Entry
 							object hence Entry interface is define inside Map interface.<br>Map is a collection of
@@ -241,9 +238,9 @@
 
 							<br>
 							<u>Example:</u><br><br>
-							<br><img alt="" src="inner\image004.png" width="300"><br><br>
+							<br><img alt="" src="inner\image004.png"><br><br>
 
-							<u>Diagram:</u><br><br><br><img alt="" src="inner\image005.png" width="300"><br><br>
+							<u>Diagram:</u><br><br><br><img alt="" src="inner\image005.png"><br><br>
 							<p><b>Note : </b>Without existing Outer class Object there is no chance of existing Inner
 								class Object. </p>
 							<p><em><u><strong>Note:</strong></u></em> <strong>The relationship between outer class and
@@ -257,10 +254,10 @@
 								<li> Anonymous inner classes</li>
 								<li> Static nested classes.</li>
 							</ol>
-
-							<h3 id="normal" style="background-color: rgb(0, 128, 0);">
-								<font color="#ffffff">1. Normal (or) Regular inner class:</font>
-							</h3>
+							<hr>
+							<h2 id="normal"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="normal">2. Normal (or) Regular inner class:
+							</h2>
 
 							If we are declaring any named class inside another class directly without static modifier
 							such type of inner classes are called normal or regular inner classes.<br><br>
@@ -276,7 +273,7 @@
 }
 Output:
 </pre>
-							<br><br><img alt="" src="inner\image006.png" width="300"><br><br>
+							<br><br><img alt="" src="inner\image006.png"><br><br>
 							<u>Example:
 
 							</u>
@@ -292,7 +289,7 @@ Output:
 }
 Output:
 </pre>
-							<br><br><img alt="" src="inner\image007.png" width="300"><br><br>
+							<br><br><img alt="" src="inner\image007.png"><br><br>
 							<ul>
 								<li>Inside inner class we can't declare static members. Hence it is not possible to
 									declare main() method and we can't invoke inner class directly from the command
@@ -318,10 +315,9 @@ Outer.java:5: inner classes cannot have static declarations
                 public static void main(String[] args)
 </pre>
 							<br>
-							<font color="#0080ff" id="static"><u><strong>Accessing inner class code from static area of
-										outer class:
-
-									</strong></u></font><br><br>
+							<h2 id="static"><br><br><br></h2>
+							<h2 class="breadcrumb" id="static">A. Accessing inner class code from static area of
+								outer class: </h2><br><br>
 							<u>Example:
 							</u>
 							<pre>class Outer
@@ -339,9 +335,11 @@ Outer.java:5: inner classes cannot have static declarations
 }
 </pre>
 							<br>
-							<font color="#8000ff" id="instance"><u><strong>Accessing inner class code from instance area
-										of outer class:
-									</strong></u></font><br><br>
+							<h2 id="instance"><br><br><br></h2>
+							<h2 class="breadcrumb" id="instance">B. Accessing inner class code from instance area of
+								outer
+								class:
+							</h2>
 							<u>Example:
 
 							</u>
@@ -371,8 +369,9 @@ E:\scjp&gt;java Outer
 Inner class method
 </pre>
 							<br>
-							<font color="#800040" id="outside"><u><strong>Accessing inner class code from outside of
-										outer class:</strong></u></font><br><br>
+							<h2 id="outside"><br><br><br></h2>
+							<h2 class="breadcrumb" id="outside">C. Accessing inner class code from outside of
+								outer class:</h2>
 							<u>Example:
 
 							</u>
@@ -396,7 +395,7 @@ class Test
 Output:
 Inner class method
 </pre>
-							<br><br><img alt="" src="inner\image009.png" width="300"><br><br>
+							<br><br><img alt="" src="inner\image009.png"><br><br>
 							<ul>
 								<li> From inner class we can access all members of outer class (both static and
 									non-static, private and non private methods and variables) directly.</li>
@@ -456,12 +455,10 @@ Inner class method
 
 
 							<br>
-							<h3 id="modifier">
-
-								<u><strong>The applicable modifiers for outer classes are:
-
-									</strong></u>
-							</h3>
+							<h2 id="modifier"><br><br><br></h2>
+							<h2 class="breadcrumb" class="breadcrumb" id="modifier">D. The applicable modifiers for
+								outer classes are:
+							</h2>
 							<ol>
 								<li> public</li>
 								<li> default</li>
@@ -473,23 +470,24 @@ Inner class method
 							But for the inner classes in addition to this the following modifiers also allowed.
 
 							<br><br>
-							<u>Diagram:</u><br><br><img alt="" src="inner\image010.png" width="300"><br><br>
+							<u>Diagram:</u><br><br><img alt="" src="inner\image010.png"><br><br>
 							<br>
 
 
 
-							<h3 id="nesting"><em><u> Nesting of Inner classes :</u></em></h3><br>
+							<h2 id="nesting"><br><br><br></h2>
+							<h2 class="breadcrumb" id="nesting">E. Nesting of Inner classes :</h2>
 							We can declare an inner class inside another inner class
 
 							<br>
 
 							<br>
-							<u>Diagram:</u><br><br><img alt="" src="inner\inner.png" width="300"><br><br>
+							<u>Diagram:</u><br><br><img alt="" src="inner\inner.png"><br><br>
 							<br>
-
-							<h3 id="methodlocal" style="background-color: rgb(128, 0, 64);">
-								<font color="#ffffff">Method local inner classes:</font>
-							</h3>
+							<hr>
+							<h2 id="methodlocal"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="methodlocal">3. Method local inner classes:
+							</h2>
 
 
 							<ul>
@@ -645,13 +643,12 @@ The sum: 3000
 </pre>
 
 							<p>
-								<font color="#ff0000"><u><strong>At line 1 which of the following variables we can
-											access ? </strong></u></font><br>
-								<br><br><img alt="" src="inner\image011.png" width="300"><br><br>
-								<font color="#ff0000"><u><strong>If we declare methodOne() method as static then which
-											variables we can access at line 1 ?
-										</strong></u></font><br><br><img alt="" src="inner\image012.png"
-									width="300"><br><br>
+								<font <strong>At line 1 which of the following variables we can
+									access ? </strong></font><br>
+								<br><br><img alt="" src="inner\image011.png"><br><br>
+								<font><strong>If we declare methodOne() method as static then which
+										variables we can access at line 1 ?
+									</strong></font><br><br><img alt="" src="inner\image012.png"><br><br>
 							</p>
 
 
@@ -668,10 +665,10 @@ The sum: 3000
 								<li>By mistake if we are declaring any other modifier we will get compile time error.
 								</li>
 							</ul>
-
-							<h3 id="anonymous" style="background-color: rgb(255, 128, 64);">
-								<font color="#ffffff">Anonymous inner classes:</font>
-							</h3>
+							<hr>
+							<h2 id="anonymous"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="anonymous">4. Anonymous inner classes:
+							</h2>
 
 							<ul>
 								<li>Sometimes we can declare inner class without name such type of inner classes are
@@ -688,8 +685,8 @@ The sum: 3000
 							</ul>
 
 							<br>
-							<font color="#0000ff" id="extend"><u><strong>Anonymous inner class that extends a class:
-									</strong></u></font><br>
+							<h2 id="extend"><br><br><br></h2>
+							<h2 class="breadcrumb" id="extend">A. Anonymous inner class that extends a class: </h2>
 							<pre>class PopCorn
 {
 	public void taste()
@@ -715,9 +712,9 @@ class Test
 }
 </pre>
 
-							<font color="#8000ff"><u><strong>Analysis:
+							<font><strong>Analysis:
 
-									</strong></u></font>
+								</strong></font>
 							<ol>
 
 								<li>
@@ -824,9 +821,9 @@ Spicy
 }
 </pre>
 							<br>
-							<font color="#000080" id="implement"><u><strong>Anonymous Inner Class that implements an
-										interface:
-									</strong></u></font><br><br>
+							<h2 id="implement"><br><br><br></h2>
+							<h2 class="breadcrumb" id="implement">B. Anonymous Inner Class that implements an
+								interface:</h2>
 							<u>Example:
 
 							</u>
@@ -857,9 +854,9 @@ Spicy
 </pre>
 
 							<br>
-							<font color="#800040" id="argument"><u><strong>Anonymous Inner Class that define inside
-										method arguments:
-									</strong></u></font><br><br>
+							<h2 id="argument"><br><br><br></h2>
+							<h2 class="breadcrumb" id="argument">C. Anonymous Inner Class that define inside
+								method arguments: </h2><br><br>
 							<u>Example:
 							</u>
 							<pre>class Test 
@@ -913,10 +910,11 @@ Child thread
 Child thread
 </pre>
 
-							<h4 style="background-color: rgb(0, 128, 0);" id="diffanony">
-								<font color="#ffffff">Difference between general class and anonymous inner classes:
+							<h2 id="diffanony"><br><br><br></h2>
+							<h2 class="breadcrumb" id="diffanony">D. Difference between general class and anonymous
+								inner classes:
 								</font>
-							</h4>
+							</h2>
 
 							<table border="1">
 								<tbody>
@@ -951,7 +949,9 @@ Child thread
 
 
 
-							<h4 id="area"><u>Explain the application areas of anonymous inner classes ?</u> </h4>
+							<h2 id="area"><br><br><br></h2>
+							<h2 class="breadcrumb" id="area">E. Explain the application areas of anonymous inner
+								classes ?</h2>
 							anonymous inner classes are best suitable to define <b> call back functions</b> in GUI
 							components
 
@@ -1022,11 +1022,9 @@ class GUI extends  JFrame {
 
 </pre>
 
-							<br>
-
-							<h3 style="background-color: rgb(128, 128, 0);" id="nested">
-								<font color="#ffffff">Static nested classes:</font>
-							</h3>
+							<hr>
+							<h2 id="nested"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="nested">5. Static nested classes:</h2>
 							<ul>
 								<li>Sometimes we can declare inner classes with static modifier such type of inner
 									classes are called static nested classes.</li>
@@ -1112,10 +1110,11 @@ Nested class main method
 }
 </pre>
 
-							<h3 style="background-color: rgb(128, 0, 0);" id="compression">
-								<font color="#ffffff">Compression between normal or regular class and static nested
-									class ? </font>
-							</h3>
+							<h2 id="compression"><br><br><br></h2>
+							<h2 class="breadcrumb" id="compression">A. Compression between normal or regular class and
+								static nested
+								class ? </font>
+							</h2>
 
 							<table border="1">
 								<tbody>
@@ -1152,11 +1151,14 @@ Nested class main method
 							</table>
 							<br>
 
+							<hr>
+							<h2 id="combination"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="combination">6. Various possible combinations of nested class
+								&amp;
+								interfaces :</h2>
 
-							<h3 id="combination"><b><u><em>Various possible combinations of nested class &amp;
-											interfaces :</em></u></b></h3>
-
-							<h4 id="clacla"><u>1. class inside a class :</u> </h4>
+							<h2 id="clacla"><br><br><br></h2>
+							<h2 class="breadcrumb" id="clacla">a. class inside a class :</h2>
 							<ul>
 								<li>We can declare a class inside another class</li>
 								<li>Without existing one type of object, if there is no chance of existing another type
@@ -1172,7 +1174,8 @@ Nested class main method
 							Without existing University object, there is no chance of existing Department object. i.e.,
 							Department object is always associated with University
 
-							<h4 id="intcla"><u>2. interface inside a class :</u> </h4>
+							<h2 id="intcla"><br><br><br></h2>
+							<h2 class="breadcrumb" id="intcla">b. interface inside a class :</h2>
 
 							We can declare interface inside a class
 
@@ -1208,7 +1211,8 @@ Nested class main method
 
 							<br>
 
-							<h4 id="intint"><u>3. interface inside a interface :</u> </h4>
+							<h2 id="intint"><br><br><br></h2>
+							<h2 class="breadcrumb" id="intint">c. interface inside a interface :</h2>
 							We can declare an interface inside another interface.
 							<pre>interface Map {
  interface Entry {
@@ -1260,7 +1264,8 @@ class Test implements  Outer.Inner {
 							i.e., Both Outer and Inner interfaces we can implement independently.
 
 
-							<h4 id="claint"><u>4. class inside a interface :</u> </h4>
+							<h2 id="claint"><br><br><br></h2>
+							<h2 class="breadcrumb" id="claint">d. class inside a interface : </h2>
 
 							We can declare a class inside interface.
 
@@ -1323,8 +1328,9 @@ class Test {
 							The class which is declared inside interface is always static ,hence we can create object
 							directly without having outer interface type object.
 
-
-							<h4 id="conclu"><u> Conclusions :</u> </h4>
+							<hr>
+							<h2 id="conclu"><br><br><br></h2>
+							<h2 class="mainbreadcrumb" id="conclu">7. Conclusions :</h2>
 
 							<ol>
 								<li>We can declare anything inside any thing with respect to classes and interfaces.
