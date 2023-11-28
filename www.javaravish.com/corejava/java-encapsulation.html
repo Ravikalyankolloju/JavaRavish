@@ -153,7 +153,106 @@
 					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Encapsulation in Java</h1>
 					<div class="card-body">
 						<div class="tab" role="tabpanel">
+							<div class="entry-content" itemprop="text">
+								<p>Encapsulation simply means binding object state(fields) and behaviour(methods)
+									together. If you are creating class, you are doing encapsulation. In this guide we
+									will see how to do encapsulation in java program.</p>
+								<h2>What is encapsulation?</h2>
+								<p>The whole idea behind encapsulation is to hide the implementation details from users.
+									If a data member is private it means it can only be accessed within the same class.
+									No outside class can access private data member (variable) of other class.</p>
+								<p>However if we setup public getter and setter methods to update (for
+									example&nbsp;<code>void setSSN(int ssn)</code>)and read (for example
+									&nbsp;<code>int getSSN()</code>) the private data fields then the outside class can
+									access those private data fields via public methods.</p>
+								<p>This way data can only be accessed by public methods thus making the private fields
+									and their implementation hidden for outside classes. That’s why encapsulation is
+									known as <strong>data hiding.&nbsp;</strong>Lets see an example to understand this
+									concept better.</p>
+								<h2>Example of Encapsulation in Java</h2>
+								<p>How to implement encapsulation in java:<br>
+									1) Make the instance variables private so that they cannot be accessed directly from
+									outside the class. You can only set and get values of these variables through the
+									methods of the class.<br>
+									2) Have getter and setter methods in the class to set and get the values of the
+									fields.</p>
+								<pre class="prettyprint prettyprinted" style=""><span class="kwd">class</span><span class="pln"> </span><span class="typ">EncapsulationDemo</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> ssn</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> empName</span><span class="pun">;</span><span class="pln">
+    </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> empAge</span><span class="pun">;</span><span class="pln">
 
+    </span><span class="com">//Getter and Setter methods</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> getEmpSSN</span><span class="pun">(){</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> ssn</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> getEmpName</span><span class="pun">(){</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> empName</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> getEmpAge</span><span class="pun">(){</span><span class="pln">
+        </span><span class="kwd">return</span><span class="pln"> empAge</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setEmpAge</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> newValue</span><span class="pun">){</span><span class="pln">
+        empAge </span><span class="pun">=</span><span class="pln"> newValue</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setEmpName</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> newValue</span><span class="pun">){</span><span class="pln">
+        empName </span><span class="pun">=</span><span class="pln"> newValue</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setEmpSSN</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> newValue</span><span class="pun">){</span><span class="pln">
+        ssn </span><span class="pun">=</span><span class="pln"> newValue</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">EncapsTest</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args</span><span class="pun">[]){</span><span class="pln">
+         </span><span class="typ">EncapsulationDemo</span><span class="pln"> obj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">EncapsulationDemo</span><span class="pun">();</span><span class="pln">
+         obj</span><span class="pun">.</span><span class="pln">setEmpName</span><span class="pun">(</span><span class="str">"Mario"</span><span class="pun">);</span><span class="pln">
+         obj</span><span class="pun">.</span><span class="pln">setEmpAge</span><span class="pun">(</span><span class="lit">32</span><span class="pun">);</span><span class="pln">
+         obj</span><span class="pun">.</span><span class="pln">setEmpSSN</span><span class="pun">(</span><span class="lit">112233</span><span class="pun">);</span><span class="pln">
+         </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Employee Name: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> obj</span><span class="pun">.</span><span class="pln">getEmpName</span><span class="pun">());</span><span class="pln">
+         </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Employee SSN: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> obj</span><span class="pun">.</span><span class="pln">getEmpSSN</span><span class="pun">());</span><span class="pln">
+         </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Employee Age: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> obj</span><span class="pun">.</span><span class="pln">getEmpAge</span><span class="pun">());</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln"> 
+</span><span class="pun">}</span></pre>
+								<p><strong>Output:</strong></p>
+								<pre class="prettyprint prettyprinted"
+									style=""><span class="typ">Employee</span><span class="pln"> </span><span class="typ">Name</span><span class="pun">:</span><span class="pln"> </span><span class="typ">Mario</span><span class="pln">
+</span><span class="typ">Employee</span><span class="pln"> SSN</span><span class="pun">:</span><span class="pln"> </span><span class="lit">112233</span><span class="pln">
+</span><span class="typ">Employee</span><span class="pln"> </span><span class="typ">Age</span><span class="pun">:</span><span class="pln"> </span><span class="lit">32</span></pre>
+								<p>In above example all the three data members (or data fields) are private(see: <a
+										href="https://beginnersbook.com/2013/05/java-access-modifiers/">Access Modifiers
+										in Java</a>) which cannot be accessed directly. These fields can be accessed via
+									public methods only. Fields <code>empName</code>, <code>ssn</code> and
+									<code>empAge</code> are made hidden data fields using encapsulation technique of
+									OOPs.
+								</p>
+								<h2>Advantages of encapsulation</h2>
+								<ol>
+									<li>It improves maintainability and flexibility and re-usability: for e.g. In the
+										above code the implementation code of <code>void setEmpName(String name)</code>
+										and <code>String getEmpName()</code> can be changed at any point of time. Since
+										the implementation is purely hidden for outside classes they would still be
+										accessing the private field empName using the same methods
+										(<code>setEmpName(String name)</code> and <code>getEmpName()</code>). Hence the
+										code can be maintained at any point of time without breaking the classes that
+										uses the code. This improves the re-usability of the underlying class.</li>
+									<li>The fields can be made read-only (If we don’t define setter methods in the
+										class) or write-only (If we don’t define the getter methods in the class). For
+										e.g. If we have a field(or variable) that we don’t want to be changed so we
+										simply define the variable as private and instead of set and get both we just
+										need to define the get method for that variable. Since the set method is not
+										present there is no way an outside class can modify the value of that field.
+									</li>
+									<li>User would not be knowing what is going on behind the scene. They would only be
+										knowing that to update a field call set method and to read a field call get
+										method but what these set and get methods are doing is purely hidden from them.
+									</li>
+								</ol>
+								<p>Encapsulation is also known as “<strong>data&nbsp;Hiding</strong>“.</p>
+							</div>
 						</div>
 					</div>
 					<div class="card-footer">

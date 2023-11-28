@@ -153,7 +153,515 @@
 					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Inheritance in Java</h1>
 					<div class="card-body">
 						<div class="tab" role="tabpanel">
+							<div class="entry-content" itemprop="text">
+								<p>Inheritance is one of the useful feature of OOPs. It allows a class to use the
+									properties and methods of another class. The <strong>purpose of inheritance in
+										java</strong>, is to provide the reusability of code so that a class has to
+									write only the unique features and rest of the common properties and functionalities
+									can be inherited from the another class.</p>
 
+
+
+								<p>A class can only inherit the fields and methods of another class, if it extends the
+									class. For example in the following snippet, class A extends class B. Now class A
+									can access the fields and methods of class B.</p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="kwd">class</span><span class="pln"> A </span><span class="kwd">extends</span><span class="pln"> B
+</span><span class="pun">{</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+
+
+								<p>Let’s learn the concept of parent and child class in Inheritance:</p>
+
+
+
+								<p><strong>Child Class:</strong> The class that extends the features of another class is
+									known as child class, sub class or derived class. In the above code, class A is the
+									child class.</p>
+
+
+
+								<p><strong>Parent Class:</strong> The class that shares the fields and methods with the
+									child class is known as parent class, super class or Base class. In the above code,
+									Class B is the parent class.</p>
+
+
+
+								<h2 class="wp-block-heading" id="h-advantages-of-inheritance">Advantages of Inheritance
+								</h2>
+
+
+
+								<ul>
+									<li>Inheritance <strong>removes redundancy</strong> from the code. A class can reuse
+										the fields and methods of parent class. No need to rewrite the same redundant
+										code again.</li>
+									<li>Inheritance allows us to reuse of code, it <strong>improves reusability</strong>
+										in your java application.</li>
+									<li><strong>Reduces code size: </strong>By removing redundant code, it reduces the
+										number of lines of the code.</li>
+									<li><strong>Improves logical structure:</strong> Improves the logical structure of
+										the code that allows programmer to visualize the relationship between different
+										classes.</li>
+								</ul>
+
+								<h2 class="wp-block-heading" id="h-syntax-inheritance-in-java">Syntax: Inheritance in
+									Java</h2>
+
+
+
+								<p>To inherit a class we use <code>extends</code> keyword. Here, class <code>XYZ</code>
+									is a child class and class <code>ABC</code> is a parent class. The class
+									<code>XYZ</code> is inheriting the properties and methods of <code>ABC</code> class.
+								</p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="kwd">class</span><span class="pln"> XYZ </span><span class="kwd">extends</span><span class="pln"> ABC
+</span><span class="pun">{</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+
+
+								<p><strong>Terminologies used in Inheritance</strong>: To avoid confusion, let’s discuss
+									the terminologies used in this guide.</p>
+
+
+
+								<ul>
+									<li>Super class and base class are synonyms of Parent class.</li>
+									<li>Sub class and derived class are synonyms of Child class.</li>
+									<li>Properties and fields are synonyms of Data members.</li>
+									<li>Functionality is a synonym of method.</li>
+								</ul>
+
+
+
+								<h2 class="wp-block-heading" id="h-inheritance-example-in-java">Inheritance Example in
+									Java</h2>
+
+
+
+								<p>In this example, we have a base class <code>Teacher</code> and a sub class
+									<code>PhysicsTeacher</code>. Child class inherits the following fields and methods
+									from parent class:
+								</p>
+
+
+
+								<ul>
+									<li><strong>Properties:</strong> <code>designation</code> and
+										<code>collegeName</code> properties
+									</li>
+									<li><strong>Method:</strong> <code>does()</code></li>
+								</ul>
+
+
+
+								<p>Child classes like <code>MathTeacher</code>, <code>MusicTeacher</code> and
+									<code>PhysicsTeacher</code> do not need to write this code and can access these
+									properties and method directly from base class.
+								</p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="kwd">class</span><span class="pln"> </span><span class="typ">Teacher</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="com">//fields of parent class</span><span class="pln">
+  </span><span class="typ">String</span><span class="pln"> designation </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Teacher"</span><span class="pun">;</span><span class="pln">
+  </span><span class="typ">String</span><span class="pln"> collegeName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"JavaRavish"</span><span class="pun">;</span><span class="pln">
+
+  </span><span class="com">//method of parent class</span><span class="pln">
+  </span><span class="kwd">void</span><span class="pln"> does</span><span class="pun">(){</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Teaching"</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">PhysicsTeacher</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Teacher</span><span class="pun">{</span><span class="pln">
+  </span><span class="com">//field of child class</span><span class="pln">
+  </span><span class="typ">String</span><span class="pln"> mainSubject </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Physics"</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args</span><span class="pun">[]){</span><span class="pln">
+    </span><span class="typ">PhysicsTeacher</span><span class="pln"> obj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">PhysicsTeacher</span><span class="pun">();</span><span class="pln">
+    </span><span class="com">//accessing the fields of parent class</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">obj</span><span class="pun">.</span><span class="pln">collegeName</span><span class="pun">);</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">obj</span><span class="pun">.</span><span class="pln">designation</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">obj</span><span class="pun">.</span><span class="pln">mainSubject</span><span class="pun">);</span><span class="pln">
+
+    </span><span class="com">//accessing the method of parent class</span><span class="pln">
+    obj</span><span class="pun">.</span><span class="pln">does</span><span class="pun">();</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+
+
+								<p><strong>Output: </strong></p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="typ">JavaRavish</span><span class="pln">
+</span><span class="typ">Teacher</span><span class="pln">
+</span><span class="typ">Physics</span><span class="pln">
+</span><span class="typ">Teaching</span></pre>
+
+
+
+								<blockquote class="wp-block-quote">
+									<p>Based on the above example we can say that <code>PhysicsTeacher</code>
+										<strong>IS-A</strong> <code>Teacher</code>. This means that a child class
+										has<strong> IS-A</strong> relationship with the parent class. This is why
+										inheritance is known as <strong>IS-A relationship</strong> between child and
+										parent class
+									</p>
+								</blockquote>
+
+
+
+								<h2 class="wp-block-heading" id="h-java-inheritance-instanceof-keyword">Java Inheritance
+									<strong>instanceof</strong> keyword
+								</h2>
+
+
+
+								<p>The <code>instanceof</code> keyword returns <code>true</code>, if an object belongs
+									to the class or its parent class.</p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="kwd">class</span><span class="pln"> A</span><span class="pun">{</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> B </span><span class="kwd">extends</span><span class="pln"> A</span><span class="pun">{</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">JavaExample</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> B</span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args</span><span class="pun">[])</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    A obj1 </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> A</span><span class="pun">();</span><span class="pln">
+    B obj2 </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> B</span><span class="pun">();</span><span class="pln">
+    </span><span class="typ">JavaExample</span><span class="pln"> obj3 </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">JavaExample</span><span class="pun">();</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">obj1 </span><span class="kwd">instanceof</span><span class="pln"> A</span><span class="pun">);</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">obj2 </span><span class="kwd">instanceof</span><span class="pln"> A</span><span class="pun">);</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">obj1 </span><span class="kwd">instanceof</span><span class="pln"> B</span><span class="pun">);</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">obj3 </span><span class="kwd">instanceof</span><span class="pln"> B</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+
+
+								<p><strong>Output:</strong></p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="kwd">true</span><span class="pln">
+</span><span class="kwd">true</span><span class="pln">
+</span><span class="kwd">false</span><span class="pln">
+</span><span class="kwd">true</span></pre>
+
+
+
+								<h2 class="wp-block-heading" id="h-types-of-inheritance-in-java">Types of inheritance in
+									Java</h2>
+
+
+
+								<p>There are four <a>types</a> of
+									inheritance in Java:</p>
+
+
+
+								<ul>
+									<li>Single</li>
+									<li>Multilevel</li>
+									<li>Hierarchical </li>
+									<li>Hybrid</li>
+								</ul>
+
+
+
+								<h3 class="wp-block-heading" id="h-single-inheritance">Single Inheritance</h3>
+
+
+
+								<p>In Single inheritance, a <strong>single child class</strong> inherits the properties
+									and methods of a <strong>single parent class</strong>. In the following diagram:
+									class B is a child class and class A is a parent class. </p>
+
+
+								<div class="wp-block-image">
+									<figure class="aligncenter size-full"><img decoding="async" fetchpriority="high"
+											width="567" height="274"
+											src="https://beginnersbook.com/wp-content/uploads/2022/09/Java_Single_Inheritance.jpg"
+											alt="Single Inheritance in Java" class="wp-image-12848"
+											srcset="https://beginnersbook.com/wp-content/uploads/2022/09/Java_Single_Inheritance.jpg 567w, https://beginnersbook.com/wp-content/uploads/2022/09/Java_Single_Inheritance-300x145.jpg 300w"
+											sizes="(max-width: 567px) 100vw, 567px"></figure>
+								</div>
+
+
+								<h3 class="wp-block-heading" id="h-multilevel-inheritance">Multilevel Inheritance</h3>
+
+
+
+								<p>In <a>multilevel
+										inheritance</a>, a parent class becomes the child class of another class. In the
+									following diagram: class B is a parent class of C, however it is also a child class
+									of A. In this type of inheritance, there is a concept of intermediate class, here
+									class B is an intermediate class.</p>
+
+
+								<div class="wp-block-image">
+									<figure class="aligncenter size-full"><img decoding="async" width="573" height="339"
+											src="https://beginnersbook.com/wp-content/uploads/2022/09/Multilevel_Inheritance.jpg"
+											alt="Multilevel Inheritance in Java" class="wp-image-12844"
+											srcset="https://beginnersbook.com/wp-content/uploads/2022/09/Multilevel_Inheritance.jpg 573w, https://beginnersbook.com/wp-content/uploads/2022/09/Multilevel_Inheritance-300x177.jpg 300w"
+											sizes="(max-width: 573px) 100vw, 573px"></figure>
+								</div>
+
+
+								<h3 class="wp-block-heading" id="h-hierarchical-inheritance">Hierarchical Inheritance
+								</h3>
+
+
+
+								<p>In <a>hierarchical
+										inheritance</a>, more than one class extends the same class. As shown in the
+									following diagram, classes B, C &amp; D extends the same class A.</p>
+
+
+								<div class="wp-block-image">
+									<figure class="aligncenter size-full"><img decoding="async" width="624" height="385"
+											src="https://beginnersbook.com/wp-content/uploads/2022/09/Hierarchical_Inheritance.jpg"
+											alt="Hierarchical Inheritance in Java" class="wp-image-12845"
+											srcset="https://beginnersbook.com/wp-content/uploads/2022/09/Hierarchical_Inheritance.jpg 624w, https://beginnersbook.com/wp-content/uploads/2022/09/Hierarchical_Inheritance-300x185.jpg 300w"
+											sizes="(max-width: 624px) 100vw, 624px"></figure>
+								</div>
+
+
+								<h3 class="wp-block-heading" id="h-hybrid-inheritance">Hybrid Inheritance</h3>
+
+
+
+								<p><a>Hybrid
+										inheritance</a>: Combination of more than one types of inheritance in a single
+									program. For example class B &amp; C extends A and another class D extends class C
+									then this is a hybrid inheritance example because it is a combination of single and
+									hierarchical inheritance.</p>
+
+
+								<div class="wp-block-image">
+									<figure class="aligncenter size-full"><img decoding="async" loading="lazy"
+											width="626" height="413"
+											src="https://beginnersbook.com/wp-content/uploads/2022/09/Hybrid_Inheritance.jpg"
+											alt="Hybrid Inheritance in Java" class="wp-image-12846"
+											srcset="https://beginnersbook.com/wp-content/uploads/2022/09/Hybrid_Inheritance.jpg 626w, https://beginnersbook.com/wp-content/uploads/2022/09/Hybrid_Inheritance-300x198.jpg 300w"
+											sizes="(max-width: 626px) 100vw, 626px"></figure>
+								</div>
+
+
+								<h3 class="wp-block-heading" id="h-multiple-inheritance">Multiple Inheritance</h3>
+
+
+
+								<p>It refers to the concept of one class extending more than one classes, which means a
+									child class has more than one parent classes. For example class C extends both
+									classes A and B. <strong>Java doesn’t support multiple inheritance</strong>, read
+									more about it.
+								</p>
+
+
+								<div class="wp-block-image">
+									<figure class="aligncenter size-full"><img decoding="async" loading="lazy"
+											width="624" height="384"
+											src="https://beginnersbook.com/wp-content/uploads/2022/09/Multiple_Inheritance.jpg"
+											alt="Multiple Inheritance in Java" class="wp-image-12847"
+											srcset="https://beginnersbook.com/wp-content/uploads/2022/09/Multiple_Inheritance.jpg 624w, https://beginnersbook.com/wp-content/uploads/2022/09/Multiple_Inheritance-300x185.jpg 300w"
+											sizes="(max-width: 624px) 100vw, 624px"></figure>
+								</div>
+
+
+								<h2 class="wp-block-heading" id="h-inheritance-access-specifier-in-java">Inheritance
+									Access Specifier in Java</h2>
+
+
+
+								<p>The derived class can inherit only those data members and methods of parent class,
+									that are declared as <strong>public</strong> or <strong>protected</strong>. </p>
+
+
+
+								<p>If the members or methods of super class are declared as <strong>private</strong>
+									then the derived class cannot access them. The private members can be accessed only
+									in its own class. Such private members can only be accessed using public or
+									protected getter and setter methods of super class as shown in the following
+									example.</p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="kwd">class</span><span class="pln"> </span><span class="typ">Teacher</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> designation </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Teacher"</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> collegeName </span><span class="pun">=</span><span class="pln"> </span><span class="str">"JavaRavish"</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> getDesignation</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> designation</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span><span class="kwd">protected</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setDesignation</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> designation</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">designation </span><span class="pun">=</span><span class="pln"> designation</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span><span class="kwd">protected</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> getCollegeName</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">return</span><span class="pln"> collegeName</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span><span class="kwd">protected</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setCollegeName</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> collegeName</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">collegeName </span><span class="pun">=</span><span class="pln"> collegeName</span><span class="pun">;</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span><span class="kwd">void</span><span class="pln"> does</span><span class="pun">(){</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Teaching"</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">JavaExample</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Teacher</span><span class="pun">{</span><span class="pln">
+  </span><span class="typ">String</span><span class="pln"> mainSubject </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Physics"</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args</span><span class="pun">[]){</span><span class="pln">
+    </span><span class="typ">JavaExample</span><span class="pln"> obj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">JavaExample</span><span class="pun">();</span><span class="pln">
+    </span><span class="com">/* Note: we are not accessing the data members
+     * directly we are using public getter method
+     * to access the private members of parent class
+     */</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">obj</span><span class="pun">.</span><span class="pln">getCollegeName</span><span class="pun">());</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">obj</span><span class="pun">.</span><span class="pln">getDesignation</span><span class="pun">());</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="pln">obj</span><span class="pun">.</span><span class="pln">mainSubject</span><span class="pun">);</span><span class="pln">
+    obj</span><span class="pun">.</span><span class="pln">does</span><span class="pun">();</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+
+
+								<p><strong>The output is:</strong></p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="typ">JavaRavish</span><span class="pln">
+</span><span class="typ">Teacher</span><span class="pln">
+</span><span class="typ">Physics</span><span class="pln">
+</span><span class="typ">Teaching</span></pre>
+
+
+
+								<p>The important point to note in the above example is that the child class is able to
+									access the private members of parent class through <strong>protected
+										methods</strong> of parent class. </p>
+
+
+
+								<p>When we make a instance variable(data member) or method <strong>protected</strong>,
+									this means that they are accessible only in the class itself and in child class.
+									These public, protected, private etc. are all access specifiers and we have
+									discussed them here: <a>Access specifier
+										in java</a>.</p>
+
+
+
+								<h2 class="wp-block-heading" id="h-how-to-use-constructor-in-inheritance-in-java">How to
+									use constructor in inheritance in java</h2>
+
+
+
+								<p><a>constructor</a> of
+									sub class is invoked when we create the object of subclass, it by default invokes
+									the default constructor of super class. Hence, in inheritance the objects are
+									constructed top-down. </p>
+
+
+
+								<p>The superclass constructor can be called explicitly using the <a>super
+										keyword</a>, but it should be first statement in a constructor. The super
+									keyword refers to the superclass, immediately above of the calling class in the
+									hierarchy. The use of multiple super keywords to access an ancestor class other than
+									the direct parent is not permitted.</p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="kwd">class</span><span class="pln"> </span><span class="typ">ParentClass</span><span class="pun">{</span><span class="pln">
+  </span><span class="com">//Parent class constructor</span><span class="pln">
+  </span><span class="typ">ParentClass</span><span class="pun">(){</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Constructor of Parent"</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">JavaExample</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">ParentClass</span><span class="pun">{</span><span class="pln">
+  </span><span class="typ">JavaExample</span><span class="pun">(){</span><span class="pln">
+    </span><span class="com">/* It by default invokes the constructor of parent class
+     * You can use super() to call the constructor of parent.
+     * It should be the first statement in the child class
+     * constructor, you can also call the parameterized constructor
+     * of parent class by using super like this: super(10), now
+     * this will invoke the parameterized constructor of int arg
+     */</span><span class="pln">
+    </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Constructor of Child"</span><span class="pun">);</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+  </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args</span><span class="pun">[]){</span><span class="pln">
+    </span><span class="com">//Creating the object of child class</span><span class="pln">
+    </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">JavaExample</span><span class="pun">();</span><span class="pln">
+  </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+
+
+								<p>Output:</p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="typ">Constructor</span><span class="pln"> of </span><span class="typ">Parent</span><span class="pln">
+</span><span class="typ">Constructor</span><span class="pln"> of </span><span class="typ">Child</span></pre>
+
+
+
+								<h2 class="wp-block-heading" id="h-inheritance-and-method-overriding">Inheritance and
+									Method Overriding</h2>
+
+
+
+								<p>When we declare the same method in child class, which is already present in the
+									parent class then this is called <a>method
+										overriding</a>. In such case, when we call the method from child class object,
+									the child class version of the method is called. However we can call the parent
+									class method using super keyword then it calls the parent class method as shown
+									below:</p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="kwd">class</span><span class="pln"> </span><span class="typ">ParentClass</span><span class="pun">{</span><span class="pln">
+   </span><span class="com">//Parent class constructor</span><span class="pln">
+   </span><span class="typ">ParentClass</span><span class="pun">(){</span><span class="pln">
+	</span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Constructor of Parent"</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   </span><span class="kwd">void</span><span class="pln"> disp</span><span class="pun">(){</span><span class="pln">
+	</span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Parent Method"</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">JavaExample</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">ParentClass</span><span class="pun">{</span><span class="pln">
+   </span><span class="typ">JavaExample</span><span class="pun">(){</span><span class="pln">
+	</span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Constructor of Child"</span><span class="pun">);</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   </span><span class="kwd">void</span><span class="pln"> disp</span><span class="pun">(){</span><span class="pln">
+	</span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Child Method"</span><span class="pun">);</span><span class="pln">
+        </span><span class="com">//Calling the disp() method of parent class</span><span class="pln">
+	</span><span class="kwd">super</span><span class="pun">.</span><span class="pln">disp</span><span class="pun">();</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args</span><span class="pun">[]){</span><span class="pln">
+	</span><span class="com">//Creating the object of child class</span><span class="pln">
+	</span><span class="typ">JavaExample</span><span class="pln"> obj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">JavaExample</span><span class="pun">();</span><span class="pln">
+	obj</span><span class="pun">.</span><span class="pln">disp</span><span class="pun">();</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+
+
+
+								<p><strong>The output is :</strong></p>
+
+
+
+								<pre class="wp-block-preformatted prettyprint prettyprinted" style=""><span class="typ">Constructor</span><span class="pln"> of </span><span class="typ">Parent</span><span class="pln">
+</span><span class="typ">Constructor</span><span class="pln"> of </span><span class="typ">Child</span><span class="pln">
+</span><span class="typ">Child</span><span class="pln"> </span><span class="typ">Method</span><span class="pln">
+</span><span class="typ">Parent</span><span class="pln"> </span><span class="typ">Method</span></pre>
+							</div>
 						</div>
 					</div>
 					<div class="card-footer">

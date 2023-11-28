@@ -153,7 +153,146 @@
 					<h1 class="card-header text-white" style="background: rgb(0,0,0);">Polymorphism in Java</h1>
 					<div class="card-body">
 						<div class="tab" role="tabpanel">
-
+							<div class="entry-content" itemprop="text">
+								<p>Polymorphism&nbsp;is one of the <a>OOPs</a> feature that
+									allows us to perform a single action in different ways. For example, lets say we
+									have a class <code>Animal</code> that has a method <code>sound()</code>. Since this
+									is a generic class so we can’t give it a implementation like: Roar, Meow, Oink etc.
+									We had to give a generic message.</p>
+								<pre class="prettyprint prettyprinted" style=""><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Animal</span><span class="pun">{</span><span class="pln">
+   </span><span class="pun">...</span><span class="pln">
+   </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> sound</span><span class="pun">(){</span><span class="pln">
+      </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Animal is making a sound"</span><span class="pun">);</span><span class="pln">   
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+								<p>Now lets say we two subclasses of Animal class: <code>Horse</code> and
+									<code>Cat</code> that extends (see <a
+										href="../corejava/java-inheritance.html">Inheritance</a>)
+									<code>Animal</code> class. We can provide the implementation to the same method like
+									this:
+								</p>
+								<pre class="prettyprint prettyprinted" style=""><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Horse</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Animal</span><span class="pun">{</span><span class="pln">
+</span><span class="pun">...</span><span class="pln">
+    </span><span class="lit">@Override</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> sound</span><span class="pun">(){</span><span class="pln">
+        </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Neigh"</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+								<p>and</p>
+								<pre class="prettyprint prettyprinted" style=""><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Cat</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Animal</span><span class="pun">{</span><span class="pln">
+</span><span class="pun">...</span><span class="pln">
+    </span><span class="lit">@Override</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> sound</span><span class="pun">(){</span><span class="pln">
+        </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Meow"</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+								<p>As you can see that although we had the common action for all subclasses
+									<code>sound()</code> but there were different ways to do the same action. This is a
+									perfect example of polymorphism (feature that allows us to perform a single action
+									in different ways). It would not make any sense to just call the generic sound()
+									method as each Animal has a different sound. Thus we can say that the action this
+									method performs is based on the type of object.
+								</p>
+								<h2>What is polymorphism in programming?</h2>
+								<p>Polymorphism is the capability of a method to do different things based on the object
+									that it is acting upon. In other words, polymorphism allows you define one interface
+									and have multiple implementations. As we have seen in the above example that we have
+									defined the method sound() and have the multiple implementations of it in the
+									different-2 sub classes.<br>
+									Which sound() method will be called is determined at runtime so the example we gave
+									above is a <strong>runtime polymorphism example</strong>.</p>
+								<blockquote>
+									<p>Types of polymorphism and method overloading &amp; overriding are covered in the
+										separate tutorials. You can refer them here:<br>
+										1. <a>Method
+											Overloading in Java</a> – This is an example of compile time (or static
+										polymorphism)<br>
+										2. <a>Method
+											Overriding in Java</a> – This is an example of runtime time (or dynamic
+										polymorphism)<br>
+										3. <a>Types
+											of Polymorphism – Runtime and compile time</a> – This is our next tutorial
+										where we have covered the types of polymorphism in detail. I would recommend you
+										to go though method overloading and overriding before going though this topic.
+									</p>
+								</blockquote>
+								<p>Lets write down the complete code of it:</p>
+								<h2>Example 1: Polymorphism in Java</h2>
+								<p><strong>Runtime Polymorphism example:</strong><br>
+									Animal.java</p>
+								<pre class="prettyprint prettyprinted" style=""><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Animal</span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> sound</span><span class="pun">(){</span><span class="pln">
+      </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Animal is making a sound"</span><span class="pun">);</span><span class="pln">   
+   </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+								<p>Horse.java</p>
+								<pre class="prettyprint prettyprinted" style=""><span class="kwd">class</span><span class="pln"> </span><span class="typ">Horse</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Animal</span><span class="pun">{</span><span class="pln">
+    </span><span class="lit">@Override</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> sound</span><span class="pun">(){</span><span class="pln">
+        </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Neigh"</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args</span><span class="pun">[]){</span><span class="pln">
+    	</span><span class="typ">Animal</span><span class="pln"> obj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Horse</span><span class="pun">();</span><span class="pln">
+    	obj</span><span class="pun">.</span><span class="pln">sound</span><span class="pun">();</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+								<p>Output:</p>
+								<pre class="prettyprint prettyprinted" style=""><span class="typ">Neigh</span></pre>
+								<p>Cat.java</p>
+								<pre class="prettyprint prettyprinted" style=""><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">Cat</span><span class="pln"> </span><span class="kwd">extends</span><span class="pln"> </span><span class="typ">Animal</span><span class="pun">{</span><span class="pln">
+    </span><span class="lit">@Override</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> sound</span><span class="pun">(){</span><span class="pln">
+        </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Meow"</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args</span><span class="pun">[]){</span><span class="pln">
+    	</span><span class="typ">Animal</span><span class="pln"> obj </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Cat</span><span class="pun">();</span><span class="pln">
+    	obj</span><span class="pun">.</span><span class="pln">sound</span><span class="pun">();</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+								<p>Output:</p>
+								<pre class="prettyprint prettyprinted" style=""><span class="typ">Meow</span></pre>
+								<h2>Example 2: Compile time Polymorphism</h2>
+								<p>Method Overloading on the other hand is a compile time polymorphism example.</p>
+								<pre class="prettyprint prettyprinted" style=""><span class="kwd">class</span><span class="pln"> </span><span class="typ">Overload</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">void</span><span class="pln"> demo </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> a</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+       </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println </span><span class="pun">(</span><span class="str">"a: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> a</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">void</span><span class="pln"> demo </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> a</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> b</span><span class="pun">)</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+       </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println </span><span class="pun">(</span><span class="str">"a and b: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> a </span><span class="pun">+</span><span class="pln"> </span><span class="str">","</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> b</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+    </span><span class="kwd">double</span><span class="pln"> demo</span><span class="pun">(</span><span class="kwd">double</span><span class="pln"> a</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"double a: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> a</span><span class="pun">);</span><span class="pln">
+       </span><span class="kwd">return</span><span class="pln"> a</span><span class="pun">*</span><span class="pln">a</span><span class="pun">;</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="kwd">class</span><span class="pln"> </span><span class="typ">MethodOverloading</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> main </span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args </span><span class="pun">[])</span><span class="pln">
+    </span><span class="pun">{</span><span class="pln">
+        </span><span class="typ">Overload</span><span class="pln"> </span><span class="typ">Obj</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">Overload</span><span class="pun">();</span><span class="pln">
+        </span><span class="kwd">double</span><span class="pln"> result</span><span class="pun">;</span><span class="pln">
+        </span><span class="typ">Obj</span><span class="pln"> </span><span class="pun">.</span><span class="pln">demo</span><span class="pun">(</span><span class="lit">10</span><span class="pun">);</span><span class="pln">
+        </span><span class="typ">Obj</span><span class="pln"> </span><span class="pun">.</span><span class="pln">demo</span><span class="pun">(</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">20</span><span class="pun">);</span><span class="pln">
+        result </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Obj</span><span class="pln"> </span><span class="pun">.</span><span class="pln">demo</span><span class="pun">(</span><span class="lit">5.5</span><span class="pun">);</span><span class="pln">
+        </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"O/P : "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> result</span><span class="pun">);</span><span class="pln">
+    </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre>
+								<p>Here the method <code>demo()</code> is overloaded 3 times: first method has 1 int
+									parameter, second method has 2 int parameters and third one is having double
+									parameter. Which method is to be called is determined by the arguments we pass while
+									calling methods. This happens at <del
+										datetime="2018-08-19T08:47:08+00:00">runtime</del> compile time so this type of
+									polymorphism is known as compile time polymorphism.</p>
+								<p><strong>Output:</strong></p>
+								<pre class="prettyprint prettyprinted"
+									style=""><span class="pln">a</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pln">
+a </span><span class="kwd">and</span><span class="pln"> b</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10</span><span class="pun">,</span><span class="lit">20</span><span class="pln">
+</span><span class="kwd">double</span><span class="pln"> a</span><span class="pun">:</span><span class="pln"> </span><span class="lit">5.5</span><span class="pln">
+O</span><span class="pun">/</span><span class="pln">P </span><span class="pun">:</span><span class="pln"> </span><span class="lit">30.25</span></pre>
+							</div>
 						</div>
 					</div>
 					<div class="card-footer">
